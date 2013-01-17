@@ -32,7 +32,7 @@
 
       var transitionEnd = (function () {
 
-        var el = document.createElement('bootstrap')
+        var el = document.createElement('bootstrap-cosmo')
           , transEndEventNames = {
                'WebkitTransition' : 'webkitTransitionEnd'
             ,  'MozTransition'    : 'transitionend'
@@ -58,8 +58,8 @@
   })
 
 }(window.jQuery);/* ==========================================================
- * bootstrap-alert.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#alerts
+ * bootstrap-cosmo-alert.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#alerts
  * ==========================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -156,8 +156,8 @@
   $(document).on('click.alert.data-api', dismiss, Alert.prototype.close)
 
 }(window.jQuery);/* ============================================================
- * bootstrap-button.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#buttons
+ * bootstrap-cosmo-button.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#buttons
  * ============================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -260,8 +260,8 @@
   })
 
 }(window.jQuery);/* ==========================================================
- * bootstrap-carousel.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#carousel
+ * bootstrap-cosmo-carousel.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#carousel
  * ==========================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -444,8 +444,8 @@
   })
 
 }(window.jQuery);/* =============================================================
- * bootstrap-collapse.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#collapse
+ * bootstrap-cosmo-collapse.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#collapse
  * =============================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -610,8 +610,8 @@
   })
 
 }(window.jQuery);/* ============================================================
- * bootstrap-dropdown.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#dropdowns
+ * bootstrap-cosmo-dropdown.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#dropdowns
  * ============================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -770,8 +770,8 @@
     .on('keydown.dropdown.data-api touchstart.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
 }(window.jQuery);/* =========================================================
- * bootstrap-modal.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#modals
+ * bootstrap-cosmo-modal.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#modals
  * =========================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -1015,8 +1015,8 @@
 
 }(window.jQuery);
 /* ===========================================================
- * bootstrap-tooltip.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#tooltips
+ * bootstrap-cosmo-tooltip.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#tooltips
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ===========================================================
  * Copyright 2012 Twitter, Inc.
@@ -1301,8 +1301,8 @@
   }
 
 }(window.jQuery);/* ===========================================================
- * bootstrap-popover.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#popovers
+ * bootstrap-cosmo-popover.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#popovers
  * ===========================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -1414,8 +1414,8 @@
   }
 
 }(window.jQuery);/* =============================================================
- * bootstrap-scrollspy.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#scrollspy
+ * bootstrap-cosmo-scrollspy.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#scrollspy
  * =============================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -1575,8 +1575,8 @@
   })
 
 }(window.jQuery);/* ========================================================
- * bootstrap-tab.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#tabs
+ * bootstrap-cosmo-tab.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#tabs
  * ========================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -1718,8 +1718,8 @@
   })
 
 }(window.jQuery);/* =============================================================
- * bootstrap-typeahead.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#typeahead
+ * bootstrap-cosmo-typeahead.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#typeahead
  * =============================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -2041,8 +2041,8 @@
 
 }(window.jQuery);
 /* ==========================================================
- * bootstrap-affix.js v2.2.2
- * http://twitter.github.com/bootstrap/javascript.html#affix
+ * bootstrap-cosmo-affix.js v2.2.2
+ * http://twitter.github.com/bootstrap-cosmo/javascript.html#affix
  * ==========================================================
  * Copyright 2012 Twitter, Inc.
  *
