@@ -2,8 +2,16 @@
 @import url(../lib/bootstrap-cosmo/css/bootstrap-responsive.min.css);
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 
+body{
+    background: #f2f2f2;
+}
+
 header{
-    background: #000000;
+    background: #2a2829;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
     header h1{
@@ -16,3 +24,78 @@ header{
         left: 50%;
         margin: 10px 0 0 -150px;
     }
+
+    header .navbar{
+        margin-bottom: 0;
+    }
+
+        header .navbar .navbar-inner{
+            background: transparent;
+        }
+
+        header .navbar .brand{
+            text-shadow: none;
+        }
+
+.wrap{
+
+}
+.sidebar{
+    background: #f2f2f2;
+    position: fixed;
+    width: 220px;
+    padding: 20px 0;
+    top: 52px;
+    bottom: 0;
+    color: #595959;
+}
+    .sidebar h2{
+        color: inherit;
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+.side-nav{
+    font-size: 16px;
+    margin: 0;
+}
+
+    .side-nav li{
+        list-style: none;
+    }
+
+        .side-nav li.active,
+        .side-nav li:hover{
+            background: #ffffff;
+            margin-right: -1px; /*place for shadow*/
+            box-shadow: -1px 1px 2px gray;
+        }
+
+            .side-nav li.active:after,
+            .side-nav li:hover:after{
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+
+        .side-nav li a{
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: 20px 20px 18px;
+        }
+
+        .side-nav li:after{
+            content: "";
+            display: block;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 1px solid #fafafa;
+            margin: 0 20px;
+        }
+
+.content{
+    margin-left: 221px;  /*sidebar width 220px + shadow width 1px = 221px*/
+    margin-top: 52px;   /*header height*/
+    background: #ffffff;
+    min-height: 900px;
+    box-shadow: 0 0 3px gray;
+}
