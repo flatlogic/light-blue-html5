@@ -98,4 +98,42 @@ header{
     background: #ffffff;
     min-height: 900px;
     box-shadow: 0 0 3px gray;
+    padding: 20px;
+}
+
+.box{
+    padding: 10px;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1em;
+}
+
+.box.red{
+    background: #e71b1d;
+}
+
+.box.yellow{
+    background: #f2af44;
+}
+
+.box.green{
+    background: #2ab77a;
+}
+
+.box.blue{
+    background: #29aae3;
+}
+
+.box.purple{
+    background: #c181e6;
+}
+
+
+.box .description{
+    color: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
 }
