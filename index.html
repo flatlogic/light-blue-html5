@@ -2,12 +2,34 @@
 <html>
 <head>
     <title>Admin theme test</title>
-    <link href="bootstrap-cosmo/css/bootstrap.css" rel="stylesheet" >
-    <link href="bootstrap-cosmo/css/bootstrap-responsive.min.css" rel="stylesheet" >
+    <link href="css/application.css" rel="stylesheet">
+    <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+    <script src="lib/bootstrap-cosmo/js/bootstrap.js"> </script>
 </head>
 <body>
 <header>
-        <h1>header</h1>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">Mega admin</a>
+                <div class="nav-collapse collapse navbar-responsive-collapse clearfix">
+                    <form class="form-inline navbar-search pull-left" action="">
+                        <input id="search" type="text" class="search-query input-xlarge" placeholder="Search">
+                    </form>
+                    <ul class="nav pull-right">
+                        <li><a href="#"><i class="icon-cog icon-large"></i></a></li>
+                        <li><a href="#"><i class="icon-rss icon-large"></i></a></li>
+                        <li><a href="#"><i class="icon-user icon-large"></i></a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div>
+        </div><!-- /navbar-inner -->
+    </div>
 </header>
 <div class="container-fluid">
     <div class="row-fluid">
@@ -15,7 +37,7 @@
             sidebar
         </nav>
         <div class="span8">
-            body
+            body   <i class="icon-adjust"></i>
         </div>
     </div>
 </div>

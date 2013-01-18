@@ -1,4 +1,18 @@
+@import url(../lib/bootstrap-cosmo/css/bootstrap.css);
+@import url(../lib/bootstrap-cosmo/css/bootstrap-responsive.min.css);
+@import url(../lib/font-awesome/css/font-awesome.min.css);
+
 header{
     background: #000000;
-    height: 100px;
 }
+
+    header h1{
+        margin: 0;
+        color: #ffffff;
+    }
+
+    header .navbar-search{
+        position: absolute;
+        left: 50%;
+        margin: 10px 0 0 -150px;
+    }
