@@ -3,22 +3,33 @@
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 
 body{
-    background: #f2f2f2;
+    background: #fdfdfd;
+
 }
 
 header{
-    background: #595557;
+    background: inherit;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
 }
 
+    header .navbar .nav > li > a{
+        text-shadow: none;
+        color: #6c6c6c;
+    }
+
     header .navbar-search{
         position: absolute;
         left: 50%;
         margin: 10px 0 0 -150px;
     }
+
+        header .navbar-search .search-query{
+            border-radius: 0;
+            padding-left: 26px;
+        }
 
     header .navbar{
         margin-bottom: 0;
@@ -30,13 +41,17 @@ header{
 
         header .navbar .brand{
             text-shadow: none;
+            color: #6c6c6c;
+            font-weight: 300;
+            text-transform: uppercase;
         }
 
 .wrap{
 
 }
+
 .sidebar{
-    background: #f2f2f2;
+    background: inherit;
     position: fixed;
     width: 220px;
     padding: 20px 0;
@@ -51,8 +66,9 @@ header{
     }
 
 .side-nav{
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
+    font-weight: 600;
 }
 
     .side-nav li{
@@ -63,7 +79,8 @@ header{
         .side-nav li:hover{
             background: #ffffff;
             margin-right: -1px; /*place for shadow*/
-            box-shadow: -1px 1px 2px gray;
+            box-shadow: -2px 0 3px gray;
+            color: #da3712;
         }
 
             .side-nav li.active:after,
@@ -80,55 +97,142 @@ header{
         }
 
         .side-nav li:after{
-            content: "";
-            display: block;
-            border-top: 1px solid #eeeeee;
-            border-bottom: 1px solid #fafafa;
-            margin: 0 20px;
+            /*content: "";*/
+            /*display: block;*/
+            /*border-top: 1px solid #eeeeee;*/
+            /*border-bottom: 1px solid #fafafa;*/
+            /*margin: 0 20px;*/
         }
 
 .content{
     margin-left: 221px;  /*sidebar width 220px + shadow width 1px = 221px*/
-    margin-top: 52px;   /*header height*/
+    margin-top: 54px;   /*header height + 2 px for shadow */
     background: #ffffff;
     min-height: 900px;
     box-shadow: 0 0 3px gray;
-    padding: 40px 20px 20px;
+    padding: 40px;
 }
 
+
+
+/*boxes*/
 .box{
-    padding: 10px;
+    padding: 5px;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 42px;
     font-weight: 300;
     text-align: center;
     line-height: 1em;
+    margin-bottom: 20px;
+
 }
+
+    .box .description{
+        color: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+    }
 
 .box.red{
-    background: #e71b1d;
+    background: #cd4e21;
 }
 
-.box.yellow{
-    background: #f2af44;
+.box.orange{
+    background: #f0aa25;
 }
 
 .box.green{
-    background: #2ab77a;
+    background: #8cbf26;
 }
 
 .box.blue{
-    background: #29aae3;
+    background: #1BA1E2;
 }
 
 .box.purple{
-    background: #c181e6;
+    background: #A700AE;
+}
+
+.box.pink{
+    background: #E671B8;
+}
+
+.box.brown{
+    background: #A05000;
+}
+
+.box.lime{
+    background: #8CBF26;
+}
+
+.box.teal{
+    background: #61b6b7;
+}
+
+.box.magenta{
+    background: #FF0097;
+}
+
+/* basic inputs*/
+
+input[type=search], input.search {
+    padding-left: 26px;
+    background-color:white;
+    background:url(../img/search.png) 5px 5px no-repeat #fff;
 }
 
 
-.box .description{
-    color: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    text-align: center;
+/* --------------------------------------------------------	*/
+/*	Custom styled scrollbar */
+/* --------------------------------------------------------	*/
+html:not(.osx) ::-webkit-scrollbar {
+    width: 5px;
+
+}
+html:not(.osx) ::-webkit-scrollbar-track-piece {
+
+    background-color: #eee;
+    box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+}
+html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
+    opacity:0.4;
+    background-color: #da3712;
+}
+
+/* some overrides*/
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
+    background-color: transparent;
+    color: #da3712;
+    text-decoration: none;
+}
+
+textarea:focus, input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus{
+    border-color: #bbbbbb;
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
+    color: #6c6c6c;
 }
