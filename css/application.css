@@ -46,6 +46,28 @@ header{
             text-transform: uppercase;
         }
 
+    header .shadow{
+        display: none;
+    }
+
+    header .shadow.active{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 221px;
+        right: 0;
+        background: inherit;
+        box-shadow: 0 2px 1px #cdcdcd;
+        height: 1px;
+    }
+
+    @media (max-width: 767px){
+        header .shadow.active{
+            left: 241px;
+            right: 20px;
+        }
+    }
+
 .wrap{
 
 }
