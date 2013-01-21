@@ -9,10 +9,6 @@ body{
 
 header{
     background: inherit;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
 }
 
     header .navbar .nav > li > a{
@@ -25,6 +21,16 @@ header{
         left: 50%;
         margin: 10px 0 0 -150px;
     }
+
+        @media (max-width: 767px){
+            header .navbar-search{
+                position: static;
+                right: 0;
+                margin: 5px 0;
+                width: 70%;
+                padding-top: 5px;
+            }
+        }
 
         header .navbar-search .search-query{
             border-radius: 0;
@@ -39,52 +45,31 @@ header{
             background: transparent;
         }
 
-        header .navbar .brand{
-            text-shadow: none;
-            color: #6c6c6c;
-            font-weight: 300;
-            text-transform: uppercase;
-        }
-
-    header .shadow{
-        display: none;
-    }
-
-    header .shadow.active{
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 221px;
-        right: 0;
-        background: inherit;
-        box-shadow: 0 2px 1px #cdcdcd;
-        height: 1px;
-    }
-
-    @media (max-width: 767px){
-        header .shadow.active{
-            left: 241px;
-            right: 20px;
-        }
-    }
-
-.wrap{
-
-}
-
 .sidebar{
     background: inherit;
     position: fixed;
     width: 220px;
     padding: 20px 0;
-    top: 52px;
+    top: 0;
     bottom: 0;
     color: #595959;
+    z-index: 1;
 }
     .sidebar h2{
         color: inherit;
         font-size: 30px;
         padding-left: 20px;
+    }
+
+    .sidebar .brand{
+        font-size: 24px;
+        text-shadow: none;
+        color: #6c6c6c;
+        font-weight: 300;
+        text-transform: uppercase;
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 37px;
     }
 
 .side-nav{
@@ -126,9 +111,12 @@ header{
             /*margin: 0 20px;*/
         }
 
-.content{
+.wrap{
     margin-left: 221px;  /*sidebar width 220px + shadow width 1px = 221px*/
-    margin-top: 54px;   /*header height + 2 px for shadow */
+}
+
+.content{
+    margin-top: 2px;   /*2 px for shadow */
     background: #ffffff;
     min-height: 900px;
     box-shadow: 0 0 3px gray;
@@ -202,6 +190,12 @@ input[type=search], input.search {
     padding-left: 26px;
     background-color:white;
     background:url(../img/search.png) 5px 5px no-repeat #fff;
+}
+
+@media (max-width: 767px){
+    input[type=search], input.search {
+        background-position: 5px 10px;
+    }
 }
 
 

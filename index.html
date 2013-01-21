@@ -5,48 +5,44 @@
     <link href="css/application.css" rel="stylesheet">
     <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
     <script src="lib/bootstrap-cosmo/js/bootstrap.js"> </script>
-    <script src="js/app.js"> </script>
 </head>
 <body>
-<header>
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a class="brand" href="#"><i class="icon-laptop"></i></a>
-                <div class="nav-collapse collapse navbar-responsive-collapse clearfix">
-                    <form class="form-inline navbar-search pull-left" action="">
+<nav class="sidebar">
+    <a class="brand" href="#"><i class="icon-laptop"></i></a>
+    <h2>Actions</h2>
+    <ul class="side-nav">
+        <li><a href="#"><i class="icon-envelope-alt"></i> Messages</a></li>
+        <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
+        <li class="active"><a href="#"><i class="icon-bar-chart"></i> Statistics</a></li>
+        <li><a href="#"><i class="icon-star"></i> Favorites</a></li>
+        <li><a href="#"><i class="icon-tags"></i> Tags</a></li>
+        <li><a href="#"><i class="icon-map-marker"></i> Locations</a></li>
+    </ul>
+</nav>
+<div class="wrap">
+    <header>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <form class="form-inline navbar-search" action="">
                         <input id="search" type="search" class="search-query input-xlarge">
                     </form>
-                    <ul class="nav pull-right">
-                        <li><a href="#"><i class="icon-cog icon-large"></i></a></li>
-                        <li><a href="#"><i class="icon-rss icon-large"></i></a></li>
-                        <li><a href="#"><i class="icon-user icon-large"></i></a></li>
-                    </ul>
-                </div><!-- /.nav-collapse -->
-            </div>
-        </div><!-- /navbar-inner -->
-    </div>
-    <div id="header-shadow" class="shadow">
-
-    </div>
-</header>
-<div class="wrap">
-    <nav class="sidebar">
-        <h2>Actions</h2>
-        <ul class="side-nav">
-            <li><a href="#"><i class="icon-envelope-alt"></i> Messages</a></li>
-            <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
-            <li class="active"><a href="#"><i class="icon-bar-chart"></i> Statistics</a></li>
-            <li><a href="#"><i class="icon-star"></i> Favorites</a></li>
-            <li><a href="#"><i class="icon-tags"></i> Tags</a></li>
-            <li><a href="#"><i class="icon-map-marker"></i> Locations</a></li>
-        </ul>
-    </nav>
+                    <div class="nav-collapse collapse navbar-responsive-collapse clearfix">
+                        <ul class="nav pull-right">
+                            <li><a href="#"><i class="icon-cog icon-large"></i></a></li>
+                            <li><a href="#"><i class="icon-rss icon-large"></i></a></li>
+                            <li><a href="#"><i class="icon-user icon-large"></i></a></li>
+                        </ul>
+                    </div><!-- /.nav-collapse -->
+                </div>
+            </div><!-- /navbar-inner -->
+        </div>
+    </header>
     <div class="content container-fluid">
         <div class="row-fluid">
             <div class="span2">
