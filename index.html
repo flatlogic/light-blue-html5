@@ -3,6 +3,7 @@
 <head>
     <title>Admin theme test</title>
     <link href="css/application.css" rel="stylesheet">
+    <link href="lib/nvd3/src/nv.d3.css" rel="stylesheet">
     <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
     <script src="lib/bootstrap-cosmo/js/bootstrap.js"> </script>
 </head>
@@ -70,10 +71,61 @@
                 </div>
             </div>
             <div class="span4">
-
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span8">
+                <div id="chart">
+                    <svg style="height: 400px;"></svg>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="lib/nvd3/lib/d3.v2.js"></script>
+<script src="lib/nvd3/nv.d3.js"></script>
+<script src="lib/nvd3/src/models/line.js"></script>
+<script src="lib/nvd3/examples/stream_layers.js"></script>
+<script>
+
+
+    nv.addGraph(function() {
+        var chart = nv.models.lineWithFocusChart();
+
+        chart.xAxis
+                .tickFormat(d3.format(',f'));
+        chart.x2Axis
+                .tickFormat(d3.format(',f'));
+
+        chart.yAxis
+                .tickFormat(d3.format(',.2f'));
+        chart.y2Axis
+                .tickFormat(d3.format(',.2f'));
+
+        d3.select('#chart svg')
+                .datum(testData())
+                .transition().duration(500)
+                .call(chart);
+
+        nv.utils.windowResize(chart.update);
+
+        return chart;
+    });
+
+
+
+    function testData() {
+        return stream_layers(3,128,.1).map(function(data, i) {
+            return {
+                key: 'Stream' + i,
+                values: data
+            };
+        });
+    }
+
+
+</script>
+
 </body>
 </html>
