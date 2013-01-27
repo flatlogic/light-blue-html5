@@ -4,6 +4,7 @@
     <title>Admin theme test</title>
     <link href="css/application.css" rel="stylesheet">
     <link href="lib/nvd3/src/nv.d3.css" rel="stylesheet">
+    <link href="css/nv.d3.override.css" rel="stylesheet">
     <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
     <script src="lib/bootstrap-cosmo/js/bootstrap.js"> </script>
 </head>
@@ -95,30 +96,33 @@
 </div>
 
 <script src="lib/nvd3/lib/d3.v2.js"></script>
-<script src="lib/nvd3/nv.d3.js"></script>
-<script src="lib/nvd3/src/models/line.js"></script>
+<script src="lib/nvd3/nv.d3.custom.js"></script>
+<script src="lib/nvd3/src/models/scatter.js"></script>
+<script src="lib/nvd3/src/models/axis.js"></script>
+<script src="lib/nvd3/src/models/legend.js"></script>
+<script src="lib/nvd3/src/models/stackedArea.js"></script>
+<script src="lib/nvd3/src/models/stackedAreaChart.js"></script>
 <script src="lib/nvd3/examples/stream_layers.js"></script>
 <script>
-
-
+    var colors = function(){
+        return d3.scale.ordinal().range(['#cd4e21', '#8cbf26', '#889ed8', '#ea99ac']);
+    }();
+    keyColor = function(d, i) {return colors(d.key)};
     nv.addGraph(function() {
-        var chart = nv.models.lineWithFocusChart();
-
-        chart.xAxis
-                .tickFormat(d3.format(',f'));
-        chart.x2Axis
-                .tickFormat(d3.format(',f'));
+        var chart = nv.models.stackedAreaChart()
+                .margin({top: 0, bottom: 20, left: 40, right: 0})
+                .color(keyColor);
 
         chart.yAxis
-                .tickFormat(d3.format(',.2f'));
-        chart.y2Axis
-                .tickFormat(d3.format(',.2f'));
+                .showMaxMin(false)
+                .tickFormat(d3.format(',f'));
+        chart.xAxis
+                .showMaxMin(false)
+                .tickFormat(d3.format(',f'));
 
-        d3.select('#chart svg')
+        d3.select("#chart svg")
                 .datum(testData())
-                .transition().duration(500)
-                .call(chart);
-
+                .transition().duration(500).call(chart);
         nv.utils.windowResize(chart.update);
 
         return chart;
@@ -127,9 +131,10 @@
 
 
     function testData() {
-        return stream_layers(3,128,.1).map(function(data, i) {
+        var stream_count = 3;
+        return stream_layers(stream_count, 64, .1).map(function(data, i) {
             return {
-                key: 'Stream' + i,
+                key: 'Stream ' + i,
                 values: data
             };
         });
