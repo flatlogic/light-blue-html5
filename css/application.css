@@ -121,10 +121,11 @@ h3{
 
 .content{
     margin-top: 2px;   /*2 px for shadow */
-    background: #ffffff;
     min-height: 900px;
     box-shadow: 0 0 3px gray;
     padding: 40px;
+    background: url(../img/texture.jpg) -100px -100px;
+
 }
 
 /* basic inputs*/
@@ -206,6 +207,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     line-height: 1em;
     margin-bottom: 20px;
 
+    box-shadow: 0 0 12px #232323;
 }
 
     .box .description{
@@ -267,17 +269,20 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .widget{
     padding: 10px;
     color: #444;
+    background: #ffffff;
 
     -webkit-transition:box-shadow linear .2s;
     -moz-transition:box-shadow linear .2s;
     -o-transition:box-shadow linear .2s;
     transition:box-shadow linear .2s;
+
+    box-shadow: 0 0 12px #232323;
 }
 
     .widget:hover{
         -webkit-box-shadow: 0 0 3px #bbb;
         -moz-box-shadow: 0 0 3px #bbb;
-        box-shadow: 0 0 3px #bbb;
+        box-shadow: 0 0 12px #000;
 
         -webkit-transition:box-shadow linear .2s;
         -moz-transition:box-shadow linear .2s;
