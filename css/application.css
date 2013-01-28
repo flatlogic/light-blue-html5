@@ -45,6 +45,10 @@ header{
             background: transparent;
         }
 
+h3{
+    font-size: 20px;
+}
+
 .sidebar{
     background: inherit;
     position: fixed;
@@ -86,7 +90,7 @@ header{
         .side-nav li:hover{
             background: #ffffff;
             margin-right: -1px; /*place for shadow*/
-            box-shadow: -2px 0 3px gray;
+            box-shadow: -3px 0 3px gray;
             color: #da3712;
         }
 
@@ -121,81 +125,6 @@ header{
     min-height: 900px;
     box-shadow: 0 0 3px gray;
     padding: 40px;
-}
-
-
-
-/*boxes*/
-.box{
-    padding: 5px;
-    color: #ffffff;
-    font-size: 42px;
-    font-weight: 300;
-    text-align: center;
-    line-height: 1em;
-    margin-bottom: 20px;
-
-}
-
-    .box .description{
-        color: inherit;
-        font-weight: 500;
-        font-size: 16px;
-        text-align: center;
-    }
-
-.box.red{
-    background: #cd4e21;
-}
-
-.box.orange{
-    background: #f0aa25;
-}
-
-.box.green{
-    background: #8cbf26;
-}
-
-.box.blue{
-    background: #1BA1E2;
-}
-
-.box.purple{
-    background: #A700AE;
-}
-
-.box.pink{
-    background: #E671B8;
-}
-
-.box.brown{
-    background: #A05000;
-}
-
-.box.lime{
-    background: #8CBF26;
-}
-
-.box.teal{
-    background: #61b6b7;
-}
-
-.box.magenta{
-    background: #FF0097;
-}
-
-.box.fb-blue{
-    background: #889ed8;
-}
-
-.box.light-pink{
-    background: #ea99ac;
-}
-
-.overview-box {
-    width: 660px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* basic inputs*/
@@ -265,4 +194,120 @@ input[type="color"]:focus,
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
     color: #6c6c6c;
+}
+
+/*boxes*/
+.box{
+    padding: 5px;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 20px;
+
+}
+
+    .box .description{
+        color: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+    }
+
+.box.red{
+    background: #cd4e21;
+}
+
+.box.orange{
+    background: #f0aa25;
+}
+
+.box.green{
+    background: #8cbf26;
+}
+
+.box.blue{
+    background: #1BA1E2;
+}
+
+.box.purple{
+    background: #A700AE;
+}
+
+.box.pink{
+    background: #E671B8;
+}
+
+.box.brown{
+    background: #A05000;
+}
+
+.box.lime{
+    background: #8CBF26;
+}
+
+.box.teal{
+    background: #61b6b7;
+}
+
+.box.magenta{
+    background: #FF0097;
+}
+
+.box.fb-blue{
+    background: #889ed8;
+}
+
+.box.light-pink{
+    background: #ea99ac;
+}
+
+
+.widget{
+    padding: 10px;
+    color: #444;
+
+    -webkit-transition:box-shadow linear .2s;
+    -moz-transition:box-shadow linear .2s;
+    -o-transition:box-shadow linear .2s;
+    transition:box-shadow linear .2s;
+}
+
+    .widget:hover{
+        -webkit-box-shadow: 0 0 3px #bbb;
+        -moz-box-shadow: 0 0 3px #bbb;
+        box-shadow: 0 0 3px #bbb;
+
+        -webkit-transition:box-shadow linear .2s;
+        -moz-transition:box-shadow linear .2s;
+        -o-transition:box-shadow linear .2s;
+        transition:box-shadow linear .2s;
+    }
+
+    .widget header{
+        position: relative;
+    }
+
+        .widget header h2,
+        .widget header h3,
+        .widget header h4{
+            margin: 0;
+            line-height: 1em;
+            color: inherit;
+        }
+
+.widget .body{
+    margin-top: 16px;
+}
+
+.widget .actions{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.widget .actions a{
+    color: inherit;
+    text-decoration: none;
 }

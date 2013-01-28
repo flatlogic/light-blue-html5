@@ -1,5 +1,5 @@
 .nvd3.nv-stackedarea path.nv-area {
-    fill-opacity: .85;
+    fill-opacity: .8;
 }
 
 .nvd3.nv-stackedarea path.nv-area.hover {
@@ -8,4 +8,27 @@
 
 svg text {
     fill: #555;
+    font-family: inherit;
+}
+
+.nvd3 .nv-axis path.domain{
+    display: none;
+}
+
+.nvtooltip{
+    padding: 5px;
+    position: absolute;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid #ddd;
+    z-index: 10000;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    -moz-border-radius: 0;
+    border-radius: 0;
 }
