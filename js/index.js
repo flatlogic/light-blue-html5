@@ -5,6 +5,7 @@ nv.addGraph(function() {
     chart.yAxis
         .showMaxMin(false)
         .tickFormat(d3.format(',f'));
+
     chart.xAxis
         .showMaxMin(false)
         .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
@@ -30,7 +31,37 @@ nv.addGraph(function() {
         });
 
     d3.select("#chart-visits svg")
-        .datum(testData(['Visits'], 8))
+        .datum(
+        //Test data. Just to see it's really simple
+        [{
+            "key" : "Visits",
+            "values" : [{
+                "x" : 1,
+                "y" : 0
+            },{
+                "x" : 2,
+                "y" : 2
+            },{
+                "x" : 3,
+                "y" : 3
+            },{
+                "x" : 4,
+                "y" : 2
+            },{
+                "x" : 5,
+                "y" : 1
+            },{
+                "x" : 6,
+                "y" : 4
+            },{
+                "x" : 7,
+                "y" : 5
+            },{
+                "x" : 8,
+                "y" : 6
+            }]
+        }]
+    )
         .transition().call(chart);
     nv.utils.windowResize(chart.update);
 
