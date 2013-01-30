@@ -3,12 +3,11 @@
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 
 body{
-    background: #fdfdfd;
-
+    background: url(../img/gaussian_blur.jpg);
 }
 
 header{
-    background: inherit;
+    background-color: #fafafa;
 }
 
     header .navbar .nav > li > a{
@@ -18,8 +17,10 @@ header{
 
     header .navbar-search{
         position: absolute;
+        float: none;
         left: 50%;
         margin: 10px 0 0 -150px;
+        z-index: 1;
     }
 
         @media (max-width: 767px){
@@ -50,9 +51,9 @@ h3{
 }
 
 .sidebar{
-    background: inherit;
+    background-color: #fafafa;
     position: fixed;
-    width: 220px;
+    width: 180px;
     padding: 20px 0;
     top: 0;
     bottom: 0;
@@ -62,7 +63,7 @@ h3{
     .sidebar h2{
         color: inherit;
         font-size: 30px;
-        padding-left: 20px;
+        padding-left: 30px;
     }
 
     .sidebar .brand{
@@ -86,11 +87,13 @@ h3{
         list-style: none;
     }
 
-        .side-nav li.active,
+        .side-nav li.active{
+            box-shadow: -1px 0 1px gray;
+            color: #da3712;
+            background: #fff;
+        }
+
         .side-nav li:hover{
-            background: #ffffff;
-            margin-right: -1px; /*place for shadow*/
-            box-shadow: -3px 0 3px gray;
             color: #da3712;
         }
 
@@ -104,7 +107,7 @@ h3{
             color: inherit;
             text-decoration: none;
             display: block;
-            padding: 20px 20px 18px;
+            padding: 20px 30px 20px;
         }
 
         .side-nav li:after{
@@ -116,15 +119,13 @@ h3{
         }
 
 .wrap{
-    margin-left: 221px;  /*sidebar width 220px + shadow width 1px = 221px*/
+    margin-left: 180px;  /*sidebar width 220px + shadow width 1px = 221px*/
 }
 
 .content{
-    margin-top: 2px;   /*2 px for shadow */
     min-height: 900px;
-    box-shadow: 0 0 3px gray;
+    box-shadow: inset 0 0 5px gray;
     padding: 40px;
-    background: url(../img/texture.jpg) -100px -100px;
 
 }
 
@@ -206,8 +207,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     text-align: center;
     line-height: 1em;
     margin-bottom: 20px;
-
-    box-shadow: 0 0 12px #232323;
+    border-radius: 3px;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
 }
 
     .box .description{
@@ -218,19 +219,19 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     }
 
 .box.red{
-    background: #cd4e21;
+    background: #e5603b;
 }
 
 .box.orange{
-    background: #f0aa25;
+    background: #eac85e;
 }
 
 .box.green{
-    background: #8cbf26;
+    background: #56bc76;
 }
 
 .box.blue{
-    background: #1BA1E2;
+    background: #618fb0;
 }
 
 .box.purple{
@@ -250,33 +251,20 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 .box.teal{
-    background: #61b6b7;
+    background: #2eb4dc;
 }
 
-.box.magenta{
-    background: #FF0097;
+.box.dark-red{
+    background: #d04f4f;
 }
-
-.box.fb-blue{
-    background: #889ed8;
-}
-
-.box.light-pink{
-    background: #ea99ac;
-}
-
 
 .widget{
-    padding: 10px;
-    color: #444;
-    background: #ffffff;
-
     -webkit-transition:box-shadow linear .2s;
     -moz-transition:box-shadow linear .2s;
     -o-transition:box-shadow linear .2s;
     transition:box-shadow linear .2s;
 
-    box-shadow: 0 0 12px #232323;
+    box-shadow: 0 0 12px #343434;
 }
 
     .widget:hover{
@@ -289,6 +277,15 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
         -o-transition:box-shadow linear .2s;
         transition:box-shadow linear .2s;
     }
+
+
+.widget{
+    padding: 10px;
+    color: #444;
+    background: #ffffff;
+
+    margin-bottom: 20px;
+}
 
     .widget header{
         position: relative;
