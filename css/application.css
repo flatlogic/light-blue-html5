@@ -287,8 +287,17 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     margin-bottom: 20px;
 }
 
+.widget.big{
+    height: 315px;
+}
+
+    .widget.big .body{
+        height: 280px;
+    }
+
     .widget header{
         position: relative;
+        background: inherit;
     }
 
         .widget header h2,
@@ -300,7 +309,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
         }
 
 .widget .body{
-    margin-top: 16px;
+    margin-top: 15px;
 }
 
 .widget .actions{
