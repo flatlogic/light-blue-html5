@@ -1,0 +1,56 @@
+ul, ol{
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
+    background-color: transparent;
+    color: #da3712;
+    text-decoration: none;
+}
+
+textarea:focus, input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus{
+    border-color: #bbbbbb;
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
+    color: #6c6c6c;
+}
+
+.nav{
+    margin-bottom: 0;
+}
+
+.nav-tabs, .nav-tabs > li > a{
+    border: none;
+}
+
+.nav-tabs > li{
+    margin-bottom: 0;
+}
+
+.nav-tabs > li > a, .nav-pills > li > a{
+    margin: 0;
+}

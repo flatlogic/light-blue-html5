@@ -1,6 +1,10 @@
+@import url(../lib/nvd3/src/nv.d3.css);
 @import url(../lib/bootstrap-cosmo/css/bootstrap.css);
 @import url(../lib/bootstrap-cosmo/css/bootstrap-responsive.min.css);
 @import url(../lib/font-awesome/css/font-awesome.min.css);
+@import url(nv.d3.override.css);
+@import url(svg-style.css);
+@import url(bootstrap.override.css);
 
 html{
     /*background: #1e5799;*/
@@ -85,6 +89,10 @@ h3{
     box-shadow: 0 0 12px #343434;
 }
 
+.widget, .box{
+    margin-bottom: 30px;
+}
+
 .sidebar h2{
     color: inherit;
     font-size: 30px;
@@ -118,26 +126,28 @@ h3{
 }
 
 .side-nav li.active{
-    box-shadow: -1px 0 1px gray;
     color: #da3712;
-    background: #fff;
 }
 
 .side-nav li:hover{
     color: #da3712;
 }
 
-.side-nav li.active:after,
-.side-nav li:hover:after{
-    border-top-color: #ffffff;
-    border-bottom-color: #ffffff;
+.side-nav li.active a{
+    background: #f8f8f8;
+    border-left: 6px solid #4daf7c;
+    padding-left: 24px;
 }
 
 .side-nav li a{
     color: inherit;
     text-decoration: none;
     display: block;
-    padding: 20px 30px 20px;
+    padding: 18px 30px;
+}
+
+.side-nav li a i{
+
 }
 
 .side-nav li:after{
@@ -184,43 +194,6 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
     background-color: #da3712;
 }
 
-/* some overrides*/
-
-.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
-    background-color: transparent;
-    color: #da3712;
-    text-decoration: none;
-}
-
-textarea:focus, input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus{
-    border-color: #bbbbbb;
-    outline: 0;
-    outline: thin dotted \9;
-    /* IE6-9 */
-
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-}
-
-select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
-    color: #6c6c6c;
-}
-
 /*boxes*/
 .box{
     padding: 5px;
@@ -229,7 +202,6 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     font-weight: 300;
     text-align: center;
     line-height: 1em;
-    margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,.5);
 }
 
@@ -303,8 +275,6 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     padding: 15px;
     color: #444;
     background: #ffffff;
-
-    margin-bottom: 20px;
 }
 
 .widget.big{
@@ -361,4 +331,81 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     padding: 4px 0;
     text-align: right;
     font-weight: 700;
+}
+
+.widget.tabs{
+    padding: 0;
+    position: relative;
+}
+
+.widget.tabs header{
+    margin-top: 0;
+}
+
+.widget.tabs .body{
+    padding: 15px;
+    background: #ffffff;
+    margin-top: 0;
+    box-shadow: 0 6px 12px #343434;
+    height: 268px;
+}
+
+.widget.tabs:before,
+.widget.tabs:after{
+    display: block;
+    content: "";
+    background: #ffffff;
+    position: absolute;
+    z-index: 1;
+}
+
+.widget.tabs:before{
+    top: 32px;
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+.widget.tabs:after{
+    bottom: -21px;
+    height: 6px;
+    left: 0;
+    right: 0;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.widget.tabs{
+    background: transparent;
+    box-shadow: none;
+}
+
+.widget.tabs .nav-tabs > .active > a{
+    border: 1px solid #ffffff;
+    color: #444444;
+    background: #fff;
+}
+
+.widget.tabs .nav-tabs > .active > a:hover{
+    background: #ffffff;
+}
+
+.widget.tabs .nav-tabs > li > a{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #ffffff;
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 2px 12px #343434;
+}
+
+.widget.tabs .nav-tabs > li:not(.active) > a:hover{
+    background: transparent;
+    margin-top: -2px;
+    padding-bottom: 10px;
+
+    transition: margin-top 50ms linear, padding-bottom 50ms linear;
+    -moz-transition: margin-top 50ms linear, padding-bottom 50ms linear;
+    -webkit-transition: margin-top 50ms linear, padding-bottom 50ms linear;
 }
