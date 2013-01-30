@@ -6,16 +6,20 @@ body{
     background: url(../img/gaussian_blur.jpg);
 }
 
-header{
+.page-header{
     background-color: #fafafa;
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: none;    /*removing it temporary*/
 }
 
-    header .navbar .nav > li > a{
+    .page-header .navbar .nav > li > a{
         text-shadow: none;
         color: #6c6c6c;
     }
 
-    header .navbar-search{
+    .page-header .navbar-search{
         position: absolute;
         float: none;
         left: 50%;
@@ -24,7 +28,7 @@ header{
     }
 
         @media (max-width: 767px){
-            header .navbar-search{
+            .page-header .navbar-search{
                 position: static;
                 right: 0;
                 margin: 5px 0;
@@ -33,16 +37,16 @@ header{
             }
         }
 
-        header .navbar-search .search-query{
+        .page-header .navbar-search .search-query{
             border-radius: 0;
             padding-left: 26px;
         }
 
-    header .navbar{
+    .page-header .navbar{
         margin-bottom: 0;
     }
 
-        header .navbar .navbar-inner{
+        .page-header .navbar .navbar-inner{
             background: transparent;
         }
 
