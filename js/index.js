@@ -7,10 +7,10 @@ nv.addGraph(function() {
         .tickFormat(d3.format(',f'));
     chart.xAxis
         .showMaxMin(false)
-        .tickFormat(d3.format(',f'));
+        .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
 
     d3.select("#overview-chart svg")
-        .datum(testData(['Search', 'Referral', 'Direct']))
+        .datum(testData(['US', 'Canada', 'Belarus', 'Australia']))
         .transition().duration(500).call(chart);
     nv.utils.windowResize(chart.update);
 
