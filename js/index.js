@@ -20,8 +20,6 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
-        .margin({left: 0, right: 0, top: 0, bottom: 0})
-        //todo this is the problem. stackedAreaChart shouldn't have some default margin. It's bad
         .color(keyColor)
         .showLegend(false)
         .showControls(false)
@@ -70,8 +68,6 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
-        .margin({left: 0, right: 0, top: 0, bottom: 0})
-        //todo this is the problem. stackedAreaChart shouldn't have some default margin. It's bad
         .color(keyColor)
         .showLegend(false)
         .showControls(false)
@@ -90,8 +86,6 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
-        .margin({left: 0, right: 0, top: 0, bottom: 0})
-        //todo this is the problem. stackedAreaChart shouldn't have some default margin. It's bad
         .color(keyColor)
         .showLegend(false)
         .showControls(false)
@@ -110,8 +104,6 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
-        .margin({left: 0, right: 0, top: 0, bottom: 0})
-        //todo this is the problem. stackedAreaChart shouldn't have some default margin. It's bad
         .color(keyColor)
         .showLegend(false)
         .showControls(false)
@@ -130,8 +122,6 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
-        .margin({left: 0, right: 0, top: 0, bottom: 0})
-        //todo this is the problem. stackedAreaChart shouldn't have some default margin. It's bad
         .color(keyColor)
         .showLegend(false)
         .showControls(false)
