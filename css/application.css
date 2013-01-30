@@ -15,7 +15,7 @@ html{
 
 body{
     /*background: transparent url(../img/bgnoise_lg_transparent.png);*/
-    background: url(../img/gaussian_blur.jpg) -350px -350px;
+    background: url(../img/gaussian_blur.jpg) -300px;
 }
 
 .page-header{
@@ -67,15 +67,24 @@ h3{
 }
 
 .sidebar{
-    background-color: #fafafa;
+    background-color: #fff;
     position: fixed;
     width: 180px;
     padding: 20px 0;
     top: 0;
-    bottom: 0;
     color: #595959;
     z-index: 1;
+    margin: 40px 0 0 40px;
 }
+
+.sidebar, .widget, .box{
+    border-radius: 2px;
+}
+
+.sidebar, .widget{
+    box-shadow: 0 0 12px #343434;
+}
+
 .sidebar h2{
     color: inherit;
     font-size: 30px;
@@ -83,14 +92,19 @@ h3{
 }
 
 .sidebar .brand{
-    font-size: 24px;
+    font-size: 30px;
     text-shadow: none;
     color: #6c6c6c;
     font-weight: 300;
     text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
     display: block;
-    margin-left: 20px;
-    margin-bottom: 37px;
+    margin-bottom: 35px;
+}
+
+.sidebar .brand:hover{
+    color: #525252;
 }
 
 .side-nav{
@@ -135,12 +149,11 @@ h3{
 }
 
 .wrap{
-    margin-left: 180px;  /*sidebar width 220px + shadow width 1px = 221px*/
+    margin-left: 220px;
 }
 
 .content{
     min-height: 900px;
-    box-shadow: inset 0 0 5px gray;
     padding: 40px;
 
 }
@@ -151,12 +164,6 @@ input[type=search], input.search {
     padding-left: 26px;
     background-color:white;
     background:url(../img/search.png) 5px 5px no-repeat #fff;
-}
-
-@media (max-width: 767px){
-    input[type=search], input.search {
-        background-position: 5px 10px;
-    }
 }
 
 
@@ -223,8 +230,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     text-align: center;
     line-height: 1em;
     margin-bottom: 20px;
-    border-radius: 3px;
-    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
 }
 
 .box .description{
@@ -279,14 +285,12 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     -moz-transition:box-shadow linear .2s;
     -o-transition:box-shadow linear .2s;
     transition:box-shadow linear .2s;
-
-    box-shadow: 0 0 12px #343434;
 }
 
 .widget:hover{
     -webkit-box-shadow: 0 0 3px #bbb;
     -moz-box-shadow: 0 0 3px #bbb;
-    box-shadow: 0 0 12px #000;
+    box-shadow: 0 0 8px #000;
 
     -webkit-transition:box-shadow linear .2s;
     -moz-transition:box-shadow linear .2s;
@@ -296,7 +300,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 
 .widget{
-    padding: 10px;
+    padding: 15px;
     color: #444;
     background: #ffffff;
 
@@ -354,7 +358,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 .chart-inline .info{
-    padding: 4px 10px;
+    padding: 4px 0;
     text-align: right;
     font-weight: 700;
 }
