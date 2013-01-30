@@ -3,7 +3,7 @@
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 
 body{
-    background: url(../img/gaussian_blur.jpg);
+    background: url(../img/gaussian_blur.jpg) -350px -350px;
 }
 
 .page-header{
@@ -14,41 +14,41 @@ body{
     display: none;    /*removing it temporary*/
 }
 
-    .page-header .navbar .nav > li > a{
-        text-shadow: none;
-        color: #6c6c6c;
-    }
+.page-header .navbar .nav > li > a{
+    text-shadow: none;
+    color: #6c6c6c;
+}
 
+.page-header .navbar-search{
+    position: absolute;
+    float: none;
+    left: 50%;
+    margin: 10px 0 0 -150px;
+    z-index: 1;
+}
+
+@media (max-width: 767px){
     .page-header .navbar-search{
-        position: absolute;
-        float: none;
-        left: 50%;
-        margin: 10px 0 0 -150px;
-        z-index: 1;
+        position: static;
+        right: 0;
+        margin: 5px 0;
+        width: 70%;
+        padding-top: 5px;
     }
+}
 
-        @media (max-width: 767px){
-            .page-header .navbar-search{
-                position: static;
-                right: 0;
-                margin: 5px 0;
-                width: 70%;
-                padding-top: 5px;
-            }
-        }
+.page-header .navbar-search .search-query{
+    border-radius: 0;
+    padding-left: 26px;
+}
 
-        .page-header .navbar-search .search-query{
-            border-radius: 0;
-            padding-left: 26px;
-        }
+.page-header .navbar{
+    margin-bottom: 0;
+}
 
-    .page-header .navbar{
-        margin-bottom: 0;
-    }
-
-        .page-header .navbar .navbar-inner{
-            background: transparent;
-        }
+.page-header .navbar .navbar-inner{
+    background: transparent;
+}
 
 h3{
     font-size: 20px;
@@ -64,22 +64,22 @@ h3{
     color: #595959;
     z-index: 1;
 }
-    .sidebar h2{
-        color: inherit;
-        font-size: 30px;
-        padding-left: 30px;
-    }
+.sidebar h2{
+    color: inherit;
+    font-size: 30px;
+    padding-left: 30px;
+}
 
-    .sidebar .brand{
-        font-size: 24px;
-        text-shadow: none;
-        color: #6c6c6c;
-        font-weight: 300;
-        text-transform: uppercase;
-        display: block;
-        margin-left: 20px;
-        margin-bottom: 37px;
-    }
+.sidebar .brand{
+    font-size: 24px;
+    text-shadow: none;
+    color: #6c6c6c;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 37px;
+}
 
 .side-nav{
     font-size: 14px;
@@ -87,40 +87,40 @@ h3{
     font-weight: 600;
 }
 
-    .side-nav li{
-        list-style: none;
-    }
+.side-nav li{
+    list-style: none;
+}
 
-        .side-nav li.active{
-            box-shadow: -1px 0 1px gray;
-            color: #da3712;
-            background: #fff;
-        }
+.side-nav li.active{
+    box-shadow: -1px 0 1px gray;
+    color: #da3712;
+    background: #fff;
+}
 
-        .side-nav li:hover{
-            color: #da3712;
-        }
+.side-nav li:hover{
+    color: #da3712;
+}
 
-            .side-nav li.active:after,
-            .side-nav li:hover:after{
-                border-top-color: #ffffff;
-                border-bottom-color: #ffffff;
-            }
+.side-nav li.active:after,
+.side-nav li:hover:after{
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
 
-        .side-nav li a{
-            color: inherit;
-            text-decoration: none;
-            display: block;
-            padding: 20px 30px 20px;
-        }
+.side-nav li a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px 20px;
+}
 
-        .side-nav li:after{
-            /*content: "";*/
-            /*display: block;*/
-            /*border-top: 1px solid #eeeeee;*/
-            /*border-bottom: 1px solid #fafafa;*/
-            /*margin: 0 20px;*/
-        }
+.side-nav li:after{
+    /*content: "";*/
+    /*display: block;*/
+    /*border-top: 1px solid #eeeeee;*/
+    /*border-bottom: 1px solid #fafafa;*/
+    /*margin: 0 20px;*/
+}
 
 .wrap{
     margin-left: 180px;  /*sidebar width 220px + shadow width 1px = 221px*/
@@ -215,12 +215,12 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     box-shadow: 0 0 30px rgba(0,0,0,.5);
 }
 
-    .box .description{
-        color: inherit;
-        font-weight: 500;
-        font-size: 16px;
-        text-align: center;
-    }
+.box .description{
+    color: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
 
 .box.red{
     background: #e5603b;
@@ -271,16 +271,16 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     box-shadow: 0 0 12px #343434;
 }
 
-    .widget:hover{
-        -webkit-box-shadow: 0 0 3px #bbb;
-        -moz-box-shadow: 0 0 3px #bbb;
-        box-shadow: 0 0 12px #000;
+.widget:hover{
+    -webkit-box-shadow: 0 0 3px #bbb;
+    -moz-box-shadow: 0 0 3px #bbb;
+    box-shadow: 0 0 12px #000;
 
-        -webkit-transition:box-shadow linear .2s;
-        -moz-transition:box-shadow linear .2s;
-        -o-transition:box-shadow linear .2s;
-        transition:box-shadow linear .2s;
-    }
+    -webkit-transition:box-shadow linear .2s;
+    -moz-transition:box-shadow linear .2s;
+    -o-transition:box-shadow linear .2s;
+    transition:box-shadow linear .2s;
+}
 
 
 .widget{
@@ -295,22 +295,22 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     height: 315px;
 }
 
-    .widget.big .body{
-        height: 280px;
-    }
+.widget.big .body{
+    height: 280px;
+}
 
-    .widget header{
-        position: relative;
-        background: inherit;
-    }
+.widget header{
+    position: relative;
+    background: inherit;
+}
 
-        .widget header h2,
-        .widget header h3,
-        .widget header h4{
-            margin: 0;
-            line-height: 1em;
-            color: inherit;
-        }
+.widget header h2,
+.widget header h3,
+.widget header h4{
+    margin: 0;
+    line-height: 1em;
+    color: inherit;
+}
 
 .widget .body{
     margin-top: 15px;
@@ -325,4 +325,24 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .widget .actions a{
     color: inherit;
     text-decoration: none;
+}
+
+.chart-inline, .chart-inline svg{
+    height: 44px;
+}
+
+.chart-inline{
+    margin-bottom: 12px;
+}
+
+.chart-inline h4{
+    padding-left: 10px;
+    padding-top: 4px;
+    margin: 0;
+}
+
+.chart-inline .info{
+    padding: 4px 10px;
+    text-align: right;
+    font-weight: 700;
 }
