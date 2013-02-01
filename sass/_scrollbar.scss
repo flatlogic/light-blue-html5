@@ -1,0 +1,16 @@
+/* --------------------------------------------------------	*/
+/*	Custom styled scrollbar */
+/* --------------------------------------------------------	*/
+html:not(.osx) ::-webkit-scrollbar {
+  width: 5px;
+
+}
+html:not(.osx) ::-webkit-scrollbar-track-piece {
+
+  background-color: #eee;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+}
+html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
+  opacity:0.4;
+  background-color: #da3712;
+}

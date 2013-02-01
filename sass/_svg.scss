@@ -1,0 +1,58 @@
+.nvd3.nv-stackedarea path.nv-area {
+  fill-opacity: .8;
+}
+
+.nvd3.nv-stackedarea path.nv-area.hover {
+  fill-opacity: .95;
+}
+
+svg text {
+  fill: #555;
+  font-family: inherit;
+}
+
+.nvd3 .nv-axis path.domain{
+  display: none;
+}
+
+.nvtooltip{
+  padding: 5px;
+  position: absolute;
+  background-color: rgba(255,255,255,1);
+  border: 1px solid #ddd;
+  z-index: 10000;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+  transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+
+.nvtooltip h4 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nvd3 .nv-axis line.zero{
+  display: none;
+}
+
+.nv-legend text{
+  fill: #666;
+  stroke-opacity: .9;
+}
+
+.nv-legend circle{
+  fill: #666;
+
+}
