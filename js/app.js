@@ -1,7 +1,9 @@
+COLOR_VALUES = ["#e5603b", "#eac85e", "#56bc76", "#618fb0", '#2eb4dc', '#d04f4f'];
+
 var colors = function(){
     //return d3.scale.ordinal().range(['#1BA1E2', '#8cbf26', '#f0aa25', '#8cbf26', '#cd4e21', '#ea99ac']);
     //return d3.scale.category20c();
-    return d3.scale.ordinal().range(["#e5603b", "#eac85e", "#56bc76", "#618fb0", '#2eb4dc', '#d04f4f']);
+    return d3.scale.ordinal().range(COLOR_VALUES);
     /*
     * .box.red{
      background: #e5603b;

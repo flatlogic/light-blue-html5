@@ -137,3 +137,46 @@ nv.addGraph(function() {
 
     return chart;
 });
+
+nv.addGraph(function() {
+    var testData = [
+        {
+            key: "Audio",
+            y: 5
+        },
+        {
+            key: "Video",
+            y: 2
+        },
+        {
+            key: "Photo",
+            y: 9
+        },
+        {
+            key: "Other",
+            y: 1
+        }
+    ];
+    var colors = COLOR_VALUES.slice();
+    colors[3] = "#bbb"; // gray for other
+    var chart = nv.models.pieChart()
+        .x(function(d) { return d.key })
+        .margin({top: 0, right: 20, bottom: 20, left: 20})
+        .values(function(d) { return d })
+        .color(colors)
+        .showLabels(false)
+        //.showLegend(false)
+        .tooltipContent(function(key, y, e, graph) {
+            return '<h4>' + key + '</h4>' +
+                '<p>' +  y + '</p>'
+        })
+        .donut(true);
+    chart.pie.margin({top: 10, bottom: -20});
+
+    d3.select("#data-chart svg")
+        .datum([testData])
+        .transition().call(chart);
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+});
