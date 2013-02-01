@@ -5,8 +5,8 @@
 @import url(nv.d3.override.css);
 @import url(svg-style.css);
 @import url(bootstrap.override.css);
-/* line 9, ../sass/application.scss */
-html {
+
+html{
   /*background: #1e5799;*/
   /*background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);*/
   /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));*/
@@ -17,57 +17,50 @@ html {
   /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );*/
 }
 
-/* line 20, ../sass/application.scss */
-body {
+body{
   /*background: transparent url(../img/bgnoise_lg_transparent.png);*/
   background: url(../img/real-pixels.jpg);
 }
 
-/* line 25, ../sass/application.scss */
-.page-header {
+.page-header{
   background-color: #fafafa;
   padding: 0;
   margin: 0;
   border: none;
-  display: none;
-}
-/* line 32, ../sass/application.scss */
-.page-header .navbar .nav > li > a {
-  text-shadow: none;
-  color: #6c6c6c;
-}
-/* line 37, ../sass/application.scss */
-.page-header .navbar-search {
-  position: absolute;
-  float: none;
-  left: 50%;
-  margin: 10px 0 0 -150px;
-  z-index: 1;
+  display: none /*removing it temporary*/;
+
+  .navbar .nav > li > a{
+    text-shadow: none;
+    color: #6c6c6c;
+  }
+
+  .navbar-search{
+    position: absolute;
+    float: none;
+    left: 50%;
+    margin: 10px 0 0 -150px;
+    z-index: 1;
+  }
 }
 
-/* line 46, ../sass/application.scss */
-.page-header .navbar-search .search-query {
+.page-header .navbar-search .search-query{
   border-radius: 0;
   padding-left: 26px;
 }
 
-/* line 51, ../sass/application.scss */
-.page-header .navbar {
+.page-header .navbar{
   margin-bottom: 0;
 }
 
-/* line 55, ../sass/application.scss */
-.page-header .navbar .navbar-inner {
+.page-header .navbar .navbar-inner{
   background: transparent;
 }
 
-/* line 59, ../sass/application.scss */
-h3 {
+h3{
   font-size: 20px;
 }
 
-/* line 63, ../sass/application.scss */
-.sidebar {
+.sidebar{
   background-color: #fff;
   position: fixed;
   width: 180px;
@@ -78,31 +71,26 @@ h3 {
   margin: 40px 0 0 40px;
 }
 
-/* line 74, ../sass/application.scss */
-.sidebar, .widget, .box {
+.sidebar, .widget, .box{
   /* global border radius property*/
   border-radius: 2px;
 }
 
-/* line 79, ../sass/application.scss */
-.sidebar, .widget {
+.sidebar, .widget{
   box-shadow: 0 0 12px #343434;
 }
 
-/* line 83, ../sass/application.scss */
-.widget, .box {
+.widget, .box{
   margin-bottom: 30px;
 }
 
-/* line 87, ../sass/application.scss */
-.sidebar h2 {
+.sidebar h2{
   color: inherit;
   font-size: 30px;
   padding-left: 30px;
 }
 
-/* line 93, ../sass/application.scss */
-.sidebar .brand {
+.sidebar .brand{
   font-size: 30px;
   text-shadow: none;
   color: #6c6c6c;
@@ -114,50 +102,46 @@ h3 {
   margin-bottom: 35px;
 }
 
-/* line 105, ../sass/application.scss */
-.sidebar .brand:hover {
+.sidebar .brand:hover{
   color: #525252;
 }
 
-/* line 109, ../sass/application.scss */
-.side-nav {
+.side-nav{
   font-size: 14px;
   margin: 0;
   font-weight: 600;
 }
 
-/* line 115, ../sass/application.scss */
-.side-nav li {
+.side-nav li{
   list-style: none;
 }
 
-/* line 119, ../sass/application.scss */
-.side-nav li.active {
+.side-nav li.active{
   color: #da3712;
 }
 
-/* line 123, ../sass/application.scss */
-.side-nav li:hover {
+.side-nav li:hover{
   color: #da3712;
 }
 
-/* line 127, ../sass/application.scss */
-.side-nav li.active a {
+.side-nav li.active a{
   background: #f8f8f8;
   border-left: 6px solid #4daf7c;
   padding-left: 24px;
 }
 
-/* line 133, ../sass/application.scss */
-.side-nav li a {
+.side-nav li a{
   color: inherit;
   text-decoration: none;
   display: block;
   padding: 18px 30px;
 }
 
-/* line 144, ../sass/application.scss */
-.side-nav li:after {
+.side-nav li a i{
+
+}
+
+.side-nav li:after{
   /*content: "";*/
   /*display: block;*/
   /*border-top: 1px solid #eeeeee;*/
@@ -165,221 +149,191 @@ h3 {
   /*margin: 0 20px;*/
 }
 
-/* line 152, ../sass/application.scss */
-.wrap {
+.wrap{
   margin-left: 220px;
 }
 
-/* line 156, ../sass/application.scss */
-.content {
+.content{
   min-height: 900px;
   padding: 40px;
+
 }
 
 /* basic inputs*/
-/* line 164, ../sass/application.scss */
+
 input[type=search], input.search {
   padding-left: 26px;
-  background-color: white;
-  background: url(../img/search.png) 5px 5px no-repeat white;
+  background-color:white;
+  background:url(../img/search.png) 5px 5px no-repeat #fff;
 }
+
 
 /* --------------------------------------------------------	*/
 /*	Custom styled scrollbar */
 /* --------------------------------------------------------	*/
-/* line 174, ../sass/application.scss */
 html:not(.osx) ::-webkit-scrollbar {
   width: 5px;
-}
 
-/* line 178, ../sass/application.scss */
+}
 html:not(.osx) ::-webkit-scrollbar-track-piece {
-  background-color: #eee;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-}
 
-/* line 183, ../sass/application.scss */
+  background-color: #eee;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+}
 html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
-  opacity: 0.4;
+  opacity:0.4;
   background-color: #da3712;
 }
 
 /*boxes*/
-/* line 189, ../sass/application.scss */
-.box {
+.box{
   padding: 5px;
   color: #ffffff;
   font-size: 42px;
   font-weight: 300;
   text-align: center;
   line-height: 1em;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0,0,0,.5);
 }
 
-/* line 199, ../sass/application.scss */
-.box .description {
+.box .description{
   color: inherit;
   font-weight: 500;
   font-size: 16px;
   text-align: center;
 }
 
-/* line 206, ../sass/application.scss */
-.box.red {
+.box.red{
   background: #e5603b;
 }
 
-/* line 210, ../sass/application.scss */
-.btn-warning, .box.orange {
+.btn-warning, .box.orange{
   background: #eac85e;
 }
 
-/* line 214, ../sass/application.scss */
-.box.green {
+.box.green{
   background: #56bc76;
 }
 
-/* line 218, ../sass/application.scss */
-.box.blue {
+.box.blue{
   background: #618fb0;
 }
 
-/* line 222, ../sass/application.scss */
-.box.purple {
+.box.purple{
   background: #A700AE;
 }
 
-/* line 226, ../sass/application.scss */
-.box.pink {
+.box.pink{
   background: #E671B8;
 }
 
-/* line 230, ../sass/application.scss */
-.box.brown {
+.box.brown{
   background: #A05000;
 }
 
-/* line 234, ../sass/application.scss */
-.box.lime {
+.box.lime{
   background: #8CBF26;
 }
 
-/* line 238, ../sass/application.scss */
-.box.teal {
+.box.teal{
   background: #2eb4dc;
 }
 
-/* line 242, ../sass/application.scss */
-.box.dark-red {
+.box.dark-red{
   background: #d04f4f;
 }
 
-/* line 246, ../sass/application.scss */
-.widget {
-  -webkit-transition: box-shadow linear .2s;
-  -moz-transition: box-shadow linear .2s;
-  -o-transition: box-shadow linear .2s;
-  transition: box-shadow linear .2s;
+.widget{
+  -webkit-transition:box-shadow linear .2s;
+  -moz-transition:box-shadow linear .2s;
+  -o-transition:box-shadow linear .2s;
+  transition:box-shadow linear .2s;
 }
 
-/* line 253, ../sass/application.scss */
-.widget:hover {
+.widget:hover{
   -webkit-box-shadow: 0 0 3px #bbb;
   -moz-box-shadow: 0 0 3px #bbb;
   box-shadow: 0 0 8px #000;
-  -webkit-transition: box-shadow linear .2s;
-  -moz-transition: box-shadow linear .2s;
-  -o-transition: box-shadow linear .2s;
-  transition: box-shadow linear .2s;
+
+  -webkit-transition:box-shadow linear .2s;
+  -moz-transition:box-shadow linear .2s;
+  -o-transition:box-shadow linear .2s;
+  transition:box-shadow linear .2s;
 }
 
-/* line 265, ../sass/application.scss */
-.widget {
+
+.widget{
   padding: 15px;
   color: #444;
   background: #ffffff;
 }
 
-/* line 271, ../sass/application.scss */
-.widget.big {
+.widget.big{
   height: 315px;
 }
 
-/* line 275, ../sass/application.scss */
-.widget.big .body {
+.widget.big .body{
   height: 280px;
 }
 
-/* line 279, ../sass/application.scss */
-.widget header {
+.widget header{
   position: relative;
   background: inherit;
 }
 
-/* line 286, ../sass/application.scss */
 .widget header h2,
 .widget header h3,
-.widget header h4 {
+.widget header h4{
   margin: 0;
   line-height: 1em;
   color: inherit;
 }
 
-/* line 292, ../sass/application.scss */
-.widget .body {
+.widget .body{
   margin-top: 15px;
 }
 
-/* line 296, ../sass/application.scss */
-.widget .actions {
+.widget .actions{
   position: absolute;
   right: 0;
   top: 0;
 }
 
-/* line 302, ../sass/application.scss */
-.widget .actions a {
+.widget .actions a{
   color: inherit;
   text-decoration: none;
 }
 
-/* line 307, ../sass/application.scss */
-.chart-inline, .chart-inline svg {
+.chart-inline, .chart-inline svg{
   height: 44px;
 }
 
-/* line 311, ../sass/application.scss */
-.chart-inline {
+.chart-inline{
   margin-bottom: 12px;
 }
 
-/* line 315, ../sass/application.scss */
-.chart-inline h4 {
+.chart-inline h4{
   padding-left: 10px;
   padding-top: 4px;
   margin: 0;
 }
 
-/* line 321, ../sass/application.scss */
-.chart-inline .info {
+.chart-inline .info{
   padding: 4px 0;
   text-align: right;
   font-weight: 700;
 }
 
-/* line 327, ../sass/application.scss */
-.widget.tabs {
+.widget.tabs{
   padding: 0;
   position: relative;
 }
 
-/* line 332, ../sass/application.scss */
-.widget.tabs header {
+.widget.tabs header{
   margin-top: 0;
 }
 
-/* line 336, ../sass/application.scss */
-.widget.tabs .body {
+.widget.tabs .body{
   padding: 15px;
   background: #ffffff;
   margin-top: 0;
@@ -387,9 +341,8 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   height: 277px;
 }
 
-/* line 345, ../sass/application.scss */
 .widget.tabs:before,
-.widget.tabs:after {
+.widget.tabs:after{
   display: block;
   content: "";
   background: #ffffff;
@@ -397,16 +350,14 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   z-index: 1;
 }
 
-/* line 353, ../sass/application.scss */
-.widget.tabs:before {
+.widget.tabs:before{
   top: 32px;
   left: 0;
   right: 0;
   height: 15px;
 }
 
-/* line 360, ../sass/application.scss */
-.widget.tabs:after {
+.widget.tabs:after{
   bottom: -30px;
   height: 6px;
   left: 0;
@@ -415,26 +366,22 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   border-bottom-left-radius: inherit;
 }
 
-/* line 369, ../sass/application.scss */
-.widget.tabs {
+.widget.tabs{
   background: transparent;
   box-shadow: none;
 }
 
-/* line 374, ../sass/application.scss */
-.widget.tabs .nav-tabs > .active > a {
+.widget.tabs .nav-tabs > .active > a{
   border: 1px solid #ffffff;
   color: #444444;
   background: #fff;
 }
 
-/* line 380, ../sass/application.scss */
-.widget.tabs .nav-tabs > .active > a:hover {
+.widget.tabs .nav-tabs > .active > a:hover{
   background: #ffffff;
 }
 
-/* line 384, ../sass/application.scss */
-.widget.tabs .nav-tabs > li > a {
+.widget.tabs .nav-tabs > li > a{
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   text-align: center;
@@ -444,28 +391,25 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   box-shadow: 0 2px 12px #343434;
 }
 
-/* line 394, ../sass/application.scss */
-.widget.tabs .nav-tabs > li:not(.active) > a:hover {
+.widget.tabs .nav-tabs > li:not(.active) > a:hover{
   background: transparent;
   margin-top: -2px;
   padding-bottom: 10px;
+
   transition: margin-top 50ms linear, padding-bottom 50ms linear;
   -moz-transition: margin-top 50ms linear, padding-bottom 50ms linear;
   -webkit-transition: margin-top 50ms linear, padding-bottom 50ms linear;
 }
 
-/* line 404, ../sass/application.scss */
-input.parsley-error {
+input.parsley-error{
   background-color: #f8f3f0;
 }
 
-/* line 408, ../sass/application.scss */
-form ul.parsley-error-list {
+form ul.parsley-error-list{
   margin-top: -10px;
   font-size: 12px;
 }
 
-/* line 413, ../sass/application.scss */
-form ul.parsley-error-list li {
+form ul.parsley-error-list li{
   list-style: none;
 }

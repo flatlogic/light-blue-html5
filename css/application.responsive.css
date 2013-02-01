@@ -3,3 +3,13 @@
         background-position: 5px 10px;
     }
 }
+
+@media (max-width: 767px){
+    .page-header .navbar-search{
+        position: static;
+        right: 0;
+        margin: 5px 0;
+        width: 70%;
+        padding-top: 5px;
+    }
+}
