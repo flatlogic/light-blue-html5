@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <style>
+        #viz{
+            height: 500px;
+            width: 700px;
+            background:
+                radial-gradient(circle at 30% 40%, rgb(255,0,0), rgb(0,0,0));
+                url(img/bgnoise_lg_dark.png);
+        }
+    </style>
 </head>
 <body>
 <div id="viz"></div>
-<script type="text/javascript">
-
-    var sampleSVG = d3.select("#viz")
-            .append("svg")
-            .attr("width", 100)
-            .attr("height", 100);
-
-    sampleSVG.append("circle")
-            .style("stroke", "gray")
-            .style("fill", "white")
-            .attr("r", 40)
-            .attr("cx", 50)
-            .attr("cy", 50)
-            .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
-            .on("mouseout", function(){d3.select(this).style("fill", "white");});
-
-</script>
+closest-side	The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses).
+closest-corner	The gradient's ending shape is sized so it exactly meets the closest corner of the box from its center.
+farthest-side	Similar to closest-side, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).
+farthest-corner	The gradient's ending shape is sized
 </body>
 </html>
