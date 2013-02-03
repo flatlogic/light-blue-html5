@@ -1,34 +1,24 @@
-COLOR_VALUES = ["#e5603b", "#eac85e", "#56bc76", "#618fb0", '#2eb4dc', '#d04f4f'];
+//colors
+//same as in _variables.scss
+//keep synchronized it
+var $lime = "#8CBF26",
+    $red = "#e5603b",
+    $redDark = "#d04f4f",
+    $blue = "#618fb0",
+    $green = "#56bc76",
+    $orange = "#eac85e",
+    $pink = "#E671B8",
+    $purple = "#A700AE",
+    $brown = "#A05000",
+    $teal = "#2eb4dc",
+    $textColor = "#6f6251";
+
+COLOR_VALUES = [$red, $orange, $green, $blue, $teal, $redDark];
 
 var colors = function(){
+    //d3 built-in colors
     //return d3.scale.ordinal().range(['#1BA1E2', '#8cbf26', '#f0aa25', '#8cbf26', '#cd4e21', '#ea99ac']);
-    //return d3.scale.category20c();
     return d3.scale.ordinal().range(COLOR_VALUES);
-    /*
-    * .box.red{
-     background: #e5603b;
-     }
-
-     .box.orange{
-     background: #eac85e;
-     }
-
-     .box.green{
-     background: #56bc76;
-     }
-
-     .box.blue{
-     background: #618fb0;
-     }
-
-     .box.teal{
-     background: #2eb4dc;
-     }
-
-     .box.dark-red{
-     background: #d04f4f;
-     }
-    */
 }();
 
 function keyColor(d, i) {

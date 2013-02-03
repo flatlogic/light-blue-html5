@@ -165,7 +165,7 @@ nv.addGraph(function() {
         .values(function(d) { return d })
         .color(colors)
         .showLabels(false)
-        //.showLegend(false)
+        .showLegend(false)
         .tooltipContent(function(key, y, e, graph) {
             return '<h4>' + key + '</h4>' +
                 '<p>' +  y + '</p>'

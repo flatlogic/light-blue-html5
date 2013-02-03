@@ -241,7 +241,7 @@ body {
   font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #555555;
+  color: #6f6251;
   background-color: white;
 }
 
@@ -1769,7 +1769,7 @@ select:focus:invalid:focus {
 /* line 400, ../sass/bootstrap/_forms.scss */
 .help-block,
 .help-inline {
-  color: #7b7b7b;
+  color: #998973;
 }
 
 /* line 404, ../sass/bootstrap/_forms.scss */
@@ -7510,7 +7510,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 /* line 9, ../sass/_svg.scss */
 svg text {
-  fill: #555;
+  fill: #6f6251;
   font-family: inherit;
 }
 
@@ -7552,13 +7552,13 @@ svg text {
 
 /* line 50, ../sass/_svg.scss */
 .nv-legend text {
-  fill: #666;
+  fill: #52483b;
   stroke-opacity: .9;
 }
 
 /* line 55, ../sass/_svg.scss */
 .nv-legend circle {
-  fill: #666;
+  fill: #52483b;
 }
 
 /*
@@ -7566,8 +7566,8 @@ only html-elements classes
 */
 /* line 16, ../sass/_basic.scss */
 body {
-  background: url(../img/texture.jpg) -200px -200px;
-  color: #555555;
+  background: url(../img/texture.jpg) -200px 0;
+  color: #6f6251;
   font-weight: 300;
 }
 
@@ -7624,7 +7624,13 @@ ul, ol {
   margin: 0;
 }
 
-/* line 84, ../sass/_basic.scss */
+/* line 70, ../sass/_basic.scss */
+a:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+/* line 89, ../sass/_basic.scss */
 textarea:focus, input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="datetime"]:focus,
@@ -7644,7 +7650,7 @@ input[type="color"]:focus,
   outline: none;
 }
 
-/* line 103, ../sass/_basic.scss */
+/* line 108, ../sass/_basic.scss */
 select, textarea,
 input[type="text"],
 input[type="password"],
@@ -7696,7 +7702,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   width: 180px;
   padding: 20px 0;
   top: 0;
-  color: #595959;
+  color: #6f6251;
   z-index: 1;
   margin: 30px 0 0 25px;
 }
@@ -7710,7 +7716,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
 .sidebar .brand {
   font-size: 30px;
   text-shadow: none;
-  color: #6c6c6c;
+  color: #6f6251;
   font-weight: 300;
   text-transform: uppercase;
   text-decoration: none;
@@ -7836,7 +7842,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   -o-transition: box-shadow linear 0.2s;
   transition: box-shadow linear 0.2s;
   padding: 15px;
-  color: #444;
+  color: #6f6251;
   background: #ffffff;
   margin-bottom: 30px;
 }
@@ -7858,44 +7864,48 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
 .widget.big .body {
   height: 280px;
 }
-/* line 163, ../sass/application.scss */
+/* line 161, ../sass/application.scss */
+.widget.big .body .chart {
+  height: 100%;
+}
+/* line 167, ../sass/application.scss */
 .widget header {
   position: relative;
   background: inherit;
 }
-/* line 167, ../sass/application.scss */
+/* line 171, ../sass/application.scss */
 .widget header h2, .widget header h3, .widget header h4 {
   margin: 0;
   line-height: 1em;
   color: inherit;
 }
-/* line 174, ../sass/application.scss */
+/* line 178, ../sass/application.scss */
 .widget .body {
   margin-top: 15px;
 }
-/* line 178, ../sass/application.scss */
+/* line 182, ../sass/application.scss */
 .widget .actions {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 182, ../sass/application.scss */
+/* line 186, ../sass/application.scss */
 .widget .actions a {
   color: inherit;
   text-decoration: none;
 }
-/* line 188, ../sass/application.scss */
+/* line 192, ../sass/application.scss */
 .widget.tabs {
   padding: 0;
   position: relative;
   background: transparent;
   box-shadow: none;
 }
-/* line 194, ../sass/application.scss */
+/* line 198, ../sass/application.scss */
 .widget.tabs header {
   margin-top: 0;
 }
-/* line 197, ../sass/application.scss */
+/* line 201, ../sass/application.scss */
 .widget.tabs .body {
   padding: 15px;
   background: #ffffff;
@@ -7903,7 +7913,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   box-shadow: 0 6px 12px #343434;
   height: 277px;
 }
-/* line 204, ../sass/application.scss */
+/* line 208, ../sass/application.scss */
 .widget.tabs:before, .widget.tabs:after {
   display: block;
   content: "";
@@ -7911,14 +7921,14 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   position: absolute;
   z-index: 1;
 }
-/* line 212, ../sass/application.scss */
+/* line 216, ../sass/application.scss */
 .widget.tabs:before {
   top: 32px;
   left: 0;
   right: 0;
   height: 15px;
 }
-/* line 218, ../sass/application.scss */
+/* line 222, ../sass/application.scss */
 .widget.tabs:after {
   bottom: -30px;
   height: 6px;
@@ -7927,17 +7937,17 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
 }
-/* line 228, ../sass/application.scss */
+/* line 232, ../sass/application.scss */
 .widget.tabs .nav-tabs > .active > a {
   border: 1px solid #ffffff;
-  color: #444444;
+  color: inherit;
   background: #fff;
 }
-/* line 232, ../sass/application.scss */
+/* line 236, ../sass/application.scss */
 .widget.tabs .nav-tabs > .active > a:hover {
   background: #ffffff;
 }
-/* line 237, ../sass/application.scss */
+/* line 241, ../sass/application.scss */
 .widget.tabs .nav-tabs > li > a {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -7947,7 +7957,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   border-bottom: 1px solid transparent;
   box-shadow: 0 2px 12px #343434;
 }
-/* line 247, ../sass/application.scss */
+/* line 251, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:not(.active) > a:hover {
   background: transparent;
   margin-top: -2px;
@@ -7958,39 +7968,39 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   transition: margin-top 50ms linear, padding-bottom 50ms linear;
 }
 
-/* line 258, ../sass/application.scss */
+/* line 262, ../sass/application.scss */
 .chart-inline {
   margin-bottom: 12px;
   height: 44px;
 }
-/* line 262, ../sass/application.scss */
+/* line 266, ../sass/application.scss */
 .chart-inline svg {
   height: 44px;
 }
-/* line 266, ../sass/application.scss */
+/* line 270, ../sass/application.scss */
 .chart-inline h4 {
   padding-left: 10px;
   padding-top: 4px;
   margin: 0;
 }
-/* line 272, ../sass/application.scss */
+/* line 276, ../sass/application.scss */
 .chart-inline .info {
   padding: 4px 0;
   text-align: right;
   font-weight: 700;
 }
 
-/* line 279, ../sass/application.scss */
+/* line 283, ../sass/application.scss */
 input.parsley-error {
   background-color: #f8f3f0;
 }
 
-/* line 283, ../sass/application.scss */
+/* line 287, ../sass/application.scss */
 form ul.parsley-error-list {
   margin-top: -10px;
   font-size: 12px;
 }
-/* line 287, ../sass/application.scss */
+/* line 291, ../sass/application.scss */
 form ul.parsley-error-list li {
   list-style: none;
 }

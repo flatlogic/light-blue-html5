@@ -7,7 +7,7 @@
 }
 
 svg text {
-  fill: #555;
+  fill: $textColor;
   font-family: inherit;
 }
 
@@ -48,11 +48,11 @@ svg text {
 }
 
 .nv-legend text{
-  fill: #666;
+  fill: adjust-lightness($textColor, -10%);
   stroke-opacity: .9;
 }
 
 .nv-legend circle{
-  fill: #666;
+  fill: adjust-lightness($textColor, -10%);
 
 }
