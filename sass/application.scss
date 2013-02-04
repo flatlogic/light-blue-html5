@@ -57,12 +57,19 @@
   li{
     list-style: none;
 
+    i[class*=icon]{
+      float: right;
+      line-height: 20px;
+    }
+
     &.active, &:hover{
-      color: #da3712;
+      i[class*=icon]{
+        color: #da3712;
+      }
     }
 
     &.active a{
-      background: #f8f8f8;
+      background: $lightGray;
       border-left: 6px solid #4daf7c;
       padding-left: 24px;
     }
@@ -147,11 +154,6 @@
   background: #ffffff;
   margin-bottom: $box-margin-bottom;
 
-  &:hover{
-    @include box-shadow(0 0 8px #000);
-    @include transition(box-shadow linear .2s);
-  }
-
   &.big{
     height: 315px;
 
@@ -202,7 +204,7 @@
       padding: 15px;
       background: #ffffff;
       margin-top: 0;
-      box-shadow: 0 6px 12px #343434;
+      @include box-shadow(0 6px 12px $shadowGray);
       height: 277px;
     }
     &:before, &:after{
@@ -229,31 +231,44 @@
     }
 
     .nav-tabs {
-      & > .active > a{
-        border: 1px solid #ffffff;
-        color: inherit;
-        background: #fff;
-        &:hover{
-          background: #ffffff;
+
+      & > li{
+        float: left;
+        width: 49.5%;
+        margin-left: 1%;
+
+        &:first-child{
+          margin-left: 0;
         }
-      }
 
-      & > li > a{
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        text-align: center;
-        color: #fff;
-        border: 1px solid #ffffff;
-        border-bottom: 1px solid transparent;
-        box-shadow: 0 2px 12px #343434;
-      }
+        &:not(.active) > a:hover{
+          background: transparent;
+          margin-top: -2px;
+          padding-bottom: 10px;
 
-      & > li:not(.active) > a:hover{
-        background: transparent;
-        margin-top: -2px;
-        padding-bottom: 10px;
+          @include transition(margin-top 50ms linear, padding-bottom 50ms linear);
+        }
 
-        @include transition(margin-top 50ms linear, padding-bottom 50ms linear)
+        a{
+          @include border-radius($widget-border-radius $widget-border-radius 0 0 );
+          text-align: center;
+          color: #fff;
+          border: 1px solid #ffffff;
+          border-bottom: 1px solid transparent;
+          @include box-shadow(0 2px 8px $shadowGray);
+          h4{
+            font-size: 15px;
+          }
+        }
+
+        &.active > a{
+          border: 1px solid #ffffff;
+          color: inherit;
+          background: #fff;
+          &:hover{
+            background: #ffffff;
+          }
+        }
       }
     }
   }

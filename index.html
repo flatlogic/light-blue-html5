@@ -172,12 +172,12 @@
             <div class="span4">
                 <section class="widget big tabs">
                     <header>
-                        <ul class="nav nav-tabs row-fluid">
-                            <li class="active span6">
-                                <a href="#"><h4>Data transfer</h4></a>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#"><h4><i class="icon-upload"></i> Data transfer</h4></a>
                             </li>
-                            <li class="span6">
-                                <a href="#"><h4>Month Report</h4></a>
+                            <li>
+                                <a href="#"><h4><i class="icon-download"></i> Month Report</h4></a>
                             </li>
                         </ul>
                     </header>
@@ -188,15 +188,17 @@
                     </div>
                 </section>
             </div>
-            <div class="span5">
-                <section class="widget big">
-
-                </section>
-            </div>
         </div>
     </div>
 </div>
-
+ <script>
+     $(".nav-tabs a").click(function(){
+         var $this = $(this);
+         $(".nav-tabs li").removeClass("active");
+         $this.parent().addClass("active");
+         return false;
+     });
+ </script>
 <script src="lib/nvd3/lib/d3.v2.js"></script>
 <script src="lib/nvd3/nv.d3.custom.js"></script>
 <script src="lib/nvd3/src/models/scatter.js"></script>

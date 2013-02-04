@@ -1,0 +1,91 @@
+<style>
+    &.tabs{
+
+        background: transparent;
+        padding: 0;
+
+    @include box-shadow(none);
+
+    header{
+    @include box-shadow($widget-shadow);
+    @include border-radius($widget-border-radius);
+        margin-bottom: 0;
+        background: #ffffff;
+    }
+
+    .body{
+        background: #ffffff;
+        margin-top: 10px;
+        padding: 15px;
+        height: 273px;
+    @include box-shadow($widget-shadow);
+    @include border-radius($widget-border-radius);
+    }
+
+    .nav-tabs {
+
+    & > li{
+        float: left;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+
+    a{
+        text-align: center;
+        color: $textColor;
+        border: none;
+        outline: none;
+        padding: 9px 0;
+
+    h4{
+        font-size: 15px;
+    }
+
+
+    background: transparent;
+
+    @include border-radius(0);
+
+    &:hover{
+        background: transparent;
+        outline: none;
+    }
+        }
+
+    &.active > a{
+        color: inherit;
+
+        background: $lightGray;
+        border-bottom: 3px solid #4daf7c;
+        padding-bottom: 6px;
+
+    &:hover{
+        background: $lightGray;
+    }
+        }
+
+    &.active:first-child a{
+    @include border-radius($widget-border-radius 0 0 $widget-border-radius);
+    }
+        }
+        }
+        }
+</style>
+
+<section class="widget big tabs">
+    <header>
+        <ul class="nav nav-tabs">
+            <li>
+                <a href="#"><h4><i class="icon-th"></i> Diagram Stats</h4></a>
+            </li>
+            <li class="active">
+                <a href="#"><h4><i class="icon-check"></i> Month Report</h4></a>
+            </li>
+        </ul>
+    </header>
+    <div class="body">
+        <div id="data-chart" class="chart">
+            <svg></svg>
+        </div>
+    </div>
+</section>
