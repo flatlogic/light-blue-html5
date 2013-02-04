@@ -7747,8 +7747,8 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
 /* line 71, ../sass/application.scss */
 .side-nav li.active a {
   background: #f8f8f8;
-  border-left: 6px solid #4daf7c;
-  padding-left: 24px;
+  border-left: 5px solid #4daf7c;
+  padding-left: 25px;
 }
 /* line 77, ../sass/application.scss */
 .side-nav li a {
@@ -7852,55 +7852,68 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   margin-bottom: 30px;
 }
 /* line 157, ../sass/application.scss */
-.widget.big {
+.widget.large {
   height: 315px;
 }
 /* line 160, ../sass/application.scss */
-.widget.big .body {
+.widget.large .body {
   height: 280px;
 }
-/* line 163, ../sass/application.scss */
-.widget.big .body .chart {
-  height: 100%;
+/* line 165, ../sass/application.scss */
+.widget.xlarge {
+  height: 415px;
 }
-/* line 169, ../sass/application.scss */
+/* line 168, ../sass/application.scss */
+.widget.xlarge .body {
+  height: 380px;
+}
+/* line 173, ../sass/application.scss */
 .widget header {
   position: relative;
   background: inherit;
 }
-/* line 173, ../sass/application.scss */
+/* line 177, ../sass/application.scss */
 .widget header h2, .widget header h3, .widget header h4 {
   margin: 0;
   line-height: 1em;
   color: inherit;
 }
-/* line 180, ../sass/application.scss */
+/* line 184, ../sass/application.scss */
 .widget .body {
   margin-top: 15px;
 }
-/* line 184, ../sass/application.scss */
+/* line 187, ../sass/application.scss */
+.widget .body .chart {
+  height: 100%;
+}
+/* line 190, ../sass/application.scss */
+.widget .body .chart.pie {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* line 197, ../sass/application.scss */
 .widget .actions {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 188, ../sass/application.scss */
+/* line 201, ../sass/application.scss */
 .widget .actions a {
   color: inherit;
   text-decoration: none;
 }
-/* line 194, ../sass/application.scss */
+/* line 207, ../sass/application.scss */
 .widget.tabs {
   padding: 0;
   position: relative;
   background: transparent;
   box-shadow: none;
 }
-/* line 200, ../sass/application.scss */
+/* line 213, ../sass/application.scss */
 .widget.tabs header {
   margin-top: 0;
 }
-/* line 203, ../sass/application.scss */
+/* line 217, ../sass/application.scss */
 .widget.tabs .body {
   padding: 15px;
   background: #ffffff;
@@ -7908,9 +7921,21 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   -webkit-box-shadow: 0 6px 12px #676767;
   -moz-box-shadow: 0 6px 12px #676767;
   box-shadow: 0 6px 12px #676767;
-  height: 277px;
 }
-/* line 210, ../sass/application.scss */
+/* line 223, ../sass/application.scss */
+.widget.tabs .body h4 {
+  margin: 0 0 10px 0;
+  line-height: 1em;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 232, ../sass/application.scss */
+.widget.tabs .body .chart {
+  height: 240px;
+}
+/* line 236, ../sass/application.scss */
 .widget.tabs:before, .widget.tabs:after {
   display: block;
   content: "";
@@ -7918,14 +7943,14 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   position: absolute;
   z-index: 1;
 }
-/* line 218, ../sass/application.scss */
+/* line 244, ../sass/application.scss */
 .widget.tabs:before {
   top: 32px;
   left: 0;
   right: 0;
   height: 15px;
 }
-/* line 224, ../sass/application.scss */
+/* line 250, ../sass/application.scss */
 .widget.tabs:after {
   bottom: -30px;
   height: 6px;
@@ -7934,27 +7959,17 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
 }
-/* line 235, ../sass/application.scss */
+/* line 261, ../sass/application.scss */
 .widget.tabs .nav-tabs > li {
   float: left;
   width: 49.5%;
   margin-left: 1%;
 }
-/* line 240, ../sass/application.scss */
+/* line 266, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:first-child {
   margin-left: 0;
 }
-/* line 244, ../sass/application.scss */
-.widget.tabs .nav-tabs > li:not(.active) > a:hover {
-  background: transparent;
-  margin-top: -2px;
-  padding-bottom: 10px;
-  -webkit-transition: margin-top 50ms linear, padding-bottom 50ms linear;
-  -moz-transition: margin-top 50ms linear, padding-bottom 50ms linear;
-  -o-transition: margin-top 50ms linear, padding-bottom 50ms linear;
-  transition: margin-top 50ms linear, padding-bottom 50ms linear;
-}
-/* line 252, ../sass/application.scss */
+/* line 270, ../sass/application.scss */
 .widget.tabs .nav-tabs > li a {
   -webkit-border-radius: 2px 2px 0 0;
   -moz-border-radius: 2px 2px 0 0;
@@ -7966,55 +7981,100 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   -webkit-box-shadow: 0 2px 8px #676767;
   -moz-box-shadow: 0 2px 8px #676767;
   box-shadow: 0 2px 8px #676767;
+  background: rgba(0, 0, 0, 0.1);
 }
-/* line 259, ../sass/application.scss */
+/* line 277, ../sass/application.scss */
 .widget.tabs .nav-tabs > li a h4 {
   font-size: 15px;
 }
-/* line 264, ../sass/application.scss */
+/* line 283, ../sass/application.scss */
 .widget.tabs .nav-tabs > li.active > a {
   border: 1px solid #ffffff;
   color: inherit;
   background: #fff;
 }
-/* line 268, ../sass/application.scss */
+/* line 287, ../sass/application.scss */
 .widget.tabs .nav-tabs > li.active > a:hover {
   background: #ffffff;
 }
+/* line 295, ../sass/application.scss */
+.widget.tabs.large .body {
+  height: 277px;
+}
+/* line 297, ../sass/application.scss */
+.widget.tabs.large .body .chart {
+  height: 250px;
+}
+/* line 304, ../sass/application.scss */
+.widget.tabs.xlarge .body {
+  height: 377px;
+}
+/* line 306, ../sass/application.scss */
+.widget.tabs.xlarge .body .chart {
+  height: 290px;
+}
 
-/* line 277, ../sass/application.scss */
+/* line 314, ../sass/application.scss */
 .chart-inline {
   margin-bottom: 12px;
   height: 44px;
 }
-/* line 281, ../sass/application.scss */
+/* line 318, ../sass/application.scss */
 .chart-inline svg {
   height: 44px;
 }
-/* line 285, ../sass/application.scss */
+/* line 322, ../sass/application.scss */
 .chart-inline h4 {
   padding-left: 10px;
   padding-top: 4px;
   margin: 0;
 }
-/* line 291, ../sass/application.scss */
+/* line 328, ../sass/application.scss */
 .chart-inline .info {
   padding: 4px 0;
   text-align: right;
   font-weight: 700;
 }
 
-/* line 298, ../sass/application.scss */
+/* line 335, ../sass/application.scss */
 input.parsley-error {
   background-color: #f8f3f0;
 }
 
-/* line 302, ../sass/application.scss */
+/* line 339, ../sass/application.scss */
 form ul.parsley-error-list {
   margin-top: -10px;
   font-size: 12px;
 }
-/* line 306, ../sass/application.scss */
+/* line 343, ../sass/application.scss */
 form ul.parsley-error-list li {
   list-style: none;
+}
+
+/* line 348, ../sass/application.scss */
+.pie.chart {
+  position: relative;
+}
+/* line 350, ../sass/application.scss */
+.pie.chart .total {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+/* line 356, ../sass/application.scss */
+.pie.chart .total h4 {
+  margin: 0;
+  color: #e5603b;
+  text-transform: none;
+  line-height: 1em;
+  font-size: 15px;
+}
+/* line 363, ../sass/application.scss */
+.pie.chart .total h3 {
+  margin: 0;
+  line-height: 1em;
+  font-weight: 700;
+  font-size: 40px;
+  color: #7e6f5c;
 }

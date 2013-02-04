@@ -142,19 +142,19 @@ nv.addGraph(function() {
     var testData = [
         {
             key: "Audio",
-            y: 5
+            y: 532
         },
         {
             key: "Video",
-            y: 2
+            y: 223
         },
         {
             key: "Photo",
-            y: 9
+            y: 909
         },
         {
             key: "Other",
-            y: 1
+            y: 182
         }
     ];
     var colors = COLOR_VALUES.slice();
@@ -170,6 +170,10 @@ nv.addGraph(function() {
             return '<h4>' + key + '</h4>' +
                 '<p>' +  y + '</p>'
         })
+        .total(function(count){
+            return "<h4>"+ count + " files </h4>"
+            + "<h3>" + "27Gb" + "</h3>"
+        })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});
 
@@ -179,4 +183,11 @@ nv.addGraph(function() {
     nv.utils.windowResize(chart.update);
 
     return chart;
+});
+
+$(".nav-tabs a").click(function(){
+    var $this = $(this);
+    $(".nav-tabs li").removeClass("active");
+    $this.parent().addClass("active");
+    return false;
 });

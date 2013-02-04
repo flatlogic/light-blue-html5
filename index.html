@@ -63,7 +63,7 @@
         </div>
         <div class="row-fluid">
             <div class="span4">
-                <section class="widget big">
+                <section class="widget large">
                     <header>
                         <h3><i class="icon-bar-chart"></i> Weekly Statistics</h3>
                         <div class="actions">
@@ -150,7 +150,7 @@
                 </section>
             </div>
             <div class="span8">
-                <section class="widget big">
+                <section class="widget large">
                     <header>
                         <h3><i class="icon-globe"></i> Top four countries</h3>
                         <div class="actions">
@@ -165,24 +165,25 @@
         </div>
         <div class="row-fluid">
             <div class="span3">
-                <section class="widget big">
+                <section class="widget large">
 
                 </section>
             </div>
             <div class="span4">
-                <section class="widget big tabs">
+                <section class="widget xlarge tabs">
                     <header>
                         <ul class="nav nav-tabs">
                             <li class="active">
-                                <a href="#"><h4><i class="icon-upload"></i> Data transfer</h4></a>
+                                <a href="#"><h4>Some Stats</h4></a>
                             </li>
                             <li>
-                                <a href="#"><h4><i class="icon-download"></i> Month Report</h4></a>
+                                <a href="#"><h4>Month Report</h4></a>
                             </li>
                         </ul>
                     </header>
                     <div class="body">
-                        <div id="data-chart" class="chart">
+                        <h4>Data Transfer</h4>
+                        <div id="data-chart" class="chart pie">
                             <svg></svg>
                         </div>
                     </div>
@@ -191,14 +192,6 @@
         </div>
     </div>
 </div>
- <script>
-     $(".nav-tabs a").click(function(){
-         var $this = $(this);
-         $(".nav-tabs li").removeClass("active");
-         $this.parent().addClass("active");
-         return false;
-     });
- </script>
 <script src="lib/nvd3/lib/d3.v2.js"></script>
 <script src="lib/nvd3/nv.d3.custom.js"></script>
 <script src="lib/nvd3/src/models/scatter.js"></script>
