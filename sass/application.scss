@@ -148,7 +148,6 @@
 .widget{
   @include border-radius($widget-border-radius);
   @include box-shadow($widget-shadow);
-  @include transition(box-shadow linear .2s);
   padding: 15px;
   color: $textColor;
   background: #ffffff;
@@ -417,4 +416,58 @@ form ul.parsley-error-list{
 .widget:not(.large):not(.xlarge) .pie.chart{
   display: none;
   content: "Specify whether large or xlarge for outer container to display chart";
+}
+
+.page-header{
+  display: none; //not ready yet
+
+  border: none;
+  margin: 15px 40px 0;
+  padding: 0;
+
+  @include border-radius($widget-border-radius);
+  @include box-shadow($widget-shadow);
+
+  background: white;
+
+  float: right;
+
+  .nav > li{
+    & > a{
+      font-weight: 400;
+      border-left: 1px solid darken($lightGray, 10%);
+      color: $textColor;
+      padding: 15px;
+    }
+    &:first-child > a{
+      border-left: none;
+    }
+  }
+}
+
+.navbar{
+  margin: 0;
+}
+
+.navbar-inner{
+  background: transparent;
+  padding: 0;
+  border: none;
+  @include border-radius(0);
+  @include box-shadow(none);
+}
+
+.navbar-search{
+  margin-right: 40px;
+  padding: 10px 15px;
+  margin-top: 0;
+
+  position: static;
+  float: none;
+
+  .search-query{
+    @include border-radius($widget-border-radius);
+    padding-left: 30px;
+    color: inherit;
+  }
 }

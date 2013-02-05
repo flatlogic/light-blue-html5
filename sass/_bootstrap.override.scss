@@ -30,7 +30,7 @@ input[type="color"]:focus,
 }
 
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]{
-  color: #6c6c6c;
+  color: $textColor;
 }
 
 .nav{
@@ -45,11 +45,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
   margin-bottom: 0;
 }
 
-.nav-tabs > li > a, .nav-pills > li > a{
+.nav-tabs > li > a,
+.nav-pills > li > a{
   margin: 0;
-}
-
-.navbar-inner {
-  min-height: 50px;
-  padding-right: 20px;
 }

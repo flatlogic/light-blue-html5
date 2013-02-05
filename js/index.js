@@ -2,6 +2,9 @@ nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
         .color(keyColor);
 
+    chart.controls
+        .color([$textColor, $textColor, $textColor]);
+
     chart.yAxis
         .showMaxMin(false)
         .tickFormat(d3.format(',f'));
@@ -213,10 +216,6 @@ nv.addGraph(function() {
         .datum([testData])
         .transition().call(chart);
     nv.utils.windowResize(chart.update);
-
-    setInterval(function(){
-        chart.update();
-    }, 1000);
 
     return chart;
 });
