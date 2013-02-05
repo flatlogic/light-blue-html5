@@ -8011,7 +8011,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
 }
 /* line 306, ../sass/application.scss */
 .widget.tabs.xlarge .body .chart {
-  height: 290px;
+  height: 270px;
 }
 
 /* line 314, ../sass/application.scss */
@@ -8076,4 +8076,47 @@ form ul.parsley-error-list li {
   line-height: 1em;
   font-weight: 700;
   font-size: 40px;
+}
+/* line 371, ../sass/application.scss */
+.pie.chart .controls {
+  margin-top: 30px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+}
+/* line 378, ../sass/application.scss */
+.pie.chart .controls .control {
+  background: #f3f3f3;
+  text-align: center;
+  font-weight: 400;
+  padding: 2%;
+  color: #918273;
+  width: 29%;
+  cursor: pointer;
+  margin-left: 0.5%;
+  float: left;
+}
+/* line 391, ../sass/application.scss */
+.pie.chart .controls .control:first-child {
+  border-bottom-left-radius: 2px;
+  margin-left: 0;
+}
+/* line 396, ../sass/application.scss */
+.pie.chart .controls .control:last-child {
+  border-bottom-right-radius: 2px;
+}
+/* line 400, ../sass/application.scss */
+.pie.chart .controls .control.disabled {
+  border-top: 3px solid transparent !important;
+}
+/* line 404, ../sass/application.scss */
+.pie.chart .controls .control h4 {
+  text-transform: lowercase;
+  font-size: 15px;
+  font-weight: 400;
+}
+/* line 410, ../sass/application.scss */
+.pie.chart .controls .control p {
+  font-size: 24px;
+  font-weight: 700;
 }

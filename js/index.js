@@ -142,27 +142,28 @@ nv.addGraph(function() {
     var testData = [
         {
             key: "Audio",
-            y: 532
+            y: Math.floor((Math.random()*900)+1),
+            z: Math.floor((Math.random()*10)+1)
         },
         {
             key: "Video",
-            y: 223
+            y: Math.floor((Math.random()*500)+1),
+            z: Math.floor((Math.random()*10)+1)
         },
         {
             key: "Photo",
-            y: 909
-        },
-        {
-            key: "Other",
-            y: 182
+            y: Math.floor((Math.random()*1000)+1),
+            z: Math.floor((Math.random()*10)+1)
         }
     ];
     var colors = COLOR_VALUES.slice();
     colors[3] = "#bbb"; // gray for other
-    var chart = nv.models.pieChart()
+
+    var chart = nv.models.pieChartTotal()
         .x(function(d) { return d.key })
         .margin({top: 0, right: 20, bottom: 20, left: 20})
         .values(function(d) { return d })
+        .z(function(d){return d.z})
         .color(colors)
         .showLabels(false)
         .showLegend(false)
@@ -170,12 +171,43 @@ nv.addGraph(function() {
             return '<h4>' + key + '</h4>' +
                 '<p>' +  y + '</p>'
         })
-        .total(function(count){
+        .total(function(count, z_count){
             return "<h4>"+ count + " files </h4>"
-            + "<h3>" + "27Gb" + "</h3>"
+            + "<h3>" + z_count + "Gb </h3>"
         })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});
+
+    var sum = d3.sum(testData, function(d){
+            return d.y;
+        });
+    d3.select("#data-chart")
+        .append("div")
+        .classed("controls", true)
+        .selectAll("div")
+        .data(testData)
+        .enter().append("div")
+        .classed("control", true)
+        .style("border-top", function(d, i){
+            return "3px solid " + colors[i];
+        })
+        .html(function(d) {
+            return "<h4>" + d.key + "</h4>"
+                + "<p>" + Math.floor(100 * d.y / sum) + "%</p>";
+        })
+        .on('click', function(d) {
+            d.disabled = !d.disabled;
+            d3.select(this)
+                .classed("disabled", d.disabled);
+            if (!chart.pie.values()(testData).filter(function(d) { return !d.disabled }).length) {
+                chart.pie.values()(testData).map(function(d) {
+                    d.disabled = false;
+                    return d;
+                });
+                d3.select("#data-chart").selectAll('.control').classed('disabled', false);
+            }
+            d3.select("#data-chart svg").transition().call(chart)
+        });
 
     d3.select("#data-chart svg")
         .datum([testData])
