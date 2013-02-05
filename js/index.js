@@ -142,17 +142,17 @@ nv.addGraph(function() {
     var testData = [
         {
             key: "Audio",
-            y: Math.floor((Math.random()*900)+1),
+            y: Math.floor((Math.random()*900)+200),
             z: Math.floor((Math.random()*10)+1)
         },
         {
             key: "Video",
-            y: Math.floor((Math.random()*500)+1),
+            y: Math.floor((Math.random()*500)+200),
             z: Math.floor((Math.random()*10)+1)
         },
         {
             key: "Photo",
-            y: Math.floor((Math.random()*1000)+1),
+            y: Math.floor((Math.random()*1000)+200),
             z: Math.floor((Math.random()*10)+1)
         }
     ];
@@ -214,12 +214,9 @@ nv.addGraph(function() {
         .transition().call(chart);
     nv.utils.windowResize(chart.update);
 
-    return chart;
-});
+    setInterval(function(){
+        chart.update();
+    }, 1000);
 
-$(".nav-tabs a").click(function(){
-    var $this = $(this);
-    $(".nav-tabs li").removeClass("active");
-    $this.parent().addClass("active");
-    return false;
+    return chart;
 });

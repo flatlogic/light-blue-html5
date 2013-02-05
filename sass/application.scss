@@ -185,7 +185,6 @@
     margin-top: 15px;
 
     .chart{
-      height: 100%;
 
       &.pie{
         margin-left: -15px;
@@ -205,108 +204,71 @@
   }
 
   &.tabs{
-    padding: 0;
-    position: relative;
-    background: transparent;
-    box-shadow: none;
+    padding-top: 0;
 
-    header{
-      margin-top: 0;
-    }
-
-    .body{
-      padding: 15px;
-      background: #ffffff;
-      margin-top: 0;
-      @include box-shadow(0 6px 12px $shadowGray);
-
-      h4{
-        margin: 0 0 10px 0;
-        line-height: 1em;
-        font-size: 15px;
-        font-weight: 700;
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      .chart{
-        height: 240px;
-      }
-    }
-    &:before, &:after{
-      display: block;
-      content: "";
-      background: #ffffff;
-      position: absolute;
-      z-index: 1;
-    }
-
-    &:before{
-      top: 32px;
-      left: 0;
-      right: 0;
-      height: 15px;
-    }
-    &:after{
-      bottom: -30px;
-      height: 6px;
-      left: 0;
-      right: 0;
-      border-bottom-right-radius: inherit;
-      border-bottom-left-radius: inherit;
+    .body h4{
+      margin: 0 0 10px 0;
+      line-height: 1em;
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
     }
 
     .nav-tabs {
 
+      margin-left: -15px;
+      margin-right: -15px;
+
       & > li{
         float: left;
-        width: 49.5%;
-        margin-left: 1%;
+        width: 50%;
 
         &:first-child{
           margin-left: 0;
+
+          & > a{
+            @include border-radius($widget-border-radius 0 0 0);
+          }
         }
 
-        a{
-          @include border-radius($widget-border-radius $widget-border-radius 0 0 );
+        &:last-child > a{
+          @include border-radius(0 $widget-border-radius 0 0);
+        }
+
+        & > a{
+          @include border-radius(0);
+          border: none;
           text-align: center;
-          color: #fff;
-          border: 1px solid #ffffff;
-          border-bottom: 1px solid transparent;
-          @include box-shadow(0 2px 8px $shadowGray);
+          background: -webkit-linear-gradient($lightGray, darken($lightGray, 2%));
+          color: $textColor;
+
+          &:hover{
+            color: $red;
+          }
           h4{
             font-size: 15px;
           }
-          background: rgba(0,0,0,.1);
         }
 
         &.active > a{
-          border: 1px solid #ffffff;
-          color: inherit;
+          border-top: 3px solid $green;
+          padding-top: 5px;
           background: #fff;
-          &:hover{
-            background: #ffffff;
-          }
+          color: $textColor;
         }
       }
     }
 
     &.large{
-      .body{
-        height: 277px;
-        .chart{
-          height: 250px;
-        }
+      height: 330px; //+15px
+      .body .chart{
+        height: 196px;
       }
     }
 
-    &.xlarge{
-      .body{
-        height: 377px;
-        .chart{
-          height: 270px;
-        }
-      }
+    &.xlarge .body .chart{
+      height: 257px;
     }
   }
 }
@@ -413,4 +375,35 @@ form ul.parsley-error-list{
       }
     }
   }
+}
+
+.widget.large .pie.chart{
+
+  .total{
+    h4{
+      font-size: 13px;
+    }
+    h3{
+      font-size: 32px;
+    }
+  }
+  .controls .control{
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+    h4{
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    p{
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.widget:not(.large):not(.xlarge) .pie.chart{
+  display: none;
+  content: "Specify whether large or xlarge for outer container to display chart";
 }
