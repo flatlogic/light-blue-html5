@@ -7859,50 +7859,66 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
 .widget.large .body {
   height: 280px;
 }
-/* line 165, ../sass/application.scss */
+/* line 163, ../sass/application.scss */
+.widget.large .body .chart {
+  height: 212px;
+}
+/* line 169, ../sass/application.scss */
 .widget.xlarge {
   height: 415px;
 }
-/* line 168, ../sass/application.scss */
+/* line 172, ../sass/application.scss */
 .widget.xlarge .body {
   height: 380px;
 }
-/* line 173, ../sass/application.scss */
+/* line 175, ../sass/application.scss */
+.widget.xlarge .body .chart {
+  height: 298px;
+}
+/* line 181, ../sass/application.scss */
 .widget header {
   position: relative;
   background: inherit;
 }
-/* line 177, ../sass/application.scss */
+/* line 185, ../sass/application.scss */
 .widget header h2, .widget header h3, .widget header h4 {
   margin: 0;
   line-height: 1em;
   color: inherit;
 }
-/* line 184, ../sass/application.scss */
+/* line 192, ../sass/application.scss */
 .widget .body {
   margin-top: 15px;
 }
-/* line 189, ../sass/application.scss */
+/* line 195, ../sass/application.scss */
+.widget .body h2, .widget .body h3, .widget .body h4 {
+  margin: 0;
+}
+/* line 199, ../sass/application.scss */
+.widget .body .chart {
+  height: 60%;
+}
+/* line 201, ../sass/application.scss */
 .widget .body .chart.pie {
   margin-left: -15px;
   margin-right: -15px;
 }
-/* line 196, ../sass/application.scss */
+/* line 208, ../sass/application.scss */
 .widget .actions {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 200, ../sass/application.scss */
+/* line 212, ../sass/application.scss */
 .widget .actions a {
   color: inherit;
   text-decoration: none;
 }
-/* line 206, ../sass/application.scss */
+/* line 218, ../sass/application.scss */
 .widget.tabs {
   padding-top: 0;
 }
-/* line 209, ../sass/application.scss */
+/* line 221, ../sass/application.scss */
 .widget.tabs .body h4 {
   margin: 0 0 10px 0;
   line-height: 1em;
@@ -7911,33 +7927,33 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 218, ../sass/application.scss */
+/* line 230, ../sass/application.scss */
 .widget.tabs .nav-tabs {
   margin-left: -15px;
   margin-right: -15px;
 }
-/* line 223, ../sass/application.scss */
+/* line 235, ../sass/application.scss */
 .widget.tabs .nav-tabs > li {
   float: left;
   width: 50%;
 }
-/* line 227, ../sass/application.scss */
+/* line 239, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:first-child {
   margin-left: 0;
 }
-/* line 230, ../sass/application.scss */
+/* line 242, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:first-child > a {
   -webkit-border-radius: 2px 0 0 0;
   -moz-border-radius: 2px 0 0 0;
   border-radius: 2px 0 0 0;
 }
-/* line 235, ../sass/application.scss */
+/* line 247, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:last-child > a {
   -webkit-border-radius: 0 2px 0 0;
   -moz-border-radius: 0 2px 0 0;
   border-radius: 0 2px 0 0;
 }
-/* line 239, ../sass/application.scss */
+/* line 251, ../sass/application.scss */
 .widget.tabs .nav-tabs > li > a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -7947,83 +7963,84 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   background: -webkit-linear-gradient(#f8f8f8, #f3f3f3);
   color: #6f6251;
 }
-/* line 246, ../sass/application.scss */
+/* line 258, ../sass/application.scss */
 .widget.tabs .nav-tabs > li > a:hover {
   color: #e5603b;
 }
-/* line 249, ../sass/application.scss */
+/* line 261, ../sass/application.scss */
 .widget.tabs .nav-tabs > li > a h4 {
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 15px;
 }
-/* line 254, ../sass/application.scss */
+/* line 267, ../sass/application.scss */
 .widget.tabs .nav-tabs > li.active > a {
   border-top: 3px solid #56bc76;
   padding-top: 5px;
   background: #fff;
   color: #6f6251;
 }
-/* line 263, ../sass/application.scss */
+/* line 276, ../sass/application.scss */
 .widget.tabs.large {
   height: 330px;
 }
-/* line 265, ../sass/application.scss */
+/* line 278, ../sass/application.scss */
 .widget.tabs.large .body .chart {
   height: 196px;
 }
-/* line 270, ../sass/application.scss */
+/* line 283, ../sass/application.scss */
 .widget.tabs.xlarge .body .chart {
   height: 257px;
 }
 
-/* line 276, ../sass/application.scss */
+/* line 289, ../sass/application.scss */
 .chart-inline {
   margin-bottom: 12px;
   height: 44px;
 }
-/* line 280, ../sass/application.scss */
+/* line 293, ../sass/application.scss */
 .chart-inline svg {
   height: 44px;
 }
-/* line 284, ../sass/application.scss */
+/* line 297, ../sass/application.scss */
 .chart-inline h4 {
   padding-left: 10px;
   padding-top: 4px;
   margin: 0;
 }
-/* line 290, ../sass/application.scss */
+/* line 303, ../sass/application.scss */
 .chart-inline .info {
   padding: 4px 0;
   text-align: right;
   font-weight: 700;
 }
 
-/* line 297, ../sass/application.scss */
+/* line 310, ../sass/application.scss */
 input.parsley-error {
   background-color: #f8f3f0;
 }
 
-/* line 301, ../sass/application.scss */
+/* line 314, ../sass/application.scss */
 form ul.parsley-error-list {
   margin-top: -10px;
   font-size: 12px;
 }
-/* line 305, ../sass/application.scss */
+/* line 318, ../sass/application.scss */
 form ul.parsley-error-list li {
   list-style: none;
 }
 
-/* line 310, ../sass/application.scss */
+/* line 323, ../sass/application.scss */
 .pie.chart {
   position: relative;
 }
-/* line 312, ../sass/application.scss */
+/* line 326, ../sass/application.scss */
 .pie.chart .total {
   text-align: center;
   position: absolute;
   left: 0;
   top: 50%;
 }
-/* line 318, ../sass/application.scss */
+/* line 332, ../sass/application.scss */
 .pie.chart .total h4 {
   margin: 0;
   color: #e5603b;
@@ -8031,21 +8048,19 @@ form ul.parsley-error-list li {
   line-height: 1em;
   font-size: 15px;
 }
-/* line 325, ../sass/application.scss */
+/* line 339, ../sass/application.scss */
 .pie.chart .total h3 {
   margin: 0;
   line-height: 1em;
   font-weight: 700;
   font-size: 40px;
 }
-/* line 333, ../sass/application.scss */
+/* line 347, ../sass/application.scss */
 .pie.chart .controls {
   margin-top: 30px;
-  position: absolute;
-  z-index: 2;
   width: 100%;
 }
-/* line 340, ../sass/application.scss */
+/* line 351, ../sass/application.scss */
 .pie.chart .controls .control {
   background: #f3f3f3;
   text-align: center;
@@ -8057,56 +8072,56 @@ form ul.parsley-error-list li {
   margin-left: 0.5%;
   float: left;
 }
-/* line 353, ../sass/application.scss */
+/* line 364, ../sass/application.scss */
 .pie.chart .controls .control:first-child {
   border-bottom-left-radius: 2px;
   margin-left: 0;
 }
-/* line 358, ../sass/application.scss */
+/* line 369, ../sass/application.scss */
 .pie.chart .controls .control:last-child {
   border-bottom-right-radius: 2px;
 }
-/* line 362, ../sass/application.scss */
+/* line 373, ../sass/application.scss */
 .pie.chart .controls .control.disabled {
   border-top: 3px solid transparent !important;
 }
-/* line 366, ../sass/application.scss */
+/* line 377, ../sass/application.scss */
 .pie.chart .controls .control h4 {
   text-transform: lowercase;
   font-size: 15px;
   font-weight: 400;
 }
-/* line 372, ../sass/application.scss */
+/* line 383, ../sass/application.scss */
 .pie.chart .controls .control p {
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 383, ../sass/application.scss */
+/* line 394, ../sass/application.scss */
 .widget.large .pie.chart .total h4 {
   font-size: 13px;
 }
-/* line 386, ../sass/application.scss */
+/* line 397, ../sass/application.scss */
 .widget.large .pie.chart .total h3 {
   font-size: 32px;
 }
-/* line 390, ../sass/application.scss */
+/* line 401, ../sass/application.scss */
 .widget.large .pie.chart .controls .control {
   padding-top: 1%;
   padding-bottom: 1%;
 }
-/* line 394, ../sass/application.scss */
+/* line 405, ../sass/application.scss */
 .widget.large .pie.chart .controls .control h4 {
   font-size: 13px;
   margin-bottom: 5px;
 }
-/* line 399, ../sass/application.scss */
+/* line 410, ../sass/application.scss */
 .widget.large .pie.chart .controls .control p {
   font-size: 20px;
   margin-bottom: 0;
 }
 
-/* line 406, ../sass/application.scss */
+/* line 417, ../sass/application.scss */
 .widget:not(.large):not(.xlarge) .pie.chart {
   display: none;
   content: "Specify whether large or xlarge for outer container to display chart";
