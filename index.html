@@ -5,6 +5,7 @@
     <link href="css/application.css" rel="stylesheet">
     <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
     <!--<script src="lib/zepto/zepto.min.js"> </script>-->
+    <script src="js/bootstrap/bootstrap-tab.js"> </script>
     <script src="lib/parsley.js"> </script>
 </head>
 <body>
@@ -198,17 +199,22 @@
                     <header>
                         <ul class="nav nav-tabs">
                             <li class="active">
-                                <a href="#"><h4>Some Stats</h4></a>
+                                <a href="#stats" data-toggle="tab"><h4>Some Stats</h4></a>
                             </li>
                             <li>
-                                <a href="#"><h4>Month Report</h4></a>
+                                <a href="#report" data-toggle="tab"><h4>Month Report</h4></a>
                             </li>
                         </ul>
                     </header>
-                    <div class="body">
-                        <h4>Data Transfer</h4>
-                        <div id="data-chart" class="chart pie">
-                            <svg></svg>
+                    <div class="body tab-content">
+                        <div id="stats" class="tab-pane active">
+                            <h4>Data Transfer</h4>
+                            <div id="data-chart" class="chart pie">
+                                <svg></svg>
+                            </div>
+                        </div>
+                        <div id="report" class="tab-pane">
+                            Some report
                         </div>
                     </div>
                 </section>

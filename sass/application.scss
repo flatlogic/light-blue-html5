@@ -251,7 +251,8 @@
           @include border-radius(0);
           border: none;
           text-align: center;
-          background: -webkit-linear-gradient($lightGray, darken($lightGray, 2%));
+          background-color: $lightGray;
+          @include background(linear-gradient($lightGray, darken($lightGray, 2%)));
           color: $textColor;
 
           &:hover{
@@ -352,7 +353,7 @@ form ul.parsley-error-list{
       text-align: center;
       font-weight: 400;
       padding: 2%;
-      color: #918273;
+      color: lighten($textColor, 10%);
       width: 29%;
       cursor: pointer;
 
