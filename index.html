@@ -195,22 +195,23 @@
                         <h3><i class="icon-tasks"></i> Todos</h3>
                     </header>
                     <div class="body">
-                        <div id="todo-app">
+                        <div id="todo-app" class="todo-app">
                             <form>
                                 <fieldset>
                                     <label for="new-todo">
-                                        <input id="new-todo" type="text" placeholder="What needs to be done?">
+                                        <input id="new-todo" type="text" class="new-todo" placeholder="What needs to be done?">
                                     </label>
-
-                                    <label for="toggle-all" class="checkbox">
-                                        <input id="toggle-all" type="checkbox">
-                                        Mark all as complete
-                                    </label>
-                                    <ul id="todo-list"></ul>
+                                    <section id="todo-app-main">
+                                        <label for="toggle-all" class="checkbox mark-all">
+                                            <input id="toggle-all" type="checkbox">
+                                            Mark all as complete
+                                        </label>
+                                        <ul id="todo-list" class="todos"></ul>
+                                    </section>
                                     <footer>
                                         <div id="todo-count"></div>
+                                        <div class="help-block">Double-click to edit a todo.</div>
                                     </footer>
-                                    <span class="help-block">Double-click to edit a todo.</span>
                                 </fieldset>
                             </form>
 
@@ -277,9 +278,10 @@
 
 <script type="text/template" id="stats-template">
     <% if (done) { %>
-    <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+    <a id="clear-completed" class="clear-completed"><i class="icon-trash"></i> Clear <%= done %> <%= done == 1 ? 'item' : 'items' %></a>
     <% } %>
-    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+    <div class="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+    <div class="help-block">Double-click to edit a todo.</div>
 </script>
 
 </body>

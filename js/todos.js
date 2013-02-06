@@ -174,12 +174,16 @@ $(function(){
             this.input = this.$("#new-todo");
             this.allCheckbox = this.$("#toggle-all")[0];
 
+            //really cool stuff.
+            //it says kind of
+            //"I am watching you, and will perform some action when you'll do something"
+            //in this case View watches Model
             this.listenTo(Todos, 'add', this.addOne);
             this.listenTo(Todos, 'reset', this.addAll);
             this.listenTo(Todos, 'all', this.render);
 
             this.footer = this.$('footer');
-            this.main = $('#main');
+            this.main = $('#todo-app-main');
 
             Todos.fetch();
         },

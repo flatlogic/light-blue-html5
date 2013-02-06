@@ -7666,12 +7666,22 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
-  color: #6c6c6c;
+  color: #6f6251;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 8px 10px;
 }
 
-/* line 112, ../sass/_basic.scss */
+/* line 114, ../sass/_basic.scss */
 label {
   margin: 0;
+  padding: 0;
+}
+
+/* line 119, ../sass/_basic.scss */
+ul li, ol li {
+  list-style: none;
 }
 
 /* --------------------------------------------------------	*/
@@ -8193,4 +8203,133 @@ form ul.parsley-error-list li {
   border-radius: 2px;
   padding-left: 30px;
   color: inherit;
+}
+
+/* line 476, ../sass/application.scss */
+.todo-app {
+  height: 100%;
+  position: relative;
+}
+/* line 480, ../sass/application.scss */
+.todo-app .new-todo {
+  display: block;
+  width: 100%;
+  margin: 0;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 488, ../sass/application.scss */
+.todo-app li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 493, ../sass/application.scss */
+.todo-app li.done label {
+  color: #777777;
+  text-decoration: line-through;
+}
+/* line 498, ../sass/application.scss */
+.todo-app li .edit {
+  display: none;
+}
+/* line 502, ../sass/application.scss */
+.todo-app li .view label {
+  word-break: break-word;
+}
+/* line 506, ../sass/application.scss */
+.todo-app li.editing {
+  border-bottom: none;
+  margin-top: -1px;
+  padding: 0;
+}
+/* line 511, ../sass/application.scss */
+.todo-app li.editing:last-child {
+  margin-bottom: -1px;
+}
+/* line 515, ../sass/application.scss */
+.todo-app li.editing .edit {
+  display: block;
+  width: 444px;
+  padding: 13px 15px 14px 20px;
+  margin: 0;
+}
+/* line 522, ../sass/application.scss */
+.todo-app li.editing .view {
+  display: none;
+}
+/* line 528, ../sass/application.scss */
+.todo-app li:last-child {
+  border-bottom: none;
+}
+/* line 532, ../sass/application.scss */
+.todo-app li:hover .destroy {
+  display: block;
+}
+/* line 537, ../sass/application.scss */
+.todo-app .destroy {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: url(destroy.png) no-repeat;
+}
+/* line 548, ../sass/application.scss */
+.todo-app footer {
+  margin: 0 -15px -15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  color: #ffffff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7e6f5c), color-stop(100%, #6f6251));
+  background: -webkit-linear-gradient(#7e6f5c, #6f6251);
+  background: -moz-linear-gradient(#7e6f5c, #6f6251);
+  background: -o-linear-gradient(#7e6f5c, #6f6251);
+  background: linear-gradient(#7e6f5c, #6f6251);
+  border-top: 1px solid #52483b;
+  padding: 5px 20px;
+  line-height: 1.5em;
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
+}
+/* line 563, ../sass/application.scss */
+.todo-app .clear-completed {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1px 5px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  background: #8c7c67;
+  -webkit-border-radius: 0 0 0 2px;
+  -moz-border-radius: 0 0 0 2px;
+  border-radius: 0 0 0 2px;
+  -webkit-box-shadow: -1px 1px 1px #605546;
+  -moz-box-shadow: -1px 1px 1px #605546;
+  box-shadow: -1px 1px 1px #605546;
+  cursor: pointer;
+}
+/* line 578, ../sass/application.scss */
+.todo-app .mark-all {
+  font-size: 13px;
+  margin-top: 4px;
+}
+/* line 583, ../sass/application.scss */
+.todo-app .help-block {
+  margin-bottom: 0;
+}
+
+/* line 588, ../sass/application.scss */
+.todos {
+  margin-top: 10px;
 }

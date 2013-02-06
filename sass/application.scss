@@ -472,3 +472,119 @@ form ul.parsley-error-list{
     color: inherit;
   }
 }
+
+.todo-app{
+  height: 100%;
+  position: relative;
+
+  .new-todo{
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    @include box-sizing(border-box);
+  }
+
+  li {
+    position: relative;
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+
+    &.done label {
+      color: #777777;
+      text-decoration: line-through;
+    }
+
+    .edit {
+      display: none;
+    }
+
+    .view label {
+      word-break: break-word;
+    }
+
+    &.editing {
+      border-bottom: none;
+      margin-top: -1px;
+      padding: 0;
+
+      &:last-child {
+        margin-bottom: -1px;
+      }
+
+      .edit {
+        display: block;
+        width: 444px;
+        padding: 13px 15px 14px 20px;
+        margin: 0;
+      }
+
+      .view {
+        display: none;
+      }
+
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover .destroy{
+      display: block;
+    }
+  }
+
+  .destroy {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    display: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: url(destroy.png) no-repeat;
+  }
+
+  footer {
+    margin: 0 -15px -15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    color: #ffffff;
+    @include background( linear-gradient(lighten($textColor, 5%), $textColor));
+    border-top: 1px solid darken($textColor, 10%);
+    padding: 5px 20px;
+    line-height: 1.5em;
+    @include border-radius(0 0 $widget-border-radius $widget-border-radius);
+  }
+
+  .clear-completed{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1px 5px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+    background: lighten($textColor, 10%);
+    @include border-radius(0 0 0 $widget-border-radius);
+    @include box-shadow(-1px 1px 1px darken($textColor, 5%));
+    cursor: pointer;
+  }
+
+  .mark-all{
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  .help-block{
+    margin-bottom: 0;
+  }
+}
+
+.todos{
+  margin-top: 10px;
+}

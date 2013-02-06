@@ -106,9 +106,16 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"]{
-  color: #6c6c6c;
+  color: $textColor;
+  @include border-radius(0);
+  padding: 8px 10px;
 }
 
 label{
   margin: 0;
+  padding: 0;
+}
+
+ul li, ol li{
+  list-style: none;
 }
