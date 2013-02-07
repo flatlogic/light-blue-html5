@@ -8421,18 +8421,22 @@ form ul.parsley-error-list li {
 .widget.login form, widget.registration form {
   margin-bottom: 0;
 }
-/* line 611, ../sass/application.scss */
-.widget.login .input-prepend input, widget.registration .input-prepend input {
-  height: 27px;
-  width: 290px;
+/* line 610, ../sass/application.scss */
+.widget.login form label, widget.registration form label {
+  margin-bottom: 3px;
 }
 /* line 615, ../sass/application.scss */
+.widget.login .input-prepend input, widget.registration .input-prepend input {
+  height: 27px;
+  width: 282px;
+}
+/* line 619, ../sass/application.scss */
 .widget.login .input-prepend input:focus:invalid, widget.registration .input-prepend input:focus:invalid {
   color: #6C6C6C;
   border-color: #bbbbbb;
   box-shadow: none;
 }
-/* line 621, ../sass/application.scss */
+/* line 625, ../sass/application.scss */
 .widget.login .input-prepend .icon-container, widget.registration .input-prepend .icon-container {
   height: 35px;
   width: 35px;
@@ -8441,18 +8445,18 @@ form ul.parsley-error-list li {
   -webkit-transition-property: border, box-shadow;
   -webkit-transition-timing-function: linear, linear;
 }
-/* line 630, ../sass/application.scss */
+/* line 634, ../sass/application.scss */
 .widget.login .input-prepend .icon-container i, widget.registration .input-prepend .icon-container i {
   position: relative;
   top: 6px;
 }
-/* line 634, ../sass/application.scss */
+/* line 638, ../sass/application.scss */
 .widget.login .input-prepend .icon-container.invalid, widget.registration .input-prepend .icon-container.invalid {
   background: #f9ece4;
   border-color: #e9322d;
   box-shadow: 0 0 6px #f8b9b7;
 }
-/* line 640, ../sass/application.scss */
+/* line 644, ../sass/application.scss */
 .widget.login .submit-container, widget.registration .submit-container {
   position: relative;
   width: 350px;
@@ -8460,7 +8464,7 @@ form ul.parsley-error-list li {
   background: #f8f3f0;
   padding: 20px 15px 0 15px;
 }
-/* line 647, ../sass/application.scss */
+/* line 651, ../sass/application.scss */
 .widget.login .submit-container button, widget.registration .submit-container button {
   border-radius: 0;
   color: #ffffff;
@@ -8469,7 +8473,7 @@ form ul.parsley-error-list li {
   box-shadow: 0 0 #c54b2a;
   height: 45px;
 }
-/* line 655, ../sass/application.scss */
+/* line 659, ../sass/application.scss */
 .widget.login .submit-container .small-circle, widget.registration .submit-container .small-circle {
   border-radius: 50%;
   width: 18px;
@@ -8480,7 +8484,7 @@ form ul.parsley-error-list li {
   left: 135px;
   float: left;
 }
-/* line 665, ../sass/application.scss */
+/* line 669, ../sass/application.scss */
 .widget.login .submit-container .small-circle .small-arrow-right, widget.registration .submit-container .small-circle .small-arrow-right {
   position: relative;
   top: 5px;
@@ -8491,14 +8495,14 @@ form ul.parsley-error-list li {
   border-bottom: 4px solid transparent;
   border-left: 5px solid white;
 }
-/* line 676, ../sass/application.scss */
+/* line 680, ../sass/application.scss */
 .widget.login .submit-container .forgot, widget.registration .submit-container .forgot {
   color: #867868;
   text-align: center;
   text-decoration: underline;
   padding: 15px 0 15px 0;
 }
-/* line 683, ../sass/application.scss */
+/* line 687, ../sass/application.scss */
 .widget.login .facebook-login, widget.registration .facebook-login {
   position: relative;
   width: 380px;
@@ -8508,12 +8512,12 @@ form ul.parsley-error-list li {
   background: #6091b0;
   padding-top: 10px;
 }
-/* line 692, ../sass/application.scss */
+/* line 696, ../sass/application.scss */
 .widget.login .facebook-login a, widget.registration .facebook-login a {
   color: #ffffff;
   text-shadow: none;
 }
-/* line 696, ../sass/application.scss */
+/* line 700, ../sass/application.scss */
 .widget.login .facebook-login a:hover, widget.registration .facebook-login a:hover {
   text-decoration: none;
 }

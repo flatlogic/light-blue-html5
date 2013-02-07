@@ -606,11 +606,15 @@ form ul.parsley-error-list{
   }
   form {
     margin-bottom: 0;
+
+    label {
+      margin-bottom: 3px;
+    }
   }
   .input-prepend {
     input {
       height: 27px;
-      width: 290px;
+      width: 282px;
 
       &:focus:invalid {
         color: #6C6C6C;
