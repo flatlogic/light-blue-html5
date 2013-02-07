@@ -499,6 +499,7 @@ form ul.parsley-error-list{
   li {
     position: relative;
     font-size: 24px;
+    padding-bottom: 5px;
 
     &.done label {
       color: #777777;
@@ -529,7 +530,7 @@ form ul.parsley-error-list{
         margin: 0;
         height: auto;
         @include box-sizing(border-box);
-        padding: 0;
+        padding: 4px 24px;
       }
 
       .view {
@@ -590,7 +591,15 @@ form ul.parsley-error-list{
 
   .mark-all{
     font-size: 13px;
-    margin-top: 4px;
+    margin-top: 2px;
+    margin-left: 10px;
+
+    .checker{
+      margin-top: -4px;
+      span:before{
+        font-size: 15px;
+      }
+    }
   }
 
   .help-block{
@@ -599,7 +608,7 @@ form ul.parsley-error-list{
 }
 
 .todos{
-  margin-top: 10px;
+  margin-top: 5px;
   padding-top: 5px;
   position: absolute;
   bottom: 40px; //footer height
@@ -607,7 +616,7 @@ form ul.parsley-error-list{
   left: 0;
   right: -5px; //scroll width
   overflow-y: scroll;
-}}
+}
 
 .widget.login, widget.registration {
   width: 350px;

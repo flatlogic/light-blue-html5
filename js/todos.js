@@ -198,13 +198,13 @@ $(function(){
                 this.main.show();
                 this.footer.show();
                 this.footer.html(this.statsTemplate({done: done, remaining: remaining}));
-                $(this.main).find("input:checkbox").uniform();
             } else {
                 this.main.hide();
                 this.footer.hide();
             }
 
             this.allCheckbox.checked = !remaining;
+            $(this.main).find("input:checkbox").uniform();
         },
 
         // Add a single todo item to the list by creating a view for it, and
@@ -222,11 +222,13 @@ $(function(){
         // If you hit return in the main input field, create new **Todo** model,
         // persisting it to *localStorage*.
         createOnEnter: function(e) {
-            if (e.keyCode != 13) return;
-            if (!this.input.val()) return;
+            if (Todos.length < 10){
+                if (e.keyCode != 13) return;
+                if (!this.input.val()) return;
 
-            Todos.create({title: this.input.val()});
-            this.input.val('');
+                Todos.create({title: this.input.val()});
+                this.input.val('');
+            }
         },
 
         // Clear all done todo items, destroying their models.

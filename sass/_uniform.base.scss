@@ -196,52 +196,67 @@ div.checker {
 }
 
 div.checker span {
-	@include inline-block();
-	text-align: center;
-	background-position: 0 $checkbox-voffset;
-}
+  @include inline-block();
+  text-align: center;
+  background-position: 0;
+  background-image: none;
 
-div.checker input {
-	@include hideYetClickable();
-	@include inline-block();
+  &:before{
+    content: "\f096";
+    font: 19px/1em FontAwesome;
+    vertical-align: middle;
+  }
+
+  &.checked:before {
+    content: "\f046";
+  }
+
+  input {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include hideYetClickable();
+    @include inline-block();
+  }
 }
 
 div.checker:active span,
 div.checker.active span {
-	background-position: (-1 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-1 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker.focus span,
 div.checker:hover span {
-	background-position: (-2 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-2 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker.focus:active span,
 div.checker:active:hover span,
 div.checker.active:hover span,
 div.checker.focus.active span {
-	background-position: (-3 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-3 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker span.checked {
-	background-position: (-4 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-4 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker:active span.checked,
 div.checker.active span.checked {
-	background-position: (-5 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-5 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker.focus span.checked,
 div.checker:hover span.checked {
-	background-position: (-6 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-6 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker.focus:active span.checked,
 div.checker:hover:active span.checked,
 div.checker.active:hover span.checked,
 div.checker.active.focus span.checked {
-	background-position: (-7 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-7 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker.disabled span,
