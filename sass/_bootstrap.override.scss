@@ -53,3 +53,43 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 .tab-content{
   overflow: visible;
 }
+
+.input-append,
+.input-prepend {
+  margin-bottom: 20px;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+.input-prepend {
+  .add-on,
+  .btn {
+    margin-right: -1px;
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    // FYI, `.btn:first-child` accounts for a button group that's prepended
+    border-radius: 0;
+  }
+}
+
+.input-append {
+  input,
+  select,
+  .uneditable-input {
+    border-radius: 0;
+    + .btn-group .btn:last-child {
+      border-radius: 0;
+    }
+  }
+  .add-on,
+  .btn,
+  .btn-group {
+    margin-left: -1px;
+  }
+  .add-on:last-child,
+  .btn:last-child,
+  .btn-group:last-child > .dropdown-toggle {
+    border-radius: 0;
+  }
+}

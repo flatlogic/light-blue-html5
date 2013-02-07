@@ -47,7 +47,7 @@ html {
 
 /* line 50, ../sass/bootstrap/_reset.scss */
 a:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -166,7 +166,7 @@ textarea {
   /* line 155, ../sass/bootstrap/_reset.scss */
   * {
     text-shadow: none !important;
-    color: #000 !important;
+    color: black !important;
     background: transparent !important;
     box-shadow: none !important;
   }
@@ -197,7 +197,7 @@ textarea {
   /* line 183, ../sass/bootstrap/_reset.scss */
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 
@@ -268,7 +268,7 @@ a:hover {
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1063,7 +1063,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   background-color: #f5f5f5;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1290,7 +1290,7 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -1844,7 +1844,7 @@ select:focus:invalid:focus {
   text-align: center;
   text-shadow: 0 1px 0 white;
   background-color: #eeeeee;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
 }
 /* line 465, ../sass/bootstrap/_forms.scss */
 .input-append .add-on,
@@ -2461,7 +2461,7 @@ table th[class*="span"],
   margin: 2px 0 0;
   list-style: none;
   background-color: white;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
@@ -2816,7 +2816,7 @@ button.close {
 }
 /* line 40, ../sass/bootstrap/_buttons.scss */
 .btn:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3659,7 +3659,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 111, ../sass/bootstrap/_navs.scss */
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 /* line 115, ../sass/bootstrap/_navs.scss */
@@ -3687,7 +3687,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a:hover {
   color: #555555;
   background-color: white;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -3727,7 +3727,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 176, ../sass/bootstrap/_navs.scss */
 .nav-tabs.nav-stacked > li > a {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -3884,7 +3884,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 305, ../sass/bootstrap/_navs.scss */
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
 }
 
 /* line 308, ../sass/bootstrap/_navs.scss */
@@ -3908,7 +3908,7 @@ input[type="submit"].btn.btn-mini {
 /* line 320, ../sass/bootstrap/_navs.scss */
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: transparent #dddddd #dddddd #dddddd;
 }
 
 /* line 329, ../sass/bootstrap/_navs.scss */
@@ -3929,7 +3929,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #dddddd;
 }
 
 /* line 345, ../sass/bootstrap/_navs.scss */
@@ -3948,7 +3948,7 @@ input[type="submit"].btn.btn-mini {
 /* line 353, ../sass/bootstrap/_navs.scss */
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: #dddddd transparent #dddddd #dddddd;
   *border-right-color: white;
 }
 
@@ -3956,7 +3956,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #dddddd;
 }
 
 /* line 364, ../sass/bootstrap/_navs.scss */
@@ -3975,7 +3975,7 @@ input[type="submit"].btn.btn-mini {
 /* line 372, ../sass/bootstrap/_navs.scss */
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: #dddddd #dddddd #dddddd transparent;
   *border-left-color: white;
 }
 
@@ -4353,7 +4353,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
+  border-bottom: 7px solid #cccccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -4373,7 +4373,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 323, ../sass/bootstrap/_navbar.scss */
 .navbar-fixed-bottom .nav > li > .dropdown-menu:before {
-  border-top: 7px solid #ccc;
+  border-top: 7px solid #cccccc;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-bottom: 0;
   bottom: -7px;
@@ -4809,7 +4809,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -4873,9 +4873,9 @@ input[type="submit"].btn.btn-mini {
   width: 560px;
   margin: -250px 0 0 -280px;
   background-color: white;
-  border: 1px solid #999;
+  border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  *border: 1px solid #999;
+  *border: 1px solid #999999;
   /* IE6-7 */
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -4904,7 +4904,7 @@ input[type="submit"].btn.btn-mini {
 /* line 47, ../sass/bootstrap/_modals.scss */
 .modal-header {
   padding: 9px 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 /* line 51, ../sass/bootstrap/_modals.scss */
 .modal-header .close {
@@ -4935,7 +4935,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   text-align: right;
   background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dddddd;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -5070,7 +5070,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -5237,7 +5237,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   padding: 4px;
   line-height: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -7159,7 +7159,7 @@ a.label:hover, a.badge:hover {
   /* line 136, ../sass/bootstrap/_responsive-767px-max.scss */
   input[type="checkbox"],
   input[type="radio"] {
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
   }
 
   /* line 142, ../sass/bootstrap/_responsive-767px-max.scss */
@@ -7492,6 +7492,70 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
   overflow: visible;
 }
 
+/* line 58, ../sass/_bootstrap.override.scss */
+.input-append,
+.input-prepend {
+  margin-bottom: 20px;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+/* line 66, ../sass/_bootstrap.override.scss */
+.input-prepend .add-on,
+.input-prepend .btn {
+  margin-right: -1px;
+}
+/* line 70, ../sass/_bootstrap.override.scss */
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+  border-radius: 0;
+}
+
+/* line 79, ../sass/_bootstrap.override.scss */
+.input-append input,
+.input-append select,
+.input-append .uneditable-input {
+  border-radius: 0;
+}
+/* line 81, ../sass/_bootstrap.override.scss */
+.input-append input + .btn-group .btn:last-child,
+.input-append select + .btn-group .btn:last-child,
+.input-append .uneditable-input + .btn-group .btn:last-child {
+  border-radius: 0;
+}
+/* line 87, ../sass/_bootstrap.override.scss */
+.input-append .add-on,
+.input-append .btn,
+.input-append .btn-group {
+  margin-left: -1px;
+}
+/* line 92, ../sass/_bootstrap.override.scss */
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group:last-child > .dropdown-toggle {
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------	*/
+/*	Custom styled scrollbar */
+/* --------------------------------------------------------	*/
+/* line 4, ../sass/_scrollbar.scss */
+html:not(.osx) ::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* line 8, ../sass/_scrollbar.scss */
+html:not(.osx) ::-webkit-scrollbar-track-piece {
+  background-color: #eee;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* line 13, ../sass/_scrollbar.scss */
+html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
+  opacity: 0.4;
+  background-color: #da3712;
+}
+
 @media (max-width: 767px) {
   /* line 2, ../sass/_responsive.scss */
   input[type=search], input.search {
@@ -7524,7 +7588,7 @@ svg text {
   padding: 5px;
   position: absolute;
   background-color: white;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   z-index: 10000;
   font-family: inherit;
   font-size: 13px;
@@ -7704,7 +7768,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   background-color: #da3712;
 }
 
-/* line 20, ../sass/application.scss */
+/* line 22, ../sass/application.scss */
 .sidebar {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -7721,13 +7785,13 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   z-index: 1;
   margin: 30px 0 0 25px;
 }
-/* line 33, ../sass/application.scss */
+/* line 35, ../sass/application.scss */
 .sidebar h2 {
   color: inherit;
   font-size: 30px;
   padding-left: 30px;
 }
-/* line 39, ../sass/application.scss */
+/* line 41, ../sass/application.scss */
 .sidebar .brand {
   font-size: 30px;
   text-shadow: none;
@@ -7740,32 +7804,32 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   margin-bottom: 35px;
 }
 
-/* line 52, ../sass/application.scss */
+/* line 54, ../sass/application.scss */
 .side-nav {
   font-size: 14px;
   margin: 0;
   font-weight: 600;
 }
-/* line 57, ../sass/application.scss */
+/* line 59, ../sass/application.scss */
 .side-nav li {
   list-style: none;
 }
-/* line 60, ../sass/application.scss */
+/* line 62, ../sass/application.scss */
 .side-nav li i[class*=icon] {
   float: right;
   line-height: 20px;
 }
-/* line 66, ../sass/application.scss */
+/* line 68, ../sass/application.scss */
 .side-nav li.active i[class*=icon], .side-nav li:hover i[class*=icon] {
   color: #da3712;
 }
-/* line 71, ../sass/application.scss */
+/* line 73, ../sass/application.scss */
 .side-nav li.active a {
   background: #f8f8f8;
   border-left: 5px solid #4daf7c;
   padding-left: 25px;
 }
-/* line 77, ../sass/application.scss */
+/* line 79, ../sass/application.scss */
 .side-nav li a {
   color: inherit;
   text-decoration: none;
@@ -7773,19 +7837,28 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   padding: 18px 30px;
 }
 
-/* line 86, ../sass/application.scss */
+/* line 88, ../sass/application.scss */
 .wrap {
   margin-left: 205px;
 }
 
-/* line 90, ../sass/application.scss */
+/* line 92, ../sass/application.scss */
 .content {
   min-height: 900px;
   padding: 40px;
 }
 
-/*boxes*/
 /* line 97, ../sass/application.scss */
+.single-widget-container {
+  margin-top: 164px;
+}
+/* line 100, ../sass/application.scss */
+.single-widget-container .widget {
+  margin: 0 auto;
+}
+
+/*boxes*/
+/* line 106, ../sass/application.scss */
 .box {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -7801,47 +7874,47 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
-/* line 109, ../sass/application.scss */
+/* line 118, ../sass/application.scss */
 .box.red {
   background: #e5603b;
 }
-/* line 112, ../sass/application.scss */
+/* line 121, ../sass/application.scss */
 .box.orange {
   background: #eac85e;
 }
-/* line 115, ../sass/application.scss */
+/* line 124, ../sass/application.scss */
 .box.green {
   background: #56bc76;
 }
-/* line 118, ../sass/application.scss */
+/* line 127, ../sass/application.scss */
 .box.blue {
   background: #618fb0;
 }
-/* line 121, ../sass/application.scss */
+/* line 130, ../sass/application.scss */
 .box.purple {
   background: #a700ae;
 }
-/* line 124, ../sass/application.scss */
+/* line 133, ../sass/application.scss */
 .box.pink {
   background: #e671b8;
 }
-/* line 127, ../sass/application.scss */
+/* line 136, ../sass/application.scss */
 .box.brown {
   background: #a05000;
 }
-/* line 130, ../sass/application.scss */
+/* line 139, ../sass/application.scss */
 .box.lime {
   background: #8cbf26;
 }
-/* line 133, ../sass/application.scss */
+/* line 142, ../sass/application.scss */
 .box.teal {
   background: #2eb4dc;
 }
-/* line 136, ../sass/application.scss */
+/* line 145, ../sass/application.scss */
 .box.dark-red {
   background: #d04f4f;
 }
-/* line 140, ../sass/application.scss */
+/* line 149, ../sass/application.scss */
 .box .description {
   color: inherit;
   font-weight: 500;
@@ -7849,7 +7922,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   text-align: center;
 }
 
-/* line 148, ../sass/application.scss */
+/* line 157, ../sass/application.scss */
 .widget {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -7862,74 +7935,74 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   background: #ffffff;
   margin-bottom: 30px;
 }
-/* line 156, ../sass/application.scss */
+/* line 165, ../sass/application.scss */
 .widget.large {
   height: 315px;
 }
-/* line 159, ../sass/application.scss */
+/* line 168, ../sass/application.scss */
 .widget.large .body {
   height: 280px;
 }
-/* line 162, ../sass/application.scss */
+/* line 171, ../sass/application.scss */
 .widget.large .body .chart {
   height: 212px;
 }
-/* line 168, ../sass/application.scss */
+/* line 177, ../sass/application.scss */
 .widget.xlarge {
   height: 415px;
 }
-/* line 171, ../sass/application.scss */
+/* line 180, ../sass/application.scss */
 .widget.xlarge .body {
   height: 380px;
 }
-/* line 174, ../sass/application.scss */
+/* line 183, ../sass/application.scss */
 .widget.xlarge .body .chart {
   height: 298px;
 }
-/* line 180, ../sass/application.scss */
+/* line 189, ../sass/application.scss */
 .widget header {
   position: relative;
   background: inherit;
 }
-/* line 184, ../sass/application.scss */
+/* line 193, ../sass/application.scss */
 .widget header h2, .widget header h3, .widget header h4 {
   margin: 0;
   line-height: 1em;
   color: inherit;
 }
-/* line 191, ../sass/application.scss */
+/* line 200, ../sass/application.scss */
 .widget .body {
   margin-top: 15px;
 }
-/* line 194, ../sass/application.scss */
+/* line 203, ../sass/application.scss */
 .widget .body h2, .widget .body h3, .widget .body h4 {
   margin: 0;
 }
-/* line 198, ../sass/application.scss */
+/* line 207, ../sass/application.scss */
 .widget .body .chart {
   height: 60%;
 }
-/* line 200, ../sass/application.scss */
+/* line 209, ../sass/application.scss */
 .widget .body .chart.pie {
   margin-left: -15px;
   margin-right: -15px;
 }
-/* line 207, ../sass/application.scss */
+/* line 216, ../sass/application.scss */
 .widget .actions {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 211, ../sass/application.scss */
+/* line 220, ../sass/application.scss */
 .widget .actions a {
   color: inherit;
   text-decoration: none;
 }
-/* line 217, ../sass/application.scss */
+/* line 226, ../sass/application.scss */
 .widget.tabs {
   padding-top: 0;
 }
-/* line 220, ../sass/application.scss */
+/* line 229, ../sass/application.scss */
 .widget.tabs .body h4 {
   margin: 0 0 10px 0;
   line-height: 1em;
@@ -7938,33 +8011,33 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 229, ../sass/application.scss */
+/* line 238, ../sass/application.scss */
 .widget.tabs .nav-tabs {
   margin-left: -15px;
   margin-right: -15px;
 }
-/* line 234, ../sass/application.scss */
+/* line 243, ../sass/application.scss */
 .widget.tabs .nav-tabs > li {
   float: left;
   width: 50%;
 }
-/* line 238, ../sass/application.scss */
+/* line 247, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:first-child {
   margin-left: 0;
 }
-/* line 241, ../sass/application.scss */
+/* line 250, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:first-child > a {
   -webkit-border-radius: 2px 0 0 0;
   -moz-border-radius: 2px 0 0 0;
   border-radius: 2px 0 0 0;
 }
-/* line 246, ../sass/application.scss */
+/* line 255, ../sass/application.scss */
 .widget.tabs .nav-tabs > li:last-child > a {
   -webkit-border-radius: 0 2px 0 0;
   -moz-border-radius: 0 2px 0 0;
   border-radius: 0 2px 0 0;
 }
-/* line 250, ../sass/application.scss */
+/* line 259, ../sass/application.scss */
 .widget.tabs .nav-tabs > li > a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -7979,84 +8052,84 @@ html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   background: linear-gradient(#f8f8f8, #f3f3f3);
   color: #6f6251;
 }
-/* line 258, ../sass/application.scss */
+/* line 267, ../sass/application.scss */
 .widget.tabs .nav-tabs > li > a:hover {
   color: #e5603b;
 }
-/* line 261, ../sass/application.scss */
+/* line 270, ../sass/application.scss */
 .widget.tabs .nav-tabs > li > a h4 {
   font-size: 14px;
   line-height: 15px;
 }
-/* line 267, ../sass/application.scss */
+/* line 276, ../sass/application.scss */
 .widget.tabs .nav-tabs > li.active > a {
   border-top: 3px solid #56bc76;
   padding-top: 5px;
   background: #fff;
   color: #6f6251;
 }
-/* line 276, ../sass/application.scss */
+/* line 285, ../sass/application.scss */
 .widget.tabs.large {
   height: 330px;
 }
-/* line 278, ../sass/application.scss */
+/* line 287, ../sass/application.scss */
 .widget.tabs.large .body .chart {
   height: 196px;
 }
-/* line 283, ../sass/application.scss */
+/* line 292, ../sass/application.scss */
 .widget.tabs.xlarge .body .chart {
   height: 257px;
 }
 
-/* line 289, ../sass/application.scss */
+/* line 298, ../sass/application.scss */
 .chart-inline {
   margin-bottom: 12px;
   height: 44px;
 }
-/* line 293, ../sass/application.scss */
+/* line 302, ../sass/application.scss */
 .chart-inline svg {
   height: 44px;
 }
-/* line 297, ../sass/application.scss */
+/* line 306, ../sass/application.scss */
 .chart-inline h4 {
   padding-left: 10px;
   padding-top: 4px;
   margin: 0;
 }
-/* line 303, ../sass/application.scss */
+/* line 312, ../sass/application.scss */
 .chart-inline .info {
   padding: 4px 0;
   text-align: right;
   font-weight: 700;
 }
 
-/* line 310, ../sass/application.scss */
+/* line 318, ../sass/application.scss */
 input.parsley-error {
-  background-color: #f8f3f0;
+  border-color: #e9322d;
+  box-shadow: 0 0 6px #f8b9b7;
 }
 
-/* line 314, ../sass/application.scss */
+/* line 322, ../sass/application.scss */
 form ul.parsley-error-list {
-  margin-top: -10px;
   font-size: 12px;
 }
-/* line 318, ../sass/application.scss */
+/* line 325, ../sass/application.scss */
 form ul.parsley-error-list li {
   list-style: none;
 }
 
-/* line 323, ../sass/application.scss */
+/* line 330, ../sass/application.scss */
 .pie.chart {
   position: relative;
 }
-/* line 326, ../sass/application.scss */
+/* line 333, ../sass/application.scss */
 .pie.chart .total {
   text-align: center;
   position: absolute;
   left: 0;
   top: 50%;
 }
-/* line 332, ../sass/application.scss */
+/* line 339, ../sass/application.scss */
 .pie.chart .total h4 {
   margin: 0;
   color: #e5603b;
@@ -8064,19 +8137,19 @@ form ul.parsley-error-list li {
   line-height: 1em;
   font-size: 15px;
 }
-/* line 339, ../sass/application.scss */
+/* line 346, ../sass/application.scss */
 .pie.chart .total h3 {
   margin: 0;
   line-height: 1em;
   font-weight: 700;
   font-size: 40px;
 }
-/* line 347, ../sass/application.scss */
+/* line 354, ../sass/application.scss */
 .pie.chart .controls {
   margin-top: 30px;
   width: 100%;
 }
-/* line 351, ../sass/application.scss */
+/* line 358, ../sass/application.scss */
 .pie.chart .controls .control {
   background: #f3f3f3;
   text-align: center;
@@ -8088,62 +8161,62 @@ form ul.parsley-error-list li {
   margin-left: 0.5%;
   float: left;
 }
-/* line 364, ../sass/application.scss */
+/* line 371, ../sass/application.scss */
 .pie.chart .controls .control:first-child {
   border-bottom-left-radius: 2px;
   margin-left: 0;
 }
-/* line 369, ../sass/application.scss */
+/* line 376, ../sass/application.scss */
 .pie.chart .controls .control:last-child {
   border-bottom-right-radius: 2px;
 }
-/* line 373, ../sass/application.scss */
+/* line 380, ../sass/application.scss */
 .pie.chart .controls .control.disabled {
   border-top: 3px solid transparent !important;
 }
-/* line 377, ../sass/application.scss */
+/* line 384, ../sass/application.scss */
 .pie.chart .controls .control h4 {
   text-transform: lowercase;
   font-size: 15px;
   font-weight: 400;
 }
-/* line 383, ../sass/application.scss */
+/* line 390, ../sass/application.scss */
 .pie.chart .controls .control p {
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 394, ../sass/application.scss */
+/* line 401, ../sass/application.scss */
 .widget.large .pie.chart .total h4 {
   font-size: 13px;
 }
-/* line 397, ../sass/application.scss */
+/* line 404, ../sass/application.scss */
 .widget.large .pie.chart .total h3 {
   font-size: 32px;
 }
-/* line 401, ../sass/application.scss */
+/* line 408, ../sass/application.scss */
 .widget.large .pie.chart .controls .control {
   padding-top: 1%;
   padding-bottom: 1%;
 }
-/* line 405, ../sass/application.scss */
+/* line 412, ../sass/application.scss */
 .widget.large .pie.chart .controls .control h4 {
   font-size: 13px;
   margin-bottom: 5px;
 }
-/* line 410, ../sass/application.scss */
+/* line 417, ../sass/application.scss */
 .widget.large .pie.chart .controls .control p {
   font-size: 20px;
   margin-bottom: 0;
 }
 
-/* line 417, ../sass/application.scss */
+/* line 424, ../sass/application.scss */
 .widget:not(.large):not(.xlarge) .pie.chart {
   display: none;
   content: "Specify whether large or xlarge for outer container to display chart";
 }
 
-/* line 422, ../sass/application.scss */
+/* line 429, ../sass/application.scss */
 .page-header {
   display: none;
   border: none;
@@ -8158,24 +8231,24 @@ form ul.parsley-error-list li {
   background: white;
   float: right;
 }
-/* line 437, ../sass/application.scss */
+/* line 444, ../sass/application.scss */
 .page-header .nav > li > a {
   font-weight: 400;
   border-left: 1px solid #dfdfdf;
   color: #6f6251;
   padding: 15px;
 }
-/* line 443, ../sass/application.scss */
+/* line 450, ../sass/application.scss */
 .page-header .nav > li:first-child > a {
   border-left: none;
 }
 
-/* line 449, ../sass/application.scss */
+/* line 456, ../sass/application.scss */
 .navbar {
   margin: 0;
 }
 
-/* line 453, ../sass/application.scss */
+/* line 460, ../sass/application.scss */
 .navbar-inner {
   background: transparent;
   padding: 0;
@@ -8188,7 +8261,7 @@ form ul.parsley-error-list li {
   box-shadow: none;
 }
 
-/* line 461, ../sass/application.scss */
+/* line 468, ../sass/application.scss */
 .navbar-search {
   margin-right: 40px;
   padding: 10px 15px;
@@ -8196,7 +8269,7 @@ form ul.parsley-error-list li {
   position: static;
   float: none;
 }
-/* line 469, ../sass/application.scss */
+/* line 476, ../sass/application.scss */
 .navbar-search .search-query {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -8205,12 +8278,12 @@ form ul.parsley-error-list li {
   color: inherit;
 }
 
-/* line 476, ../sass/application.scss */
+/* line 483, ../sass/application.scss */
 .todo-app {
   height: 100%;
   position: relative;
 }
-/* line 480, ../sass/application.scss */
+/* line 487, ../sass/application.scss */
 .todo-app .new-todo {
   display: block;
   width: 100%;
@@ -8220,55 +8293,55 @@ form ul.parsley-error-list li {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 488, ../sass/application.scss */
+/* line 495, ../sass/application.scss */
 .todo-app li {
   position: relative;
   font-size: 24px;
   border-bottom: 1px solid #cccccc;
 }
-/* line 493, ../sass/application.scss */
+/* line 500, ../sass/application.scss */
 .todo-app li.done label {
   color: #777777;
   text-decoration: line-through;
 }
-/* line 498, ../sass/application.scss */
+/* line 505, ../sass/application.scss */
 .todo-app li .edit {
   display: none;
 }
-/* line 502, ../sass/application.scss */
+/* line 509, ../sass/application.scss */
 .todo-app li .view label {
   word-break: break-word;
 }
-/* line 506, ../sass/application.scss */
+/* line 513, ../sass/application.scss */
 .todo-app li.editing {
   border-bottom: none;
   margin-top: -1px;
   padding: 0;
 }
-/* line 511, ../sass/application.scss */
+/* line 518, ../sass/application.scss */
 .todo-app li.editing:last-child {
   margin-bottom: -1px;
 }
-/* line 515, ../sass/application.scss */
+/* line 522, ../sass/application.scss */
 .todo-app li.editing .edit {
   display: block;
   width: 444px;
   padding: 13px 15px 14px 20px;
   margin: 0;
 }
-/* line 522, ../sass/application.scss */
+/* line 529, ../sass/application.scss */
 .todo-app li.editing .view {
   display: none;
 }
-/* line 528, ../sass/application.scss */
+/* line 535, ../sass/application.scss */
 .todo-app li:last-child {
   border-bottom: none;
 }
-/* line 532, ../sass/application.scss */
+/* line 539, ../sass/application.scss */
 .todo-app li:hover .destroy {
   display: block;
 }
-/* line 537, ../sass/application.scss */
+/* line 544, ../sass/application.scss */
 .todo-app .destroy {
   position: absolute;
   right: 5px;
@@ -8279,7 +8352,7 @@ form ul.parsley-error-list li {
   height: 20px;
   background: url(destroy.png) no-repeat;
 }
-/* line 548, ../sass/application.scss */
+/* line 555, ../sass/application.scss */
 .todo-app footer {
   margin: 0 -15px -15px;
   position: absolute;
@@ -8300,7 +8373,7 @@ form ul.parsley-error-list li {
   -moz-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
 }
-/* line 563, ../sass/application.scss */
+/* line 570, ../sass/application.scss */
 .todo-app .clear-completed {
   position: absolute;
   right: 0;
@@ -8319,17 +8392,128 @@ form ul.parsley-error-list li {
   box-shadow: -1px 1px 1px #605546;
   cursor: pointer;
 }
-/* line 578, ../sass/application.scss */
+/* line 585, ../sass/application.scss */
 .todo-app .mark-all {
   font-size: 13px;
   margin-top: 4px;
 }
-/* line 583, ../sass/application.scss */
+/* line 590, ../sass/application.scss */
 .todo-app .help-block {
   margin-bottom: 0;
 }
 
-/* line 588, ../sass/application.scss */
+/* line 595, ../sass/application.scss */
 .todos {
   margin-top: 10px;
+}
+
+/* line 599, ../sass/application.scss */
+.widget.login, widget.registration {
+  width: 350px;
+  padding-bottom: 0;
+}
+/* line 603, ../sass/application.scss */
+.widget.login header, widget.registration header {
+  margin: 15px 0 25px 0;
+  text-align: center;
+}
+/* line 607, ../sass/application.scss */
+.widget.login form, widget.registration form {
+  margin-bottom: 0;
+}
+/* line 611, ../sass/application.scss */
+.widget.login .input-prepend input, widget.registration .input-prepend input {
+  height: 27px;
+  width: 290px;
+}
+/* line 615, ../sass/application.scss */
+.widget.login .input-prepend input:focus:invalid, widget.registration .input-prepend input:focus:invalid {
+  color: #6C6C6C;
+  border-color: #bbbbbb;
+  box-shadow: none;
+}
+/* line 621, ../sass/application.scss */
+.widget.login .input-prepend .icon-container, widget.registration .input-prepend .icon-container {
+  height: 35px;
+  width: 35px;
+  -webkit-transition-delay: 0s, 0s;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -webkit-transition-property: border, box-shadow;
+  -webkit-transition-timing-function: linear, linear;
+}
+/* line 630, ../sass/application.scss */
+.widget.login .input-prepend .icon-container i, widget.registration .input-prepend .icon-container i {
+  position: relative;
+  top: 6px;
+}
+/* line 634, ../sass/application.scss */
+.widget.login .input-prepend .icon-container.invalid, widget.registration .input-prepend .icon-container.invalid {
+  background: #f9ece4;
+  border-color: #e9322d;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+/* line 640, ../sass/application.scss */
+.widget.login .submit-container, widget.registration .submit-container {
+  position: relative;
+  width: 350px;
+  left: -15px;
+  background: #f8f3f0;
+  padding: 20px 15px 0 15px;
+}
+/* line 647, ../sass/application.scss */
+.widget.login .submit-container button, widget.registration .submit-container button {
+  border-radius: 0;
+  color: #ffffff;
+  text-shadow: none;
+  background: #e86843;
+  box-shadow: 0 0 #c54b2a;
+  height: 45px;
+}
+/* line 655, ../sass/application.scss */
+.widget.login .submit-container .small-circle, widget.registration .submit-container .small-circle {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background: #dc4a2a;
+  position: relative;
+  top: 1px;
+  left: 135px;
+  float: left;
+}
+/* line 665, ../sass/application.scss */
+.widget.login .submit-container .small-circle .small-arrow-right, widget.registration .submit-container .small-circle .small-arrow-right {
+  position: relative;
+  top: 5px;
+  left: 7px;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid white;
+}
+/* line 676, ../sass/application.scss */
+.widget.login .submit-container .forgot, widget.registration .submit-container .forgot {
+  color: #867868;
+  text-align: center;
+  text-decoration: underline;
+  padding: 15px 0 15px 0;
+}
+/* line 683, ../sass/application.scss */
+.widget.login .facebook-login, widget.registration .facebook-login {
+  position: relative;
+  width: 380px;
+  height: 30px;
+  left: -15px;
+  text-align: center;
+  background: #6091b0;
+  padding-top: 10px;
+}
+/* line 692, ../sass/application.scss */
+.widget.login .facebook-login a, widget.registration .facebook-login a {
+  color: #ffffff;
+  text-shadow: none;
+}
+/* line 696, ../sass/application.scss */
+.widget.login .facebook-login a:hover, widget.registration .facebook-login a:hover {
+  text-decoration: none;
 }
