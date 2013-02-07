@@ -219,3 +219,7 @@ nv.addGraph(function() {
 
     return chart;
 });
+
+$(function(){
+    $("input:checkbox").uniform();
+});

@@ -198,6 +198,7 @@ $(function(){
                 this.main.show();
                 this.footer.show();
                 this.footer.html(this.statsTemplate({done: done, remaining: remaining}));
+                $(this.main).find("input:checkbox").uniform();
             } else {
                 this.main.hide();
                 this.footer.hide();

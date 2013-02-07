@@ -7,6 +7,7 @@
 @import "compass";
 @import "bootstrap/bootstrap";
 @import "bootstrap/responsive";
+@import "uniform.base";
 
 @import "bootstrap.override";
 
@@ -488,7 +489,6 @@ form ul.parsley-error-list{
   li {
     position: relative;
     font-size: 24px;
-    border-bottom: 1px solid #cccccc;
 
     &.done label {
       color: #777777;
@@ -501,6 +501,7 @@ form ul.parsley-error-list{
 
     .view label {
       word-break: break-word;
+      display: inline-block;
     }
 
     &.editing {
@@ -514,9 +515,11 @@ form ul.parsley-error-list{
 
       .edit {
         display: block;
-        width: 444px;
-        padding: 13px 15px 14px 20px;
+        width: 100%;
         margin: 0;
+        height: auto;
+        @include box-sizing(border-box);
+        padding: 0;
       }
 
       .view {
@@ -537,12 +540,12 @@ form ul.parsley-error-list{
   .destroy {
     position: absolute;
     right: 5px;
-    top: 20px;
+    top: 0;
     display: none;
     cursor: pointer;
     width: 20px;
     height: 20px;
-    background: url(destroy.png) no-repeat;
+    background: green;
   }
 
   footer {
@@ -571,7 +574,7 @@ form ul.parsley-error-list{
     font-size: 12px;
     background: lighten($textColor, 10%);
     @include border-radius(0 0 0 $widget-border-radius);
-    @include box-shadow(-1px 1px 1px darken($textColor, 5%));
+    @include box-shadow(-1px 1px 1px darken($textColor, 2%));
     cursor: pointer;
   }
 
@@ -587,4 +590,11 @@ form ul.parsley-error-list{
 
 .todos{
   margin-top: 10px;
+  padding-top: 5px;
+  position: absolute;
+  bottom: 40px; //footer height
+  top: 55px;
+  left: 0;
+  right: -5px; //scroll width
+  overflow-y: scroll;
 }

@@ -4,6 +4,8 @@
     <title>Admin theme test</title>
     <link href="css/application.css" rel="stylesheet">
     <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+    <script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
+    <script src="lib/uniform/js/jquery.uniform.js"></script>
     <!--<script src="lib/zepto/zepto.min.js"> </script>-->
     <script src="js/bootstrap/bootstrap-tab.js"> </script>
     <script src="lib/parsley.js"> </script>
@@ -278,7 +280,7 @@
 
 <script type="text/template" id="stats-template">
     <% if (done) { %>
-    <a id="clear-completed" class="clear-completed"><i class="icon-trash"></i> Clear <%= done %> <%= done == 1 ? 'item' : 'items' %></a>
+    <a id="clear-completed" class="clear-completed"><i class="icon-trash"></i> Clear <%= done %> completed</a>
     <% } %>
     <div class="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</div>
     <div class="help-block">Double-click to edit a todo.</div>
