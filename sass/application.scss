@@ -4,6 +4,11 @@
 
 @import "variables";
 
+@mixin invalid-border {
+  border-color: #e9322d;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+
 @import "compass";
 @import "bootstrap/bootstrap";
 @import "bootstrap/responsive";
@@ -91,7 +96,14 @@
 .content{
   min-height: 900px;
   padding: 40px;
+}
 
+.single-widget-container {
+  margin-top: 164px;
+
+  .widget {
+    margin: 0 auto;
+  }
 }
 
 /*boxes*/
@@ -307,13 +319,11 @@
     font-weight: 700;
   }
 }
-
 input.parsley-error{
-  background-color: #f8f3f0;
+  @include invalid-border;
 }
 
 form ul.parsley-error-list{
-  margin-top: -10px;
   font-size: 12px;
 
   li{
@@ -597,4 +607,114 @@ form ul.parsley-error-list{
   left: 0;
   right: -5px; //scroll width
   overflow-y: scroll;
+}}
+
+.widget.login, widget.registration {
+  width: 350px;
+  padding-bottom: 0;
+
+  header {
+    margin: 15px 0 25px 0;
+    text-align: center;
+  }
+  form {
+    margin-bottom: 0;
+
+    label {
+      margin-bottom: 3px;
+    }
+  }
+  .input-prepend {
+    input {
+      height: 27px;
+      width: 282px;
+
+      &:focus:invalid {
+        color: #6C6C6C;
+        border-color: #bbbbbb;
+        box-shadow: none;
+      }
+    }
+    .icon-container {
+      height: 35px;
+      width: 35px;
+      // TODO: think maybe delete transtion in inputs and icons, becouse they triggers not at same time
+      -webkit-transition-delay: 0s, 0s;
+      -webkit-transition-duration: 0.20000000298023224s, 0.20000000298023224s;
+      -webkit-transition-property: border, box-shadow;
+      -webkit-transition-timing-function: linear, linear;
+
+      i {
+        position: relative;
+        top: 6px;
+      }
+      &.invalid {
+        background: #f9ece4;
+        @include invalid-border;
+      }
+    }
+  }
+  .submit-container {
+    position: relative;
+    width: 350px;
+    left: -15px;
+    background: #f8f3f0;
+    padding: 20px 15px 0 15px;
+
+    button {
+      border-radius: 0;
+      color: #ffffff;
+      text-shadow: none;
+      background: #e86843;
+      box-shadow: 0 0 #c54b2a;
+      height: 45px;
+    }
+    .small-circle {
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      background: #dc4a2a;
+      position: relative;
+      top: 1px;
+      left: 135px;
+      float:left;
+
+      .small-arrow-right {
+        position: relative;
+        top: 5px;
+        left: 7px;
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 5px solid #ffffff;
+      }
+    }
+    .forgot {
+      color: #867868;
+      text-align: center;
+      text-decoration: underline;
+      padding: 15px 0 15px 0;
+    }
+  }
+  .facebook-login {
+    position: relative;
+    width: 380px;
+    height: 30px;
+    left: -15px;
+    text-align: center;
+    background: #6091b0;
+    padding-top: 10px;
+
+    a {
+      color: #ffffff;
+      text-shadow: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
 }
+  
