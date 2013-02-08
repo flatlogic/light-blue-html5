@@ -9,6 +9,33 @@ $(function(){
     // Todo Model
     // ----------
 
+    if (window.localStorage.getItem("todos-backbone") == null){
+        window.localStorage.setItem("todos-backbone-86c7688f-7a54-6576-1faa-d6a5bfc20301", JSON.stringify({
+            "title":"Add new todo item",
+            "order":1,
+            "done":false,
+            "id":"86c7688f-7a54-6576-1faa-d6a5bfc20301"
+        }));
+        window.localStorage.setItem("todos-backbone-96c7688f-7a54-6576-1faa-d6a5bfc20301", JSON.stringify({
+            "title":"Try to delete this item",
+            "order":2,
+            "done":false,
+            "id":"96c7688f-7a54-6576-1faa-d6a5bfc20301"
+        }));
+        window.localStorage.setItem("todos-backbone-06c7688f-7a54-6576-1faa-d6a5bfc20301", JSON.stringify({
+            "title":"Go and have some tea",
+            "order":3,
+            "done":false,
+            "id":"06c7688f-7a54-6576-1faa-d6a5bfc20301"
+        }));
+        window.localStorage.setItem("todos-backbone",""
+            + "86c7688f-7a54-6576-1faa-d6a5bfc20301" + ","
+            + "96c7688f-7a54-6576-1faa-d6a5bfc20301" + ","
+            + "06c7688f-7a54-6576-1faa-d6a5bfc20301"
+        );
+        console.log("test data");
+    }
+
     // Our basic **Todo** model has `title`, `order`, and `done` attributes.
     var Todo = Backbone.Model.extend({
 
@@ -246,5 +273,4 @@ $(function(){
 
     // Finally, we kick things off by creating the **App**.
     var App = new AppView;
-
 });

@@ -544,19 +544,23 @@ form ul.parsley-error-list{
     }
 
     &:hover .destroy{
-      display: block;
+      //display: block;
+      opacity: 1.0;
+      @include transition( opacity .2s );
     }
   }
 
   .destroy {
     position: absolute;
+    opacity: 0;
+    @include transition( opacity .2s );
+    color: inherit;
+    text-decoration: none;
+    font-size: 15px;
     right: 5px;
-    top: 0;
-    display: none;
+    top: 2px;
+    //display: none;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    background: green;
   }
 
   footer {
@@ -567,6 +571,7 @@ form ul.parsley-error-list{
     right: 0;
     overflow: hidden;
     color: #ffffff;
+    background-color: $textColor;
     @include background( linear-gradient(lighten($textColor, 5%), $textColor));
     border-top: 1px solid darken($textColor, 10%);
     padding: 5px 20px;
@@ -604,6 +609,7 @@ form ul.parsley-error-list{
 
   .help-block{
     margin-bottom: 0;
+    font-size: 13px;
   }
 }
 

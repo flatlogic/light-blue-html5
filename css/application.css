@@ -8637,20 +8637,28 @@ form ul.parsley-error-list li {
 }
 /* line 546, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app li:hover .destroy {
-  display: block;
+  opacity: 1.0;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
-/* line 551, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 553, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app .destroy {
   position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  color: inherit;
+  text-decoration: none;
+  font-size: 15px;
   right: 5px;
-  top: 0;
-  display: none;
+  top: 2px;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-  background: green;
 }
-/* line 562, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 566, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app footer {
   margin: 0 -15px -15px;
   position: absolute;
@@ -8659,6 +8667,7 @@ form ul.parsley-error-list li {
   right: 0;
   overflow: hidden;
   color: #ffffff;
+  background-color: #6f6251;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7e6f5c), color-stop(100%, #6f6251));
   background: -webkit-linear-gradient(#7e6f5c, #6f6251);
   background: -moz-linear-gradient(#7e6f5c, #6f6251);
@@ -8671,7 +8680,7 @@ form ul.parsley-error-list li {
   -moz-border-radius: 0 0 2px 2px;
   border-radius: 0 0 2px 2px;
 }
-/* line 577, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 582, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app .clear-completed {
   position: absolute;
   right: 0;
@@ -8690,26 +8699,27 @@ form ul.parsley-error-list li {
   box-shadow: -1px 1px 1px #695d4d;
   cursor: pointer;
 }
-/* line 592, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 597, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app .mark-all {
   font-size: 13px;
   margin-top: 2px;
   margin-left: 10px;
 }
-/* line 597, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 602, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app .mark-all .checker {
   margin-top: -4px;
 }
-/* line 599, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 604, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app .mark-all .checker span:before {
   font-size: 15px;
 }
-/* line 605, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 610, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todo-app .help-block {
   margin-bottom: 0;
+  font-size: 13px;
 }
 
-/* line 610, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 616, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .todos {
   margin-top: 5px;
   padding-top: 5px;
@@ -8721,36 +8731,36 @@ form ul.parsley-error-list li {
   overflow-y: scroll;
 }
 
-/* line 621, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 627, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login, widget.registration {
   width: 350px;
   padding-bottom: 0;
 }
-/* line 625, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 631, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login header, widget.registration header {
   margin: 15px 0 25px 0;
   text-align: center;
 }
-/* line 629, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 635, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login form, widget.registration form {
   margin-bottom: 0;
 }
-/* line 632, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 638, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login form label, widget.registration form label {
   margin-bottom: 3px;
 }
-/* line 637, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 643, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .input-prepend input, widget.registration .input-prepend input {
   height: 27px;
   width: 282px;
 }
-/* line 641, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 647, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .input-prepend input:focus:invalid, widget.registration .input-prepend input:focus:invalid {
   color: #6C6C6C;
   border-color: #bbbbbb;
   box-shadow: none;
 }
-/* line 647, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 653, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .input-prepend .icon-container, widget.registration .input-prepend .icon-container {
   height: 35px;
   width: 35px;
@@ -8759,18 +8769,18 @@ form ul.parsley-error-list li {
   -webkit-transition-property: border, box-shadow;
   -webkit-transition-timing-function: linear, linear;
 }
-/* line 656, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 662, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .input-prepend .icon-container i, widget.registration .input-prepend .icon-container i {
   position: relative;
   top: 6px;
 }
-/* line 660, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 666, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .input-prepend .icon-container.invalid, widget.registration .input-prepend .icon-container.invalid {
   background: #f9ece4;
   border-color: #e9322d;
   box-shadow: 0 0 6px #f8b9b7;
 }
-/* line 666, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 672, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .submit-container, widget.registration .submit-container {
   position: relative;
   width: 350px;
@@ -8778,7 +8788,7 @@ form ul.parsley-error-list li {
   background: #f8f3f0;
   padding: 20px 15px 0 15px;
 }
-/* line 673, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 679, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .submit-container button, widget.registration .submit-container button {
   border-radius: 0;
   color: #ffffff;
@@ -8787,7 +8797,7 @@ form ul.parsley-error-list li {
   box-shadow: 0 0 #c54b2a;
   height: 45px;
 }
-/* line 681, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 687, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .submit-container .small-circle, widget.registration .submit-container .small-circle {
   border-radius: 50%;
   width: 18px;
@@ -8798,7 +8808,7 @@ form ul.parsley-error-list li {
   left: 135px;
   float: left;
 }
-/* line 691, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 697, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .submit-container .small-circle .small-arrow-right, widget.registration .submit-container .small-circle .small-arrow-right {
   position: relative;
   top: 5px;
@@ -8809,14 +8819,14 @@ form ul.parsley-error-list li {
   border-bottom: 4px solid transparent;
   border-left: 5px solid #ffffff;
 }
-/* line 702, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 708, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .submit-container .forgot, widget.registration .submit-container .forgot {
   color: #867868;
   text-align: center;
   text-decoration: underline;
   padding: 15px 0 15px 0;
 }
-/* line 709, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 715, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .facebook-login, widget.registration .facebook-login {
   position: relative;
   width: 380px;
@@ -8826,12 +8836,12 @@ form ul.parsley-error-list li {
   background: #6091b0;
   padding-top: 10px;
 }
-/* line 718, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 724, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .facebook-login a, widget.registration .facebook-login a {
   color: #ffffff;
   text-shadow: none;
 }
-/* line 722, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
+/* line 728, C:/wamp/www/flaming-octo-nemesis/sass/application.scss */
 .widget.login .facebook-login a:hover, widget.registration .facebook-login a:hover {
   text-decoration: none;
 }
