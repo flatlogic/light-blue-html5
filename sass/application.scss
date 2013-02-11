@@ -353,6 +353,12 @@ form ul.parsley-error-list{
       font-weight: 700;
       font-size: 40px;
     }
+
+    h5.visits{
+      font-size: 26px;
+      line-height: 1em;
+      font-weight: 700;
+    }
   }
 
   .controls{
@@ -442,14 +448,13 @@ form ul.parsley-error-list{
 
   background: white;
 
-  float: right;
-
   .nav > li{
     & > a{
       font-weight: 400;
+      font-size: 13px;
       border-left: 1px solid darken($lightGray, 10%);
       color: $textColor;
-      padding: 15px;
+      padding: 12px 15px;
     }
     &:first-child > a{
       border-left: none;
@@ -470,8 +475,7 @@ form ul.parsley-error-list{
 }
 
 .navbar-search{
-  margin-right: 40px;
-  padding: 10px 15px;
+  padding: 7px 15px;
   margin-top: 0;
 
   position: static;
@@ -582,7 +586,7 @@ form ul.parsley-error-list{
     overflow: hidden;
     color: #ffffff;
     background-color: $textColor;
-    @include background( linear-gradient(lighten($textColor, 5%), $textColor));
+    @include background( linear-gradient(lighten($textColor, 20%), lighten($textColor, 10%)));
     border-top: 1px solid darken($textColor, 10%);
     padding: 5px 20px;
     line-height: 1.5em;
@@ -620,6 +624,7 @@ form ul.parsley-error-list{
   .help-block{
     margin-bottom: 0;
     font-size: 13px;
+    color: rgba(255, 255, 255, .7);
   }
 }
 
@@ -742,4 +747,3 @@ form ul.parsley-error-list{
 
   }
 }
-  

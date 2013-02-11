@@ -2,8 +2,7 @@ nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
         .color(keyColor);
 
-    chart.controls
-        .color([$textColor, $textColor, $textColor]);
+    chart.controlsColor([$textColor, $textColor, $textColor]);
 
     chart.yAxis
         .showMaxMin(false)
