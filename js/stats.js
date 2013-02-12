@@ -23,12 +23,16 @@ function sinAndCos() {
 }
 var testData = testData(['Search', 'Referral', 'Direct']),
     stackedChart,
-    lineChart;
+    lineChart,
+    pieChart;
 
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
         .margin({top: 0, bottom: 40, left: 40, right: 0})
         .color(keyColor)
+        .showControls(false)
+        .showLegend(false)
+        .style("stream")
         .controlsColor([$textColor, $textColor, $textColor]);
 
     chart.yAxis
@@ -98,25 +102,22 @@ nv.addGraph(function() {
 });
 
 nv.addGraph(function() {
+
+    /*
+    * we need to display total amount of visits for some period
+    * calculating it
+    * pie chart uses y-property by default, so setting sum there.
+    */
+    for (var i = 0; i < testData.length; i++){
+        testData[i].y = Math.floor(d3.sum(testData[i].values, function(d){
+            return d.y;
+        }))
+    }
+
     var chart = nv.models.pieChartTotal()
         .x(function(d) {return d.key })
         .margin({top: 0, right: 20, bottom: 20, left: 20})
-        .values(function(d) {return [
-            {
-                key: "Audio",
-                y: Math.floor((Math.random()*900)+200)
-            },
-            {
-                key: "Video",
-                y: Math.floor((Math.random()*500)+200)
-            },
-            {
-                key: "Photo",
-                y: Math.floor((Math.random()*1000)+200),
-                z: Math.floor((Math.random()*10)+1)
-            }
-        ] })
-        //.z(function(d){console.log(d); return d.z})
+        .values(function(d) {return d })
         .color(COLOR_VALUES)
         .showLabels(false)
         .showLegend(false)
@@ -124,10 +125,9 @@ nv.addGraph(function() {
             return '<h4>' + key + '</h4>' +
                 '<p>' +  y + '</p>'
         })
-//        .total(function(count, z_count){
-//            return "<h4>"+ count + " files </h4>"
-//                + "<h3>" + z_count + "Gb </h3>"
-//        })
+        .total(function(count){
+            return "<h5 class='visits'>" + count + "<br/> visits </h5>"
+        })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});
 
@@ -142,25 +142,18 @@ nv.addGraph(function() {
         .enter().append("div")
         .classed("control", true)
         .style("border-top", function(d, i){
-            return "3px solid " + colors[i];
+            return "3px solid " + COLOR_VALUES[i];
         })
         .html(function(d) {
             return "<h4>" + d.key + "</h4>"
                 + "<p>" + Math.floor(100 * d.y / sum) + "%</p>";
         })
         .on('click', function(d) {
-            console.log(d);
-            d.disabled = !d.disabled;
-            d3.select(this)
-                .classed("disabled", d.disabled);
-            if (!chart.pie.values()(testData).filter(function(d) { return !d.disabled }).length) {
-                chart.pie.values()(testData).map(function(d) {
-                    d.disabled = false;
-                    return d;
-                });
-                d3.select("#sources-chart-pie").selectAll('.control').classed('disabled', false);
-            }
-            d3.select("#sources-chart-pie svg").transition().call(chart)
+            pieChartUpdate(d);
+            setTimeout(function() {
+                stackedChart.update();
+                lineChart.update();
+            }, 100);
         });
 
     d3.select("#sources-chart-pie svg")
@@ -168,5 +161,21 @@ nv.addGraph(function() {
         .transition().call(chart);
     nv.utils.windowResize(chart.update);
 
+    pieChart = chart;
+
     return chart;
 });
+
+function pieChartUpdate(d){
+    d.disabled = !d.disabled;
+    d3.select(this)
+        .classed("disabled", d.disabled);
+    if (!pieChart.pie.values()(testData).filter(function(d) { return !d.disabled }).length) {
+        pieChart.pie.values()(testData).map(function(d) {
+            d.disabled = false;
+            return d;
+        });
+        d3.select("#sources-chart-pie").selectAll('.control').classed('disabled', false);
+    }
+    d3.select("#sources-chart-pie svg").transition().call(chart);
+}
