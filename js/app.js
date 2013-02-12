@@ -28,7 +28,7 @@ function keyColor(d, i) {
 function testData(stream_names, points_count) {
     var now = new Date().getTime(),
         day = 1000 * 60 * 60 * 24, //milliseconds
-        days_ago_count = 90,
+        days_ago_count = 60,
         days_ago = days_ago_count * day,
         days_ago_date = now - days_ago,
         points_count = points_count || 45, //less for better performance
@@ -39,7 +39,7 @@ function testData(stream_names, points_count) {
             values: data.map(function(d,j){
                 return {
                     x: days_ago_date + d.x * day * day_per_point,
-                    y: d.y * 100 //just a coefficient
+                    y: Math.floor(d.y * 100) //just a coefficient
                 }
             })
         };
