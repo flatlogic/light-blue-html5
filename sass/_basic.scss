@@ -15,13 +15,13 @@ html{
 
 body{
   //background: transparent url(../img/bgnoise_lg_transparent.png);
-  background: url(../img/gaussian_blur.jpg) -200px 0;
+  //background: url(../img/gaussian_blur.jpg) -200px 0;
   //$experimental-support-for-svg: true;
-  //@include background(
-  //    //radial-gradient(10% 10%, ellipse farthest-side, rgba(208, 79, 79, 0.9), rgba(234, 200, 94, 0.9)),
-  //    radial-gradient(farthest-side ellipse at 10% 10%, rgba(208, 79, 79, 0.9), rgba(234, 200, 94, 0.9)),
-  //    image-url("bgnoise_lg_dark.png"));
-
+  @include background(
+      //radial-gradient(10% 10%, ellipse farthest-side, rgba(208, 79, 79, 0.9), rgba(234, 200, 94, 0.9)),
+      radial-gradient(farthest-side ellipse at 10% 10%, rgba(41, 57, 64, 0.89) 40%, rgba(148, 206, 184, 0.89) 80%, rgba(227, 222, 157, 0.88)),
+      image-url("bgnoise_lg_dark.png"));
+  background: -webkit-radial-gradient(10% 10%, farthest-corner ellipse, rgba(41, 57, 64, 0.89), rgba(148, 206, 184, 0.89), rgba(227, 222, 157, 0.88));
   color: $textColor;
   font-weight: 300;
 }
