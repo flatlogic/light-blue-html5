@@ -1,7 +1,11 @@
-.navbar .nav > li > a:focus, .navbar .nav > li > a:hover{
-  background-color: transparent;
-  color: #da3712;
-  text-decoration: none;
+.navbar .nav > li > a{
+  &:visited:hover, &:hover{
+    color: #da3712;
+  }
+
+  &:visited, &:focus{
+    color: $textColor;
+  }
 }
 
 textarea:focus, input[type="text"]:focus,

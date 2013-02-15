@@ -441,27 +441,54 @@ form ul.parsley-error-list{
 }
 
 .page-header{
-  display: none; //not ready yet
 
   border: none;
   margin: 15px 40px 0;
   padding: 0;
 
   @include border-radius($widget-border-radius);
-  @include box-shadow($widget-shadow);
-
-  background: white;
 
   .nav > li{
-    & > a{
-      font-weight: 400;
-      font-size: 13px;
-      border-left: 1px solid darken($lightGray, 10%);
-      color: $textColor;
-      padding: 12px 15px;
+    position: relative;
+
+    &.divider{
+      display: block;
+      height: 38px;
+      width: 1px;
+      margin: 0 20px;
+      @include background(linear-gradient(rgba(0,0,0,0), rgba($textColor, .5), rgba(0,0,0,0)));
     }
-    &:first-child > a{
-      border-left: none;
+
+    & > a, & > a:visited{
+      font-size: 30px;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 38px;
+      color: rgba(darken($textColor, 20%), .5);
+      padding: 0;
+      text-shadow: none;
+      width: 64px;
+
+      @include transition(all 0.1s);
+
+      &:hover{
+        color: white;
+        font-size: 36px;
+        @include transition(all 0.1s);
+      }
+    }
+
+    .count{
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      font-size: 10px;
+      font-weight: 600;
+      background:  rgba(darken($textColor, 20%), .65);
+      color: white;
+      line-height: 1em;
+      padding: 2px 4px;
+      @include border-radius(10px);
     }
   }
 }
@@ -590,7 +617,7 @@ form ul.parsley-error-list{
     overflow: hidden;
     color: #ffffff;
     background-color: $textColor;
-    @include background( linear-gradient(lighten($textColor, 20%), lighten($textColor, 10%)));
+    @include background( linear-gradient(desaturate($textColor, 20%), desaturate($textColor, 18%)));
     border-top: 1px solid darken($textColor, 10%);
     padding: 5px 20px;
     line-height: 1.5em;

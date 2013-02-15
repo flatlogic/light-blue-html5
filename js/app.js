@@ -11,7 +11,7 @@ var $lime = "#8CBF26",
     $purple = "#A700AE",
     $brown = "#A05000",
     $teal = "#2eb4dc",
-    $textColor = "#6f6251";
+    $textColor = "#666";
 
 COLOR_VALUES = [$red, $orange, $green, $blue, $teal, $redDark];
 
