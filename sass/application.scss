@@ -530,7 +530,7 @@ form ul.parsley-error-list{
   }
 
   .popover{
-    background: rgba(darken($textColor, 20%), .6);
+    background: rgba(darken($textColor, 20%), .8);
     @include box-shadow(none);
     @include border-radius(0);
     border: none;
@@ -540,13 +540,13 @@ form ul.parsley-error-list{
     &.bottom .arrow{
       border-bottom-color: transparent;
       &:after{
-        border-bottom-color: rgba(darken($textColor, 20%), .6);
+        border-bottom-color: rgba(darken($textColor, 20%), .8);
       }
     }
 
     .btn-group{
-      margin-left: 5px;
       margin-top: 0;
+      float: right;
     }
 
     .btn{
@@ -561,6 +561,16 @@ form ul.parsley-error-list{
     }
   }
   }
+
+.setting{
+  margin-bottom: 5px;
+  line-height: 30px;
+  vertical-align: middle;
+  font-weight: 400;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
 
   .navbar{
     margin: 0;

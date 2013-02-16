@@ -1,7 +1,12 @@
 $(function(){
     //settings popover
     var $settings = $("#settings"),
-        settingsState = JSON.parse(localStorage.getItem("settings-state")) || {sidebar: 'left'},
+        settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
+            sidebar: 'left',
+            background: 'one'
+        },
+        $pageHeader = $(".page-header"),
+        $body = $("body"),
         popoverClose = function(e){
             var $popover = $settings.siblings(".popover");
             if(!$.contains($popover[0], e.target)){
@@ -10,15 +15,22 @@ $(function(){
             }
         },
         sidebarSide = function(side){
-            var $body = $("body");
             if (side == "right"){
                 $body.addClass("sidebar-on-right")
             } else {
                 $body.removeClass("sidebar-on-right")
             }
+        },
+        backgroundStyle = function(style){
+            if (style == "two"){
+                $body.addClass("background-two")
+            } else {
+                $body.removeClass("background-two")
+            }
         };
 
     sidebarSide(settingsState.sidebar);
+    backgroundStyle(settingsState.background);
 
     $settings.popover({
         template: '<div class="popover">' +
@@ -38,10 +50,20 @@ $(function(){
 
 
     //sidevar left/right
-    $(".page-header").on("click", ".popover .btn", function(){
-        var $this = $(this);
-        sidebarSide($this.data("value"));
-        settingsState.sidebar = $this.data("value");
+    $pageHeader.on("click", ".popover #sidebar-toggle .btn", function(){
+        var $this = $(this),
+            side = $this.data("value");
+        sidebarSide(side);
+        settingsState.sidebar = side;
+        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+    });
+
+    //background
+    $pageHeader.on("click", ".popover #background-toggle .btn", function(){
+        var $this = $(this),
+            style = $this.data("value");
+        backgroundStyle(style);
+        settingsState.background = style;
         localStorage.setItem("settings-state", JSON.stringify(settingsState));
     });
 });
