@@ -34,6 +34,13 @@ body{
       rgba(137, 111, 82, 0.94)
     ),
     url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(
+      80% 0, farthest-corner ellipse,
+      rgba(194, 123, 108, 0.94),
+      rgba(238, 231, 189, 0.94),
+      rgba(137, 111, 82, 0.94)
+  ),
+  url("../img/bgnoise_lg_dark.png");
   color: $textColor;
   font-weight: 300;
 
@@ -48,6 +55,13 @@ body{
         image-url("bgnoise_lg_dark.png")
     );
     background: -webkit-radial-gradient(
+        10% 10%, farthest-corner ellipse,
+        rgba(41, 57, 64, 0.95),
+        rgba(148, 206, 184, 0.95),
+        rgba(227, 222, 157, 0.95)
+    ),
+    url("../img/bgnoise_lg_dark.png");
+    background: -moz-radial-gradient(
         10% 10%, farthest-corner ellipse,
         rgba(41, 57, 64, 0.95),
         rgba(148, 206, 184, 0.95),

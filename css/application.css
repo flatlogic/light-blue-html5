@@ -7937,10 +7937,11 @@ body {
   background: -o-radial-gradient(farthest-side ellipse at 80% 0, rgba(194, 123, 108, 0.94), rgba(238, 231, 189, 0.94), rgba(137, 111, 82, 0.94)), url('../img/bgnoise_lg_dark.png?1359885826');
   background: radial-gradient(farthest-side ellipse at 80% 0, rgba(194, 123, 108, 0.94), rgba(238, 231, 189, 0.94), rgba(137, 111, 82, 0.94)), url('../img/bgnoise_lg_dark.png?1359885826');
   background: -webkit-radial-gradient(80% 0, farthest-corner ellipse, rgba(194, 123, 108, 0.94), rgba(238, 231, 189, 0.94), rgba(137, 111, 82, 0.94)), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(80% 0, farthest-corner ellipse, rgba(194, 123, 108, 0.94), rgba(238, 231, 189, 0.94), rgba(137, 111, 82, 0.94)), url("../img/bgnoise_lg_dark.png");
   color: #666666;
   font-weight: 300;
 }
-/* line 40, D:/projects/admin/sass/_basic.scss */
+/* line 47, D:/projects/admin/sass/_basic.scss */
 body.background-two {
   background: -webkit-gradient(radial, farthest-side ellipse at 10% 10%, 0, farthest-side ellipse at 10% 10%, 100, color-stop(0%, rgba(41, 57, 64, 0.95)), color-stop(50%, rgba(148, 206, 184, 0.95)), color-stop(100%, rgba(227, 222, 157, 0.95))), url('../img/bgnoise_lg_dark.png?1359885826');
   background: -webkit-radial-gradient(farthest-side ellipse at 10% 10%, rgba(41, 57, 64, 0.95), rgba(148, 206, 184, 0.95), rgba(227, 222, 157, 0.95)), url('../img/bgnoise_lg_dark.png?1359885826');
@@ -7948,68 +7949,69 @@ body.background-two {
   background: -o-radial-gradient(farthest-side ellipse at 10% 10%, rgba(41, 57, 64, 0.95), rgba(148, 206, 184, 0.95), rgba(227, 222, 157, 0.95)), url('../img/bgnoise_lg_dark.png?1359885826');
   background: radial-gradient(farthest-side ellipse at 10% 10%, rgba(41, 57, 64, 0.95), rgba(148, 206, 184, 0.95), rgba(227, 222, 157, 0.95)), url('../img/bgnoise_lg_dark.png?1359885826');
   background: -webkit-radial-gradient(10% 10%, farthest-corner ellipse, rgba(41, 57, 64, 0.95), rgba(148, 206, 184, 0.95), rgba(227, 222, 157, 0.95)), url("../img/bgnoise_lg_dark.png");
+  background: -moz-radial-gradient(10% 10%, farthest-corner ellipse, rgba(41, 57, 64, 0.95), rgba(148, 206, 184, 0.95), rgba(227, 222, 157, 0.95)), url("../img/bgnoise_lg_dark.png");
 }
 
-/* line 60, D:/projects/admin/sass/_basic.scss */
+/* line 74, D:/projects/admin/sass/_basic.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
-/* line 63, D:/projects/admin/sass/_basic.scss */
+/* line 77, D:/projects/admin/sass/_basic.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   color: #dfdfdf;
 }
 
-/* line 68, D:/projects/admin/sass/_basic.scss */
+/* line 82, D:/projects/admin/sass/_basic.scss */
 body {
   font-weight: 300;
 }
 
-/* line 71, D:/projects/admin/sass/_basic.scss */
+/* line 85, D:/projects/admin/sass/_basic.scss */
 h1 {
   font-size: 50px;
 }
 
-/* line 74, D:/projects/admin/sass/_basic.scss */
+/* line 88, D:/projects/admin/sass/_basic.scss */
 h2 {
   font-size: 26px;
 }
 
-/* line 78, D:/projects/admin/sass/_basic.scss */
+/* line 92, D:/projects/admin/sass/_basic.scss */
 h3 {
   font-size: 20px;
 }
 
-/* line 82, D:/projects/admin/sass/_basic.scss */
+/* line 96, D:/projects/admin/sass/_basic.scss */
 h4 {
   font-size: 14px;
 }
 
-/* line 86, D:/projects/admin/sass/_basic.scss */
+/* line 100, D:/projects/admin/sass/_basic.scss */
 h5,
 h6 {
   font-size: 11px;
 }
 
-/* line 90, D:/projects/admin/sass/_basic.scss */
+/* line 104, D:/projects/admin/sass/_basic.scss */
 input[type=search], input.search {
   padding-left: 26px;
   background-color: white;
   background: url(../img/search.png) 5px 5px no-repeat white;
 }
 
-/* line 96, D:/projects/admin/sass/_basic.scss */
+/* line 110, D:/projects/admin/sass/_basic.scss */
 ul, ol {
   padding: 0;
   margin: 0;
 }
 
-/* line 101, D:/projects/admin/sass/_basic.scss */
+/* line 115, D:/projects/admin/sass/_basic.scss */
 a:focus {
   outline: none;
   outline-offset: 0;
 }
 
-/* line 120, D:/projects/admin/sass/_basic.scss */
+/* line 134, D:/projects/admin/sass/_basic.scss */
 textarea:focus, input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="datetime"]:focus,
@@ -8029,7 +8031,7 @@ input[type="color"]:focus,
   outline: none;
 }
 
-/* line 139, D:/projects/admin/sass/_basic.scss */
+/* line 153, D:/projects/admin/sass/_basic.scss */
 select, textarea,
 input[type="text"],
 input[type="password"],
@@ -8052,13 +8054,13 @@ input[type="color"] {
   padding: 8px 10px;
 }
 
-/* line 145, D:/projects/admin/sass/_basic.scss */
+/* line 159, D:/projects/admin/sass/_basic.scss */
 label {
   margin: 0;
   padding: 0;
 }
 
-/* line 150, D:/projects/admin/sass/_basic.scss */
+/* line 164, D:/projects/admin/sass/_basic.scss */
 ul li, ol li {
   list-style: none;
 }
