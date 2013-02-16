@@ -224,7 +224,7 @@ $(function(){
 
     //settings
     var $settings = $("#settings"),
-        settingsState = {},
+        settingsState = localStorage.getItem("settings-state") || {sidebar: 'left'},
         popoverClose = function(e){
             var $popover = $settings.siblings(".popover");
             if(!$.contains($popover[0], e.target)){
@@ -240,6 +240,7 @@ $(function(){
             '<div class="popover-content"></div>' +
             '</div>' +
             '</div>',
+        html: true,
         content: _.template($('#settings-template').html(), settingsState)
     }).click(function(){
             $(document).on("click", popoverClose);
