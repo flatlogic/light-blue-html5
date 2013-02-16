@@ -128,11 +128,21 @@
 
 
 <script type="text/template" id="settings-template">
-    Sidebar on the
-    <div class="btn-group" data-toggle="buttons-radio">
-        <% onRight = sidebar == 'right'%>
-        <button type="button" data-value="left" class="btn <%= onRight? '' : 'active' %>">Left</button>
-        <button type="button" data-value="right" class="btn <%= onRight? 'active' : '' %>">Right</button>
+    <div class="setting clearfix">
+        Sidebar on the
+        <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% onRight = sidebar == 'right'%>
+            <button type="button" data-value="left" class="btn <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn <%= onRight? 'active' : '' %>">Right</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        Background
+        <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% two = background == 'two'%>
+            <button type="button" data-value="one" class="btn <%= two? '' : 'active' %>">One</button>
+            <button type="button" data-value="two" class="btn <%= two? 'active' : '' %>">Two</button>
+        </div>
     </div>
 </script>
 
