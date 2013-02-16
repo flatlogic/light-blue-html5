@@ -41,7 +41,10 @@
                                 <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
                                 <li><a href="#" title="8 people needs help"><i class="icon-group"></i><i class="count">8</i></a></li>
                                 <li class="divider"></li>
-                                <li><a href="#"><i class="icon-cog"></i></a></li>
+                                <li><a href="#" id="settings"
+                                       data-toggle="popover"
+                                       data-placement="bottom"
+                                       title=""><i class="icon-cog"></i></a></li>
                                 <li><a href="#"><i class="icon-user"></i></a></li>
                                 <li><a href="login.html"><i class="icon-signout"></i></a></li>
                             </ul>
@@ -114,8 +117,24 @@
 <script src="lib/nvd3/src/models/lineChart.js"></script>
 <script src="lib/nvd3/src/models/multiBar.js"></script>
 <script src="lib/nvd3/src/models/multiBarChart.js"></script>
+<script src="lib/backbone/underscore-min.js"></script>
+<script src="js/bootstrap/bootstrap-collapse.js"></script>
+<script src="js/bootstrap/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap/bootstrap-popover.js"></script>
+<script src="js/bootstrap/bootstrap-button.js"></script>
 <script src="js/app.js"></script>
 <script src="js/stats.js"></script>
+<script src="js/settings.js"></script>
+
+
+<script type="text/template" id="settings-template">
+    Sidebar on the
+    <div class="btn-group" data-toggle="buttons-radio">
+        <% onRight = sidebar == 'right'%>
+        <button type="button" data-value="left" class="btn <%= onRight? '' : 'active' %>">Left</button>
+        <button type="button" data-value="right" class="btn <%= onRight? 'active' : '' %>">Right</button>
+    </div>
+</script>
 
 </body>
 </html>
