@@ -556,7 +556,7 @@ form ul.parsley-error-list{
       @include box-shadow(none);
 
       &.active{
-        background: rgba(darken($textColor, 20%), .35);;
+        background: rgba(darken($textColor, 20%), .35);
       }
     }
   }
@@ -569,6 +569,45 @@ form ul.parsley-error-list{
   font-weight: 400;
   &:last-child{
     margin-bottom: 0;
+  }
+}
+
+.popover.user-info{
+  width: 220px;
+}
+
+.user{
+
+  img{
+    height: 60px;
+  }
+
+  figure{
+    margin: 0;
+  }
+
+  figcaption{
+    line-height: 60px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .actions{
+    margin: 15px -14px 0; //cover padding
+
+    li a{
+      display: block;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 15px;
+      color: #ffffff;
+      padding: 6px 20px;
+
+      &:hover{
+        background: rgba(lighten($textColor, 20%), .3);
+      }
+    }
   }
 }
 

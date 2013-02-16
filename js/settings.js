@@ -44,7 +44,9 @@ $(function(){
             return _.template($('#settings-template').html(), settingsState);
         }
     }).click(function(){
+            // need to remove popover on anywhere-click
             $(document).on("click", popoverClose);
+            $("#user").popover('hide');
             return false;
         });
 
@@ -66,4 +68,32 @@ $(function(){
         settingsState.background = style;
         localStorage.setItem("settings-state", JSON.stringify(settingsState));
     });
+});
+
+$(function(){
+    //user stuff
+
+    var $user = $("#user"),
+        popoverClose = function(e){
+            var $popover = $user.siblings(".popover");
+            if(!$.contains($popover[0], e.target)){
+                $user.popover('hide');
+                $(document).off("click", popoverClose);
+            }
+        };
+
+    $user.popover({template: '<div class="popover user-info">' +
+        '<div class="arrow"></div>' +
+        '<div class="popover-inner">' +
+        '<div class="popover-content"></div>' +
+        '</div>' +
+        '</div>',
+        html: true,
+        content: _.template($('#user-template').html())
+    }).click(function(){
+            // need to remove popover on anywhere-click
+            $(document).on("click", popoverClose);
+            $("#settings").popover('hide');
+            return false;
+        });
 });

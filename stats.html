@@ -45,7 +45,14 @@
                                        data-toggle="popover"
                                        data-placement="bottom"
                                        title=""><i class="icon-cog"></i></a></li>
-                                <li><a href="#"><i class="icon-user"></i></a></li>
+                                <li>
+                                    <a href="#" id="user"
+                                       data-toggle="popover"
+                                       data-placement="bottom"
+                                       title="">
+                                        <i class="icon-user"></i>
+                                    </a>
+                                </li>
                                 <li><a href="login.html"><i class="icon-signout"></i></a></li>
                             </ul>
                         </div><!-- /.nav-collapse -->
@@ -143,6 +150,26 @@
             <button type="button" data-value="one" class="btn <%= two? '' : 'active' %>">One</button>
             <button type="button" data-value="two" class="btn <%= two? 'active' : '' %>">Two</button>
         </div>
+    </div>
+</script>
+
+<script type="text/template" id="user-template">
+    <div class="user">
+        <figure class="clearfix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Vita%C5%ADt._%D0%92%D1%96%D1%82%D0%B0%D1%9E%D1%82_%28J._Aziamb%C5%82o%C5%ADski%2C_XIX%29.jpg" class="img-circle pull-left">
+
+            <figcaption class="pull-right">Vitaut the Great</figcaption>
+        </figure>
+        <nav class="actions">
+            <ul>
+                <li class="active">
+                    <a target="_blank" href="http://www.belarusguide.com/cities/commanders/Vitaut_The_Great.html">
+                        <i class="icon-user icon-large"></i> Profile
+                    </a>
+                </li>
+                <li><a href=""><i class="icon-calendar icon-large"></i> Calendar</a></li>
+            </ul>
+        </nav>
     </div>
 </script>
 
