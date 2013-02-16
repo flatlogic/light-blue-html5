@@ -70,7 +70,7 @@
 
     &.active, &:hover{
       i[class*=icon]{
-        color: #da3712;
+        color: $linkRed;
       }
     }
 
@@ -297,6 +297,14 @@
       height: 257px;
     }
   }
+
+  &.light-red{
+    background: #f8f3f0;
+  }
+
+  &.light-blue{
+    background: #eff5ef;
+  }
 }
 
 .chart-inline{
@@ -445,50 +453,79 @@ form ul.parsley-error-list{
   border: none;
   margin: 15px 40px 0;
   padding: 0;
+  position: relative;
 
   @include border-radius($widget-border-radius);
 
-  .nav > li{
-    position: relative;
+  .nav{
 
-    &.divider{
-      display: block;
-      height: 38px;
-      width: 1px;
-      margin: 0 20px;
-      @include background(linear-gradient(rgba(0,0,0,0), rgba($textColor, .5), rgba(0,0,0,0)));
-    }
+    &.right > li{
+      position: relative;
+      & > a, & > a:visited{
+        width: 64px;
+        padding: 0;
+        font-size: 30px;
 
-    & > a, & > a:visited{
-      font-size: 30px;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 38px;
-      color: rgba(darken($textColor, 20%), .5);
-      padding: 0;
-      text-shadow: none;
-      width: 64px;
+        &:hover{
+          color: white;
+          font-size: 32px;
+          @include transition(all 0.1s);
+        }
+      }
 
-      @include transition(all 0.1s);
-
-      &:hover{
-        color: white;
-        font-size: 36px;
-        @include transition(all 0.1s);
+      .count{
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        font-size: 10px;
+        font-weight: 600;
+        background:  rgba(darken($textColor, 20%), .55);
+        color: rgba(white, 0.9);
+        line-height: 1em;
+        padding: 2px 4px;
+        @include border-radius(10px);
       }
     }
 
-    .count{
-      position: absolute;
-      bottom: 2px;
-      right: 2px;
-      font-size: 10px;
-      font-weight: 600;
-      background:  rgba(darken($textColor, 20%), .65);
-      color: white;
-      line-height: 1em;
-      padding: 2px 4px;
-      @include border-radius(10px);
+    & > li{
+
+      background: none;
+
+      &.active > a, &.active > a:visited{
+        background: none;
+        @include box-shadow(none);
+        color: white;
+
+        &:hover{
+          color: white;
+          background: none;
+          @include box-shadow(none);
+        }
+      }
+
+      &.divider{
+        display: block;
+        height: 38px;
+        width: 1px;
+        margin: 0 20px;
+        @include background(linear-gradient(rgba(0,0,0,0), rgba($textColor, .5), rgba(0,0,0,0)));
+      }
+
+      & > a, & > a:visited{
+        background: none;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+        line-height: 38px;
+        color: rgba(darken($textColor, 20%), .45);
+        text-shadow: none;
+        padding: 0 10px;
+        @include transition(all 0.1s);
+
+        &:hover{
+          color: rgba(darken($textColor, 20%), .6);
+        }
+      }
     }
   }
 }
@@ -517,6 +554,10 @@ form ul.parsley-error-list{
     padding-left: 30px;
     color: inherit;
   }
+}
+
+.notifications{
+  position: absolute;
 }
 
 .todo-app{
@@ -616,9 +657,9 @@ form ul.parsley-error-list{
     right: 0;
     overflow: hidden;
     color: #ffffff;
-    background-color: $textColor;
-    @include background( linear-gradient(desaturate($textColor, 20%), desaturate($textColor, 18%)));
-    border-top: 1px solid darken($textColor, 10%);
+    background-color: $backgroundColor;
+    //@include background( linear-gradient(desaturate($backgroundColor, 20%), desaturate($backgroundColor, 18%)));
+    border-top: 1px solid darken($backgroundColor, 10%);
     padding: 5px 20px;
     line-height: 1.5em;
     @include border-radius(0 0 $widget-border-radius $widget-border-radius);
