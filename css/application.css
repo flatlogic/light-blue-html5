@@ -8711,7 +8711,7 @@ form ul.parsley-error-list li {
 
 /* line 591, D:/projects/admin/sass/application.scss */
 .notifications {
-  margin: 7px 20px;
+  margin: 7px 20px 7px 0;
 }
 /* line 594, D:/projects/admin/sass/application.scss */
 .notifications .alert {
@@ -9012,4 +9012,22 @@ form ul.parsley-error-list li {
 /* line 868, D:/projects/admin/sass/application.scss */
 .widget.login .facebook-login a:hover, widget.registration .facebook-login a:hover {
   text-decoration: none;
+}
+
+/* line 877, D:/projects/admin/sass/application.scss */
+.sidebar-on-right .sidebar {
+  right: 0;
+  margin: 30px 25px 0 0;
+}
+/* line 882, D:/projects/admin/sass/application.scss */
+.sidebar-on-right .wrap {
+  margin-left: 0;
+  margin-right: 205px;
+}
+/* line 888, D:/projects/admin/sass/application.scss */
+.sidebar-on-right .side-nav li.active a {
+  border-left: none;
+  border-right: 5px solid #4daf7c;
+  padding-left: 30px;
+  padding-right: 25px;
 }

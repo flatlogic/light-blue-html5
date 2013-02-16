@@ -589,7 +589,7 @@ form ul.parsley-error-list{
   }
 
   .notifications{
-    margin: 7px 20px;
+    margin: 7px 20px 7px 0;
 
     .alert{
       background: rgba(darken($textColor, 20%), .32);
@@ -872,3 +872,24 @@ form ul.parsley-error-list{
 
     }
   }
+
+.sidebar-on-right{
+  .sidebar{
+    right: 0;
+    margin: 30px 25px 0 0;
+  }
+
+  .wrap{
+    margin-left: 0;
+    margin-right: 205px;
+  }
+
+  .side-nav li{
+    &.active a{
+      border-left: none;
+      border-right: 5px solid #4daf7c;
+      padding-left: 30px;
+      padding-right: 25px;
+    }
+  }
+}

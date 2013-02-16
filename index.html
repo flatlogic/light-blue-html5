@@ -305,8 +305,9 @@
 <script type="text/template" id="settings-template">
     Sidebar on the
     <div class="btn-group" data-toggle="buttons-radio">
-        <button type="button" class="btn active">Left</button>
-        <button type="button" class="btn">Right</button>
+        <% onRight = sidebar == 'right'%>
+        <button type="button" data-value="left" class="btn <%= onRight? '' : 'active' %>">Left</button>
+        <button type="button" data-value="right" class="btn <%= onRight? 'active' : '' %>">Right</button>
     </div>
 </script>
 
