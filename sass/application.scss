@@ -451,7 +451,7 @@ form ul.parsley-error-list{
 .page-header{
 
   border: none;
-  margin: 15px 40px 0;
+  margin: 22px 40px 0;
   padding: 0;
   position: relative;
 
@@ -557,7 +557,28 @@ form ul.parsley-error-list{
 }
 
 .notifications{
-  position: absolute;
+  margin: 7px 20px;
+
+  .alert{
+    background: rgba(darken($textColor, 20%), .32);
+    border: none;
+    font-size: 13px;
+    margin-bottom: 0;
+    padding: 2px 9px;
+    color: white;
+    text-shadow: none;
+    @include border-radius(10px);
+
+    a{
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  .close{
+    position: static;
+    margin: 1px 0 1px 2px;
+  }
 }
 
 .todo-app{
@@ -674,9 +695,9 @@ form ul.parsley-error-list{
     text-decoration: none;
     color: #ffffff;
     font-size: 12px;
-    background: lighten($textColor, 10%);
+    background: lighten($backgroundColor, 10%);
     @include border-radius(0 0 0 $widget-border-radius);
-    @include box-shadow(-1px 1px 1px darken($textColor, 2%));
+    @include box-shadow(-1px 1px 1px darken($backgroundColor, 2%));
     cursor: pointer;
   }
 
