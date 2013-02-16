@@ -528,6 +528,21 @@ form ul.parsley-error-list{
       }
     }
   }
+
+  .popover{
+    background: rgba(darken($textColor, 20%), .45);
+    @include box-shadow(none);
+    @include border-radius(0);
+    border: none;
+    color: white;
+
+    &.bottom .arrow{
+      border-bottom-color: transparent;
+      &:after{
+       border-bottom-color: rgba(darken($textColor, 20%), .45);
+      }
+    }
+  }
 }
 
 .navbar{

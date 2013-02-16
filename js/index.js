@@ -32,36 +32,36 @@ nv.addGraph(function() {
 
     d3.select("#chart-visits svg")
         .datum(
-        //Test data. Just to see it's really simple
-        [{
-            "key" : "Visits",
-            "values" : [{
-                "x" : 1,
-                "y" : 0
-            },{
-                "x" : 2,
-                "y" : 2
-            },{
-                "x" : 3,
-                "y" : 3
-            },{
-                "x" : 4,
-                "y" : 2
-            },{
-                "x" : 5,
-                "y" : 1
-            },{
-                "x" : 6,
-                "y" : 4
-            },{
-                "x" : 7,
-                "y" : 5
-            },{
-                "x" : 8,
-                "y" : 6
+            //Test data. Just to see it's really simple
+            [{
+                "key" : "Visits",
+                "values" : [{
+                    "x" : 1,
+                    "y" : 0
+                },{
+                    "x" : 2,
+                    "y" : 2
+                },{
+                    "x" : 3,
+                    "y" : 3
+                },{
+                    "x" : 4,
+                    "y" : 2
+                },{
+                    "x" : 5,
+                    "y" : 1
+                },{
+                    "x" : 6,
+                    "y" : 4
+                },{
+                    "x" : 7,
+                    "y" : 5
+                },{
+                    "x" : 8,
+                    "y" : 6
+                }]
             }]
-        }]
-    )
+        )
         .transition().call(chart);
     nv.utils.windowResize(chart.update);
 
@@ -175,14 +175,14 @@ nv.addGraph(function() {
         })
         .total(function(count, z_count){
             return "<h4>"+ count + " files </h4>"
-            + "<h3>" + z_count + "Gb </h3>"
+                + "<h3>" + z_count + "Gb </h3>"
         })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});
 
     var sum = d3.sum(testData, function(d){
-            return d.y;
-        });
+        return d.y;
+    });
     d3.select("#data-chart")
         .append("div")
         .classed("controls", true)
@@ -221,4 +221,28 @@ nv.addGraph(function() {
 
 $(function(){
     $("input:checkbox").uniform();
+
+    //settings
+    var $settings = $("#settings"),
+        settingsState = {},
+        popoverClose = function(e){
+            var $popover = $settings.siblings(".popover");
+            if(!$.contains($popover[0], e.target)){
+                $settings.popover('hide');
+                $(document).off("click", popoverClose);
+            }
+        };
+
+    $settings.popover({
+        template: '<div class="popover">' +
+            '<div class="arrow"></div>' +
+            '<div class="popover-inner">' +
+            '<div class="popover-content"></div>' +
+            '</div>' +
+            '</div>',
+        content: _.template($('#settings-template').html(), settingsState)
+    }).click(function(){
+            $(document).on("click", popoverClose);
+            return false;
+        });
 });
