@@ -33,7 +33,6 @@ $(function(){
             + "96c7688f-7a54-6576-1faa-d6a5bfc20301" + ","
             + "06c7688f-7a54-6576-1faa-d6a5bfc20301"
         );
-        console.log("test data");
     }
 
     // Our basic **Todo** model has `title`, `order`, and `done` attributes.

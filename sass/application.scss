@@ -191,7 +191,7 @@
   }
 
   &.tiny{
-    height: 200px;
+    height: 188px;
   }
 
   header{
@@ -301,13 +301,16 @@
       height: 257px;
     }
   }
+}
 
+.widget, .bar{
   &.light-red{
     background: #f8f3f0;
   }
 
   &.light-blue{
     background: $lightBlue;
+    background-color: $lightBlue;
   }
 
   &.transparent{
@@ -321,19 +324,19 @@
 
   &.dark-blue{
     @include background(radial-gradient(
-            farthest-side ellipse,
-            rgba(66, 109, 115, 0.92),
-            rgba(59, 98, 105, 0.93)
-        ));
+        farthest-side ellipse,
+        rgba(66, 109, 115, 0.92),
+        rgba(59, 98, 105, 0.93)
+    ));
     background: -webkit-radial-gradient(
         farthest-corner ellipse,
-      rgba(66, 109, 115, 0.92),
+        rgba(66, 109, 115, 0.92),
         rgba(59, 98, 105, 0.93)
     );
     background: -moz-radial-gradient(
         farthest-corner ellipse,
         rgba(66, 109, 115, 0.92),0
-        rgba(59, 98, 105, 0.93)
+      rgba(59, 98, 105, 0.93)
     );
   }
 
@@ -346,7 +349,8 @@
   }
 
   &.light-brown{
-    background: rgb(246, 241, 237);
+    background: $lightBrown;
+    background-color: $lightBrown;
   }
 }
 
@@ -802,13 +806,13 @@ form ul.parsley-error-list{
       right: 0;
       overflow: hidden;
       color: #ffffff;
-      border-top: 1px solid darken($backgroundColor, 10%);
       padding: 5px 20px;
       line-height: 1.5em;
       @include border-radius(0 0 $widget-border-radius $widget-border-radius);
 
       &.dark-blue{
         background-color: $backgroundBlue;
+        border-top: 1px solid darken($backgroundBlue, 10%);
         .clear-completed{
           background: lighten($backgroundBlue, 5%);
           @include box-shadow(-1px 1px 1px darken($backgroundBlue, 2%));
@@ -817,6 +821,7 @@ form ul.parsley-error-list{
 
       &.dark-brown{
         background-color: $backgroundBrown;
+        border-top: 1px solid darken($backgroundBrown, 10%);
         .clear-completed{
           background: lighten($backgroundBrown, 10%);
           @include box-shadow(-1px 1px 1px darken($backgroundBrown, 2%));
@@ -1148,9 +1153,83 @@ form ul.parsley-error-list{
 .overview{
   margin-top: -15px;
   padding: 10px;
-  color: white;
 
   h4{
     font-weight: 400;
+  }
+
+  .stats{
+    margin-top: 10px;
+    font-size: 12px;
+
+    &.activity{
+      font-size: 15px;
+      .icon{
+        text-align: center;
+      }
+
+      .value{
+        text-align: right;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .row-fluid{
+        margin-top: 10px;
+      }
+    }
+
+    h4{
+      text-align: right;
+      font-weight: 300;
+    }
+
+    h3{
+      line-height: 18px;
+      vertical-align: middle;
+      margin-left: 5px;
+      font-size: 15px;
+    }
+  }
+}
+
+.progress{
+  @include border-radius(0);
+  height: 8px;
+  background: rgba(black, .2);
+
+  .bar{
+    @include box-shadow(none);
+  }
+}
+
+.overview{
+
+  &.light-red{
+    color: #f8f3f0;
+  }
+
+  &.light-blue{
+    color: $lightBlue;
+  }
+
+  &.adaptive-color{
+    color: rgba(white, 0.9);
+  }
+
+  &.light-gray{
+    color: $lightGray;
+  }
+
+  &.light-brown{
+    color: $lightBrown;
+  }
+
+  &.dark-blue{
+    color: $backgroundBlue;
+  }
+
+  &.dark-brown{
+    color: $backgroundBrown;
   }
 }

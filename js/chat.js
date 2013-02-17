@@ -1,5 +1,12 @@
 $(function(){
 
+    if (window.localStorage.getItem("chat-simple") != null){
+        var messages = window.localStorage.getItem("chat-simple").split(",");
+        for (var i = 0; i < messages.length; i++){
+            localStorage.removeItem("chat-simple-" + messages[i]);
+        }
+    }
+
     var Message = Backbone.Model.extend({
 
         defaults: function() {
@@ -90,5 +97,4 @@ $(function(){
 
     // Finally, we kick things off by creating the **App**.
     var App = new AppView;
-    Messages.reset();
 });
