@@ -1233,3 +1233,34 @@ form ul.parsley-error-list{
     color: $backgroundBrown;
   }
 }
+
+.media-heading{
+  font-weight: 600;
+
+  .twitter{
+    color: rgba($textColor, .7);
+  }
+}
+
+.media{
+  .actions{
+    position: static;
+    margin-right: 40px;
+    opacity: 0;
+    @include transition(opacity .2s);
+  }
+
+  li{
+    float: left;
+    margin-left: 10px;
+  }
+
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.media-content:hover .actions{
+  @include transition(opacity .2s);
+  opacity: 1;
+}

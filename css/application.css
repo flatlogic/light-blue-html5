@@ -9432,3 +9432,41 @@ form ul.parsley-error-list li {
 .overview.dark-brown {
   color: #786c60;
 }
+
+/* line 1237, D:/projects/admin/sass/application.scss */
+.media-heading {
+  font-weight: 600;
+}
+/* line 1240, D:/projects/admin/sass/application.scss */
+.media-heading .twitter {
+  color: rgba(102, 102, 102, 0.7);
+}
+
+/* line 1246, D:/projects/admin/sass/application.scss */
+.media .actions {
+  position: static;
+  margin-right: 40px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+/* line 1253, D:/projects/admin/sass/application.scss */
+.media li {
+  float: left;
+  margin-left: 10px;
+}
+/* line 1258, D:/projects/admin/sass/application.scss */
+.media p {
+  margin-bottom: 0;
+}
+
+/* line 1263, D:/projects/admin/sass/application.scss */
+.media-content:hover .actions {
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  opacity: 1;
+}
