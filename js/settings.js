@@ -23,9 +23,13 @@ $(function(){
         },
         backgroundStyle = function(style){
             if (style == "two"){
-                $body.addClass("background-two")
+                $body.addClass("background-two");
+                $(".light-brown").removeClass("light-brown").addClass("light-blue");
+                $(".dark-brown").removeClass("dark-brown").addClass("dark-blue");
             } else {
-                $body.removeClass("background-two")
+                $body.removeClass("background-two");
+                $(".light-blue").removeClass("light-blue").addClass("light-brown");
+                $(".dark-blue").removeClass("dark-blue").addClass("dark-brown");
             }
         };
 

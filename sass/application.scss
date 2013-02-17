@@ -190,6 +190,10 @@
     }
   }
 
+  &.tiny{
+    height: 200px;
+  }
+
   header{
     position: relative;
     background: inherit;
@@ -303,7 +307,42 @@
   }
 
   &.light-blue{
-    background: #eff5ef;
+    background: $lightBlue;
+  }
+
+  &.transparent{
+    background: transparent;
+    @include box-shadow(none);
+  }
+
+  &.dark-blue{
+    @include background(radial-gradient(
+            farthest-side ellipse,
+            rgba(66, 109, 115, 0.92),
+            rgba(59, 98, 105, 0.93)
+        ));
+    background: -webkit-radial-gradient(
+        farthest-corner ellipse,
+      rgba(66, 109, 115, 0.92),
+        rgba(59, 98, 105, 0.93)
+    );
+    background: -moz-radial-gradient(
+        farthest-corner ellipse,
+        rgba(66, 109, 115, 0.92),0
+        rgba(59, 98, 105, 0.93)
+    );
+  }
+
+  &.dark-brown{
+    background: $backgroundBrown;
+  }
+
+  &.light-gray{
+    background: $lightGray;
+  }
+
+  &.light-brown{
+    background: rgb(246, 241, 237);
   }
 }
 
@@ -759,12 +798,18 @@ form ul.parsley-error-list{
       right: 0;
       overflow: hidden;
       color: #ffffff;
-      background-color: $backgroundColor;
-      //@include background( linear-gradient(desaturate($backgroundColor, 20%), desaturate($backgroundColor, 18%)));
       border-top: 1px solid darken($backgroundColor, 10%);
       padding: 5px 20px;
       line-height: 1.5em;
       @include border-radius(0 0 $widget-border-radius $widget-border-radius);
+
+      &.dark-blue{
+        background-color: $backgroundBlue;
+      }
+
+      &.dark-brown{
+        background-color: $backgroundBrown;
+      }
     }
 
     .clear-completed{
@@ -1030,5 +1075,70 @@ form ul.parsley-error-list{
     .text{
       font-size: 13px;
     }
+  }
+}
+
+.posts{
+  .post{
+    margin-top: 10px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+  h4{
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .text{
+    font-size: 13px;
+  }
+
+  .info{
+    font-size: 12px;
+    margin-bottom: 4px;
+
+    .actions{
+      position: static;
+      float: right;
+      display: none;
+    }
+
+    .btn{
+      background: white;
+      @include box-shadow(inset 0 1px 0 rgba($linkRed, 0.2));
+      @include text-shadow(none);
+      @include border-radius(2px);
+      border: none;
+      color: $linkRed;
+    }
+
+    a{
+      color: $textColor;
+      font-weight: 700;
+    }
+
+    span{
+      display: inline-block;
+      border-left: 1px solid rgba($textColor, .6);
+      margin-left: 5px;
+      padding-left: 5px;
+      line-height: 1em;
+
+      &:first-of-type{
+        border-left: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.overview{
+  margin-top: -15px;
+  padding: 10px;
+  color: white;
+
+  h4{
+    font-weight: 400;
   }
 }
