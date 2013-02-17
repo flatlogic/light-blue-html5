@@ -196,7 +196,7 @@
 
   header{
     position: relative;
-    background: inherit;
+    background: none;
 
     #{headings(2,4)}{
       margin: 0;
@@ -313,6 +313,10 @@
   &.transparent{
     background: transparent;
     @include box-shadow(none);
+  }
+
+  &.adaptive-background{
+    background: rgba(white, 0.9);
   }
 
   &.dark-blue{
@@ -805,10 +809,18 @@ form ul.parsley-error-list{
 
       &.dark-blue{
         background-color: $backgroundBlue;
+        .clear-completed{
+          background: lighten($backgroundBlue, 5%);
+          @include box-shadow(-1px 1px 1px darken($backgroundBlue, 2%));
+        }
       }
 
       &.dark-brown{
         background-color: $backgroundBrown;
+        .clear-completed{
+          background: lighten($backgroundBrown, 10%);
+          @include box-shadow(-1px 1px 1px darken($backgroundBrown, 2%));
+        }
       }
     }
 
