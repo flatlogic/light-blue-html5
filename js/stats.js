@@ -6,6 +6,44 @@ var testData = testData(['Search', 'Referral', 'Direct', 'Campaign'],
     pieChart,
     barChart;
 
+function pieChartUpdate(d){
+    d.disabled = !d.disabled;
+    d3.select(this)
+        .classed("disabled", d.disabled);
+    if (!pieChart.pie.values()(testData).filter(function(d) { return !d.disabled }).length) {
+        pieChart.pie.values()(testData).map(function(d) {
+            d.disabled = false;
+            return d;
+        });
+        pieSelect.selectAll('.control').classed('disabled', false);
+    }
+    d3.select("#sources-chart-pie svg").transition().call(pieChart);
+}
+
+// test Data.
+//use if needed
+function sinAndCos() {
+    var sin = [],
+        cos = [];
+
+    for (var i = 0; i < 100; i++) {
+        sin.push({x: i, y: i % 10 == 5 ? null : Math.sin(i/10) }); //the nulls are to show how defined works
+        cos.push({x: i, y: .5 * Math.cos(i/10)});
+    }
+
+    return [
+        {
+            area: true,
+            values: sin,
+            key: "Sine Wave"
+        },
+        {
+            values: cos,
+            key: "Cosine Wave"
+        }
+    ];
+}
+
 nv.addGraph(function() {
 
     /*
@@ -168,40 +206,63 @@ nv.addGraph(function() {
     return chart;
 });
 
-function pieChartUpdate(d){
-    d.disabled = !d.disabled;
-    d3.select(this)
-        .classed("disabled", d.disabled);
-    if (!pieChart.pie.values()(testData).filter(function(d) { return !d.disabled }).length) {
-        pieChart.pie.values()(testData).map(function(d) {
-            d.disabled = false;
-            return d;
-        });
-        pieSelect.selectAll('.control').classed('disabled', false);
-    }
-    d3.select("#sources-chart-pie svg").transition().call(pieChart);
+var data = [{
+    "key": "Realtime something :)",
+    "area": true,
+    "values": getData()
+}];
+var chart;
+
+nv.addGraph(function () {
+    chart = nv.models.lineChart()
+        .margin({top: 0, bottom: 40, left: 40, right: 0})
+        .color(COLOR_VALUES.splice(1))
+        .showLegend(false);
+
+    chart.yAxis
+        .showMaxMin(false)
+        .tickFormat(d3.format(',.f'));
+
+    chart.xAxis
+        .showMaxMin(false)
+        .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
+
+    d3.select('#chart svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+});
+
+
+function redraw() {
+    d3.select('#realtime-chart svg')
+        .datum(data)
+        .transition().duration(1000)
+        .call(chart);
 }
 
-// test Data.
-//use if needed
-function sinAndCos() {
-    var sin = [],
-        cos = [];
-
-    for (var i = 0; i < 100; i++) {
-        sin.push({x: i, y: i % 10 == 5 ? null : Math.sin(i/10) }); //the nulls are to show how defined works
-        cos.push({x: i, y: .5 * Math.cos(i/10)});
+function getData() {
+    var arr = [],
+        theDate = new Date(2012, 1, 1, 0, 0, 0, 0),
+        previous = Math.floor(Math.random() * 100);
+    for (var x = 0; x < 30; x++) {
+        var newY = previous + Math.floor(Math.random() * 5 - 2);
+        previous = newY;
+        arr.push({x: new Date(theDate.getTime()), y: newY});
+        theDate.setDate(theDate.getDate() + 1);
     }
-
-    return [
-        {
-            area: true,
-            values: sin,
-            key: "Sine Wave"
-        },
-        {
-            values: cos,
-            key: "Cosine Wave"
-        }
-    ];
+    return arr;
 }
+
+setInterval(function () {
+    var series = data[0].values;
+    var next = new Date(series[series.length - 1].x);
+    next.setDate(next.getDate() + 1);
+    series.shift();
+    series.push({x:next.getTime(), y: series[series.length - 1].y + Math.floor(Math.random() * 5 - 2)});
+    redraw();
+}, 1000);
