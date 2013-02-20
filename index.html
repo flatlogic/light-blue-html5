@@ -70,50 +70,408 @@
             </div>
         </header>
     </div>
-    <div class="content container-fluid">
-        <div class="row-fluid">
-            <!-- todo set fixed width for widescreen-->
+    <div class="content container">
+        <div class="row">
+            <div class="span2">
+                <div class="box red">
+                    <div class="value"><strong>$</strong> 900</div>
+                    <h4 class="description">Total Income</h4>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="box teal">
+                    <div class="value"><i class="icon-eye-open"></i> 530</div>
+                    <h4 class="description">New Visits</h4>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="box green">
+                    <div class="value"><i class="icon-shopping-cart"></i> 20</div>
+                    <h4 class="description">New Orders</h4>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="box blue">
+                    <div class="value"><i class="icon-comments"></i> 323</div>
+                    <h4 class="description">Comments</h4>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="box dark-red">
+                    <div class="value"><i class="icon-group"></i> 61</div>
+                    <h4 class="description">New Users</h4>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="box orange">
+                    <div class="value"><i class="icon-thumbs-up"></i> 56</div>
+                    <h4 class="description">New Likes</h4>
+                </div>
+            </div>        
+        </div>
+        <div class="row">
+            <div class="span4">
+                <section class="widget large">
+                    <header>
+                        <h3><i class="icon-bar-chart"></i> Weekly Statistics</h3>
+                        <div class="actions">
+                            <a href="#"><i class="icon-chevron-down"></i></a>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <div class="row-fluid chart-inline">
+                            <div class="span5">
+                                <div id="chart-visits">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <h4>Visits</h4>
+                            </div>
+                            <div class="span3">
+                                <div class="info">
+                                    712
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid chart-inline">
+                            <div class="span5">
+                                <div id="chart-unique">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <h4>Unique</h4>
+                            </div>
+                            <div class="span3">
+                                <div class="info">
+                                    530
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid chart-inline">
+                            <div class="span5">
+                                <div id="chart-pageviews">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <h4>Pageviews</h4>
+                            </div>
+                            <div class="span3">
+                                <div class="info">
+                                    3401
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid chart-inline">
+                            <div class="span5">
+                                <div id="chart-duration">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <h4>Avg. Visit Duration</h4>
+                            </div>
+                            <div class="span3">
+                                <div class="info">
+                                    2:47:11
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid chart-inline">
+                            <div class="span5">
+                                <div id="chart-bounce">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                            <div class="span4">
+                                <h4>Bounce Rate</h4>
+                            </div>
+                            <div class="span3">
+                                <div class="info">
+                                    56%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="span8">
+                <section class="widget large">
+                    <header>
+                        <h3><i class="icon-globe"></i> Top four countries</h3>
+                        <div class="actions">
+                            <a href="#"><i class="icon-chevron-down"></i></a>
+                        </div>
+                    </header>
+                    <div id="overview-chart" class="body chart">
+                        <svg></svg>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span3">
+                <section class="widget large light-blue">
+                    <header>
+                        <h3><i class="icon-edit"></i> Notes</h3>
+                    </header>
+                    <div class="body">
+                        <div id="todo-app" class="todo-app">
+                            <form>
+                                <fieldset>
+                                    <label class="new-todo-label" for="new-todo">
+                                        <input id="new-todo" type="text" class="new-todo" placeholder="What needs to be done?">
+                                    </label>
+                                    <section id="todo-app-main">
+                                        <label for="toggle-all" class="mark-all">
+                                            <input id="toggle-all" type="checkbox">
+                                            Mark all as complete
+                                        </label>
+                                        <ul id="todo-list" class="todos"></ul>
+                                    </section>
+                                    <footer class="dark-brown">
+                                        <div id="todo-count"></div>
+                                        <div class="help-block">Double-click to edit a todo.</div>
+                                    </footer>
+                                </fieldset>
+                            </form>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="span3">
+                <section class="widget large tabs">
+                    <header>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#stats" data-toggle="tab"><h4>Some Stats</h4></a>
+                            </li>
+                            <li>
+                                <a href="#report" class="light-blue" data-toggle="tab"><h4>Month Report</h4></a>
+                            </li>
+                        </ul>
+                    </header>
+                    <div class="body tab-content">
+                        <div id="stats" class="tab-pane active">
+                            <h4>Data Transfer</h4>
+                            <div id="data-chart" class="chart pie">
+                                <svg></svg>
+                            </div>
+                        </div>
+                        <div id="report" class="tab-pane">
+                            Some report
+                        </div>
+                    </div>
+                </section>
+            </div>
             <div class="span6">
-                <div class="row-fluid">
-                    <div class="span4">
-                        <div class="box red">
-                            <div class="value"><strong>$</strong> 900</div>
-                            <h4 class="description">Total Income</h4>
+                <section class="widget large light-blue">
+                    <header>
+                        <h3><i class="icon-group"></i> Chat</h3>
+                    </header>
+                    <div class="body">
+                        <div id="chat-app" class="chat">
+                            <div id="messages-view" class="messages">
+                                <div class="message from-me">
+                                    <div class="row-fluid">
+                                        <div class="span2">
+                                            <div class="name">
+                                                <a href="#">Vitaut</a>
+                                            </div>
+                                            <div class="time">
+                                                5:30AM
+                                            </div>
+                                        </div>
+                                        <div class="span10">
+                                            <div class="text">
+                                                <p>Hey, Jahaila! How is it going?<br/>
+                                                    I see you like to wake up at 5 am too</p>
+                                                <p>Are you here?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message">
+                                    <div class="row-fluid">
+                                        <div class="span2">
+                                            <div class="name">
+                                                <a href="#">Jahaila</a>
+                                            </div>
+                                            <div class="time">
+                                                5:32AM
+                                            </div>
+                                        </div>
+                                        <div class="span10">
+                                            <div class="text">
+                                                <p>Yeah, I am here<br/>
+                                                    Just trying this new daily routine</p>
+                                                <p>I don't know, but waking up at 5 am makes me really fresh!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message from-me">
+                                    <div class="row-fluid">
+                                        <div class="span2">
+                                            <div class="name">
+                                                <a href="#">Vitaut</a>
+                                            </div>
+                                            <div class="time">
+                                                5:32AM
+                                            </div>
+                                        </div>
+                                        <div class="span10">
+                                            <div class="text">
+                                                <p>Sounds great!<br/>
+                                                    It was hard for me to get used to it, but I made it!<br/>
+                                                    It's really worth it!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message">
+                                    <div class="row-fluid">
+                                        <div class="span2">
+                                            <div class="name">
+                                                <a href="#">Jahaila</a>
+                                            </div>
+                                            <div class="time">
+                                                5:33AM
+                                            </div>
+                                        </div>
+                                        <div class="span10">
+                                            <div class="text">
+                                                <p>Hope it will work out :)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="controls">
+                                <label>
+                                    <input id="new-message" type="text" class="new-message">
+                                        <span class="smile">
+                                            <i class="icon-plus"></i>
+                                        </span>
+                                </label>
+                            </footer>
                         </div>
                     </div>
-                    <div class="span4">
-                        <div class="box teal">
-                            <div class="value"><i class="icon-eye-open"></i> 530</div>
-                            <h4 class="description">New Visits</h4>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span6">
+                <section class="widget xlarge">
+                    <header>
+                        <h3><i class="icon-comments"></i> Latest Comments</h3>
+                    </header>
+                    <div class="body">
+                        <div class="comments">
+                            <ul class="media-list">
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle" src="img/2.jpg" alt="64x64" style="height: 64px;">
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="media-content"><span class="arrow"></span>
+                                            <h4 class="media-heading">Philip <a class="twitter" href="#">@okendokenn</a> </h4>
+                                            <p>Hey Maryna! I think this comments template looks really awesome! It has everything
+                                                good comments template should have, huh...?</p>
+                                            <div class="info">
+                                                <div class="actions pull-right">
+                                                    <ul class="pull-right">
+                                                        <li><a href="#"><i class="icon-ok"></i>Approve</a></li>
+                                                        <li><a href="#"><i class="icon-pencil"></i>Edit</a></li>
+                                                        <li><a href="#"><i class="icon-remove"></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="time">
+                                                    3 hours ago
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object img-circle" src="img/1.jpg" alt="64x64" style="width: 64px; height: 64px;" >
+                                            </a>
+                                            <div class="media-body">
+                                                <div class="media-content"><span class="arrow"></span>
+                                                    <h4 class="media-heading">Maryna</h4>
+                                                    <p>Yes! Look at this nested comments and right aligned content. So exciting!<br/>
+                                                    We definitely have to try it on our ownsite. What do you think?</p>
+                                                    <div class="info">
+                                                        <div class="actions pull-right">
+                                                            <ul class="pull-right">
+                                                                <li><a href="#"><i class="icon-ok"></i>Approve</a></li>
+                                                                <li><a href="#"><i class="icon-pencil"></i>Edit</a></li>
+                                                                <li><a href="#"><i class="icon-remove"></i>Delete</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="time">
+                                                            2 hours ago
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Nested media object -->
+                                        <div class="media">
+                                            <a class="pull-left" href="#">
+                                                <img class="media-object img-circle" src="img/4.jpg" alt="64x64" style="width: 64px; height: 64px;" >
+                                            </a>
+                                            <div class="media-body">
+                                                <div class="media-content"><span class="arrow"></span>
+                                                <h4 class="media-heading">Jahajla <a class="twitter" href="#">@jahajla</a></h4>
+                                                <p>How this template can help Belarus?</p>
+                                                    <div class="info">
+                                                        <div class="actions pull-right">
+                                                            <ul class="pull-right">
+                                                                <li><a href="#"><i class="icon-ok"></i>Approve</a></li>
+                                                                <li><a href="#"><i class="icon-pencil"></i>Edit</a></li>
+                                                                <li><a href="#"><i class="icon-remove"></i>Delete</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="time">
+                                                            2 hours ago
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object img-circle" src="img/3.jpg" alt="64x64" style="width: 64px; height: 64px;" >
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="media-content"><span class="arrow"></span>
+                                            <h4 class="media-heading">Vitaut</h4>
+                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
+                                            ante sollicitudin commodo.
+                                            <div class="info">
+                                                <div class="actions pull-right">
+                                                    <ul class="pull-right">
+                                                        <li><a href="#"><i class="icon-ok"></i>Approve</a></li>
+                                                        <li><a href="#"><i class="icon-pencil"></i>Edit</a></li>
+                                                        <li><a href="#"><i class="icon-remove"></i>Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="time">
+                                                    4 hours ago
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="span4">
-                        <div class="box green">
-                            <div class="value"><i class="icon-shopping-cart"></i> 20</div>
-                            <h4 class="description">New Orders</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="span4">
-                        <div class="box blue">
-                            <div class="value"><i class="icon-comments"></i> 323</div>
-                            <h4 class="description">Comments</h4>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="box dark-red">
-                            <div class="value"><i class="icon-group"></i> 61</div>
-                            <h4 class="description">New Users</h4>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="box orange">
-                            <div class="value"><i class="icon-thumbs-up"></i> 56</div>
-                            <h4 class="description">New Likes</h4>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
             <div class="span3">
                 <section class="widget tiny light-blue">
@@ -233,394 +591,6 @@
                                 </div>
                             </div>
                         </section>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span4">
-                <section class="widget large">
-                    <header>
-                        <h3><i class="icon-bar-chart"></i> Weekly Statistics</h3>
-                        <div class="actions">
-                            <a href="#"><i class="icon-chevron-down"></i></a>
-                        </div>
-                    </header>
-                    <div class="body">
-                        <div class="row-fluid chart-inline">
-                            <div class="span5">
-                                <div id="chart-visits">
-                                    <svg></svg>
-                                </div>
-                            </div>
-                            <div class="span4">
-                                <h4>Visits</h4>
-                            </div>
-                            <div class="span3">
-                                <div class="info">
-                                    712
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row-fluid chart-inline">
-                            <div class="span5">
-                                <div id="chart-unique">
-                                    <svg></svg>
-                                </div>
-                            </div>
-                            <div class="span4">
-                                <h4>Unique</h4>
-                            </div>
-                            <div class="span3">
-                                <div class="info">
-                                    530
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row-fluid chart-inline">
-                            <div class="span5">
-                                <div id="chart-pageviews">
-                                    <svg></svg>
-                                </div>
-                            </div>
-                            <div class="span4">
-                                <h4>Pageviews</h4>
-                            </div>
-                            <div class="span3">
-                                <div class="info">
-                                    3401
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row-fluid chart-inline">
-                            <div class="span5">
-                                <div id="chart-duration">
-                                    <svg></svg>
-                                </div>
-                            </div>
-                            <div class="span4">
-                                <h4>Avg. Visit Duration</h4>
-                            </div>
-                            <div class="span3">
-                                <div class="info">
-                                    2:47:11
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row-fluid chart-inline">
-                            <div class="span5">
-                                <div id="chart-bounce">
-                                    <svg></svg>
-                                </div>
-                            </div>
-                            <div class="span4">
-                                <h4>Bounce Rate</h4>
-                            </div>
-                            <div class="span3">
-                                <div class="info">
-                                    56%
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span8">
-                <section class="widget large">
-                    <header>
-                        <h3><i class="icon-globe"></i> Top four countries</h3>
-                        <div class="actions">
-                            <a href="#"><i class="icon-chevron-down"></i></a>
-                        </div>
-                    </header>
-                    <div id="overview-chart" class="body chart">
-                        <svg></svg>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span3">
-                <section class="widget large light-blue">
-                    <header>
-                        <h3><i class="icon-edit"></i> Notes</h3>
-                    </header>
-                    <div class="body">
-                        <div id="todo-app" class="todo-app">
-                            <form>
-                                <fieldset>
-                                    <label class="new-todo-label" for="new-todo">
-                                        <input id="new-todo" type="text" class="new-todo" placeholder="What needs to be done?">
-                                    </label>
-                                    <section id="todo-app-main">
-                                        <label for="toggle-all" class="mark-all">
-                                            <input id="toggle-all" type="checkbox">
-                                            Mark all as complete
-                                        </label>
-                                        <ul id="todo-list" class="todos"></ul>
-                                    </section>
-                                    <footer class="dark-brown">
-                                        <div id="todo-count"></div>
-                                        <div class="help-block">Double-click to edit a todo.</div>
-                                    </footer>
-                                </fieldset>
-                            </form>
-
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span3">
-                <section class="widget large tabs">
-                    <header>
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#stats" data-toggle="tab"><h4>Some Stats</h4></a>
-                            </li>
-                            <li>
-                                <a href="#report" data-toggle="tab"><h4>Month Report</h4></a>
-                            </li>
-                        </ul>
-                    </header>
-                    <div class="body tab-content">
-                        <div id="stats" class="tab-pane active">
-                            <h4>Data Transfer</h4>
-                            <div id="data-chart" class="chart pie">
-                                <svg></svg>
-                            </div>
-                        </div>
-                        <div id="report" class="tab-pane">
-                            Some report
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span6">
-                <section class="widget large light-blue">
-                    <header>
-                        <h3><i class="icon-group"></i> Chat</h3>
-                    </header>
-                    <div class="body">
-                        <div id="chat-app" class="chat">
-                            <div id="messages-view" class="messages">
-                                <div class="message from-me">
-                                    <div class="row-fluid">
-                                        <div class="span2">
-                                            <div class="name">
-                                            <a href="#">Vitaut</a>
-                                            </div>
-                                            <div class="time">
-                                                5:30AM
-                                            </div>
-                                        </div>
-                                        <div class="span10">
-                                            <div class="text">
-                                            <p>Hey, Jahaila! How is it going?<br/>
-                                                I see you like to wake up at 5 am too</p>
-                                                <p>Are you here?</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message">
-                                    <div class="row-fluid">
-                                        <div class="span2">
-                                            <div class="name">
-                                                <a href="#">Jahaila</a>
-                                            </div>
-                                            <div class="time">
-                                                5:32AM
-                                            </div>
-                                        </div>
-                                        <div class="span10">
-                                            <div class="text">
-                                                <p>Yeah, I am here<br/>
-                                                    Just trying this new daily routine</p>
-                                                <p>I don't know, but waking up at 5 am makes me really fresh!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message from-me">
-                                    <div class="row-fluid">
-                                        <div class="span2">
-                                            <div class="name">
-                                                <a href="#">Vitaut</a>
-                                            </div>
-                                            <div class="time">
-                                                5:32AM
-                                            </div>
-                                        </div>
-                                        <div class="span10">
-                                            <div class="text">
-                                                <p>Sounds great!<br/>
-                                                It was hard for me to get used to it, but I made it!<br/>
-                                                It's really worth it!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="message">
-                                    <div class="row-fluid">
-                                        <div class="span2">
-                                            <div class="name">
-                                                <a href="#">Jahaila</a>
-                                            </div>
-                                            <div class="time">
-                                                5:33AM
-                                            </div>
-                                        </div>
-                                        <div class="span10">
-                                            <div class="text">
-                                                <p>Hope it will work out :)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <footer class="controls">
-                                <label>
-                                    <input id="new-message" type="text" class="new-message">
-                                        <span class="smile">
-                                            <i class="icon-plus"></i>
-                                        </span>
-                                </label>
-                            </footer>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span7">
-                <section class="widget xlarge">
-                    <header>
-                        <h3><i class="icon-comments"></i> Latest Comments</h3>
-                    </header>
-                    <div class="body">
-                        <div class="comments">
-                            <ul class="media-list">
-                                <li class="media">
-                                    <a class="pull-left" href="#">
-                                        <img class="media-object img-circle" src="img/2.jpg" alt="64x64" style="height: 64px;">
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="media-content">
-                                            <h4 class="media-heading">Philip <a class="twitter" href="#">@okendokenn</a> </h4>
-                                            <p>Hey Maryna! I think this comments template looks really awesome! It has everything
-                                                good comments template should have, huh...?</p>
-                                            <div class="info">
-                                                <div class="actions pull-right">
-                                                    <ul class="pull-right">
-                                                        <li><a href="#"><i class="icon-share-alt"></i>Reply</a></li>
-                                                        <li><a href="#"><i class="icon-share"></i>Share</a></li>
-                                                        <li><a href="#"><i class="icon-star"></i>Favorite</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="time">
-                                                    2 hours ago
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <a class="pull-left" href="#">
-                                                <img class="media-object img-circle" src="img/1.jpg" alt="64x64" style="width: 64px; height: 64px;" >
-                                            </a>
-                                            <div class="media-body">
-                                                <div class="media-content">
-                                                    <h4 class="media-heading">Maryna</h4>
-                                                    <p>Yes! Look at this nested comments and right aligned content. So exciting!<br/>
-                                                    We definitely have to try it on our ownsite. What do you think?</p>
-                                                    <div class="info">
-                                                        <div class="actions pull-right">
-                                                            <ul class="pull-right">
-                                                                <li><a href="#"><i class="icon-share-alt"></i>Reply</a></li>
-                                                                <li><a href="#"><i class="icon-share"></i>Share</a></li>
-                                                                <li><a href="#"><i class="icon-star"></i>Favorite</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="time">
-                                                            2 hours ago
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="media">
-                                                    <a class="pull-left" href="#">
-                                                        <img class="media-object img-circle" src="img/2.jpg" alt="64x64" style="width: 64px; height: 64px;" >
-                                                    </a>
-                                                    <div class="media-body">
-                                                        <div class="media-content">
-                                                            <h4 class="media-heading">Philip <a class="twitter" href="#">@okendokenn</a></h4>
-                                                            <p>For sure!</p>
-                                                            <div class="info">
-                                                                <div class="actions pull-right">
-                                                                    <ul class="pull-right">
-                                                                        <li><a href="#"><i class="icon-share-alt"></i>Reply</a></li>
-                                                                        <li><a href="#"><i class="icon-share"></i>Share</a></li>
-                                                                        <li><a href="#"><i class="icon-star"></i>Favorite</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="time">
-                                                                    2 hours ago
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Nested media object -->
-                                        <div class="media">
-                                            <a class="pull-left" href="#">
-                                                <img class="media-object img-circle" src="img/4.jpg" alt="64x64" style="width: 64px; height: 64px;" >
-                                            </a>
-                                            <div class="media-body">
-                                                <div class="media-content">
-                                                <h4 class="media-heading">Jahajla <a class="twitter" href="#">@jahajla</a></h4>
-                                                <p>How this template can help Belarus?</p>
-                                                    <div class="info">
-                                                        <div class="actions pull-right">
-                                                            <ul class="pull-right">
-                                                                <li><a href="#"><i class="icon-share-alt"></i>Reply</a></li>
-                                                                <li><a href="#"><i class="icon-share"></i>Share</a></li>
-                                                                <li><a href="#"><i class="icon-star"></i>Favorite</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="time">
-                                                            2 hours ago
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <a class="pull-right" href="#">
-                                        <img class="media-object img-circle" src="img/3.jpg" alt="64x64" style="width: 64px; height: 64px;" >
-                                    </a>
-                                    <div class="media-body">
-                                        <div class="media-content">
-                                            <h4 class="media-heading">Vitaut</h4>
-                                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-                                            ante sollicitudin commodo.
-                                            <div class="info">
-                                                <div class="actions pull-right">
-                                                    <ul class="pull-right">
-                                                        <li><a href="#"><i class="icon-share-alt"></i>Reply</a></li>
-                                                        <li><a href="#"><i class="icon-share"></i>Share</a></li>
-                                                        <li><a href="#"><i class="icon-star"></i>Favorite</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="time">
-                                                    2 hours ago
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </section>
             </div>

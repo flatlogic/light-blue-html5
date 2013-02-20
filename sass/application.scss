@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600,700italic,400,700');
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600,700italic,400,700');
 @import url(../lib/nvd3/src/nv.d3.css);
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 
@@ -272,6 +272,14 @@
           @include background(linear-gradient($lightGray, darken($lightGray, 2%)));
           color: $textColor;
 
+          &.light-blue{
+            background-color: $lightBlue;
+          }
+
+          &.light-brown{
+            background-color: $lightBrown;
+          }
+
           &:hover{
             color: $red;
           }
@@ -422,6 +430,13 @@ form ul.parsley-error-list{
 
     .control{
       background: darken($lightGray, 2%);
+      &.light-brown{
+        background-color: $lightBrown;
+      }
+
+      &.light-blue{
+        background-color: $lightBlue;
+      }
       text-align: center;
       font-weight: 400;
       padding: 2%;
@@ -1258,9 +1273,38 @@ form ul.parsley-error-list{
   p{
     margin-bottom: 0;
   }
+
+  .time{
+    font-weight: 600;
+    color: rgba($textColor, .8);
+    font-size: 13px;
+  }
+
+  .pull-left{
+    margin-right: 0;
+  }
 }
 
-.media-content:hover .actions{
-  @include transition(opacity .2s);
-  opacity: 1;
+.media-content{
+  border-left: 4px solid $red;
+  padding-left: 10px;
+  position: relative;
+  margin-left: 10px;
+
+  &:hover .actions{
+    @include transition(opacity .2s);
+    opacity: 1;
+  }
+
+  .arrow{
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $red;
+  }
 }
