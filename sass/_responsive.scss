@@ -3,3 +3,36 @@
     background-position: 5px 10px;
   }
 }
+
+@media (max-width: 979px){
+  .box-row{
+    .span2{
+      width: 31.49171%;
+      *width: 31.43852%;
+
+      &:nth-child(3n + 1){
+        margin-left: 0;
+      }
+    }
+
+  }
+}
+
+@media (min-width: 979px) and (max-width: 1020px){
+  .box-row{
+    .span2{
+      width: 31.91489%;
+      *width: 31.8617%;
+
+      &:nth-child(3n + 1){
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .box{
+    font-size: 34px;
+  }
+}

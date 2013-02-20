@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2</title>
+    <style>
+        pre {
+            display: block;
+            padding: 9.5px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            line-height: 20px;
+            word-break: break-all;
+            word-wrap: break-word;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0,0,0,0.15);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+
+        .prettyprint {
+            padding: 8px;
+            background-color: #f7f7f9;
+            border: 1px solid #e1e1e8;
+        }
+
+        pre.prettyprint {
+            margin-bottom: 20px;
+        }
+
+        code {
+            padding: 2px 4px;
+            color: #d14;
+            background-color: #f7f7f9;
+            border: 1px solid #e1e1e8;
+        }
+
+        .post pre ul {
+            line-height: 0;
+            margin-bottom: -15px;
+            padding: 0;
+            padding: 9px 0 6px 25px;
+        }
+
+        pre ul.irb li, ul.bash li, ul.psql li {
+            list-style-type: none;
+            margin-left: -25px;
+        }
+
+        .post pre ul li{
+            line-height: 20px;
+        }
+
+        pre ul.bash li::before {
+            content: "$ \0020";
+        }
+        pre ul.irb li::before {
+            content: "> \0020";
+        }
+
+        .pln {
+            color: #48484c;
+        }
+
+        code, pre {
+            font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+            font-size:12px;
+        }
+
+        .pun, .opn, .clo {
+            color: #93a1a1;
+        }
+
+        .lit {
+            color: #195f91;
+        }
+
+        .str, .atv {
+            color: #D14;
+        }
+
+        .com {
+            color: #93a1a1;
+        }
+    </style>
+</head>
+<body>
+<h2>Інтэрпаляцыя радкоў і камэнтары</h2>
+<p>Вы можаце зьмяшчаць зьменныя ў радках:</p>
+<pre class="prettyprint"><ul class="irb"><span class="pln">
+  </span><li><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">21</span></li><span class="pln">
+  </span><li><span class="str">"I am #{age} years old."</span></li><span class="pln">
+</span></ul>
+</pre>
+<p>Зразумела? Усё што знаходзіцца ў <code>#{ }</code> выконваецца Ruby і зьмяшчаецца ў радок. Гэта завецца <strong>інтэрпаляцыя радкоў</strong>.</p>
+<p>І яшчэ лепей:</p>
+<pre class="prettyprint"><ul class="irb"><span class="pln">
+  </span><li><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">21</span></li><span class="pln">
+  </span><li><span class="pln">from_now </span><span class="pun">=</span><span class="pln"> </span><span class="lit">8</span></li><span class="pln">
+  </span><li><span class="str">"In #{from_now} years, I will be #{age + from_now} years old."</span></li><span class="pln">
+</span></ul>
+</pre>
+<p>Паспрабуйце даведацца колькі Вам будзе праз некалькі гадоў з дапамогай інтэрпаляцыі радкоў. Палічыце колькі Вам было некалькі гадоў таму.</p>
+<p>Калі сымбал <code>#</code> унутры радка - гэта інтэрпаляцыя радкоў. Тым ня менш, калі ён па-за радку - гэта значыць <strong>comment (камэнтар)</strong>,
+    і ўсё што знаходзіцца пасьля сымбала ігнаруецца.</p>
+<pre class="prettyprint"><ul class="irb"><span class="pln">
+  </span><li><span class="str">"do something"</span><span class="pln"> </span><span class="com"># here's a comment</span></li><span class="pln">
+  </span><li><span class="com"># here's another comment</span></li><span class="pln">
+  </span><li><span class="str">"do something else"</span></li><span class="pln">
+</span></ul>
+</pre>
+</body>
+</html>
