@@ -43,13 +43,16 @@
       line-height: 20px;
     }
 
-    &.active, &:hover{
-      i[class*=icon]{
-        color: $linkRed;
+    &.active, &:hover, &:focus{
+      a{
+        background: $lightGray;
       }
     }
 
     &.active a{
+      i[class*=icon]{
+        color: $linkRed;
+      }
       background: $lightGray;
       border-left: 5px solid #4daf7c;
       padding-left: 25px;
@@ -69,7 +72,6 @@
 }
 
 .content{
-  min-height: 900px;
   padding: 40px 3.3%;
 }
 
