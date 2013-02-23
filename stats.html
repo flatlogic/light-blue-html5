@@ -9,18 +9,21 @@
     <!--<script src="lib/zepto/zepto.min.js"> </script>-->
     <script src="js/bootstrap/bootstrap-tab.js"> </script>
     <script src="lib/parsley.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 </head>
-<body>
+<body class="background-two">
 <nav class="sidebar">
     <a class="brand" href=""><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
     <ul class="side-nav">
-        <li><a href="index.html"><i class="icon-desktop"></i> Dashboard</a></li>
-        <li><a href="#"><i class="icon-calendar"></i> Calendar</a></li>
-        <li class="active"><a href=""><i class="icon-bar-chart"></i> Statistics</a></li>
-        <li><a href="#"><i class="icon-star"></i> Favorites</a></li>
-        <li><a href="#"><i class="icon-tags"></i> Tags</a></li>
-        <li><a href="#"><i class="icon-map-marker"></i> Locations</a></li>
+        <li><a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a></li>
+        <li><a href="#"><i class="icon-calendar"></i> <span class="name">Calendar</span></a></li>
+        <li class="active" ><a href="stats.html"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a></li>
+        <li><a href="#"><i class="icon-star"></i> <span class="name">Favorites</span></a></li>
+        <li><a href="#"><i class="icon-tags"></i> <span class="name">Tags</span></a></li>
+        <li><a href="#"><i class="icon-map-marker"></i><span class="name">Locations</span></a></li>
     </ul>
 </nav>
 <div class="wrap">
@@ -29,23 +32,23 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                            bla
-                        </a>
-                        <div class="nav-collapse collapse navbar-responsive-collapse clearfix">
-                            <ul class="nav">
-                                <li class="active"><a href="#" title="Dashboard"><i class="icon-bar-chart icon-large"></i> Basic Stats</a></li>
-                                <li><a href="#" title="Dashboard"><i class="icon-magic icon-large"></i> Advanced Stats</a></li>
+                        <div class="clearfix">
+                            <ul class="nav title-nav hidden-phone">
+                                <li class="active"><a href="#" title="Dashboard"><i class="icon-desktop icon-large"></i> Dashboard</a></li>
                             </ul>
                             <ul class="nav right pull-right ">
                                 <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
                                 <li><a href="#" title="8 people needs help"><i class="icon-group"></i><i class="count">8</i></a></li>
                                 <li class="divider"></li>
-                                <li><a href="#" id="settings"
+                                <li class="hidden-phone">
+                                    <a href="#" id="settings"
                                        data-toggle="popover"
                                        data-placement="bottom"
-                                       title=""><i class="icon-cog"></i></a></li>
-                                <li>
+                                       title="">
+                                        <i class="icon-cog"></i>
+                                    </a>
+                                </li>
+                                <li class="hidden-phone">
                                     <a href="#" id="user"
                                        data-toggle="popover"
                                        data-placement="bottom"

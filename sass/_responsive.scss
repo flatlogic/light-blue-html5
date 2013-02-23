@@ -12,41 +12,47 @@
     }
   }
 
-  .content .row-fluid{
-    &.box-row{
-      .span2{
-        width: 31.49171%;
-        *width: 31.43852%;
-        margin-left: 2.76243%;
-        *margin-left: 2.70924%;
-        float: left;
+  .content{
+    padding: 40px 2.3% 40px 0;
 
-        &:nth-child(3n + 1){
-          margin-left: 0;
-        }
-      }
-    }
+    .row-fluid{
+      &.box-row{
+        margin-left: 2.3%;
+        width: 97.7%;
+        .span2{
+          width: 31.49171%;
+          *width: 31.43852%;
+          margin-left: 2.76243%;
+          *margin-left: 2.70924%;
+          float: left;
 
-    &:not(.box-row){
-
-      @for $i from 1 through 3 {
-        .span#{$i} {
-          width: 48.61878%;
-          *width: 48.56559%;
+          &:nth-child(3n + 1){
+            margin-left: 0;
+          }
         }
       }
 
-      @for $i from 4 through 12 {
-        .span#{$i} {
-          width: 100%;
-          *width: 99.94681%;
+      &:not(.box-row){
 
-          margin-left: 0;
+        [class*="span"]{
+          margin-left: 2.3%;
+
+          &:first-child{
+            margin-left: 2.3%;
+          }
         }
-      }
 
-      .first-in-line{
-        margin-left: 0;
+        @for $i from 1 through 3 {
+          .span#{$i} {
+            width: 47.7%
+          }
+        }
+
+        @for $i from 4 through 12 {
+          .span#{$i} {
+            width: 97.7%;
+          }
+        }
       }
     }
   }
@@ -62,6 +68,10 @@
         margin-left: 0;
       }
     }
+  }
+
+  .content{
+    padding: 40px 2.3%;
   }
 }
 
@@ -104,10 +114,6 @@
 
   .wrap{
     margin-left: 62px;
-  }
-
-  .content{
-    padding: 40px 2.3%;
   }
 
 }
