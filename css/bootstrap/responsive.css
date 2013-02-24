@@ -1,5 +1,5 @@
 /*
- * Bootstrap Responsive v2.2.2
+ * Bootstrap Responsive v2.3.0
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -11,7 +11,91 @@
   width: device-width;
 }
 
-/* line 7, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+/* line 15, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 23, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+.visible-phone {
+  display: none !important;
+}
+
+/* line 24, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+.visible-tablet {
+  display: none !important;
+}
+
+/* line 27, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+.hidden-desktop {
+  display: none !important;
+}
+
+/* line 28, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+.visible-desktop {
+  display: inherit !important;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 33, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .hidden-desktop {
+    display: inherit !important;
+  }
+
+  /* line 34, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .visible-desktop {
+    display: none !important;
+  }
+
+  /* line 36, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .visible-tablet {
+    display: inherit !important;
+  }
+
+  /* line 38, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 44, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .hidden-desktop {
+    display: inherit !important;
+  }
+
+  /* line 45, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .visible-desktop {
+    display: none !important;
+  }
+
+  /* line 47, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .visible-phone {
+    display: inherit !important;
+  }
+
+  /* line 49, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .hidden-phone {
+    display: none !important;
+  }
+}
+/* line 53, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+.visible-print {
+  display: none !important;
+}
+
+@media print {
+  /* line 57, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .visible-print {
+    display: inherit !important;
+  }
+
+  /* line 58, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+  .hidden-print {
+    display: none !important;
+  }
+}
+/* line 62, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -26,7 +110,7 @@
   clear: both;
 }
 
-/* line 12, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+/* line 67, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
 .hide-text {
   font: 0/0 a;
   color: transparent;
@@ -35,7 +119,7 @@
   border: 0;
 }
 
-/* line 17, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
+/* line 72, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
 .input-block-level {
   display: block;
   width: 100%;
@@ -45,76 +129,8 @@
   box-sizing: border-box;
 }
 
-/* line 23, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-
-/* line 31, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-.visible-phone {
-  display: none !important;
-}
-
-/* line 32, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-.visible-tablet {
-  display: none !important;
-}
-
-/* line 35, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-.hidden-desktop {
-  display: none !important;
-}
-
-/* line 36, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-.visible-desktop {
-  display: inherit !important;
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-  /* line 41, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .hidden-desktop {
-    display: inherit !important;
-  }
-
-  /* line 42, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .visible-desktop {
-    display: none !important;
-  }
-
-  /* line 44, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .visible-tablet {
-    display: inherit !important;
-  }
-
-  /* line 46, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .hidden-tablet {
-    display: none !important;
-  }
-}
-@media (max-width: 767px) {
-  /* line 52, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .hidden-desktop {
-    display: inherit !important;
-  }
-
-  /* line 53, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .visible-desktop {
-    display: none !important;
-  }
-
-  /* line 55, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .visible-phone {
-    display: inherit !important;
-  }
-
-  /* line 57, D:/projects/admin/sass/bootstrap/_responsive-utilities.scss */
-  .hidden-phone {
-    display: none !important;
-  }
-}
 @media (min-width: 1200px) {
-  /* line 550, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 556, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row {
     margin-left: -30px;
     *zoom: 1;
@@ -130,14 +146,14 @@
     clear: both;
   }
 
-  /* line 555, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 561, D:/projects/admin/sass/bootstrap/_mixins.scss */
   [class*="span"] {
     float: left;
     min-height: 1px;
     margin-left: 30px;
   }
 
-  /* line 565, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 571, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
@@ -145,127 +161,127 @@
     width: 1170px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span12 {
     width: 1170px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span11 {
     width: 1070px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span10 {
     width: 970px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span9 {
     width: 870px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span8 {
     width: 770px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span7 {
     width: 670px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span6 {
     width: 570px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span5 {
     width: 470px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span4 {
     width: 370px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span3 {
     width: 270px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span2 {
     width: 170px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span1 {
     width: 70px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset12 {
     margin-left: 1230px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset11 {
     margin-left: 1130px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset10 {
     margin-left: 1030px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset9 {
     margin-left: 930px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset8 {
     margin-left: 830px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset7 {
     margin-left: 730px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset6 {
     margin-left: 630px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset5 {
     margin-left: 530px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset4 {
     margin-left: 430px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset3 {
     margin-left: 330px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset2 {
     margin-left: 230px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset1 {
     margin-left: 130px;
   }
 
-  /* line 599, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 605, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid {
     width: 100%;
     *zoom: 1;
@@ -280,7 +296,7 @@
   .row-fluid:after {
     clear: both;
   }
-  /* line 602, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 608, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
@@ -292,285 +308,285 @@
     margin-left: 2.5641%;
     *margin-left: 2.51091%;
   }
-  /* line 608, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 614, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
-  /* line 613, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 619, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .controls-row [class*="span"] + [class*="span"] {
     margin-left: 2.5641%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span12 {
     width: 100%;
     *width: 99.94681%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span11 {
     width: 91.45299%;
     *width: 91.3998%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span10 {
     width: 82.90598%;
     *width: 82.85279%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span9 {
     width: 74.35897%;
     *width: 74.30578%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span8 {
     width: 65.81197%;
     *width: 65.75877%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span7 {
     width: 57.26496%;
     *width: 57.21177%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span6 {
     width: 48.71795%;
     *width: 48.66476%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span5 {
     width: 40.17094%;
     *width: 40.11775%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span4 {
     width: 31.62393%;
     *width: 31.57074%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span3 {
     width: 23.07692%;
     *width: 23.02373%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span2 {
     width: 14.52991%;
     *width: 14.47672%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span1 {
     width: 5.98291%;
     *width: 5.92971%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset12 {
     margin-left: 105.12821%;
     *margin-left: 105.02182%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset12:first-child {
     margin-left: 102.5641%;
     *margin-left: 102.45772%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset11 {
     margin-left: 96.5812%;
     *margin-left: 96.47481%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset11:first-child {
     margin-left: 94.01709%;
     *margin-left: 93.91071%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset10 {
     margin-left: 88.03419%;
     *margin-left: 87.92781%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset10:first-child {
     margin-left: 85.47009%;
     *margin-left: 85.3637%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset9 {
     margin-left: 79.48718%;
     *margin-left: 79.3808%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset9:first-child {
     margin-left: 76.92308%;
     *margin-left: 76.81669%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset8 {
     margin-left: 70.94017%;
     *margin-left: 70.83379%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset8:first-child {
     margin-left: 68.37607%;
     *margin-left: 68.26969%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset7 {
     margin-left: 62.39316%;
     *margin-left: 62.28678%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset7:first-child {
     margin-left: 59.82906%;
     *margin-left: 59.72268%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset6 {
     margin-left: 53.84615%;
     *margin-left: 53.73977%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset6:first-child {
     margin-left: 51.28205%;
     *margin-left: 51.17567%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset5 {
     margin-left: 45.29915%;
     *margin-left: 45.19276%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset5:first-child {
     margin-left: 42.73504%;
     *margin-left: 42.62866%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset4 {
     margin-left: 36.75214%;
     *margin-left: 36.64575%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset4:first-child {
     margin-left: 34.18803%;
     *margin-left: 34.08165%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset3 {
     margin-left: 28.20513%;
     *margin-left: 28.09875%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset3:first-child {
     margin-left: 25.64103%;
     *margin-left: 25.53464%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset2 {
     margin-left: 19.65812%;
     *margin-left: 19.55174%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset2:first-child {
     margin-left: 17.09402%;
     *margin-left: 16.98763%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset1 {
     margin-left: 11.11111%;
     *margin-left: 11.00473%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset1:first-child {
     margin-left: 8.54701%;
     *margin-left: 8.44063%;
   }
 
-  /* line 658, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 664, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input,
   textarea,
   .uneditable-input {
     margin-left: 0;
   }
 
-  /* line 663, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 669, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .controls-row [class*="span"] + [class*="span"] {
     margin-left: 30px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span12,
   textarea.span12,
   .uneditable-input.span12 {
     width: 1156px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span11,
   textarea.span11,
   .uneditable-input.span11 {
     width: 1056px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span10,
   textarea.span10,
   .uneditable-input.span10 {
     width: 956px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span9,
   textarea.span9,
   .uneditable-input.span9 {
     width: 856px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span8,
   textarea.span8,
   .uneditable-input.span8 {
     width: 756px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span7,
   textarea.span7,
   .uneditable-input.span7 {
     width: 656px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span6,
   textarea.span6,
   .uneditable-input.span6 {
     width: 556px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span5,
   textarea.span5,
   .uneditable-input.span5 {
     width: 456px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span4,
   textarea.span4,
   .uneditable-input.span4 {
     width: 356px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span3,
   textarea.span3,
   .uneditable-input.span3 {
     width: 256px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span2,
   textarea.span2,
   .uneditable-input.span2 {
     width: 156px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span1,
   textarea.span1,
   .uneditable-input.span1 {
@@ -593,7 +609,7 @@
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 550, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 556, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row {
     margin-left: -20px;
     *zoom: 1;
@@ -609,14 +625,14 @@
     clear: both;
   }
 
-  /* line 555, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 561, D:/projects/admin/sass/bootstrap/_mixins.scss */
   [class*="span"] {
     float: left;
     min-height: 1px;
     margin-left: 20px;
   }
 
-  /* line 565, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 571, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .container,
   .navbar-static-top .container,
   .navbar-fixed-top .container,
@@ -624,127 +640,127 @@
     width: 724px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span12 {
     width: 724px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span11 {
     width: 662px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span10 {
     width: 600px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span9 {
     width: 538px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span8 {
     width: 476px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span7 {
     width: 414px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span6 {
     width: 352px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span5 {
     width: 290px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span4 {
     width: 228px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span3 {
     width: 166px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span2 {
     width: 104px;
   }
 
-  /* line 576, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 582, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .span1 {
     width: 42px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset12 {
     margin-left: 764px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset11 {
     margin-left: 702px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset10 {
     margin-left: 640px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset9 {
     margin-left: 578px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset8 {
     margin-left: 516px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset7 {
     margin-left: 454px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset6 {
     margin-left: 392px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset5 {
     margin-left: 330px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset4 {
     margin-left: 268px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset3 {
     margin-left: 206px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset2 {
     margin-left: 144px;
   }
 
-  /* line 583, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 589, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .offset1 {
     margin-left: 82px;
   }
 
-  /* line 599, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 605, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid {
     width: 100%;
     *zoom: 1;
@@ -759,7 +775,7 @@
   .row-fluid:after {
     clear: both;
   }
-  /* line 602, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 608, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
@@ -771,285 +787,285 @@
     margin-left: 2.76243%;
     *margin-left: 2.70924%;
   }
-  /* line 608, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 614, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
-  /* line 613, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 619, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .controls-row [class*="span"] + [class*="span"] {
     margin-left: 2.76243%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span12 {
     width: 100%;
     *width: 99.94681%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span11 {
     width: 91.43646%;
     *width: 91.38327%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span10 {
     width: 82.87293%;
     *width: 82.81974%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span9 {
     width: 74.30939%;
     *width: 74.2562%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span8 {
     width: 65.74586%;
     *width: 65.69266%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span7 {
     width: 57.18232%;
     *width: 57.12913%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span6 {
     width: 48.61878%;
     *width: 48.56559%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span5 {
     width: 40.05525%;
     *width: 40.00206%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span4 {
     width: 31.49171%;
     *width: 31.43852%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span3 {
     width: 22.92818%;
     *width: 22.87499%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span2 {
     width: 14.36464%;
     *width: 14.31145%;
   }
-  /* line 625, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 631, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .span1 {
     width: 5.8011%;
     *width: 5.74791%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset12 {
     margin-left: 105.52486%;
     *margin-left: 105.41848%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset12:first-child {
     margin-left: 102.76243%;
     *margin-left: 102.65605%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset11 {
     margin-left: 96.96133%;
     *margin-left: 96.85494%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset11:first-child {
     margin-left: 94.1989%;
     *margin-left: 94.09251%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset10 {
     margin-left: 88.39779%;
     *margin-left: 88.29141%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset10:first-child {
     margin-left: 85.63536%;
     *margin-left: 85.52898%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset9 {
     margin-left: 79.83425%;
     *margin-left: 79.72787%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset9:first-child {
     margin-left: 77.07182%;
     *margin-left: 76.96544%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset8 {
     margin-left: 71.27072%;
     *margin-left: 71.16434%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset8:first-child {
     margin-left: 68.50829%;
     *margin-left: 68.4019%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset7 {
     margin-left: 62.70718%;
     *margin-left: 62.6008%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset7:first-child {
     margin-left: 59.94475%;
     *margin-left: 59.83837%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset6 {
     margin-left: 54.14365%;
     *margin-left: 54.03726%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset6:first-child {
     margin-left: 51.38122%;
     *margin-left: 51.27483%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset5 {
     margin-left: 45.58011%;
     *margin-left: 45.47373%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset5:first-child {
     margin-left: 42.81768%;
     *margin-left: 42.7113%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset4 {
     margin-left: 37.01657%;
     *margin-left: 36.91019%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset4:first-child {
     margin-left: 34.25414%;
     *margin-left: 34.14776%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset3 {
     margin-left: 28.45304%;
     *margin-left: 28.34666%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset3:first-child {
     margin-left: 25.69061%;
     *margin-left: 25.58422%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset2 {
     margin-left: 19.8895%;
     *margin-left: 19.78312%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset2:first-child {
     margin-left: 17.12707%;
     *margin-left: 17.02069%;
   }
-  /* line 632, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 638, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset1 {
     margin-left: 11.32597%;
     *margin-left: 11.21958%;
   }
-  /* line 633, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 639, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .row-fluid .offset1:first-child {
     margin-left: 8.56354%;
     *margin-left: 8.45715%;
   }
 
-  /* line 658, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 664, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input,
   textarea,
   .uneditable-input {
     margin-left: 0;
   }
 
-  /* line 663, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 669, D:/projects/admin/sass/bootstrap/_mixins.scss */
   .controls-row [class*="span"] + [class*="span"] {
     margin-left: 20px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span12,
   textarea.span12,
   .uneditable-input.span12 {
     width: 710px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span11,
   textarea.span11,
   .uneditable-input.span11 {
     width: 648px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span10,
   textarea.span10,
   .uneditable-input.span10 {
     width: 586px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span9,
   textarea.span9,
   .uneditable-input.span9 {
     width: 524px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span8,
   textarea.span8,
   .uneditable-input.span8 {
     width: 462px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span7,
   textarea.span7,
   .uneditable-input.span7 {
     width: 400px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span6,
   textarea.span6,
   .uneditable-input.span6 {
     width: 338px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span5,
   textarea.span5,
   .uneditable-input.span5 {
     width: 276px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span4,
   textarea.span4,
   .uneditable-input.span4 {
     width: 214px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span3,
   textarea.span3,
   .uneditable-input.span3 {
     width: 152px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span2,
   textarea.span2,
   .uneditable-input.span2 {
     width: 90px;
   }
 
-  /* line 675, D:/projects/admin/sass/bootstrap/_mixins.scss */
+  /* line 681, D:/projects/admin/sass/bootstrap/_mixins.scss */
   input.span1,
   textarea.span1,
   .uneditable-input.span1 {
@@ -1113,7 +1129,7 @@
   /* line 62, D:/projects/admin/sass/bootstrap/_responsive-767px-max.scss */
   [class*="span"],
   .uneditable-input[class*="span"],
-  .row-fluid [class*="span"] {
+  .row-fluid:not(.non-responsive) > [class*="span"] {
     float: none;
     display: block;
     width: 100%;
@@ -1354,31 +1370,35 @@
     margin-bottom: 2px;
   }
 
-  /* line 84, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 86, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a:hover,
-  .nav-collapse .dropdown-menu a:hover {
+  .nav-collapse .nav > li > a:focus,
+  .nav-collapse .dropdown-menu a:hover,
+  .nav-collapse .dropdown-menu a:focus {
     background-color: #f2f2f2;
   }
 
-  /* line 88, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 90, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .navbar-inverse .nav-collapse .nav > li > a,
   .navbar-inverse .nav-collapse .dropdown-menu a {
     color: #999999;
   }
 
-  /* line 92, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 96, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .navbar-inverse .nav-collapse .nav > li > a:hover,
-  .navbar-inverse .nav-collapse .dropdown-menu a:hover {
+  .navbar-inverse .nav-collapse .nav > li > a:focus,
+  .navbar-inverse .nav-collapse .dropdown-menu a:hover,
+  .navbar-inverse .nav-collapse .dropdown-menu a:focus {
     background-color: #111111;
   }
 
-  /* line 96, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 100, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse.in .btn-group {
     margin-top: 5px;
     padding: 0;
   }
 
-  /* line 101, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 105, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .dropdown-menu {
     position: static;
     top: auto;
@@ -1398,28 +1418,28 @@
     box-shadow: none;
   }
 
-  /* line 115, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 119, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .open > .dropdown-menu {
     display: block;
   }
 
-  /* line 120, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 124, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .dropdown-menu:before,
   .nav-collapse .dropdown-menu:after {
     display: none;
   }
 
-  /* line 123, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 127, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .dropdown-menu .divider {
     display: none;
   }
 
-  /* line 128, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 132, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > .dropdown-menu:before, .nav-collapse .nav > li > .dropdown-menu:after {
     display: none;
   }
 
-  /* line 134, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 138, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse .navbar-form,
   .nav-collapse .navbar-search {
     float: none;
@@ -1432,39 +1452,39 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   }
 
-  /* line 143, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 147, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .navbar-inverse .nav-collapse .navbar-form,
   .navbar-inverse .nav-collapse .navbar-search {
     border-top-color: #111111;
     border-bottom-color: #111111;
   }
 
-  /* line 148, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 152, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .navbar .nav-collapse .nav.pull-right {
     float: none;
     margin-left: 0;
   }
 
-  /* line 154, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 158, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse,
   .nav-collapse.collapse {
     overflow: hidden;
     height: 0;
   }
 
-  /* line 159, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 163, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .navbar .btn-navbar {
     display: block;
   }
 
-  /* line 165, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 169, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .navbar-static .navbar-inner {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
 @media (min-width: 980px) {
-  /* line 180, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
+  /* line 184, D:/projects/admin/sass/bootstrap/_responsive-navbar.scss */
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;

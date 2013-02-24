@@ -211,6 +211,10 @@
   &.tabs{
     padding-top: 0;
 
+    header{
+      height: 33px;
+    }
+
     .body h4{
       margin: 0 0 10px 0;
       line-height: 1em;
@@ -416,7 +420,7 @@ form ul.parsley-error-list{
       }
       text-align: center;
       font-weight: 400;
-      padding: 2%;
+      padding: 3px 2%;
       color: lighten($textColor, 10%);
       width: 29%;
       cursor: pointer;
@@ -467,17 +471,35 @@ form ul.parsley-error-list{
     }
   }
   .controls .control{
-    padding-top: 1%;
-    padding-bottom: 1%;
 
     h4{
       font-size: 13px;
-      margin-bottom: 5px;
+      margin-bottom: 3px;
     }
 
     p{
       font-size: 20px;
       margin-bottom: 0;
+    }
+  }
+}
+
+.widget.xlarge .pie.chart{
+
+  .total{
+    h4{
+      //font-size: 13px;
+    }
+    h3{
+      //font-size: 32px;
+    }
+  }
+  .controls .control{
+    padding: 5px 2%;
+
+    p{
+      font-size: 28px;
+      margin-bottom: 11px;
     }
   }
 }
@@ -1237,7 +1259,7 @@ form ul.parsley-error-list{
 .media{
   .actions{
     position: static;
-    margin-right: 40px;
+    margin-right: 10px;
     opacity: 0;
     @include transition(opacity .2s);
   }

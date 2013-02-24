@@ -1,10 +1,50 @@
+@media (max-width: 480px){
+  .content > .row-fluid.box-row .span2{
+    width: 48.61878%;
+    *width: 48.56559%;
+    margin-left: 2.76243%;
+    *margin-left: 2.70924%;
+    float: left;
+
+    &:nth-child(odd){
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+  .content > .row-fluid.box-row .span2{
+    width: 31.49171%;
+    *width: 31.43852%;
+    margin-left: 2.76243%;
+    *margin-left: 2.70924%;
+    float: left;
+
+    &:nth-child(3n + 1){
+      margin-left: 0;
+    }
+  }
+}
+
 @media (max-width: 767px){
   input[type=search], input.search {
     background-position: 5px 10px;
   }
+
+  .sidebar{
+    display: none;
+  }
+
+  .sidebar + .wrap{
+    margin-left: 0;
+  }
+
+  .overview-chart .nv-controlsWrap{
+    display: none;
+  }
 }
 
-@media (max-width: 979px){
+@media (min-width: 768px) and (max-width: 979px){
   .page-header .title-nav > li{
     & > a, & > a:visited{
       font-size: 16px;
@@ -15,7 +55,7 @@
   .content{
     padding: 40px 2.3% 40px 0;
 
-    .row-fluid{
+    & > .row-fluid{
       &.box-row{
         margin-left: 2.3%;
         width: 97.7%;
@@ -34,7 +74,7 @@
 
       &:not(.box-row){
 
-        [class*="span"]{
+        & > [class*="span"]{
           margin-left: 2.3%;
 
           &:first-child{
@@ -44,13 +84,17 @@
 
         @for $i from 1 through 3 {
           .span#{$i} {
-            width: 47.7%
+            width: 47.7%;
           }
         }
 
         @for $i from 4 through 12 {
-          .span#{$i} {
+          & > .span#{$i} {
             width: 97.7%;
+
+            &.half-width-responsive{
+              width: 47.7%;
+            }
           }
         }
       }
@@ -58,7 +102,7 @@
   }
 }
 
-@media (min-width: 979px) and (max-width: 1020px) {
+@media (min-width: 980px) and (max-width: 1019px) {
   .box-row{
     .span2{
       width: 31.91489%;
@@ -75,7 +119,14 @@
   }
 }
 
-@media (max-width: 1020px){
+@media (max-width: 1019px) {
+  .comments{
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
 
   .sidebar{
     width: 52px;
@@ -116,9 +167,6 @@
     margin-left: 62px;
   }
 
-}
-
-@media (max-width: 1200px) {
   .box{
     font-size: 34px;
   }
