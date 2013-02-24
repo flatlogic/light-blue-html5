@@ -1,5 +1,5 @@
 @media (max-width: 480px){
-  .content > .row-fluid.box-row .span2{
+  .content > .row-fluid.box-row > .span2{
     width: 48.61878%;
     *width: 48.56559%;
     margin-left: 2.76243%;
@@ -13,7 +13,7 @@
 }
 
 @media (min-width: 481px) and (max-width: 767px){
-  .content > .row-fluid.box-row .span2{
+  .content > .row-fluid.box-row > .span2{
     width: 31.49171%;
     *width: 31.43852%;
     margin-left: 2.76243%;
@@ -59,7 +59,7 @@
       &.box-row{
         margin-left: 2.3%;
         width: 97.7%;
-        .span2{
+        & > .span2{
           width: 31.49171%;
           *width: 31.43852%;
           margin-left: 2.76243%;
@@ -83,7 +83,7 @@
         }
 
         @for $i from 1 through 3 {
-          .span#{$i} {
+          & > .span#{$i} {
             width: 47.7%;
           }
         }
@@ -103,8 +103,8 @@
 }
 
 @media (min-width: 980px) and (max-width: 1019px) {
-  .box-row{
-    .span2{
+  .row-fluid.box-row{
+    & > .span2{
       width: 31.91489%;
       *width: 31.8617%;
 
@@ -169,5 +169,99 @@
 
   .box{
     font-size: 34px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .box{
+
+  }
+
+  .widget{
+
+    &.large{
+      height: 400px;
+
+      .body{
+        height: 365px;
+
+        .chart{
+          height: 288px;
+        }
+      }
+
+      .pie.chart .total{
+        h4{
+          font-size: 19px;
+        }
+        h3{
+          font-size: 40px;
+        }
+      }
+    }
+
+    &.xlarge{
+      height: 500px;
+
+      .body{
+        height: 465px;
+
+        .chart{
+          height: 383px;
+        }
+      }
+
+      .pie.chart .total{
+        h4{
+          font-size: 19px;
+        }
+        h3{
+          font-size: 40px;
+        }
+      }
+    }
+
+    &.tiny{
+      height: 188px;
+    }
+
+    &.tabs{
+
+      &.large{
+        height: 415px; //+15px
+        .body .chart{
+          height: 267px;
+        }
+      }
+
+      &.xlarge{
+        height: 515px; //+15px
+        .body .chart{
+          height: 357px;
+        }
+      }
+    }
+
+  }
+
+  .widget.large, .widget.xlarge{
+    .pie.chart .controls .control h4{
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .pie.chart .controls .control p{
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .pie.chart .total h5.visits{
+    font-size: 34px;
+  }
+
+  .chart-inline{
+    height: 58px;
+    margin-bottom: 18px;
   }
 }

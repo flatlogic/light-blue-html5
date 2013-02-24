@@ -30,14 +30,14 @@ body{
       image-url("bgnoise_lg_dark.png")
   );
   background: -webkit-radial-gradient(
-      80% 0, farthest-corner ellipse,
+      80% 0, farthest-side ellipse,
       rgba(194, 123, 108, 0.94),
       rgba(238, 231, 189, 0.94),
       rgba(137, 111, 82, 0.94)
     ),
     url("../img/bgnoise_lg_dark.png");
   background: -moz-radial-gradient(
-      80% 0, farthest-corner ellipse,
+      80% 0, farthest-side ellipse,
       rgba(194, 123, 108, 0.94),
       rgba(238, 231, 189, 0.94),
       rgba(137, 111, 82, 0.94)
@@ -57,14 +57,14 @@ body{
         image-url("bgnoise_lg_dark.png")
     );
     background: -webkit-radial-gradient(
-        10% 10%, farthest-corner ellipse,
+        10% 10%, farthest-side ellipse,
         rgba(41, 57, 64, 0.95),
         rgba(148, 206, 184, 0.95),
         rgba(227, 222, 157, 0.95)
     ),
     url("../img/bgnoise_lg_dark.png");
     background: -moz-radial-gradient(
-        10% 10%, farthest-corner ellipse,
+        10% 10%, farthest-side ellipse,
         rgba(41, 57, 64, 0.95),
         rgba(148, 206, 184, 0.95),
         rgba(227, 222, 157, 0.95)
@@ -83,6 +83,7 @@ body{
 
 body {
   font-weight: 300;
+  font-size: 15px;
 }
 h1 {
   font-size: 50px;
@@ -96,7 +97,7 @@ h3{
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 15px;
 }
 h5,
 h6 {

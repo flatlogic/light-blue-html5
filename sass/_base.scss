@@ -312,21 +312,7 @@
   }
 
   &.dark-blue{
-    @include background(radial-gradient(
-        farthest-side ellipse,
-        rgba(66, 109, 115, 0.92),
-        rgba(59, 98, 105, 0.93)
-    ));
-    background: -webkit-radial-gradient(
-        farthest-corner ellipse,
-        rgba(66, 109, 115, 0.92),
-        rgba(59, 98, 105, 0.93)
-    );
-    background: -moz-radial-gradient(
-        farthest-corner ellipse,
-        rgba(66, 109, 115, 0.92),0
-      rgba(59, 98, 105, 0.93)
-    );
+    background: $backgroundBlue;
   }
 
   &.dark-brown{
@@ -408,54 +394,54 @@ form ul.parsley-error-list{
   .controls{
     margin-top: 30px;
     width: 100%;
+  }
 
-    .control{
-      background: darken($lightGray, 2%);
-      &.light-brown{
-        background-color: $lightBrown;
-      }
+  .control{
+    background: darken($lightGray, 2%);
+    &.light-brown{
+      background-color: $lightBrown;
+    }
 
-      &.light-blue{
-        background-color: $lightBlue;
-      }
-      text-align: center;
+    &.light-blue{
+      background-color: $lightBlue;
+    }
+    text-align: center;
+    font-weight: 400;
+    padding: 3px 2%;
+    color: lighten($textColor, 10%);
+    width: 29%;
+    cursor: pointer;
+
+    &.one-fourth{
+      width: 20.625%;
+    }
+
+    margin-left: 0.5%;
+
+    float:left;
+
+    &:first-child{
+      border-bottom-left-radius: 2px;
+      margin-left: 0;
+    }
+
+    &:last-child{
+      border-bottom-right-radius: 2px;
+    }
+
+    &.disabled{
+      border-top: 3px solid transparent !important;
+    }
+
+    h4{
+      text-transform: lowercase;
+      font-size: 15px;
       font-weight: 400;
-      padding: 3px 2%;
-      color: lighten($textColor, 10%);
-      width: 29%;
-      cursor: pointer;
+    }
 
-      &.one-fourth{
-        width: 20.625%;
-      }
-
-      margin-left: 0.5%;
-
-      float:left;
-
-      &:first-child{
-        border-bottom-left-radius: 2px;
-        margin-left: 0;
-      }
-
-      &:last-child{
-        border-bottom-right-radius: 2px;
-      }
-
-      &.disabled{
-        border-top: 3px solid transparent !important;
-      }
-
-      h4{
-        text-transform: lowercase;
-        font-size: 15px;
-        font-weight: 400;
-      }
-
-      p{
-        font-size: 24px;
-        font-weight: 700;
-      }
+    p{
+      font-size: 24px;
+      font-weight: 700;
     }
   }
 }
