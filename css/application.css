@@ -2956,6 +2956,12 @@ input[type="button"].btn-block {
 }
 
 /* line 145, D:/projects/admin/sass/bootstrap/_buttons.scss */
+.btn {
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+}
+
+/* line 150, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -2984,7 +2990,7 @@ input[type="button"].btn-block {
   background-color: #003399 \9;
 }
 
-/* line 149, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 154, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-warning {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3013,7 +3019,7 @@ input[type="button"].btn-block {
   background-color: #e4b931 \9;
 }
 
-/* line 153, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 158, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-danger {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3042,7 +3048,7 @@ input[type="button"].btn-block {
   background-color: #942a25 \9;
 }
 
-/* line 157, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 162, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-success {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3071,7 +3077,7 @@ input[type="button"].btn-block {
   background-color: #408140 \9;
 }
 
-/* line 161, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 166, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-info {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3100,7 +3106,7 @@ input[type="button"].btn-block {
   background-color: #24748c \9;
 }
 
-/* line 165, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 170, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-inverse {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3129,38 +3135,38 @@ input[type="button"].btn-block {
   background-color: #090909 \9;
 }
 
-/* line 174, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 179, D:/projects/admin/sass/bootstrap/_buttons.scss */
 button.btn,
 input[type="submit"].btn {
   *padding-top: 3px;
   *padding-bottom: 3px;
 }
-/* line 177, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 182, D:/projects/admin/sass/bootstrap/_buttons.scss */
 button.btn::-moz-focus-inner,
 input[type="submit"].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
-/* line 186, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 191, D:/projects/admin/sass/bootstrap/_buttons.scss */
 button.btn.btn-large,
 input[type="submit"].btn.btn-large {
   *padding-top: 7px;
   *padding-bottom: 7px;
 }
-/* line 190, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 195, D:/projects/admin/sass/bootstrap/_buttons.scss */
 button.btn.btn-small,
 input[type="submit"].btn.btn-small {
   *padding-top: 3px;
   *padding-bottom: 3px;
 }
-/* line 194, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 199, D:/projects/admin/sass/bootstrap/_buttons.scss */
 button.btn.btn-mini,
 input[type="submit"].btn.btn-mini {
   *padding-top: 1px;
   *padding-bottom: 1px;
 }
 
-/* line 207, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 212, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-link,
 .btn-link:active,
 .btn-link[disabled] {
@@ -3171,7 +3177,7 @@ input[type="submit"].btn.btn-mini {
   box-shadow: none;
 }
 
-/* line 212, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 217, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-link {
   border-color: transparent;
   cursor: pointer;
@@ -3181,7 +3187,7 @@ input[type="submit"].btn.btn-mini {
   border-radius: 0;
 }
 
-/* line 219, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 224, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-link:hover,
 .btn-link:focus {
   color: #005580;
@@ -3189,7 +3195,7 @@ input[type="submit"].btn.btn-mini {
   background-color: transparent;
 }
 
-/* line 225, D:/projects/admin/sass/bootstrap/_buttons.scss */
+/* line 230, D:/projects/admin/sass/bootstrap/_buttons.scss */
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus {
   color: #333333;
