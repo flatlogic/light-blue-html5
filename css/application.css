@@ -8214,6 +8214,7 @@ ul li, ol li {
 /* line 4, D:/projects/admin/sass/_scrollbar.scss */
 html:not(.osx) ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 /* line 8, D:/projects/admin/sass/_scrollbar.scss */
@@ -8224,6 +8225,12 @@ html:not(.osx) ::-webkit-scrollbar-track-piece {
 
 /* line 13, D:/projects/admin/sass/_scrollbar.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
+  opacity: 0.4;
+  background-color: #da3712;
+}
+
+/* line 18, D:/projects/admin/sass/_scrollbar.scss */
+html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   opacity: 0.4;
   background-color: #da3712;
 }
@@ -9687,7 +9694,7 @@ form ul.parsley-error-list li {
   }
 
   /* line 42, D:/projects/admin/sass/_responsive.scss */
-  .overview-chart .nv-controlsWrap {
+  .nv-controlsWrap {
     display: none;
   }
 }
