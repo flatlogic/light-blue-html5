@@ -28,6 +28,17 @@
     display: block;
     margin-bottom: 35px;
   }
+
+  .settings{
+    margin-top: 20px;
+    text-align: center;
+
+    .btn-group .btn{
+      &:not(.active){
+        opacity: .7;
+      }
+    }
+  }
 }
 
 .side-nav{
@@ -49,20 +60,25 @@
       }
     }
 
-    &.active a{
-      i[class*=icon]{
-        color: $linkRed;
-      }
-      background: $lightGray;
-      border-left: 5px solid #4daf7c;
-      padding-left: 25px;
-    }
-
     a{
       color: inherit;
       text-decoration: none;
       display: block;
       padding: 18px 30px;
+    }
+
+    $i: 1;
+    @each $color in $colors{
+
+      &.#{nth($color_names, $i)}{
+        &.active a{
+          color: #{$color};
+        }
+        &:hover a {
+          color: #{$color};
+        }
+      }
+      $i: $i + 1;
     }
   }
 }
@@ -265,15 +281,11 @@
           &:hover{
             color: $red;
           }
-          h4{
-            font-size: 14px;
-            line-height: 15px;
-          }
         }
 
         &.active > a{
-          border-top: 3px solid $green;
-          padding-top: 5px;
+          //border-top: 3px solid $green;
+          //padding-top: 5px;
           background: #fff;
           color: $textColor;
         }
@@ -595,17 +607,6 @@ form ul.parsley-error-list{
     .btn-group{
       margin-top: 0;
       float: right;
-    }
-
-    .btn{
-      background: none;
-      color: white;
-      text-shadow: none;
-      @include box-shadow(none);
-
-      &.active{
-        background: rgba(darken($textColor, 20%), .35);
-      }
     }
   }
 }
@@ -970,7 +971,7 @@ form ul.parsley-error-list{
     height: 30px;
     left: -15px;
     text-align: center;
-    background: #6091b0;
+    background: $blue;
     padding-top: 10px;
 
     a {
@@ -999,7 +1000,7 @@ form ul.parsley-error-list{
   .side-nav li{
     &.active a{
       border-left: none;
-      border-right: 5px solid #4daf7c;
+      border-right: 5px solid $green;
       padding-left: 30px;
       padding-right: 25px;
     }
@@ -1292,5 +1293,64 @@ form ul.parsley-error-list{
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
     border-right: 4px solid $red;
+  }
+}
+
+.btn-group .btn{
+  &:first-child{
+    @include border-radius($button-border-radius 0 0 $button-border-radius);
+  }
+  &:last-child{
+    @include border-radius(0 $button-border-radius $button-border-radius 0);
+  }
+}
+
+.btn{
+  background: lighten($textColor, 5%);
+  color: #ffffff;
+  text-shadow: none;
+
+  @include box-shadow(none);
+
+  @include border-radius($button-border-radius);
+
+  &.btn-success{
+    background: $green;
+  }
+
+  &.btn-primary{
+    background: $blue;
+  }
+
+  &.btn-warning{
+    background: $orange;
+  }
+
+  &.active{
+    color: #ffffff;
+    background: lighten($textColor, 5%);
+    @include box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.25));
+  }
+
+  &:hover{
+    background: lighten($textColor, 5%);
+    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.25));
+    color: #ffffff;
+  }
+}
+
+.btn-transparent{
+  background: rgba(darken($textColor, 20%), .4);
+  color: white;
+  text-shadow: none;
+  @include box-shadow(none);
+
+  &:hover{
+    background: rgba(darken($textColor, 20%), .5);
+    color: #ffffff;
+  }
+
+  &.active{
+    background: rgba(darken($textColor, 20%), .9);
   }
 }

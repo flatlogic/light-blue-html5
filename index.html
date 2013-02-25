@@ -18,18 +18,19 @@
     <a class="brand" href=""><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
     <ul class="side-nav">
-        <li class="active"><a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a></li>
-        <li><a href="#"><i class="icon-calendar"></i> <span class="name">Calendar</span></a></li>
-        <li><a href="stats.html"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a></li>
-        <li><a href="#"><i class="icon-star"></i> <span class="name">Favorites</span></a></li>
-        <li><a href="#"><i class="icon-tags"></i> <span class="name">Tags</span></a></li>
-        <li><a href="#"><i class="icon-map-marker"></i><span class="name">Locations</span></a></li>
+        <li class="active green"><a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a></li>
+        <li class="teal"><a href="stats.html"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a></li>
+        <li class="blue"><a href="forms.html"><i class="icon-edit"></i> <span class="name">Forms</span></a></li>
+        <li class="brown"><a href="#"><i class="icon-magic"></i> <span class="name">User Interface</span></a></li>
+        <li class="dark-red"><a href="#"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a></li>
+        <li class="red"><a href="#"><i class="icon-table"></i><span class="name">Tables</span></a></li>
+        <li class="orange"><a href="#"><i class="icon-columns"></i><span class="name">Grid</span></a></li>
+        <li class="lime"><a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a></li>
     </ul>
     <div class="settings">
         <div class="btn-group" data-toggle="buttons-radio">
-            <button type="button" class="btn btn-primary">Left</button>
-            <button type="button" class="btn btn-primary">Middle</button>
-            <button type="button" class="btn btn-primary">Right</button>
+            <button type="button" class="btn btn-small active">Auto</button>
+            <button type="button" class="btn btn-small">Icons</button>
         </div>
     </div>
 </nav>
@@ -665,16 +666,16 @@
         Sidebar on the
         <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         Background
         <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
             <% two = background == 'two'%>
-            <button type="button" data-value="one" class="btn <%= two? '' : 'active' %>">One</button>
-            <button type="button" data-value="two" class="btn <%= two? 'active' : '' %>">Two</button>
+            <button type="button" data-value="one" class="btn btn-transparent <%= two? '' : 'active' %>">One</button>
+            <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
         </div>
     </div>
 </script>
