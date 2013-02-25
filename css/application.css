@@ -8395,7 +8395,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
 /* line 130, C:/projects/admin/sass/_base.scss */
 .box .description {
   color: inherit;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   text-align: center;
 }
@@ -9894,84 +9894,94 @@ form ul.parsley-error-list li {
   }
 }
 @media (min-width: 1441px) {
-  /* line 182, C:/projects/admin/sass/_responsive.scss */
+  /* line 176, C:/projects/admin/sass/_responsive.scss */
+  .box {
+    font-size: 50px;
+    line-height: 1.2em;
+  }
+  /* line 180, C:/projects/admin/sass/_responsive.scss */
+  .box .description {
+    font-size: 16px;
+  }
+
+  /* line 187, C:/projects/admin/sass/_responsive.scss */
   .widget.large {
     height: 400px;
   }
-  /* line 185, C:/projects/admin/sass/_responsive.scss */
+  /* line 190, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body {
     height: 365px;
   }
-  /* line 188, C:/projects/admin/sass/_responsive.scss */
+  /* line 193, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body .chart {
     height: 288px;
   }
-  /* line 194, C:/projects/admin/sass/_responsive.scss */
+  /* line 199, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .total h4 {
     font-size: 19px;
   }
-  /* line 197, C:/projects/admin/sass/_responsive.scss */
+  /* line 202, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .total h3 {
     font-size: 40px;
   }
-  /* line 203, C:/projects/admin/sass/_responsive.scss */
+  /* line 208, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge {
     height: 500px;
   }
-  /* line 206, C:/projects/admin/sass/_responsive.scss */
+  /* line 211, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body {
     height: 465px;
   }
-  /* line 209, C:/projects/admin/sass/_responsive.scss */
+  /* line 214, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body .chart {
     height: 383px;
   }
-  /* line 215, C:/projects/admin/sass/_responsive.scss */
+  /* line 220, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .pie.chart .total h4 {
     font-size: 19px;
   }
-  /* line 218, C:/projects/admin/sass/_responsive.scss */
+  /* line 223, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .pie.chart .total h3 {
     font-size: 40px;
   }
-  /* line 224, C:/projects/admin/sass/_responsive.scss */
+  /* line 229, C:/projects/admin/sass/_responsive.scss */
   .widget.tiny {
     height: 188px;
   }
-  /* line 230, C:/projects/admin/sass/_responsive.scss */
+  /* line 235, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large {
     height: 415px;
   }
-  /* line 232, C:/projects/admin/sass/_responsive.scss */
+  /* line 237, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large .body .chart {
     height: 267px;
   }
-  /* line 237, C:/projects/admin/sass/_responsive.scss */
+  /* line 242, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge {
     height: 515px;
   }
-  /* line 239, C:/projects/admin/sass/_responsive.scss */
+  /* line 244, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge .body .chart {
     height: 357px;
   }
 
-  /* line 248, C:/projects/admin/sass/_responsive.scss */
+  /* line 253, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .controls .control h4, .widget.xlarge .pie.chart .controls .control h4 {
     font-size: 17px;
     margin-bottom: 7px;
   }
-  /* line 253, C:/projects/admin/sass/_responsive.scss */
+  /* line 258, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .controls .control p, .widget.xlarge .pie.chart .controls .control p {
     font-size: 24px;
     margin-bottom: 5px;
   }
 
-  /* line 259, C:/projects/admin/sass/_responsive.scss */
+  /* line 264, C:/projects/admin/sass/_responsive.scss */
   .pie.chart .total h5.visits {
     font-size: 34px;
   }
 
-  /* line 263, C:/projects/admin/sass/_responsive.scss */
+  /* line 268, C:/projects/admin/sass/_responsive.scss */
   .chart-inline {
     height: 58px;
     margin-bottom: 18px;
