@@ -31,12 +31,55 @@
     background-position: 5px 10px;
   }
 
-  .sidebar{
+  .sidebar, .sidebar-on-right, .sidebar-icons{
     display: none;
+
+    &.in{
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      margin: 85px 5%;
+      width: 90%;
+
+      h2{
+        display: block;
+      }
+
+      .side-nav li{
+        a{
+          font-size: 20px;
+          line-height: 30px;
+          padding: 13px 30px;
+          font-weight: 400;
+          text-align: left;
+
+          i[class*=icon]{
+            float: left;
+            line-height: 30px;
+            padding-top: 1px;
+          }
+        }
+
+        .name{
+          margin-left: 10px;
+          display: inline-block;
+        }
+      }
+
+      .settings{
+        display: none;
+      }
+    }
+
+    &.in + .wrap .content{
+      margin-top: 620px;
+    }
   }
 
-  .sidebar + .wrap{
+  .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap{
     margin-left: 0;
+    margin-right: 0;
   }
 
   .nv-controlsWrap{

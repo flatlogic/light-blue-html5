@@ -603,7 +603,7 @@ form ul.parsley-error-list{
         padding: 0 10px;
         @include transition(all 0.1s);
 
-        &:hover{
+        &:hover, &:focus{
           color: white;
         }
       }
@@ -683,6 +683,11 @@ form ul.parsley-error-list{
 
 .navbar{
   margin: 0;
+
+  .btn-navbar {
+    border: none;
+    @include box-shadow(none);
+  }
 }
 
 .navbar-inner{

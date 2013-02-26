@@ -14,7 +14,7 @@
     <meta name="author" content="">
 </head>
 <body class="background-two">
-<nav class="sidebar">
+<nav class="sidebar nav-collapse collapse">
     <a class="brand" href=""><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
     <ul class="side-nav">
@@ -43,9 +43,6 @@
                         <div class="clearfix">
                             <ul class="nav title-nav hidden-phone">
                                 <li class="active"><a href="#" title="Dashboard"><i class="icon-desktop icon-large"></i> Dashboard</a></li>
-                                <li><a href="#" title="Dashboard"><i class="icon-double-angle-left icon-large"></i> Test</a></li>
-                                <li><a href="#" title="Dashboard"><i class="icon-leaf icon-large"></i> Koni</a></li>
-                                <li><a href="#" title="Dashboard"><i class="icon-plus icon-large"></i> Dzies'ci</a></li>
                             </ul>
                             <ul class="nav right pull-right ">
                                 <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
@@ -67,7 +64,16 @@
                                         <i class="icon-user"></i>
                                     </a>
                                 </li>
-                                <li><a href="login.html"><i class="icon-signout"></i></a></li>
+                                <li class="visible-phone">
+                                    <a href="#"
+                                       class="btn-navbar"
+                                       data-toggle="collapse"
+                                       data-target=".sidebar"
+                                       title="">
+                                        <i class="icon-reorder"></i>
+                                    </a>
+                                </li>
+                                <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
                             </ul>
                             <div class="notifications pull-right">
                                 <div class="alert">
@@ -75,9 +81,9 @@
                                     <i class="icon-info-sign"></i> Wake up Vitaut! At 5pm you have a <a href="#">meeting</a> with Jahajla
                                 </div>
                             </div>
-                        </div><!-- /.nav-collapse -->
+                        </div>
                     </div>
-                </div><!-- /navbar-inner -->
+                </div>
             </div>
         </header>
     </div>
