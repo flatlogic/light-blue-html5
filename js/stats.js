@@ -258,11 +258,16 @@ function getData() {
     return arr;
 }
 
-setInterval(function () {
-    var series = data[0].values;
-    var next = new Date(series[series.length - 1].x);
-    next.setDate(next.getDate() + 1);
-    series.shift();
-    series.push({x:next.getTime(), y: series[series.length - 1].y + Math.floor(Math.random() * 5 - 2)});
-    redraw();
-}, 1000);
+var realtime = false;
+
+if (realtime){
+    setInterval(function () {
+        var series = data[0].values;
+        var next = new Date(series[series.length - 1].x);
+        next.setDate(next.getDate() + 1);
+        series.shift();
+        series.push({x:next.getTime(), y: series[series.length - 1].y + Math.floor(Math.random() * 5 - 2)});
+        redraw();
+    }, 1000);
+
+}

@@ -175,17 +175,7 @@
 
   .sidebar{
     margin-left: 1.6%;
-    .settings{
-      .btn{
-        padding: 3px 5px;
-      }
-      i {
-        display: block;
-      }
-      .name{
-        display: none;
-      }
-    }
+    @include sidebar-settings;
   }
 
   .sidebar-on-right{

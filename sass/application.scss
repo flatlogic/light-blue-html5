@@ -2,8 +2,6 @@
 @import url(../lib/nvd3/src/nv.d3.css);
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 
-@import "variables";
-
 @mixin invalid-border {
   border-color: #e9322d;
   box-shadow: 0 0 6px #f8b9b7;
@@ -42,6 +40,16 @@
   }
 }
 
+@mixin sidebar-settings{
+  .settings{
+    .btn-small{
+      padding: 2px 8px;
+    }
+  }
+}
+
+@import "variables";
+
 @import "compass";
 @import "bootstrap/bootstrap";
 @import "bootstrap/responsive";
@@ -51,7 +59,7 @@
 
 @import "svg";
 
-@import "basic";
+@import "general";
 @import "scrollbar";
 
 @import "base";

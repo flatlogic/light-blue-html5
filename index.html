@@ -28,10 +28,9 @@
         <li class="lime"><a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a></li>
     </ul>
     <div id="sidebar-settings" class="settings">
-        <div class="btn-group" data-toggle="buttons-radio">
-            <button type="button" class="btn btn-small active"><i class="icon-magic"></i><span class="name">Auto</span></button>
-            <button type="button" class="btn btn-small"><i class="icon-user"></i> <span class="name">Icons</span></button>
-        </div>
+        <button type="button"
+                data-value="auto"
+                class="btn btn-primary btn-small">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -725,11 +724,17 @@
 </script>
 
 <script type="text/template" id="sidebar-settings-template">
-    <div class="btn-group" data-toggle="buttons-radio">
         <% auto = sidebarState == 'auto'%>
-        <button type="button" data-value="auto" class="btn btn-small <%= auto? 'active' : '' %>"><i class="icon-magic"></i><span class="name">Auto</span></button>
-        <button type="button" data-value="icons" class="btn btn-small <%= auto? '' : 'active' %>"><i class="icon-user"></i> <span class="name">Icons</span></button>
-    </div>
+        <% if (auto) {%>
+            <button type="button"
+                    data-value="icons"
+                    class="btn btn-success btn-small">Icons</button>
+
+        <%} else {%>
+            <button type="button"
+                    data-value="auto"
+                    class="btn btn-primary btn-small">Auto</button>
+        <% } %>
 </script>
 
 </body>

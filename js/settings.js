@@ -35,6 +35,7 @@ $(function(){
             }
         },
         sidebarState = function(state){
+            $sidebarSettings.html(_.template($('#sidebar-settings-template').html(), {sidebarState: state}));
             if (state == "auto"){
                 $(".sidebar").removeClass("sidebar-icons");
                 $(".side-nav").removeClass("sidebar-icons");
@@ -49,7 +50,6 @@ $(function(){
     sidebarSide(settingsState.sidebar);
     backgroundStyle(settingsState.background);
     sidebarState(settingsState.sidebarState);
-    $sidebarSettings.html(_.template($('#sidebar-settings-template').html(), settingsState))
 
     $settings.popover({
         template: '<div class="popover">' +
