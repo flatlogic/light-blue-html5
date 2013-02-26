@@ -9,6 +9,39 @@
   box-shadow: 0 0 6px #f8b9b7;
 }
 
+@mixin sidebar-icons($class){
+  .sidebar#{$class}{
+    width: 52px;
+    padding: 20px 0;
+    margin: 30px 0 0 10px;
+
+    h2{
+      display: none;
+    }
+  }
+
+  .side-nav#{$class} li{
+    a{
+      font-size: 20px;
+      line-height: 30px;
+      padding: 13px 0;
+      text-align: center;
+
+      i[class*=icon]{
+        float: none;
+      }
+    }
+
+    .name{
+      display: none;
+    }
+  }
+
+  .wrap#{$class}{
+    margin-left: 62px;
+  }
+}
+
 @import "compass";
 @import "bootstrap/bootstrap";
 @import "bootstrap/responsive";

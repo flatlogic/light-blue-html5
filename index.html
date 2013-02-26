@@ -27,10 +27,10 @@
         <li class="orange"><a href="#"><i class="icon-columns"></i><span class="name">Grid</span></a></li>
         <li class="lime"><a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a></li>
     </ul>
-    <div class="settings">
+    <div id="sidebar-settings" class="settings">
         <div class="btn-group" data-toggle="buttons-radio">
-            <button type="button" class="btn btn-small active">Auto</button>
-            <button type="button" class="btn btn-small">Icons</button>
+            <button type="button" class="btn btn-small active"><i class="icon-magic"></i><span class="name">Auto</span></button>
+            <button type="button" class="btn btn-small"><i class="icon-user"></i> <span class="name">Icons</span></button>
         </div>
     </div>
 </nav>
@@ -661,25 +661,6 @@
     <div class="help-block">Double-click to edit a todo.</div>
 </script>
 
-<script type="text/template" id="settings-template">
-    <div class="setting clearfix">
-        Sidebar on the
-        <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
-            <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-transparent <%= onRight? 'active' : '' %>">Right</button>
-        </div>
-    </div>
-    <div class="setting clearfix">
-        Background
-        <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
-            <% two = background == 'two'%>
-            <button type="button" data-value="one" class="btn btn-transparent <%= two? '' : 'active' %>">One</button>
-            <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
-        </div>
-    </div>
-</script>
-
 <script type="text/template" id="user-template">
     <div class="user">
         <figure class="clearfix">
@@ -691,7 +672,7 @@
             <ul>
                 <li class="active">
                     <a target="_blank" href="http://www.belarusguide.com/cities/commanders/Vitaut_The_Great.html">
-                    <i class="icon-user icon-large"></i> Profile
+                        <i class="icon-user icon-large"></i> Profile
                     </a>
                 </li>
                 <li><a href=""><i class="icon-calendar icon-large"></i> Calendar</a></li>
@@ -715,6 +696,33 @@
                 <p><%- text %></p>
             </div>
         </div>
+    </div>
+</script>
+
+<script type="text/template" id="settings-template">
+    <div class="setting clearfix">
+        Sidebar on the
+        <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% onRight = sidebar == 'right'%>
+            <button type="button" data-value="left" class="btn btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        Background
+        <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% two = background == 'two'%>
+            <button type="button" data-value="one" class="btn btn-transparent <%= two? '' : 'active' %>">One</button>
+            <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+    <div class="btn-group" data-toggle="buttons-radio">
+        <% auto = sidebarState == 'auto'%>
+        <button type="button" data-value="auto" class="btn btn-small <%= auto? 'active' : '' %>"><i class="icon-magic"></i><span class="name">Auto</span></button>
+        <button type="button" data-value="icons" class="btn btn-small <%= auto? '' : 'active' %>"><i class="icon-user"></i> <span class="name">Icons</span></button>
     </div>
 </script>
 

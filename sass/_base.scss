@@ -1,3 +1,5 @@
+@include sidebar-icons(".sidebar-icons");
+
 .sidebar{
   @include border-radius($widget-border-radius);
   @include box-shadow($widget-shadow);
@@ -33,9 +35,29 @@
     margin-top: 20px;
     text-align: center;
 
+    i{
+      display: none;
+    }
+
     .btn-group .btn{
       &:not(.active){
         opacity: .7;
+      }
+    }
+  }
+
+  &.sidebar-icons{
+    margin-left: 1.6%;
+
+    .settings{
+      .btn{
+        padding: 3px 5px;
+      }
+      i {
+        display: block;
+      }
+      .name{
+        display: none;
       }
     }
   }
@@ -989,19 +1011,18 @@ form ul.parsley-error-list{
   .sidebar{
     right: 0;
     margin: 30px 25px 0 0;
+
+    &.sidebar-icons{
+      margin-right: 1.6%;
+    }
   }
 
   .wrap{
     margin-left: 0;
     margin-right: 205px;
-  }
 
-  .side-nav li{
-    &.active a{
-      border-left: none;
-      border-right: 5px solid $green;
-      padding-left: 30px;
-      padding-right: 25px;
+    &.sidebar-icons{
+      margin-right: 62px;
     }
   }
 }

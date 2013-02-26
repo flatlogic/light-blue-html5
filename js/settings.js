@@ -1,9 +1,11 @@
 $(function(){
-    //settings popover
+    //settings
     var $settings = $("#settings"),
+        $sidebarSettings = $("#sidebar-settings"),
         settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
             sidebar: 'left',
-            background: 'one'
+            background: 'one',
+            sidebarState: 'auto'
         },
         $pageHeader = $(".page-header"),
         $body = $("body"),
@@ -31,10 +33,23 @@ $(function(){
                 $(".light-blue").removeClass("light-blue").addClass("light-brown");
                 $(".dark-blue").removeClass("dark-blue").addClass("dark-brown");
             }
+        },
+        sidebarState = function(state){
+            if (state == "auto"){
+                $(".sidebar").removeClass("sidebar-icons");
+                $(".side-nav").removeClass("sidebar-icons");
+                $(".wrap").removeClass("sidebar-icons");
+            } else {
+                $(".sidebar").addClass("sidebar-icons");
+                $(".side-nav").addClass("sidebar-icons");
+                $(".wrap").addClass("sidebar-icons");
+            }
         };
 
     sidebarSide(settingsState.sidebar);
     backgroundStyle(settingsState.background);
+    sidebarState(settingsState.sidebarState);
+    $sidebarSettings.html(_.template($('#sidebar-settings-template').html(), settingsState))
 
     $settings.popover({
         template: '<div class="popover">' +
@@ -72,6 +87,14 @@ $(function(){
         settingsState.background = style;
         localStorage.setItem("settings-state", JSON.stringify(settingsState));
     });
+
+    $sidebarSettings.on("click", ".btn", function(){
+        var $this = $(this),
+            state = $this.data("value");
+        sidebarState(state);
+        settingsState.sidebarState = state;
+        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+    })
 });
 
 $(function(){
