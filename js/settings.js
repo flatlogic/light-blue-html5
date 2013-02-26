@@ -45,6 +45,7 @@ $(function(){
                 $(".side-nav").addClass("sidebar-icons");
                 $(".wrap").addClass("sidebar-icons");
             }
+            window.onresize();
         };
 
     sidebarSide(settingsState.sidebar);

@@ -31,7 +31,7 @@
     background-position: 5px 10px;
   }
 
-  .sidebar, .sidebar-on-right, .sidebar-icons{
+  .sidebar, .sidebar-on-right .sidebar, .sidebar.sidebar-icons{
     display: none;
 
     &.in{
@@ -162,14 +162,7 @@
   }
 }
 
-@media (max-width: 1019px) {
-  .comments{
-    overflow-y: scroll;
-    height: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1048px) {
 
   @include sidebar-icons("");
 
@@ -192,6 +185,21 @@
       margin-left: 0;
       margin-right: 62px;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .comments{
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  .widget.tiny{
+    padding: 5px 10px;
+  }
+
+  .overview{
+    padding: 0;
   }
 
   .box{

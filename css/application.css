@@ -9873,11 +9873,11 @@ form ul.parsley-error-list li {
   }
 
   /* line 34, C:/projects/admin/sass/_responsive.scss */
-  .sidebar, .sidebar-on-right, .sidebar-icons {
+  .sidebar, .sidebar-on-right .sidebar, .sidebar.sidebar-icons {
     display: none;
   }
   /* line 37, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in, .sidebar-on-right.in, .sidebar-icons.in {
+  .sidebar.in, .sidebar-on-right .sidebar.in, .sidebar.sidebar-icons.in {
     position: absolute;
     display: block;
     top: 0;
@@ -9886,11 +9886,11 @@ form ul.parsley-error-list li {
     width: 90%;
   }
   /* line 45, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in h2, .sidebar-on-right.in h2, .sidebar-icons.in h2 {
+  .sidebar.in h2, .sidebar-on-right .sidebar.in h2, .sidebar.sidebar-icons.in h2 {
     display: block;
   }
   /* line 50, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .side-nav li a, .sidebar-on-right.in .side-nav li a, .sidebar-icons.in .side-nav li a {
+  .sidebar.in .side-nav li a, .sidebar-on-right .sidebar.in .side-nav li a, .sidebar.sidebar-icons.in .side-nav li a {
     font-size: 20px;
     line-height: 30px;
     padding: 13px 30px;
@@ -9898,22 +9898,22 @@ form ul.parsley-error-list li {
     text-align: left;
   }
   /* line 57, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .side-nav li a i[class*=icon], .sidebar-on-right.in .side-nav li a i[class*=icon], .sidebar-icons.in .side-nav li a i[class*=icon] {
+  .sidebar.in .side-nav li a i[class*=icon], .sidebar-on-right .sidebar.in .side-nav li a i[class*=icon], .sidebar.sidebar-icons.in .side-nav li a i[class*=icon] {
     float: left;
     line-height: 30px;
     padding-top: 1px;
   }
   /* line 64, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .side-nav li .name, .sidebar-on-right.in .side-nav li .name, .sidebar-icons.in .side-nav li .name {
+  .sidebar.in .side-nav li .name, .sidebar-on-right .sidebar.in .side-nav li .name, .sidebar.sidebar-icons.in .side-nav li .name {
     margin-left: 10px;
     display: inline-block;
   }
   /* line 70, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .settings, .sidebar-on-right.in .settings, .sidebar-icons.in .settings {
+  .sidebar.in .settings, .sidebar-on-right .sidebar.in .settings, .sidebar.sidebar-icons.in .settings {
     display: none;
   }
   /* line 75, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in + .wrap .content, .sidebar-on-right.in + .wrap .content, .sidebar-icons.in + .wrap .content {
+  .sidebar.in + .wrap .content, .sidebar-on-right .sidebar.in + .wrap .content, .sidebar.sidebar-icons.in + .wrap .content {
     margin-top: 620px;
   }
 
@@ -10065,14 +10065,7 @@ form ul.parsley-error-list li {
     padding: 40px 2.3%;
   }
 }
-@media (max-width: 1019px) {
-  /* line 166, C:/projects/admin/sass/_responsive.scss */
-  .comments {
-    overflow-y: scroll;
-    height: 100%;
-  }
-}
-@media (max-width: 1200px) {
+@media (max-width: 1048px) {
   /* line 11, C:/projects/admin/sass/application.scss */
   .sidebar {
     width: 52px;
@@ -10105,7 +10098,7 @@ form ul.parsley-error-list li {
     margin-left: 62px;
   }
 
-  /* line 176, C:/projects/admin/sass/_responsive.scss */
+  /* line 169, C:/projects/admin/sass/_responsive.scss */
   .sidebar {
     margin-left: 1.6%;
   }
@@ -10113,116 +10106,133 @@ form ul.parsley-error-list li {
   .sidebar .settings .btn-small {
     padding: 2px 8px;
   }
-  /* line 180, C:/projects/admin/sass/_responsive.scss */
+  /* line 173, C:/projects/admin/sass/_responsive.scss */
   .sidebar .settings {
     display: none;
   }
 
-  /* line 186, C:/projects/admin/sass/_responsive.scss */
+  /* line 179, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .sidebar {
     right: 0;
     margin: 30px 1.6% 0 0;
   }
-  /* line 191, C:/projects/admin/sass/_responsive.scss */
+  /* line 184, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .wrap {
     margin-left: 0;
     margin-right: 62px;
   }
+}
+@media (max-width: 1200px) {
+  /* line 192, C:/projects/admin/sass/_responsive.scss */
+  .comments {
+    overflow-y: scroll;
+    height: 100%;
+  }
 
   /* line 197, C:/projects/admin/sass/_responsive.scss */
+  .widget.tiny {
+    padding: 5px 10px;
+  }
+
+  /* line 201, C:/projects/admin/sass/_responsive.scss */
+  .overview {
+    padding: 0;
+  }
+
+  /* line 205, C:/projects/admin/sass/_responsive.scss */
   .box {
     font-size: 34px;
   }
 }
 @media (min-width: 1441px) {
-  /* line 203, C:/projects/admin/sass/_responsive.scss */
+  /* line 211, C:/projects/admin/sass/_responsive.scss */
   .box {
     font-size: 50px;
     line-height: 1.2em;
   }
-  /* line 207, C:/projects/admin/sass/_responsive.scss */
+  /* line 215, C:/projects/admin/sass/_responsive.scss */
   .box .description {
     font-size: 20px;
   }
 
-  /* line 214, C:/projects/admin/sass/_responsive.scss */
+  /* line 222, C:/projects/admin/sass/_responsive.scss */
   .widget.large {
     height: 400px;
   }
-  /* line 217, C:/projects/admin/sass/_responsive.scss */
+  /* line 225, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body {
     height: 365px;
   }
-  /* line 220, C:/projects/admin/sass/_responsive.scss */
+  /* line 228, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body .chart {
     height: 288px;
   }
-  /* line 226, C:/projects/admin/sass/_responsive.scss */
+  /* line 234, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .total h4 {
     font-size: 19px;
   }
-  /* line 229, C:/projects/admin/sass/_responsive.scss */
+  /* line 237, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .total h3 {
     font-size: 40px;
   }
-  /* line 235, C:/projects/admin/sass/_responsive.scss */
+  /* line 243, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge {
     height: 500px;
   }
-  /* line 238, C:/projects/admin/sass/_responsive.scss */
+  /* line 246, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body {
     height: 465px;
   }
-  /* line 241, C:/projects/admin/sass/_responsive.scss */
+  /* line 249, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body .chart {
     height: 383px;
   }
-  /* line 247, C:/projects/admin/sass/_responsive.scss */
+  /* line 255, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .pie.chart .total h4 {
     font-size: 19px;
   }
-  /* line 250, C:/projects/admin/sass/_responsive.scss */
+  /* line 258, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .pie.chart .total h3 {
     font-size: 40px;
   }
-  /* line 256, C:/projects/admin/sass/_responsive.scss */
+  /* line 264, C:/projects/admin/sass/_responsive.scss */
   .widget.tiny {
     height: 188px;
   }
-  /* line 262, C:/projects/admin/sass/_responsive.scss */
+  /* line 270, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large {
     height: 415px;
   }
-  /* line 264, C:/projects/admin/sass/_responsive.scss */
+  /* line 272, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large .body .chart {
     height: 267px;
   }
-  /* line 269, C:/projects/admin/sass/_responsive.scss */
+  /* line 277, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge {
     height: 515px;
   }
-  /* line 271, C:/projects/admin/sass/_responsive.scss */
+  /* line 279, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge .body .chart {
     height: 357px;
   }
 
-  /* line 280, C:/projects/admin/sass/_responsive.scss */
+  /* line 288, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .controls .control h4, .widget.xlarge .pie.chart .controls .control h4 {
     font-size: 17px;
     margin-bottom: 7px;
   }
-  /* line 285, C:/projects/admin/sass/_responsive.scss */
+  /* line 293, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie.chart .controls .control p, .widget.xlarge .pie.chart .controls .control p {
     font-size: 24px;
     margin-bottom: 5px;
   }
 
-  /* line 291, C:/projects/admin/sass/_responsive.scss */
+  /* line 299, C:/projects/admin/sass/_responsive.scss */
   .pie.chart .total h5.visits {
     font-size: 34px;
   }
 
-  /* line 295, C:/projects/admin/sass/_responsive.scss */
+  /* line 303, C:/projects/admin/sass/_responsive.scss */
   .chart-inline {
     height: 58px;
     margin-bottom: 18px;
