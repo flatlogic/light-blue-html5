@@ -1,6 +1,6 @@
 //colors
 //same as in _variables.scss
-//keep synchronized it
+//keep it synchronized
 var $lime = "#8CBF26",
     $red = "#e5603b",
     $redDark = "#d04f4f",
@@ -12,6 +12,12 @@ var $lime = "#8CBF26",
     $brown = "#A05000",
     $teal = "#2eb4dc",
     $textColor = "#666";
+
+//turn off charts is needed
+var chartsOff = false;
+if (chartsOff){
+    nv.addGraph = function(){};
+}
 
 COLOR_VALUES = [$red, $orange, $green, $blue, $teal, $redDark];
 

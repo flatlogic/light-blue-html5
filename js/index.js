@@ -1,8 +1,3 @@
-var test = true;
-if (test){
-    nv.addGraph = function(){};
-}
-
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
         .color(keyColor);
