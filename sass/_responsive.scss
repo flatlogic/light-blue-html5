@@ -176,6 +176,10 @@
   .sidebar{
     margin-left: 1.6%;
     @include sidebar-settings;
+
+    .settings{
+      display: none;
+    }
   }
 
   .sidebar-on-right{

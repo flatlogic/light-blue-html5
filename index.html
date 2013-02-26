@@ -29,8 +29,11 @@
     </ul>
     <div id="sidebar-settings" class="settings">
         <button type="button"
+                data-value="icons"
+                class="btn-icons btn btn-success btn-small">Icons</button>
+        <button type="button"
                 data-value="auto"
-                class="btn btn-primary btn-small">Auto</button>
+                class="btn-auto btn btn-primary btn-small">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -728,7 +731,10 @@
         <% if (auto) {%>
             <button type="button"
                     data-value="icons"
-                    class="btn btn-success btn-small">Icons</button>
+                    class="btn-icons btn btn-success btn-small">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-primary btn-small">Auto</button>
 
         <%} else {%>
             <button type="button"
