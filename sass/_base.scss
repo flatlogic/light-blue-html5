@@ -66,12 +66,8 @@
       line-height: 20px;
     }
 
-    &.active a{
+    &.active a, a:hover, a:focus{
       background: $lightGray;
-    }
-
-    a:hover, a:focus{
-        background: $lightGray;
     }
 
     a{
@@ -85,9 +81,11 @@
     @each $color in $colors{
 
       &.#{nth($color_names, $i)}{
+
         &.active > a{
           color: #{$color};
         }
+
         a:hover {
           color: #{$color};
         }
@@ -113,12 +111,6 @@
         background: $lightGray;
     }
   }
-}
-
-.accordion-group{
-  margin: 0;
-  border: none;
-  @include border-radius(0);
 }
 
 .wrap{
@@ -1410,4 +1402,10 @@ form ul.parsley-error-list{
   &.active{
     background: rgba(darken($textColor, 20%), .9);
   }
+}
+
+.accordion-group{
+  margin: 0;
+  border: none;
+  @include border-radius(0);
 }

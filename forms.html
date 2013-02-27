@@ -14,24 +14,46 @@
     <meta name="author" content="">
 </head>
 <body class="background-two">
-<nav class="sidebar">
+<nav class="sidebar nav-collapse collapse">
     <a class="brand" href=""><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
-    <ul class="side-nav">
-        <li class="green"><a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a></li>
-        <li class="teal"><a href="stats.html"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a></li>
-        <li class="active blue"><a href=""><i class="icon-edit"></i> <span class="name">Forms</span></a></li>
-        <li class="brown"><a href="#"><i class="icon-magic"></i> <span class="name">User Interface</span></a></li>
-        <li class="dark-red"><a href="#"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a></li>
-        <li class="red"><a href="#"><i class="icon-table"></i><span class="name">Tables</span></a></li>
-        <li class="orange"><a href="#"><i class="icon-columns"></i><span class="name">Grid</span></a></li>
-        <li class="lime"><a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a></li>
+    <ul id="side-nav" class="side-nav">
+        <li class="green">
+            <a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a>
+        </li>
+        <li class="teal accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#forms-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="forms-collapse" class="accordion-body collapse">
+                <li><a href="#">Stats</a></li>
+                <li><a href="stats.html">Charts</a></li>
+            </ul>
+        </li>
+        <li class="active blue">
+            <a href="forms.html"><i class="icon-edit"></i> <span class="name">Forms</span></a>
+        </li>
+        <li class="brown">
+            <a href="#"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
+        </li>
+        <li class="dark-red">
+            <a href="#"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
+        </li>
+        <li class="red">
+            <a href="#"><i class="icon-table"></i><span class="name">Tables</span></a>
+        </li>
+        <li class="orange">
+            <a href="#"><i class="icon-columns"></i><span class="name">Grid</span></a>
+        </li>
+        <li class="lime">
+            <a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a>
+        </li>
     </ul>
-    <div class="settings">
-        <div class="btn-group" data-toggle="buttons-radio">
-            <button type="button" class="btn btn-small active">Auto</button>
-            <button type="button" class="btn btn-small">Icons</button>
-        </div>
+    <div id="sidebar-settings" class="settings">
+        <button type="button"
+                data-value="icons"
+                class="btn-icons btn btn-success btn-small">Icons</button>
+        <button type="button"
+                data-value="auto"
+                class="btn-auto btn btn-primary btn-small">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -43,9 +65,6 @@
                     <div class="clearfix">
                         <ul class="nav title-nav hidden-phone">
                             <li class="active"><a href="#" title="Dashboard"><i class="icon-desktop icon-large"></i> Dashboard</a></li>
-                            <li><a href="#" title="Dashboard"><i class="icon-double-angle-left icon-large"></i> Test</a></li>
-                            <li><a href="#" title="Dashboard"><i class="icon-leaf icon-large"></i> Koni</a></li>
-                            <li><a href="#" title="Dashboard"><i class="icon-plus icon-large"></i> Dzies'ci</a></li>
                         </ul>
                         <ul class="nav right pull-right ">
                             <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
@@ -67,15 +86,29 @@
                                     <i class="icon-user"></i>
                                 </a>
                             </li>
-                            <li><a href="login.html"><i class="icon-signout"></i></a></li>
+                            <li class="visible-phone">
+                                <a href="#"
+                                   class="btn-navbar"
+                                   data-toggle="collapse"
+                                   data-target=".sidebar"
+                                   title="">
+                                    <i class="icon-reorder"></i>
+                                </a>
+                            </li>
+                            <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
                         </ul>
-                    </div><!-- /.nav-collapse -->
+                    </div>
                 </div>
-            </div><!-- /navbar-inner -->
+            </div>
         </div>
     </header>
 </div>
 <div class="content container-fluid">
+<div class="row-fluid">
+    <div class="span7">
+
+    </div>
+</div>
 </div>
 </div>
 
@@ -100,6 +133,42 @@
 <script src="js/bootstrap/bootstrap-button.js"></script>
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
+
+<script type="text/template" id="settings-template">
+    <div class="setting clearfix">
+        Sidebar on the
+        <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% onRight = sidebar == 'right'%>
+            <button type="button" data-value="left" class="btn btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        Background
+        <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% two = background == 'two'%>
+            <button type="button" data-value="one" class="btn btn-transparent <%= two? '' : 'active' %>">One</button>
+            <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+    <% auto = sidebarState == 'auto'%>
+    <% if (auto) {%>
+    <button type="button"
+            data-value="icons"
+            class="btn-icons btn btn-success btn-small">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-primary btn-small">Auto</button>
+
+    <%} else {%>
+    <button type="button"
+            data-value="auto"
+            class="btn btn-primary btn-small">Auto</button>
+    <% } %>
+</script>
 
 </body>
 </html>
