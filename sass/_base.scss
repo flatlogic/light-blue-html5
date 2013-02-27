@@ -66,10 +66,12 @@
       line-height: 20px;
     }
 
-    &.active, &:hover, &:focus{
-      a{
+    &.active a{
+      background: $lightGray;
+    }
+
+    a:hover, a:focus{
         background: $lightGray;
-      }
     }
 
     a{
@@ -83,16 +85,40 @@
     @each $color in $colors{
 
       &.#{nth($color_names, $i)}{
-        &.active a{
+        &.active > a{
           color: #{$color};
         }
-        &:hover a {
+        a:hover {
           color: #{$color};
+        }
+
+        a.accordion-toggle:not(.collapsed){
+          color: #{$color};
+
+          & + .accordion-body li.active a{
+            color: #{$color};
+          }
         }
       }
       $i: $i + 1;
     }
   }
+
+  .accordion-body li a{
+    padding: 8px 0 8px 40px;
+    font-weight: 300;
+    background: #ffffff;
+
+    &:hover, &:focus{
+        background: $lightGray;
+    }
+  }
+}
+
+.accordion-group{
+  margin: 0;
+  border: none;
+  @include border-radius(0);
 }
 
 .wrap{
