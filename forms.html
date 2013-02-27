@@ -64,7 +64,7 @@
                 <div class="container">
                     <div class="clearfix">
                         <ul class="nav title-nav hidden-phone">
-                            <li class="active"><a href="#" title="Dashboard"><i class="icon-desktop icon-large"></i> Dashboard</a></li>
+                            <li class="active"><a href="#" title="Demo Form"><i class="icon-edit icon-large"></i> Demo Form</a></li>
                         </ul>
                         <ul class="nav right pull-right ">
                             <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
@@ -106,7 +106,90 @@
 <div class="content container-fluid">
 <div class="row-fluid">
     <div class="span7">
-
+        <section class="widget">
+            <header>
+                <h3><i class="icon-user"></i> Account Profile <small>Create new or edit existing user</small></h3>
+            </header>
+            <div class="body">
+                <form class="form-horizontal label-left" data-validate="parsley">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="profile-picture">
+                                <img class="img-circle" src="img/1.jpg" alt="64x64" style="height: 112px;">
+                            </div>
+                        </div>
+                        <div class="span8">
+                            <h2>Maryna Dorash</h2>
+                            <address>
+                                <strong>Development manager</strong> at <strong><a href="#">Allspana Inc.</a></strong><br>
+                                <abbr title="Work email">e-mail:</abbr> <a href="mailto:#">maryna.dorash@allspana.by</a><br>
+                                <abbr title="Work Phone">phone:</abbr> (123) 456-7890
+                            </address>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <legend>Account Edit Form <small>Some explanation text</small></legend>
+                        <legend><small>Personal Info</small></legend>
+                        <div class="control-group">
+                            <label class="control-label" for="prefix">Prefix</label>
+                            <div class="controls">
+                                <input type="text" id="prefix" class="span6">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="first-name">First Name</label>
+                            <div class="controls">
+                                <input type="text" id="first-name" class="span11" >
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="last-name">Last Name</label>
+                            <div class="controls">
+                                <input type="text" id="last-name" class="span11" >
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="middle-name" class="control-label">Middle Name / Initial</label>
+                            <div class="controls">
+                                <input id="middle-name" class="span11" type="text" name="accountMiddleName" value="">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="gender" class="control-label">Gender</label>
+                            <div class="controls">
+                                <input id="gender-input" type="hidden" name="gender" value="female">
+                                <div id="gender" class="btn-group change" data-toggle="buttons-radio" data-target="gender-input">
+                                    <button type="button" class="btn" data-toggle-class="btn-primary" name="gender" value="male">&nbsp; Male &nbsp;</button>
+                                    <button type="button" class="btn btn-primary active" data-toggle-class="btn-primary" name="gender" value="female">Female</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="date-of-birth" class="control-label">Date Of Birth <span class="required">*</span></label>
+                            <div class="controls">
+                                <input id="date-of-birth" class="span6" type="text" name="accountDob" value="">
+                            </div>
+                        </div>
+                        <legend><small>Contact Info</small></legend>
+                        <div class="control-group">
+                            <label for="email" class="control-label">Email <span class="required">*</span></label>
+                            <div class="controls">
+                                <div class="input-append block">
+                                    <input id="email" type="email" required="required" class="span6"
+                                           name="email" value="">
+                                    <a class="btn btn-success" type="button">write an email</a> </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label for="accountPhoneNumber" class="control-label">Phone <span class="required">*</span></label>
+                            <div class="controls controls-row">
+                                <input id="accountPhoneNumber" class="span6 maskPhone margin-right5" type="text" name="accountPhoneNumber" value="" maxlength="28">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
     </div>
 </div>
 </div>
@@ -131,8 +214,12 @@
 <script src="js/bootstrap/bootstrap-tooltip.js"></script>
 <script src="js/bootstrap/bootstrap-popover.js"></script>
 <script src="js/bootstrap/bootstrap-button.js"></script>
+<script src="lib/datepicker/js/bootstrap-datepicker.js"></script>
+
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
+
+<script src="js/forms.js"></script>
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
@@ -168,6 +255,26 @@
             data-value="auto"
             class="btn btn-primary btn-small">Auto</button>
     <% } %>
+</script>
+
+<script type="text/template" id="user-template">
+    <div class="user">
+        <figure class="clearfix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Vita%C5%ADt._%D0%92%D1%96%D1%82%D0%B0%D1%9E%D1%82_%28J._Aziamb%C5%82o%C5%ADski%2C_XIX%29.jpg" class="img-circle pull-left">
+
+            <figcaption class="pull-right">Vitaut the Great</figcaption>
+        </figure>
+        <nav class="actions">
+            <ul>
+                <li class="active">
+                    <a target="_blank" href="http://www.belarusguide.com/cities/commanders/Vitaut_The_Great.html">
+                        <i class="icon-user icon-large"></i> Profile
+                    </a>
+                </li>
+                <li><a href=""><i class="icon-calendar icon-large"></i> Calendar</a></li>
+            </ul>
+        </nav>
+    </div>
 </script>
 
 </body>

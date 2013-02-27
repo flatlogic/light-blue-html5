@@ -222,8 +222,3 @@ nv.addGraph(function() {
 $(function(){
     $("input:checkbox").uniform();
 });
-
-window.onresize =function(){
-    console.log(window.innerWidth);
-};
-console.log(window.innerWidth);
