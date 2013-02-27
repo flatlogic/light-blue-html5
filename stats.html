@@ -27,11 +27,13 @@
         <li class="orange"><a href="#"><i class="icon-columns"></i><span class="name">Grid</span></a></li>
         <li class="lime"><a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a></li>
     </ul>
-    <div class="settings">
-        <div class="btn-group" data-toggle="buttons-radio">
-            <button type="button" class="btn btn-small active">Auto</button>
-            <button type="button" class="btn btn-small">Icons</button>
-        </div>
+    <div id="sidebar-settings" class="settings">
+        <button type="button"
+                data-value="icons"
+                class="btn-icons btn btn-success btn-small">Icons</button>
+        <button type="button"
+                data-value="auto"
+                class="btn-auto btn btn-primary btn-small">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -42,8 +44,8 @@
                     <div class="container">
                         <div class="clearfix">
                             <ul class="nav title-nav hidden-phone">
-                                <li class="active"><a href="#" title="Dashboard"><i class="icon-bar-chart icon-large"></i> Basic Stats</a></li>
-                                <li><a href="#" title="Dashboard"><i class="icon-magic icon-large"></i> Advanced Stats</a></li>
+                                <li><a href="#" title="Basic"><i class="icon-bar-chart icon-large"></i> Basic Stats</a></li>
+                                <li class="active"><a href="#" title="Advanced"><i class="icon-magic icon-large"></i> Advanced Stats</a></li>
                             </ul>
                             <ul class="nav right pull-right ">
                                 <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
@@ -65,7 +67,16 @@
                                         <i class="icon-user"></i>
                                     </a>
                                 </li>
-                                <li><a href="login.html"><i class="icon-signout"></i></a></li>
+                                <li class="visible-phone">
+                                    <a href="#"
+                                       class="btn-navbar"
+                                       data-toggle="collapse"
+                                       data-target=".sidebar"
+                                       title="">
+                                        <i class="icon-reorder"></i>
+                                    </a>
+                                </li>
+                                <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
                             </ul>
                         </div><!-- /.nav-collapse -->
                     </div>
@@ -195,6 +206,23 @@
             </ul>
         </nav>
     </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+    <% auto = sidebarState == 'auto'%>
+    <% if (auto) {%>
+    <button type="button"
+            data-value="icons"
+            class="btn-icons btn btn-success btn-small">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-primary btn-small">Auto</button>
+
+    <%} else {%>
+    <button type="button"
+            data-value="auto"
+            class="btn btn-primary btn-small">Auto</button>
+    <% } %>
 </script>
 
 </body>

@@ -45,7 +45,14 @@ $(function(){
                 $(".side-nav").addClass("sidebar-icons");
                 $(".wrap").addClass("sidebar-icons");
             }
-            window.onresize();
+            try {
+            if (window.onresize){
+                window.onresize();
+            }
+            } catch (e){
+                //just swallow it
+            }
+
         };
 
     sidebarSide(settingsState.sidebar);

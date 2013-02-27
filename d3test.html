@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="lib/nvd3/lib/d3.v2.min.js"></script>
     <style>
-        #viz{
-            height: 500px;
-            width: 700px;
-            background:
-                radial-gradient(circle at 30% 40%, rgb(255,0,0), rgb(0,0,0));
-                url(img/bgnoise_lg_dark.png);
+        p{
+            height: 100px;
+            background-color: red;
         }
     </style>
 </head>
 <body>
-<div id="viz"></div>
-closest-side	The gradient's ending shape meets the side of the box closest to its center (for circles) or meets both the vertical and horizontal sides closest to the center (for ellipses).
-closest-corner	The gradient's ending shape is sized so it exactly meets the closest corner of the box from its center.
-farthest-side	Similar to closest-side, except the ending shape is sized to meet the side of the box farthest from its center (or vertical and horizontal sides).
-farthest-corner	The gradient's ending shape is sized
+<div style="height: 500px;">
+    <svg>
+
+    </svg>
+</div>
+<p>
+
+</p>
+<p>
+
+</p>
+<p>
+
+</p>
+<button onclick="test()">I am button</button>
+<script>
+    function test(){
+        d3.select("svg").selectAll("circle").data([4, 8, 15, 90]).enter().append("circle").transition()
+                .attr("r", function(d) { return Math.sqrt(d * 10); })
+                .attr("transform", function(){
+                    return 'translate(200, '+ Math.random()*500+ ')'
+                })
+                .attr("fill", function() {
+                    return "hsl(" + Math.random() * 360 + ",100%,50%)";
+                });
+    }
+</script>
 </body>
 </html>
