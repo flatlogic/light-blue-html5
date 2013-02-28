@@ -8,7 +8,8 @@
 
 .nav {
   margin-left: 0;
-  margin-bottom: $baseLineHeight;
+  //okendoken. comemnting this out
+  //margin-bottom: $baseLineHeight;
   list-style: none;
 }
 
@@ -102,7 +103,8 @@
 .nav-pills > li > a {
   padding-right: 12px;
   padding-left: 12px;
-  margin-right: 2px;
+  //okendoken. commenting this out
+  //margin-right: 2px;
   line-height: 14px; // keeps the overall height an even number
 }
 
@@ -111,18 +113,20 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 1px solid #ddd;
+  //okendoken. commenting this out
+  //border-bottom: 1px solid #ddd;
 }
 // Make the list-items overlay the bottom border
 .nav-tabs > li {
-  margin-bottom: -1px;
+  //okendoken. commenting this out
+  //margin-bottom: -1px;
 }
 // Actual tabs (as links)
 .nav-tabs > li > a {
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: $baseLineHeight;
-  border: 1px solid transparent;
+  //border: 1px solid transparent;
   @include border-radius(4px 4px 0 0);
   &:hover,
   &:focus {
@@ -289,7 +293,8 @@
   @include clearfix();
 }
 .tab-content {
-  overflow: auto; // prevent content from running below tabs
+  //okendoken. commenting this out
+  //overflow: visible; // prevent content from running below tabs
 }
 
 // Remove border on bottom, left, right
