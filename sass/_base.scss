@@ -35,12 +35,6 @@
     margin-top: 20px;
     text-align: center;
 
-    .btn{
-      &:not(.active){
-        opacity: .7;
-      }
-    }
-
     .btn-auto{
       display: none;
     }
@@ -1329,63 +1323,17 @@ form ul.parsley-error-list{
   }
 }
 
-.btn-group .btn{
-  &:first-child{
-    @include border-radius($button-border-radius 0 0 $button-border-radius);
-  }
-  &:last-child{
-    @include border-radius(0 $button-border-radius $button-border-radius 0);
-  }
-}
-
 .btn{
-  background: lighten($textColor, 5%);
   color: #ffffff;
   text-shadow: none;
 
   @include box-shadow(none);
 
-  @include border-radius($button-border-radius);
-
-  &.active{
-    color: #ffffff;
-    background: lighten($textColor, 5%);
-    @include box-shadow(inset 0 1px 3px rgba(0, 0, 0, 0.25));
+  &:hover,
+  &:focus {
+    color: white;
+    @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
   }
-
-  &:hover{
-    background: lighten($textColor, 5%);
-    @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.25));
-    color: #ffffff;
-  }
-}
-
-.btn-success{
-  background: $green;
-
-  &:hover{
-    background: $green;
-  }
-
-  &.active{
-    background: $green;
-  }
-}
-
-.btn-primary{
-  background: $blue;
-
-  &.active{
-    background: $blue;
-  }
-
-  &:hover{
-    background: $blue;
-  }
-}
-
-.btn-warning{
-  background: $orange;
 }
 
 .btn-transparent{
@@ -1400,7 +1348,8 @@ form ul.parsley-error-list{
   }
 
   &.active{
-    background: rgba(darken($textColor, 20%), .9);
+    color: #ffffff;
+    background: rgba(darken($textColor, 20%), .75);
   }
 }
 

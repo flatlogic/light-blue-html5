@@ -119,15 +119,18 @@ input[type="color"],
 .uneditable-input {
   background-color: $inputBackground;
   border: 1px solid $inputBorder;
+  //okendoken. enlarging padding
+  padding: 8px 10px;
   @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   @include transition(border linear .2s, box-shadow linear .2s);
 
   // Focus state
   &:focus {
-    border-color: rgba(82,168,236,.8);
+    //okendoken. default focus color
+    @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
+    border-color: $blue;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6));
   }
 }
 
@@ -177,7 +180,8 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  @include tab-focus();
+  //okendoken. commenting this out
+  //@include tab-focus();
 }
 
 

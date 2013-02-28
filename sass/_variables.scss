@@ -11,9 +11,12 @@ $pink:                  #E671B8 !default;
 $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
 $teal:                  #2eb4dc !default;
+$gray:                  #666 !default;
+$grayDark:              #555 !default;;
 $lightGray:             #f8f8f8 !default;
 $shadowGray:            #676767 !default;
 $linkRed:               #da3712 !default;
+$white:                 #ffffff !default;
 $lightBlue:             #eff5ef;
 $lightBrown: #f5f2ee;
 
@@ -26,9 +29,43 @@ $button-border-radius: 1px;
 $box-margin-bottom: 40px;
 
 //$textColor: #6f6251 !default;
-$textColor: #666 !default;
+$textColor: $gray !default;
 $backgroundBrown: #786c60 !default;
 $backgroundBlue: #426D73 !default;
 $backgroundColor: $backgroundBrown;
 
+//bootstrap override
+//responsive
 $navbarCollapseWidth: 767px !default;
+
+//fonts
+
+$baseFontSize:          15px !default;
+
+//buttons
+
+$baseBorderRadius:      1px !default;
+$borderRadiusLarge:     2px !default;
+$borderRadiusSmall:     0px !default;
+// Buttons
+// -------------------------
+$btnBackground:                     lighten($textColor, 2%) !default;
+$btnBackgroundHighlight:            $textColor !default;
+
+$btnPrimaryBackground:              $blue !default;
+$btnPrimaryBackgroundHighlight:     $blue !default;
+
+$btnInfoBackground:                 $teal !default;
+$btnInfoBackgroundHighlight:        $teal !default;
+
+$btnSuccessBackground:              $green !default;
+$btnSuccessBackgroundHighlight:     $green !default;
+
+$btnWarningBackground:              $orange !default;
+$btnWarningBackgroundHighlight:     $orange !default;
+
+$btnDangerBackground:               $red !default;
+$btnDangerBackgroundHighlight:      $red !default;
+
+$btnInverseBackground:              $white !default;
+$btnInverseBackgroundHighlight:     $lightGray !default;

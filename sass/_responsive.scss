@@ -1,3 +1,13 @@
+@media (max-height: 800px){
+  .side-nav li a{
+    padding: 8px 30px;
+  }
+
+  .side-nav .accordion-body li a{
+    padding: 4px 0 4px 40px;
+  }
+}
+
 @media (max-width: 480px){
   .content > .row-fluid.box-row > .span2{
     width: 48.61878%;
@@ -303,16 +313,5 @@
   .chart-inline{
     height: 58px;
     margin-bottom: 18px;
-  }
-}
-
-
-@media (max-height: 800px){
-  .side-nav li a{
-    padding: 8px 30px;
-  }
-
-  .side-nav .accordion-body li a{
-    padding: 4px 0 4px 40px;
   }
 }

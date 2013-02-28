@@ -1,75 +1,55 @@
-/*
-only html-elements classes
-*/
+//some basic definitions
+//html-elements only. no classes
+
+@mixin background-radial-gradient($figure, $type, $position_x, $position_y, $color_1, $color_2, $color_3){
+  $experimental-support-for-svg: true;
+  //w3c standards
+  @include background(
+      radial-gradient(
+          $type $figure at $position_x $position_y,
+          $color_1,
+          $color_2,
+          $color_3
+      ),
+      image-url("bgnoise_lg_dark.png")
+  );
+  //webkit-specific
+  background: -webkit-radial-gradient(
+      $position_x $position_y, $type $figure,
+      $color_1,
+      $color_2,
+      $color_3
+  ),
+  url("../img/bgnoise_lg_dark.png");
+
+  //moz-specific
+  background: -moz-radial-gradient(
+      $position_x $position_y, $type $figure,
+      $color_1,
+      $color_2,
+      $color_3
+  ),
+  url("../img/bgnoise_lg_dark.png");
+}
 
 html{
-  //background: #1e5799;
-  //background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);
-  //background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8));
-  //background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
-  //background: -o-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
-  //background: -ms-linear-gradient(top,  #1e5799 0%,#7db9e8 100%);
-  //background: linear-gradient(to bottom,  #1e5799 0%,#7db9e8 100%);
-  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
   min-height: 100%;
 }
 
 body{
   min-width: 400px;
-
-  //background: transparent url(../img/bgnoise_lg_transparent.png);
-  //background: url(../img/gaussian_blur.jpg) -200px 0;
-  //$experimental-support-for-svg: true;
-  @include background(
-      radial-gradient(
-          farthest-side ellipse at 80% 0,
-          rgba(194, 123, 108, 0.94),
-          rgba(238, 231, 189, 0.94),
-          rgba(137, 111, 82, 0.94)
-      ),
-      image-url("bgnoise_lg_dark.png")
-  );
-  background: -webkit-radial-gradient(
-      80% 0, farthest-side ellipse,
-      rgba(194, 123, 108, 0.94),
-      rgba(238, 231, 189, 0.94),
-      rgba(137, 111, 82, 0.94)
-    ),
-    url("../img/bgnoise_lg_dark.png");
-  background: -moz-radial-gradient(
-      80% 0, farthest-side ellipse,
-      rgba(194, 123, 108, 0.94),
-      rgba(238, 231, 189, 0.94),
-      rgba(137, 111, 82, 0.94)
-  ),
-  url("../img/bgnoise_lg_dark.png");
-  color: $textColor;
   font-weight: 300;
-
+  @include background-radial-gradient(ellipse, farthest-side, 80%, 0,
+    rgba(194, 123, 108, 0.94),
+    rgba(238, 231, 189, 0.94),
+    rgba(137, 111, 82, 0.94)
+  );
   &.background-two{
-    @include background(
-        radial-gradient(
-            farthest-side ellipse at 10% 0,
-            rgba(41, 57, 64, 0.95),
-            rgba(148, 206, 184, 0.95),
-            rgba(227, 222, 157, 0.95)
-        ),
-        image-url("bgnoise_lg_dark.png")
+    @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
+      rgba(41, 57, 64, 0.95),
+      rgba(148, 206, 184, 0.95),
+      rgba(227, 222, 157, 0.95)
     );
-    background: -webkit-radial-gradient(
-        10% 0, farthest-side ellipse,
-        rgba(41, 57, 64, 0.95),
-        rgba(148, 206, 184, 0.95),
-        rgba(227, 222, 157, 0.95)
-    ),
-    url("../img/bgnoise_lg_dark.png");
-    background: -moz-radial-gradient(
-        10% 0, farthest-side ellipse,
-        rgba(41, 57, 64, 0.95),
-        rgba(148, 206, 184, 0.95),
-        rgba(227, 222, 157, 0.95)
-    ),
-    url("../img/bgnoise_lg_dark.png");
   }
 }
 
@@ -79,11 +59,6 @@ body{
   small{
     color: #dfdfdf;
   }
-}
-
-body {
-  font-weight: 300;
-  font-size: 15px;
 }
 h1 {
   font-size: 50px;
@@ -108,69 +83,4 @@ input[type=search], input.search {
   padding-left: 26px;
   background-color:white;
   background:url(../img/search.png) 5px 5px no-repeat #fff;
-}
-
-ul, ol{
-  padding: 0;
-  margin: 0;
-}
-
-a:focus{
-  outline: none;
-  outline-offset: 0;
-}
-
-textarea:focus, input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus{
-  border-color: #bbbbbb;
-  outline: none;
-}
-
-select, textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"]{
-  color: $textColor;
-  @include border-radius(0);
-  @include transition(border-color .2s, box-shadow .2s);
-  padding: 8px 10px;
-
-  &:focus{
-    @include transition(border-color .2s, box-shadow .2s);
-    @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
-    border-color: $blue;
-  }
-}
-
-label{
-  margin: 0;
-  padding: 0;
-}
-
-ul li, ol li{
-  list-style: none;
 }
