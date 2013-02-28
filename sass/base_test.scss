@@ -1,7 +1,5 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,600,700italic,400,700');
-@import url(../lib/nvd3/src/nv.d3.css);
-@import url(../lib/font-awesome/css/font-awesome.min.css);
-
+//this file is used only to control the amount of lines
+//produced by me, excluding libraries, etc
 @mixin invalid-border {
   border-color: #e9322d;
   box-shadow: 0 0 6px #f8b9b7;
@@ -51,10 +49,6 @@
 @import "variables";
 
 @import "compass";
-@import "bootstrap/bootstrap";
-@import "bootstrap/responsive";
-@import "uniform.base";
-@import "datepicker";
 
 @import "svg";
 

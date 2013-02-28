@@ -84,3 +84,25 @@ input[type=search], input.search {
   background-color:white;
   background:url(../img/search.png) 5px 5px no-repeat #fff;
 }
+
+/* --------------------------------------------------------	*/
+/*	Custom styled scrollbar */
+/* --------------------------------------------------------	*/
+html:not(.osx) ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html:not(.osx) ::-webkit-scrollbar-track-piece {
+
+  background-color: #eee;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+}
+html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
+  opacity:0.4;
+  background-color: $linkRed;
+}
+
+html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
+  opacity:0.4;
+  background-color: $linkRed;
+}

@@ -126,8 +126,9 @@
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: $baseLineHeight;
+  //okendoken. commenting this out
   //border: 1px solid transparent;
-  @include border-radius(4px 4px 0 0);
+  //@include border-radius(4px 4px 0 0);
   &:hover,
   &:focus {
     border-color: $grayLighter $grayLighter #ddd;
@@ -139,7 +140,8 @@
 .nav-tabs > .active > a:focus {
   color: $gray;
   background-color: $bodyBackground;
-  border: 1px solid #ddd;
+  //okendoken. commenting this out
+  //border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
 }
