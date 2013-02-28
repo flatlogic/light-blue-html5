@@ -22,31 +22,34 @@
 
 /* @group Single Chosen */
 .chzn-container-single .chzn-single {
+  //okendoken. overriding it
   background-color: #ffffff;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0 );   
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
-  background-image: -webkit-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
-  background-image: -o-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
-  background-image: linear-gradient(#ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%); 
-  -webkit-border-radius: 5px;
-  -moz-border-radius   : 5px;
-  border-radius        : 5px;
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0 );
+  //background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
+  //background-image: -webkit-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  //background-image: -moz-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  //background-image: -o-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  //background-image: linear-gradient(#ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  //-webkit-border-radius: 5px;
+  //-moz-border-radius   : 5px;
+  //border-radius        : 5px;
+  @include border-radius($baseBorderRadius);
   -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
   background-clip        : padding-box;
-  border: 1px solid #aaaaaa;
-  -webkit-box-shadow: 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
-  -moz-box-shadow   : 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
-  box-shadow        : 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
+  border: 1px solid $btnBorder;
+  //-webkit-box-shadow: 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
+  //-moz-box-shadow   : 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
+  //box-shadow        : 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   display: block;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  height: 23px;
-  line-height: 24px;
+  height: 28px;
+  line-height: 28px;
   padding: 0 0 0 8px;
-  color: #444444;
+  color: $textColor;
   text-decoration: none;
 }
 .chzn-container-single .chzn-default {
@@ -86,7 +89,8 @@
   width: 18px;
 }
 .chzn-container-single .chzn-single div b {
-  background: url('chosen-sprite.png') no-repeat 0px 2px;
+  //okendoken. moving image a bit
+  background: url('chosen-sprite.png') no-repeat 0px 5px;
   display: block;
   width: 100%;
   height: 100%;
@@ -113,9 +117,12 @@
   font-size: 1em;
 }
 .chzn-container-single .chzn-drop {
-  -webkit-border-radius: 0 0 4px 4px;
-  -moz-border-radius   : 0 0 4px 4px;
-  border-radius        : 0 0 4px 4px;
+  //okendoken. commenting this out
+  //-webkit-border-radius: 0 0 4px 4px;
+  //-moz-border-radius   : 0 0 4px 4px;
+  //border-radius        : 0 0 4px 4px;
+  //adding our own
+  @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
   -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
   background-clip        : padding-box;
@@ -255,13 +262,14 @@
   display: list-item;
 }
 .chzn-container .chzn-results .highlighted {
-  background-color: #3875d7;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );  
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
-  background-image: -webkit-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
-  background-image: -moz-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
-  background-image: -o-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
-  background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
+  //okendoken. leaving only color
+  background-color: $blue;
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );
+  //background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
+  //background-image: -webkit-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+  //background-image: -moz-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+  //background-image: -o-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
+  //background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
   color: #fff;
 }
 .chzn-container .chzn-results li em {
@@ -313,29 +321,33 @@
 
 /* @group Active  */
 .chzn-container-active .chzn-single {
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
-  -moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
-  box-shadow        : 0 0 5px rgba(0,0,0,.3);
-  border: 1px solid #5897fb;
+  //okendoken. commenting everything out
+  //-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
+  //-moz-box-shadow   : 0 0 5px rgba(0,0,0,.3);
+  //box-shadow        : 0 0 5px rgba(0,0,0,.3);
+  //border: 1px solid #5897fb;
+  @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
+  border-color: $blue;
 }
 .chzn-container-active .chzn-single-with-drop {
-  border: 1px solid #aaa;
+  //okendoken
+  border: 1px solid $btnBorder;
   -webkit-box-shadow: 0 1px 0 #fff inset;
   -moz-box-shadow   : 0 1px 0 #fff inset;
   box-shadow        : 0 1px 0 #fff inset;
-  background-color: #eee;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #eeeeee), color-stop(80%, #ffffff));
-  background-image: -webkit-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
-  background-image: -moz-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
-  background-image: -o-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
-  background-image: linear-gradient(#eeeeee 20%, #ffffff 80%);
-  -webkit-border-bottom-left-radius : 0;
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-radius-bottomleft : 0;
-  -moz-border-radius-bottomright: 0;
-  border-bottom-left-radius : 0;
-  border-bottom-right-radius: 0;
+  //background-color: #eee;
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
+  //background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #eeeeee), color-stop(80%, #ffffff));
+  //background-image: -webkit-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+  //background-image: -moz-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+  //background-image: -o-linear-gradient(top, #eeeeee 20%, #ffffff 80%);
+  //background-image: linear-gradient(#eeeeee 20%, #ffffff 80%);
+  //-webkit-border-bottom-left-radius : 0;
+  //-webkit-border-bottom-right-radius: 0;
+  //-moz-border-radius-bottomleft : 0;
+  //-moz-border-radius-bottomright: 0;
+  //border-bottom-left-radius : 0;
+  //border-bottom-right-radius: 0;
 }
 .chzn-container-active .chzn-single-with-drop div {
   background: transparent;

@@ -7957,39 +7957,33 @@ div.uploader.disabled span.action {
 /* line 24, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-single {
   background-color: #ffffff;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0 );
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, white), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
-  background-image: -webkit-linear-gradient(top, white 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
-  background-image: -moz-linear-gradient(top, white 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
-  background-image: -o-linear-gradient(top, white 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
-  background-image: linear-gradient(#ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border: 1px solid #aaaaaa;
-  -webkit-box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #bbbbbb;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   display: block;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  height: 23px;
-  line-height: 24px;
+  height: 28px;
+  line-height: 28px;
   padding: 0 0 0 8px;
-  color: #444444;
+  color: #666666;
   text-decoration: none;
 }
 
-/* line 52, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 55, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-default {
   color: #999;
 }
 
-/* line 55, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 58, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-single span {
   margin-right: 26px;
   display: block;
@@ -8000,7 +7994,7 @@ div.uploader.disabled span.action {
   text-overflow: ellipsis;
 }
 
-/* line 64, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 67, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-single abbr {
   display: block;
   position: absolute;
@@ -8012,17 +8006,17 @@ div.uploader.disabled span.action {
   background: url("chosen-sprite.png") -42px 1px no-repeat;
 }
 
-/* line 74, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 77, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-single abbr:hover {
   background-position: -42px -10px;
 }
 
-/* line 77, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 80, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single.chzn-disabled .chzn-single abbr:hover {
   background-position: -42px -10px;
 }
 
-/* line 80, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 83, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-single div {
   position: absolute;
   right: 0;
@@ -8032,15 +8026,15 @@ div.uploader.disabled span.action {
   width: 18px;
 }
 
-/* line 88, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 91, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-single div b {
-  background: url("chosen-sprite.png") no-repeat 0px 2px;
+  background: url("chosen-sprite.png") no-repeat 0px 5px;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 94, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 98, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-search {
   padding: 3px 4px;
   position: relative;
@@ -8049,7 +8043,7 @@ div.uploader.disabled span.action {
   z-index: 1010;
 }
 
-/* line 101, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 105, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-search input {
   background: white url("chosen-sprite.png") no-repeat 100% -20px;
   background: url("chosen-sprite.png") no-repeat 100% -20px, -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
@@ -8065,25 +8059,25 @@ div.uploader.disabled span.action {
   font-size: 1em;
 }
 
-/* line 115, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 119, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single .chzn-drop {
-  -webkit-border-radius: 0 0 4px 4px;
-  -moz-border-radius: 0 0 4px 4px;
-  border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 1px 1px;
+  -moz-border-radius: 0 0 1px 1px;
+  border-radius: 0 0 1px 1px;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 
 /* @end */
-/* line 125, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 132, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single-nosearch .chzn-search input {
   position: absolute;
   left: -9000px;
 }
 
 /* @group Multi Chosen */
-/* line 131, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 138, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices {
   background-color: #fff;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
@@ -8101,20 +8095,20 @@ div.uploader.disabled span.action {
   position: relative;
 }
 
-/* line 147, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 154, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices li {
   float: left;
   list-style: none;
 }
 
-/* line 151, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 158, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-field {
   white-space: nowrap;
   margin: 0;
   padding: 0;
 }
 
-/* line 156, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 163, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-field input {
   color: #666;
   background: transparent !important;
@@ -8130,12 +8124,12 @@ div.uploader.disabled span.action {
   box-shadow: none;
 }
 
-/* line 170, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 177, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-field .default {
   color: #999;
 }
 
-/* line 173, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 180, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-choice {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -8162,7 +8156,7 @@ div.uploader.disabled span.action {
   cursor: default;
 }
 
-/* line 198, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 205, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-choice.search-choice-disabled {
   background-color: #e4e4e4;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#eeeeee', GradientType=0 );
@@ -8177,12 +8171,12 @@ div.uploader.disabled span.action {
   padding-right: 5px;
 }
 
-/* line 211, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 218, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-choice-focus {
   background: #d4d4d4;
 }
 
-/* line 214, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 221, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-choice .search-choice-close {
   display: block;
   position: absolute;
@@ -8194,19 +8188,19 @@ div.uploader.disabled span.action {
   background: url("chosen-sprite.png") -42px 1px no-repeat;
 }
 
-/* line 224, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 231, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-choice .search-choice-close:hover {
   background-position: -42px -10px;
 }
 
-/* line 227, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 234, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-choices .search-choice-focus .search-choice-close {
   background-position: -42px -10px;
 }
 
 /* @end */
 /* @group Results */
-/* line 233, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 240, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results {
   margin: 0 4px 4px 0;
   max-height: 240px;
@@ -8217,13 +8211,13 @@ div.uploader.disabled span.action {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 242, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 249, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-results {
   margin: -1px 0 0;
   padding: 0;
 }
 
-/* line 246, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 253, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results li {
   display: none;
   line-height: 15px;
@@ -8232,59 +8226,53 @@ div.uploader.disabled span.action {
   list-style: none;
 }
 
-/* line 253, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 260, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results .active-result {
   cursor: pointer;
   display: list-item;
 }
 
-/* line 257, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 264, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results .highlighted {
-  background-color: #3875d7;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3875d7', endColorstr='#2a62bc', GradientType=0 );
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
-  background-image: -webkit-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
-  background-image: -moz-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
-  background-image: -o-linear-gradient(top, #3875d7 20%, #2a62bc 90%);
-  background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
+  background-color: #618fb0;
   color: #fff;
 }
 
-/* line 267, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 275, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results li em {
   background: #feffde;
   font-style: normal;
 }
 
-/* line 271, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 279, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results .highlighted em {
   background: transparent;
 }
 
-/* line 274, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 282, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results .no-results {
   background: #f4f4f4;
   display: list-item;
 }
 
-/* line 278, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 286, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results .group-result {
   cursor: default;
   color: #999;
   font-weight: bold;
 }
 
-/* line 283, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 291, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results .group-option {
   padding-left: 15px;
 }
 
-/* line 286, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 294, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-multi .chzn-drop .result-selected {
   display: none;
 }
 
-/* line 289, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 297, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results-scroll {
   background: white;
   margin: 0 4px;
@@ -8295,7 +8283,7 @@ div.uploader.disabled span.action {
   z-index: 1;
 }
 
-/* line 297, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 305, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results-scroll span {
   display: inline-block;
   height: 17px;
@@ -8303,64 +8291,51 @@ div.uploader.disabled span.action {
   width: 9px;
 }
 
-/* line 303, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 311, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results-scroll-down {
   bottom: 0;
 }
 
-/* line 306, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 314, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results-scroll-down span {
   background: url("chosen-sprite.png") no-repeat -4px -3px;
 }
 
-/* line 309, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 317, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container .chzn-results-scroll-up span {
   background: url("chosen-sprite.png") no-repeat -22px -3px;
 }
 
 /* @end */
 /* @group Active  */
-/* line 315, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 323, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-active .chzn-single {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border: 1px solid #5897fb;
+  -webkit-box-shadow: inset 0 1px 1px rgba(97, 143, 176, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(97, 143, 176, 0.075);
+  box-shadow: inset 0 1px 1px rgba(97, 143, 176, 0.075);
+  border-color: #618fb0;
 }
 
-/* line 321, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 332, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-active .chzn-single-with-drop {
-  border: 1px solid #aaaaaa;
+  border: 1px solid #bbbbbb;
   -webkit-box-shadow: 0 1px 0 white inset;
   -moz-box-shadow: 0 1px 0 white inset;
   box-shadow: 0 1px 0 white inset;
-  background-color: #eee;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0 );
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(20%, #eeeeee), color-stop(80%, white));
-  background-image: -webkit-linear-gradient(top, #eeeeee 20%, white 80%);
-  background-image: -moz-linear-gradient(top, #eeeeee 20%, white 80%);
-  background-image: -o-linear-gradient(top, #eeeeee 20%, white 80%);
-  background-image: linear-gradient(#eeeeee 20%, #ffffff 80%);
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-bottomright: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
-/* line 340, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 352, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-active .chzn-single-with-drop div {
   background: transparent;
   border-left: none;
 }
 
-/* line 344, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 356, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-active .chzn-single-with-drop div b {
   background-position: -18px 2px;
 }
 
-/* line 347, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 359, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-active .chzn-choices {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -8368,100 +8343,100 @@ div.uploader.disabled span.action {
   border: 1px solid #5897fb;
 }
 
-/* line 353, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 365, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-active .chzn-choices .search-field input {
   color: #111111 !important;
 }
 
 /* @end */
 /* @group Disabled Support */
-/* line 359, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 371, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-disabled {
   cursor: default;
   opacity: 0.5 !important;
 }
 
-/* line 363, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 375, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-disabled .chzn-single {
   cursor: default;
 }
 
-/* line 366, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 378, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-disabled .chzn-choices .search-choice .search-choice-close {
   cursor: default;
 }
 
 /* @group Right to Left */
-/* line 371, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 383, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl {
   text-align: right;
 }
 
-/* line 372, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 384, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-single {
   padding: 0 8px 0 0;
   overflow: visible;
 }
 
-/* line 373, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 385, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-single span {
   margin-left: 26px;
   margin-right: 0;
   direction: rtl;
 }
 
-/* line 375, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 387, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-single div {
   left: 3px;
   right: auto;
 }
 
-/* line 376, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 388, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-single abbr {
   left: 26px;
   right: auto;
 }
 
-/* line 380, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 392, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-choices .search-field input {
   direction: rtl;
 }
 
-/* line 381, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 393, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-choices li {
   float: right;
 }
 
-/* line 382, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 394, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-choices .search-choice {
   padding: 3px 5px 3px 19px;
   margin: 3px 5px 3px 0;
 }
 
-/* line 383, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 395, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-choices .search-choice .search-choice-close {
   left: 4px;
   right: auto;
 }
 
-/* line 384, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 396, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl.chzn-container-single .chzn-results {
   margin: 0 0 4px 4px;
   padding: 0 4px 0 0;
 }
 
-/* line 385, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 397, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-results .group-option {
   padding-left: 0;
   padding-right: 15px;
 }
 
-/* line 386, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 398, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl.chzn-container-active .chzn-single-with-drop div {
   border-right: none;
 }
 
-/* line 387, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 399, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-rtl .chzn-search input {
   background: white url("chosen-sprite.png") no-repeat -30px -20px;
   background: url("chosen-sprite.png") no-repeat -30px -20px, -webkit-gradient(linear, 0 0, 0 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
@@ -8473,12 +8448,12 @@ div.uploader.disabled span.action {
   direction: rtl;
 }
 
-/* line 397, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 409, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single.chzn-rtl .chzn-single div b {
   background-position: 6px 2px;
 }
 
-/* line 400, C:/projects/admin/sass/lib/_chosen.scss */
+/* line 412, C:/projects/admin/sass/lib/_chosen.scss */
 .chzn-container-single.chzn-rtl .chzn-single-with-drop div b {
   background-position: -12px 2px;
 }
@@ -8486,7 +8461,7 @@ div.uploader.disabled span.action {
 /* @end */
 /* @group Retina compatibility */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
-  /* line 407, C:/projects/admin/sass/lib/_chosen.scss */
+  /* line 419, C:/projects/admin/sass/lib/_chosen.scss */
   .chzn-rtl .chzn-search input, .chzn-container-single .chzn-single abbr, .chzn-container-single .chzn-single div b, .chzn-container-single .chzn-search input, .chzn-container-multi .chzn-choices .search-choice .search-choice-close, .chzn-container .chzn-results-scroll-down span, .chzn-container .chzn-results-scroll-up span {
     background-image: url("chosen-sprite@2x.png") !important;
     background-repeat: no-repeat !important;
@@ -8656,13 +8631,13 @@ html:not(.osx) ::-webkit-scrollbar-track-piece {
 /* line 106, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   opacity: 0.4;
-  background-color: #da3712;
+  background-color: #e5603b;
 }
 
 /* line 111, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   opacity: 0.4;
-  background-color: #da3712;
+  background-color: #e5603b;
 }
 
 /* line 11, C:/projects/admin/sass/application.scss */
