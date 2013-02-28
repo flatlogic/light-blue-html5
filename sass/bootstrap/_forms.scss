@@ -42,13 +42,18 @@ input,
 button,
 select,
 textarea {
-  @include font-shorthand($baseFontSize, normal, $baseLineHeight); // Set size, weight, line-height here
+  //okendoken. changing font-weight
+  @include font-shorthand($baseFontSize, 300, $baseLineHeight); // Set size, weight, line-height here
 }
 input,
 button,
 select,
 textarea {
   font-family: $baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
+  //okendoken. removing outline
+  &:focus{
+    outline: 0;
+  }
 }
 
 // Identify controls by their labels

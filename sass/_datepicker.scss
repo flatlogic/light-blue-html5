@@ -12,7 +12,7 @@
 	left: 0;
 	padding: 4px;
 	margin-top: 1px;
-	@include border-radius($baseBorderRadius);
+	@include border-radius($borderRadiusLarge);
 	&:before {
 		content: '';
 		display: inline-block;
@@ -46,7 +46,7 @@
 		text-align: center;
 		width: 20px;
 		height: 20px;
-        @include border-radius($baseBorderRadius);
+        @include border-radius($borderRadiusLarge);
 	}
 	td {
 		&.day:hover {
@@ -77,7 +77,7 @@
 			float: left;
 			margin: 2px;
 			cursor: pointer;
-            @include border-radius($baseBorderRadius);
+            @include border-radius($borderRadiusLarge);
 			&:hover {
 				background: $grayLighter;
 			}

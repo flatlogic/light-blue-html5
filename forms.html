@@ -126,31 +126,31 @@
                         <legend><small>Personal Info</small></legend>
                         <div class="control-group">
                             <label class="control-label" for="prefix">Prefix</label>
-                            <div class="controls">
+                            <div class="controls controls-row">
                                 <input type="text" id="prefix" class="span6">
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="first-name">First Name <span class="required">*</span></label>
-                            <div class="controls">
+                            <div class="controls controls-row">
                                 <input type="text" id="first-name" class="span11" >
                             </div>
                         </div>
                         <div class="control-group">
                             <label class="control-label" for="last-name">Last Name <span class="required">*</span></label>
-                            <div class="controls">
+                            <div class="controls controls-row">
                                 <input type="text" id="last-name" class="span11" >
                             </div>
                         </div>
                         <div class="control-group">
                             <label for="middle-name" class="control-label">Middle Name / Initial</label>
-                            <div class="controls">
+                            <div class="controls controls-row">
                                 <input id="middle-name" class="span11" type="text" name="accountMiddleName" value="">
                             </div>
                         </div>
                         <div class="control-group">
                             <label for="gender" class="control-label">Gender</label>
-                            <div class="controls">
+                            <div class="controls controls-row">
                                 <input id="gender-input" type="hidden" name="gender" value="female">
                                 <div id="gender" class="btn-group change" data-toggle="buttons-radio" data-target="gender-input">
                                     <button type="button" class="btn" data-toggle-class="btn-primary" name="gender" value="male">&nbsp; Male &nbsp;</button>
@@ -160,24 +160,30 @@
                         </div>
                         <div class="control-group">
                             <label for="date-of-birth" class="control-label">Date Of Birth <span class="required">*</span></label>
-                            <div class="controls">
+                            <div class="controls controls-row">
                                 <input id="date-of-birth" class="span6" type="text" name="accountDob" value="">
                             </div>
                         </div>
                         <legend><small>Contact Info</small></legend>
                         <div class="control-group">
                             <label for="email" class="control-label">Email <span class="required">*</span></label>
-                            <div class="controls">
+                            <div class="controls controls-row">
                                 <div class="input-append block">
                                     <input id="email" type="email" required="required" class="span6"
                                            name="email" value="">
-                                    <a class="btn btn-success" type="button">write an email</a> </div>
+                                    <a class="btn btn-success" type="button">Write an email</a> </div>
                             </div>
                         </div>
                         <div class="control-group">
-                            <label for="accountPhoneNumber" class="control-label">Phone <span class="required">*</span></label>
+                            <label for="phone" class="control-label">Phone <span class="required">*</span></label>
                             <div class="controls controls-row">
-                                <input id="accountPhoneNumber" class="span6 maskPhone margin-right5" type="text" name="accountPhoneNumber" value="" maxlength="28">
+                                <input id="phone" class="span6 maskPhone margin-right5" type="text"
+                                       name="phone" maxlength="28">
+                                <select id="phone-type" class="selectpicker">
+                                    <option>Mobile</option>
+                                    <option>Home</option>
+                                    <option>Work</option>
+                                </select>
                             </div>
                         </div>
                     </fieldset>
@@ -208,7 +214,9 @@
 <script src="js/bootstrap/bootstrap-tooltip.js"></script>
 <script src="js/bootstrap/bootstrap-popover.js"></script>
 <script src="js/bootstrap/bootstrap-button.js"></script>
+<script src="js/bootstrap/bootstrap-dropdown.js"></script>
 <script src="lib/bootstrap-datepicker.js"></script>
+<script src="lib/bootstrap-select.js"></script>
 
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
