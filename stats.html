@@ -159,8 +159,12 @@
         <!--</div>-->
     </div>
 </div>
+
+<!-- d3, nvd3-->
 <script src="lib/nvd3/lib/d3.v2.js"></script>
 <script src="lib/nvd3/nv.d3.custom.js"></script>
+
+<!-- nvd3 models -->
 <script src="lib/nvd3/src/models/scatter.js"></script>
 <script src="lib/nvd3/src/models/axis.js"></script>
 <script src="lib/nvd3/src/models/legend.js"></script>
@@ -173,14 +177,22 @@
 <script src="lib/nvd3/src/models/lineChart.js"></script>
 <script src="lib/nvd3/src/models/multiBar.js"></script>
 <script src="lib/nvd3/src/models/multiBarChart.js"></script>
+
+<!--backbone and friends -->
 <script src="lib/backbone/underscore-min.js"></script>
+
+<!-- bootstrap default plugins -->
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
 <script src="js/bootstrap/bootstrap-tooltip.js"></script>
 <script src="js/bootstrap/bootstrap-popover.js"></script>
 <script src="js/bootstrap/bootstrap-button.js"></script>
+
+<!-- basic application js-->
 <script src="js/app.js"></script>
-<script src="js/stats.js"></script>
 <script src="js/settings.js"></script>
+
+<!-- page specific -->
+<script src="js/stats.js"></script>
 
 
 <script type="text/template" id="settings-template">
@@ -188,16 +200,16 @@
         Sidebar on the
         <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         Background
         <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
             <% two = background == 'two'%>
-            <button type="button" data-value="one" class="btn <%= two? '' : 'active' %>">One</button>
-            <button type="button" data-value="two" class="btn <%= two? 'active' : '' %>">Two</button>
+            <button type="button" data-value="one" class="btn btn-transparent <%= two? '' : 'active' %>">One</button>
+            <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
         </div>
     </div>
 </script>
