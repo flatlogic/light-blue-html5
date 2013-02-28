@@ -72,6 +72,7 @@ html {
 body {
   min-width: 400px;
   font-weight: 300;
+  padding-bottom: 100px;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9ImZhcnRoZXN0LXNpZGUiIGN5PSJlbGxpcHNlIiByPSIxMDAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoMTk0LCAxMjMsIDEwOCwgMC45NCkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSgyMzgsIDIzMSwgMTg5LCAwLjk0KSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgxMzcsIDExMSwgODIsIDAuOTQpIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g'), url('../img/bgnoise_lg_dark.png?1361869733');
   background: -webkit-gradient(radial, farthest-side ellipse at 80% 0, 0, farthest-side ellipse at 80% 0, 100, color-stop(0%, rgba(194, 123, 108, 0.94)), color-stop(50%, rgba(238, 231, 189, 0.94)), color-stop(100%, rgba(137, 111, 82, 0.94))), url('../img/bgnoise_lg_dark.png?1361869733');
   background: -webkit-radial-gradient(farthest-side ellipse at 80% 0, rgba(194, 123, 108, 0.94), rgba(238, 231, 189, 0.94), rgba(137, 111, 82, 0.94)), url('../img/bgnoise_lg_dark.png?1361869733');
@@ -81,7 +82,7 @@ body {
   background: -webkit-radial-gradient(80% 0, farthest-side ellipse, rgba(194, 123, 108, 0.94), rgba(238, 231, 189, 0.94), rgba(137, 111, 82, 0.94)), url("../img/bgnoise_lg_dark.png");
   background: -moz-radial-gradient(80% 0, farthest-side ellipse, rgba(194, 123, 108, 0.94), rgba(238, 231, 189, 0.94), rgba(137, 111, 82, 0.94)), url("../img/bgnoise_lg_dark.png");
 }
-/* line 47, C:/projects/admin/sass/_general.scss */
+/* line 48, C:/projects/admin/sass/_general.scss */
 body.background-two {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9ImZhcnRoZXN0LXNpZGUiIGN5PSJlbGxpcHNlIiByPSIxMDAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoNDEsIDU3LCA2NCwgMC45NSkiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0icmdiYSgxNDgsIDIwNiwgMTg0LCAwLjk1KSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgyMjcsIDIyMiwgMTU3LCAwLjk1KSIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('../img/bgnoise_lg_dark.png?1361869733');
   background: -webkit-gradient(radial, farthest-side ellipse at 10% 0, 0, farthest-side ellipse at 10% 0, 100, color-stop(0%, rgba(41, 57, 64, 0.95)), color-stop(50%, rgba(148, 206, 184, 0.95)), color-stop(100%, rgba(227, 222, 157, 0.95))), url('../img/bgnoise_lg_dark.png?1361869733');
@@ -93,49 +94,49 @@ body.background-two {
   background: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(41, 57, 64, 0.95), rgba(148, 206, 184, 0.95), rgba(227, 222, 157, 0.95)), url("../img/bgnoise_lg_dark.png");
 }
 
-/* line 56, C:/projects/admin/sass/_general.scss */
+/* line 57, C:/projects/admin/sass/_general.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
-/* line 59, C:/projects/admin/sass/_general.scss */
+/* line 60, C:/projects/admin/sass/_general.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   color: #dfdfdf;
 }
 
-/* line 63, C:/projects/admin/sass/_general.scss */
+/* line 64, C:/projects/admin/sass/_general.scss */
 h1 {
   font-size: 50px;
 }
 
-/* line 66, C:/projects/admin/sass/_general.scss */
+/* line 67, C:/projects/admin/sass/_general.scss */
 h2 {
   font-size: 26px;
 }
 
-/* line 70, C:/projects/admin/sass/_general.scss */
+/* line 71, C:/projects/admin/sass/_general.scss */
 h3 {
   font-size: 20px;
 }
 
-/* line 74, C:/projects/admin/sass/_general.scss */
+/* line 75, C:/projects/admin/sass/_general.scss */
 h4 {
   font-size: 15px;
 }
 
-/* line 78, C:/projects/admin/sass/_general.scss */
+/* line 79, C:/projects/admin/sass/_general.scss */
 h5,
 h6 {
   font-size: 11px;
 }
 
-/* line 82, C:/projects/admin/sass/_general.scss */
+/* line 83, C:/projects/admin/sass/_general.scss */
 input[type=search], input.search {
   padding-left: 26px;
   background-color: white;
   background: url(../img/search.png) 5px 5px no-repeat white;
 }
 
-/* line 89, C:/projects/admin/sass/_general.scss */
+/* line 90, C:/projects/admin/sass/_general.scss */
 ul ul,
 ol ul {
   list-style: none;
@@ -144,25 +145,25 @@ ol ul {
 /* --------------------------------------------------------	*/
 /*	Custom styled scrollbar */
 /* --------------------------------------------------------	*/
-/* line 96, C:/projects/admin/sass/_general.scss */
+/* line 97, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 
-/* line 100, C:/projects/admin/sass/_general.scss */
+/* line 101, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-track-piece {
   background-color: #eee;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* line 105, C:/projects/admin/sass/_general.scss */
+/* line 106, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   opacity: 0.4;
   background-color: #da3712;
 }
 
-/* line 110, C:/projects/admin/sass/_general.scss */
+/* line 111, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   opacity: 0.4;
   background-color: #da3712;
@@ -1756,6 +1757,20 @@ form ul.parsley-error-list li {
 /* line 1282, C:/projects/admin/sass/_base.scss */
 .form-horizontal.label-left .control-label {
   text-align: left;
+}
+
+/* line 1286, C:/projects/admin/sass/_base.scss */
+.section {
+  font-size: 15px;
+  color: #999999;
+  vertical-align: middle;
+  line-height: 30px;
+  padding: 10px 0 0;
+}
+
+/* line 1294, C:/projects/admin/sass/_base.scss */
+.controls-row + .controls-row {
+  margin-top: 10px;
 }
 
 @media (max-height: 800px) {

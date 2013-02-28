@@ -1282,3 +1282,15 @@ form ul.parsley-error-list{
 .form-horizontal.label-left .control-label{
   text-align: left;
 }
+
+.section{
+  font-size: $baseFontSize;
+  color: $textLightGray;
+  vertical-align: middle;
+  line-height: 30px;
+  padding: 10px 0 0;
+}
+
+.controls-row + .controls-row{
+  margin-top: 10px;
+}

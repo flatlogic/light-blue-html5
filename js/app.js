@@ -22,6 +22,7 @@ if (chartsOff){
 COLOR_VALUES = [$red, $orange, $green, $blue, $teal, $redDark];
 
 var colors = function(){
+    if (!window.d3) return false;
     //d3 built-in colors
     //return d3.scale.ordinal().range(['#1BA1E2', '#8cbf26', '#f0aa25', '#8cbf26', '#cd4e21', '#ea99ac']);
     return d3.scale.ordinal().range(COLOR_VALUES);
