@@ -12,7 +12,7 @@
 	left: 0;
 	padding: 4px;
 	margin-top: 1px;
-	@include border-radius(4px);
+	@include border-radius($baseBorderRadius);
 	&:before {
 		content: '';
 		display: inline-block;
@@ -46,26 +46,29 @@
 		text-align: center;
 		width: 20px;
 		height: 20px;
-        @include border-radius(4px);
+        @include border-radius($baseBorderRadius);
 	}
 	td {
 		&.day:hover {
-			background: $grayLighter;
+			background: $lightGray;
 			cursor: pointer;
 		}
 		&.day.disabled {
-			color: $grayLighter;
+			color: $lightGray;
 		}
 		&.old,
 		&.new {
-			color: $grayLight;
+			color: lighten($textColor, 20%);
 		}
 		&.active,
 		&.active:hover {
-			@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
-			color: #fff;
-			text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-		}
+            //okendoken. commenting this out
+            //@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
+            background: $btnPrimaryBackground;
+            color: #fff;
+            //okendoken. removed
+            //text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+        }
 		span {
 			display: block;
 			width: 47px;
@@ -74,14 +77,16 @@
 			float: left;
 			margin: 2px;
 			cursor: pointer;
-            @include border-radius(4px);
+            @include border-radius($baseBorderRadius);
 			&:hover {
 				background: $grayLighter;
 			}
 			&.active {
-				@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
+              //okendoken. commenting this out
+              //@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
+              background: $btnPrimaryBackground;
 				color: #fff;
-				text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+				//text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
 			&.old {
 				color: $grayLight;
