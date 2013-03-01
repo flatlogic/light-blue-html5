@@ -17,11 +17,17 @@ $lightGray:             #f8f8f8 !default;
 $shadowGray:            #676767 !default;
 $linkRed:               #da3712 !default;
 $white:                 #ffffff !default;
-$lightBlue:             #eff5ef;
-$lightBrown: #f5f2ee;
+$lightBlue:             #eff5ef !default;
+$lightBrown:            #f5f2ee !default;
+$lightRed:              #f8f3f0 !default;
+$lightGreen:            #efffee !default;
+$lightOrange:           #fff8e4 !default;
 
 $colors: $lime, $red, $redDark, $blue, $green, $orange, $brown, $teal;
 $color_names: lime, red, dark-red, blue, green, orange, brown, teal;
+
+$light_colors: $lightGray, $lightRed, $lightBlue, $lightGreen, $lightOrange, $lightBrown;
+$light_color_names: gray, red, blue, green, orange, brown;
 
 $widget-shadow: 0 0 12px $shadowGray;
 $widget-border-radius: 1px;

@@ -27,10 +27,12 @@ $(function(){
             if (style == "two"){
                 $body.addClass("background-two");
                 $(".light-brown").removeClass("light-brown").addClass("light-blue");
+                $(".light-brown-color").removeClass("light-brown-color").addClass("light-blue-color");
                 $(".dark-brown").removeClass("dark-brown").addClass("dark-blue");
             } else {
                 $body.removeClass("background-two");
                 $(".light-blue").removeClass("light-blue").addClass("light-brown");
+                $(".light-blue-color").removeClass("light-blue-color").addClass("light-brown-color");
                 $(".dark-blue").removeClass("dark-blue").addClass("dark-brown");
             }
         },

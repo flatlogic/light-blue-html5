@@ -1,10 +1,19 @@
 @include sidebar-icons(".sidebar-icons");
 
+$i: 1;
+@each $color in $light_colors{
+
+  .light-#{nth($light_color_names, $i)}{
+    background: $color !important;
+  }
+  $i: $i + 1;
+}
+
 input.parsley-error{
   @include invalid-border;
 }
 
-ul.parsley-error-list{
+.parsley-error-list{
   font-size: 12px;
 
   li{
@@ -235,7 +244,7 @@ ul.parsley-error-list{
   .actions{
     position: absolute;
     right: 0;
-    top: 0;
+    top: -2px;
     a{
       color: inherit;
       text-decoration: none;
@@ -313,14 +322,6 @@ ul.parsley-error-list{
 }
 
 .widget, .bar{
-  &.light-red{
-    background: #f8f3f0;
-  }
-
-  &.light-blue{
-    background: $lightBlue;
-    background-color: $lightBlue;
-  }
 
   &.transparent{
     background: transparent;
@@ -337,15 +338,6 @@ ul.parsley-error-list{
 
   &.dark-brown{
     background: $backgroundBrown;
-  }
-
-  &.light-gray{
-    background: $lightGray;
-  }
-
-  &.light-brown{
-    background: $lightBrown;
-    background-color: $lightBrown;
   }
 }
 
@@ -407,13 +399,6 @@ ul.parsley-error-list{
 
   .control{
     background: darken($lightGray, 2%);
-    &.light-brown{
-      background-color: $lightBrown;
-    }
-
-    &.light-blue{
-      background-color: $lightBlue;
-    }
     text-align: center;
     font-weight: 400;
     padding: 3px 2%;
@@ -1151,23 +1136,11 @@ ul.parsley-error-list{
 
 .overview{
 
-  &.light-red{
-    color: #f8f3f0;
-  }
-
-  &.light-blue{
+  &.light-blue-color{
     color: $lightBlue;
   }
 
-  &.adaptive-color{
-    color: rgba(white, 0.9);
-  }
-
-  &.light-gray{
-    color: $lightGray;
-  }
-
-  &.light-brown{
+  &.light-brown-color{
     color: $lightBrown;
   }
 
@@ -1270,6 +1243,17 @@ ul.parsley-error-list{
   }
 }
 
+.btn-inverse{
+  color: $textColor;
+  border-bottom-color: rgba(0, 0, 0, .2);
+
+  &:hover,
+  :focus{
+    color: $textColor;
+    @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
+  }
+}
+
 .accordion-group{
   margin: 0;
   border: none;
@@ -1296,6 +1280,20 @@ ul.parsley-error-list{
   margin-top: 10px;
 }
 
+.help-block{
+  font-size: 13px;
+}
+
 input.input-padding-increased{
   padding: 8px 10px;
+}
+
+.checkbox{
+  .checker{
+    float: left;
+    margin-left: -20px;
+    input[type="checkbox"]{
+      margin-left: 0;
+    }
+  }
 }

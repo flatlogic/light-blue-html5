@@ -1,5 +1,5 @@
 $(function(){
-    $('#date-of-birth').datepicker();
+    $('.date-picker').datepicker();
 
     $(".btn-group > .btn[data-toggle-class]").click(function(){
         var $this = $(this);
@@ -14,15 +14,21 @@ $(function(){
     $('.selectpicker + .bootstrap-select span.caret').replaceWith("<i class='icon-caret-down'></i>");
     $('.selectpicker + .bootstrap-select span.pull-left').removeClass("pull-left");
     $("#phone, #fax").mask("(999) 999-9999");
-    $(".chzn-select").chosen();
+
+    //teach select to accept data-attributes
+    $(".chzn-select").each(function(){
+        $(this).select2($(this).data());
+    });
 
     //changing default parsley behaviour so it adds error messages to labels.
     //label - is a parent of element
-    $("form").parsley({
+    $("#user-form").parsley({
         errors: {
             container: function ( elem, isRadioOrCheckbox ) {
                 return elem.parents(".control-group").children("label");
             }
         }
-    })
+    });
+
+    $("input:checkbox").uniform();
 });
