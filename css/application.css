@@ -7974,6 +7974,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background-color: #fff;
 }
 
 /* line 68, C:/projects/admin/sass/lib/_select2.scss */
@@ -8146,9 +8147,9 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 .select2-container-active .select2-choices {
   border: 1px solid #618fb0;
   outline: none;
-  -webkit-box-shadow: inset 0 1px 1px rgba(97, 143, 176, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(97, 143, 176, 0.075);
-  box-shadow: inset 0 1px 1px rgba(97, 143, 176, 0.075);
+  -webkit-box-shadow: inset 0 1px 2px rgba(97, 143, 176, 0.2);
+  -moz-box-shadow: inset 0 1px 2px rgba(97, 143, 176, 0.2);
+  box-shadow: inset 0 1px 2px rgba(97, 143, 176, 0.2);
 }
 
 /* line 266, C:/projects/admin/sass/lib/_select2.scss */
@@ -8346,12 +8347,12 @@ disabled look for disabled choices in the results dropdown
   cursor: text;
   overflow: hidden;
   background-color: #fff;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
-  background-image: -webkit-linear-gradient(top, #eeeeee 1%, white 15%);
-  background-image: -moz-linear-gradient(top, #eeeeee 1%, white 15%);
-  background-image: -o-linear-gradient(top, #eeeeee 1%, white 15%);
-  background-image: -ms-linear-gradient(top, #eeeeee 1%, white 15%);
-  background-image: linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(6%, white));
+  background-image: -webkit-linear-gradient(top, #eeeeee 1%, white 6%);
+  background-image: -moz-linear-gradient(top, #eeeeee 1%, white 6%);
+  background-image: -o-linear-gradient(top, #eeeeee 1%, white 6%);
+  background-image: -ms-linear-gradient(top, #eeeeee 1%, white 6%);
+  background-image: linear-gradient(top, #eeeeee 1%, #ffffff 6%);
 }
 
 /* line 442, C:/projects/admin/sass/lib/_select2.scss */
@@ -8366,33 +8367,33 @@ disabled look for disabled choices in the results dropdown
 
 /* line 450, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi.select2-container-active .select2-choices {
-  border: 1px solid #5897fb;
+  border: 1px solid #618fb0;
   outline: none;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(97, 143, 176, 0.2);
+  -moz-box-shadow: inset 0 1px 2px rgba(97, 143, 176, 0.2);
+  box-shadow: inset 0 1px 2px rgba(97, 143, 176, 0.2);
 }
 
-/* line 458, C:/projects/admin/sass/lib/_select2.scss */
+/* line 456, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices li {
   float: left;
   list-style: none;
 }
 
-/* line 462, C:/projects/admin/sass/lib/_select2.scss */
+/* line 460, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-field {
   margin: 0;
   padding: 0;
   white-space: nowrap;
 }
 
-/* line 468, C:/projects/admin/sass/lib/_select2.scss */
+/* line 466, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-field input {
   padding: 5px;
   margin: 1px 0;
   font-family: sans-serif;
   font-size: 100%;
-  color: #666;
+  color: #666666;
   outline: 0;
   border: 0;
   -webkit-box-shadow: none;
@@ -8401,28 +8402,28 @@ disabled look for disabled choices in the results dropdown
   background: transparent !important;
 }
 
-/* line 483, C:/projects/admin/sass/lib/_select2.scss */
+/* line 481, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-field input.select2-active {
   background: white url("select2-spinner.gif") no-repeat 100% !important;
 }
 
-/* line 487, C:/projects/admin/sass/lib/_select2.scss */
+/* line 485, C:/projects/admin/sass/lib/_select2.scss */
 .select2-default {
   color: #999999 !important;
 }
 
-/* line 491, C:/projects/admin/sass/lib/_select2.scss */
+/* line 489, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-choice {
   padding: 3px 5px 3px 18px;
-  margin: 3px 0 3px 5px;
+  margin: 5px 0 5px 5px;
   position: relative;
-  line-height: 13px;
-  color: #333;
+  line-height: 14px;
+  color: #666666;
   cursor: default;
-  border: 1px solid #aaaaaa;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
@@ -8435,27 +8436,20 @@ disabled look for disabled choices in the results dropdown
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #e4e4e4;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#f4f4f4', GradientType=0 );
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
-  background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: -ms-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-color: #f8f8f8;
 }
 
-/* line 529, C:/projects/admin/sass/lib/_select2.scss */
+/* line 519, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-choice span {
   cursor: default;
 }
 
-/* line 532, C:/projects/admin/sass/lib/_select2.scss */
+/* line 522, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-choice-focus {
   background: #d4d4d4;
 }
 
-/* line 536, C:/projects/admin/sass/lib/_select2.scss */
+/* line 526, C:/projects/admin/sass/lib/_select2.scss */
 .select2-search-choice-close {
   display: block;
   width: 12px;
@@ -8468,23 +8462,23 @@ disabled look for disabled choices in the results dropdown
   background: url("select2.png") right top no-repeat;
 }
 
-/* line 549, C:/projects/admin/sass/lib/_select2.scss */
+/* line 539, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-search-choice-close {
   left: 3px;
 }
 
-/* line 553, C:/projects/admin/sass/lib/_select2.scss */
+/* line 543, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover {
   background-position: right -11px;
 }
 
-/* line 556, C:/projects/admin/sass/lib/_select2.scss */
+/* line 546, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close {
   background-position: right -11px;
 }
 
 /* disabled styles */
-/* line 561, C:/projects/admin/sass/lib/_select2.scss */
+/* line 551, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi.select2-container-disabled .select2-choices {
   background-color: #f4f4f4;
   background-image: none;
@@ -8492,7 +8486,7 @@ disabled look for disabled choices in the results dropdown
   cursor: default;
 }
 
-/* line 568, C:/projects/admin/sass/lib/_select2.scss */
+/* line 558, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice {
   padding: 3px 5px 3px 5px;
   border: 1px solid #dddddd;
@@ -8500,19 +8494,19 @@ disabled look for disabled choices in the results dropdown
   background-color: #f4f4f4;
 }
 
-/* line 575, C:/projects/admin/sass/lib/_select2.scss */
+/* line 565, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice .select2-search-choice-close {
   display: none;
 }
 
 /* end multiselect */
-/* line 582, C:/projects/admin/sass/lib/_select2.scss */
+/* line 572, C:/projects/admin/sass/lib/_select2.scss */
 .select2-result-selectable .select2-match,
 .select2-result-unselectable .select2-match {
   text-decoration: underline;
 }
 
-/* line 586, C:/projects/admin/sass/lib/_select2.scss */
+/* line 576, C:/projects/admin/sass/lib/_select2.scss */
 .select2-offscreen {
   position: absolute;
   left: -10000px;
@@ -8520,14 +8514,14 @@ disabled look for disabled choices in the results dropdown
 
 /* Retina-ize icons */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-  /* line 594, C:/projects/admin/sass/lib/_select2.scss */
+  /* line 584, C:/projects/admin/sass/lib/_select2.scss */
   .select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice div b {
     background-image: url("select2x2.png") !important;
     background-repeat: no-repeat !important;
     background-size: 60px 40px !important;
   }
 
-  /* line 599, C:/projects/admin/sass/lib/_select2.scss */
+  /* line 589, C:/projects/admin/sass/lib/_select2.scss */
   .select2-search input {
     background-position: 100% -21px !important;
   }
@@ -10304,6 +10298,11 @@ input.input-padding-increased {
 /* line 1295, C:/projects/admin/sass/_base.scss */
 .checkbox .checker input[type="checkbox"] {
   margin-left: 0;
+}
+
+/* line 1301, C:/projects/admin/sass/_base.scss */
+.select-block-level {
+  width: 100%;
 }
 
 @media (max-height: 800px) {

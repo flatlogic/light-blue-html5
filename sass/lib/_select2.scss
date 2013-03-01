@@ -55,7 +55,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   -ms-user-select: none;
   user-select: none;
 
-  //background-color: #fff;
+  background-color: #fff;
   //background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eeeeee), color-stop(0.5, white));
   //background-image: -webkit-linear-gradient(center bottom, #eeeeee 0%, white 50%);
   //background-image: -moz-linear-gradient(center bottom, #eeeeee 0%, white 50%);
@@ -260,7 +260,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   //-webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
   //-moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
   //box-shadow: 0 0 5px rgba(0,0,0,.3);
-  @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
+  @include box-shadow(inset 0 1px 2px rgba($blue, 0.2));
 }
 
 .select2-dropdown-open .select2-choice {
@@ -431,12 +431,12 @@ disabled look for disabled choices in the results dropdown
   overflow: hidden;
 
   background-color: #fff;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(15%, #ffffff));
-  background-image: -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
-  background-image: -moz-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
-  background-image: -o-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
-  background-image: -ms-linear-gradient(top, #eeeeee 1%, #ffffff 15%);
-  background-image: linear-gradient(top, #eeeeee 1%, #ffffff 15%);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(1%, #eeeeee), color-stop(6%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee 1%, #ffffff 6%);
+  background-image: -moz-linear-gradient(top, #eeeeee 1%, #ffffff 6%);
+  background-image: -o-linear-gradient(top, #eeeeee 1%, #ffffff 6%);
+  background-image: -ms-linear-gradient(top, #eeeeee 1%, #ffffff 6%);
+  background-image: linear-gradient(top, #eeeeee 1%, #ffffff 6%);
 }
 
 .select2-locked {
@@ -448,12 +448,10 @@ disabled look for disabled choices in the results dropdown
 }
 
 .select2-container-multi.select2-container-active .select2-choices {
-  border: 1px solid #5897fb;
+  border: 1px solid $blue;
   outline: none;
 
-  -webkit-box-shadow: 0 0 5px rgba(0,0,0,.3);
-  -moz-box-shadow: 0 0 5px rgba(0,0,0,.3);
-  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  @include box-shadow(inset 0 1px 2px rgba($blue, 0.2));
 }
 .select2-container-multi .select2-choices li {
   float: left;
@@ -471,7 +469,7 @@ disabled look for disabled choices in the results dropdown
 
   font-family: sans-serif;
   font-size: 100%;
-  color: #666;
+  color: $textColor;
   outline: 0;
   border: 0;
   -webkit-box-shadow: none;
@@ -489,18 +487,17 @@ disabled look for disabled choices in the results dropdown
 }
 
 .select2-container-multi .select2-choices .select2-search-choice {
+  //okendoken. overriding
   padding: 3px 5px 3px 18px;
-  margin: 3px 0 3px 5px;
+  margin: 5px 0 5px 5px;
   position: relative;
 
-  line-height: 13px;
-  color: #333;
+  line-height: 14px;
+  color: $textColor;
   cursor: default;
-  border: 1px solid #aaaaaa;
+  border: 1px solid #ccc;
 
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  @include border-radius($baseBorderRadius);
 
   -webkit-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
   -moz-box-shadow: 0 0 2px #ffffff inset, 0 1px 0 rgba(0,0,0,0.05);
@@ -517,14 +514,7 @@ disabled look for disabled choices in the results dropdown
   -ms-user-select: none;
   user-select: none;
 
-  background-color: #e4e4e4;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#f4f4f4', GradientType=0 );
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
-  background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: -ms-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
-  background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-color: $lightGray;
 }
 .select2-container-multi .select2-choices .select2-search-choice span {
   cursor: default;
