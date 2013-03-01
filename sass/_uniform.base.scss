@@ -224,11 +224,17 @@ div.checker span {
 
 div.checker:active span,
 div.checker.active span {
+  &:before{
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .45);
+  }
 	//background-position: (-1 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker.focus span,
 div.checker:hover span {
+  &:before{
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  }
 	//background-position: (-2 * $checkbox-width) $checkbox-voffset;
 }
 
@@ -236,6 +242,9 @@ div.checker.focus:active span,
 div.checker:active:hover span,
 div.checker.active:hover span,
 div.checker.focus.active span {
+  &:before{
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  }
 	//background-position: (-3 * $checkbox-width) $checkbox-voffset;
 }
 
@@ -263,13 +272,13 @@ div.checker.active.focus span.checked {
 div.checker.disabled span,
 div.checker.disabled:active span,
 div.checker.disabled.active span {
-	background-position: (-8 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-8 * $checkbox-width) $checkbox-voffset;
 }
 
 div.checker.disabled span.checked,
 div.checker.disabled:active span.checked,
 div.checker.disabled.active span.checked {
-	background-position: (-9 * $checkbox-width) $checkbox-voffset;
+	//background-position: (-9 * $checkbox-width) $checkbox-voffset;
 }
 
 /* Radio */
