@@ -15,4 +15,14 @@ $(function(){
     $('.selectpicker + .bootstrap-select span.pull-left').removeClass("pull-left");
     $("#phone, #fax").mask("(999) 999-9999");
     $(".chzn-select").chosen();
+
+    //changing default parsley behaviour so it adds error messages to labels.
+    //label - is a parent of element
+    $("form").parsley({
+        errors: {
+            container: function ( elem, isRadioOrCheckbox ) {
+                return elem.parents(".control-group").children("label");
+            }
+        }
+    })
 });

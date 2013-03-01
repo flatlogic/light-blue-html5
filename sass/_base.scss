@@ -4,11 +4,12 @@ input.parsley-error{
   @include invalid-border;
 }
 
-form ul.parsley-error-list{
+ul.parsley-error-list{
   font-size: 12px;
 
   li{
     list-style: none;
+    color: $orange;
   }
 }
 
@@ -1293,4 +1294,8 @@ form ul.parsley-error-list{
 
 .controls-row + .controls-row{
   margin-top: 10px;
+}
+
+input.input-padding-increased{
+  padding: 8px 10px;
 }

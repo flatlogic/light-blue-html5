@@ -3,8 +3,8 @@
 @import url(../lib/font-awesome/css/font-awesome.min.css);
 
 @mixin invalid-border {
-  border-color: #e9322d;
-  box-shadow: 0 0 6px #f8b9b7;
+  border-color: $orange;
+  @include box-shadow(inset 0 1px 1px rgba($red,.075));
 }
 
 @mixin sidebar-icons($class){
