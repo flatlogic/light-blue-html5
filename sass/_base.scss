@@ -1226,6 +1226,10 @@ input.parsley-error{
     color: white;
     @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
   }
+
+  .caret{
+    border-top-color: #fff;
+  }
 }
 
 .btn-transparent{
@@ -1242,6 +1246,10 @@ input.parsley-error{
   &.active{
     color: #ffffff;
     background: rgba(darken($textColor, 20%), .75);
+  }
+
+  .caret{
+    border-top-color: $textColor;
   }
 }
 

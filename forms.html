@@ -93,6 +93,33 @@
 </header>
 <div class="content container-fluid">
     <div class="row-fluid">
+        <div class="span8">
+            <section class="widget">
+                <header>
+                    <h3><i class="icon-file-alt"></i> Article <small>Create new or edit existing article</small></h3>
+                </header>
+                <div class="body">
+                    <form class="form-horizontal" method novalidate="novalidate" data-validate="parsley">
+                        <fieldset>
+                            <div class="control-group">
+                                <label for="title" class="control-label">Title</label>
+                                <div class="controls">
+                                    <input type="text" id="title" name="title" class="input-block-level">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label for="text" class="control-label">Content</label>
+                                <div class="controls">
+                                    <textarea id="text" rows="6" name="text" class="input-block-level"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row-fluid">
         <div class="span7">
             <section class="widget">
                 <header>
@@ -124,25 +151,25 @@
                             <div class="control-group">
                                 <label class="control-label" for="prefix">Prefix</label>
                                 <div class="controls controls-row">
-                                    <input type="text" id="prefix" class="span6">
+                                    <input type="text" id="prefix" name="prefix" class="span6">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="first-name">First Name <span class="required">*</span></label>
                                 <div class="controls controls-row">
-                                    <input type="text" id="first-name" required="required" class="span11" >
+                                    <input type="text" id="first-name" name="first-name" required="required" class="span11" >
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="last-name">Last Name <span class="required">*</span></label>
                                 <div class="controls controls-row">
-                                    <input type="text" id="last-name" required="required" class="span11" >
+                                    <input type="text" id="last-name" name="last-name" required="required" class="span11" >
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="middle-name" class="control-label">Middle Name / Initial</label>
                                 <div class="controls controls-row">
-                                    <input id="middle-name" class="span11" type="text" name="accountMiddleName" value="">
+                                    <input id="middle-name" class="span11" type="text" name="middle-name" value="">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -608,13 +635,6 @@
             </section>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span8">
-            <section class="widget">
-
-            </section>
-        </div>
-    </div>
 </div>
 </div>
 
@@ -639,10 +659,13 @@
 <script src="js/bootstrap/bootstrap-popover.js"></script>
 <script src="js/bootstrap/bootstrap-button.js"></script>
 <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap/bootstrap-modal.js"></script>
 
 <!-- bootstrap custom plugins -->
 <script src="lib/bootstrap-datepicker.js"></script>
 <script src="lib/bootstrap-select.js"></script>
+<script src="lib/wysihtml5-0.3.0_rc2.js"></script>
+<script src="lib/bootstrap-wysihtml5.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
