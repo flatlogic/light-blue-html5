@@ -1278,15 +1278,31 @@ input.parsley-error{
   text-align: left;
 }
 
+.form-condensed{
+  .control-label{
+    width: 100px;
+  }
+
+  .controls{
+    margin-left: 120px;
+  }
+}
+
 .section{
-  font-size: $baseFontSize;
+  font-size: $baseFontSize + 1px;
   color: $textLightGray;
   vertical-align: middle;
   line-height: 30px;
   padding: 10px 0 0;
+
+  small{
+    font-size: $baseFontSize - 2px;
+    color: $smallsColor;
+    font-weight: 600;
+  }
 }
 
-.controls-row + .controls-row{
+.controls + .controls{
   margin-top: 10px;
 }
 

@@ -13,11 +13,16 @@ $(function(){
     //selectpicker doesn't seem to be flexible enough (can't change template), so need to replace span.caret externally
     $('.selectpicker + .bootstrap-select span.caret').replaceWith("<i class='icon-caret-down'></i>");
     $('.selectpicker + .bootstrap-select span.pull-left').removeClass("pull-left");
-    $("#phone, #fax").mask("(999) 999-9999");
 
-    //teach select to accept data-attributes
+    $("#phone, #fax").mask("(999) 999-9999");
+    $("#publish-time").mask("99:99");
+
+    //teach select2 to accept data-attributes
     $(".chzn-select").each(function(){
         $(this).select2($(this).data());
+    });
+    $("#article-tags").select2({
+        tags: ['photoshop', 'colors', 'plugins', 'themes', 'bike']
     });
 
     //changing default parsley behaviour so it adds error messages to labels.
