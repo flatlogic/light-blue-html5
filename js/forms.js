@@ -127,6 +127,7 @@ $(function(){
     };
     $("#text").wysihtml5({
         html: true,
-        customTemplates: customWysihtml5Templates
+        customTemplates: customWysihtml5Templates,
+        stylesheets: []
     });
 });
