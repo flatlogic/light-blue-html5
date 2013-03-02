@@ -670,10 +670,10 @@
                             <div class="control-group">
                                 <label for="publish-date" class="control-label">Publish at</label>
                                 <div class="controls">
-                                    <input id="publish-date" name="publish-date" class="input-block-level date-picker">
+                                    <input type="text" id="publish-date" name="publish-date" class="input-block-level date-picker">
                                 </div>
                                 <div class="controls">
-                                    <input id="publish-time" name="publish-time" class="input-block-level">
+                                    <input type="text" id="publish-time" name="publish-time" class="input-block-level">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -715,7 +715,35 @@
                 </div>
             </section>
             <section class="widget">
-
+                <header>
+                    <h3><i class="icon-key"></i> Access</h3>
+                </header>
+                <div class="body">
+                    <form id="article-access" class="form-horizontal form-condensed label-left"
+                          method>
+                        <fieldset>
+                            <div class="control-group">
+                                <label for="article-visibility" class="control-label">Visibility</label>
+                                <div class="controls">
+                                    <select id="article-visibility" name="article-visibility"
+                                            data-style="btn-warning"
+                                            class="selectpicker select-block-level">
+                                        <option value="0">Everyone</option>
+                                        <option value="1">Registered</option>
+                                        <option value="2">Editors</option>
+                                        <option value="3">Admins</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label for="article-password" class="control-label">Password</label>
+                                <div class="controls">
+                                    <input type="text" id="article-password" name="article-password">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </section>
         </div>
     </div>
