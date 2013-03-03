@@ -184,21 +184,114 @@
                                     <span class="add-on ">.00</span> </div>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label" for="search-input">Search type input</label>
-                            <div class="controls">
-                                <div class="input-append  fluid">
-                                    <input type="search" id="search-input">
-                                    <button type="submit" class="btn btn-inverse">Search</button>
-                                </div>
-                            </div>
-                        </div>
                         </fieldset>
                         <div class="form-actions ">
                             <div class=" visible-desktop"></div>
                             <div class=" ">
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn btn-secondary">Cancel</button>
+                                <button type="button" class="btn">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="span6">
+            <section class="widget">
+                <header>
+                    <h3>
+                        <i class="icon-align-right"></i>
+                        Prepended and appended buttons
+                    </h3>
+                </header>
+                <div class="body">
+                    <form method>
+                        <fieldset>
+                            <legend class="section">Default form</legend>
+                            <div class="control-group">
+                                <label class="control-label" for="search-input">Search type input</label>
+                                <div class="controls">
+                                    <div class="input-append">
+                                        <input type="search" id="search-input">
+                                        <button type="button" class="btn btn-inverse">Search</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="bar">Whole bar appended</label>
+                                <div class="controls">
+                                    <div class="input-append">
+                                        <input type="text" id="bar">
+                                        <button type="button" class="btn btn-danger"><i class="icon-pencil"></i></button>
+                                        <button type="button" class="btn btn-warning"><i class="icon-plus"></i></button>
+                                        <button type="button" class="btn btn-success"><i class="icon-refresh"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="dropdown-appended">Actions dropdown</label>
+                                <div class="controls">
+                                    <div class="input-append">
+                                        <input type="text" id="dropdown-appended">
+                                        <div class="btn-group">
+                                            <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                                Action
+                                                <i class="icon-caret-down"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="type-dropdown-appended">Types dropdown</label>
+                                <div class="controls">
+                                    <div class="input-append">
+                                        <input type="text" id="type-dropdown-appended">
+                                        <select id="phone-type" class="selectpicker"
+                                                data-style="btn-primary">
+                                            <option>Type one</option>
+                                            <option>Some another type</option>
+                                            <option>Even more types</option>
+                                        </select>
+                                        <span class="help-block">You can select some type of a field just right in the place.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="segmented-dropdown">Segmented dropdown</label>
+                                <div class="controls">
+                                    <div class="input-prepend">
+                                        <div class="btn-group">
+                                            <button class="btn btn-warning" tabindex="-1">Action</button>
+                                            <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                                <i class="icon-caret-down"></i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                        <input id="segmented-dropdown" type="text">
+                                        <span class="help-block">Everything can be appended to the left</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-actions ">
+                            <div class=" visible-desktop"></div>
+                            <div class=" ">
+                                <button type="submit" class="btn">Save Changes</button>
+                                <button type="button" class="btn btn-inverse">Cancel</button>
                             </div>
                         </div>
                     </form>

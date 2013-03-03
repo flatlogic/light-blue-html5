@@ -86,7 +86,8 @@
 .btn-group > .btn:focus,
 .btn-group > .btn:active,
 .btn-group > .btn.active {
-  z-index: 2;
+  //fooby. commenting this out the same reason margin-left: -1px has been commented
+  //z-index: 2;
 }
 
 // On active and open, don't show outline
@@ -104,7 +105,8 @@
 .btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
-  @include box-shadow(inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
+  //fooby
+  //@include box-shadow(inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
   *padding-top: 5px;
   *padding-bottom: 5px;
 }
