@@ -142,7 +142,14 @@ ol ul {
   list-style: none;
 }
 
-/* line 95, C:/projects/admin/sass/_general.scss */
+/* line 97, C:/projects/admin/sass/_general.scss */
+iframe {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 102, C:/projects/admin/sass/_general.scss */
 fieldset {
   width: 100%;
 }
@@ -150,25 +157,25 @@ fieldset {
 /* --------------------------------------------------------	*/
 /*	Custom styled scrollbar */
 /* --------------------------------------------------------	*/
-/* line 102, C:/projects/admin/sass/_general.scss */
+/* line 109, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 
-/* line 106, C:/projects/admin/sass/_general.scss */
+/* line 113, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-track-piece {
   background-color: #eee;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* line 111, C:/projects/admin/sass/_general.scss */
+/* line 118, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   opacity: 0.4;
   background-color: #e5603b;
 }
 
-/* line 116, C:/projects/admin/sass/_general.scss */
+/* line 123, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   opacity: 0.4;
   background-color: #e5603b;

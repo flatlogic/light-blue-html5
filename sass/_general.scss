@@ -91,6 +91,13 @@ ol ul{
   list-style: none;
 }
 
+
+//setting default iframe behaviour to border box
+//so it behaves normally within .control-row
+iframe{
+  @include box-sizing(border-box);
+}
+
 //opera is buggy? no chrome is buggy! really strange fix
 fieldset{
   width: 100%;
