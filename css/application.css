@@ -1024,12 +1024,12 @@ pre {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 13px;
   color: #555555;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
 }
 
-/* line 17, C:/projects/admin/sass/bootstrap/_code.scss */
+/* line 18, C:/projects/admin/sass/bootstrap/_code.scss */
 code {
   padding: 2px 4px;
   color: #d14;
@@ -1038,7 +1038,7 @@ code {
   white-space: nowrap;
 }
 
-/* line 26, C:/projects/admin/sass/bootstrap/_code.scss */
+/* line 27, C:/projects/admin/sass/bootstrap/_code.scss */
 pre {
   display: block;
   padding: 9.5px;
@@ -1056,11 +1056,11 @@ pre {
   -moz-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 42, C:/projects/admin/sass/bootstrap/_code.scss */
+/* line 43, C:/projects/admin/sass/bootstrap/_code.scss */
 pre.prettyprint {
   margin-bottom: 20px;
 }
-/* line 47, C:/projects/admin/sass/bootstrap/_code.scss */
+/* line 48, C:/projects/admin/sass/bootstrap/_code.scss */
 pre code {
   padding: 0;
   color: inherit;
@@ -1070,7 +1070,7 @@ pre code {
   border: 0;
 }
 
-/* line 58, C:/projects/admin/sass/bootstrap/_code.scss */
+/* line 59, C:/projects/admin/sass/bootstrap/_code.scss */
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
@@ -2087,7 +2087,8 @@ legend + .control-group {
 .form-horizontal .help-block {
   margin-bottom: 0;
 }
-/* line 689, C:/projects/admin/sass/bootstrap/_forms.scss */
+/* line 692, C:/projects/admin/sass/bootstrap/_forms.scss */
+.form-horizontal .btn-group + .help-block,
 .form-horizontal input + .help-block,
 .form-horizontal select + .help-block,
 .form-horizontal textarea + .help-block,
@@ -2096,7 +2097,7 @@ legend + .control-group {
 .form-horizontal .input-append + .help-block {
   margin-top: 5px;
 }
-/* line 696, C:/projects/admin/sass/bootstrap/_forms.scss */
+/* line 699, C:/projects/admin/sass/bootstrap/_forms.scss */
 .form-horizontal .form-actions {
   padding-left: 180px;
 }
@@ -10439,16 +10440,16 @@ input.parsley-error {
   text-align: left;
 }
 
-/* line 1286, C:/projects/admin/sass/_base.scss */
+/* line 1282, C:/projects/admin/sass/_base.scss */
 .form-condensed .control-label {
   width: 100px;
 }
-/* line 1290, C:/projects/admin/sass/_base.scss */
+/* line 1286, C:/projects/admin/sass/_base.scss */
 .form-condensed .controls {
   margin-left: 120px;
 }
 
-/* line 1295, C:/projects/admin/sass/_base.scss */
+/* line 1291, C:/projects/admin/sass/_base.scss */
 .section {
   font-size: 16px;
   color: #999999;
@@ -10456,40 +10457,55 @@ input.parsley-error {
   line-height: 30px;
   padding: 10px 0 0;
 }
-/* line 1302, C:/projects/admin/sass/_base.scss */
+/* line 1298, C:/projects/admin/sass/_base.scss */
 .section small {
   font-size: 13px;
   color: #dfdfdf;
   font-weight: 600;
 }
 
-/* line 1309, C:/projects/admin/sass/_base.scss */
+/* line 1305, C:/projects/admin/sass/_base.scss */
 .controls + .controls {
   margin-top: 10px;
 }
 
-/* line 1313, C:/projects/admin/sass/_base.scss */
+/* line 1309, C:/projects/admin/sass/_base.scss */
 .help-block {
   font-size: 13px;
 }
 
-/* line 1317, C:/projects/admin/sass/_base.scss */
+/* line 1313, C:/projects/admin/sass/_base.scss */
 input.input-padding-increased {
   padding: 8px 10px;
 }
 
-/* line 1322, C:/projects/admin/sass/_base.scss */
+/* line 1318, C:/projects/admin/sass/_base.scss */
 .checkbox .checker {
   float: left;
   margin-left: -20px;
 }
-/* line 1325, C:/projects/admin/sass/_base.scss */
+/* line 1321, C:/projects/admin/sass/_base.scss */
 .checkbox .checker input[type="checkbox"] {
   margin-left: 0;
 }
 
-/* line 1331, C:/projects/admin/sass/_base.scss */
+/* line 1327, C:/projects/admin/sass/_base.scss */
 .select-block-level {
+  width: 100%;
+}
+
+/* line 1332, C:/projects/admin/sass/_base.scss */
+.controls .bootstrap-select.btn-group[class*='span'] {
+  float: none;
+  display: inline-block;
+  margin-left: 0;
+}
+/* line 1337, C:/projects/admin/sass/_base.scss */
+.controls .bootstrap-select.btn-group[class*='span'] .btn {
+  width: 100%;
+}
+/* line 1342, C:/projects/admin/sass/_base.scss */
+.controls .bootstrap-select.btn-group .dropdown-menu {
   width: 100%;
 }
 

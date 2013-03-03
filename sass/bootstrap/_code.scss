@@ -10,7 +10,8 @@ pre {
   @include font-family-monospace;
   font-size: $baseFontSize - 2;
   color: $grayDark;
-  @include border-radius(3px);
+  //okendoken. changing 3px to $baseBorderRadius
+  @include border-radius($baseBorderRadius);
 }
 
 // Inline code

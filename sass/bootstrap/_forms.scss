@@ -680,6 +680,9 @@ legend + .control-group {
     margin-bottom: 0;
   }
   // And apply it only to .help-block instances that follow a form control
+  //okendoken. adding .btn-group here because selectpicker's select become .btn-group
+  //need some more vertical space
+  .btn-group,
   input,
   select,
   textarea,

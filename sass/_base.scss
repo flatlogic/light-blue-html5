@@ -1278,10 +1278,6 @@ input.parsley-error{
   text-align: left;
 }
 
-form:not(.form-horizontal) .legend{
-
-}
-
 .form-condensed{
   .control-label{
     width: 100px;
@@ -1330,4 +1326,20 @@ input.input-padding-increased{
 
 .select-block-level{
   width: 100%;
+}
+
+.controls .bootstrap-select.btn-group{
+  &[class*='span']{
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+
+    .btn{
+      width: 100%;
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
 }
