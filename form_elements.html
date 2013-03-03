@@ -201,7 +201,7 @@
                 <header>
                     <h3>
                         <i class="icon-align-right"></i>
-                        Prepended and appended buttons
+                        Prepended and appended inputs
                     </h3>
                 </header>
                 <div class="body">
@@ -299,6 +299,55 @@
             </section>
         </div>
     </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <section class="widget">
+                <header>
+                    <h3>
+                        <i class="icon-font"></i>
+                        Textareas
+                    </h3>
+                </header>
+                <div class="body">
+                    <form class="form-horizontal form-condensed" action="#">
+                        <fieldset>
+                            <legend class="section">Condensed form</legend>
+                            <div class="control-group">
+                                <label class="control-label" for="default-textarea">Default textarea</label>
+                                <div class="controls">
+                                    <textarea rows="4" class="input-block-level" id="default-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="elastic-textarea">
+                                    Auto-growing textarea
+                                </label>
+                                <div class="controls">
+                                    <textarea rows="3" class="autogrow input-block-level" id="elastic-textarea"
+                                              placeholder="Try to add few new lines.."></textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="wysiwyg">
+                                    Wysiwyg
+                                    <span class="help-block">
+                                        With bottom toolbar appended
+                                    </span>
+                                </label>
+                                <div class="controls">
+                                    <textarea rows="4" class="input-block-level" id="wysiwyg"></textarea>
+                                    <div class="btn-toolbar pull-right">
+                                        <button type="button" class="btn btn-small btn-danger">Save</button>
+                                        <button type="button" class="btn btn-small">Clear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
 </div>
 </div>
 
@@ -311,6 +360,7 @@
 <script src="lib/parsley.js"> </script>
 <script src="lib/uniform/js/jquery.uniform.js"></script>
 <script src="lib/select2.js"></script>
+<script src="lib/jquery.autogrow-textarea.js"></script>
 
 
 <!--backbone and friends -->
@@ -323,6 +373,7 @@
 <script src="js/bootstrap/bootstrap-popover.js"></script>
 <script src="js/bootstrap/bootstrap-button.js"></script>
 <script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap/bootstrap-modal.js"></script>
 
 <!-- bootstrap custom plugins -->
 <script src="lib/bootstrap-datepicker.js"></script>
