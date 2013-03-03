@@ -1,6 +1,10 @@
 $(function(){
     $("#tooltip-enabled, #max-length").tooltip();
 
+    $(".chzn-select").each(function(){
+        $(this).select2($(this).data());
+    });
+
     $('.selectpicker').selectpicker();
     //selectpicker doesn't seem to be flexible enough (can't change template), so need to replace span.caret externally
     $('.selectpicker + .bootstrap-select span.caret').replaceWith("<i class='icon-caret-down'></i>");

@@ -117,72 +117,78 @@
                     <form class="form-horizontal" action="#">
                         <fieldset>
                             <legend class="section">Horizontal form</legend>
-                        <div class="control-group">
+                        <div class="control-group controls-row">
                             <label class="control-label" for="normal-field">Normal field</label>
                             <div class="controls">
-                                <input type="text" id="normal-field" placeholder="May have placeholder">
+                                <input type="text" id="normal-field" class="span8" placeholder="May have placeholder">
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group controls-row">
                             <label class="control-label" for="hint-field">
-                                Hint for label
+                                Label hint
                                 <span class="help-block">Some help text</span>
                             </label>
                             <div class="controls">
-                                <input type="text" id="hint-field">
+                                <input type="text" id="hint-field" class="span8">
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group controls-row">
                             <label class="control-label " for="tooltip-enabled">Tooltip enabled</label>
                             <div class="controls">
-                                <input type="text" id="tooltip-enabled"
+                                <input type="text" id="tooltip-enabled" class="span8"
                                        data-placement="top" data-original-title="Some explanation text here"
                                        placeholder="Hover over me..">
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group controls-row">
                             <label class="control-label " for="disabled-input">Disabled input</label>
                             <div class="controls">
-                                <input type="text" id="disabled-input" disabled="disabled" value="Default value">
+                                <input type="text" id="disabled-input"  class="span8"
+                                       disabled="disabled" value="Default value" >
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group controls-row">
                             <label class="control-label " for="max-length">Max length</label>
                             <div class="controls">
-                                <input type="text" id="max-length" maxlength="3" placeholder="Max length 3 characters"
+                                <input type="text" id="max-length" maxlength="3"
+                                       class="span8"
+                                       placeholder="Max length 3 characters"
                                        data-placement="top" data-original-title="You cannot write more than 3 characters.">
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label " for="prepended-input">Prepended input</label>
+                        <div class="control-group controls-row">
+                            <label class="control-label" for="prepended-input">Prepended input</label>
                             <div class="controls">
-                                <div class="input-prepend "> <span class="add-on "><i class="icon-user"></i></span>
-                                    <input id="prepended-input" size="16" type="text" placeholder="Username">
+                                <div class="input-prepend span10">
+                                    <span class="add-on pull-left"><i class="icon-user"></i></span>
+                                    <input id="prepended-input" class="span8" size="16" type="text" placeholder="Username">
                                 </div>
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label " for="password-field">Password</label>
+                        <div class="control-group controls-row">
+                            <label class="control-label" for="password-field">Password</label>
                             <div class="controls">
-                                <div class="input-prepend "> <span class="add-on "><i class="icon-lock"></i></span>
-                                    <input type="password" id="password-field" class=" password">
+                                <div class="input-prepend span10">
+                                    <span class="add-on pull-left"><i class="icon-lock"></i></span>
+                                    <input type="password" class="span8" id="password-field">
                                 </div>
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group controls-row">
                             <label class="control-label" for="appended-input">Appended input</label>
                             <div class="controls">
-                                <div class="input-append">
-                                    <input id="appended-input" size="16" type="text">
-                                    <span class="add-on ">.00</span> </div>
+                                <div class="input-append span10">
+                                    <input id="appended-input" class="span8" size="16" type="text">
+                                    <span class="add-on pull-left">.00</span> </div>
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group controls-row">
                             <label class="control-label" for="combined-input">Combined</label>
                             <div class="controls">
-                                <div class="input-prepend input-append "> <span class="add-on prepend ">$</span>
-                                    <input id="combined-input" size="16" type="text">
-                                    <span class="add-on ">.00</span> </div>
+                                <div class="input-prepend input-append span10">
+                                    <span class="add-on pull-left">$</span>
+                                    <input id="combined-input" class="span8" size="16" type="text">
+                                    <span class="add-on pull-left">.00</span> </div>
                             </div>
                         </div>
                         </fieldset>
@@ -360,6 +366,20 @@
                     <form class="form-horizontal label-left" action="#">
                         <fieldset>
                             <legend class="section">Default form with labels on left</legend>
+                            <div class="control-group">
+                                <label class="control-label" for="default-select">Default select</label>
+                                <div class="controls">
+                                    <select data-placeholder="Which galaxy is closest to Milky Way?"
+                                            data-width="off"
+                                            data-minimum-results-for-search="10"
+                                            class="chzn-select select-block-level" id="default-select">
+                                        <option value=""></option>
+                                        <option value="Magellanic">Large Magellanic Cloud</option>
+                                        <option value="Andromeda">Andromeda Galaxy</option>
+                                        <option value="Sextans">Sextans A</option>
+                                    </select>
+                                </div>
+                            </div>
                         </fieldset>
                     </form>
                 </div>
