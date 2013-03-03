@@ -22,14 +22,19 @@
             <a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
         <li class="active teal accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#forms-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="forms-collapse" class="accordion-body">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse in">
                 <li><a href="#">Stats</a></li>
                 <li class="active"><a href="stats.html">Charts</a></li>
             </ul>
         </li>
-        <li class="blue">
-            <a href="forms.html"><i class="icon-edit"></i> <span class="name">Forms</span></a>
+        <li class="blue accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="accordion-body collapse">
+                <li><a href="form_account.html">Account</a></li>
+                <li><a href="form_article.html">Article</a></li>
+            </ul>
         </li>
         <li class="brown">
             <a href="#"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
@@ -62,7 +67,7 @@
             <div class="navbar-inner">
                 <ul class="nav title-nav hidden-phone">
                     <li><a href="#" title="Basic"><i class="icon-bar-chart icon-large"></i> Basic Stats</a></li>
-                    <li class="active"><a href="#" title="Advanced"><i class="icon-magic icon-large"></i> Advanced Stats</a></li>
+                    <li class="active"><a href="#" title="Advanced"><i class="icon-magic icon-large"></i> Charts</a></li>
                 </ul>
                 <ul class="nav right pull-right ">
                     <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
