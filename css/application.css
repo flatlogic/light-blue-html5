@@ -2094,9 +2094,9 @@ legend + .control-group {
 .form-horizontal .uneditable-input + .help-block,
 .form-horizontal .input-prepend + .help-block,
 .form-horizontal .input-append + .help-block {
-  margin-top: 10px;
+  margin-top: 5px;
 }
-/* line 694, C:/projects/admin/sass/bootstrap/_forms.scss */
+/* line 696, C:/projects/admin/sass/bootstrap/_forms.scss */
 .form-horizontal .form-actions {
   padding-left: 180px;
 }
@@ -3047,29 +3047,29 @@ input[type="button"].btn-block {
 .btn-inverse {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #fcfcfc;
-  background-image: -moz-linear-gradient(top, white, #f8f8f8);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#f8f8f8));
-  background-image: -webkit-linear-gradient(top, white, #f8f8f8);
-  background-image: -o-linear-gradient(top, white, #f8f8f8);
-  background-image: linear-gradient(to bottom, #ffffff, #f8f8f8);
+  background-color: #f3f3f3;
+  background-image: -moz-linear-gradient(top, #f3f3f3, #f3f3f3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f3f3f3), to(#f3f3f3));
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #f3f3f3);
+  background-image: -o-linear-gradient(top, #f3f3f3, #f3f3f3);
+  background-image: linear-gradient(to bottom, #f3f3f3, #f3f3f3);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF8F8F8', GradientType=0);
-  border-color: #f8f8f8 #f8f8f8 #d2d2d2;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF3F3F3', endColorstr='#FFF3F3F3', GradientType=0);
+  border-color: #f3f3f3 #f3f3f3 #cdcdcd;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #f8f8f8;
+  *background-color: #f3f3f3;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 /* line 502, C:/projects/admin/sass/bootstrap/_mixins.scss */
 .btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
   color: white;
-  background-color: #f8f8f8;
-  *background-color: #ebebeb;
+  background-color: #f3f3f3;
+  *background-color: #e6e6e6;
 }
 /* line 510, C:/projects/admin/sass/bootstrap/_mixins.scss */
 .btn-inverse:active, .btn-inverse.active {
-  background-color: #dfdfdf \9;
+  background-color: #d9d9d9 \9;
 }
 
 /* line 180, C:/projects/admin/sass/bootstrap/_buttons.scss */
@@ -3328,7 +3328,7 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 156, C:/projects/admin/sass/bootstrap/_button-groups.scss */
 .btn-group.open .btn-inverse.dropdown-toggle {
-  background-color: #f8f8f8;
+  background-color: #f3f3f3;
 }
 
 /* line 163, C:/projects/admin/sass/bootstrap/_button-groups.scss */
@@ -4856,9 +4856,9 @@ input[type="submit"].btn.btn-mini {
   border: 1px solid rgba(0, 0, 0, 0.3);
   *border: 1px solid #999999;
   /* IE6-7 */
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
@@ -4867,7 +4867,7 @@ input[type="submit"].btn.btn-mini {
   background-clip: padding-box;
   outline: none;
 }
-/* line 41, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 42, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal.fade {
   -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
   -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
@@ -4875,27 +4875,27 @@ input[type="submit"].btn.btn-mini {
   transition: opacity 0.3s linear, top 0.3s ease-out;
   top: -25%;
 }
-/* line 45, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 46, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal.fade.in {
   top: 10%;
 }
 
-/* line 47, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 48, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header {
   padding: 9px 15px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 51, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 52, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header .close {
   margin-top: 2px;
 }
-/* line 53, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 54, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header h3 {
   margin: 0;
   line-height: 30px;
 }
 
-/* line 60, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 61, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-body {
   position: relative;
   overflow-y: auto;
@@ -4903,12 +4903,12 @@ input[type="submit"].btn.btn-mini {
   padding: 15px;
 }
 
-/* line 67, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 68, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-form {
   margin-bottom: 0;
 }
 
-/* line 72, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 73, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer {
   padding: 14px 15px 15px;
   margin-bottom: 0;
@@ -4933,16 +4933,16 @@ input[type="submit"].btn.btn-mini {
 .modal-footer:after {
   clear: both;
 }
-/* line 83, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 84, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer .btn + .btn {
   margin-left: 5px;
   margin-bottom: 0;
 }
-/* line 88, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 89, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
-/* line 92, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 93, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }

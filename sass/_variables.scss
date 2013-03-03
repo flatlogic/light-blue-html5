@@ -75,8 +75,8 @@ $btnWarningBackgroundHighlight:     $orange !default;
 $btnDangerBackground:               $red !default;
 $btnDangerBackgroundHighlight:      $red !default;
 
-$btnInverseBackground:              $white !default;
-$btnInverseBackgroundHighlight:     $lightGray !default;
+$btnInverseBackground:              darken($lightGray, 2%) !default;
+$btnInverseBackgroundHighlight:     darken($lightGray, 2%) !default;
 
 // Dropdowns
 // -------------------------
