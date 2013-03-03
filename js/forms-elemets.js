@@ -105,4 +105,6 @@ $(function(){
         customTemplates: customWysihtml5Templates,
         stylesheets: []
     });
+
+    $("input:checkbox, input:radio").uniform();
 });

@@ -7455,25 +7455,11 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 /* General settings */
-/* line 143, C:/projects/admin/sass/lib/_uniform.scss */
-div.selector,
-div.selector span,
-div.checker span,
-div.radio span,
-div.uploader,
-div.uploader span.action,
-div.button,
-div.button span {
-  background-image: url("../images/sprite.png");
-  background-repeat: no-repeat;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 153, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 155, C:/projects/admin/sass/lib/_uniform.scss */
 .selector,
 .checker,
 .button,
-.radio,
+div.radio,
 .uploader {
   display: -moz-inline-box;
   display: inline-block;
@@ -7482,7 +7468,7 @@ div.button span {
   vertical-align: middle;
 }
 
-/* line 161, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 163, C:/projects/admin/sass/lib/_uniform.scss */
 .selector select:focus,
 .radio input:focus,
 .checker input:focus,
@@ -7490,7 +7476,7 @@ div.button span {
   outline: 0;
 }
 
-/* line 174, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 176, C:/projects/admin/sass/lib/_uniform.scss */
 .selector,
 .radio,
 .checker,
@@ -7505,7 +7491,7 @@ div.button span {
   padding: 0;
 }
 
-/* line 179, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 181, C:/projects/admin/sass/lib/_uniform.scss */
 .highContrastDetect {
   background: url("../images/bg-input.png") repeat-x 0 0;
   width: 0px;
@@ -7513,7 +7499,7 @@ div.button span {
 }
 
 /* Checkbox */
-/* line 189, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 191, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker,
 div.checker span,
 div.checker input {
@@ -7521,12 +7507,13 @@ div.checker input {
   height: 19px;
 }
 
-/* line 194, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 196, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker {
   position: relative;
+  margin-right: 5px;
 }
 
-/* line 198, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 202, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker span {
   display: -moz-inline-box;
   display: inline-block;
@@ -7536,18 +7523,18 @@ div.checker span {
   background-position: 0;
   background-image: none;
 }
-/* line 204, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 208, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker span:before {
   content: "\f096";
   font: 19px/1em FontAwesome;
   opacity: .85;
   vertical-align: middle;
 }
-/* line 211, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 215, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker span.checked:before {
   content: "\f046";
 }
-/* line 215, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 219, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker span input {
   margin: 0;
   position: absolute;
@@ -7564,19 +7551,19 @@ div.checker span input {
   zoom: 1;
 }
 
-/* line 227, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 231, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker:active span:before,
 div.checker.active span:before {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
 }
 
-/* line 235, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 239, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker.focus span:before,
 div.checker:hover span:before {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 245, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 249, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker.focus:active span:before,
 div.checker:active:hover span:before,
 div.checker.active:hover span:before,
@@ -7584,8 +7571,15 @@ div.checker.focus.active span:before {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+/* line 278, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker.disabled span,
+div.checker.disabled:active span,
+div.checker.disabled.active span {
+  opacity: .3;
+}
+
 /* Radio */
-/* line 288, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 293, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio,
 div.radio span,
 div.radio input {
@@ -7593,22 +7587,32 @@ div.radio input {
   height: 18px;
 }
 
-/* line 293, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 298, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio {
   position: relative;
 }
 
-/* line 297, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 302, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio span {
   display: -moz-inline-box;
   display: inline-block;
   *display: inline;
   zoom: 1;
   text-align: center;
-  background-position: 0 -279px;
+}
+/* line 308, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio span:before {
+  content: "\f10c";
+  font: 19px/1em FontAwesome;
+  opacity: .85;
+  vertical-align: middle;
+}
+/* line 315, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio span.checked:before {
+  content: "\f111";
 }
 
-/* line 303, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 320, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio input {
   opacity: 0;
   filter: alpha(opacity=0);
@@ -7622,67 +7626,8 @@ div.radio input {
   text-align: center;
 }
 
-/* line 310, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio:active span,
-div.radio.active span {
-  background-position: -18px -18px -279px;
-}
-
-/* line 315, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus span,
-div.radio:hover span {
-  background-position: -36px -36px -279px;
-}
-
-/* line 322, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus:active span,
-div.radio:active:hover span,
-div.radio.active:hover span,
-div.radio.active.focus span {
-  background-position: -54px -279px;
-}
-
-/* line 326, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio span.checked {
-  background-position: -72px -279px;
-}
-
-/* line 331, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio:active span.checked,
-div.radio.active span.checked {
-  background-position: -90px -279px;
-}
-
-/* line 336, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus span.checked,
-div.radio:hover span.checked {
-  background-position: -108px -279px;
-}
-
-/* line 343, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus:active span.checked,
-div.radio:hover:active span.checked,
-div.radio.focus.active span.checked,
-div.radio.active:hover span.checked {
-  background-position: -126px -279px;
-}
-
-/* line 349, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio.disabled span,
-div.radio.disabled:active span,
-div.radio.disabled.active span {
-  background-position: -144px -279px;
-}
-
-/* line 355, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio.disabled span.checked,
-div.radio.disabled:active span.checked,
-div.radio.disabled.active span.checked {
-  background-position: -162px -279px;
-}
-
 /* Uploader */
-/* line 361, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 378, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader {
   background-position: 0 -297px;
   height: 28px;
@@ -7692,7 +7637,7 @@ div.uploader {
   overflow: hidden;
 }
 
-/* line 370, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 387, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader span.action {
   background-position: right -409px;
   height: 28px;
@@ -7705,7 +7650,7 @@ div.uploader span.action {
   cursor: pointer;
 }
 
-/* line 382, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 399, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader span.filename {
   text-overflow: ellipsis;
   display: block;
@@ -7720,7 +7665,7 @@ div.uploader span.filename {
   padding: 0 10px;
 }
 
-/* line 393, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 410, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader input {
   opacity: 0;
   filter: alpha(opacity=0);
@@ -7736,27 +7681,27 @@ div.uploader input {
   height: 100%;
 }
 
-/* line 406, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 423, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.focus,
 div.uploader.hover,
 div.uploader:hover {
   background-position: 0 -353px;
 }
 
-/* line 412, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 429, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.focus span.action,
 div.uploader.hover span.action,
 div.uploader:hover span.action {
   background-position: right -437px;
 }
 
-/* line 417, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 434, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.active span.action,
 div.uploader:active span.action {
   background-position: right -465px;
 }
 
-/* line 424, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 441, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.focus.active span.action,
 div.uploader:focus.active span.action,
 div.uploader.focus:active span.action,
@@ -7764,12 +7709,12 @@ div.uploader:focus:active span.action {
   background-position: right -493px;
 }
 
-/* line 428, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 445, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.disabled {
   background-position: 0 -325px;
 }
 
-/* line 432, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 449, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.disabled span.action {
   background-position: right -381px;
 }

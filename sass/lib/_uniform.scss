@@ -141,15 +141,17 @@ div.uploader,
 div.uploader span.action,
 div.button,
 div.button span {
-	background-image: url($sprite);
-	background-repeat: no-repeat;
-	-webkit-font-smoothing: antialiased;
+  //okendoken. commenting everything out
+	//background-image: url($sprite);
+	//background-repeat: no-repeat;
+	//-webkit-font-smoothing: antialiased;
 }
 
 .selector,
 .checker,
 .button,
-.radio,
+//okendoken. adding div to radio
+div.radio,
 .uploader {
 	@include inline-block();
 	vertical-align: middle;
@@ -193,6 +195,8 @@ div.checker input {
 
 div.checker {
 	position: relative;
+  //okendoken. some right margin
+  margin-right: 5px;
 }
 
 div.checker span {
@@ -272,6 +276,7 @@ div.checker.active.focus span.checked {
 div.checker.disabled span,
 div.checker.disabled:active span,
 div.checker.disabled.active span {
+  opacity: .3;
 	//background-position: (-8 * $checkbox-width) $checkbox-voffset;
 }
 
@@ -297,7 +302,19 @@ div.radio {
 div.radio span {
 	@include inline-block();
 	text-align: center;
-	background-position: 0 $radio-voffset;
+  //okendoken. changin to FontAwesom
+	//background-position: 0 $radio-voffset;
+
+  &:before{
+    content: "\f10c";
+    font: 19px/1em FontAwesome;
+    opacity: .85;
+    vertical-align: middle;
+  }
+
+  &.checked:before {
+    content: "\f111";
+  }
 }
 
 div.radio input {
@@ -308,52 +325,52 @@ div.radio input {
 
 div.radio:active span,
 div.radio.active span {
-	background-position: (-1 * $radio-width)-18px $radio-voffset;
+	//background-position: (-1 * $radio-width)-18px $radio-voffset;
 }
 
 div.radio.focus span,
 div.radio:hover span {
-	background-position: (-2 * $radio-width)-36px $radio-voffset;
+	//background-position: (-2 * $radio-width)-36px $radio-voffset;
 }
 
 div.radio.focus:active span,
 div.radio:active:hover span,
 div.radio.active:hover span,
 div.radio.active.focus span {
-	background-position: (-3 * $radio-width) $radio-voffset;
+	//background-position: (-3 * $radio-width) $radio-voffset;
 }
 
 div.radio span.checked {
-	background-position: (-4 * $radio-width) $radio-voffset;
+	//background-position: (-4 * $radio-width) $radio-voffset;
 }
 
 div.radio:active span.checked,
 div.radio.active span.checked {
-	background-position: (-5 * $radio-width) $radio-voffset;
+	//background-position: (-5 * $radio-width) $radio-voffset;
 }
 
 div.radio.focus span.checked,
 div.radio:hover span.checked {
-	background-position: (-6 * $radio-width) $radio-voffset;
+	//background-position: (-6 * $radio-width) $radio-voffset;
 }
 
 div.radio.focus:active span.checked,
 div.radio:hover:active span.checked,
 div.radio.focus.active span.checked,
 div.radio.active:hover span.checked {
-	background-position: (-7 * $radio-width) $radio-voffset;
+	//background-position: (-7 * $radio-width) $radio-voffset;
 }
 
 div.radio.disabled span,
 div.radio.disabled:active span,
 div.radio.disabled.active span {
-	background-position: (-8 * $radio-width) $radio-voffset;
+	//background-position: (-8 * $radio-width) $radio-voffset;
 }
 
 div.radio.disabled span.checked,
 div.radio.disabled:active span.checked,
 div.radio.disabled.active span.checked {
-	background-position: (-9 * $radio-width) $radio-voffset;
+	//background-position: (-9 * $radio-width) $radio-voffset;
 }
 
 /* Uploader */
