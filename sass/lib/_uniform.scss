@@ -154,12 +154,14 @@ div.button span {
 }
 
 .selector,
-.radio,
+//okendoken. adding div to radio to prevent overriding bootstrap styles
+div.radio,
 .checker,
 .uploader,
 .button,
 .selector *,
-.radio *,
+//okendoken. adding div to radio to prevent overriding bootstrap styles
+div.radio *,
 .checker *,
 .uploader *,
 .button * {
