@@ -8801,8 +8801,11 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   text-align: center;
   z-index: 1;
   width: 33.333333%;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-/* line 142, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+/* line 143, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-left {
   -moz-border-radius-topleft: 1px;
   -webkit-border-top-left-radius: 1px;
@@ -8811,7 +8814,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   -webkit-border-bottom-left-radius: 1px;
   border-bottom-left-radius: 1px;
 }
-/* line 146, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+/* line 147, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-right {
   color: #ffffff;
   -moz-border-radius-topright: 1px;
@@ -8822,27 +8825,27 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   border-bottom-right-radius: 1px;
   background: #6b6b6b;
 }
-/* line 188, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+/* line 189, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-primary, .has-switch span.switch-left {
   color: white;
   background: #618fb0;
 }
-/* line 192, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+/* line 193, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-info {
   color: white;
   background: #2eb4dc;
 }
-/* line 197, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+/* line 198, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-success {
   color: white;
   background: #56bc76;
 }
-/* line 202, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+/* line 203, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-warning {
   color: white;
   background: #eac85e;
 }
-/* line 207, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+/* line 208, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-danger {
   color: white;
   background: #e5603b;
@@ -10637,15 +10640,21 @@ input.parsley-error {
   border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 /* line 1255, C:/projects/admin/sass/_base.scss */
-.btn-inverse:hover,
-.btn-inverse :focus {
+.btn-inverse:hover, .btn-inverse:focus {
   color: #666666;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
+/* line 1262, C:/projects/admin/sass/_base.scss */
+.btn-inverse.active, .btn-inverse.active:hover, .btn-inverse.active:focus {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+  color: #666666;
+}
 
-/* line 1261, C:/projects/admin/sass/_base.scss */
+/* line 1268, C:/projects/admin/sass/_base.scss */
 .accordion-group {
   margin: 0;
   border: none;
@@ -10656,26 +10665,26 @@ input.parsley-error {
   border-radius: 0;
 }
 
-/* line 1267, C:/projects/admin/sass/_base.scss */
+/* line 1274, C:/projects/admin/sass/_base.scss */
 .profile-picture {
   text-align: center;
 }
 
-/* line 1271, C:/projects/admin/sass/_base.scss */
+/* line 1278, C:/projects/admin/sass/_base.scss */
 .form-horizontal.label-left .control-label {
   text-align: left;
 }
 
-/* line 1276, C:/projects/admin/sass/_base.scss */
+/* line 1283, C:/projects/admin/sass/_base.scss */
 .form-condensed .control-label {
   width: 100px;
 }
-/* line 1280, C:/projects/admin/sass/_base.scss */
+/* line 1287, C:/projects/admin/sass/_base.scss */
 .form-condensed .controls {
   margin-left: 120px;
 }
 
-/* line 1285, C:/projects/admin/sass/_base.scss */
+/* line 1292, C:/projects/admin/sass/_base.scss */
 .section {
   font-size: 16px;
   color: #999999;
@@ -10683,44 +10692,44 @@ input.parsley-error {
   line-height: 30px;
   padding: 10px 0 0;
 }
-/* line 1292, C:/projects/admin/sass/_base.scss */
+/* line 1299, C:/projects/admin/sass/_base.scss */
 .section small {
   font-size: 13px;
   color: #dfdfdf;
   font-weight: 600;
 }
 
-/* line 1299, C:/projects/admin/sass/_base.scss */
+/* line 1306, C:/projects/admin/sass/_base.scss */
 .controls + .controls {
   margin-top: 10px;
 }
 
-/* line 1303, C:/projects/admin/sass/_base.scss */
+/* line 1310, C:/projects/admin/sass/_base.scss */
 .help-block {
   font-size: 13px;
 }
 
-/* line 1307, C:/projects/admin/sass/_base.scss */
+/* line 1314, C:/projects/admin/sass/_base.scss */
 input.input-padding-increased {
   padding: 8px 10px;
 }
 
-/* line 1311, C:/projects/admin/sass/_base.scss */
+/* line 1318, C:/projects/admin/sass/_base.scss */
 .select-block-level {
   width: 100%;
 }
 
-/* line 1316, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] {
   float: none;
   display: inline-block;
   margin-left: 0;
 }
-/* line 1321, C:/projects/admin/sass/_base.scss */
+/* line 1328, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] .btn {
   width: 100%;
 }
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1333, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group .dropdown-menu {
   width: 100%;
 }

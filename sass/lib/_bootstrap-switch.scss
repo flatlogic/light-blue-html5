@@ -138,6 +138,7 @@ $border-radius: $baseBorderRadius;
     text-align: center;
     z-index: 1;
     width: 33.333333%;
+    @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15));
 
     &.switch-left {
       @include border-top-left-radius($border-radius);
