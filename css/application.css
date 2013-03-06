@@ -7455,7 +7455,21 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 /* General settings */
-/* line 155, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 134, C:/projects/admin/sass/lib/_uniform.scss */
+div.selector,
+div.selector span,
+div.checker span,
+div.radio span,
+div.uploader,
+div.uploader span.action,
+div.button,
+div.button span {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 145, C:/projects/admin/sass/lib/_uniform.scss */
 .selector,
 .checker,
 .button,
@@ -7468,7 +7482,7 @@ div.radio,
   vertical-align: middle;
 }
 
-/* line 163, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 153, C:/projects/admin/sass/lib/_uniform.scss */
 .selector select:focus,
 .radio input:focus,
 .checker input:focus,
@@ -7476,14 +7490,14 @@ div.radio,
   outline: 0;
 }
 
-/* line 176, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 168, C:/projects/admin/sass/lib/_uniform.scss */
 .selector,
-.radio,
+div.radio,
 .checker,
 .uploader,
 .button,
 .selector *,
-.radio *,
+div.radio *,
 .checker *,
 .uploader *,
 .button * {
@@ -7491,7 +7505,7 @@ div.radio,
   padding: 0;
 }
 
-/* line 181, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 173, C:/projects/admin/sass/lib/_uniform.scss */
 .highContrastDetect {
   background: url("../images/bg-input.png") repeat-x 0 0;
   width: 0px;
@@ -7499,47 +7513,31 @@ div.radio,
 }
 
 /* Checkbox */
-/* line 191, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 183, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker,
 div.checker span,
 div.checker input {
-  width: 19px;
-  height: 19px;
+  width: 30px;
+  height: 20px;
 }
 
-/* line 196, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 188, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker {
   position: relative;
-  margin-right: 5px;
 }
 
-/* line 202, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 192, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker span {
   display: -moz-inline-box;
   display: inline-block;
   *display: inline;
   zoom: 1;
   text-align: center;
-  background-position: 0;
-  background-image: none;
+  background-position: 2px -25px;
 }
-/* line 208, C:/projects/admin/sass/lib/_uniform.scss */
-div.checker span:before {
-  content: "\f096";
-  font: 19px/1em FontAwesome;
-  opacity: .85;
-  vertical-align: middle;
-}
-/* line 215, C:/projects/admin/sass/lib/_uniform.scss */
-div.checker span.checked:before {
-  content: "\f046";
-}
-/* line 219, C:/projects/admin/sass/lib/_uniform.scss */
-div.checker span input {
-  margin: 0;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+
+/* line 198, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker input {
   opacity: 0;
   filter: alpha(opacity=0);
   -moz-opacity: 0;
@@ -7551,68 +7549,90 @@ div.checker span input {
   zoom: 1;
 }
 
-/* line 231, C:/projects/admin/sass/lib/_uniform.scss */
-div.checker:active span:before,
-div.checker.active span:before {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+/* line 204, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker:active span,
+div.checker.active span {
+  background-position: -58px -25px;
 }
 
-/* line 239, C:/projects/admin/sass/lib/_uniform.scss */
-div.checker.focus span:before,
-div.checker:hover span:before {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+/* line 209, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker.focus span,
+div.checker:hover span {
+  background-position: -28px -25px;
 }
 
-/* line 249, C:/projects/admin/sass/lib/_uniform.scss */
-div.checker.focus:active span:before,
-div.checker:active:hover span:before,
-div.checker.active:hover span:before,
-div.checker.focus.active span:before {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+/* line 216, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker.focus:active span,
+div.checker:active:hover span,
+div.checker.active:hover span,
+div.checker.focus.active span {
+  background-position: -58px -25px;
 }
 
-/* line 278, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 220, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker span.checked {
+  background-position: -88px -25px;
+}
+
+/* line 225, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker:active span.checked,
+div.checker.active span.checked {
+  background-position: -148px -25px;
+}
+
+/* line 230, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker.focus span.checked,
+div.checker:hover span.checked {
+  background-position: -118px -25px;
+}
+
+/* line 237, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker.focus:active span.checked,
+div.checker:hover:active span.checked,
+div.checker.active:hover span.checked,
+div.checker.active.focus span.checked {
+  background-position: -148px -25px;
+}
+
+/* line 243, C:/projects/admin/sass/lib/_uniform.scss */
 div.checker.disabled span,
 div.checker.disabled:active span,
 div.checker.disabled.active span {
-  opacity: .3;
+  background-position: -178px -25px;
+}
+
+/* line 249, C:/projects/admin/sass/lib/_uniform.scss */
+div.checker.disabled span.checked,
+div.checker.disabled:active span.checked,
+div.checker.disabled.active span.checked {
+  background-position: -208px -25px;
 }
 
 /* Radio */
-/* line 293, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 257, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio,
 div.radio span,
 div.radio input {
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 20px;
 }
 
-/* line 298, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 262, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio {
   position: relative;
 }
 
-/* line 302, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 266, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio span {
   display: -moz-inline-box;
   display: inline-block;
   *display: inline;
   zoom: 1;
   text-align: center;
-}
-/* line 308, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio span:before {
-  content: "\f10c";
-  font: 19px/1em FontAwesome;
-  opacity: .85;
-  vertical-align: middle;
-}
-/* line 315, C:/projects/admin/sass/lib/_uniform.scss */
-div.radio span.checked:before {
-  content: "\f111";
+  background-position: 0px 0;
 }
 
-/* line 320, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 272, C:/projects/admin/sass/lib/_uniform.scss */
 div.radio input {
   opacity: 0;
   filter: alpha(opacity=0);
@@ -7626,10 +7646,69 @@ div.radio input {
   text-align: center;
 }
 
+/* line 279, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio:active span,
+div.radio.active span {
+  background-position: -60px 0;
+}
+
+/* line 284, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio.focus span,
+div.radio:hover span {
+  background-position: -30px 0;
+}
+
+/* line 291, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio.focus:active span,
+div.radio:active:hover span,
+div.radio.active:hover span,
+div.radio.active.focus span {
+  background-position: -60px 0;
+}
+
+/* line 295, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio span.checked {
+  background-position: -90px 0;
+}
+
+/* line 300, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio:active span.checked,
+div.radio.active span.checked {
+  background-position: -150px 0;
+}
+
+/* line 305, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio.focus span.checked,
+div.radio:hover span.checked {
+  background-position: -120px 0;
+}
+
+/* line 312, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio.focus:active span.checked,
+div.radio:hover:active span.checked,
+div.radio.focus.active span.checked,
+div.radio.active:hover span.checked {
+  background-position: -150px 0;
+}
+
+/* line 318, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio.disabled span,
+div.radio.disabled:active span,
+div.radio.disabled.active span {
+  background-position: -240px 0;
+}
+
+/* line 324, C:/projects/admin/sass/lib/_uniform.scss */
+div.radio.disabled span.checked,
+div.radio.disabled:active span.checked,
+div.radio.disabled.active span.checked {
+  background-position: -270px 0;
+}
+
 /* Uploader */
-/* line 378, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 330, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader {
-  background-position: 0 -297px;
+  background-position: 0 -20px;
   height: 28px;
   width: 190px;
   cursor: pointer;
@@ -7637,9 +7716,9 @@ div.uploader {
   overflow: hidden;
 }
 
-/* line 387, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 339, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader span.action {
-  background-position: right -409px;
+  background-position: right -132px;
   height: 28px;
   line-height: 28px;
   width: 85px;
@@ -7650,7 +7729,7 @@ div.uploader span.action {
   cursor: pointer;
 }
 
-/* line 399, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 351, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader span.filename {
   text-overflow: ellipsis;
   display: block;
@@ -7665,7 +7744,7 @@ div.uploader span.filename {
   padding: 0 10px;
 }
 
-/* line 410, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 362, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader input {
   opacity: 0;
   filter: alpha(opacity=0);
@@ -7681,42 +7760,42 @@ div.uploader input {
   height: 100%;
 }
 
-/* line 423, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 375, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.focus,
 div.uploader.hover,
 div.uploader:hover {
-  background-position: 0 -353px;
+  background-position: 0 -76px;
 }
 
-/* line 429, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 381, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.focus span.action,
 div.uploader.hover span.action,
 div.uploader:hover span.action {
-  background-position: right -437px;
+  background-position: right -160px;
 }
 
-/* line 434, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 386, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.active span.action,
 div.uploader:active span.action {
-  background-position: right -465px;
+  background-position: right -188px;
 }
 
-/* line 441, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 393, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.focus.active span.action,
 div.uploader:focus.active span.action,
 div.uploader.focus:active span.action,
 div.uploader:focus:active span.action {
-  background-position: right -493px;
+  background-position: right -216px;
 }
 
-/* line 445, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 397, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.disabled {
-  background-position: 0 -325px;
+  background-position: 0 -48px;
 }
 
-/* line 449, C:/projects/admin/sass/lib/_uniform.scss */
+/* line 401, C:/projects/admin/sass/lib/_uniform.scss */
 div.uploader.disabled span.action {
-  background-position: right -381px;
+  background-position: right -104px;
 }
 
 /*
@@ -8591,6 +8670,184 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   background: orange !important;
 }
 
+/* ============================================================
+ * bootstrapSwitch v1.2 by Larentis Mattia @spiritualGuru
+ * http://www.larentis.eu/switch/
+ * ============================================================
+ * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * ============================================================ */
+/* line 20, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  background: #e6e6e6;
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  line-height: 8px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 102px;
+}
+/* line 44, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch.switch-mini {
+  min-width: 72px;
+}
+/* line 48, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch.switch-small {
+  min-width: 81px;
+}
+/* line 52, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch.switch-large {
+  min-width: 120px;
+}
+/* line 56, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch.deactivate {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  cursor: default !important;
+}
+/* line 59, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch.deactivate label, .has-switch.deactivate span {
+  cursor: default !important;
+}
+/* line 63, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch > div {
+  display: inline-block;
+  width: 150%;
+  position: relative;
+  top: 0;
+}
+/* line 69, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch > div.switch-animate {
+  -webkit-transition: left 0.5s;
+  -moz-transition: left 0.5s;
+  -o-transition: left 0.5s;
+  transition: left 0.5s;
+}
+/* line 72, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch > div.switch-off {
+  left: -50%;
+}
+/* line 75, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch > div.switch-on {
+  left: 0%;
+}
+/* line 79, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch input[type=checkbox] {
+  display: none;
+}
+/* line 87, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span, .has-switch label {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 20px;
+}
+/* line 100, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-mini, .has-switch label.switch-mini {
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 10px;
+  line-height: 9px;
+}
+/* line 107, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-small, .has-switch label.switch-small {
+  padding-bottom: 3px;
+  padding-top: 3px;
+  font-size: 12px;
+  line-height: 18px;
+}
+/* line 114, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-large, .has-switch label.switch-large {
+  padding-bottom: 9px;
+  padding-top: 9px;
+  font-size: 16px;
+  line-height: normal;
+}
+/* line 122, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch label {
+  background: white;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  z-index: 100;
+  width: 33.333333%;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  background: #f3f3f3;
+}
+/* line 136, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span {
+  color: white;
+  text-align: center;
+  z-index: 1;
+  width: 33.333333%;
+}
+/* line 142, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-left {
+  -moz-border-radius-topleft: 1px;
+  -webkit-border-top-left-radius: 1px;
+  border-top-left-radius: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  -webkit-border-bottom-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+}
+/* line 146, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-right {
+  color: #ffffff;
+  -moz-border-radius-topright: 1px;
+  -webkit-border-top-right-radius: 1px;
+  border-top-right-radius: 1px;
+  -moz-border-radius-bottomright: 1px;
+  -webkit-border-bottom-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+  background: #6b6b6b;
+}
+/* line 188, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-primary, .has-switch span.switch-left {
+  color: white;
+  background: #618fb0;
+}
+/* line 192, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-info {
+  color: white;
+  background: #2eb4dc;
+}
+/* line 197, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-success {
+  color: white;
+  background: #56bc76;
+}
+/* line 202, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-warning {
+  color: white;
+  background: #eac85e;
+}
+/* line 207, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
+.has-switch span.switch-danger {
+  color: white;
+  background: #e5603b;
+}
+
 /* line 1, C:/projects/admin/sass/_svg.scss */
 .nvd3.nv-stackedarea path.nv-area {
   fill-opacity: .8;
@@ -8891,6 +9148,8 @@ input.parsley-error {
 .sidebar {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
   border-radius: 1px;
   -webkit-box-shadow: 0 0 12px #676767;
   -moz-box-shadow: 0 0 12px #676767;
@@ -9132,6 +9391,8 @@ input.parsley-error {
 .box {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
   border-radius: 1px;
   padding: 5px;
   color: #ffffff;
@@ -9189,6 +9450,8 @@ input.parsley-error {
 .widget {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
   border-radius: 1px;
   -webkit-box-shadow: 0 0 12px #676767;
   -moz-box-shadow: 0 0 12px #676767;
@@ -9301,18 +9564,24 @@ input.parsley-error {
 .widget-tabs .nav-tabs > li:first-child > a {
   -webkit-border-radius: 1px 0 0 0;
   -moz-border-radius: 1px 0 0 0;
+  -ms-border-radius: 1px 0 0 0;
+  -o-border-radius: 1px 0 0 0;
   border-radius: 1px 0 0 0;
 }
 /* line 290, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav-tabs > li:last-child > a {
   -webkit-border-radius: 0 1px 0 0;
   -moz-border-radius: 0 1px 0 0;
+  -ms-border-radius: 0 1px 0 0;
+  -o-border-radius: 0 1px 0 0;
   border-radius: 0 1px 0 0;
 }
 /* line 294, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav-tabs > li > a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   border: none;
   text-align: center;
@@ -9510,6 +9779,8 @@ input.parsley-error {
   position: relative;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
   border-radius: 1px;
 }
 /* line 505, C:/projects/admin/sass/_base.scss */
@@ -9543,6 +9814,8 @@ input.parsley-error {
   padding: 2px 4px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
 }
 /* line 532, C:/projects/admin/sass/_base.scss */
@@ -9605,6 +9878,8 @@ input.parsley-error {
   box-shadow: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   border: none;
   color: white;
@@ -9693,6 +9968,8 @@ input.parsley-error {
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -9710,6 +9987,8 @@ input.parsley-error {
 .navbar-search .search-query {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
   border-radius: 1px;
   padding-left: 30px;
   color: inherit;
@@ -9730,6 +10009,8 @@ input.parsley-error {
   text-shadow: none;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
 }
 /* line 689, C:/projects/admin/sass/_base.scss */
@@ -9849,6 +10130,8 @@ input.parsley-error {
   line-height: 1.5em;
   -webkit-border-radius: 0 0 1px 1px;
   -moz-border-radius: 0 0 1px 1px;
+  -ms-border-radius: 0 0 1px 1px;
+  -o-border-radius: 0 0 1px 1px;
   border-radius: 0 0 1px 1px;
 }
 /* line 802, C:/projects/admin/sass/_base.scss */
@@ -9888,6 +10171,8 @@ input.parsley-error {
   background: #938678;
   -webkit-border-radius: 0 0 0 1px;
   -moz-border-radius: 0 0 0 1px;
+  -ms-border-radius: 0 0 0 1px;
+  -o-border-radius: 0 0 0 1px;
   border-radius: 0 0 0 1px;
   -webkit-box-shadow: -1px 1px 1px #72675b;
   -moz-box-shadow: -1px 1px 1px #72675b;
@@ -9900,22 +10185,14 @@ input.parsley-error {
   margin-top: 2px;
   margin-left: 10px;
 }
-/* line 841, C:/projects/admin/sass/_base.scss */
-.todo-app .mark-all .checker {
-  margin-top: -4px;
-}
 /* line 843, C:/projects/admin/sass/_base.scss */
-.todo-app .mark-all .checker span:before {
-  font-size: 15px;
-}
-/* line 849, C:/projects/admin/sass/_base.scss */
 .todo-app .help-block {
   margin-bottom: 0;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 856, C:/projects/admin/sass/_base.scss */
+/* line 850, C:/projects/admin/sass/_base.scss */
 .todos {
   margin-top: 5px;
   padding-top: 5px;
@@ -9927,36 +10204,36 @@ input.parsley-error {
   overflow-y: scroll;
 }
 
-/* line 867, C:/projects/admin/sass/_base.scss */
+/* line 861, C:/projects/admin/sass/_base.scss */
 .widget.login, widget.registration {
   width: 350px;
   padding-bottom: 0;
 }
-/* line 871, C:/projects/admin/sass/_base.scss */
+/* line 865, C:/projects/admin/sass/_base.scss */
 .widget.login header, widget.registration header {
   margin: 15px 0 25px 0;
   text-align: center;
 }
-/* line 875, C:/projects/admin/sass/_base.scss */
+/* line 869, C:/projects/admin/sass/_base.scss */
 .widget.login form, widget.registration form {
   margin-bottom: 0;
 }
-/* line 878, C:/projects/admin/sass/_base.scss */
+/* line 872, C:/projects/admin/sass/_base.scss */
 .widget.login form label, widget.registration form label {
   margin-bottom: 3px;
 }
-/* line 883, C:/projects/admin/sass/_base.scss */
+/* line 877, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend input, widget.registration .input-prepend input {
   height: 27px;
   width: 282px;
 }
-/* line 887, C:/projects/admin/sass/_base.scss */
+/* line 881, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend input:focus:invalid, widget.registration .input-prepend input:focus:invalid {
   color: #6C6C6C;
   border-color: #bbbbbb;
   box-shadow: none;
 }
-/* line 893, C:/projects/admin/sass/_base.scss */
+/* line 887, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend .icon-container, widget.registration .input-prepend .icon-container {
   height: 35px;
   width: 35px;
@@ -9965,12 +10242,12 @@ input.parsley-error {
   -webkit-transition-property: border, box-shadow;
   -webkit-transition-timing-function: linear, linear;
 }
-/* line 902, C:/projects/admin/sass/_base.scss */
+/* line 896, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend .icon-container i, widget.registration .input-prepend .icon-container i {
   position: relative;
   top: 6px;
 }
-/* line 906, C:/projects/admin/sass/_base.scss */
+/* line 900, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend .icon-container.invalid, widget.registration .input-prepend .icon-container.invalid {
   background: #f9ece4;
   border-color: #eac85e;
@@ -9978,7 +10255,7 @@ input.parsley-error {
   -moz-box-shadow: inset 0 1px 1px rgba(229, 96, 59, 0.075);
   box-shadow: inset 0 1px 1px rgba(229, 96, 59, 0.075);
 }
-/* line 912, C:/projects/admin/sass/_base.scss */
+/* line 906, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container, widget.registration .submit-container {
   position: relative;
   width: 350px;
@@ -9986,7 +10263,7 @@ input.parsley-error {
   background: #f8f3f0;
   padding: 20px 15px 0 15px;
 }
-/* line 919, C:/projects/admin/sass/_base.scss */
+/* line 913, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container button, widget.registration .submit-container button {
   border-radius: 0;
   color: #ffffff;
@@ -9995,7 +10272,7 @@ input.parsley-error {
   box-shadow: 0 0 #c54b2a;
   height: 45px;
 }
-/* line 927, C:/projects/admin/sass/_base.scss */
+/* line 921, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container .small-circle, widget.registration .submit-container .small-circle {
   border-radius: 50%;
   width: 18px;
@@ -10006,7 +10283,7 @@ input.parsley-error {
   left: 135px;
   float: left;
 }
-/* line 937, C:/projects/admin/sass/_base.scss */
+/* line 931, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container .small-circle .small-arrow-right, widget.registration .submit-container .small-circle .small-arrow-right {
   position: relative;
   top: 5px;
@@ -10017,14 +10294,14 @@ input.parsley-error {
   border-bottom: 4px solid transparent;
   border-left: 5px solid white;
 }
-/* line 948, C:/projects/admin/sass/_base.scss */
+/* line 942, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container .forgot, widget.registration .submit-container .forgot {
   color: #867868;
   text-align: center;
   text-decoration: underline;
   padding: 15px 0 15px 0;
 }
-/* line 955, C:/projects/admin/sass/_base.scss */
+/* line 949, C:/projects/admin/sass/_base.scss */
 .widget.login .facebook-login, widget.registration .facebook-login {
   position: relative;
   width: 380px;
@@ -10034,43 +10311,43 @@ input.parsley-error {
   background: #618fb0;
   padding-top: 10px;
 }
-/* line 964, C:/projects/admin/sass/_base.scss */
+/* line 958, C:/projects/admin/sass/_base.scss */
 .widget.login .facebook-login a, widget.registration .facebook-login a {
   color: #ffffff;
   text-shadow: none;
 }
-/* line 968, C:/projects/admin/sass/_base.scss */
+/* line 962, C:/projects/admin/sass/_base.scss */
 .widget.login .facebook-login a:hover, widget.registration .facebook-login a:hover {
   text-decoration: none;
 }
 
-/* line 977, C:/projects/admin/sass/_base.scss */
+/* line 971, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .sidebar {
   right: 0;
   margin: 30px 25px 0 0;
 }
-/* line 981, C:/projects/admin/sass/_base.scss */
+/* line 975, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .sidebar.sidebar-icons {
   margin-right: 1.6%;
 }
-/* line 986, C:/projects/admin/sass/_base.scss */
+/* line 980, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .wrap {
   margin-left: 0;
   margin-right: 205px;
 }
-/* line 990, C:/projects/admin/sass/_base.scss */
+/* line 984, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .wrap.sidebar-icons {
   margin-right: 62px;
 }
 
 /*chat stuff*/
-/* line 997, C:/projects/admin/sass/_base.scss */
+/* line 991, C:/projects/admin/sass/_base.scss */
 .chat {
   margin-top: 10px;
   position: relative;
   height: 100%;
 }
-/* line 1002, C:/projects/admin/sass/_base.scss */
+/* line 996, C:/projects/admin/sass/_base.scss */
 .chat .controls {
   position: absolute;
   bottom: 0;
@@ -10078,11 +10355,11 @@ input.parsley-error {
   right: 0;
   padding: 20px 20px 5px;
 }
-/* line 1009, C:/projects/admin/sass/_base.scss */
+/* line 1003, C:/projects/admin/sass/_base.scss */
 .chat .controls form, .chat .controls label, .chat .controls input {
   margin-bottom: 0;
 }
-/* line 1013, C:/projects/admin/sass/_base.scss */
+/* line 1007, C:/projects/admin/sass/_base.scss */
 .chat .controls .new-message {
   display: block;
   width: 100%;
@@ -10092,7 +10369,7 @@ input.parsley-error {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1020, C:/projects/admin/sass/_base.scss */
+/* line 1014, C:/projects/admin/sass/_base.scss */
 .chat .controls .new-message:focus + .smile {
   color: rgba(97, 143, 176, 0.6);
   -webkit-transition: color 0.2s;
@@ -10100,7 +10377,7 @@ input.parsley-error {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 1026, C:/projects/admin/sass/_base.scss */
+/* line 1020, C:/projects/admin/sass/_base.scss */
 .chat .controls .smile {
   position: absolute;
   right: 30px;
@@ -10112,7 +10389,7 @@ input.parsley-error {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 1036, C:/projects/admin/sass/_base.scss */
+/* line 1030, C:/projects/admin/sass/_base.scss */
 .chat .messages {
   overflow-y: scroll;
   position: absolute;
@@ -10121,87 +10398,87 @@ input.parsley-error {
   top: 0;
   bottom: 62px;
 }
-/* line 1045, C:/projects/admin/sass/_base.scss */
+/* line 1039, C:/projects/admin/sass/_base.scss */
 .chat .message {
   margin-bottom: 10px;
   padding: 0 5px;
 }
-/* line 1050, C:/projects/admin/sass/_base.scss */
+/* line 1044, C:/projects/admin/sass/_base.scss */
 .chat .message:last-child {
   margin-bottom: 0;
 }
-/* line 1053, C:/projects/admin/sass/_base.scss */
+/* line 1047, C:/projects/admin/sass/_base.scss */
 .chat .message.from-me {
   border-left: 5px solid #56bc76;
   padding-left: 0;
 }
-/* line 1057, C:/projects/admin/sass/_base.scss */
+/* line 1051, C:/projects/admin/sass/_base.scss */
 .chat .message:not(.from-me) {
   border-left: 5px solid #eac85e;
   padding-left: 0;
 }
-/* line 1062, C:/projects/admin/sass/_base.scss */
+/* line 1056, C:/projects/admin/sass/_base.scss */
 .chat .message .name, .chat .message .time {
   text-align: center;
 }
-/* line 1066, C:/projects/admin/sass/_base.scss */
+/* line 1060, C:/projects/admin/sass/_base.scss */
 .chat .message .name {
   font-weight: 700;
 }
-/* line 1069, C:/projects/admin/sass/_base.scss */
+/* line 1063, C:/projects/admin/sass/_base.scss */
 .chat .message .name a {
   color: #666666;
 }
-/* line 1073, C:/projects/admin/sass/_base.scss */
+/* line 1067, C:/projects/admin/sass/_base.scss */
 .chat .message .time {
   line-height: 1em;
   font-weight: 600;
   color: #666666;
   font-size: 10px;
 }
-/* line 1080, C:/projects/admin/sass/_base.scss */
+/* line 1074, C:/projects/admin/sass/_base.scss */
 .chat .message .text {
   font-size: 13px;
 }
 
-/* line 1086, C:/projects/admin/sass/_base.scss */
+/* line 1080, C:/projects/admin/sass/_base.scss */
 .overview {
   margin-top: -15px;
   padding: 10px;
 }
-/* line 1090, C:/projects/admin/sass/_base.scss */
+/* line 1084, C:/projects/admin/sass/_base.scss */
 .overview h4 {
   font-weight: 400;
 }
-/* line 1094, C:/projects/admin/sass/_base.scss */
+/* line 1088, C:/projects/admin/sass/_base.scss */
 .overview .stats {
   margin-top: 10px;
   font-size: 12px;
 }
-/* line 1098, C:/projects/admin/sass/_base.scss */
+/* line 1092, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity {
   font-size: 15px;
 }
-/* line 1100, C:/projects/admin/sass/_base.scss */
+/* line 1094, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity .icon {
   text-align: center;
 }
-/* line 1104, C:/projects/admin/sass/_base.scss */
+/* line 1098, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity .value {
   text-align: right;
   font-weight: 600;
   font-size: 18px;
 }
-/* line 1110, C:/projects/admin/sass/_base.scss */
+/* line 1104, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity .row-fluid {
   margin-top: 10px;
 }
-/* line 1115, C:/projects/admin/sass/_base.scss */
+/* line 1109, C:/projects/admin/sass/_base.scss */
 .overview .stats h4 {
   text-align: right;
   font-weight: 300;
 }
-/* line 1120, C:/projects/admin/sass/_base.scss */
+/* line 1114, C:/projects/admin/sass/_base.scss */
 .overview .stats h3 {
   line-height: 18px;
   vertical-align: middle;
@@ -10209,48 +10486,50 @@ input.parsley-error {
   font-size: 15px;
 }
 
-/* line 1129, C:/projects/admin/sass/_base.scss */
+/* line 1123, C:/projects/admin/sass/_base.scss */
 .progress {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
   height: 8px;
   background: rgba(0, 0, 0, 0.2);
 }
-/* line 1134, C:/projects/admin/sass/_base.scss */
+/* line 1128, C:/projects/admin/sass/_base.scss */
 .progress .bar {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 1141, C:/projects/admin/sass/_base.scss */
+/* line 1135, C:/projects/admin/sass/_base.scss */
 .overview.light-blue-color {
   color: #eff5ef;
 }
-/* line 1145, C:/projects/admin/sass/_base.scss */
+/* line 1139, C:/projects/admin/sass/_base.scss */
 .overview.light-brown-color {
   color: #f5f2ee;
 }
-/* line 1149, C:/projects/admin/sass/_base.scss */
+/* line 1143, C:/projects/admin/sass/_base.scss */
 .overview.dark-blue {
   color: #426d73;
 }
-/* line 1153, C:/projects/admin/sass/_base.scss */
+/* line 1147, C:/projects/admin/sass/_base.scss */
 .overview.dark-brown {
   color: #786c60;
 }
 
-/* line 1158, C:/projects/admin/sass/_base.scss */
+/* line 1152, C:/projects/admin/sass/_base.scss */
 .media-heading {
   font-weight: 600;
 }
-/* line 1161, C:/projects/admin/sass/_base.scss */
+/* line 1155, C:/projects/admin/sass/_base.scss */
 .media-heading .twitter {
   color: rgba(102, 102, 102, 0.7);
 }
 
-/* line 1167, C:/projects/admin/sass/_base.scss */
+/* line 1161, C:/projects/admin/sass/_base.scss */
 .media .actions {
   position: static;
   margin-right: 10px;
@@ -10260,34 +10539,34 @@ input.parsley-error {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 1174, C:/projects/admin/sass/_base.scss */
+/* line 1168, C:/projects/admin/sass/_base.scss */
 .media li {
   float: left;
   margin-left: 10px;
 }
-/* line 1179, C:/projects/admin/sass/_base.scss */
+/* line 1173, C:/projects/admin/sass/_base.scss */
 .media p {
   margin-bottom: 0;
 }
-/* line 1183, C:/projects/admin/sass/_base.scss */
+/* line 1177, C:/projects/admin/sass/_base.scss */
 .media .time {
   font-weight: 600;
   color: rgba(102, 102, 102, 0.8);
   font-size: 13px;
 }
-/* line 1189, C:/projects/admin/sass/_base.scss */
+/* line 1183, C:/projects/admin/sass/_base.scss */
 .media .pull-left {
   margin-right: 0;
 }
 
-/* line 1194, C:/projects/admin/sass/_base.scss */
+/* line 1188, C:/projects/admin/sass/_base.scss */
 .media-content {
   border-left: 3px solid #e5603b;
   padding-left: 10px;
   position: relative;
   margin-left: 10px;
 }
-/* line 1200, C:/projects/admin/sass/_base.scss */
+/* line 1194, C:/projects/admin/sass/_base.scss */
 .media-content:hover .actions {
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -10295,7 +10574,7 @@ input.parsley-error {
   transition: opacity 0.2s;
   opacity: 1;
 }
-/* line 1205, C:/projects/admin/sass/_base.scss */
+/* line 1199, C:/projects/admin/sass/_base.scss */
 .media-content .arrow {
   display: block;
   position: absolute;
@@ -10308,7 +10587,7 @@ input.parsley-error {
   border-right: 4px solid #e5603b;
 }
 
-/* line 1218, C:/projects/admin/sass/_base.scss */
+/* line 1212, C:/projects/admin/sass/_base.scss */
 .btn {
   color: #ffffff;
   text-shadow: none;
@@ -10316,19 +10595,19 @@ input.parsley-error {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1225, C:/projects/admin/sass/_base.scss */
+/* line 1219, C:/projects/admin/sass/_base.scss */
 .btn:hover, .btn:focus {
   color: white;
   -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
 }
-/* line 1230, C:/projects/admin/sass/_base.scss */
+/* line 1224, C:/projects/admin/sass/_base.scss */
 .btn .caret {
   border-top-color: #fff;
 }
 
-/* line 1235, C:/projects/admin/sass/_base.scss */
+/* line 1229, C:/projects/admin/sass/_base.scss */
 .btn-transparent {
   background: rgba(51, 51, 51, 0.4);
   color: white;
@@ -10337,27 +10616,27 @@ input.parsley-error {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1241, C:/projects/admin/sass/_base.scss */
+/* line 1235, C:/projects/admin/sass/_base.scss */
 .btn-transparent:hover {
   background: rgba(51, 51, 51, 0.5);
   color: #ffffff;
 }
-/* line 1246, C:/projects/admin/sass/_base.scss */
+/* line 1240, C:/projects/admin/sass/_base.scss */
 .btn-transparent.active {
   color: #ffffff;
   background: rgba(51, 51, 51, 0.75);
 }
-/* line 1251, C:/projects/admin/sass/_base.scss */
+/* line 1245, C:/projects/admin/sass/_base.scss */
 .btn-transparent .caret {
   border-top-color: #666666;
 }
 
-/* line 1256, C:/projects/admin/sass/_base.scss */
+/* line 1250, C:/projects/admin/sass/_base.scss */
 .btn-inverse {
   color: #666666;
   border-bottom-color: rgba(0, 0, 0, 0.2);
 }
-/* line 1261, C:/projects/admin/sass/_base.scss */
+/* line 1255, C:/projects/admin/sass/_base.scss */
 .btn-inverse:hover,
 .btn-inverse :focus {
   color: #666666;
@@ -10366,35 +10645,37 @@ input.parsley-error {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-/* line 1267, C:/projects/admin/sass/_base.scss */
+/* line 1261, C:/projects/admin/sass/_base.scss */
 .accordion-group {
   margin: 0;
   border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
   border-radius: 0;
 }
 
-/* line 1273, C:/projects/admin/sass/_base.scss */
+/* line 1267, C:/projects/admin/sass/_base.scss */
 .profile-picture {
   text-align: center;
 }
 
-/* line 1277, C:/projects/admin/sass/_base.scss */
+/* line 1271, C:/projects/admin/sass/_base.scss */
 .form-horizontal.label-left .control-label {
   text-align: left;
 }
 
-/* line 1282, C:/projects/admin/sass/_base.scss */
+/* line 1276, C:/projects/admin/sass/_base.scss */
 .form-condensed .control-label {
   width: 100px;
 }
-/* line 1286, C:/projects/admin/sass/_base.scss */
+/* line 1280, C:/projects/admin/sass/_base.scss */
 .form-condensed .controls {
   margin-left: 120px;
 }
 
-/* line 1291, C:/projects/admin/sass/_base.scss */
+/* line 1285, C:/projects/admin/sass/_base.scss */
 .section {
   font-size: 16px;
   color: #999999;
@@ -10402,54 +10683,44 @@ input.parsley-error {
   line-height: 30px;
   padding: 10px 0 0;
 }
-/* line 1298, C:/projects/admin/sass/_base.scss */
+/* line 1292, C:/projects/admin/sass/_base.scss */
 .section small {
   font-size: 13px;
   color: #dfdfdf;
   font-weight: 600;
 }
 
-/* line 1305, C:/projects/admin/sass/_base.scss */
+/* line 1299, C:/projects/admin/sass/_base.scss */
 .controls + .controls {
   margin-top: 10px;
 }
 
-/* line 1309, C:/projects/admin/sass/_base.scss */
+/* line 1303, C:/projects/admin/sass/_base.scss */
 .help-block {
   font-size: 13px;
 }
 
-/* line 1313, C:/projects/admin/sass/_base.scss */
+/* line 1307, C:/projects/admin/sass/_base.scss */
 input.input-padding-increased {
   padding: 8px 10px;
 }
 
-/* line 1318, C:/projects/admin/sass/_base.scss */
-.checkbox .checker {
-  float: left;
-  margin-left: -20px;
-}
-/* line 1321, C:/projects/admin/sass/_base.scss */
-.checkbox .checker input[type="checkbox"] {
-  margin-left: 0;
-}
-
-/* line 1327, C:/projects/admin/sass/_base.scss */
+/* line 1311, C:/projects/admin/sass/_base.scss */
 .select-block-level {
   width: 100%;
 }
 
-/* line 1332, C:/projects/admin/sass/_base.scss */
+/* line 1316, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] {
   float: none;
   display: inline-block;
   margin-left: 0;
 }
-/* line 1337, C:/projects/admin/sass/_base.scss */
+/* line 1321, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] .btn {
   width: 100%;
 }
-/* line 1342, C:/projects/admin/sass/_base.scss */
+/* line 1326, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group .dropdown-menu {
   width: 100%;
 }

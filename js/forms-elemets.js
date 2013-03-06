@@ -106,5 +106,5 @@ $(function(){
         stylesheets: []
     });
 
-    $("input:checkbox, input:radio").uniform();
+    $("input.uniform").uniform();
 });

@@ -11,14 +11,18 @@
 
 $border: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 $white: #ffffff;
-$blue: #0088cc;
+//okendoken. setting blue the same as .btn-primary color from outer space
+//$blue: #0088cc;
+$blue: $btnPrimaryBackground;
 $gray: #e6e6e6;
-$border-radius: 4px;
+$border-radius: $baseBorderRadius;
 
 .has-switch {
   display: inline-block;
   cursor: pointer;
-  @include border-radius(5px);
+  //okendoken. adding $baseBorderRadius instead of predefined one
+  //@include border-radius(5px);
+  @include border-radius($baseBorderRadius);
   border: 1px solid;
   border-color: $border;
   background: $gray;
@@ -124,7 +128,9 @@ $border-radius: 4px;
     border-left: 1px solid $gray;
     border-right: 1px solid $gray;
 
-    @include background-image(linear-gradient(top, $white, $gray));
+    //okendoken. let it look like .btn-inverse
+    //@include background-image(linear-gradient(top, $white, $gray));
+    background: $btnInverseBackground;
   }
 
   span {
@@ -138,40 +144,70 @@ $border-radius: 4px;
       @include border-bottom-left-radius($border-radius);
     }
     &.switch-right {
-      color: black;
+      //okendoken. changing to default theme color
+      //color: black;
+      color: #ffffff;
       @include border-top-right-radius($border-radius);
       @include border-bottom-right-radius($border-radius);
-      @include background-image(linear-gradient(bottom, $white, $gray));
+      //okendoken. let it look like .btn
+      //@include background-image(linear-gradient(bottom, $white, $gray));
+      background: $btnBackground;
     }
+
+    //okendoken. overriding predefined colors
+    //&.switch-primary, &.switch-left {
+    //  color: $white;
+    //  background: $blue;
+    //  @include background-image(linear-gradient(bottom, $blue, #0055CC));
+    //}
+    //&.switch-info {
+    //  $startColor: #5BC0DE;
+    //  color: $white;
+    //  background: $startColor;
+    //  @include background-image(linear-gradient(bottom, $startColor, #2F96B4));
+    //}
+    //&.switch-success {
+    //  $startColor: #62C462;
+    //  color: $white;
+    //  background: $startColor;
+    //  @include background-image(linear-gradient(bottom, $startColor, #51A351));
+    //}
+    //&.switch-warning {
+    //  $startColor: #DBB450;
+    //  color: $white;
+    //  background: $startColor;
+    //  @include background-image(linear-gradient(bottom, $startColor, #F89406));
+    //}
+    //&.switch-danger {
+    //  $startColor: #EE5f5B;
+    //  color: $white;
+    //  background: $startColor;
+    //  @include background-image(linear-gradient(bottom, $startColor, #BD362F));
+    //}
 
     &.switch-primary, &.switch-left {
       color: $white;
       background: $blue;
-      @include background-image(linear-gradient(bottom, $blue, #0055CC));
     }
     &.switch-info {
-      $startColor: #5BC0DE;
+      $startColor: $btnInfoBackground;
       color: $white;
       background: $startColor;
-      @include background-image(linear-gradient(bottom, $startColor, #2F96B4));
     }
     &.switch-success {
-      $startColor: #62C462;
+      $startColor: $btnSuccessBackground;
       color: $white;
       background: $startColor;
-      @include background-image(linear-gradient(bottom, $startColor, #51A351));
     }
     &.switch-warning {
-      $startColor: #DBB450;
+      $startColor: $btnWarningBackground;
       color: $white;
       background: $startColor;
-      @include background-image(linear-gradient(bottom, $startColor, #F89406));
     }
     &.switch-danger {
-      $startColor: #EE5f5B;
+      $startColor: $btnDangerBackground;
       color: $white;
       background: $startColor;
-      @include background-image(linear-gradient(bottom, $startColor, #BD362F));
     }
   }
 }
