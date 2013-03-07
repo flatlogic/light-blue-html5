@@ -138,4 +138,9 @@ $(function(){
     $('#color').colorpicker().on('changeColor', function(ev){
         $("#color-holder").css("backgroundColor", ev.color.toHex());
     });
+
+    $("#mask-phone").mask("(999) 999-9999");
+    $("#mask-date").mask("99-99-9999");
+    $("#mask-int-phone").mask("+999 999 999 999");
+    $("#mask-time").mask("99:99");
 });
