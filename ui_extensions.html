@@ -3,30 +3,24 @@
 <head>
     <title>Admin theme test</title>
     <link href="css/application.css" rel="stylesheet">
-    <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
-    <script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
-    <script src="lib/uniform/js/jquery.uniform.js"></script>
-    <!--<script src="lib/zepto/zepto.min.js"> </script>-->
-    <script src="js/bootstrap/bootstrap-tab.js"> </script>
-    <script src="lib/parsley.js"> </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="utf-8">
 </head>
 <body class="background-two">
-<nav class="sidebar">
+<nav class="sidebar nav-collapse collapse">
     <a class="brand" href=""><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
     <ul id="side-nav" class="side-nav">
         <li class="green">
             <a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="active teal accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse in">
+        <li class="teal accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse">
                 <li><a href="#">Stats</a></li>
-                <li class="active"><a href="stats.html">Charts</a></li>
+                <li><a href="stats.html">Charts</a></li>
             </ul>
         </li>
         <li class="blue accordion-group">
@@ -39,14 +33,14 @@
                 <li><a href="form_validation.html">Validation</a></li>
             </ul>
         </li>
-        <li class="brown accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="brown active accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse">
+            <ul id="ui-collapse" class="accordion-body collapse in">
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_dialogs.html">Dialogs</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
-                <li><a href="ui_extensions.html">Extensions</a></li>
+                <li class="active"><a href="ui_extensions.html">Extensions</a></li>
             </ul>
         </li>
         <li class="dark-red">
@@ -76,8 +70,11 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav title-nav hidden-phone">
-                    <li><a href="#" title="Basic"><i class="icon-bar-chart icon-large"></i> Basic Stats</a></li>
-                    <li class="active"><a href="#" title="Advanced"><i class="icon-magic icon-large"></i> Charts</a></li>
+                    <li><a href="ui_buttons.html" title="Buttons"><i class="icon-ok icon-large"></i> Buttons</a></li>
+                    <li><a href="ui_dialogs.html" title="Dialogs"><i class="icon-magic icon-large"></i> Dialogs</a></li>
+                    <li><a href="ui_icons.html" title="Icons"><i class="icon-thumbs-up icon-large"></i> Icons</a></li>
+                    <li class="active"><a href="ui_extensions.html" title="Tabs"><i class="icon-wrench icon-large"></i> Extensions</a></li>
+
                 </ul>
                 <ul class="nav right pull-right ">
                     <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
@@ -110,93 +107,45 @@
                     </li>
                     <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
                 </ul>
-            </div><!-- /navbar-inner -->
+            </div>
         </div>
     </header>
     <div class="content container-fluid">
-        <div class="row-fluid">
-            <div class="span3">
-                <section class="widget large">
-                    <header>
-                        <h3><i class="icon-home"></i> Top sources</h3>
-                    </header>
-                    <div class="body">
-                        <div id="sources-chart-pie" class="chart pie">
-                            <svg></svg>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span9 half-width-responsive">
-                <section class="widget large">
-                    <header>
-                        <h3><i class="icon-bar-chart"></i> Bar Chart <small>Refresh page to see different data</small></h3>
-                    </header>
-                    <div id="sources-chart-bar" class="body chart">
-                        <svg></svg>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row-fluid">
-            <div class="span6">
-                <section class="widget large light-blue">
-                    <header>
-                        <h3><i class="icon-bullhorn"></i> Stream Stacked Chart</h3>
-                    </header>
-                    <div id="sources-chart-stacked" class="body chart">
-                        <svg></svg>
-                    </div>
-                </section>
-            </div>
-            <div class="span6">
-                <section class="widget large light-blue">
-                    <header>
-                        <h3><i class="icon-circle-arrow-right"></i> Line Chart</h3>
-                    </header>
-                    <div id="sources-chart-line" class="body chart">
-                        <svg></svg>
-                    </div>
-                </section>
-            </div>
-        </div>
     </div>
 </div>
 
-<!-- d3, nvd3-->
-<script src="lib/nvd3/lib/d3.v2.js"></script>
-<script src="lib/nvd3/nv.d3.custom.js"></script>
+<!-- jquery and friends -->
+<script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+<script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
 
-<!-- nvd3 models -->
-<script src="lib/nvd3/src/models/scatter.js"></script>
-<script src="lib/nvd3/src/models/axis.js"></script>
-<script src="lib/nvd3/src/models/legend.js"></script>
-<script src="lib/nvd3/src/models/stackedArea.js"></script>
-<script src="lib/nvd3/src/models/stackedAreaChart.js"></script>
-<script src="lib/nvd3/src/models/line.js"></script>
-<script src="lib/nvd3/src/models/pie.js"></script>
-<script src="lib/nvd3/src/models/pieChartTotal.js"></script>
-<script src="lib/nvd3/stream_layers.js"></script>
-<script src="lib/nvd3/src/models/lineChart.js"></script>
-<script src="lib/nvd3/src/models/multiBar.js"></script>
-<script src="lib/nvd3/src/models/multiBarChart.js"></script>
+<!-- jquery plugins -->
+<script src="lib/jquery.maskedinput.js"></script>
+<script src="lib/parsley.js"> </script>
+<script src="lib/uniform/js/jquery.uniform.js"></script>
+<script src="lib/select2.js"></script>
+
 
 <!--backbone and friends -->
 <script src="lib/backbone/underscore-min.js"></script>
 
 <!-- bootstrap default plugins -->
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
+<script src="js/bootstrap/bootstrap-alert.js"></script>
 <script src="js/bootstrap/bootstrap-tooltip.js"></script>
 <script src="js/bootstrap/bootstrap-popover.js"></script>
 <script src="js/bootstrap/bootstrap-button.js"></script>
+<script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap/bootstrap-modal.js"></script>
+
+<!-- bootstrap custom plugins -->
+<script src="lib/bootstrap-datepicker.js"></script>
+<script src="lib/bootstrap-select.js"></script>
+<script src="lib/wysihtml5-0.3.0_rc2.js"></script>
+<script src="lib/bootstrap-wysihtml5.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
-
-<!-- page specific -->
-<script src="js/stats.js"></script>
-
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
@@ -215,6 +164,23 @@
             <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
         </div>
     </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+    <% auto = sidebarState == 'auto'%>
+    <% if (auto) {%>
+    <button type="button"
+            data-value="icons"
+            class="btn-icons btn btn-success btn-small">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-primary btn-small">Auto</button>
+
+    <%} else {%>
+    <button type="button"
+            data-value="auto"
+            class="btn btn-primary btn-small">Auto</button>
+    <% } %>
 </script>
 
 <script type="text/template" id="user-template">
@@ -237,22 +203,4 @@
     </div>
 </script>
 
-<script type="text/template" id="sidebar-settings-template">
-    <% auto = sidebarState == 'auto'%>
-    <% if (auto) {%>
-    <button type="button"
-            data-value="icons"
-            class="btn-icons btn btn-success btn-small">Icons</button>
-    <button type="button"
-            data-value="auto"
-            class="btn-auto btn btn-primary btn-small">Auto</button>
-
-    <%} else {%>
-    <button type="button"
-            data-value="auto"
-            class="btn btn-primary btn-small">Auto</button>
-    <% } %>
-</script>
-
 </body>
-</html>
