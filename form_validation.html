@@ -33,8 +33,16 @@
                 <li class="active"><a href="form_validation.html">Validation</a></li>
             </ul>
         </li>
-        <li class="brown">
-            <a href="#"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
+        <li class="brown accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
+            <ul id="ui-collapse" class="accordion-body collapse">
+                <li><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_tabs.html">Tabs</a></li>
+                <li><a href="ui_accordion.html">Accordion</a></li>
+                <li><a href="ui_icons.html">Icons</a></li>
+            </ul>
         </li>
         <li class="dark-red">
             <a href="#"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
@@ -261,9 +269,6 @@
 <!-- basic application js-->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
-
-<!-- page specific -->
-<script src="js/forms.js"></script>
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
