@@ -104,6 +104,128 @@
     </div>
 </header>
 <div class="content container-fluid">
+    <div class="row-fluid">
+        <div class="span7 offset1">
+            <section class="widget">
+                <header>
+                    <h3>
+                        <i class="icon-ok-sign"></i>
+                        Dead simple validation
+                        <small>No JS needed to tune-up</small>
+                    </h3>
+                </header>
+                <div class="body">
+                    <form class="form-horizontal label-left" method
+                            data-validate="parsley"
+                            novalidate="novalidate">
+                        <fieldset>
+                            <legend class="section">
+                                By default validation is started only after at least 3 characters have been input.
+                            </legend>
+                            <div class="control-group">
+                                <label class="control-label" for="basic">Simple required</label>
+                                <div class="controls">
+                                    <input type="text" id="basic" name="basic"
+                                            required="required">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="basic-change">
+                                    Min-length On Change
+                                    <span class="help-block">
+                                        At least 10
+                                    </span>
+                                </label>
+                                <div class="controls">
+                                    <input type="text" id="basic-change" name="basic-change"
+                                           data-trigger="change"
+                                           data-minlength="10"
+                                           required="required">
+                                </div>
+                            </div>
+                            <legend class="section">
+                                <span class="label label-info">
+                                    HTML5
+                                </span>
+                                input types supported
+                            </legend>
+                            <div class="control-group">
+                                <label class="control-label" for="email">
+                                    E-mail
+                                </label>
+                                <div class="controls">
+                                    <input type="email" id="email" name="email"
+                                           data-trigger="change"
+                                           data-validation-minlength="1"
+                                           required="required">
+                                    <span class="help-block">
+                                        This one is triggered even when 1 character has been input
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="number">
+                                    Number
+                                </label>
+                                <div class="controls">
+                                    <input type="number" id="number" name="number"
+                                           required="required">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="range">
+                                    Range
+                                </label>
+                                <div class="controls">
+                                    <input type="text" data-range="[10, 100]"
+                                           id="range" name="range"
+                                           data-trigger="change"
+                                           data-validation-minlength="1"
+                                           required="required">
+                                </div>
+                            </div>
+                            <legend class="section">
+                                More validation
+                            </legend>
+                            <div class="control-group">
+                                <label class="control-label" for="password">
+                                    Password helpers
+                                </label>
+                                <div class="controls">
+                                    <input type="password" id="password" name="password"
+                                           data-trigger="change"
+                                           data-minlength="6"
+                                           required="required">
+                                </div>
+                                <div class="controls">
+                                    <input type="password" id="password-r" name="password-r"
+                                           data-trigger="change"
+                                           data-minlength="6"
+                                           data-equalto="#password"
+                                           required="required">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="website">
+                                    Website
+                                </label>
+                                <div class="controls">
+                                    <input type="text" id="website" name="website"
+                                           data-trigger="change"
+                                           data-type="url"
+                                           required="required">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Validate &amp; Submit</button>
+                            <button type="button" class="btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
 </div>
 </div>
 
