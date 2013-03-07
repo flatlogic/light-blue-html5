@@ -3018,29 +3018,29 @@ input[type="button"].btn-block {
 .btn-info {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #2eb4dc;
-  background-image: -moz-linear-gradient(top, #2eb4dc, #2eb4dc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2eb4dc), to(#2eb4dc));
-  background-image: -webkit-linear-gradient(top, #2eb4dc, #2eb4dc);
-  background-image: -o-linear-gradient(top, #2eb4dc, #2eb4dc);
-  background-image: linear-gradient(to bottom, #2eb4dc, #2eb4dc);
+  background-color: #4ab0ce;
+  background-image: -moz-linear-gradient(top, #4ab0ce, #4ab0ce);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4ab0ce), to(#4ab0ce));
+  background-image: -webkit-linear-gradient(top, #4ab0ce, #4ab0ce);
+  background-image: -o-linear-gradient(top, #4ab0ce, #4ab0ce);
+  background-image: linear-gradient(to bottom, #4ab0ce, #4ab0ce);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF2EB4DC', endColorstr='#FF2EB4DC', GradientType=0);
-  border-color: #2eb4dc #2eb4dc #1b83a2;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF4AB0CE', endColorstr='#FF4AB0CE', GradientType=0);
+  border-color: #4ab0ce #4ab0ce #2b86a0;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #2eb4dc;
+  *background-color: #4ab0ce;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 /* line 502, C:/projects/admin/sass/bootstrap/_mixins.scss */
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
   color: white;
-  background-color: #2eb4dc;
-  *background-color: #22a7ce;
+  background-color: #4ab0ce;
+  *background-color: #36a7c8;
 }
 /* line 510, C:/projects/admin/sass/bootstrap/_mixins.scss */
 .btn-info:active, .btn-info.active {
-  background-color: #1f95b8 \9;
+  background-color: #3196b4 \9;
 }
 
 /* line 171, C:/projects/admin/sass/bootstrap/_buttons.scss */
@@ -3313,7 +3313,7 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 155, C:/projects/admin/sass/bootstrap/_button-groups.scss */
 .btn-group.open .btn-info.dropdown-toggle {
-  background-color: #2eb4dc;
+  background-color: #4ab0ce;
 }
 /* line 158, C:/projects/admin/sass/bootstrap/_button-groups.scss */
 .btn-group.open .btn-inverse.dropdown-toggle {
@@ -8832,7 +8832,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
 /* line 193, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-info {
   color: white;
-  background: #2eb4dc;
+  background: #4ab0ce;
 }
 /* line 198, C:/projects/admin/sass/lib/_bootstrap-switch.scss */
 .has-switch span.switch-success {
@@ -9502,19 +9502,19 @@ input.parsley-error {
 }
 /* line 101, C:/projects/admin/sass/_base.scss */
 .side-nav li.teal.active > a {
-  color: #2eb4dc;
+  color: #4ab0ce;
 }
 /* line 105, C:/projects/admin/sass/_base.scss */
 .side-nav li.teal a:hover {
-  color: #2eb4dc;
+  color: #4ab0ce;
 }
 /* line 109, C:/projects/admin/sass/_base.scss */
 .side-nav li.teal a.accordion-toggle:not(.collapsed) {
-  color: #2eb4dc;
+  color: #4ab0ce;
 }
 /* line 112, C:/projects/admin/sass/_base.scss */
 .side-nav li.teal a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
-  color: #2eb4dc;
+  color: #4ab0ce;
 }
 /* line 121, C:/projects/admin/sass/_base.scss */
 .side-nav .accordion-body li a {
@@ -9599,7 +9599,7 @@ input.parsley-error {
 }
 /* line 169, C:/projects/admin/sass/_base.scss */
 .box.teal {
-  background: #2eb4dc;
+  background: #4ab0ce;
 }
 /* line 175, C:/projects/admin/sass/_base.scss */
 .box .description {
@@ -10892,6 +10892,16 @@ input.input-padding-increased {
 /* line 1333, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group .dropdown-menu {
   width: 100%;
+}
+
+/* line 1338, C:/projects/admin/sass/_base.scss */
+.text-align-center {
+  text-align: center;
+}
+
+/* line 1342, C:/projects/admin/sass/_base.scss */
+.well-white {
+  background: #ffffff;
 }
 
 @media (max-height: 800px) {
