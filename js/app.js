@@ -10,7 +10,7 @@ var $lime = "#8CBF26",
     $pink = "#E671B8",
     $purple = "#A700AE",
     $brown = "#A05000",
-    $teal = "#2eb4dc",
+    $teal = "#4ab0ce",
     $textColor = "#666";
 
 //turn off charts is needed
