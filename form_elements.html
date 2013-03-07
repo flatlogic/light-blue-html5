@@ -1019,7 +1019,7 @@
         </div>
     </div>
     <div class="row-fluid">
-        <div class="span6">
+        <div class="span7">
             <section class="widget">
                 <header>
                     <h3>
@@ -1152,7 +1152,7 @@
                 </div>
             </section>
         </div>
-        <div class="span6">
+        <div class="span5">
             <section class="widget">
                 <header>
                     <h3>
@@ -1161,8 +1161,38 @@
                     </h3>
                 </header>
                 <div class="body">
-                    <form method>
+                    <form method >
                         <fieldset>
+                            <legend class="section">Dates</legend>
+                            <div class="control-group">
+                                <label for="in-place-date" class="control-label">In place</label>
+                                <div class="controls controls-row">
+                                    <input id="in-place-date" class="span6 date-picker" type="text" name="in-place-date" value="">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label for="btn-enabled-date" class="control-label">Button-enabled</label>
+                                <div class="controls controls-row">
+                                    <div class="input-append span6">
+                                        <input id="btn-enabled-date" class="span11" type="text" name="btn-enabled-date" value="">
+                                        <a href="#" id="btn-select-calendar" class="btn btn-danger"
+                                                data-date-format="yyyy/mm/dd" data-date="2013/02/25">
+                                            <i class="icon-calendar"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <legend class="section">Colors</legend>
+                            <div class="control-group">
+                                <label for="color" class="control-label">Simple Select</label>
+                                <div class="controls controls-row">
+                                    <div class="input-append">
+                                    <input id="color" class=" colorpicker" type="text" name="color"
+                                           value="#eac85e">
+                                        <span id="color-holder" class="add-on" style="background-color: #eac85e;">&nbsp;&nbsp;&nbsp;</span>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>
                     </form>
                 </div>
@@ -1202,6 +1232,7 @@
 <script src="lib/wysihtml5-0.3.0_rc2.js"></script>
 <script src="lib/bootstrap-wysihtml5.js"></script>
 <script src="lib/bootstrap-switch.js"></script>
+<script src="lib/bootstrap-colorpicker.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>

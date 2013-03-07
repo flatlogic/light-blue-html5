@@ -123,4 +123,19 @@ $(function(){
             $this.toggleClass($(this).data("toggle-passive-class")).toggleClass($this.data("toggle-class"));
         }
     });
+
+    $('.date-picker').datepicker({
+        autoclose: true
+    });
+    var $btnCalendar = $('#btn-select-calendar');
+    $btnCalendar.datepicker({
+        autoclose: true
+    }).on('changeDate', function(ev){
+            $('#btn-enabled-date').val($btnCalendar.data('date'));
+        $btnCalendar.datepicker('hide');
+    });
+
+    $('#color').colorpicker().on('changeColor', function(ev){
+        $("#color-holder").css("backgroundColor", ev.color.toHex());
+    });
 });
