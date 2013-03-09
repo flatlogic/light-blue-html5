@@ -17,7 +17,8 @@
 
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  @include opacity(80);
+  //okendoken. 15% opacity is just enough
+  @include opacity(15);
 }
 
 // Base modal

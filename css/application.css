@@ -4828,11 +4828,11 @@ input[type="submit"].btn.btn-mini {
 /* line 19, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-backdrop,
 .modal-backdrop.fade.in {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
+  opacity: 0.15;
+  filter: alpha(opacity=15);
 }
 
-/* line 24, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 25, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal {
   position: fixed;
   top: 10%;
@@ -4856,7 +4856,7 @@ input[type="submit"].btn.btn-mini {
   background-clip: padding-box;
   outline: none;
 }
-/* line 42, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 43, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal.fade {
   -webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
   -moz-transition: opacity 0.3s linear, top 0.3s ease-out;
@@ -4864,27 +4864,27 @@ input[type="submit"].btn.btn-mini {
   transition: opacity 0.3s linear, top 0.3s ease-out;
   top: -25%;
 }
-/* line 46, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 47, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal.fade.in {
   top: 10%;
 }
 
-/* line 48, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 49, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header {
   padding: 9px 15px;
   border-bottom: 1px solid #eeeeee;
 }
-/* line 52, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 53, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header .close {
   margin-top: 2px;
 }
-/* line 54, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 55, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header h3 {
   margin: 0;
   line-height: 30px;
 }
 
-/* line 61, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 62, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-body {
   position: relative;
   overflow-y: auto;
@@ -4892,12 +4892,12 @@ input[type="submit"].btn.btn-mini {
   padding: 15px;
 }
 
-/* line 68, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 69, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-form {
   margin-bottom: 0;
 }
 
-/* line 73, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 74, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer {
   padding: 14px 15px 15px;
   margin-bottom: 0;
@@ -4922,16 +4922,16 @@ input[type="submit"].btn.btn-mini {
 .modal-footer:after {
   clear: both;
 }
-/* line 84, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 85, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer .btn + .btn {
   margin-left: 5px;
   margin-bottom: 0;
 }
-/* line 89, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 90, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
-/* line 93, C:/projects/admin/sass/bootstrap/_modals.scss */
+/* line 94, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
@@ -5044,32 +5044,32 @@ input[type="submit"].btn.btn-mini {
   background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal;
 }
-/* line 28, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 30, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.top {
   margin-top: -10px;
 }
-/* line 29, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 31, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.right {
   margin-left: 10px;
 }
-/* line 30, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 32, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.bottom {
   margin-top: 10px;
 }
-/* line 31, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 33, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.left {
   margin-left: -10px;
 }
 
-/* line 34, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 36, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover-title {
   margin: 0;
   padding: 8px 14px;
@@ -5082,17 +5082,17 @@ input[type="submit"].btn.btn-mini {
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
-/* line 44, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 46, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover-title:empty {
   display: none;
 }
 
-/* line 49, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 51, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover-content {
   padding: 9px 14px;
 }
 
-/* line 58, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 60, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover .arrow,
 .popover .arrow:after {
   position: absolute;
@@ -5103,18 +5103,18 @@ input[type="submit"].btn.btn-mini {
   border-style: solid;
 }
 
-/* line 66, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 68, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover .arrow {
   border-width: 11px;
 }
 
-/* line 69, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 71, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover .arrow:after {
   border-width: 10px;
   content: "";
 }
 
-/* line 75, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 77, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.top .arrow {
   left: 50%;
   margin-left: -11px;
@@ -5123,14 +5123,14 @@ input[type="submit"].btn.btn-mini {
   border-top-color: rgba(0, 0, 0, 0.25);
   bottom: -11px;
 }
-/* line 82, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 84, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.top .arrow:after {
   bottom: 1px;
   margin-left: -10px;
   border-bottom-width: 0;
   border-top-color: white;
 }
-/* line 89, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 91, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.right .arrow {
   top: 50%;
   left: -11px;
@@ -5139,14 +5139,14 @@ input[type="submit"].btn.btn-mini {
   border-right-color: #999;
   border-right-color: rgba(0, 0, 0, 0.25);
 }
-/* line 96, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 98, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.right .arrow:after {
   left: 1px;
   bottom: -10px;
   border-left-width: 0;
   border-right-color: white;
 }
-/* line 103, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 105, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.bottom .arrow {
   left: 50%;
   margin-left: -11px;
@@ -5155,14 +5155,14 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: rgba(0, 0, 0, 0.25);
   top: -11px;
 }
-/* line 110, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 112, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.bottom .arrow:after {
   top: 1px;
   margin-left: -10px;
   border-top-width: 0;
   border-bottom-color: white;
 }
-/* line 118, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 120, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.left .arrow {
   top: 50%;
   right: -11px;
@@ -5171,7 +5171,7 @@ input[type="submit"].btn.btn-mini {
   border-left-color: #999;
   border-left-color: rgba(0, 0, 0, 0.25);
 }
-/* line 125, C:/projects/admin/sass/bootstrap/_popovers.scss */
+/* line 127, C:/projects/admin/sass/bootstrap/_popovers.scss */
 .popover.left .arrow:after {
   right: 1px;
   border-right-width: 0;
