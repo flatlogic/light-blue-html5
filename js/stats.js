@@ -1,6 +1,7 @@
 var testData = testData(['Search', 'Referral', 'Direct', 'Campaign'],
         25),// just 25 points, since there are lots of charts
     pieSelect = d3.select("#sources-chart-pie"),
+    pieFooter = d3.select("#data-chart-footer"),
     stackedChart,
     lineChart,
     pieChart,
@@ -15,7 +16,7 @@ function pieChartUpdate(d){
             d.disabled = false;
             return d;
         });
-        pieSelect.selectAll('.control').classed('disabled', false);
+        pieFooter.selectAll('.control').classed('disabled', false);
     }
     d3.select("#sources-chart-pie svg").transition().call(pieChart);
 }
@@ -77,7 +78,7 @@ nv.addGraph(function() {
     var sum = d3.sum(testData, function(d){
         return d.y;
     });
-    pieSelect
+    pieFooter
         .append("div")
         .classed("controls", true)
         .selectAll("div")

@@ -250,58 +250,47 @@
         </div>
         <div class="row-fluid">
             <div class="span3">
-                <section class="widget large">
+                <section id="todo-app" class="widget large todo-app">
                     <header>
                         <h3><i class="icon-edit"></i> Notes</h3>
                     </header>
                     <div class="body">
-                        <div id="todo-app" class="todo-app">
-                            <form>
-                                <fieldset>
-                                    <label class="new-todo-label" for="new-todo">
-                                        <input id="new-todo" type="text" class="new-todo input-padding-increased" placeholder="What needs to be done?">
+                        <form>
+                            <fieldset>
+                                <label class="new-todo-label" for="new-todo">
+                                    <input id="new-todo" type="text" class="new-todo input-padding-increased" placeholder="What needs to be done?">
+                                </label>
+                                <div id="todo-app-main">
+                                    <label for="toggle-all" class="mark-all">
+                                        <input id="toggle-all" type="checkbox">
+                                        Mark all as complete
                                     </label>
-                                    <section id="todo-app-main">
-                                        <label for="toggle-all" class="mark-all">
-                                            <input id="toggle-all" type="checkbox">
-                                            Mark all as complete
-                                        </label>
-                                        <ul id="todo-list" class="todos"></ul>
-                                    </section>
-                                    <footer>
-                                        <div id="todo-count"></div>
-                                        <div class="help-block">Double-click to edit a todo.</div>
-                                    </footer>
-                                </fieldset>
-                            </form>
-
-                        </div>
+                                    <ul id="todo-list" class="todos"></ul>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
+                    <footer>
+                        <div id="todo-count"></div>
+                        <div class="help-block">Double-click to edit a todo.</div>
+                    </footer>
                 </section>
             </div>
             <div class="span3">
-                <section class="widget large widget-tabs">
+                <section class="widget large">
                     <header>
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#stats" data-toggle="tab"><h4>Some Stats</h4></a>
-                            </li>
-                            <li>
-                                <a href="#report" class="light-gray" data-toggle="tab"><h4>Report</h4></a>
-                            </li>
-                        </ul>
+                        <h3>
+                            <i class="icon-download"></i>
+                            Data Transfer
+                        </h3>
                     </header>
                     <div class="body tab-content">
-                        <div id="stats" class="tab-pane active">
-                            <h4>Data Transfer</h4>
-                            <div id="data-chart" class="chart pie">
-                                <svg></svg>
-                            </div>
-                        </div>
-                        <div id="report" class="tab-pane">
-                            Some report
+                        <div id="data-chart" class="chart pie-chart">
+                            <svg></svg>
                         </div>
                     </div>
+                    <footer id="data-chart-footer" class="pie-chart-footer">
+                    </footer>
                 </section>
             </div>
             <div class="span6">

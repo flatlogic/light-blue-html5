@@ -229,6 +229,12 @@ $(function(){
                 this.footer.hide();
             }
 
+            if (Todos.length > 5){
+                $("#todo-list").css("overflow-y", "scroll");
+            } else {
+                $("#todo-list").css("overflow-y", "auto");
+            }
+
             this.allCheckbox.checked = !remaining;
             $(this.main).find("input:checkbox").uniform();
         },

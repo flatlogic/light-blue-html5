@@ -183,7 +183,7 @@ nv.addGraph(function() {
     var sum = d3.sum(testData, function(d){
         return d.y;
     });
-    d3.select("#data-chart")
+    d3.select("#data-chart-footer")
         .append("div")
         .classed("controls", true)
         .selectAll("div")
@@ -206,7 +206,7 @@ nv.addGraph(function() {
                     d.disabled = false;
                     return d;
                 });
-                d3.select("#data-chart").selectAll('.control').classed('disabled', false);
+                d3.select("#data-chart-footer").selectAll('.control').classed('disabled', false);
             }
             d3.select("#data-chart svg").transition().call(chart)
         });
