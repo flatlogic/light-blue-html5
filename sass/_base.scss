@@ -1327,3 +1327,18 @@ input.input-padding-increased{
 .margin-bottom{
   margin-bottom: 10px;
 }
+
+.icons > section{
+  margin-top: 20px;
+}
+
+.the-icons li{
+  line-height: 40px;
+  i{
+    @include transition(font-size .2s);
+  }
+
+  &:hover i{
+    font-size: 28px;
+  }
+}

@@ -142,14 +142,19 @@ ol ul {
   list-style: none;
 }
 
-/* line 98, C:/projects/admin/sass/_general.scss */
+/* line 95, C:/projects/admin/sass/_general.scss */
+ul, ol {
+  list-style: none;
+}
+
+/* line 102, C:/projects/admin/sass/_general.scss */
 iframe {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 103, C:/projects/admin/sass/_general.scss */
+/* line 107, C:/projects/admin/sass/_general.scss */
 fieldset {
   width: 100%;
 }
@@ -157,25 +162,25 @@ fieldset {
 /* --------------------------------------------------------	*/
 /*	Custom styled scrollbar */
 /* --------------------------------------------------------	*/
-/* line 110, C:/projects/admin/sass/_general.scss */
+/* line 114, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 
-/* line 114, C:/projects/admin/sass/_general.scss */
+/* line 118, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-track-piece {
   background-color: #eee;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* line 119, C:/projects/admin/sass/_general.scss */
+/* line 123, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   opacity: 0.4;
   background-color: #e5603b;
 }
 
-/* line 124, C:/projects/admin/sass/_general.scss */
+/* line 128, C:/projects/admin/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   opacity: 0.4;
   background-color: #e5603b;
@@ -1856,6 +1861,27 @@ input.input-padding-increased {
 /* line 1327, C:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
+}
+
+/* line 1331, C:/projects/admin/sass/_base.scss */
+.icons > section {
+  margin-top: 20px;
+}
+
+/* line 1335, C:/projects/admin/sass/_base.scss */
+.the-icons li {
+  line-height: 40px;
+}
+/* line 1337, C:/projects/admin/sass/_base.scss */
+.the-icons li i {
+  -webkit-transition: font-size 0.2s;
+  -moz-transition: font-size 0.2s;
+  -o-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+/* line 1341, C:/projects/admin/sass/_base.scss */
+.the-icons li:hover i {
+  font-size: 28px;
 }
 
 @media (max-height: 800px) {
