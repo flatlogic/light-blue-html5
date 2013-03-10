@@ -334,12 +334,14 @@ input.parsley-error{
     background: rgba(white, 0.9);
   }
 
-  &.dark-blue{
-    background: $backgroundBlue;
-  }
+  $i: 1;
+  @each $color in $colors{
 
-  &.dark-brown{
-    background: $backgroundBrown;
+    &.#{nth($color_names, $i)}{
+      background: #{$color};
+      color:  #ffffff;
+    }
+    $i: $i + 1;
   }
 }
 
@@ -798,24 +800,7 @@ input.parsley-error{
     padding: 5px 20px;
     line-height: 1.5em;
     @include border-radius(0 0 $widget-border-radius $widget-border-radius);
-
-    &.dark-blue{
-      background-color: $backgroundBlue;
-      border-top: 1px solid darken($backgroundBlue, 10%);
-      .clear-completed{
-        background: lighten($backgroundBlue, 5%);
-        @include box-shadow(-1px 1px 1px darken($backgroundBlue, 2%));
-      }
-    }
-
-    &.dark-brown{
-      background-color: $backgroundBrown;
-      border-top: 1px solid darken($backgroundBrown, 10%);
-      .clear-completed{
-        background: lighten($backgroundBrown, 10%);
-        @include box-shadow(-1px 1px 1px darken($backgroundBrown, 2%));
-      }
-    }
+    background: $grayDark;
   }
 
   .clear-completed{
@@ -827,9 +812,9 @@ input.parsley-error{
     text-decoration: none;
     color: #ffffff;
     font-size: 12px;
-    background: lighten($backgroundColor, 10%);
+    background: rgba(0,0,0,.1);
     @include border-radius(0 0 0 $widget-border-radius);
-    @include box-shadow(-1px 1px 1px darken($backgroundColor, 2%));
+    @include box-shadow(-1px 1px 1px rgba(0,0,0,.3));
     cursor: pointer;
   }
 
@@ -1097,8 +1082,7 @@ input.parsley-error{
 
       .value{
         text-align: right;
-        font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
       }
 
       .row-fluid{
@@ -1127,25 +1111,6 @@ input.parsley-error{
 
   .bar{
     @include box-shadow(none);
-  }
-}
-
-.overview{
-
-  &.light-blue-color{
-    color: $lightBlue;
-  }
-
-  &.light-brown-color{
-    color: $lightBrown;
-  }
-
-  &.dark-blue{
-    color: $backgroundBlue;
-  }
-
-  &.dark-brown{
-    color: $backgroundBrown;
   }
 }
 

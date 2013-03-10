@@ -40,10 +40,11 @@ body{
   min-width: 400px;
   font-weight: 300;
   padding-bottom: 100px;
-  @include background-radial-gradient(ellipse, farthest-side, 80%, 0,
-    rgba(194, 123, 108, 0.94),
-    rgba(238, 231, 189, 0.94),
-    rgba(137, 111, 82, 0.94)
+  @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
+    rgba(137, 111, 82, 0.94),
+    rgba(194, 123, 108, 0.94) 20%,
+    rgba(238, 231, 189, 0.94)
+
   );
   &.background-two{
     @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
