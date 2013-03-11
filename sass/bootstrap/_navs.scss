@@ -210,10 +210,14 @@
 // ---------
 
 .nav-tabs .dropdown-menu {
-  @include border-radius(0 0 6px 6px); // remove the top rounded corners here since there is a hard edge above the menu
+  //okendoken. remove b-radius
+  //@include border-radius(0 0 6px 6px); // remove the top rounded corners here since there is a hard edge above the menu
+  @include border-radius(0 0 $baseBorderRadius $baseBorderRadius); // remove the top rounded corners here since there is a hard edge above the menu
 }
 .nav-pills .dropdown-menu {
-  @include border-radius(6px); // make rounded corners match the pills
+  //okendoken. remove b-radius
+  //@include border-radius(6px); // make rounded corners match the pills
+  @include border-radius($baseBorderRadius); // make rounded corners match the pills
 }
 
 // Default dropdown links
@@ -291,8 +295,7 @@
   @include clearfix();
 }
 .tab-content {
-  //okendoken. commenting this out
-  //overflow: visible; // prevent content from running below tabs
+  overflow: auto; // prevent content from running below tabs
 }
 
 // Remove border on bottom, left, right
@@ -324,7 +327,9 @@
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
-  @include border-radius(0 0 4px 4px);
+  //okendoken. changing to baseBorderRadius
+  //@include border-radius(0 0 4px 4px);
+  @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
   &:hover,
   &:focus {
     border-bottom-color: transparent;
@@ -355,12 +360,15 @@
 // Tabs on the left
 .tabs-left > .nav-tabs {
   float: left;
-  margin-right: 19px;
-  border-right: 1px solid #ddd;
+  //okendoken. removing margin and border-right
+  //margin-right: 19px;
+  //border-right: 1px solid #ddd;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
-  @include border-radius(4px 0 0 4px);
+  //okendoken. changing to baseBorderRadius
+  //@include border-radius(4px 0 0 4px);
+  @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
 }
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
@@ -376,12 +384,15 @@
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
-  margin-left: 19px;
-  border-left: 1px solid #ddd;
+  //okendoken. removing margin and border-left
+  //margin-left: 19px;
+  //border-left: 1px solid #ddd;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
-  @include border-radius(0 4px 4px 0);
+  //okendoken. changing to baseBorderRadius
+  //@include border-radius(0 4px 4px 0);
+  @include border-radius(0 $baseBorderRadius $baseBorderRadius 0);
 }
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {

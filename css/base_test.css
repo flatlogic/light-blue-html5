@@ -1817,80 +1817,141 @@ input.input-padding-increased {
   font-size: 28px;
 }
 
-/* line 1288, C:/projects/admin/sass/_base.scss */
-.wt {
+/* line 1292, C:/projects/admin/sass/_base.scss */
+.widget-tabs {
   background: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   padding: 0;
 }
-/* line 1293, C:/projects/admin/sass/_base.scss */
-.wt .body {
+/* line 1297, C:/projects/admin/sass/_base.scss */
+.widget-tabs .body {
   background: #ffffff;
   margin-top: 0;
   -webkit-box-shadow: 0 0 12px #676767;
   -moz-box-shadow: 0 0 12px #676767;
   box-shadow: 0 0 12px #676767;
   padding: 15px;
+  -webkit-border-radius: 0 0 1px 1px;
+  -moz-border-radius: 0 0 1px 1px;
+  -ms-border-radius: 0 0 1px 1px;
+  -o-border-radius: 0 0 1px 1px;
+  border-radius: 0 0 1px 1px;
 }
-/* line 1300, C:/projects/admin/sass/_base.scss */
-.wt .nav > li > a {
+/* line 1305, C:/projects/admin/sass/_base.scss */
+.widget-tabs .nav > li > a {
   padding-top: 7px;
   padding-bottom: 6px;
   -webkit-box-shadow: 0 -2px 2px rgba(103, 103, 103, 0.5);
   -moz-box-shadow: 0 -2px 2px rgba(103, 103, 103, 0.5);
   box-shadow: 0 -2px 2px rgba(103, 103, 103, 0.5);
 }
-/* line 1306, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:not(.active) > a {
+/* line 1311, C:/projects/admin/sass/_base.scss */
+.widget-tabs .nav > li:not(.active) > a {
   background: #ffffff;
   border-bottom: none;
   color: #666666;
 }
-/* line 1312, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:first-child > a {
+/* line 1317, C:/projects/admin/sass/_base.scss */
+.widget-tabs .nav > li:first-child > a {
   border-left: none;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 1).active > a,
-.wt .nav > li:nth-child(n + 1) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 1).active > a,
+.nav-tabs > li:nth-child(n + 1) > a:hover {
   color: #e5603b;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 2).active > a,
-.wt .nav > li:nth-child(n + 2) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 2).active > a,
+.nav-tabs > li:nth-child(n + 2) > a:hover {
   color: #eac85e;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 3).active > a,
-.wt .nav > li:nth-child(n + 3) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 3).active > a,
+.nav-tabs > li:nth-child(n + 3) > a:hover {
   color: #8cbf26;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 4).active > a,
-.wt .nav > li:nth-child(n + 4) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 4).active > a,
+.nav-tabs > li:nth-child(n + 4) > a:hover {
   color: #56bc76;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 5).active > a,
-.wt .nav > li:nth-child(n + 5) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 5).active > a,
+.nav-tabs > li:nth-child(n + 5) > a:hover {
   color: #4ab0ce;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 6).active > a,
-.wt .nav > li:nth-child(n + 6) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 6).active > a,
+.nav-tabs > li:nth-child(n + 6) > a:hover {
   color: #618fb0;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 7).active > a,
-.wt .nav > li:nth-child(n + 7) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 7).active > a,
+.nav-tabs > li:nth-child(n + 7) > a:hover {
   color: #a05000;
 }
-/* line 1320, C:/projects/admin/sass/_base.scss */
-.wt .nav > li:nth-child(n + 8).active > a,
-.wt .nav > li:nth-child(n + 8) > a:hover {
+
+/* line 1326, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:nth-child(n + 8).active > a,
+.nav-tabs > li:nth-child(n + 8) > a:hover {
   color: #d04f4f;
+}
+
+/* line 1332, C:/projects/admin/sass/_base.scss */
+.nav-tabs > li:not(.active) > a {
+  color: #666666;
+}
+
+/* line 1338, C:/projects/admin/sass/_base.scss */
+.widget:not(.widget-tabs) .tab-content {
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-top: none;
+  -webkit-border-radius: 0 0 1px 1px;
+  -moz-border-radius: 0 0 1px 1px;
+  -ms-border-radius: 0 0 1px 1px;
+  -o-border-radius: 0 0 1px 1px;
+  border-radius: 0 0 1px 1px;
+}
+/* line 1347, C:/projects/admin/sass/_base.scss */
+.widget:not(.widget-tabs) .tabs-below .tab-content {
+  border-top: 1px solid #dddddd;
+  border-bottom: none;
+  -webkit-border-radius: 1px 1px 0 0;
+  -moz-border-radius: 1px 1px 0 0;
+  -ms-border-radius: 1px 1px 0 0;
+  -o-border-radius: 1px 1px 0 0;
+  border-radius: 1px 1px 0 0;
+}
+/* line 1355, C:/projects/admin/sass/_base.scss */
+.widget:not(.widget-tabs) .tabs-left .tab-content {
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  -webkit-border-radius: 0 1px 1px 0;
+  -moz-border-radius: 0 1px 1px 0;
+  -ms-border-radius: 0 1px 1px 0;
+  -o-border-radius: 0 1px 1px 0;
+  border-radius: 0 1px 1px 0;
+}
+/* line 1363, C:/projects/admin/sass/_base.scss */
+.widget:not(.widget-tabs) .tabs-right .tab-content {
+  border-top: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  -webkit-border-radius: 1px 0 0 1px;
+  -moz-border-radius: 1px 0 0 1px;
+  -ms-border-radius: 1px 0 0 1px;
+  -o-border-radius: 1px 0 0 1px;
+  border-radius: 1px 0 0 1px;
 }
 
 @media (max-height: 800px) {

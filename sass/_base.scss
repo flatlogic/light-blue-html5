@@ -1285,7 +1285,11 @@ input.input-padding-increased{
   }
 }
 
-.wt{
+//------
+// TABS
+//------
+
+.widget-tabs{
   background: none;
   @include box-shadow(none);
   padding: 0;
@@ -1295,6 +1299,7 @@ input.input-padding-increased{
     margin-top: 0;
     @include box-shadow($widget-shadow);
     padding: 15px;
+    @include border-radius(0 0 $baseBorderRadius $baseBorderRadius)
   }
 
   .nav > li > a{
@@ -1312,14 +1317,53 @@ input.input-padding-increased{
   .nav > li:first-child > a{
     border-left: none;
   }
+}
 
-  $i: 1;
-  @each $color in $colors{
+$i: 1;
+@each $color in $colors{
 
-    .nav > li:nth-child(n + #{$i}).active > a,
-    .nav > li:nth-child(n + #{$i}) > a:hover{
-      color: #{$color};
+  .nav-tabs > li:nth-child(n + #{$i}).active > a,
+  .nav-tabs > li:nth-child(n + #{$i}) > a:hover{
+    color: #{$color};
+  }
+  $i: $i + 1;
+}
+
+.nav-tabs > li:not(.active) > a{
+  color: $textColor;
+}
+
+//base look for inner tabs
+.widget:not(.widget-tabs){
+  .tab-content{
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+  }
+
+  .tabs-below {
+    .tab-content{
+      border-top: 1px solid #ddd;
+      border-bottom: none;
+      @include border-radius($baseBorderRadius $baseBorderRadius 0 0);
     }
-    $i: $i + 1;
+  }
+
+  .tabs-left {
+    .tab-content{
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      @include border-radius(0 $baseBorderRadius $baseBorderRadius 0);
+    }
+  }
+
+  .tabs-right {
+    .tab-content{
+      border-top: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
+    }
   }
 }
