@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin theme test</title>
+    <link href="css/application.css" rel="stylesheet">
+    <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+    <script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
+    <script src="lib/uniform/js/jquery.uniform.js"></script>
+    <!--<script src="lib/zepto/zepto.min.js"> </script>-->
+    <script src="js/bootstrap/bootstrap-tab.js"> </script>
+    <script src="lib/parsley.js"> </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+<nav class="sidebar">
+    <a class="brand" href=""><i class="icon-laptop"></i></a>
+    <h2>Actions</h2>
+    <ul id="side-nav" class="side-nav">
+        <li class="green">
+            <a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a>
+        </li>
+        <li class="active teal accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="stat_statistics.html">Stats</a></li>
+                <li><a href="stat_charts.html">Charts</a></li>
+            </ul>
+        </li>
+        <li class="blue accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="accordion-body collapse">
+                <li><a href="form_account.html">Account</a></li>
+                <li><a href="form_article.html">Article</a></li>
+                <li><a href="form_elements.html">Elements</a></li>
+                <li><a href="form_validation.html">Validation</a></li>
+            </ul>
+        </li>
+        <li class="brown accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
+            <ul id="ui-collapse" class="accordion-body collapse">
+                <li><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_icons.html">Icons</a></li>
+                <li><a href="ui_tabs.html">Tabs</a></li>
+                <li><a href="ui_accordion.html">Accordion</a></li>
+            </ul>
+        </li>
+        <li class="dark-red">
+            <a href="#"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
+        </li>
+        <li class="red">
+            <a href="#"><i class="icon-table"></i><span class="name">Tables</span></a>
+        </li>
+        <li class="orange">
+            <a href="#"><i class="icon-columns"></i><span class="name">Grid</span></a>
+        </li>
+        <li class="lime">
+            <a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a>
+        </li>
+    </ul>
+    <div id="sidebar-settings" class="settings">
+        <button type="button"
+                data-value="icons"
+                class="btn-icons btn btn-success btn-small">Icons</button>
+        <button type="button"
+                data-value="auto"
+                class="btn-auto btn btn-primary btn-small">Auto</button>
+    </div>
+</nav>
+<div class="wrap">
+    <header class="page-header">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav title-nav hidden-phone">
+                    <li class="active"><a href="stat_statistics.html" title="Basic"><i class="icon-bar-chart icon-large"></i> Basic Stats</a></li>
+                    <li><a href="stat_charts.html" title="Charts"><i class="icon-magic icon-large"></i> Charts</a></li>
+                </ul>
+                <ul class="nav right pull-right ">
+                    <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
+                    <li><a href="#" title="8 people needs help"><i class="icon-group"></i><i class="count">8</i></a></li>
+                    <li class="divider"></li>
+                    <li class="hidden-phone">
+                        <a href="#" id="settings"
+                           data-toggle="popover"
+                           data-placement="bottom"
+                           title="">
+                            <i class="icon-cog"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-phone">
+                        <a href="#" id="user"
+                           data-toggle="popover"
+                           data-placement="bottom"
+                           title="">
+                            <i class="icon-user"></i>
+                        </a>
+                    </li>
+                    <li class="visible-phone">
+                        <a href="#"
+                           class="btn-navbar"
+                           data-toggle="collapse"
+                           data-target=".sidebar"
+                           title="">
+                            <i class="icon-reorder"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
+                </ul>
+            </div><!-- /navbar-inner -->
+        </div>
+    </header>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span4">
+                <section class="widget normal">
+                    <header>
+                        <h3>
+                            <i class="icon-arrow-right"></i>
+                            Progressbars
+                        </h3>
+                    </header>
+                    <div class="body">
+                        <h4>Simple one</h4>
+                        <div class="progress">
+                            <div class="bar" style="width: 60%;"></div>
+                        </div>
+                        <h4>Styled ones</h4>
+                        <div class="progress progress-success">
+                            <div class="bar" style="width: 33%;"></div>
+                        </div>
+                        <div class="progress progress-warning">
+                            <div class="bar" style="width: 52%;"></div>
+                        </div>
+                        <div class="progress progress-danger">
+                            <div class="bar" style="width: 43%;"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="span4">
+                <section class="widget normal">
+                    <header>
+                        <h3>
+                            <i class="icon-caret-right"></i>
+                            Small ones
+                        </h3>
+                    </header>
+                    <div class="body">
+                        <h4>Colors</h4>
+                        <div class="progress progress-small progress-info">
+                            <div class="bar" style="width: 23%;"></div>
+                        </div>
+                        <div class="progress progress-small progress-warning">
+                            <div class="bar" style="width: 76%;"></div>
+                        </div>
+                        <div class="progress progress-small progress-success">
+                            <div class="bar" style="width: 43%;"></div>
+                        </div>
+                        <div class="progress progress-small progress-danger">
+                            <div class="bar" style="width: 53%;"></div>
+                        </div>
+                        <h4>Default progressbar</h4>
+                        <div class="progress progress-small">
+                            <div class="bar" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="span4">
+                <section class="widget normal">
+                    <header>
+                        <h3>
+                            <i class="icon-angle-right"></i>
+                            Some extensions
+                        </h3>
+                    </header>
+                    <div class="body">
+                        <h4>With embedded percentage</h4>
+                        <div class="progress">
+                            <div class="bar" style="width: 79%;">79%</div>
+                        </div>
+                        <h4>Active one</h4>
+                        <div class="progress progress-warning progress-striped active">
+                            <div class="bar" style="width: 51%;">51%</div>
+                        </div>
+                        <h4>Inversed progress-bar</h4>
+                        <div class="progress progress-inverse progress-striped active">
+                            <div class="bar" style="width: 64%;">64%</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- d3, nvd3-->
+<script src="lib/nvd3/lib/d3.v2.js"></script>
+<script src="lib/nvd3/nv.d3.custom.js"></script>
+
+<!-- nvd3 models -->
+<script src="lib/nvd3/src/models/scatter.js"></script>
+<script src="lib/nvd3/src/models/axis.js"></script>
+<script src="lib/nvd3/src/models/legend.js"></script>
+<script src="lib/nvd3/src/models/stackedArea.js"></script>
+<script src="lib/nvd3/src/models/stackedAreaChart.js"></script>
+<script src="lib/nvd3/src/models/line.js"></script>
+<script src="lib/nvd3/src/models/pie.js"></script>
+<script src="lib/nvd3/src/models/pieChartTotal.js"></script>
+<script src="lib/nvd3/stream_layers.js"></script>
+<script src="lib/nvd3/src/models/lineChart.js"></script>
+<script src="lib/nvd3/src/models/multiBar.js"></script>
+<script src="lib/nvd3/src/models/multiBarChart.js"></script>
+
+<!--backbone and friends -->
+<script src="lib/backbone/underscore-min.js"></script>
+
+<!-- bootstrap default plugins -->
+<script src="js/bootstrap/bootstrap-collapse.js"></script>
+<script src="js/bootstrap/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap/bootstrap-popover.js"></script>
+<script src="js/bootstrap/bootstrap-button.js"></script>
+
+<!-- basic application js-->
+<script src="js/app.js"></script>
+<script src="js/settings.js"></script>
+
+<!-- page specific -->
+<script src="js/stats.js"></script>
+
+
+<script type="text/template" id="settings-template">
+    <div class="setting clearfix">
+        Sidebar on the
+        <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% onRight = sidebar == 'right'%>
+            <button type="button" data-value="left" class="btn btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        Background
+        <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% two = background == 'two'%>
+            <button type="button" data-value="one" class="btn btn-transparent <%= two? '' : 'active' %>">One</button>
+            <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="user-template">
+    <div class="user">
+        <figure class="clearfix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Vita%C5%ADt._%D0%92%D1%96%D1%82%D0%B0%D1%9E%D1%82_%28J._Aziamb%C5%82o%C5%ADski%2C_XIX%29.jpg" class="img-circle pull-left">
+
+            <figcaption class="pull-right">Vitaut the Great</figcaption>
+        </figure>
+        <nav class="actions">
+            <ul>
+                <li class="active">
+                    <a target="_blank" href="http://www.belarusguide.com/cities/commanders/Vitaut_The_Great.html">
+                        <i class="icon-user icon-large"></i> Profile
+                    </a>
+                </li>
+                <li><a href=""><i class="icon-calendar icon-large"></i> Calendar</a></li>
+            </ul>
+        </nav>
+    </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+    <% auto = sidebarState == 'auto'%>
+    <% if (auto) {%>
+    <button type="button"
+            data-value="icons"
+            class="btn-icons btn btn-success btn-small">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-primary btn-small">Auto</button>
+
+    <%} else {%>
+    <button type="button"
+            data-value="auto"
+            class="btn btn-primary btn-small">Auto</button>
+    <% } %>
+</script>
+
+</body>
+</html>
