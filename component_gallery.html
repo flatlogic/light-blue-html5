@@ -3,29 +3,23 @@
 <head>
     <title>Admin theme test</title>
     <link href="css/application.css" rel="stylesheet">
-    <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
-    <script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
-    <script src="lib/uniform/js/jquery.uniform.js"></script>
-    <!--<script src="lib/zepto/zepto.min.js"> </script>-->
-    <script src="js/bootstrap/bootstrap-tab.js"> </script>
-    <script src="lib/parsley.js"> </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="utf-8">
 </head>
 <body class="background-two">
-<nav class="sidebar">
+<nav class="sidebar nav-collapse collapse">
     <a class="brand" href=""><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
     <ul id="side-nav" class="side-nav">
         <li class="green">
             <a href="index.html"><i class="icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="active teal accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse in">
-                <li class="active"><a href="stat_statistics.html">Stats</a></li>
+        <li class="teal accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse">
+                <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
             </ul>
         </li>
@@ -50,13 +44,13 @@
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="dark-red accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="dark-red active accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
+            <ul id="components-collapse" class="accordion-body collapse in">
                 <li><a href="component_calendar.html">Calendar</a></li>
                 <li><a href="component_maps.html">Maps</a></li>
-                <li><a href="component_gallery.html">Gallery</a></li>
+                <li class="active"><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
             </ul>
         </li>
@@ -84,8 +78,11 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav title-nav hidden-phone">
-                    <li class="active"><a href="stat_statistics.html" title="Basic"><i class="icon-bar-chart icon-large"></i> Basic Stats</a></li>
-                    <li><a href="stat_charts.html" title="Charts"><i class="icon-magic icon-large"></i> Charts</a></li>
+                    <li><a href="component_calendar.html" title="Calendar"><i class="icon-calendar icon-large"></i> Calendar</a></li>
+                    <li><a href="component_maps.html" title="Maps"><i class="icon-map-marker icon-large"></i> Maps</a></li>
+                    <li class="active"><a href="component_gallery.html" title="Gallery"><i class="icon-picture icon-large"></i> Gallery</a></li>
+                    <li><a href="component_fileupload.html" title="File upload"><i class="icon-cloud-upload icon-large"></i> File upload</a></li>
+
                 </ul>
                 <ul class="nav right pull-right ">
                     <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
@@ -118,128 +115,46 @@
                     </li>
                     <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
                 </ul>
-            </div><!-- /navbar-inner -->
+            </div>
         </div>
     </header>
     <div class="content container-fluid">
-        <div class="row-fluid">
-            <div class="span4">
-                <section class="widget normal">
-                    <header>
-                        <h3>
-                            <i class="icon-arrow-right"></i>
-                            Progressbars
-                        </h3>
-                    </header>
-                    <div class="body">
-                        <h4>Simple one</h4>
-                        <div class="progress">
-                            <div class="bar" style="width: 60%;"></div>
-                        </div>
-                        <h4>Styled ones</h4>
-                        <div class="progress progress-success">
-                            <div class="bar" style="width: 33%;"></div>
-                        </div>
-                        <div class="progress progress-warning">
-                            <div class="bar" style="width: 52%;"></div>
-                        </div>
-                        <div class="progress progress-danger">
-                            <div class="bar" style="width: 43%;"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span4">
-                <section class="widget normal">
-                    <header>
-                        <h3>
-                            <i class="icon-caret-right"></i>
-                            Small ones
-                        </h3>
-                    </header>
-                    <div class="body">
-                        <h4>Colors</h4>
-                        <div class="progress progress-small progress-info">
-                            <div class="bar" style="width: 23%;"></div>
-                        </div>
-                        <div class="progress progress-small progress-warning">
-                            <div class="bar" style="width: 76%;"></div>
-                        </div>
-                        <div class="progress progress-small progress-success">
-                            <div class="bar" style="width: 43%;"></div>
-                        </div>
-                        <div class="progress progress-small progress-danger">
-                            <div class="bar" style="width: 53%;"></div>
-                        </div>
-                        <h4>Default progressbar</h4>
-                        <div class="progress progress-small">
-                            <div class="bar" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span4">
-                <section class="widget normal">
-                    <header>
-                        <h3>
-                            <i class="icon-angle-right"></i>
-                            Some extensions
-                        </h3>
-                    </header>
-                    <div class="body">
-                        <h4>With embedded percentage</h4>
-                        <div class="progress">
-                            <div class="bar" style="width: 79%;">79%</div>
-                        </div>
-                        <h4>Active one</h4>
-                        <div class="progress progress-warning progress-striped active">
-                            <div class="bar" style="width: 51%;">51%</div>
-                        </div>
-                        <h4>Inversed progress-bar</h4>
-                        <div class="progress progress-inverse progress-striped active">
-                            <div class="bar" style="width: 64%;">64%</div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
     </div>
 </div>
 
-<!-- d3, nvd3-->
-<script src="lib/nvd3/lib/d3.v2.js"></script>
-<script src="lib/nvd3/nv.d3.custom.js"></script>
+<!-- jquery and friends -->
+<script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+<script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
 
-<!-- nvd3 models -->
-<script src="lib/nvd3/src/models/scatter.js"></script>
-<script src="lib/nvd3/src/models/axis.js"></script>
-<script src="lib/nvd3/src/models/legend.js"></script>
-<script src="lib/nvd3/src/models/stackedArea.js"></script>
-<script src="lib/nvd3/src/models/stackedAreaChart.js"></script>
-<script src="lib/nvd3/src/models/line.js"></script>
-<script src="lib/nvd3/src/models/pie.js"></script>
-<script src="lib/nvd3/src/models/pieChartTotal.js"></script>
-<script src="lib/nvd3/stream_layers.js"></script>
-<script src="lib/nvd3/src/models/lineChart.js"></script>
-<script src="lib/nvd3/src/models/multiBar.js"></script>
-<script src="lib/nvd3/src/models/multiBarChart.js"></script>
+<!-- jquery plugins -->
+<script src="lib/jquery.maskedinput.js"></script>
+<script src="lib/parsley.js"> </script>
+<script src="lib/uniform/js/jquery.uniform.js"></script>
+<script src="lib/select2.js"></script>
+
 
 <!--backbone and friends -->
 <script src="lib/backbone/underscore-min.js"></script>
 
 <!-- bootstrap default plugins -->
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
+<script src="js/bootstrap/bootstrap-alert.js"></script>
 <script src="js/bootstrap/bootstrap-tooltip.js"></script>
 <script src="js/bootstrap/bootstrap-popover.js"></script>
 <script src="js/bootstrap/bootstrap-button.js"></script>
+<script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap/bootstrap-modal.js"></script>
+<script src="js/bootstrap/bootstrap-tab.js"> </script>
+
+<!-- bootstrap custom plugins -->
+<script src="lib/bootstrap-datepicker.js"></script>
+<script src="lib/bootstrap-select.js"></script>
+<script src="lib/wysihtml5-0.3.0_rc2.js"></script>
+<script src="lib/bootstrap-wysihtml5.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
-
-<!-- page specific -->
-<script src="js/stats.js"></script>
-
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
@@ -258,6 +173,23 @@
             <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
         </div>
     </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+    <% auto = sidebarState == 'auto'%>
+    <% if (auto) {%>
+    <button type="button"
+            data-value="icons"
+            class="btn-icons btn btn-success btn-small">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-primary btn-small">Auto</button>
+
+    <%} else {%>
+    <button type="button"
+            data-value="auto"
+            class="btn btn-primary btn-small">Auto</button>
+    <% } %>
 </script>
 
 <script type="text/template" id="user-template">
@@ -280,22 +212,4 @@
     </div>
 </script>
 
-<script type="text/template" id="sidebar-settings-template">
-    <% auto = sidebarState == 'auto'%>
-    <% if (auto) {%>
-    <button type="button"
-            data-value="icons"
-            class="btn-icons btn btn-success btn-small">Icons</button>
-    <button type="button"
-            data-value="auto"
-            class="btn-auto btn btn-primary btn-small">Auto</button>
-
-    <%} else {%>
-    <button type="button"
-            data-value="auto"
-            class="btn btn-primary btn-small">Auto</button>
-    <% } %>
-</script>
-
 </body>
-</html>
