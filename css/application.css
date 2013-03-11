@@ -6295,14 +6295,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   font-size: 12px;
   text-align: center;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #0d90d1;
-  background-image: -moz-linear-gradient(top, #149bdf, #0480be);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#149bdf), to(#0480be));
-  background-image: -webkit-linear-gradient(top, #149bdf, #0480be);
-  background-image: -o-linear-gradient(top, #149bdf, #0480be);
-  background-image: linear-gradient(to bottom, #149bdf, #0480be);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF149BDF', endColorstr='#FF0480BE', GradientType=0);
+  background: #618fb0;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -6315,16 +6308,16 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   transition: width 0.6s ease;
 }
 
-/* line 68, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+/* line 70, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
 .progress .bar + .bar {
   -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 73, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+/* line 75, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
 .progress-striped .bar {
-  background-color: #149bdf;
+  background-color: #618fb0;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6336,7 +6329,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   background-size: 40px 40px;
 }
 
-/* line 79, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+/* line 83, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
 .progress.active .bar {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
   -moz-animation: progress-bar-stripes 2s linear infinite;
@@ -6345,43 +6338,21 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   animation: progress-bar-stripes 2s linear infinite;
 }
 
-/* line 93, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+/* line 97, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
 .progress-danger .bar, .progress .bar-danger {
-  background-color: #dd514b;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
-  background-image: linear-gradient(to bottom, #ee5f5b, #c43c35);
+  background-color: #e5603b;
+  background-image: -moz-linear-gradient(top, #e5603b, #e5603b);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e5603b), to(#e5603b));
+  background-image: -webkit-linear-gradient(top, #e5603b, #e5603b);
+  background-image: -o-linear-gradient(top, #e5603b, #e5603b);
+  background-image: linear-gradient(to bottom, #e5603b, #e5603b);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEE5F5B', endColorstr='#FFC43C35', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE5603B', endColorstr='#FFE5603B', GradientType=0);
 }
 
-/* line 96, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+/* line 102, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
 .progress-danger.progress-striped .bar, .progress-striped .bar-danger {
-  background-color: #ee5f5b;
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-}
-
-/* line 101, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
-.progress-success .bar, .progress .bar-success {
-  background-color: #5db95d;
-  background-image: -moz-linear-gradient(top, #62c462, #57a957);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
-  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
-  background-image: -o-linear-gradient(top, #62c462, #57a957);
-  background-image: linear-gradient(to bottom, #62c462, #57a957);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF62C462', endColorstr='#FF57A957', GradientType=0);
-}
-
-/* line 104, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
-.progress-success.progress-striped .bar, .progress-striped .bar-success {
-  background-color: #62c462;
+  background-color: #e5603b;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6390,20 +6361,20 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 /* line 109, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
-.progress-info .bar, .progress .bar-info {
-  background-color: #4bb1cf;
-  background-image: -moz-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#339bb9));
-  background-image: -webkit-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: -o-linear-gradient(top, #5bc0de, #339bb9);
-  background-image: linear-gradient(to bottom, #5bc0de, #339bb9);
+.progress-success .bar, .progress .bar-success {
+  background-color: #56bc76;
+  background-image: -moz-linear-gradient(top, #56bc76, #56bc76);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#56bc76), to(#56bc76));
+  background-image: -webkit-linear-gradient(top, #56bc76, #56bc76);
+  background-image: -o-linear-gradient(top, #56bc76, #56bc76);
+  background-image: linear-gradient(to bottom, #56bc76, #56bc76);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF5BC0DE', endColorstr='#FF339BB9', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF56BC76', endColorstr='#FF56BC76', GradientType=0);
 }
 
-/* line 112, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
-.progress-info.progress-striped .bar, .progress-striped .bar-info {
-  background-color: #5bc0de;
+/* line 114, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+.progress-success.progress-striped .bar, .progress-striped .bar-success {
+  background-color: #56bc76;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6411,21 +6382,43 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-/* line 117, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
-.progress-warning .bar, .progress .bar-warning {
-  background-color: #efd586;
-  background-image: -moz-linear-gradient(top, #f3dfa2, #eac85e);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f3dfa2), to(#eac85e));
-  background-image: -webkit-linear-gradient(top, #f3dfa2, #eac85e);
-  background-image: -o-linear-gradient(top, #f3dfa2, #eac85e);
-  background-image: linear-gradient(to bottom, #f3dfa2, #eac85e);
+/* line 121, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+.progress-info .bar, .progress .bar-info {
+  background-color: #4ab0ce;
+  background-image: -moz-linear-gradient(top, #4ab0ce, #4ab0ce);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4ab0ce), to(#4ab0ce));
+  background-image: -webkit-linear-gradient(top, #4ab0ce, #4ab0ce);
+  background-image: -o-linear-gradient(top, #4ab0ce, #4ab0ce);
+  background-image: linear-gradient(to bottom, #4ab0ce, #4ab0ce);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFF3DFA2', endColorstr='#FFEAC85E', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF4AB0CE', endColorstr='#FF4AB0CE', GradientType=0);
 }
 
-/* line 120, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+/* line 126, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+.progress-info.progress-striped .bar, .progress-striped .bar-info {
+  background-color: #4ab0ce;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+/* line 133, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
+.progress-warning .bar, .progress .bar-warning {
+  background-color: #eac85e;
+  background-image: -moz-linear-gradient(top, #eac85e, #eac85e);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#eac85e), to(#eac85e));
+  background-image: -webkit-linear-gradient(top, #eac85e, #eac85e);
+  background-image: -o-linear-gradient(top, #eac85e, #eac85e);
+  background-image: linear-gradient(to bottom, #eac85e, #eac85e);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEAC85E', endColorstr='#FFEAC85E', GradientType=0);
+}
+
+/* line 138, C:/projects/admin/sass/bootstrap/_progress-bars.scss */
 .progress-warning.progress-striped .bar, .progress-striped .bar-warning {
-  background-color: #f3dfa2;
+  background-color: #eac85e;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -10395,62 +10388,66 @@ input.parsley-error {
   position: relative;
 }
 /* line 198, C:/projects/admin/sass/_base.scss */
+.widget.normal {
+  height: 220px;
+}
+/* line 202, C:/projects/admin/sass/_base.scss */
 .widget.large {
   height: 315px;
 }
-/* line 201, C:/projects/admin/sass/_base.scss */
+/* line 205, C:/projects/admin/sass/_base.scss */
 .widget.large .body {
   height: 280px;
 }
-/* line 204, C:/projects/admin/sass/_base.scss */
+/* line 208, C:/projects/admin/sass/_base.scss */
 .widget.large .body .chart {
   height: 212px;
 }
-/* line 210, C:/projects/admin/sass/_base.scss */
+/* line 214, C:/projects/admin/sass/_base.scss */
 .widget.xlarge {
   height: 415px;
 }
-/* line 213, C:/projects/admin/sass/_base.scss */
+/* line 217, C:/projects/admin/sass/_base.scss */
 .widget.xlarge .body {
   height: 380px;
 }
-/* line 216, C:/projects/admin/sass/_base.scss */
+/* line 220, C:/projects/admin/sass/_base.scss */
 .widget.xlarge .body .chart {
   height: 298px;
 }
-/* line 222, C:/projects/admin/sass/_base.scss */
+/* line 226, C:/projects/admin/sass/_base.scss */
 .widget.tiny {
   height: 188px;
 }
-/* line 226, C:/projects/admin/sass/_base.scss */
+/* line 230, C:/projects/admin/sass/_base.scss */
 .widget header {
   position: relative;
   background: none;
 }
-/* line 230, C:/projects/admin/sass/_base.scss */
+/* line 234, C:/projects/admin/sass/_base.scss */
 .widget header h2, .widget header h3, .widget header h4 {
   margin: 0;
   line-height: 20px;
   color: inherit;
 }
-/* line 237, C:/projects/admin/sass/_base.scss */
+/* line 241, C:/projects/admin/sass/_base.scss */
 .widget .body {
   margin-top: 15px;
 }
-/* line 240, C:/projects/admin/sass/_base.scss */
+/* line 244, C:/projects/admin/sass/_base.scss */
 .widget .body h2, .widget .body h3, .widget .body h4 {
   margin: 0;
 }
-/* line 244, C:/projects/admin/sass/_base.scss */
+/* line 248, C:/projects/admin/sass/_base.scss */
 .widget .body .chart {
   height: 60%;
 }
-/* line 246, C:/projects/admin/sass/_base.scss */
+/* line 250, C:/projects/admin/sass/_base.scss */
 .widget .body .chart.pie {
   margin-left: -15px;
   margin-right: -15px;
 }
-/* line 253, C:/projects/admin/sass/_base.scss */
+/* line 257, C:/projects/admin/sass/_base.scss */
 .widget footer {
   position: absolute;
   bottom: 0;
@@ -10458,19 +10455,19 @@ input.parsley-error {
   right: 0;
   margin: 15px 0 0;
 }
-/* line 261, C:/projects/admin/sass/_base.scss */
+/* line 265, C:/projects/admin/sass/_base.scss */
 .widget .actions {
   position: absolute;
   right: 0;
   top: -2px;
 }
-/* line 265, C:/projects/admin/sass/_base.scss */
+/* line 269, C:/projects/admin/sass/_base.scss */
 .widget .actions a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 272, C:/projects/admin/sass/_base.scss */
+/* line 276, C:/projects/admin/sass/_base.scss */
 .widget-body-header {
   margin: 0 0 10px 0;
   line-height: 1em;
@@ -10480,92 +10477,92 @@ input.parsley-error {
   text-transform: uppercase;
 }
 
-/* line 283, C:/projects/admin/sass/_base.scss */
+/* line 287, C:/projects/admin/sass/_base.scss */
 .widget.transparent, .bar.transparent {
   background: transparent;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 288, C:/projects/admin/sass/_base.scss */
+/* line 292, C:/projects/admin/sass/_base.scss */
 .widget.adaptive-background, .bar.adaptive-background {
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.red, .bar.red {
   background: #e5603b;
   color: #ffffff;
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.orange, .bar.orange {
   background: #eac85e;
   color: #ffffff;
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.lime, .bar.lime {
   background: #8cbf26;
   color: #ffffff;
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.green, .bar.green {
   background: #56bc76;
   color: #ffffff;
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.teal, .bar.teal {
   background: #4ab0ce;
   color: #ffffff;
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.blue, .bar.blue {
   background: #618fb0;
   color: #ffffff;
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.brown, .bar.brown {
   background: #a05000;
   color: #ffffff;
 }
-/* line 295, C:/projects/admin/sass/_base.scss */
+/* line 299, C:/projects/admin/sass/_base.scss */
 .widget.dark-red, .bar.dark-red {
   background: #d04f4f;
   color: #ffffff;
 }
 
-/* line 303, C:/projects/admin/sass/_base.scss */
+/* line 307, C:/projects/admin/sass/_base.scss */
 .chart-inline {
   margin-bottom: 12px;
   height: 44px;
 }
-/* line 307, C:/projects/admin/sass/_base.scss */
+/* line 311, C:/projects/admin/sass/_base.scss */
 .chart-inline svg {
   height: 44px;
 }
-/* line 311, C:/projects/admin/sass/_base.scss */
+/* line 315, C:/projects/admin/sass/_base.scss */
 .chart-inline h4 {
   padding-left: 10px;
   padding-top: 4px;
   margin: 0;
 }
-/* line 317, C:/projects/admin/sass/_base.scss */
+/* line 321, C:/projects/admin/sass/_base.scss */
 .chart-inline .info {
   padding: 4px 0;
   text-align: right;
   font-weight: 700;
 }
 
-/* line 324, C:/projects/admin/sass/_base.scss */
+/* line 328, C:/projects/admin/sass/_base.scss */
 .pie-chart {
   position: relative;
 }
-/* line 327, C:/projects/admin/sass/_base.scss */
+/* line 331, C:/projects/admin/sass/_base.scss */
 .pie-chart .total {
   text-align: center;
   position: absolute;
   left: 0;
   top: 50%;
 }
-/* line 333, C:/projects/admin/sass/_base.scss */
+/* line 337, C:/projects/admin/sass/_base.scss */
 .pie-chart .total h4 {
   margin: 0;
   color: #e5603b;
@@ -10573,26 +10570,26 @@ input.parsley-error {
   line-height: 1em;
   font-size: 15px;
 }
-/* line 340, C:/projects/admin/sass/_base.scss */
+/* line 344, C:/projects/admin/sass/_base.scss */
 .pie-chart .total h3 {
   margin: 0;
   line-height: 1em;
   font-weight: 700;
   font-size: 40px;
 }
-/* line 347, C:/projects/admin/sass/_base.scss */
+/* line 351, C:/projects/admin/sass/_base.scss */
 .pie-chart .total h5.visits {
   font-size: 26px;
   line-height: 1em;
   font-weight: 700;
 }
 
-/* line 357, C:/projects/admin/sass/_base.scss */
+/* line 361, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .controls {
   margin-top: 16px;
   width: 100%;
 }
-/* line 362, C:/projects/admin/sass/_base.scss */
+/* line 366, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .control {
   background: #f3f3f3;
   text-align: center;
@@ -10604,73 +10601,73 @@ input.parsley-error {
   margin-left: 0.5%;
   float: left;
 }
-/* line 371, C:/projects/admin/sass/_base.scss */
+/* line 375, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .control.one-fourth {
   width: 20.625%;
 }
-/* line 379, C:/projects/admin/sass/_base.scss */
+/* line 383, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .control:first-child {
   border-bottom-left-radius: 2px;
   margin-left: 0;
 }
-/* line 384, C:/projects/admin/sass/_base.scss */
+/* line 388, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .control:last-child {
   border-bottom-right-radius: 2px;
 }
-/* line 388, C:/projects/admin/sass/_base.scss */
+/* line 392, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .control.disabled {
   border-top: 3px solid transparent !important;
 }
-/* line 392, C:/projects/admin/sass/_base.scss */
+/* line 396, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .control h4 {
   text-transform: lowercase;
   font-size: 15px;
   font-weight: 400;
   margin: 0;
 }
-/* line 399, C:/projects/admin/sass/_base.scss */
+/* line 403, C:/projects/admin/sass/_base.scss */
 .pie-chart-footer .control p {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-/* line 410, C:/projects/admin/sass/_base.scss */
+/* line 414, C:/projects/admin/sass/_base.scss */
 .widget.large .pie-chart .total h4 {
   font-size: 13px;
 }
-/* line 413, C:/projects/admin/sass/_base.scss */
+/* line 417, C:/projects/admin/sass/_base.scss */
 .widget.large .pie-chart .total h3 {
   font-size: 32px;
 }
-/* line 419, C:/projects/admin/sass/_base.scss */
+/* line 423, C:/projects/admin/sass/_base.scss */
 .widget.large .pie-chart .controls .control h4 {
   font-size: 13px;
   margin-bottom: 3px;
 }
-/* line 424, C:/projects/admin/sass/_base.scss */
+/* line 428, C:/projects/admin/sass/_base.scss */
 .widget.large .pie-chart .controls .control p {
   font-size: 20px;
   margin-bottom: 0;
 }
 
-/* line 432, C:/projects/admin/sass/_base.scss */
+/* line 436, C:/projects/admin/sass/_base.scss */
 .widget.xlarge .pie-chart .controls .control {
   padding: 5px 2%;
 }
-/* line 435, C:/projects/admin/sass/_base.scss */
+/* line 439, C:/projects/admin/sass/_base.scss */
 .widget.xlarge .pie-chart .controls .control p {
   font-size: 28px;
   margin-bottom: 11px;
 }
 
-/* line 442, C:/projects/admin/sass/_base.scss */
+/* line 446, C:/projects/admin/sass/_base.scss */
 .widget:not(.large):not(.xlarge) .pie-chart {
   display: none;
   content: "Specify whether large or xlarge for outer container to display chart";
 }
 
-/* line 447, C:/projects/admin/sass/_base.scss */
+/* line 451, C:/projects/admin/sass/_base.scss */
 .page-header {
   border: none;
   margin: 22px 3.3% 0;
@@ -10682,17 +10679,17 @@ input.parsley-error {
   -o-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 458, C:/projects/admin/sass/_base.scss */
+/* line 462, C:/projects/admin/sass/_base.scss */
 .page-header .nav.right > li {
   position: relative;
 }
-/* line 460, C:/projects/admin/sass/_base.scss */
+/* line 464, C:/projects/admin/sass/_base.scss */
 .page-header .nav.right > li > a, .page-header .nav.right > li > a:visited {
   width: 64px;
   padding: 0;
   font-size: 30px;
 }
-/* line 465, C:/projects/admin/sass/_base.scss */
+/* line 469, C:/projects/admin/sass/_base.scss */
 .page-header .nav.right > li > a:hover, .page-header .nav.right > li > a:visited:hover {
   color: white;
   -webkit-transition: all 0.1s;
@@ -10700,7 +10697,7 @@ input.parsley-error {
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-/* line 471, C:/projects/admin/sass/_base.scss */
+/* line 475, C:/projects/admin/sass/_base.scss */
 .page-header .nav.right > li .count {
   position: absolute;
   bottom: 2px;
@@ -10717,11 +10714,11 @@ input.parsley-error {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 485, C:/projects/admin/sass/_base.scss */
+/* line 489, C:/projects/admin/sass/_base.scss */
 .page-header .nav > li {
   background: none;
 }
-/* line 489, C:/projects/admin/sass/_base.scss */
+/* line 493, C:/projects/admin/sass/_base.scss */
 .page-header .nav > li.active > a, .page-header .nav > li.active > a:visited {
   background: none;
   -webkit-box-shadow: none;
@@ -10729,7 +10726,7 @@ input.parsley-error {
   box-shadow: none;
   color: white;
 }
-/* line 494, C:/projects/admin/sass/_base.scss */
+/* line 498, C:/projects/admin/sass/_base.scss */
 .page-header .nav > li.active > a:hover, .page-header .nav > li.active > a:visited:hover {
   color: white;
   background: none;
@@ -10737,7 +10734,7 @@ input.parsley-error {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 501, C:/projects/admin/sass/_base.scss */
+/* line 505, C:/projects/admin/sass/_base.scss */
 .page-header .nav > li.divider {
   display: block;
   height: 38px;
@@ -10750,7 +10747,7 @@ input.parsley-error {
   background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(102, 102, 102, 0.5), rgba(0, 0, 0, 0));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(102, 102, 102, 0.5), rgba(0, 0, 0, 0));
 }
-/* line 509, C:/projects/admin/sass/_base.scss */
+/* line 513, C:/projects/admin/sass/_base.scss */
 .page-header .nav > li > a, .page-header .nav > li > a:visited {
   background: none;
   text-align: center;
@@ -10765,11 +10762,11 @@ input.parsley-error {
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-/* line 520, C:/projects/admin/sass/_base.scss */
+/* line 524, C:/projects/admin/sass/_base.scss */
 .page-header .nav > li > a:hover, .page-header .nav > li > a:focus, .page-header .nav > li > a:visited:hover, .page-header .nav > li > a:visited:focus {
   color: white;
 }
-/* line 527, C:/projects/admin/sass/_base.scss */
+/* line 531, C:/projects/admin/sass/_base.scss */
 .page-header .popover {
   background: rgba(51, 51, 51, 0.8);
   -webkit-box-shadow: none;
@@ -10784,57 +10781,57 @@ input.parsley-error {
   color: white;
   width: 250px;
 }
-/* line 535, C:/projects/admin/sass/_base.scss */
+/* line 539, C:/projects/admin/sass/_base.scss */
 .page-header .popover.bottom .arrow {
   border-bottom-color: transparent;
 }
-/* line 537, C:/projects/admin/sass/_base.scss */
+/* line 541, C:/projects/admin/sass/_base.scss */
 .page-header .popover.bottom .arrow:after {
   border-bottom-color: rgba(51, 51, 51, 0.8);
 }
-/* line 542, C:/projects/admin/sass/_base.scss */
+/* line 546, C:/projects/admin/sass/_base.scss */
 .page-header .popover .btn-group {
   margin-top: 0;
   float: right;
 }
 
-/* line 549, C:/projects/admin/sass/_base.scss */
+/* line 553, C:/projects/admin/sass/_base.scss */
 .setting {
   margin-bottom: 5px;
   line-height: 30px;
   vertical-align: middle;
   font-weight: 400;
 }
-/* line 554, C:/projects/admin/sass/_base.scss */
+/* line 558, C:/projects/admin/sass/_base.scss */
 .setting:last-child {
   margin-bottom: 0;
 }
 
-/* line 559, C:/projects/admin/sass/_base.scss */
+/* line 563, C:/projects/admin/sass/_base.scss */
 .popover.user-info {
   width: 220px;
 }
 
-/* line 565, C:/projects/admin/sass/_base.scss */
+/* line 569, C:/projects/admin/sass/_base.scss */
 .user img {
   height: 60px;
 }
-/* line 569, C:/projects/admin/sass/_base.scss */
+/* line 573, C:/projects/admin/sass/_base.scss */
 .user figure {
   margin: 0;
 }
-/* line 573, C:/projects/admin/sass/_base.scss */
+/* line 577, C:/projects/admin/sass/_base.scss */
 .user figcaption {
   line-height: 60px;
   vertical-align: middle;
   text-transform: uppercase;
   font-weight: 600;
 }
-/* line 580, C:/projects/admin/sass/_base.scss */
+/* line 584, C:/projects/admin/sass/_base.scss */
 .user .actions {
   margin: 15px -14px 0;
 }
-/* line 583, C:/projects/admin/sass/_base.scss */
+/* line 587, C:/projects/admin/sass/_base.scss */
 .user .actions li a {
   display: block;
   text-decoration: none;
@@ -10843,16 +10840,16 @@ input.parsley-error {
   color: #ffffff;
   padding: 6px 20px;
 }
-/* line 591, C:/projects/admin/sass/_base.scss */
+/* line 595, C:/projects/admin/sass/_base.scss */
 .user .actions li a:hover {
   background: rgba(153, 153, 153, 0.3);
 }
 
-/* line 598, C:/projects/admin/sass/_base.scss */
+/* line 602, C:/projects/admin/sass/_base.scss */
 .navbar {
   margin: 0;
 }
-/* line 601, C:/projects/admin/sass/_base.scss */
+/* line 605, C:/projects/admin/sass/_base.scss */
 .navbar .btn-navbar {
   border: none;
   -webkit-box-shadow: none;
@@ -10860,7 +10857,7 @@ input.parsley-error {
   box-shadow: none;
 }
 
-/* line 607, C:/projects/admin/sass/_base.scss */
+/* line 611, C:/projects/admin/sass/_base.scss */
 .navbar-inner {
   background: transparent;
   padding: 0;
@@ -10875,14 +10872,14 @@ input.parsley-error {
   box-shadow: none;
 }
 
-/* line 615, C:/projects/admin/sass/_base.scss */
+/* line 619, C:/projects/admin/sass/_base.scss */
 .navbar-search {
   padding: 7px 15px;
   margin-top: 0;
   position: static;
   float: none;
 }
-/* line 622, C:/projects/admin/sass/_base.scss */
+/* line 626, C:/projects/admin/sass/_base.scss */
 .navbar-search .search-query {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -10893,11 +10890,11 @@ input.parsley-error {
   color: inherit;
 }
 
-/* line 629, C:/projects/admin/sass/_base.scss */
+/* line 633, C:/projects/admin/sass/_base.scss */
 .notifications {
   margin: 7px 20px 7px 0;
 }
-/* line 632, C:/projects/admin/sass/_base.scss */
+/* line 636, C:/projects/admin/sass/_base.scss */
 .notifications .alert {
   background: rgba(51, 51, 51, 0.32);
   border: none;
@@ -10912,23 +10909,23 @@ input.parsley-error {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 642, C:/projects/admin/sass/_base.scss */
+/* line 646, C:/projects/admin/sass/_base.scss */
 .notifications .alert a {
   color: white;
   font-weight: 600;
 }
-/* line 648, C:/projects/admin/sass/_base.scss */
+/* line 652, C:/projects/admin/sass/_base.scss */
 .notifications .close {
   position: static;
   margin: 1px 0 1px 2px;
 }
 
-/* line 654, C:/projects/admin/sass/_base.scss */
+/* line 658, C:/projects/admin/sass/_base.scss */
 .todo-app {
   height: 100%;
   position: relative;
 }
-/* line 658, C:/projects/admin/sass/_base.scss */
+/* line 662, C:/projects/admin/sass/_base.scss */
 .todo-app .new-todo {
   display: block;
   width: 100%;
@@ -10938,23 +10935,23 @@ input.parsley-error {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 666, C:/projects/admin/sass/_base.scss */
+/* line 670, C:/projects/admin/sass/_base.scss */
 .todo-app li {
   position: relative;
   font-size: 24px;
   padding-bottom: 5px;
   margin-bottom: 1px;
 }
-/* line 672, C:/projects/admin/sass/_base.scss */
+/* line 676, C:/projects/admin/sass/_base.scss */
 .todo-app li.done label {
   color: #777777;
   text-decoration: line-through;
 }
-/* line 677, C:/projects/admin/sass/_base.scss */
+/* line 681, C:/projects/admin/sass/_base.scss */
 .todo-app li .edit {
   display: none;
 }
-/* line 684, C:/projects/admin/sass/_base.scss */
+/* line 688, C:/projects/admin/sass/_base.scss */
 .todo-app li .view label {
   position: absolute;
   left: 35px;
@@ -10964,17 +10961,17 @@ input.parsley-error {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 695, C:/projects/admin/sass/_base.scss */
+/* line 699, C:/projects/admin/sass/_base.scss */
 .todo-app li.editing {
   border-bottom: none;
   margin-top: -1px;
   padding: 0;
 }
-/* line 700, C:/projects/admin/sass/_base.scss */
+/* line 704, C:/projects/admin/sass/_base.scss */
 .todo-app li.editing:last-child {
   margin-bottom: -1px;
 }
-/* line 704, C:/projects/admin/sass/_base.scss */
+/* line 708, C:/projects/admin/sass/_base.scss */
 .todo-app li.editing .edit {
   display: block;
   width: 100%;
@@ -10985,15 +10982,15 @@ input.parsley-error {
   box-sizing: border-box;
   padding: 4px 24px;
 }
-/* line 713, C:/projects/admin/sass/_base.scss */
+/* line 717, C:/projects/admin/sass/_base.scss */
 .todo-app li.editing .view {
   display: none;
 }
-/* line 719, C:/projects/admin/sass/_base.scss */
+/* line 723, C:/projects/admin/sass/_base.scss */
 .todo-app li:last-child {
   margin-bottom: 0;
 }
-/* line 723, C:/projects/admin/sass/_base.scss */
+/* line 727, C:/projects/admin/sass/_base.scss */
 .todo-app li:hover .destroy {
   opacity: 1.0;
   -webkit-transition: opacity 0.2s;
@@ -11001,7 +10998,7 @@ input.parsley-error {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 730, C:/projects/admin/sass/_base.scss */
+/* line 734, C:/projects/admin/sass/_base.scss */
 .todo-app .destroy {
   position: absolute;
   opacity: 0;
@@ -11016,7 +11013,7 @@ input.parsley-error {
   top: 2px;
   cursor: pointer;
 }
-/* line 743, C:/projects/admin/sass/_base.scss */
+/* line 747, C:/projects/admin/sass/_base.scss */
 .todo-app footer {
   position: absolute;
   bottom: 0;
@@ -11033,7 +11030,7 @@ input.parsley-error {
   border-radius: 0 0 1px 1px;
   background: #555555;
 }
-/* line 756, C:/projects/admin/sass/_base.scss */
+/* line 760, C:/projects/admin/sass/_base.scss */
 .todo-app .clear-completed {
   position: absolute;
   right: 0;
@@ -11054,55 +11051,55 @@ input.parsley-error {
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
-/* line 771, C:/projects/admin/sass/_base.scss */
+/* line 775, C:/projects/admin/sass/_base.scss */
 .todo-app .mark-all {
   font-size: 13px;
   margin-top: 2px;
   margin-left: 10px;
 }
-/* line 778, C:/projects/admin/sass/_base.scss */
+/* line 782, C:/projects/admin/sass/_base.scss */
 .todo-app .help-block {
   margin-bottom: 0;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 785, C:/projects/admin/sass/_base.scss */
+/* line 789, C:/projects/admin/sass/_base.scss */
 .todos {
   padding-top: 5px;
   height: 165px;
 }
 
-/* line 790, C:/projects/admin/sass/_base.scss */
+/* line 794, C:/projects/admin/sass/_base.scss */
 .widget.login, widget.registration {
   width: 350px;
   padding-bottom: 0;
 }
-/* line 794, C:/projects/admin/sass/_base.scss */
+/* line 798, C:/projects/admin/sass/_base.scss */
 .widget.login header, widget.registration header {
   margin: 15px 0 25px 0;
   text-align: center;
 }
-/* line 798, C:/projects/admin/sass/_base.scss */
+/* line 802, C:/projects/admin/sass/_base.scss */
 .widget.login form, widget.registration form {
   margin-bottom: 0;
 }
-/* line 801, C:/projects/admin/sass/_base.scss */
+/* line 805, C:/projects/admin/sass/_base.scss */
 .widget.login form label, widget.registration form label {
   margin-bottom: 3px;
 }
-/* line 806, C:/projects/admin/sass/_base.scss */
+/* line 810, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend input, widget.registration .input-prepend input {
   height: 27px;
   width: 282px;
 }
-/* line 810, C:/projects/admin/sass/_base.scss */
+/* line 814, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend input:focus:invalid, widget.registration .input-prepend input:focus:invalid {
   color: #6C6C6C;
   border-color: #bbbbbb;
   box-shadow: none;
 }
-/* line 816, C:/projects/admin/sass/_base.scss */
+/* line 820, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend .icon-container, widget.registration .input-prepend .icon-container {
   height: 35px;
   width: 35px;
@@ -11111,12 +11108,12 @@ input.parsley-error {
   -webkit-transition-property: border, box-shadow;
   -webkit-transition-timing-function: linear, linear;
 }
-/* line 825, C:/projects/admin/sass/_base.scss */
+/* line 829, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend .icon-container i, widget.registration .input-prepend .icon-container i {
   position: relative;
   top: 6px;
 }
-/* line 829, C:/projects/admin/sass/_base.scss */
+/* line 833, C:/projects/admin/sass/_base.scss */
 .widget.login .input-prepend .icon-container.invalid, widget.registration .input-prepend .icon-container.invalid {
   background: #f9ece4;
   border-color: #eac85e;
@@ -11124,7 +11121,7 @@ input.parsley-error {
   -moz-box-shadow: inset 0 1px 1px rgba(229, 96, 59, 0.075);
   box-shadow: inset 0 1px 1px rgba(229, 96, 59, 0.075);
 }
-/* line 835, C:/projects/admin/sass/_base.scss */
+/* line 839, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container, widget.registration .submit-container {
   position: relative;
   width: 350px;
@@ -11132,7 +11129,7 @@ input.parsley-error {
   background: #f8f3f0;
   padding: 20px 15px 0 15px;
 }
-/* line 842, C:/projects/admin/sass/_base.scss */
+/* line 846, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container button, widget.registration .submit-container button {
   border-radius: 0;
   color: #ffffff;
@@ -11141,7 +11138,7 @@ input.parsley-error {
   box-shadow: 0 0 #c54b2a;
   height: 45px;
 }
-/* line 850, C:/projects/admin/sass/_base.scss */
+/* line 854, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container .small-circle, widget.registration .submit-container .small-circle {
   border-radius: 50%;
   width: 18px;
@@ -11152,7 +11149,7 @@ input.parsley-error {
   left: 135px;
   float: left;
 }
-/* line 860, C:/projects/admin/sass/_base.scss */
+/* line 864, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container .small-circle .small-arrow-right, widget.registration .submit-container .small-circle .small-arrow-right {
   position: relative;
   top: 5px;
@@ -11163,14 +11160,14 @@ input.parsley-error {
   border-bottom: 4px solid transparent;
   border-left: 5px solid white;
 }
-/* line 871, C:/projects/admin/sass/_base.scss */
+/* line 875, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container .forgot, widget.registration .submit-container .forgot {
   color: #867868;
   text-align: center;
   text-decoration: underline;
   padding: 15px 0 15px 0;
 }
-/* line 878, C:/projects/admin/sass/_base.scss */
+/* line 882, C:/projects/admin/sass/_base.scss */
 .widget.login .facebook-login, widget.registration .facebook-login {
   position: relative;
   width: 380px;
@@ -11180,43 +11177,43 @@ input.parsley-error {
   background: #618fb0;
   padding-top: 10px;
 }
-/* line 887, C:/projects/admin/sass/_base.scss */
+/* line 891, C:/projects/admin/sass/_base.scss */
 .widget.login .facebook-login a, widget.registration .facebook-login a {
   color: #ffffff;
   text-shadow: none;
 }
-/* line 891, C:/projects/admin/sass/_base.scss */
+/* line 895, C:/projects/admin/sass/_base.scss */
 .widget.login .facebook-login a:hover, widget.registration .facebook-login a:hover {
   text-decoration: none;
 }
 
-/* line 900, C:/projects/admin/sass/_base.scss */
+/* line 904, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .sidebar {
   right: 0;
   margin: 30px 25px 0 0;
 }
-/* line 904, C:/projects/admin/sass/_base.scss */
+/* line 908, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .sidebar.sidebar-icons {
   margin-right: 1.6%;
 }
-/* line 909, C:/projects/admin/sass/_base.scss */
+/* line 913, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .wrap {
   margin-left: 0;
   margin-right: 205px;
 }
-/* line 913, C:/projects/admin/sass/_base.scss */
+/* line 917, C:/projects/admin/sass/_base.scss */
 .sidebar-on-right .wrap.sidebar-icons {
   margin-right: 62px;
 }
 
 /*chat stuff*/
-/* line 920, C:/projects/admin/sass/_base.scss */
+/* line 924, C:/projects/admin/sass/_base.scss */
 .chat {
   margin-top: 10px;
   position: relative;
   height: 100%;
 }
-/* line 925, C:/projects/admin/sass/_base.scss */
+/* line 929, C:/projects/admin/sass/_base.scss */
 .chat .controls {
   position: absolute;
   bottom: 0;
@@ -11224,11 +11221,11 @@ input.parsley-error {
   right: 0;
   padding: 20px 20px 5px;
 }
-/* line 932, C:/projects/admin/sass/_base.scss */
+/* line 936, C:/projects/admin/sass/_base.scss */
 .chat .controls form, .chat .controls label, .chat .controls input {
   margin-bottom: 0;
 }
-/* line 936, C:/projects/admin/sass/_base.scss */
+/* line 940, C:/projects/admin/sass/_base.scss */
 .chat .controls .new-message {
   display: block;
   width: 100%;
@@ -11238,7 +11235,7 @@ input.parsley-error {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 943, C:/projects/admin/sass/_base.scss */
+/* line 947, C:/projects/admin/sass/_base.scss */
 .chat .controls .new-message:focus + .smile {
   color: rgba(97, 143, 176, 0.6);
   -webkit-transition: color 0.2s;
@@ -11246,7 +11243,7 @@ input.parsley-error {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 949, C:/projects/admin/sass/_base.scss */
+/* line 953, C:/projects/admin/sass/_base.scss */
 .chat .controls .smile {
   position: absolute;
   right: 30px;
@@ -11258,7 +11255,7 @@ input.parsley-error {
   -o-transition: color 0.2s;
   transition: color 0.2s;
 }
-/* line 959, C:/projects/admin/sass/_base.scss */
+/* line 963, C:/projects/admin/sass/_base.scss */
 .chat .messages {
   overflow-y: scroll;
   position: absolute;
@@ -11267,86 +11264,86 @@ input.parsley-error {
   top: 0;
   bottom: 62px;
 }
-/* line 968, C:/projects/admin/sass/_base.scss */
+/* line 972, C:/projects/admin/sass/_base.scss */
 .chat .message {
   margin-bottom: 10px;
   padding: 0 5px;
 }
-/* line 973, C:/projects/admin/sass/_base.scss */
+/* line 977, C:/projects/admin/sass/_base.scss */
 .chat .message:last-child {
   margin-bottom: 0;
 }
-/* line 976, C:/projects/admin/sass/_base.scss */
+/* line 980, C:/projects/admin/sass/_base.scss */
 .chat .message.from-me {
   border-left: 5px solid #56bc76;
   padding-left: 0;
 }
-/* line 980, C:/projects/admin/sass/_base.scss */
+/* line 984, C:/projects/admin/sass/_base.scss */
 .chat .message:not(.from-me) {
   border-left: 5px solid #eac85e;
   padding-left: 0;
 }
-/* line 985, C:/projects/admin/sass/_base.scss */
+/* line 989, C:/projects/admin/sass/_base.scss */
 .chat .message .name, .chat .message .time {
   text-align: center;
 }
-/* line 989, C:/projects/admin/sass/_base.scss */
+/* line 993, C:/projects/admin/sass/_base.scss */
 .chat .message .name {
   font-weight: 700;
 }
-/* line 992, C:/projects/admin/sass/_base.scss */
+/* line 996, C:/projects/admin/sass/_base.scss */
 .chat .message .name a {
   color: #666666;
 }
-/* line 996, C:/projects/admin/sass/_base.scss */
+/* line 1000, C:/projects/admin/sass/_base.scss */
 .chat .message .time {
   line-height: 1em;
   font-weight: 600;
   color: #666666;
   font-size: 10px;
 }
-/* line 1003, C:/projects/admin/sass/_base.scss */
+/* line 1007, C:/projects/admin/sass/_base.scss */
 .chat .message .text {
   font-size: 13px;
 }
 
-/* line 1009, C:/projects/admin/sass/_base.scss */
+/* line 1013, C:/projects/admin/sass/_base.scss */
 .overview {
   margin-top: -15px;
   padding: 10px;
 }
-/* line 1013, C:/projects/admin/sass/_base.scss */
+/* line 1017, C:/projects/admin/sass/_base.scss */
 .overview h4 {
   font-weight: 400;
 }
-/* line 1017, C:/projects/admin/sass/_base.scss */
+/* line 1021, C:/projects/admin/sass/_base.scss */
 .overview .stats {
   margin-top: 10px;
   font-size: 12px;
 }
-/* line 1021, C:/projects/admin/sass/_base.scss */
+/* line 1025, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity {
   font-size: 15px;
 }
-/* line 1023, C:/projects/admin/sass/_base.scss */
+/* line 1027, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity .icon {
   text-align: center;
 }
-/* line 1027, C:/projects/admin/sass/_base.scss */
+/* line 1031, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity .value {
   text-align: right;
   font-size: 16px;
 }
-/* line 1032, C:/projects/admin/sass/_base.scss */
+/* line 1036, C:/projects/admin/sass/_base.scss */
 .overview .stats.activity .row-fluid {
   margin-top: 10px;
 }
-/* line 1037, C:/projects/admin/sass/_base.scss */
+/* line 1041, C:/projects/admin/sass/_base.scss */
 .overview .stats h4 {
   text-align: right;
   font-weight: 300;
 }
-/* line 1042, C:/projects/admin/sass/_base.scss */
+/* line 1046, C:/projects/admin/sass/_base.scss */
 .overview .stats h3 {
   line-height: 18px;
   vertical-align: middle;
@@ -11354,33 +11351,16 @@ input.parsley-error {
   font-size: 15px;
 }
 
-/* line 1051, C:/projects/admin/sass/_base.scss */
-.progress {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  height: 8px;
-  background: rgba(0, 0, 0, 0.2);
-}
-/* line 1056, C:/projects/admin/sass/_base.scss */
-.progress .bar {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/* line 1061, C:/projects/admin/sass/_base.scss */
+/* line 1055, C:/projects/admin/sass/_base.scss */
 .media-heading {
   font-weight: 600;
 }
-/* line 1064, C:/projects/admin/sass/_base.scss */
+/* line 1058, C:/projects/admin/sass/_base.scss */
 .media-heading .twitter {
   color: rgba(102, 102, 102, 0.7);
 }
 
-/* line 1070, C:/projects/admin/sass/_base.scss */
+/* line 1064, C:/projects/admin/sass/_base.scss */
 .media .actions {
   position: static;
   margin-right: 10px;
@@ -11390,34 +11370,34 @@ input.parsley-error {
   -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-/* line 1077, C:/projects/admin/sass/_base.scss */
+/* line 1071, C:/projects/admin/sass/_base.scss */
 .media li {
   float: left;
   margin-left: 10px;
 }
-/* line 1082, C:/projects/admin/sass/_base.scss */
+/* line 1076, C:/projects/admin/sass/_base.scss */
 .media p {
   margin-bottom: 0;
 }
-/* line 1086, C:/projects/admin/sass/_base.scss */
+/* line 1080, C:/projects/admin/sass/_base.scss */
 .media .time {
   font-weight: 600;
   color: rgba(102, 102, 102, 0.8);
   font-size: 13px;
 }
-/* line 1092, C:/projects/admin/sass/_base.scss */
+/* line 1086, C:/projects/admin/sass/_base.scss */
 .media .pull-left {
   margin-right: 0;
 }
 
-/* line 1097, C:/projects/admin/sass/_base.scss */
+/* line 1091, C:/projects/admin/sass/_base.scss */
 .media-content {
   border-left: 3px solid #e5603b;
   padding-left: 10px;
   position: relative;
   margin-left: 10px;
 }
-/* line 1103, C:/projects/admin/sass/_base.scss */
+/* line 1097, C:/projects/admin/sass/_base.scss */
 .media-content:hover .actions {
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
@@ -11425,7 +11405,7 @@ input.parsley-error {
   transition: opacity 0.2s;
   opacity: 1;
 }
-/* line 1108, C:/projects/admin/sass/_base.scss */
+/* line 1102, C:/projects/admin/sass/_base.scss */
 .media-content .arrow {
   display: block;
   position: absolute;
@@ -11438,7 +11418,7 @@ input.parsley-error {
   border-right: 4px solid #e5603b;
 }
 
-/* line 1121, C:/projects/admin/sass/_base.scss */
+/* line 1115, C:/projects/admin/sass/_base.scss */
 .btn {
   color: #ffffff;
   text-shadow: none;
@@ -11446,23 +11426,23 @@ input.parsley-error {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1128, C:/projects/admin/sass/_base.scss */
+/* line 1122, C:/projects/admin/sass/_base.scss */
 .btn:hover, .btn:focus {
   color: white;
   -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
 }
-/* line 1137, C:/projects/admin/sass/_base.scss */
+/* line 1131, C:/projects/admin/sass/_base.scss */
 .btn .caret {
   border-top-color: #fff;
 }
-/* line 1142, C:/projects/admin/sass/_base.scss */
+/* line 1136, C:/projects/admin/sass/_base.scss */
 .btn.disabled, .btn[disabled] {
   color: white;
 }
 
-/* line 1147, C:/projects/admin/sass/_base.scss */
+/* line 1141, C:/projects/admin/sass/_base.scss */
 .btn-transparent {
   background: rgba(51, 51, 51, 0.4);
   color: white;
@@ -11471,65 +11451,65 @@ input.parsley-error {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1153, C:/projects/admin/sass/_base.scss */
+/* line 1147, C:/projects/admin/sass/_base.scss */
 .btn-transparent:hover {
   background: rgba(51, 51, 51, 0.5);
   color: #ffffff;
 }
-/* line 1158, C:/projects/admin/sass/_base.scss */
+/* line 1152, C:/projects/admin/sass/_base.scss */
 .btn-transparent.active {
   color: #ffffff;
   background: rgba(51, 51, 51, 0.75);
 }
-/* line 1163, C:/projects/admin/sass/_base.scss */
+/* line 1157, C:/projects/admin/sass/_base.scss */
 .btn-transparent .caret {
   border-top-color: #666666;
 }
 
-/* line 1168, C:/projects/admin/sass/_base.scss */
+/* line 1162, C:/projects/admin/sass/_base.scss */
 .btn-inverse {
   color: #666666;
   border-bottom-color: rgba(0, 0, 0, 0.2);
 }
-/* line 1173, C:/projects/admin/sass/_base.scss */
+/* line 1167, C:/projects/admin/sass/_base.scss */
 .btn-inverse:hover, .btn-inverse:focus {
   color: #666666;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
-/* line 1180, C:/projects/admin/sass/_base.scss */
+/* line 1174, C:/projects/admin/sass/_base.scss */
 .btn-inverse.active, .btn-inverse.active:hover, .btn-inverse.active:focus {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   color: #666666;
 }
-/* line 1186, C:/projects/admin/sass/_base.scss */
+/* line 1180, C:/projects/admin/sass/_base.scss */
 .btn-inverse.disabled, .btn-inverse[disabled] {
   color: #666666;
 }
 
-/* line 1192, C:/projects/admin/sass/_base.scss */
+/* line 1186, C:/projects/admin/sass/_base.scss */
 .profile-picture {
   text-align: center;
 }
 
-/* line 1196, C:/projects/admin/sass/_base.scss */
+/* line 1190, C:/projects/admin/sass/_base.scss */
 .form-horizontal.label-left .control-label {
   text-align: left;
 }
 
-/* line 1201, C:/projects/admin/sass/_base.scss */
+/* line 1195, C:/projects/admin/sass/_base.scss */
 .form-condensed .control-label {
   width: 100px;
 }
-/* line 1205, C:/projects/admin/sass/_base.scss */
+/* line 1199, C:/projects/admin/sass/_base.scss */
 .form-condensed .controls {
   margin-left: 120px;
 }
 
-/* line 1210, C:/projects/admin/sass/_base.scss */
+/* line 1204, C:/projects/admin/sass/_base.scss */
 .section {
   font-size: 16px;
   color: #999999;
@@ -11537,90 +11517,95 @@ input.parsley-error {
   line-height: 30px;
   padding: 10px 0 0;
 }
-/* line 1217, C:/projects/admin/sass/_base.scss */
+/* line 1211, C:/projects/admin/sass/_base.scss */
 .section small {
   font-size: 13px;
   color: #dfdfdf;
   font-weight: 600;
 }
 
-/* line 1224, C:/projects/admin/sass/_base.scss */
+/* line 1218, C:/projects/admin/sass/_base.scss */
 .controls + .controls {
   margin-top: 10px;
 }
 
-/* line 1228, C:/projects/admin/sass/_base.scss */
+/* line 1222, C:/projects/admin/sass/_base.scss */
 .help-block {
   font-size: 13px;
 }
 
-/* line 1232, C:/projects/admin/sass/_base.scss */
+/* line 1226, C:/projects/admin/sass/_base.scss */
 input.input-padding-increased {
   padding: 8px 10px;
 }
 
-/* line 1236, C:/projects/admin/sass/_base.scss */
+/* line 1230, C:/projects/admin/sass/_base.scss */
 .select-block-level {
   width: 100%;
 }
 
-/* line 1241, C:/projects/admin/sass/_base.scss */
+/* line 1235, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] {
   float: none;
   display: inline-block;
   margin-left: 0;
 }
-/* line 1246, C:/projects/admin/sass/_base.scss */
+/* line 1240, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] .btn {
   width: 100%;
 }
-/* line 1251, C:/projects/admin/sass/_base.scss */
+/* line 1245, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group .dropdown-menu {
   width: 100%;
 }
 
-/* line 1256, C:/projects/admin/sass/_base.scss */
+/* line 1250, C:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1260, C:/projects/admin/sass/_base.scss */
+/* line 1254, C:/projects/admin/sass/_base.scss */
 .well-white {
   background: #ffffff;
 }
 
-/* line 1265, C:/projects/admin/sass/_base.scss */
+/* line 1258, C:/projects/admin/sass/_base.scss */
+.margin-top {
+  margin-top: 10px;
+}
+
+/* line 1262, C:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1269, C:/projects/admin/sass/_base.scss */
+/* line 1266, C:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 1273, C:/projects/admin/sass/_base.scss */
+/* line 1270, C:/projects/admin/sass/_base.scss */
 .icons > section {
   margin-top: 20px;
 }
 
-/* line 1277, C:/projects/admin/sass/_base.scss */
+/* line 1274, C:/projects/admin/sass/_base.scss */
 .the-icons li {
   line-height: 40px;
 }
-/* line 1279, C:/projects/admin/sass/_base.scss */
+/* line 1276, C:/projects/admin/sass/_base.scss */
 .the-icons li i {
   -webkit-transition: font-size 0.2s;
   -moz-transition: font-size 0.2s;
   -o-transition: font-size 0.2s;
   transition: font-size 0.2s;
 }
-/* line 1283, C:/projects/admin/sass/_base.scss */
+/* line 1280, C:/projects/admin/sass/_base.scss */
 .the-icons li:hover i {
   font-size: 28px;
 }
 
-/* line 1292, C:/projects/admin/sass/_base.scss */
+/* line 1289, C:/projects/admin/sass/_base.scss */
 .widget-tabs {
   background: none;
   -webkit-box-shadow: none;
@@ -11628,7 +11613,7 @@ input.input-padding-increased {
   box-shadow: none;
   padding: 0;
 }
-/* line 1297, C:/projects/admin/sass/_base.scss */
+/* line 1294, C:/projects/admin/sass/_base.scss */
 .widget-tabs .body {
   background: #ffffff;
   margin-top: 0;
@@ -11642,7 +11627,7 @@ input.input-padding-increased {
   -o-border-radius: 0 0 1px 1px;
   border-radius: 0 0 1px 1px;
 }
-/* line 1305, C:/projects/admin/sass/_base.scss */
+/* line 1302, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav > li > a {
   padding-top: 7px;
   padding-bottom: 6px;
@@ -11650,71 +11635,71 @@ input.input-padding-increased {
   -moz-box-shadow: 0 -2px 2px rgba(103, 103, 103, 0.5);
   box-shadow: 0 -2px 2px rgba(103, 103, 103, 0.5);
 }
-/* line 1311, C:/projects/admin/sass/_base.scss */
+/* line 1308, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav > li:not(.active) > a {
   background: #ffffff;
   border-bottom: none;
   color: #666666;
 }
-/* line 1317, C:/projects/admin/sass/_base.scss */
+/* line 1314, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav > li:first-child > a {
   border-left: none;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 1).active > a,
 .nav-tabs > li:nth-child(n + 1) > a:hover {
   color: #e5603b;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 2).active > a,
 .nav-tabs > li:nth-child(n + 2) > a:hover {
   color: #eac85e;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 3).active > a,
 .nav-tabs > li:nth-child(n + 3) > a:hover {
   color: #8cbf26;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 4).active > a,
 .nav-tabs > li:nth-child(n + 4) > a:hover {
   color: #56bc76;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 5).active > a,
 .nav-tabs > li:nth-child(n + 5) > a:hover {
   color: #4ab0ce;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 6).active > a,
 .nav-tabs > li:nth-child(n + 6) > a:hover {
   color: #618fb0;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 7).active > a,
 .nav-tabs > li:nth-child(n + 7) > a:hover {
   color: #a05000;
 }
 
-/* line 1326, C:/projects/admin/sass/_base.scss */
+/* line 1323, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 8).active > a,
 .nav-tabs > li:nth-child(n + 8) > a:hover {
   color: #d04f4f;
 }
 
-/* line 1332, C:/projects/admin/sass/_base.scss */
+/* line 1329, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:not(.active) > a {
   color: #666666;
 }
 
-/* line 1338, C:/projects/admin/sass/_base.scss */
+/* line 1335, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tab-content {
   background: #ffffff;
   padding: 10px;
@@ -11726,7 +11711,7 @@ input.input-padding-increased {
   -o-border-radius: 0 0 1px 1px;
   border-radius: 0 0 1px 1px;
 }
-/* line 1347, C:/projects/admin/sass/_base.scss */
+/* line 1344, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-below .tab-content {
   border-top: 1px solid #dddddd;
   border-bottom: none;
@@ -11736,7 +11721,7 @@ input.input-padding-increased {
   -o-border-radius: 1px 1px 0 0;
   border-radius: 1px 1px 0 0;
 }
-/* line 1355, C:/projects/admin/sass/_base.scss */
+/* line 1352, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-left .tab-content {
   border-top: 1px solid #dddddd;
   border-left: 1px solid #dddddd;
@@ -11746,7 +11731,7 @@ input.input-padding-increased {
   -o-border-radius: 0 1px 1px 0;
   border-radius: 0 1px 1px 0;
 }
-/* line 1363, C:/projects/admin/sass/_base.scss */
+/* line 1360, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-right .tab-content {
   border-top: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
@@ -11757,9 +11742,41 @@ input.input-padding-increased {
   border-radius: 1px 0 0 1px;
 }
 
-/* line 1375, C:/projects/admin/sass/_base.scss */
+/* line 1372, C:/projects/admin/sass/_base.scss */
 .accordion-group {
   background: #ffffff;
+}
+
+/* line 1381, C:/projects/admin/sass/_base.scss */
+.progress {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* line 1385, C:/projects/admin/sass/_base.scss */
+.progress-small {
+  height: 8px;
+}
+
+/* line 1390, C:/projects/admin/sass/_base.scss */
+.progress-inverse .bar, .progress .bar-inverse {
+  background-color: #666666;
+  background-image: -moz-linear-gradient(top, #666666, #666666);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#666666), to(#666666));
+  background-image: -webkit-linear-gradient(top, #666666, #666666);
+  background-image: -o-linear-gradient(top, #666666, #666666);
+  background-image: linear-gradient(to bottom, #666666, #666666);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF666666', endColorstr='#FF666666', GradientType=0);
+}
+
+/* line 1393, C:/projects/admin/sass/_base.scss */
+.progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
+  background-color: #666666;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
 @media (max-height: 800px) {

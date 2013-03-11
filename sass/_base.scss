@@ -195,6 +195,10 @@ input.parsley-error{
   margin-bottom: $box-margin-bottom;
   position: relative;
 
+  &.normal{
+    height: 220px;
+  }
+
   &.large{
     height: 315px;
 
@@ -1048,16 +1052,6 @@ input.parsley-error{
   }
 }
 
-.progress{
-  @include border-radius(0);
-  height: 8px;
-  background: rgba(black, .2);
-
-  .bar{
-    @include box-shadow(none);
-  }
-}
-
 .media-heading{
   font-weight: 600;
 
@@ -1261,6 +1255,9 @@ input.input-padding-increased{
   background: #ffffff;
 }
 
+.margin-top{
+  margin-top: 10px;
+}
 
 .margin-bottom{
   margin-bottom: 10px;
@@ -1374,4 +1371,25 @@ $i: 1;
 
 .accordion-group{
   background: #ffffff;
+}
+
+
+//-----------------------------------------------------------
+//                 PROGRESSBARS
+//-----------------------------------------------------------
+
+.progress{
+  background: rgba(black, .15);
+}
+
+.progress-small{
+  height: 8px;
+}
+
+// Warning (orange)
+.progress-inverse .bar, .progress .bar-inverse {
+  @include gradient-vertical($textColor, $textColor);
+}
+.progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
+  @include gradient-striped($textColor);
 }
