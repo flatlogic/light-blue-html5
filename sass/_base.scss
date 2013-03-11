@@ -129,6 +129,12 @@ input.parsley-error{
         background: $lightGray;
     }
   }
+
+  .accordion-group{
+    margin: 0;
+    border: none;
+    @include border-radius(0);
+  }
 }
 
 /*main content lies here*/
@@ -1183,12 +1189,6 @@ input.parsley-error{
 
 }
 
-.accordion-group{
-  margin: 0;
-  border: none;
-  @include border-radius(0);
-}
-
 .profile-picture{
   text-align: center;
 }
@@ -1366,4 +1366,12 @@ $i: 1;
       @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
     }
   }
+}
+
+//-----------------------------------------------------------
+//                 ACCORDION
+//-----------------------------------------------------------
+
+.accordion-group{
+  background: #ffffff;
 }
