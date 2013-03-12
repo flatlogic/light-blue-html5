@@ -12,9 +12,11 @@
 {
 	position: absolute;
 	display: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+  //okendoken. commenting out. changing to theme-specific
+	//-webkit-border-radius: 3px;
+	//-moz-border-radius: 3px;
+	//border-radius: 3px;
+  @include border-radius($baseBorderRadius);
 	background: #292929;
 	color: white;
 	font-family: sans-serif, Verdana;
@@ -25,9 +27,11 @@
 {
 	position: absolute;
 	left: 10px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+  //okendoken. commenting out. changing to theme-specific
+  //-webkit-border-radius: 3px;
+  //-moz-border-radius: 3px;
+  //border-radius: 3px;
+  @include border-radius($baseBorderRadius);
 	background: #000000;
 	padding: 3px;
 	color: white;

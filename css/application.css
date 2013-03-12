@@ -9793,6 +9793,72 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   height: 16px;
 }
 
+/*
+ * jQVMap Version 1.0 
+ *
+ * http://jqvmap.com
+ *
+ * Copyright 2012, Peter Schmalfeldt <manifestinteractive@gmail.com>
+ * Licensed under the MIT license.
+ *
+ * Fork Me @ https://github.com/manifestinteractive/jqvmap
+ */
+/* line 12, C:/projects/admin/sass/lib/_jqvmap.scss */
+.jqvmap-label {
+  position: absolute;
+  display: none;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  background: #292929;
+  color: white;
+  font-family: sans-serif, Verdana;
+  font-size: smaller;
+  padding: 3px;
+}
+
+/* line 27, C:/projects/admin/sass/lib/_jqvmap.scss */
+.jqvmap-zoomin, .jqvmap-zoomout {
+  position: absolute;
+  left: 10px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  background: #000000;
+  padding: 3px;
+  color: white;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  line-height: 10px;
+  text-align: center;
+}
+
+/* line 45, C:/projects/admin/sass/lib/_jqvmap.scss */
+.jqvmap-zoomin {
+  top: 10px;
+}
+
+/* line 49, C:/projects/admin/sass/lib/_jqvmap.scss */
+.jqvmap-zoomout {
+  top: 30px;
+}
+
+/* line 53, C:/projects/admin/sass/lib/_jqvmap.scss */
+.jqvmap-region {
+  cursor: pointer;
+}
+
+/* line 57, C:/projects/admin/sass/lib/_jqvmap.scss */
+.jqvmap-ajax_response {
+  width: 100%;
+  height: 500px;
+}
+
 /* line 1, C:/projects/admin/sass/_svg.scss */
 .nvd3.nv-stackedarea path.nv-area {
   fill-opacity: .8;
