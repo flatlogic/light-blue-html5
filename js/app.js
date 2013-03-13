@@ -52,3 +52,21 @@ function testData(stream_names, points_count) {
         };
     });
 }
+
+$(function(){
+    $(".btn-group > .btn[data-toggle-class]").click(function(){
+        var $this = $(this),
+            $parent = $this.parent();
+
+        if ($parent.data("toggle") == "buttons-radio"){
+            $parent.children(".btn[data-toggle-class]").removeClass(function(){
+                return $(this).data("toggle-class")
+            }).addClass(function(){
+                    return $(this).data("toggle-passive-class")
+                });
+            $this.removeClass($(this).data("toggle-passive-class")).addClass($this.data("toggle-class"));
+        } else {
+            $this.toggleClass($(this).data("toggle-passive-class")).toggleClass($this.data("toggle-class"));
+        }
+    });
+});
