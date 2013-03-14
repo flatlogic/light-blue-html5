@@ -218,14 +218,46 @@ html .fc,
 .fc-state-default,
 .fc-state-default .fc-button-inner {
 	border-style: solid;
-	border-color: #ccc #bbb #aaa;
+  //okendoken. change to default color
+	border-color: #ddd;
 	background: $btnInverseBackground;
 	color: $textColor;
 	}
 
+.fc-button-next .fc-button-inner{
+
+  &:before{
+    display: block;
+    font: 22px 'FontAwesome';
+    content: "\f105";
+    line-height: 28px;
+    padding: 0 10px;
+  }
+
+  .fc-button-content{
+    display: none;
+  }
+}
+
+.fc-button-prev .fc-button-inner{
+
+  &:before{
+    display: block;
+    font: 22px 'FontAwesome';
+    content: "\f104";
+    line-height: 28px;
+    padding: 0 10px;
+  }
+
+  .fc-button-content{
+    display: none;
+  }
+}
+
 .fc-state-hover,
 .fc-state-hover .fc-button-inner {
-	border-color: #999;
+  border-color: #ddd;
+  @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
 	}
 
 .fc-state-down,

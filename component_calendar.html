@@ -119,6 +119,66 @@
         </div>
     </header>
     <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span8">
+                <section class="widget">
+                    <header>
+                        <h3>
+                            <i class="icon-calendar"></i>
+                            Calendar
+                        </h3>
+                        <div class="actions">
+                            <button id="today" type="button" class="btn btn-small btn-warning">
+                                Today
+                            </button>
+                            <div id="calendar-switcher" class="btn-group" data-toggle="buttons-radio" data-target="btn-group-checkbox-2-input">
+                                <button type="button" class="btn btn-small btn-success active" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
+                                        value="month">Month</button>
+                                <button type="button" class="btn btn-small btn-inverse" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
+                                        value="agendaWeek">Week</button>
+                                <button type="button" class="btn btn-small btn-inverse" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
+                                        value="agendaDay">Day</button>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <div id="calendar" class="calendar"> </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3 id="myModalLabel">Map click</h3>
+    </div>
+    <div class="modal-body">
+        <p>One fine body…</p>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-primary">OK</button>
+    </div>
+</div>
+
+<div id="edit-modal" class="modal hide fade" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3 id="edit-modal-label">Create new event</h3>
+    </div>
+    <div class="modal-body">
+        <div class="control-group">
+            <label for="event-name" class="control-label">Event name</label>
+            <div class="controls">
+                <input type="text" id="event-name" name="name">
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button data-dismiss="modal" class="btn">Cancel</button>
+        <button data-dismiss="modal" id="create-event" class="btn btn-success">OK</button>
     </div>
 </div>
 
@@ -127,10 +187,8 @@
 <script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
 
 <!-- jquery plugins -->
-<script src="lib/jquery.maskedinput.js"></script>
-<script src="lib/parsley.js"> </script>
-<script src="lib/uniform/js/jquery.uniform.js"></script>
-<script src="lib/select2.js"></script>
+<script src="lib/fullcalendar.js"></script>
+<script src="lib/jquery-ui-1.10.1.custom.js"></script>
 
 
 <!--backbone and friends -->
@@ -155,6 +213,9 @@
 <!-- basic application js-->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
+
+<!-- page-specific js -->
+<script src="js/calendar.js"></script>
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">

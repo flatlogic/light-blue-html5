@@ -193,7 +193,7 @@ textarea {
   /* line 156, C:/projects/admin/sass/bootstrap/_reset.scss */
   * {
     text-shadow: none !important;
-    color: black !important;
+    color: #000 !important;
     background: transparent !important;
     box-shadow: none !important;
   }
@@ -224,7 +224,7 @@ textarea {
   /* line 184, C:/projects/admin/sass/bootstrap/_reset.scss */
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -296,7 +296,7 @@ a:focus {
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1084,7 +1084,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   background-color: #f5f5f5;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -1849,7 +1849,7 @@ input[type="checkbox"][readonly] {
   text-align: center;
   text-shadow: 0 1px 0 white;
   background-color: #eeeeee;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 /* line 476, C:/projects/admin/sass/bootstrap/_forms.scss */
 .input-append .add-on,
@@ -3213,7 +3213,7 @@ table th[class*="span"],
   margin: 2px 0 0;
   list-style: none;
   background-color: white;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
@@ -4400,7 +4400,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 114, C:/projects/admin/sass/bootstrap/_navs.scss */
 .nav-tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 
 /* line 118, C:/projects/admin/sass/bootstrap/_navs.scss */
@@ -4426,7 +4426,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a:focus {
   color: #666666;
   background-color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -4467,7 +4467,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 183, C:/projects/admin/sass/bootstrap/_navs.scss */
 .nav-tabs.nav-stacked > li > a {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4630,7 +4630,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 322, C:/projects/admin/sass/bootstrap/_navs.scss */
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 
 /* line 325, C:/projects/admin/sass/bootstrap/_navs.scss */
@@ -4655,7 +4655,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent #dddddd #dddddd #dddddd;
+  border-color: transparent #ddd #ddd #ddd;
 }
 
 /* line 350, C:/projects/admin/sass/bootstrap/_navs.scss */
@@ -4695,7 +4695,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-  border-color: #dddddd transparent #dddddd #dddddd;
+  border-color: #ddd transparent #ddd #ddd;
   *border-right-color: white;
 }
 
@@ -4722,7 +4722,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
-  border-color: #dddddd #dddddd #dddddd transparent;
+  border-color: #ddd #ddd #ddd transparent;
   *border-left-color: white;
 }
 
@@ -5103,7 +5103,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #cccccc;
+  border-bottom: 7px solid #ccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -5123,7 +5123,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 326, C:/projects/admin/sass/bootstrap/_navbar.scss */
 .navbar-fixed-bottom .nav > li > .dropdown-menu:before {
-  border-top: 7px solid #cccccc;
+  border-top: 7px solid #ccc;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-bottom: 0;
   bottom: -7px;
@@ -5564,7 +5564,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -5630,9 +5630,9 @@ input[type="submit"].btn.btn-mini {
   width: 560px;
   margin-left: -280px;
   background-color: white;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  *border: 1px solid #999999;
+  *border: 1px solid #999;
   /* IE6-7 */
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -5661,7 +5661,7 @@ input[type="submit"].btn.btn-mini {
 /* line 49, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header {
   padding: 9px 15px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 /* line 53, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header .close {
@@ -5692,7 +5692,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   text-align: right;
   background-color: #f5f5f5;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -5831,7 +5831,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -6002,7 +6002,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   padding: 4px;
   line-height: 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
@@ -7961,7 +7961,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   /* line 136, C:/projects/admin/sass/bootstrap/_responsive-767px-max.scss */
   input[type="checkbox"],
   input[type="radio"] {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
   }
 
   /* line 142, C:/projects/admin/sass/bootstrap/_responsive-767px-max.scss */
@@ -8606,7 +8606,7 @@ div.uploader.disabled span.action {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #cccccc;
+  border-bottom: 7px solid #ccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -8837,7 +8837,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   top: 100%;
   background: #fff;
   color: #666666;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-top: 0;
   -webkit-border-radius: 0 0 1px 1px;
   -moz-border-radius: 0 0 1px 1px;
@@ -8850,7 +8850,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 /* line 150, C:/projects/admin/sass/lib/_select2.scss */
 .select2-drop.select2-drop-above {
   margin-top: 1px;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   border-bottom: 0;
   -webkit-border-radius: 1px 1px 0 0;
   -moz-border-radius: 1px 1px 0 0;
@@ -8914,7 +8914,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   outline: 0;
   font-family: sans-serif;
   font-size: 1em;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -8956,9 +8956,9 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 /* line 266, C:/projects/admin/sass/lib/_select2.scss */
 .select2-dropdown-open .select2-choice {
   border-color: #ccc;
-  -webkit-box-shadow: 0 1px 0 white inset;
-  -moz-box-shadow: 0 1px 0 white inset;
-  box-shadow: 0 1px 0 white inset;
+  -webkit-box-shadow: 0 1px 0 #fff inset;
+  -moz-box-shadow: 0 1px 0 #fff inset;
+  box-shadow: 0 1px 0 #fff inset;
 }
 
 /* line 290, C:/projects/admin/sass/lib/_select2.scss */
@@ -9120,7 +9120,7 @@ disabled look for disabled choices in the results dropdown
 .select2-container.select2-container-disabled .select2-choice {
   background-color: #f4f4f4;
   background-image: none;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   cursor: default;
 }
 
@@ -9144,7 +9144,7 @@ disabled look for disabled choices in the results dropdown
   margin: 0;
   padding: 0;
   position: relative;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   cursor: text;
   overflow: hidden;
   background-color: #fff;
@@ -9210,7 +9210,7 @@ disabled look for disabled choices in the results dropdown
 
 /* line 485, C:/projects/admin/sass/lib/_select2.scss */
 .select2-default {
-  color: #999999 !important;
+  color: #999 !important;
 }
 
 /* line 489, C:/projects/admin/sass/lib/_select2.scss */
@@ -9221,7 +9221,7 @@ disabled look for disabled choices in the results dropdown
   line-height: 14px;
   color: #666666;
   cursor: default;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
@@ -9283,14 +9283,14 @@ disabled look for disabled choices in the results dropdown
 .select2-container-multi.select2-container-disabled .select2-choices {
   background-color: #f4f4f4;
   background-image: none;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   cursor: default;
 }
 
 /* line 558, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice {
   padding: 3px 5px 3px 5px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   background-image: none;
   background-color: #f4f4f4;
 }
@@ -9653,7 +9653,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: block;
   height: 5px;
   width: 5px;
-  border: 1px solid black;
+  border: 1px solid #000;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -9669,7 +9669,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: block;
   height: 5px;
   width: 5px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -9693,7 +9693,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: block;
   height: 1px;
   background: #000;
-  border-top: 1px solid white;
+  border-top: 1px solid #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -9741,7 +9741,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #cccccc;
+  border-bottom: 7px solid #ccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -9859,6 +9859,645 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   height: 500px;
 }
 
+/*
+ * FullCalendar v1.5.4 Stylesheet
+ *
+ * Copyright (c) 2011 Adam Shaw
+ * Dual licensed under the MIT and GPL licenses, located in
+ * MIT-LICENSE.txt and GPL-LICENSE.txt respectively.
+ *
+ * Date: Tue Sep 4 23:38:33 2012 -0700
+ *
+ */
+/* line 13, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+
+/* line 18, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 24, C:/projects/admin/sass/lib/_fullcalendar.scss */
+html .fc,
+.fc table {
+  font-size: 1em;
+}
+
+/* line 29, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc td,
+.fc th {
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Header
+------------------------------------------------------------------------*/
+/* line 39, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header td {
+  white-space: nowrap;
+}
+
+/* line 43, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header-left {
+  width: 25%;
+  text-align: left;
+}
+
+/* line 48, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header-center {
+  text-align: center;
+}
+
+/* line 52, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header-right {
+  width: 25%;
+  text-align: right;
+}
+
+/* line 57, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header-title {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 62, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header-title h2 {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* line 67, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc .fc-header-space {
+  padding-left: 10px;
+}
+
+/* line 71, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header .fc-button {
+  margin-bottom: 1em;
+  vertical-align: top;
+}
+
+/* buttons edges butting together */
+/* line 78, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header .fc-button {
+  margin-right: -1px;
+}
+
+/* line 82, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header .fc-corner-right {
+  margin-right: 1px;
+  /* back to normal */
+}
+
+/* line 86, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header .ui-corner-right {
+  margin-right: 0;
+  /* back to normal */
+}
+
+/* button layering (for border precedence) */
+/* line 93, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header .fc-state-hover,
+.fc-header .ui-state-hover {
+  z-index: 2;
+}
+
+/* line 97, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header .fc-state-down {
+  z-index: 3;
+}
+
+/* line 102, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-header .fc-state-active,
+.fc-header .ui-state-active {
+  z-index: 4;
+}
+
+/* Content
+------------------------------------------------------------------------*/
+/* line 111, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-content {
+  clear: both;
+}
+
+/* line 115, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-view {
+  width: 100%;
+  /* needed for view switching (when view is absolute) */
+  overflow: hidden;
+}
+
+/* Cell Styles
+------------------------------------------------------------------------*/
+/* line 126, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-widget-header,
+.fc-widget-content {
+  /* <td>, usually */
+  border: 1px solid #ccc;
+}
+
+/* line 130, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-highlight {
+  /* <td> today cell */
+  /* TODO: add .fc-today to <th> */
+  background: #ffc;
+}
+
+/* line 134, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-cell-overlay {
+  /* semi-transparent rectangle while dragging */
+  background: #9cf;
+  opacity: .2;
+  filter: alpha(opacity=20);
+  /* for IE */
+}
+
+/* Buttons
+------------------------------------------------------------------------*/
+/* line 145, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 151, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-default {
+  /* non-theme */
+  border-style: solid;
+  border-width: 1px 0;
+}
+
+/* line 156, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-inner {
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 162, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-default .fc-button-inner {
+  /* non-theme */
+  border-style: solid;
+  border-width: 0 1px;
+}
+
+/* line 167, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-content {
+  position: relative;
+  float: left;
+  height: 1.9em;
+  line-height: 1.9em;
+  padding: 0 .6em;
+  white-space: nowrap;
+}
+
+/* icon (for jquery ui) */
+/* line 178, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-content .fc-icon-wrap {
+  position: relative;
+  float: left;
+  top: 50%;
+}
+
+/* line 184, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-content .ui-icon {
+  position: relative;
+  float: left;
+  margin-top: -50%;
+  *margin-top: 0;
+  *top: -50%;
+}
+
+/* gloss effect */
+/* button states (determines colors)  */
+/* line 219, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-default,
+.fc-state-default .fc-button-inner {
+  border-style: solid;
+  border-color: #ddd;
+  background: #f3f3f3;
+  color: #666666;
+}
+
+/* line 229, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-next .fc-button-inner:before {
+  display: block;
+  font: 22px 'FontAwesome';
+  content: "\f105";
+  line-height: 28px;
+  padding: 0 10px;
+}
+/* line 237, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-next .fc-button-inner .fc-button-content {
+  display: none;
+}
+
+/* line 244, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-prev .fc-button-inner:before {
+  display: block;
+  font: 22px 'FontAwesome';
+  content: "\f104";
+  line-height: 28px;
+  padding: 0 10px;
+}
+/* line 252, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-button-prev .fc-button-inner .fc-button-content {
+  display: none;
+}
+
+/* line 258, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-hover,
+.fc-state-hover .fc-button-inner {
+  border-color: #ddd;
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* line 271, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-active,
+.fc-state-active .fc-button-inner {
+  border-color: #555;
+  background: #777;
+  color: #fff;
+}
+
+/* line 278, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-disabled,
+.fc-state-disabled .fc-button-inner {
+  color: #999;
+  border-color: #ddd;
+}
+
+/* line 283, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-disabled {
+  cursor: default;
+}
+
+/* line 287, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-state-disabled .fc-button-effect {
+  display: none;
+}
+
+/* Global Event Styles
+------------------------------------------------------------------------*/
+/* line 296, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event {
+  border-style: solid;
+  border-width: 0;
+  font-size: .85em;
+  cursor: default;
+}
+
+/* line 304, C:/projects/admin/sass/lib/_fullcalendar.scss */
+a.fc-event,
+.fc-event-draggable {
+  cursor: pointer;
+}
+
+/* line 308, C:/projects/admin/sass/lib/_fullcalendar.scss */
+a.fc-event {
+  text-decoration: none;
+}
+/* line 311, C:/projects/admin/sass/lib/_fullcalendar.scss */
+a.fc-event:hover, a.fc-event:focus {
+  color: #ffffff;
+}
+
+/* line 316, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-rtl .fc-event {
+  text-align: right;
+}
+
+/* line 320, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-skin {
+  background-color: #618fb0;
+  color: #fff;
+  /* default TEXT color */
+}
+
+/* line 328, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-width: 0;
+  overflow: hidden;
+}
+
+/* line 338, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-time,
+.fc-event-title {
+  padding: 0 1px;
+}
+
+/* line 342, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc .ui-resizable-handle {
+  /*** TODO: don't use ui-resizable anymore, change class ***/
+  display: block;
+  position: absolute;
+  z-index: 99999;
+  overflow: hidden;
+  /* hacky spaces (IE6/7) */
+  font-size: 300%;
+  /* */
+  line-height: 50%;
+  /* */
+}
+
+/* Horizontal Events
+------------------------------------------------------------------------*/
+/* line 356, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-hori {
+  border-width: 1px 0;
+  margin-bottom: 1px;
+}
+
+/* resizable */
+/* line 363, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-hori .ui-resizable-e {
+  top: 0 !important;
+  /* importants override pre jquery ui 1.7 styles */
+  right: -3px !important;
+  width: 7px !important;
+  height: 100% !important;
+  cursor: e-resize;
+}
+
+/* line 371, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-hori .ui-resizable-w {
+  top: 0 !important;
+  left: -3px !important;
+  width: 7px !important;
+  height: 100% !important;
+  cursor: w-resize;
+}
+
+/* line 379, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-hori .ui-resizable-handle {
+  _padding-bottom: 14px;
+  /* IE6 had 0 height */
+}
+
+/* Fake Rounded Corners (for buttons and events)
+------------------------------------------------------------*/
+/* Fake Rounded Corners SPECIFICALLY FOR EVENTS
+-----------------------------------------------------------------*/
+/* line 445, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-inner {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* Reusable Separate-border Table
+------------------------------------------------------------*/
+/* line 454, C:/projects/admin/sass/lib/_fullcalendar.scss */
+table.fc-border-separate {
+  border-collapse: separate;
+}
+
+/* line 459, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-border-separate th,
+.fc-border-separate td {
+  border-width: 1px 0 0 1px;
+}
+
+/* line 464, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-border-separate th.fc-last,
+.fc-border-separate td.fc-last {
+  border-right-width: 1px;
+}
+
+/* line 469, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-border-separate tr.fc-last th,
+.fc-border-separate tr.fc-last td {
+  border-bottom-width: 1px;
+}
+
+/* line 474, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-border-separate tbody tr.fc-first td,
+.fc-border-separate tbody tr.fc-first th {
+  border-top-width: 0;
+}
+
+/* Month View, Basic Week View, Basic Day View
+------------------------------------------------------------------------*/
+/* line 483, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-grid th {
+  text-align: center;
+}
+
+/* line 487, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-grid .fc-day-number {
+  float: right;
+  padding: 0 2px;
+}
+
+/* line 492, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-grid .fc-other-month .fc-day-number {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* for IE */
+  /* opacity with small font can sometimes look too faded
+     might want to set the 'color' property instead
+     making day-numbers bold also fixes the problem */
+}
+
+/* line 500, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-grid .fc-day-content {
+  clear: both;
+  padding: 2px 2px 1px;
+  /* distance between events and day edges */
+}
+
+/* event styles */
+/* line 507, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-grid .fc-event-time {
+  font-weight: bold;
+}
+
+/* right-to-left */
+/* line 513, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-rtl .fc-grid .fc-day-number {
+  float: left;
+}
+
+/* line 517, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-rtl .fc-grid .fc-event-time {
+  float: right;
+}
+
+/* Agenda Week View, Agenda Day View
+------------------------------------------------------------------------*/
+/* line 526, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda table {
+  border-collapse: separate;
+}
+
+/* line 530, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-days th {
+  text-align: center;
+}
+
+/* line 534, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda .fc-agenda-axis {
+  width: 50px;
+  padding: 0 4px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+/* line 543, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda .fc-day-content {
+  padding: 2px 2px 1px;
+}
+
+/* make axis border take precedence */
+/* line 549, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-days .fc-agenda-axis {
+  border-right-width: 1px;
+}
+
+/* line 553, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-days .fc-col0 {
+  border-left-width: 0;
+}
+
+/* all-day area */
+/* line 559, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-allday th {
+  border-width: 0 1px;
+}
+
+/* line 563, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-allday .fc-day-content {
+  min-height: 34px;
+  /* TODO: doesnt work well in quirksmode */
+  _height: 34px;
+}
+
+/* divider (between all-day and slots) */
+/* line 570, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-divider-inner {
+  height: 2px;
+  overflow: hidden;
+}
+
+/* line 575, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-widget-header .fc-agenda-divider-inner {
+  background: #eee;
+}
+
+/* slot rows */
+/* line 581, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-slots th {
+  border-width: 1px 1px 0;
+}
+
+/* line 585, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-slots td {
+  border-width: 1px 0 0;
+  background: none;
+}
+
+/* line 590, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-slots td div {
+  height: 20px;
+}
+
+/* line 595, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-slots tr.fc-slot0 th,
+.fc-agenda-slots tr.fc-slot0 td {
+  border-top-width: 0;
+}
+
+/* line 600, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-slots tr.fc-minor th,
+.fc-agenda-slots tr.fc-minor td {
+  border-top-style: dotted;
+}
+
+/* line 604, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda-slots tr.fc-minor th.ui-widget-header {
+  *border-top-style: solid;
+  /* doesn't work with background in IE6/7 */
+}
+
+/* Vertical Events
+------------------------------------------------------------------------*/
+/* line 613, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-vert {
+  border-width: 0 1px;
+}
+
+/* line 618, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-vert .fc-event-head,
+.fc-event-vert .fc-event-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 625, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-vert .fc-event-time {
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+/* line 630, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-vert .fc-event-bg {
+  /* makes the event lighter w/ a semi-transparent overlay  */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .3;
+  filter: alpha(opacity=30);
+}
+
+/* line 643, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc .ui-draggable-dragging .fc-event-bg,
+.fc-select-helper .fc-event-bg {
+  display: none\9;
+  /* for IE6/7/8. nested opacity filters while dragging don't work */
+}
+
+/* resizable */
+/* line 649, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-event-vert .ui-resizable-s {
+  bottom: 0 !important;
+  /* importants override pre jquery ui 1.7 styles */
+  width: 100% !important;
+  height: 8px !important;
+  overflow: hidden !important;
+  line-height: 8px !important;
+  font-size: 11px !important;
+  font-family: monospace;
+  text-align: center;
+  cursor: s-resize;
+}
+
+/* line 661, C:/projects/admin/sass/lib/_fullcalendar.scss */
+.fc-agenda .ui-resizable-resizing {
+  /* TODO: better selector */
+  _overflow: hidden;
+}
+
 /* line 1, C:/projects/admin/sass/_svg.scss */
 .nvd3.nv-stackedarea path.nv-area {
   fill-opacity: .8;
@@ -9886,7 +10525,7 @@ svg text {
   padding: 5px;
   position: absolute;
   background-color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   z-index: 10000;
   font-family: inherit;
   font-size: 13px;
@@ -11205,7 +11844,7 @@ input.parsley-error {
   height: 35px;
   width: 35px;
   -webkit-transition-delay: 0s, 0s;
-  -webkit-transition-duration: 0.2s, 0.2s;
+  -webkit-transition-duration: 0.20000000298023224s, 0.20000000298023224s;
   -webkit-transition-property: border, box-shadow;
   -webkit-transition-timing-function: linear, linear;
 }
@@ -11259,7 +11898,7 @@ input.parsley-error {
   height: 0;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  border-left: 5px solid white;
+  border-left: 5px solid #ffffff;
 }
 /* line 875, C:/projects/admin/sass/_base.scss */
 .widget.login .submit-container .forgot, widget.registration .submit-container .forgot {
@@ -11534,16 +12173,40 @@ input.parsley-error {
   -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
 }
-/* line 1131, C:/projects/admin/sass/_base.scss */
+/* line 1127, C:/projects/admin/sass/_base.scss */
+.btn.active:hover {
+  color: #555555;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+/* line 1132, C:/projects/admin/sass/_base.scss */
 .btn .caret {
   border-top-color: #fff;
 }
-/* line 1136, C:/projects/admin/sass/_base.scss */
+/* line 1137, C:/projects/admin/sass/_base.scss */
 .btn.disabled, .btn[disabled] {
   color: white;
 }
 
-/* line 1141, C:/projects/admin/sass/_base.scss */
+/* line 1147, C:/projects/admin/sass/_base.scss */
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active {
+  color: rgba(255, 255, 255, 0.9);
+}
+/* line 1149, C:/projects/admin/sass/_base.scss */
+.btn-primary.active:hover,
+.btn-warning.active:hover,
+.btn-danger.active:hover,
+.btn-success.active:hover,
+.btn-info.active:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 1155, C:/projects/admin/sass/_base.scss */
 .btn-transparent {
   background: rgba(51, 51, 51, 0.4);
   color: white;
@@ -11552,65 +12215,65 @@ input.parsley-error {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 1147, C:/projects/admin/sass/_base.scss */
+/* line 1161, C:/projects/admin/sass/_base.scss */
 .btn-transparent:hover {
   background: rgba(51, 51, 51, 0.5);
   color: #ffffff;
 }
-/* line 1152, C:/projects/admin/sass/_base.scss */
+/* line 1166, C:/projects/admin/sass/_base.scss */
 .btn-transparent.active {
   color: #ffffff;
   background: rgba(51, 51, 51, 0.75);
 }
-/* line 1157, C:/projects/admin/sass/_base.scss */
+/* line 1171, C:/projects/admin/sass/_base.scss */
 .btn-transparent .caret {
   border-top-color: #666666;
 }
 
-/* line 1162, C:/projects/admin/sass/_base.scss */
+/* line 1176, C:/projects/admin/sass/_base.scss */
 .btn-inverse {
   color: #666666;
   border-bottom-color: rgba(0, 0, 0, 0.2);
 }
-/* line 1167, C:/projects/admin/sass/_base.scss */
+/* line 1181, C:/projects/admin/sass/_base.scss */
 .btn-inverse:hover, .btn-inverse:focus {
   color: #666666;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
 }
-/* line 1174, C:/projects/admin/sass/_base.scss */
+/* line 1188, C:/projects/admin/sass/_base.scss */
 .btn-inverse.active, .btn-inverse.active:hover, .btn-inverse.active:focus {
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
   color: #666666;
 }
-/* line 1180, C:/projects/admin/sass/_base.scss */
+/* line 1194, C:/projects/admin/sass/_base.scss */
 .btn-inverse.disabled, .btn-inverse[disabled] {
   color: #666666;
 }
 
-/* line 1186, C:/projects/admin/sass/_base.scss */
+/* line 1200, C:/projects/admin/sass/_base.scss */
 .profile-picture {
   text-align: center;
 }
 
-/* line 1190, C:/projects/admin/sass/_base.scss */
+/* line 1204, C:/projects/admin/sass/_base.scss */
 .form-horizontal.label-left .control-label {
   text-align: left;
 }
 
-/* line 1195, C:/projects/admin/sass/_base.scss */
+/* line 1209, C:/projects/admin/sass/_base.scss */
 .form-condensed .control-label {
   width: 100px;
 }
-/* line 1199, C:/projects/admin/sass/_base.scss */
+/* line 1213, C:/projects/admin/sass/_base.scss */
 .form-condensed .controls {
   margin-left: 120px;
 }
 
-/* line 1204, C:/projects/admin/sass/_base.scss */
+/* line 1218, C:/projects/admin/sass/_base.scss */
 .section {
   font-size: 16px;
   color: #999999;
@@ -11618,95 +12281,95 @@ input.parsley-error {
   line-height: 30px;
   padding: 10px 0 0;
 }
-/* line 1211, C:/projects/admin/sass/_base.scss */
+/* line 1225, C:/projects/admin/sass/_base.scss */
 .section small {
   font-size: 13px;
   color: #dfdfdf;
   font-weight: 600;
 }
 
-/* line 1218, C:/projects/admin/sass/_base.scss */
+/* line 1232, C:/projects/admin/sass/_base.scss */
 .controls + .controls {
   margin-top: 10px;
 }
 
-/* line 1222, C:/projects/admin/sass/_base.scss */
+/* line 1236, C:/projects/admin/sass/_base.scss */
 .help-block {
   font-size: 13px;
 }
 
-/* line 1226, C:/projects/admin/sass/_base.scss */
+/* line 1240, C:/projects/admin/sass/_base.scss */
 input.input-padding-increased {
   padding: 8px 10px;
 }
 
-/* line 1230, C:/projects/admin/sass/_base.scss */
+/* line 1244, C:/projects/admin/sass/_base.scss */
 .select-block-level {
   width: 100%;
 }
 
-/* line 1235, C:/projects/admin/sass/_base.scss */
+/* line 1249, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] {
   float: none;
   display: inline-block;
   margin-left: 0;
 }
-/* line 1240, C:/projects/admin/sass/_base.scss */
+/* line 1254, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group[class*='span'] .btn {
   width: 100%;
 }
-/* line 1245, C:/projects/admin/sass/_base.scss */
+/* line 1259, C:/projects/admin/sass/_base.scss */
 .controls .bootstrap-select.btn-group .dropdown-menu {
   width: 100%;
 }
 
-/* line 1250, C:/projects/admin/sass/_base.scss */
+/* line 1264, C:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1254, C:/projects/admin/sass/_base.scss */
+/* line 1268, C:/projects/admin/sass/_base.scss */
 .well-white {
   background: #ffffff;
 }
 
-/* line 1258, C:/projects/admin/sass/_base.scss */
+/* line 1272, C:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1262, C:/projects/admin/sass/_base.scss */
+/* line 1276, C:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1266, C:/projects/admin/sass/_base.scss */
+/* line 1280, C:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 1270, C:/projects/admin/sass/_base.scss */
+/* line 1284, C:/projects/admin/sass/_base.scss */
 .icons > section {
   margin-top: 20px;
 }
 
-/* line 1274, C:/projects/admin/sass/_base.scss */
+/* line 1288, C:/projects/admin/sass/_base.scss */
 .the-icons li {
   line-height: 40px;
 }
-/* line 1276, C:/projects/admin/sass/_base.scss */
+/* line 1290, C:/projects/admin/sass/_base.scss */
 .the-icons li i {
   -webkit-transition: font-size 0.2s;
   -moz-transition: font-size 0.2s;
   -o-transition: font-size 0.2s;
   transition: font-size 0.2s;
 }
-/* line 1280, C:/projects/admin/sass/_base.scss */
+/* line 1294, C:/projects/admin/sass/_base.scss */
 .the-icons li:hover i {
   font-size: 28px;
 }
 
-/* line 1289, C:/projects/admin/sass/_base.scss */
+/* line 1303, C:/projects/admin/sass/_base.scss */
 .widget-tabs {
   background: none;
   -webkit-box-shadow: none;
@@ -11714,7 +12377,7 @@ input.input-padding-increased {
   box-shadow: none;
   padding: 0;
 }
-/* line 1294, C:/projects/admin/sass/_base.scss */
+/* line 1308, C:/projects/admin/sass/_base.scss */
 .widget-tabs .body {
   background: #ffffff;
   margin-top: 0;
@@ -11728,7 +12391,7 @@ input.input-padding-increased {
   -o-border-radius: 0 0 1px 1px;
   border-radius: 0 0 1px 1px;
 }
-/* line 1302, C:/projects/admin/sass/_base.scss */
+/* line 1316, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav > li > a {
   padding-top: 7px;
   padding-bottom: 6px;
@@ -11736,75 +12399,75 @@ input.input-padding-increased {
   -moz-box-shadow: 0 -2px 2px rgba(103, 103, 103, 0.5);
   box-shadow: 0 -2px 2px rgba(103, 103, 103, 0.5);
 }
-/* line 1308, C:/projects/admin/sass/_base.scss */
+/* line 1322, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav > li:not(.active) > a {
   background: #ffffff;
   border-bottom: none;
   color: #666666;
 }
-/* line 1314, C:/projects/admin/sass/_base.scss */
+/* line 1328, C:/projects/admin/sass/_base.scss */
 .widget-tabs .nav > li:first-child > a {
   border-left: none;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 1).active > a,
 .nav-tabs > li:nth-child(n + 1) > a:hover {
   color: #e5603b;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 2).active > a,
 .nav-tabs > li:nth-child(n + 2) > a:hover {
   color: #eac85e;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 3).active > a,
 .nav-tabs > li:nth-child(n + 3) > a:hover {
   color: #8cbf26;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 4).active > a,
 .nav-tabs > li:nth-child(n + 4) > a:hover {
   color: #56bc76;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 5).active > a,
 .nav-tabs > li:nth-child(n + 5) > a:hover {
   color: #4ab0ce;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 6).active > a,
 .nav-tabs > li:nth-child(n + 6) > a:hover {
   color: #618fb0;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 7).active > a,
 .nav-tabs > li:nth-child(n + 7) > a:hover {
   color: #a05000;
 }
 
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:nth-child(n + 8).active > a,
 .nav-tabs > li:nth-child(n + 8) > a:hover {
   color: #d04f4f;
 }
 
-/* line 1329, C:/projects/admin/sass/_base.scss */
+/* line 1343, C:/projects/admin/sass/_base.scss */
 .nav-tabs > li:not(.active) > a {
   color: #666666;
 }
 
-/* line 1335, C:/projects/admin/sass/_base.scss */
+/* line 1349, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tab-content {
   background: #ffffff;
   padding: 10px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-top: none;
   -webkit-border-radius: 0 0 1px 1px;
   -moz-border-radius: 0 0 1px 1px;
@@ -11812,9 +12475,9 @@ input.input-padding-increased {
   -o-border-radius: 0 0 1px 1px;
   border-radius: 0 0 1px 1px;
 }
-/* line 1344, C:/projects/admin/sass/_base.scss */
+/* line 1358, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-below .tab-content {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
   border-bottom: none;
   -webkit-border-radius: 1px 1px 0 0;
   -moz-border-radius: 1px 1px 0 0;
@@ -11822,20 +12485,20 @@ input.input-padding-increased {
   -o-border-radius: 1px 1px 0 0;
   border-radius: 1px 1px 0 0;
 }
-/* line 1352, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-left .tab-content {
-  border-top: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
   -webkit-border-radius: 0 1px 1px 0;
   -moz-border-radius: 0 1px 1px 0;
   -ms-border-radius: 0 1px 1px 0;
   -o-border-radius: 0 1px 1px 0;
   border-radius: 0 1px 1px 0;
 }
-/* line 1360, C:/projects/admin/sass/_base.scss */
+/* line 1374, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-right .tab-content {
-  border-top: 1px solid #dddddd;
-  border-right: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   -webkit-border-radius: 1px 0 0 1px;
   -moz-border-radius: 1px 0 0 1px;
   -ms-border-radius: 1px 0 0 1px;
@@ -11843,22 +12506,22 @@ input.input-padding-increased {
   border-radius: 1px 0 0 1px;
 }
 
-/* line 1372, C:/projects/admin/sass/_base.scss */
+/* line 1386, C:/projects/admin/sass/_base.scss */
 .accordion-group {
   background: #ffffff;
 }
 
-/* line 1381, C:/projects/admin/sass/_base.scss */
+/* line 1395, C:/projects/admin/sass/_base.scss */
 .progress {
   background: rgba(0, 0, 0, 0.15);
 }
 
-/* line 1385, C:/projects/admin/sass/_base.scss */
+/* line 1399, C:/projects/admin/sass/_base.scss */
 .progress-small {
   height: 8px;
 }
 
-/* line 1390, C:/projects/admin/sass/_base.scss */
+/* line 1404, C:/projects/admin/sass/_base.scss */
 .progress-inverse .bar, .progress .bar-inverse {
   background-color: #666666;
   background-image: -moz-linear-gradient(top, #666666, #666666);
@@ -11870,7 +12533,7 @@ input.input-padding-increased {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF666666', endColorstr='#FF666666', GradientType=0);
 }
 
-/* line 1393, C:/projects/admin/sass/_base.scss */
+/* line 1407, C:/projects/admin/sass/_base.scss */
 .progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
   background-color: #666666;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -11880,7 +12543,7 @@ input.input-padding-increased {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-/* line 1401, C:/projects/admin/sass/_base.scss */
+/* line 1415, C:/projects/admin/sass/_base.scss */
 .map {
   height: 100%;
 }
