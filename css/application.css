@@ -10498,6 +10498,109 @@ table.fc-border-separate {
   _overflow: hidden;
 }
 
+/*
+ * jQuery File Upload UI Plugin CSS 7.4
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+/* line 13, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-right: 4px;
+}
+
+/* line 19, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: translate(-300px, 0) scale(4);
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* line 32, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+.fileupload-buttonbar .btn,
+.fileupload-buttonbar .toggle {
+  margin-bottom: 5px;
+}
+
+/* line 35, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+.files .progress {
+  width: 200px;
+}
+
+/* line 38, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+.progress-animated .bar {
+  background: url(../img/progressbar.gif) !important;
+  filter: none;
+}
+
+/* line 42, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+.fileupload-loading {
+  position: absolute;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  background: url(../img/loading.gif) center no-repeat;
+  display: none;
+}
+
+/* line 50, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+.fileupload-processing .fileupload-loading {
+  display: block;
+}
+
+/* Fix for IE 6: */
+/* line 55, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+* html .fileinput-button {
+  line-height: 24px;
+  margin: 1px -3px 0 0;
+}
+
+/* Fix for IE 7: */
+/* line 61, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+* + html .fileinput-button {
+  padding: 2px 15px;
+  margin: 1px 0 0 0;
+}
+
+@media (max-width: 767px) {
+  /* line 69, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  .fileupload-buttonbar .toggle,
+  .files .toggle,
+  .files .btn span {
+    display: none;
+  }
+
+  /* line 72, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  .files .preview * {
+    width: 40px;
+  }
+
+  /* line 75, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  .files .name * {
+    width: 80px;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+
+  /* line 80, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  .files .progress {
+    width: 20px;
+  }
+}
 /* line 1, C:/projects/admin/sass/_svg.scss */
 .nvd3.nv-stackedarea path.nv-area {
   fill-opacity: .8;
@@ -12592,6 +12695,12 @@ input.input-padding-increased {
 /* line 1444, C:/projects/admin/sass/_base.scss */
 .thumbnail img {
   width: 100%;
+}
+
+/* line 1452, C:/projects/admin/sass/_base.scss */
+.dropzone {
+  border: 4px dashed #dfdfdf;
+  height: 100px;
 }
 
 @media (max-height: 800px) {
