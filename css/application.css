@@ -10600,6 +10600,233 @@ table.fc-border-separate {
     width: 20px;
   }
 }
+/*
+  backgrid
+  http://github.com/wyuenho/backgrid
+
+  Copyright (c) 2013 Jimmy Yuen Ho Wong
+  Licensed under the MIT @license.
+*/
+/* line 9, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 465px;
+  padding: 0;
+  overflow: auto;
+  border: 0;
+}
+
+/* line 19, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border: 1px solid #DDD;
+  border-collapse: collapse;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 31, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid th,
+.backgrid td {
+  height: 20px;
+  max-width: 250px;
+  padding: 4px 5px;
+  overflow: hidden;
+  line-height: 20px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #DDD;
+}
+
+/* line 44, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid th {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* line 49, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid th a {
+  white-space: nowrap;
+}
+
+/* line 53, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid thead th {
+  vertical-align: bottom;
+}
+
+/* line 58, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid tbody tr:nth-child(odd) td,
+.backgrid tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+
+/* line 63, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid td.editor,
+.backgrid tbody tr:nth-child(odd) td.editor {
+  background-color: rgba(82, 168, 236, 0.1);
+  outline: 1px solid rgba(82, 168, 236, 0.8);
+  outline-offset: -1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: width, outline, background-color;
+  -moz-transition-property: width, outline, background-color;
+  -o-transition-property: width, outline, background-color;
+  transition-property: width, outline, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 84, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid td.editor input[type=text] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 104, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid td.editor.error,
+.backgrid tbody tr:nth-child(odd) td.editor.error {
+  background-color: rgba(255, 210, 77, 0.1);
+  outline: 1px solid #ffd24d;
+}
+
+/* line 110, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid td.editor :focus,
+.backgrid th.editor :focus {
+  outline: 0;
+}
+
+/* line 114, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .sort-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.3em;
+  border: 0;
+  content: "";
+}
+
+/* line 123, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .ascending .sort-caret {
+  vertical-align: baseline;
+  border-top: none;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid #000000;
+  border-left: 4px solid transparent;
+}
+
+/* line 131, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .descending .sort-caret {
+  vertical-align: super;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+}
+
+/* line 144, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .string-cell,
+.backgrid .uri-cell,
+.backgrid .email-cell,
+.backgrid .string-cell.editor input[type=text],
+.backgrid .uri-cell.editor input[type=text],
+.backgrid .email-cell.editor input[type=text] {
+  text-align: left;
+}
+
+/* line 157, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .date-cell,
+.backgrid .time-cell,
+.backgrid .datetime-cell,
+.backgrid .number-cell,
+.backgrid .integer-cell,
+.backgrid .date-cell.editor input[type=text],
+.backgrid .time-cell.editor input[type=text],
+.backgrid .datetime-cell.editor input[type=text],
+.backgrid .number-cell.editor input[type=text],
+.backgrid .integer-cell.editor input[type=text] {
+  text-align: right;
+}
+
+/* line 162, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .boolean-cell,
+.backgrid .boolean-cell.editor input[type=checkbox] {
+  text-align: center;
+}
+
+/* line 166, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .select-cell {
+  text-align: center;
+}
+
+/* line 170, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .select-cell.editor {
+  padding: 0;
+}
+
+/* line 174, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .select-cell.editor select {
+  display: block;
+  width: 100%;
+  height: 28px;
+  padding: 4px 5px;
+  margin: 0;
+  line-height: 28px;
+  vertical-align: middle;
+  background-color: white;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 193, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .select-cell.editor :focus {
+  border: 0;
+  outline: 0;
+}
+
+/* line 203, C:/projects/admin/sass/lib/_backgrid.scss */
+.backgrid .select-cell.editor select::-moz-focus-inner,
+.backgrid .select-cell.editor optgroup::-moz-focus-inner,
+.backgrid .select-cell.editor option::-moz-focus-inner,
+.backgrid .select-cell.editor select::-o-focus-inner,
+.backgrid .select-cell.editor optgroup::-o-focus-inner,
+.backgrid .select-cell.editor option::-o-focus-inner {
+  border: 0;
+}
+
 /* line 1, C:/projects/admin/sass/_svg.scss */
 .nvd3.nv-stackedarea path.nv-area {
   fill-opacity: .8;
@@ -12699,6 +12926,7 @@ input.input-padding-increased {
 /* line 1452, C:/projects/admin/sass/_base.scss */
 .dropzone {
   border: 3px dashed #dfdfdf;
+  margin-top: 10px;
   height: 100px;
   font-size: 40px;
   color: #dfdfdf;
@@ -12706,43 +12934,128 @@ input.input-padding-increased {
   padding-left: 5%;
   vertical-align: middle;
 }
-/* line 1461, C:/projects/admin/sass/_base.scss */
+/* line 1462, C:/projects/admin/sass/_base.scss */
 .dropzone i {
   margin-top: 20px;
   padding-right: 10%;
 }
 
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 1) {
   color: #e5603b;
 }
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 2) {
   color: #eac85e;
 }
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 3) {
   color: #8cbf26;
 }
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 4) {
   color: #56bc76;
 }
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 5) {
   color: #4ab0ce;
 }
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 6) {
   color: #618fb0;
 }
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 7) {
   color: #a05000;
 }
-/* line 1475, C:/projects/admin/sass/_base.scss */
+/* line 1476, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(n + 8) {
   color: #d04f4f;
+}
+
+/* line 1483, C:/projects/admin/sass/_base.scss */
+.table-editable th a {
+  display: block;
+  cursor: pointer;
+  color: #666666;
+  text-decoration: underline;
+}
+
+/* line 1491, C:/projects/admin/sass/_base.scss */
+.table-editable td.editor,
+.table-editable tbody tr:nth-child(odd) td.editor {
+  background-color: rgba(97, 143, 176, 0.05);
+  outline: 1px solid #618fb0;
+  outline-offset: -1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: width, outline, background-color;
+  -moz-transition-property: width, outline, background-color;
+  -o-transition-property: width, outline, background-color;
+  transition-property: width, outline, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 1512, C:/projects/admin/sass/_base.scss */
+.table-editable td.editor input[type=text] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 1532, C:/projects/admin/sass/_base.scss */
+.table-editable td.editor.error,
+.table-editable tbody tr:nth-child(odd) td.editor.error {
+  background-color: rgba(234, 200, 94, 0.1);
+  outline: 1px solid #eac85e;
+}
+
+/* line 1538, C:/projects/admin/sass/_base.scss */
+.table-editable td.editor :focus,
+.table-editable th.editor :focus {
+  outline: 0;
+}
+
+/* line 1542, C:/projects/admin/sass/_base.scss */
+.table-editable .sort-caret {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 0.3em;
+  border: 0;
+  content: "";
+  font: 15px FontAwesome;
+}
+
+/* line 1553, C:/projects/admin/sass/_base.scss */
+.table-editable .ascending .sort-caret:before {
+  content: "\f0d8";
+}
+
+/* line 1559, C:/projects/admin/sass/_base.scss */
+.table-editable .descending .sort-caret:before {
+  content: "\f0d7";
 }
 
 @media (max-height: 800px) {

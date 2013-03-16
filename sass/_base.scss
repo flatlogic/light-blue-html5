@@ -1451,6 +1451,7 @@ $i: 1;
 
 .dropzone{
   border: 3px dashed $smallsColor;
+  margin-top: 10px;
   height: 100px;
   font-size: 40px;
   color: $smallsColor;
@@ -1476,5 +1477,86 @@ $i: 1;
       color: #{$color};
     }
     $i: $i + 1;
+  }
+}
+
+.table-editable th a{
+  display: block;
+  cursor: pointer;
+  color: $textColor;
+  text-decoration: underline;
+}
+
+.table-editable td.editor,
+.table-editable tbody tr:nth-child(odd) td.editor {
+  background-color: rgba($blue, 0.05);
+  outline: 1px solid $blue;
+  outline-offset: -1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: width, outline, background-color;
+  -moz-transition-property: width, outline, background-color;
+  -o-transition-property: width, outline, background-color;
+  transition-property: width, outline, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.table-editable td.editor input[type=text] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.table-editable td.editor.error,
+.table-editable tbody tr:nth-child(odd) td.editor.error {
+  background-color: rgba($orange, 0.1);
+  outline: 1px solid $orange;
+}
+
+.table-editable td.editor :focus,
+.table-editable th.editor :focus {
+  outline: 0;
+}
+
+.table-editable .sort-caret {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 0.3em;
+  border: 0;
+  content: "";
+  font: 15px FontAwesome;
+}
+
+.table-editable .ascending .sort-caret {
+  &:before{
+    content: "\f0d8";
+  }
+}
+
+.table-editable .descending .sort-caret {
+  &:before{
+    content: "\f0d7";
   }
 }
