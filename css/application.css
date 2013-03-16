@@ -10854,23 +10854,8 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
 }
 
 /* line 6, C:/projects/admin/sass/_base.scss */
-.light-gray {
-  background: #f8f8f8 !important;
-}
-
-/* line 6, C:/projects/admin/sass/_base.scss */
 .light-red {
   background: #f8f3f0 !important;
-}
-
-/* line 6, C:/projects/admin/sass/_base.scss */
-.light-blue {
-  background: #eff5ef !important;
-}
-
-/* line 6, C:/projects/admin/sass/_base.scss */
-.light-green {
-  background: #efffee !important;
 }
 
 /* line 6, C:/projects/admin/sass/_base.scss */
@@ -10879,8 +10864,23 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
 }
 
 /* line 6, C:/projects/admin/sass/_base.scss */
+.light-green {
+  background: #efffee !important;
+}
+
+/* line 6, C:/projects/admin/sass/_base.scss */
+.light-blue {
+  background: #eff5ef !important;
+}
+
+/* line 6, C:/projects/admin/sass/_base.scss */
 .light-brown {
   background: #f5f2ee !important;
+}
+
+/* line 6, C:/projects/admin/sass/_base.scss */
+.light-gray {
+  background: #f8f8f8 !important;
 }
 
 /* line 12, C:/projects/admin/sass/_base.scss */
@@ -12710,6 +12710,39 @@ input.input-padding-increased {
 .dropzone i {
   margin-top: 20px;
   padding-right: 10%;
+}
+
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 1) {
+  color: #e5603b;
+}
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 2) {
+  color: #eac85e;
+}
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 3) {
+  color: #8cbf26;
+}
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 4) {
+  color: #56bc76;
+}
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 5) {
+  color: #4ab0ce;
+}
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 6) {
+  color: #618fb0;
+}
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 7) {
+  color: #a05000;
+}
+/* line 1475, C:/projects/admin/sass/_base.scss */
+.table-colored tbody tr:nth-child(n + 8) {
+  color: #d04f4f;
 }
 
 @media (max-height: 800px) {
