@@ -133,7 +133,8 @@
                             <div class="row-fluid">
                                 <div class="span12">
                                     <div id="dropzone"  class="dropzone">
-
+                                        Drop files here
+                                        <i class="icon-download-alt icon-large pull-right"></i>
                                     </div>
                                 </div>
                             </div>
@@ -148,27 +149,21 @@
                                 </div>
                             </div>
                             <div class="form-actions fileupload-buttonbar no-margin">
-                                <span class="btn btn-primary fileinput-button">
-                                        <i class="icon-plus icon-white"></i>
+                                <span class="btn btn-small fileinput-button">
+                                        <i class="icon-plus"></i>
                                         <span>Add files...</span>
                                         <input type="file" name="files[]" multiple="">
                                     </span>
-                                <button type="submit" class="btn btn-primary start">
-                                    <i class="icon-upload icon-white"></i>
+                                <button type="submit" class="btn btn-primary btn-small start">
+                                    <i class="icon-upload"></i>
                                     <span>Start upload</span>
                                 </button>
-                                <button type="reset" class="btn btn-primary cancel">
-                                    <i class="icon-ban-circle icon-white"></i>
+                                <button type="reset" class="btn btn-inverse btn-small cancel">
+                                    <i class="icon-ban-circle"></i>
                                     <span>Cancel upload</span>
                                 </button>
-                                <button type="button" class="btn btn-primary delete">
-                                    <i class="icon-trash icon-white"></i>
-                                    <span>Delete</span>
-                                </button>
-                                <input type="checkbox" class="toggle">
                             </div>
-                            <div class="fileupload-loading"></div>
-                            <br>
+                            <div class="fileupload-loading"><i class="icon-spin icon-spinner icon-large"></i></div>
                             <!-- The table listing the files available for upload/download -->
                             <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
                         </form>
@@ -247,8 +242,8 @@
             </div>
         </td>
         <td>{% if (!o.options.autoUpload) { %}
-            <button class="btn btn-primary start">
-                <i class="icon-upload icon-white"></i>
+            <button class="btn btn-primary btn-small start">
+                <i class="icon-upload"></i>
                 <span>Start</span>
             </button>
             {% } %}</td>
@@ -256,8 +251,8 @@
         <td colspan="2"></td>
         {% } %}
         <td>{% if (!i) { %}
-            <button class="btn btn-warning cancel">
-                <i class="icon-ban-circle icon-white"></i>
+            <button class="btn btn-warning btn-small cancel">
+                <i class="icon-ban-circle"></i>
                 <span>Cancel</span>
             </button>
             {% } %}</td>
@@ -284,11 +279,10 @@
         <td colspan="2"></td>
         {% } %}
         <td>
-            <button class="btn btn-danger delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
-            <i class="icon-trash icon-white"></i>
+            <button class="btn btn-danger btn-small delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            <i class="icon-trash"></i>
             <span>Delete</span>
             </button>
-            <input type="checkbox" name="delete" value="1" class="toggle">
         </td>
     </tr>
     {% } %}

@@ -10553,50 +10553,49 @@ table.fc-border-separate {
   left: 50%;
   width: 128px;
   height: 128px;
-  background: url(../img/loading.gif) center no-repeat;
   display: none;
 }
 
-/* line 50, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+/* line 51, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 .fileupload-processing .fileupload-loading {
   display: block;
 }
 
 /* Fix for IE 6: */
-/* line 55, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+/* line 56, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 * html .fileinput-button {
   line-height: 24px;
   margin: 1px -3px 0 0;
 }
 
 /* Fix for IE 7: */
-/* line 61, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+/* line 62, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 * + html .fileinput-button {
   padding: 2px 15px;
   margin: 1px 0 0 0;
 }
 
 @media (max-width: 767px) {
-  /* line 69, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 70, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .fileupload-buttonbar .toggle,
   .files .toggle,
   .files .btn span {
     display: none;
   }
 
-  /* line 72, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 73, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .files .preview * {
     width: 40px;
   }
 
-  /* line 75, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 76, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .files .name * {
     width: 80px;
     display: inline-block;
     word-wrap: break-word;
   }
 
-  /* line 80, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 81, C:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .files .progress {
     width: 20px;
   }
@@ -12699,8 +12698,18 @@ input.input-padding-increased {
 
 /* line 1452, C:/projects/admin/sass/_base.scss */
 .dropzone {
-  border: 4px dashed #dfdfdf;
+  border: 3px dashed #dfdfdf;
   height: 100px;
+  font-size: 40px;
+  color: #dfdfdf;
+  line-height: 100px;
+  padding-left: 5%;
+  vertical-align: middle;
+}
+/* line 1461, C:/projects/admin/sass/_base.scss */
+.dropzone i {
+  margin-top: 20px;
+  padding-right: 10%;
 }
 
 @media (max-height: 800px) {
