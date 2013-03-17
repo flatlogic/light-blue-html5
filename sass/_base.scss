@@ -1469,6 +1469,16 @@ $i: 1;
 //                 TABLES
 //-----------------------------------------------------------
 
+.table-images{
+  td {
+    height: 60px;
+    vertical-align: middle;
+    img{
+      height: 60px;
+    }
+  }
+}
+
 .table-colored{
   $i: 1;
   @each $color in $colors{
