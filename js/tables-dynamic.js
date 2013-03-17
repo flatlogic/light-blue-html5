@@ -5,7 +5,7 @@ $(function(){
         model: Territory,
         url: "lib/examples/pageable-territories.json",
         state: {
-            pageSize: 15
+            pageSize: 9
         },
         mode: "client" // page entirely on the client side
     });
@@ -38,19 +38,39 @@ $(function(){
     }];
 
 
-    var pageableTerritories = new PageableTerritories();
+    var pageableTerritories = new PageableTerritories(),
+        initialTerritories = pageableTerritories;
 
-    var pageableGrid = new Backgrid.Grid({
-        columns: columns,
-        collection: pageableTerritories,
-        footer: Backgrid.Extension.Paginator.extend({
-            //okendoken. rewrite template to add pagination class to container
-            template: _.template('<tr><td class="pagination text-align-center" colspan="<%= colspan %>"><ul><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
-        }),
-        className: 'table table-striped table-editable no-margin'
+    function createBackgrid(collection){
+        var pageableGrid = new Backgrid.Grid({
+            columns: columns,
+            collection: collection,
+            footer: Backgrid.Extension.Paginator.extend({
+                //okendoken. rewrite template to add pagination class to container
+                template: _.template('<tr><td class="pagination text-align-center" colspan="<%= colspan %>"><ul><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
+            }),
+            className: 'table table-striped table-editable no-margin'
+        });
+
+        $("#table-dynamic").html(pageableGrid.render().$el);
+    }
+
+    createBackgrid(pageableTerritories);
+
+    $("#search").change(function(){
+
+        var $that = $(this),
+            filteredCollection = initialTerritories.fullCollection.filter(function(el){
+            return ~el.get('name').toUpperCase().indexOf($that.val().toUpperCase());
+        });
+        createBackgrid(new PageableTerritories(filteredCollection, {
+            state: {
+                firstPage: 1,
+                currentPage: 1
+            }
+        }));
     });
 
-    $("#table-dynamic").append(pageableGrid.render().$el);
 
     pageableTerritories.fetch();
 });
