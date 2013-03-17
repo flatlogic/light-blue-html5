@@ -44,12 +44,12 @@
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="dark-red active accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse"
+        <li class="dark-red accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse in">
+            <ul id="components-collapse" class="accordion-body collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
-                <li class="active"><a href="component_maps.html">Maps</a></li>
+                <li><a href="component_maps.html">Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
             </ul>
@@ -65,11 +65,11 @@
         <li class="orange">
             <a href="grid.html"><i class="icon-columns"></i><span class="name">Grid</span></a>
         </li>
-        <li class="lime accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="lime active accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse">
-                <li><a href="special_search.html">Search</a></li>
+            <ul id="special-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="special_search.html">Search</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
             </ul>
@@ -89,11 +89,9 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav title-nav hidden-phone">
-                    <li><a href="component_calendar.html" title="Calendar"><i class="icon-calendar icon-large"></i> Calendar</a></li>
-                    <li class="active"><a href="component_maps.html" title="Maps"><i class="icon-map-marker icon-large"></i> Maps</a></li>
-                    <li><a href="component_gallery.html" title="Gallery"><i class="icon-picture icon-large"></i> Gallery</a></li>
-                    <li><a href="component_fileupload.html" title="File upload"><i class="icon-cloud-upload icon-large"></i> File upload</a></li>
-
+                    <li class="active"><a href="special_search.html" title="Search"><i class="icon-search icon-large"></i> Search</a></li>
+                    <li><a href="login.html" title="Login"><i class="icon-signin icon-large"></i> Login</a></li>
+                    <li><a href="special_404.html" title="404"><i class="icon-ban-circle icon-large"></i> 404</a></li>
                 </ul>
                 <ul class="nav right pull-right ">
                     <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
@@ -131,93 +129,19 @@
     </header>
     <div class="content container-fluid">
         <div class="row-fluid">
-            <div class="span6">
-                <section class="widget large">
+            <div class="span10 offset1">
+                <section class="widget">
                     <header>
                         <h3>
-                            <i class="icon-google-plus"></i>
-                            Google maps. Basic
+                            <i class="icon-ok-sign"></i>
+                            Toggle accordion
                         </h3>
                     </header>
                     <div class="body">
-                        <div class="map">
-                            <div id="basic"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span6">
-                <section class="widget large">
-                    <header>
-                        <h3>
-                            <i class="icon-map-marker"></i>
-                            Address and location
-                        </h3>
-                        <div class="actions">
-                            <input id="address" type="text" placeholder="Enter Address">
-                        </div>
-                    </header>
-                    <div class="body">
-                        <div class="map">
-                            <div id="location"></div>
-                        </div>
                     </div>
                 </section>
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="span6">
-                <section class="widget large">
-                    <header>
-                        <h3>
-                            <i class="icon-arrow-right"></i>
-                            Region vector map
-                            <div class="actions">
-                                <select id="part" class="selectpicker"
-                                        data-style="btn-success btn-small">
-                                    <option value="europe_en">Europe</option>
-                                    <option value="usa_en">USA</option>
-                                    <option value="australia_en">Australia</option>
-                                </select>
-                            </div>
-                        </h3>
-                    </header>
-                    <div class="body">
-                        <div class="map">
-                            <div id="vector-detailed"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span6">
-                <section class="widget large">
-                    <header>
-                        <h3>
-                            <i class="icon-dashboard"></i>
-                            World vector map
-                        </h3>
-                    </header>
-                    <div class="body">
-                        <div class="map">
-                            <div id="vector-world"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3 id="myModalLabel">Map click</h3>
-    </div>
-    <div class="modal-body">
-        <p>One fine body…</p>
-    </div>
-    <div class="modal-footer">
-        <button data-dismiss="modal" class="btn btn-primary">OK</button>
     </div>
 </div>
 
@@ -230,14 +154,6 @@
 <script src="lib/parsley.js"> </script>
 <script src="lib/uniform/js/jquery.uniform.js"></script>
 <script src="lib/select2.js"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=en"></script>
-<script src="lib/gmap3.js"></script>
-<script src="lib/jquery.vmap.js"></script>
-<script src="lib/jquery.vmap.world.js"></script>
-<script src="lib/jquery.vmap.europe.js"></script>
-<script src="lib/jquery.vmap.usa.js"></script>
-<script src="lib/jquery.vmap.australia.js"></script>
-
 
 <!--backbone and friends -->
 <script src="lib/backbone/underscore-min.js"></script>
@@ -252,15 +168,10 @@
 <script src="js/bootstrap/bootstrap-modal.js"></script>
 <script src="js/bootstrap/bootstrap-tab.js"> </script>
 
-<!-- bootstrap custom plugins -->
-<script src="lib/bootstrap-select.js"></script>
-
 <!-- basic application js-->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
 
-<!-- page-specifig js-->
-<script src="js/maps.js"></script>
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">

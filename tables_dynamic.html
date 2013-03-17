@@ -65,8 +65,14 @@
         <li class="orange">
             <a href="grid.html"><i class="icon-columns"></i><span class="name">Grid</span></a>
         </li>
-        <li class="lime">
-            <a href="#"><i class="icon-asterisk"></i><span class="name">Special</span></a>
+        <li class="lime accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
+            <ul id="special-collapse" class="accordion-body collapse">
+                <li><a href="special_search.html">Search</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="special_404.html">404</a></li>
+            </ul>
         </li>
     </ul>
     <div id="sidebar-settings" class="settings">
