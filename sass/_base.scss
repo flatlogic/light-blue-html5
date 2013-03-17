@@ -1242,7 +1242,14 @@ input.parsley-error{
 }
 
 input.input-padding-increased{
+  @include box-sizing(border-box);
+  height: 38px;
   padding: 8px 10px;
+
+  &[type=search], &.search{
+    background-position: 5px 10px;
+    padding-left: 26px;
+  }
 }
 
 .select-block-level{
@@ -1389,6 +1396,22 @@ $i: 1;
 
 .accordion-group{
   background: #ffffff;
+
+  //todo. Do I need it?
+  $i: 1;
+  @each $color in $colors{
+
+    &:nth-child(n + #{$i}) .accordion-heading{
+      border-left: 5px solid #{$color};
+    }
+    $i: $i + 1;
+  }
+
+  .accordion-heading a{
+    color: $textColor;
+    font-weight: 600;
+    font-size: 14px;
+  }
 }
 
 
@@ -1572,5 +1595,43 @@ $i: 1;
 .table-editable .descending .sort-caret {
   &:before{
     content: "\f0d7";
+  }
+}
+
+//-----------------------------------------------------------
+//                 SEARCH
+//-----------------------------------------------------------
+
+.search-result{
+  padding: 5px 15px 5px 10px;
+  margin-bottom: 10px;
+
+  &:nth-child(even){
+    background: $lightGray;
+  }
+
+  $i: 1;
+  @each $color in $colors{
+
+    &:nth-child(n + #{$i}){
+      border-left: 5px solid #{$color};
+    }
+    $i: $i + 1;
+  }
+
+  &:hover{
+    cursor: pointer;
+    padding-left: 10px;
+
+    border-left-color: $lightGray;
+    @include transition(border-left-color .2s);
+  }
+
+  & > h3{
+    line-height: 30px;
+  }
+
+  & > p{
+    margin-bottom: 0px;
   }
 }

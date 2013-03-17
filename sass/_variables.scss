@@ -55,7 +55,7 @@ $baseFontSize:          15px !default;
 //buttons
 
 $baseBorderRadius:      $widget-border-radius !default;
-$borderRadiusLarge:     2px !default;
+$borderRadiusLarge:     $widget-border-radius !default;
 $borderRadiusSmall:     0px !default;
 // Buttons
 // -------------------------
@@ -111,3 +111,7 @@ $successBorder:           darken(adjust-hue($successBackground, -10), 5%) !defau
 $infoText:                $blue !default;
 $infoBackground:          #d9edf7 !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
+
+// Component sizing
+
+$paddingLarge:          8px 18px !default; // 44px
