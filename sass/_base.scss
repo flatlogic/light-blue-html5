@@ -9,6 +9,11 @@ $i: 1;
   $i: $i + 1;
 }
 
+//-----------------------------------------------------------
+//                 VALIDATION
+//-----------------------------------------------------------
+
+
 input.parsley-error{
   @include invalid-border;
 }
@@ -21,6 +26,10 @@ input.parsley-error{
     color: $orange;
   }
 }
+
+//-----------------------------------------------------------
+//                 SIDEBAR
+//-----------------------------------------------------------
 
 .sidebar{
   @include border-radius($widget-border-radius);
@@ -137,6 +146,32 @@ input.parsley-error{
   }
 }
 
+.sidebar-on-right{
+  .sidebar{
+    right: 0;
+    margin: 30px 25px 0 0;
+
+    &.sidebar-icons{
+      margin-right: 1.6%;
+    }
+  }
+
+  .wrap{
+    margin-left: 0;
+    margin-right: 205px;
+
+    &.sidebar-icons{
+      margin-right: 62px;
+    }
+  }
+}
+
+//-----------------------------------------------------------
+//                 CONTENT
+//-----------------------------------------------------------
+
+
+
 /*main content lies here*/
 .wrap{
   margin-left: 205px;
@@ -146,6 +181,11 @@ input.parsley-error{
 .content{
   padding: 40px 3.3%;
 }
+
+//-----------------------------------------------------------
+//                 BOXES
+//-----------------------------------------------------------
+
 
 /*boxes*/
 .box{
@@ -190,6 +230,11 @@ input.parsley-error{
     font-weight: 700;
   }
 }
+
+//-----------------------------------------------------------
+//                 WIDGET
+//-----------------------------------------------------------
+
 
 .widget{
   @include border-radius($widget-border-radius);
@@ -312,6 +357,11 @@ input.parsley-error{
     $i: $i + 1;
   }
 }
+
+//-----------------------------------------------------------
+//                 CHARTS
+//-----------------------------------------------------------
+
 
 .chart-inline{
   margin-bottom: 12px;
@@ -456,6 +506,10 @@ input.parsley-error{
   display: none;
   content: "Specify whether large or xlarge for outer container to display chart";
 }
+
+//-----------------------------------------------------------
+//                 HEADER
+//-----------------------------------------------------------
 
 .page-header{
 
@@ -623,20 +677,6 @@ input.parsley-error{
   border: none;
   @include border-radius(0);
   @include box-shadow(none);
-}
-
-.navbar-search{
-  padding: 7px 15px;
-  margin-top: 0;
-
-  position: static;
-  float: none;
-
-  .search-query{
-    @include border-radius($widget-border-radius);
-    padding-left: 30px;
-    color: inherit;
-  }
 }
 
 .notifications{
@@ -853,27 +893,10 @@ input.parsley-error{
   }
 }
 
-.sidebar-on-right{
-  .sidebar{
-    right: 0;
-    margin: 30px 25px 0 0;
+//-----------------------------------------------------------
+//                 CHAT
+//-----------------------------------------------------------
 
-    &.sidebar-icons{
-      margin-right: 1.6%;
-    }
-  }
-
-  .wrap{
-    margin-left: 0;
-    margin-right: 205px;
-
-    &.sidebar-icons{
-      margin-right: 62px;
-    }
-  }
-}
-
-/*chat stuff*/
 .chat{
   margin-top: 10px;
   position: relative;
@@ -931,7 +954,7 @@ input.parsley-error{
       margin-bottom: 0;
     }
     &.from-me{
-      border-left: 5px solid $green;
+      border-left: 5px solid $blue;
       padding-left: 0;
     }
     &:not(.from-me){
@@ -962,6 +985,10 @@ input.parsley-error{
     }
   }
 }
+
+//-----------------------------------------------------------
+//                 OVERVIEW-widgets
+//-----------------------------------------------------------
 
 .overview{
   margin-top: -15px;
@@ -1065,6 +1092,10 @@ input.parsley-error{
   }
 }
 
+//-----------------------------------------------------------
+//                 BUTTONS
+//-----------------------------------------------------------
+
 .btn{
   color: #ffffff;
   text-shadow: none;
@@ -1150,9 +1181,9 @@ input.parsley-error{
 
 }
 
-.profile-picture{
-  text-align: center;
-}
+//-----------------------------------------------------------
+//                 FORMS
+//-----------------------------------------------------------
 
 .form-horizontal.label-left .control-label{
   text-align: left;
@@ -1243,25 +1274,9 @@ input.input-padding-increased{
   }
 }
 
-.text-align-center{
-  text-align: center;
-}
-
-.well-white{
-  background: #ffffff;
-}
-
-.margin-top{
-  margin-top: 10px;
-}
-
-.margin-bottom{
-  margin-bottom: 10px;
-}
-
-.no-margin{
-  margin: 0 !important;
-}
+//-----------------------------------------------------------
+//                 ICONS
+//-----------------------------------------------------------
 
 .icons > section{
   margin-top: 20px;
@@ -1397,7 +1412,7 @@ $i: 1;
   height: 8px;
 }
 
-// Warning (orange)
+// Inverse
 .progress-inverse .bar, .progress .bar-inverse {
   @include gradient-vertical($textColor, $textColor);
 }
@@ -1629,4 +1644,28 @@ $i: 1;
 
 .widget-404-search{
   width: 600px;
+}
+
+//-----------------------------------------------------------
+//                 UTILS
+//-----------------------------------------------------------
+
+.text-align-center{
+  text-align: center;
+}
+
+.well-white{
+  background: #ffffff;
+}
+
+.margin-top{
+  margin-top: 10px;
+}
+
+.margin-bottom{
+  margin-bottom: 10px;
+}
+
+.no-margin{
+  margin: 0 !important;
 }
