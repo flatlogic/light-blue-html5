@@ -10,25 +10,32 @@ $(function(){
     // ----------
 
     if (window.localStorage.getItem("todos-backbone") == null){
+        window.localStorage.setItem("todos-backbone-16c7688f-7a54-6576-1faa-d6a5bfc20301", JSON.stringify({
+            "title":"Buy this awesome template",
+            "order":1,
+            "done":false,
+            "id":"16c7688f-7a54-6576-1faa-d6a5bfc20301"
+        }));
         window.localStorage.setItem("todos-backbone-86c7688f-7a54-6576-1faa-d6a5bfc20301", JSON.stringify({
             "title":"Add new todo item",
-            "order":1,
+            "order":2,
             "done":false,
             "id":"86c7688f-7a54-6576-1faa-d6a5bfc20301"
         }));
         window.localStorage.setItem("todos-backbone-96c7688f-7a54-6576-1faa-d6a5bfc20301", JSON.stringify({
-            "title":"Try to delete this item",
-            "order":2,
-            "done":false,
+            "title":"Delete this item",
+            "order":3,
+            "done":true,
             "id":"96c7688f-7a54-6576-1faa-d6a5bfc20301"
         }));
         window.localStorage.setItem("todos-backbone-06c7688f-7a54-6576-1faa-d6a5bfc20301", JSON.stringify({
             "title":"Go and have some tea",
-            "order":3,
+            "order":4,
             "done":false,
             "id":"06c7688f-7a54-6576-1faa-d6a5bfc20301"
         }));
         window.localStorage.setItem("todos-backbone",""
+            + "16c7688f-7a54-6576-1faa-d6a5bfc20301" + ","
             + "86c7688f-7a54-6576-1faa-d6a5bfc20301" + ","
             + "96c7688f-7a54-6576-1faa-d6a5bfc20301" + ","
             + "06c7688f-7a54-6576-1faa-d6a5bfc20301"
@@ -198,7 +205,7 @@ $(function(){
         initialize: function() {
 
             this.input = this.$("#new-todo");
-            this.allCheckbox = this.$("#toggle-all")[0];
+            //this.allCheckbox = this.$("#toggle-all")[0];
 
             //really cool stuff.
             //it says kind of
@@ -229,13 +236,13 @@ $(function(){
                 this.footer.hide();
             }
 
-            if (Todos.length > 5){
+            if (Todos.length > 7){
                 $("#todo-list").css("overflow-y", "scroll");
             } else {
                 $("#todo-list").css("overflow-y", "auto");
             }
 
-            this.allCheckbox.checked = !remaining;
+            //this.allCheckbox.checked = !remaining;
             $(this.main).find("input:checkbox").uniform();
         },
 
@@ -270,7 +277,7 @@ $(function(){
         },
 
         toggleAllComplete: function () {
-            var done = this.allCheckbox.checked;
+            var done = !!Todos.remaining().length;
             Todos.each(function (todo) { todo.save({'done': done}); });
         }
 

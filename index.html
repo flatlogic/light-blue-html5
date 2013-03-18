@@ -280,18 +280,18 @@
                                     <input id="new-todo" type="text" class="new-todo input-padding-increased" placeholder="What needs to be done?">
                                 </label>
                                 <div id="todo-app-main">
-                                    <label for="toggle-all" class="mark-all">
-                                        <input id="toggle-all" type="checkbox">
-                                        Mark all as complete
-                                    </label>
                                     <ul id="todo-list" class="todos"></ul>
                                 </div>
                             </fieldset>
                         </form>
                     </div>
-                    <footer>
-                        <div id="todo-count"></div>
-                        <div class="help-block">Double-click to edit a todo.</div>
+                    <footer class="text-align-center">
+                        <button class="btn btn-inverse">
+                            Mark all
+                        </button>
+                        <button class="btn btn-danger clear-completed">
+                            Clear completed
+                        </button>
                     </footer>
                 </section>
             </div>
@@ -704,11 +704,12 @@
 </script>
 
 <script type="text/template" id="stats-template">
-    <% if (done) { %>
-    <a id="clear-completed" class="clear-completed"><i class="icon-trash"></i> Clear <%= done %> completed</a>
-    <% } %>
-    <div class="todo-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</div>
-    <div class="help-block">Double-click to edit a todo.</div>
+    <button id="toggle-all" class="btn btn-inverse btn-small">
+        Mark all
+    </button>
+    <button id="clear-completed" class="btn btn-danger btn-small clear-completed <%= done ? '' : 'disabled' %>">
+        <i class="icon-trash"></i> Clear <%= done %> completed
+    </button>
 </script>
 
 <script type="text/template" id="user-template">

@@ -664,6 +664,10 @@ input.parsley-error{
   }
 }
 
+//-----------------------------------------------------------
+//                 TODO APPLICATION
+//-----------------------------------------------------------
+
 .todo-app{
   height: 100%;
   position: relative;
@@ -754,50 +758,17 @@ input.parsley-error{
   }
 
   footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    color: #ffffff;
     padding: 5px 5%;
-    line-height: 1.5em;
-    @include border-radius(0 0 $widget-border-radius $widget-border-radius);
-    background: $grayDark;
-  }
-
-  .clear-completed{
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 1px 5px;
-    line-height: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 12px;
-    background: rgba(0,0,0,.1);
-    @include border-radius(0 0 0 $widget-border-radius);
-    @include box-shadow(-1px 1px 1px rgba(0,0,0,.3));
-    cursor: pointer;
   }
 
   .mark-all{
-    font-size: 13px;
-    margin-top: 2px;
-    margin-left: 10px;
 
-  }
-
-  .help-block{
-    margin-bottom: 0;
-    font-size: 13px;
-    color: rgba(255, 255, 255, .7);
   }
 }
 
 .todos{
   padding-top: 5px;
-  height: 165px;
+  height: 205px;
 }
 
 //-----------------------------------------------------------
@@ -1397,7 +1368,6 @@ $i: 1;
 .accordion-group{
   background: #ffffff;
 
-  //todo. Do I need it?
   $i: 1;
   @each $color in $colors{
 
