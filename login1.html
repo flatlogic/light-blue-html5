@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="css/application.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+    <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+    <!--<script src="lib/zepto/zepto.min.js"> </script>-->
+    <script src="lib/parsley.js"> </script>
+    <script src="js/settings.js"> </script>
+    <script>
+        $(function() {
+            $('.login form').parsley( 'addListener', {
+                onFieldValidate: function (elem) {
+                    var field = $(elem);
+                    if (field.is('.parsley-error:not(:focus)')) {
+                        field.siblings('.icon-container').addClass('invalid');
+                    }
+                },
+                onFieldSuccess: function (elem) {
+                    $(elem).siblings('.icon-container').removeClass('invalid');
+                }
+            } );
+            $('input.parsley-validated').focusout(function() {
+                var field = $(this);
+                if (field.is('.parsley-error')){
+                    field.siblings('.icon-container').addClass('invalid')
+                }
+            });
+            $('input.parsley-validated').focus(function() {
+                var field = $(this);
+                field.siblings('.icon-container').removeClass('invalid');
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="single-widget-container">
+        <section class="widget login">
+            <header>
+                <h3>Login to your account</h3>
+            </header>
+            <div class="body">
+                <form data-validate="parsley" action="index.html" method="get">
+                    <label for="email" >Email</label>
+                    <div class="input-prepend">
+                            <span class="add-on icon-container">
+                                <i class="icon-user icon-large"></i>
+                            </span>
+                        <input id="email" name="email" type="email" required="required" placeholder="your.email@example.com">
+                    </div>
+
+                    <label for="password">Password</label>
+                    <div class="input-prepend">
+                        <span class="add-on icon-container">
+                            <i class="icon-lock icon-large"></i>
+                        </span>
+                        <input id="password" name="password" type="password" required="required" placeholder="Your Password">
+                    </div>
+                        <div class="submit-container">
+                            <button type="submit" class="btn btn-block"><div class="small-circle"><div class="small-arrow-right"></div></div>Sign In</button>
+                            <div class="forgot"><a class="forgot" href="#">Forgot Username or Password?</a></div>
+                        </div>
+                </form>
+                <div class="facebook-login"><a href="index.html"><span><i class="icon-facebook-sign icon-large"></i> LogIn with Facebook</span></a></div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -37,7 +37,11 @@ $(function(){
             }
         },
         sidebarState = function(state){
-            $sidebarSettings.html(_.template($('#sidebar-settings-template').html(), {sidebarState: state}));
+            var $template = $('#sidebar-settings-template');
+            if (!$template[0]){
+                return;
+            }
+            $sidebarSettings.html(_.template($template.html(), {sidebarState: state}));
             if (state == "auto"){
                 $(".sidebar").removeClass("sidebar-icons");
                 $(".side-nav").removeClass("sidebar-icons");
@@ -60,6 +64,10 @@ $(function(){
     sidebarSide(settingsState.sidebar);
     backgroundStyle(settingsState.background);
     sidebarState(settingsState.sidebarState);
+
+    if (!$settings[0]){
+        return;
+    }
 
     $settings.popover({
         template: '<div class="popover">' +
@@ -118,6 +126,10 @@ $(function(){
                 $(document).off("click", popoverClose);
             }
         };
+
+    if (!$user[0]){
+        return;
+    }
 
     $user.popover({template: '<div class="popover user-info">' +
         '<div class="arrow"></div>' +
