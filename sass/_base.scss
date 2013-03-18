@@ -9,6 +9,15 @@ $i: 1;
   $i: $i + 1;
 }
 
+$i: 1;
+@each $color in $colors{
+
+  .color-#{nth($color_names, $i)}{
+    color: #{$color} !important;
+  }
+  $i: $i + 1;
+}
+
 //-----------------------------------------------------------
 //                 VALIDATION
 //-----------------------------------------------------------
@@ -1011,6 +1020,7 @@ input.parsley-error{
       .value{
         text-align: right;
         font-size: 16px;
+        font-weight: 600;
       }
 
       .row-fluid{
