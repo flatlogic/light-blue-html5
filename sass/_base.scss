@@ -800,6 +800,10 @@ input.parsley-error{
   .widget {
     margin: 0 auto;
   }
+
+  .widget-404-search{
+    margin-top: 50px;
+  }
 }
 
 .login-widget, .registration-widget {
@@ -1617,4 +1621,29 @@ $i: 1;
   & > p{
     margin-bottom: 0px;
   }
+}
+
+//-----------------------------------------------------------
+//                 404
+//-----------------------------------------------------------
+
+.widget-404{
+  width: 600px;
+
+  h1{
+    font-size: 140px;
+    line-height: 140px;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    color: #ffffff;
+  }
+
+  .description{
+    vertical-align: middle;
+    padding-top: 20px;
+  }
+}
+
+.widget-404-search{
+  width: 600px;
 }
