@@ -1043,6 +1043,10 @@ input.parsley-error{
   }
 }
 
+//-----------------------------------------------------------
+//                 MEDIA
+//-----------------------------------------------------------
+
 .media-heading{
   font-weight: 600;
 
@@ -1080,10 +1084,11 @@ input.parsley-error{
 }
 
 .media-content{
-  border-left: 3px solid $red;
+  border-left: 3px solid $blue;
   padding-left: 10px;
   position: relative;
   margin-left: 10px;
+  font-size: 14px;
 
   &:hover .actions{
     @include transition(opacity .2s);
@@ -1093,13 +1098,13 @@ input.parsley-error{
   .arrow{
     display: block;
     position: absolute;
-    top: 5px;
+    top: 25px;
     left: -7px;
     width: 0;
     height: 0;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    border-right: 4px solid $red;
+    border-right: 4px solid $blue;
   }
 }
 
