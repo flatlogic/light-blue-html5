@@ -439,6 +439,7 @@ input.parsley-error{
     color: lighten($textColor, 10%);
     width: 29%;
     cursor: pointer;
+    @include user-select(none);
 
     &.one-fourth{
       width: 20.625%;
