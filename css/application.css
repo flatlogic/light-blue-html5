@@ -10826,6 +10826,434 @@ table.fc-border-separate {
   border: 0;
 }
 
+/* line 1, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  width: 1px;
+  transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+}
+
+/* line 14, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail.inactive {
+  opacity: 0;
+}
+
+/* line 17, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail .item.active {
+  opacity: 1;
+}
+
+/* line 20, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail .x_label {
+  font-family: Arial, sans-serif;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  padding: 6px;
+  opacity: 0.5;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+  position: absolute;
+  background: white;
+  white-space: nowrap;
+}
+
+/* line 33, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail .item {
+  position: absolute;
+  z-index: 2;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  padding: 0.25em;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-left: 1em;
+  margin-top: -1em;
+  white-space: nowrap;
+}
+
+/* line 50, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail .item.active {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 54, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail .item:before {
+  content: "\25c2";
+  position: absolute;
+  left: -0.5em;
+  color: rgba(0, 0, 0, 0.7);
+  width: 0;
+}
+
+/* line 61, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail .dot {
+  width: 4px;
+  height: 4px;
+  margin-left: -4px;
+  margin-top: -3px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  position: absolute;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  background: white;
+  border-width: 2px;
+  border-style: solid;
+  display: none;
+  background-clip: padding-box;
+}
+
+/* line 77, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .detail .dot.active {
+  display: block;
+}
+
+/* graph */
+/* line 82, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph {
+  position: relative;
+}
+
+/* line 85, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph svg {
+  display: block;
+  overflow: hidden;
+}
+
+/* ticks */
+/* line 92, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .x_tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0px;
+  border-left: 1px dotted rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+/* line 100, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .x_tick .title {
+  position: absolute;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0.5;
+  white-space: nowrap;
+  margin-left: 3px;
+  bottom: 1px;
+}
+
+/* annotations */
+/* line 112, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline {
+  height: 1px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* line 118, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline .annotation {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  margin-left: -2px;
+  top: -3px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 129, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .annotation_line {
+  position: absolute;
+  top: 0;
+  bottom: -6px;
+  width: 0px;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+/* line 137, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .annotation_line.active {
+  display: block;
+}
+
+/* line 141, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .annotation_range {
+  background: rgba(0, 0, 0, 0.1);
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: -6px;
+  z-index: -10;
+}
+
+/* line 149, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .annotation_range.active {
+  display: block;
+}
+
+/* line 152, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .annotation_range.active.offscreen {
+  display: none;
+}
+
+/* line 156, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline .annotation .content {
+  background: white;
+  color: black;
+  opacity: 0.9;
+  padding: 5px 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  position: relative;
+  z-index: 20;
+  font-size: 12px;
+  padding: 6px 8px 8px;
+  top: 18px;
+  left: -11px;
+  width: 160px;
+  display: none;
+  cursor: pointer;
+}
+
+/* line 175, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline .annotation .content:before {
+  content: "\25b2";
+  position: absolute;
+  top: -11px;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* line 183, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline .annotation.active,
+.rickshaw_annotation_timeline .annotation:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: none;
+}
+
+/* line 187, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline .annotation .content:hover {
+  z-index: 50;
+}
+
+/* line 190, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline .annotation.active .content {
+  display: block;
+}
+
+/* line 193, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_annotation_timeline .annotation:hover .content {
+  display: block;
+  z-index: 50;
+}
+
+/* line 198, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .y_axis,
+.rickshaw_graph .x_axis_d3 {
+  fill: none;
+}
+
+/* line 202, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .y_ticks .tick,
+.rickshaw_graph .x_ticks_d3 .tick {
+  stroke: rgba(0, 0, 0, 0.16);
+  stroke-width: 2px;
+  shape-rendering: crisp-edges;
+  pointer-events: none;
+}
+
+/* line 209, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .y_grid .tick,
+.rickshaw_graph .x_grid_d3 .tick {
+  z-index: -1;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 1px;
+  stroke-dasharray: 1 1;
+}
+
+/* line 216, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .y_grid path,
+.rickshaw_graph .x_grid_d3 path {
+  fill: none;
+  stroke: none;
+}
+
+/* line 221, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .y_ticks path,
+.rickshaw_graph .x_ticks_d3 path {
+  fill: none;
+  stroke: #808080;
+}
+
+/* line 226, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .y_ticks text,
+.rickshaw_graph .x_ticks_d3 text {
+  opacity: 0.5;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* line 232, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .x_tick.glow .title,
+.rickshaw_graph .y_ticks.glow text {
+  fill: black;
+  color: black;
+  text-shadow: -1px 1px 0 rgba(255, 255, 255, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.1), 1px 1px 0 rgba(255, 255, 255, 0.1), 0px 1px 0 rgba(255, 255, 255, 0.1), 0px -1px 0 rgba(255, 255, 255, 0.1), 1px 0px 0 rgba(255, 255, 255, 0.1), -1px 0px 0 rgba(255, 255, 255, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* line 246, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_graph .x_tick.inverse .title,
+.rickshaw_graph .y_ticks.inverse text {
+  fill: white;
+  color: white;
+  text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8), 0px 1px 0 rgba(0, 0, 0, 0.8), 0px -1px 0 rgba(0, 0, 0, 0.8), 1px 0px 0 rgba(0, 0, 0, 0.8), -1px 0px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* line 259, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend {
+  font-family: Arial;
+  font-size: 12px;
+  color: #666666;
+  display: inline-block;
+  padding: 12px 5px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  position: relative;
+}
+
+/* line 273, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend:hover {
+  z-index: 10;
+}
+
+/* line 276, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend .swatch {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 281, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend .line {
+  clear: both;
+  line-height: 140%;
+  padding-right: 15px;
+}
+
+/* line 286, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend .line .swatch {
+  display: inline-block;
+  margin-right: 3px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* line 293, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend .label {
+  margin: 0;
+  white-space: nowrap;
+  display: inline;
+  font-size: inherit;
+  background-color: transparent;
+  color: inherit;
+  font-weight: normal;
+  line-height: normal;
+  padding: 0px;
+  text-shadow: none;
+}
+
+/* line 305, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend .action:hover {
+  opacity: 0.6;
+}
+
+/* line 308, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend .action {
+  margin-right: 0.2em;
+  font-size: 10px;
+  opacity: 0.2;
+  cursor: pointer;
+  font-size: 14px;
+  display: none;
+}
+
+/* line 317, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend .line.disabled {
+  opacity: 0.4;
+}
+
+/* line 320, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* line 327, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend li {
+  padding: 0 0 0 2px;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+/* line 332, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* line 338, C:/projects/admin/sass/lib/_rickshaw.scss */
+.rickshaw_legend li:active {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+}
+
 /* line 1, C:/projects/admin/sass/_svg.scss */
 .nvd3.nv-stackedarea path.nv-area {
   fill-opacity: .8;
@@ -11014,17 +11442,17 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   background-color: #e5603b;
 }
 
-/* line 11, C:/projects/admin/sass/application.scss */
+/* line 10, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons {
   width: auto;
   padding: 20px 0;
   margin: 30px 0 0 10px;
 }
-/* line 16, C:/projects/admin/sass/application.scss */
+/* line 15, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons h2 {
   display: none;
 }
-/* line 20, C:/projects/admin/sass/application.scss */
+/* line 19, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .accordion-body {
   -webkit-transition: width 0.3s;
   -moz-transition: width 0.3s;
@@ -11033,7 +11461,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   width: 0;
   overflow: hidden;
 }
-/* line 24, C:/projects/admin/sass/application.scss */
+/* line 23, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .accordion-body li {
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
@@ -11041,15 +11469,15 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   transition: height 0.3s;
   height: 0;
 }
-/* line 28, C:/projects/admin/sass/application.scss */
+/* line 27, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .accordion-body li a {
   padding-left: 10px;
 }
-/* line 34, C:/projects/admin/sass/application.scss */
+/* line 33, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .side-nav:hover .accordion-body.in {
   width: 100px;
 }
-/* line 37, C:/projects/admin/sass/application.scss */
+/* line 36, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .side-nav:hover .accordion-body.in li {
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
@@ -11058,23 +11486,23 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   height: 32px;
 }
 
-/* line 45, C:/projects/admin/sass/application.scss */
+/* line 44, C:/projects/admin/sass/application.scss */
 .side-nav.sidebar-icons li a {
   font-size: 16px;
   line-height: 24px;
   padding: 13px 16px;
   text-align: center;
 }
-/* line 51, C:/projects/admin/sass/application.scss */
+/* line 50, C:/projects/admin/sass/application.scss */
 .side-nav.sidebar-icons li a i[class*=icon] {
   float: none;
 }
-/* line 56, C:/projects/admin/sass/application.scss */
+/* line 55, C:/projects/admin/sass/application.scss */
 .side-nav.sidebar-icons li .name {
   display: none;
 }
 
-/* line 61, C:/projects/admin/sass/application.scss */
+/* line 60, C:/projects/admin/sass/application.scss */
 .wrap.sidebar-icons {
   margin-left: 62px;
 }
@@ -11217,7 +11645,7 @@ input.parsley-error {
 .sidebar.sidebar-icons {
   margin-left: 1.6%;
 }
-/* line 68, C:/projects/admin/sass/application.scss */
+/* line 67, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .settings .btn-small {
   padding: 2px 8px;
 }
@@ -13406,17 +13834,17 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
 }
 @media (max-width: 1048px) {
-  /* line 11, C:/projects/admin/sass/application.scss */
+  /* line 10, C:/projects/admin/sass/application.scss */
   .sidebar {
     width: auto;
     padding: 20px 0;
     margin: 30px 0 0 10px;
   }
-  /* line 16, C:/projects/admin/sass/application.scss */
+  /* line 15, C:/projects/admin/sass/application.scss */
   .sidebar h2 {
     display: none;
   }
-  /* line 20, C:/projects/admin/sass/application.scss */
+  /* line 19, C:/projects/admin/sass/application.scss */
   .sidebar .accordion-body {
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
@@ -13425,7 +13853,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     width: 0;
     overflow: hidden;
   }
-  /* line 24, C:/projects/admin/sass/application.scss */
+  /* line 23, C:/projects/admin/sass/application.scss */
   .sidebar .accordion-body li {
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
@@ -13433,15 +13861,15 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     transition: height 0.3s;
     height: 0;
   }
-  /* line 28, C:/projects/admin/sass/application.scss */
+  /* line 27, C:/projects/admin/sass/application.scss */
   .sidebar .accordion-body li a {
     padding-left: 10px;
   }
-  /* line 34, C:/projects/admin/sass/application.scss */
+  /* line 33, C:/projects/admin/sass/application.scss */
   .sidebar .side-nav:hover .accordion-body.in {
     width: 100px;
   }
-  /* line 37, C:/projects/admin/sass/application.scss */
+  /* line 36, C:/projects/admin/sass/application.scss */
   .sidebar .side-nav:hover .accordion-body.in li {
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
@@ -13450,23 +13878,23 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     height: 32px;
   }
 
-  /* line 45, C:/projects/admin/sass/application.scss */
+  /* line 44, C:/projects/admin/sass/application.scss */
   .side-nav li a {
     font-size: 16px;
     line-height: 24px;
     padding: 13px 16px;
     text-align: center;
   }
-  /* line 51, C:/projects/admin/sass/application.scss */
+  /* line 50, C:/projects/admin/sass/application.scss */
   .side-nav li a i[class*=icon] {
     float: none;
   }
-  /* line 56, C:/projects/admin/sass/application.scss */
+  /* line 55, C:/projects/admin/sass/application.scss */
   .side-nav li .name {
     display: none;
   }
 
-  /* line 61, C:/projects/admin/sass/application.scss */
+  /* line 60, C:/projects/admin/sass/application.scss */
   .wrap {
     margin-left: 62px;
   }
@@ -13475,7 +13903,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   .sidebar {
     margin-left: 1.6%;
   }
-  /* line 68, C:/projects/admin/sass/application.scss */
+  /* line 67, C:/projects/admin/sass/application.scss */
   .sidebar .settings .btn-small {
     padding: 2px 8px;
   }
