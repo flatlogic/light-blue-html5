@@ -1,4 +1,5 @@
 //
+//
 // Navbars (Redux)
 // --------------------------------------------------
 
@@ -22,7 +23,8 @@
   min-height: $navbarHeight;
   padding-left:  20px;
   padding-right: 20px;
-  @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
+  //okendoken. removing gradient
+  //@include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
   border: 1px solid $navbarBorder;
   @include border-radius($baseBorderRadius);
   @include box-shadow(0 1px 4px rgba(0,0,0,.065));
