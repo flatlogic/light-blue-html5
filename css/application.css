@@ -11438,19 +11438,19 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
 }
 /* line 19, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .accordion-body {
-  -webkit-transition: width 0.3s;
-  -moz-transition: width 0.3s;
-  -o-transition: width 0.3s;
-  transition: width 0.3s;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
   width: 0;
   overflow: hidden;
 }
 /* line 23, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .accordion-body li {
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  -o-transition: height 0.3s;
-  transition: height 0.3s;
+  -webkit-transition: height 0.2s;
+  -moz-transition: height 0.2s;
+  -o-transition: height 0.2s;
+  transition: height 0.2s;
   height: 0;
 }
 /* line 27, C:/projects/admin/sass/application.scss */
@@ -11463,30 +11463,26 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
 }
 /* line 36, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .side-nav:hover .accordion-body.in li {
-  -webkit-transition: height 0.3s;
-  -moz-transition: height 0.3s;
-  -o-transition: height 0.3s;
-  transition: height 0.3s;
   height: 32px;
 }
 
-/* line 44, C:/projects/admin/sass/application.scss */
+/* line 43, C:/projects/admin/sass/application.scss */
 .side-nav.sidebar-icons li a {
   font-size: 16px;
   line-height: 24px;
   padding: 13px 16px;
   text-align: center;
 }
-/* line 50, C:/projects/admin/sass/application.scss */
+/* line 49, C:/projects/admin/sass/application.scss */
 .side-nav.sidebar-icons li a i[class*=icon] {
   float: none;
 }
-/* line 55, C:/projects/admin/sass/application.scss */
+/* line 54, C:/projects/admin/sass/application.scss */
 .side-nav.sidebar-icons li .name {
   display: none;
 }
 
-/* line 60, C:/projects/admin/sass/application.scss */
+/* line 59, C:/projects/admin/sass/application.scss */
 .wrap.sidebar-icons {
   margin-left: 62px;
 }
@@ -11629,7 +11625,7 @@ input.parsley-error {
 .sidebar.sidebar-icons {
   margin-left: 1.6%;
 }
-/* line 67, C:/projects/admin/sass/application.scss */
+/* line 66, C:/projects/admin/sass/application.scss */
 .sidebar.sidebar-icons .settings .btn-small {
   padding: 2px 8px;
 }
@@ -13646,6 +13642,20 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     display: block;
   }
   /* line 70, C:/projects/admin/sass/_responsive.scss */
+  .sidebar.in .side-nav .accordion-body.in,
+  .sidebar.in .side-nav:hover .accordion-body.in, .sidebar-on-right .sidebar.in .side-nav .accordion-body.in,
+  .sidebar-on-right .sidebar.in .side-nav:hover .accordion-body.in, .sidebar.sidebar-icons.in .side-nav .accordion-body.in,
+  .sidebar.sidebar-icons.in .side-nav:hover .accordion-body.in {
+    width: 100%;
+  }
+  /* line 73, C:/projects/admin/sass/_responsive.scss */
+  .sidebar.in .side-nav .accordion-body.in li,
+  .sidebar.in .side-nav:hover .accordion-body.in li, .sidebar-on-right .sidebar.in .side-nav .accordion-body.in li,
+  .sidebar-on-right .sidebar.in .side-nav:hover .accordion-body.in li, .sidebar.sidebar-icons.in .side-nav .accordion-body.in li,
+  .sidebar.sidebar-icons.in .side-nav:hover .accordion-body.in li {
+    height: 56px;
+  }
+  /* line 79, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a, .sidebar-on-right .sidebar.in .side-nav li a, .sidebar.sidebar-icons.in .side-nav li a {
     font-size: 20px;
     line-height: 30px;
@@ -13653,54 +13663,54 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     font-weight: 400;
     text-align: left;
   }
-  /* line 77, C:/projects/admin/sass/_responsive.scss */
+  /* line 86, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a i[class*=icon], .sidebar-on-right .sidebar.in .side-nav li a i[class*=icon], .sidebar.sidebar-icons.in .side-nav li a i[class*=icon] {
     float: left;
     line-height: 30px;
     padding-top: 1px;
   }
-  /* line 84, C:/projects/admin/sass/_responsive.scss */
+  /* line 93, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li .name, .sidebar-on-right .sidebar.in .side-nav li .name, .sidebar.sidebar-icons.in .side-nav li .name {
     margin-left: 10px;
     display: inline-block;
   }
-  /* line 90, C:/projects/admin/sass/_responsive.scss */
+  /* line 99, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .settings, .sidebar-on-right .sidebar.in .settings, .sidebar.sidebar-icons.in .settings {
     display: none;
   }
-  /* line 95, C:/projects/admin/sass/_responsive.scss */
+  /* line 104, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in + .wrap .content, .sidebar-on-right .sidebar.in + .wrap .content, .sidebar.sidebar-icons.in + .wrap .content {
     margin-top: 620px;
   }
 
-  /* line 100, C:/projects/admin/sass/_responsive.scss */
+  /* line 109, C:/projects/admin/sass/_responsive.scss */
   .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 105, C:/projects/admin/sass/_responsive.scss */
+  /* line 114, C:/projects/admin/sass/_responsive.scss */
   .nv-controlsWrap {
     display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 112, C:/projects/admin/sass/_responsive.scss */
+  /* line 121, C:/projects/admin/sass/_responsive.scss */
   .page-header .title-nav > li > a, .page-header .title-nav > li > a:visited {
     font-size: 16px;
     margin-left: 0;
   }
 
-  /* line 118, C:/projects/admin/sass/_responsive.scss */
+  /* line 127, C:/projects/admin/sass/_responsive.scss */
   .content {
     padding: 40px 2.3% 40px 0;
   }
-  /* line 122, C:/projects/admin/sass/_responsive.scss */
+  /* line 131, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row {
     margin-left: 2.3%;
     width: 97.7%;
   }
-  /* line 125, C:/projects/admin/sass/_responsive.scss */
+  /* line 134, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 31.49171%;
     *width: 31.43852%;
@@ -13708,115 +13718,115 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     *margin-left: 2.70924%;
     float: left;
   }
-  /* line 132, C:/projects/admin/sass/_responsive.scss */
+  /* line 141, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(3n + 1) {
     margin-left: 0;
   }
-  /* line 140, C:/projects/admin/sass/_responsive.scss */
+  /* line 149, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > [class*="span"] {
     margin-left: 2.3%;
   }
-  /* line 143, C:/projects/admin/sass/_responsive.scss */
+  /* line 152, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > [class*="span"]:first-child {
     margin-left: 2.3%;
   }
-  /* line 149, C:/projects/admin/sass/_responsive.scss */
+  /* line 158, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span1 {
     width: 47.7%;
   }
-  /* line 149, C:/projects/admin/sass/_responsive.scss */
+  /* line 158, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span2 {
     width: 47.7%;
   }
-  /* line 149, C:/projects/admin/sass/_responsive.scss */
+  /* line 158, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span3 {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span4 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span4.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span5 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span5.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span6 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span6.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span7 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span7.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span8 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span8.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span9 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span9.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span10 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span10.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span11 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span11.half-width-responsive {
     width: 47.7%;
   }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span12 {
     width: 97.7%;
   }
-  /* line 158, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span12.half-width-responsive {
     width: 47.7%;
   }
 }
 @media (min-width: 980px) and (max-width: 1019px) {
-  /* line 170, C:/projects/admin/sass/_responsive.scss */
+  /* line 179, C:/projects/admin/sass/_responsive.scss */
   .row-fluid.box-row > .span2 {
     width: 31.91489%;
     *width: 31.8617%;
   }
-  /* line 174, C:/projects/admin/sass/_responsive.scss */
+  /* line 183, C:/projects/admin/sass/_responsive.scss */
   .row-fluid.box-row > .span2:nth-child(3n + 1) {
     margin-left: 0;
   }
 
-  /* line 180, C:/projects/admin/sass/_responsive.scss */
+  /* line 189, C:/projects/admin/sass/_responsive.scss */
   .content {
     padding: 40px 2.3%;
   }
@@ -13834,19 +13844,19 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
   /* line 19, C:/projects/admin/sass/application.scss */
   .sidebar .accordion-body {
-    -webkit-transition: width 0.3s;
-    -moz-transition: width 0.3s;
-    -o-transition: width 0.3s;
-    transition: width 0.3s;
+    -webkit-transition: width 0.2s;
+    -moz-transition: width 0.2s;
+    -o-transition: width 0.2s;
+    transition: width 0.2s;
     width: 0;
     overflow: hidden;
   }
   /* line 23, C:/projects/admin/sass/application.scss */
   .sidebar .accordion-body li {
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    -o-transition: height 0.3s;
-    transition: height 0.3s;
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    -o-transition: height 0.2s;
+    transition: height 0.2s;
     height: 0;
   }
   /* line 27, C:/projects/admin/sass/application.scss */
@@ -13859,169 +13869,165 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
   /* line 36, C:/projects/admin/sass/application.scss */
   .sidebar .side-nav:hover .accordion-body.in li {
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    -o-transition: height 0.3s;
-    transition: height 0.3s;
     height: 32px;
   }
 
-  /* line 44, C:/projects/admin/sass/application.scss */
+  /* line 43, C:/projects/admin/sass/application.scss */
   .side-nav li a {
     font-size: 16px;
     line-height: 24px;
     padding: 13px 16px;
     text-align: center;
   }
-  /* line 50, C:/projects/admin/sass/application.scss */
+  /* line 49, C:/projects/admin/sass/application.scss */
   .side-nav li a i[class*=icon] {
     float: none;
   }
-  /* line 55, C:/projects/admin/sass/application.scss */
+  /* line 54, C:/projects/admin/sass/application.scss */
   .side-nav li .name {
     display: none;
   }
 
-  /* line 60, C:/projects/admin/sass/application.scss */
+  /* line 59, C:/projects/admin/sass/application.scss */
   .wrap {
     margin-left: 62px;
   }
 
-  /* line 189, C:/projects/admin/sass/_responsive.scss */
+  /* line 198, C:/projects/admin/sass/_responsive.scss */
   .sidebar {
     margin-left: 1.6%;
   }
-  /* line 67, C:/projects/admin/sass/application.scss */
+  /* line 66, C:/projects/admin/sass/application.scss */
   .sidebar .settings .btn-small {
     padding: 2px 8px;
   }
-  /* line 193, C:/projects/admin/sass/_responsive.scss */
+  /* line 202, C:/projects/admin/sass/_responsive.scss */
   .sidebar .settings {
     display: none;
   }
 
-  /* line 199, C:/projects/admin/sass/_responsive.scss */
+  /* line 208, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .sidebar {
     right: 0;
     margin: 30px 1.6% 0 0;
   }
-  /* line 204, C:/projects/admin/sass/_responsive.scss */
+  /* line 213, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .wrap {
     margin-left: 0;
     margin-right: 62px;
   }
 }
 @media (max-width: 1200px) {
-  /* line 212, C:/projects/admin/sass/_responsive.scss */
+  /* line 221, C:/projects/admin/sass/_responsive.scss */
   .comments {
     overflow-y: scroll;
     height: 100%;
   }
 
-  /* line 217, C:/projects/admin/sass/_responsive.scss */
+  /* line 226, C:/projects/admin/sass/_responsive.scss */
   .widget.tiny {
     padding: 5px 10px;
   }
 
-  /* line 221, C:/projects/admin/sass/_responsive.scss */
+  /* line 230, C:/projects/admin/sass/_responsive.scss */
   .overview {
     padding: 0;
   }
 
-  /* line 225, C:/projects/admin/sass/_responsive.scss */
+  /* line 234, C:/projects/admin/sass/_responsive.scss */
   .box {
     font-size: 34px;
   }
 }
 @media (min-width: 1441px) {
-  /* line 231, C:/projects/admin/sass/_responsive.scss */
+  /* line 240, C:/projects/admin/sass/_responsive.scss */
   .box {
     font-size: 50px;
     line-height: 1.2em;
   }
-  /* line 235, C:/projects/admin/sass/_responsive.scss */
+  /* line 244, C:/projects/admin/sass/_responsive.scss */
   .box .description {
     font-size: 20px;
   }
 
-  /* line 242, C:/projects/admin/sass/_responsive.scss */
+  /* line 251, C:/projects/admin/sass/_responsive.scss */
   .widget.large {
     height: 400px;
   }
-  /* line 245, C:/projects/admin/sass/_responsive.scss */
+  /* line 254, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body {
     height: 365px;
   }
-  /* line 248, C:/projects/admin/sass/_responsive.scss */
+  /* line 257, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body .chart {
     height: 288px;
   }
-  /* line 254, C:/projects/admin/sass/_responsive.scss */
+  /* line 263, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie-chart .total h4 {
     font-size: 19px;
   }
-  /* line 257, C:/projects/admin/sass/_responsive.scss */
+  /* line 266, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie-chart .total h3 {
     font-size: 40px;
   }
-  /* line 263, C:/projects/admin/sass/_responsive.scss */
+  /* line 272, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge {
     height: 500px;
   }
-  /* line 266, C:/projects/admin/sass/_responsive.scss */
+  /* line 275, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body {
     height: 465px;
   }
-  /* line 269, C:/projects/admin/sass/_responsive.scss */
+  /* line 278, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body .chart {
     height: 383px;
   }
-  /* line 275, C:/projects/admin/sass/_responsive.scss */
+  /* line 284, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .pie-chart .total h4 {
     font-size: 19px;
   }
-  /* line 278, C:/projects/admin/sass/_responsive.scss */
+  /* line 287, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .pie-chart .total h3 {
     font-size: 40px;
   }
-  /* line 284, C:/projects/admin/sass/_responsive.scss */
+  /* line 293, C:/projects/admin/sass/_responsive.scss */
   .widget.tiny {
     height: 188px;
   }
-  /* line 290, C:/projects/admin/sass/_responsive.scss */
+  /* line 299, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large {
     height: 415px;
   }
-  /* line 292, C:/projects/admin/sass/_responsive.scss */
+  /* line 301, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large .body .chart {
     height: 267px;
   }
-  /* line 297, C:/projects/admin/sass/_responsive.scss */
+  /* line 306, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge {
     height: 515px;
   }
-  /* line 299, C:/projects/admin/sass/_responsive.scss */
+  /* line 308, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge .body .chart {
     height: 357px;
   }
 
-  /* line 308, C:/projects/admin/sass/_responsive.scss */
+  /* line 317, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie-chart .controls .control h4, .widget.xlarge .pie-chart .controls .control h4 {
     font-size: 17px;
     margin-bottom: 7px;
   }
-  /* line 313, C:/projects/admin/sass/_responsive.scss */
+  /* line 322, C:/projects/admin/sass/_responsive.scss */
   .widget.large .pie-chart .controls .control p, .widget.xlarge .pie-chart .controls .control p {
     font-size: 24px;
     margin-bottom: 5px;
   }
 
-  /* line 319, C:/projects/admin/sass/_responsive.scss */
+  /* line 328, C:/projects/admin/sass/_responsive.scss */
   .pie-chart .total h5.visits {
     font-size: 34px;
   }
 
-  /* line 323, C:/projects/admin/sass/_responsive.scss */
+  /* line 332, C:/projects/admin/sass/_responsive.scss */
   .chart-inline {
     height: 58px;
     margin-bottom: 18px;

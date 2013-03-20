@@ -66,6 +66,15 @@
         display: block;
       }
 
+      .side-nav .accordion-body.in,
+      .side-nav:hover .accordion-body.in{
+        width: 100%;
+
+        li{
+          height: 56px; //a height + paddings
+        }
+      }
+
       .side-nav li{
         a{
           font-size: 20px;
