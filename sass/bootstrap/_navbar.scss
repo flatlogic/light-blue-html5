@@ -267,8 +267,9 @@
 .navbar .nav > .active > a:focus {
   color: $navbarLinkColorActive;
   text-decoration: none;
-  background-color: $navbarLinkBackgroundActive;
-  @include box-shadow(inset 0 3px 8px rgba(0,0,0,.125));
+  //okendoken. commenting out
+  //background-color: $navbarLinkBackgroundActive;
+  //@include box-shadow(inset 0 3px 8px rgba(0,0,0,.125));
 }
 
 // Navbar button for toggling navbar items in responsive layouts
