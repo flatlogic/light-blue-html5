@@ -4,7 +4,7 @@ $(function(){
         $sidebarSettings = $("#sidebar-settings"),
         settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
             sidebar: 'left',
-            background: 'one',
+            background: 'two',
             sidebarState: 'auto'
         },
         $pageHeader = $(".page-header"),
