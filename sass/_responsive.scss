@@ -51,28 +51,32 @@
     background-position: 5px 10px;
   }
 
-  .sidebar, .sidebar-on-right .sidebar, .sidebar.sidebar-icons{
-    display: none;
+  .sidebar,
+  .sidebar-on-right .sidebar,
+  .sidebar-on-right .sidebar.sidebar-icons,
+  .sidebar.sidebar-icons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 85px 5%;
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    .brand{
+      display: none;
+    }
 
     &.in{
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      margin: 85px 5%;
-      width: 90%;
+      padding: 20px 0;
 
-      h2{
+      .brand{
         display: block;
       }
 
-      .side-nav .accordion-body.in,
-      .side-nav:hover .accordion-body.in{
-        width: 100%;
-
-        li{
-          height: 56px; //a height + paddings
-        }
+      h2{
+        display: block;
       }
 
       .side-nav li{
@@ -82,6 +86,7 @@
           padding: 13px 30px;
           font-weight: 400;
           text-align: left;
+          width: auto;
 
           i[class*=icon]{
             float: left;
@@ -102,7 +107,7 @@
     }
 
     &.in + .wrap .content{
-      margin-top: 620px;
+      margin-top: 660px;
     }
   }
 

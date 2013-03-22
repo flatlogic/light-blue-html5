@@ -112,7 +112,14 @@ $(function(){
         sidebarState(state);
         settingsState.sidebarState = state;
         localStorage.setItem("settings-state", JSON.stringify(settingsState));
-    })
+    });
+
+    //close navigation if sidebar in icons state
+    if (($("#sidebar").is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
+        var $activeAccordion = $("#side-nav").find("> .accordion-group.active");
+        $activeAccordion.find(".accordion-toggle").addClass("collapsed");
+        $activeAccordion.find(".accordion-body.collapse").removeClass("in");
+    }
 });
 
 $(function(){

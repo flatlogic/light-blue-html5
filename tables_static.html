@@ -9,7 +9,7 @@
     <meta charset="utf-8">
 </head>
 <body class="background-two">
-<nav class="sidebar nav-collapse collapse">
+<nav id="sidebar" class="sidebar nav-collapse collapse">
     <a class="brand" href=""><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
     <ul id="side-nav" class="side-nav">
@@ -148,8 +148,8 @@
                                 <th>Picture</th>
                                 <th>Description</th>
                                 <th>Info</th>
-                                <th>Date</th>
-                                <th>Size</th>
+                                <th class="hidden-phone">Date</th>
+                                <th class="hidden-phone">Size</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -176,10 +176,10 @@
                                         </small>
                                     </p>
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     September 14, 2012
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                    45.6 KB
                                 </td>
                                 <td>
@@ -213,10 +213,10 @@
                                         </small>
                                     </p>
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     November 14, 2012
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     15.3 MB
                                 </td>
                                 <td>
@@ -250,10 +250,10 @@
                                         </small>
                                     </p>
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     September 14, 2012
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     49.0 KB
                                 </td>
                                 <td>
@@ -287,10 +287,10 @@
                                         </small>
                                     </p>
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     September 15, 2012
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     69.1 KB
                                 </td>
                                 <td>
@@ -324,10 +324,10 @@
                                         </small>
                                     </p>
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     October 1, 2012
                                 </td>
-                                <td>
+                                <td class="hidden-phone">
                                     2.3 MB
                                 </td>
                                 <td>
@@ -732,6 +732,7 @@
 <script src="lib/backbone/underscore-min.js"></script>
 
 <!-- bootstrap default plugins -->
+<script src="js/bootstrap/bootstrap-transition.js"></script>
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
 <script src="js/bootstrap/bootstrap-alert.js"></script>
 <script src="js/bootstrap/bootstrap-tooltip.js"></script>

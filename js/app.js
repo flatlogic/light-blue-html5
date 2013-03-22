@@ -53,7 +53,27 @@ function testData(stream_names, points_count) {
     });
 }
 
+function closeNavigation(){
+    var $accordion = $('#side-nav').find('.accordion-body.in');
+    $accordion.collapse('hide');
+    $accordion.parent().removeClass("active");
+    $accordion.siblings(".accordion-toggle").addClass("collapsed");
+}
+
 $(function(){
+
+    $("#sidebar").on("mouseleave",function(){
+        if (($(this).is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
+            setTimeout(function(){
+                closeNavigation();
+            }, 300); // some timeout for animation
+        }
+    });
+
+    $(window).resize(function(){
+       closeNavigation()
+    });
+
     $(".btn-group > .btn[data-toggle-class]").click(function(){
         var $this = $(this),
             $parent = $this.parent();

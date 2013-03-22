@@ -188,6 +188,7 @@ input.parsley-error{
 /*content except for header*/
 .content{
   padding: 40px 3.3%;
+  @include transition(margin-top .2s);
 }
 
 //-----------------------------------------------------------

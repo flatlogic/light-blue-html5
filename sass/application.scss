@@ -16,26 +16,14 @@
       display: none;
     }
 
-    .accordion-body{
-      @include transition(width .2s);
-      width: 0;
-      overflow: hidden;
-      li{
-        @include transition(height .2s);
-        height: 0;
-
-        a{
-          padding-left: 10px;
-        }
-      }
+    .accordion-body li a{
+      width: 1px;
+      padding-left: 10px;
+      @include transition(width .3s);
     }
 
-    .side-nav:hover .accordion-body.in{
-      width: 100px;
-
-      li{
-        height: 32px; //a height + paddings
-      }
+    .accordion-body.in li a{
+      width: 80px;
     }
   }
 
