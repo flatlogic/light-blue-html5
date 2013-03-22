@@ -11,13 +11,13 @@
 <body class="background-two">
 <nav id="sidebar" class="sidebar">
     <ul id="side-nav" class="side-nav">
-        <li class="active green">
+        <li class="green">
             <a href="index.html"><i class="icon-large icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="teal accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
-                <li><a href="stat_statistics.html">Stats</a></li>
+        <li class="active teal accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
@@ -86,34 +86,16 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template</h2>
-                    <p><strong>Deep Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
-                    web application or admin entrance for it.</p>
-                    <p>It's base on super powerful <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> front-end framework which
-                        uses <strong>12-column responsive grid</strong> layout.</p>
-                    <div class="well well-small">
-                        <h3>Left Sidebar</h3>
-                        <p>Left sidebar is based on
-                            <a href="http://twitter.github.com/bootstrap/javascript.html#collapse">Bootstrap's collapse component</a>.
-                            <a href="../js/app.js">App.js</a> holds additional javascript code which is used to
-                        change sidebar state depending on chosen option (icons, auto).</p>
-                    </div>
-                    <div class="well well-small">
-                        <h3>Top Navigation</h3>
-                        <p>Is simple <a href="http://twitter.github.com/bootstrap/components.html#navbar">Bootstrap's Navbar</a>.
-                        User profile and settings popovers are implemented via <a href="http://twitter.github.com/bootstrap/javascript.html#popovers">Bootstrap's popover</a></p>
-                    </div>
-                    <div class="well well-small">
-                        <h3>Charts</h3>
-                        <p>Charts are built with <a href="http://d3js.org/">D3.js</a>-based <a href="http://nvd3.org/">nvd3 library</a>. Read more in
-                            <a href="stat_charts.html">charts section</a></p>
-                    </div>
-                    <div class="well well-small">
-                        <h3>Todo application</h3>
-                        <p>Todo is a simple example of <a href="http://backbonejs.org/">backbone</a>-based application. The detailed 
-                        tutorial how this app can be implemented can be found on
-                            <a href="http://backbonejs.org/docs/todos.html">todo app example page</a></p>
-                    </div>
+                    <h3>Statistics Boxes</h3>
+                    <p>Any box may be colored directly via css adding color class to it. For example <code>.red</code>.</p>
+                </section>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <section class="widget">
+                    <h3>Statistics Boxes</h3>
+                    <p>Any box may be colored directly via css adding color class to it. For example <code>.red</code>.</p>
                 </section>
             </div>
         </div>

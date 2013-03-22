@@ -6952,8 +6952,16 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   right: 0;
   margin: 15px 0 0;
 }
+/* line 55, C:/projects/admin/documentation/sass/documentation.scss */
+.widget h3, .widget h4 {
+  line-height: 20px;
+}
+/* line 59, C:/projects/admin/documentation/sass/documentation.scss */
+.widget .well:last-child {
+  margin-bottom: 0;
+}
 
-/* line 56, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 64, C:/projects/admin/documentation/sass/documentation.scss */
 .sidebar {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -6970,13 +6978,13 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   z-index: 1;
   margin: 80px 0 0 25px;
 }
-/* line 69, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 77, C:/projects/admin/documentation/sass/documentation.scss */
 .sidebar h2 {
   color: inherit;
   font-size: 30px;
   padding-left: 30px;
 }
-/* line 75, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 83, C:/projects/admin/documentation/sass/documentation.scss */
 .sidebar .brand {
   font-size: 30px;
   text-shadow: none;
@@ -6987,177 +6995,177 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   display: block;
   margin-bottom: 35px;
 }
-/* line 86, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 94, C:/projects/admin/documentation/sass/documentation.scss */
 .sidebar .settings {
   margin-top: 20px;
   text-align: center;
 }
-/* line 90, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 98, C:/projects/admin/documentation/sass/documentation.scss */
 .sidebar .settings .btn-auto {
   display: none;
 }
 
-/* line 96, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 104, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav {
   font-size: 14px;
   margin: 0;
   font-weight: 600;
 }
-/* line 101, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 109, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li {
   list-style: none;
 }
-/* line 104, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 112, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li i[class*=icon] {
   margin-right: 5px;
 }
-/* line 108, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 116, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li a {
   color: inherit;
   text-decoration: none;
   display: block;
   padding: 18px 30px;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.red.active > a {
   color: #e5603b;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.red a:hover {
   color: #e5603b;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.red a.accordion-toggle:not(.collapsed) {
   color: #e5603b;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.red a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #e5603b;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.orange.active > a {
   color: #eac85e;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.orange a:hover {
   color: #eac85e;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.orange a.accordion-toggle:not(.collapsed) {
   color: #eac85e;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.orange a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #eac85e;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.lime.active > a {
   color: #8cbf26;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.lime a:hover {
   color: #8cbf26;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.lime a.accordion-toggle:not(.collapsed) {
   color: #8cbf26;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.lime a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #8cbf26;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.green.active > a {
   color: #56bc76;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.green a:hover {
   color: #56bc76;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.green a.accordion-toggle:not(.collapsed) {
   color: #56bc76;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.green a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #56bc76;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.teal.active > a {
   color: #4ab0ce;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.teal a:hover {
   color: #4ab0ce;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.teal a.accordion-toggle:not(.collapsed) {
   color: #4ab0ce;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.teal a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #4ab0ce;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.blue.active > a {
   color: #618fb0;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.blue a:hover {
   color: #618fb0;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.blue a.accordion-toggle:not(.collapsed) {
   color: #618fb0;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.blue a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #618fb0;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.brown.active > a {
   color: #a05000;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.brown a:hover {
   color: #a05000;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.brown a.accordion-toggle:not(.collapsed) {
   color: #a05000;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.brown a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #a05000;
 }
-/* line 120, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.dark-red.active > a {
   color: #d04f4f;
 }
-/* line 124, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 132, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.dark-red a:hover {
   color: #d04f4f;
 }
-/* line 128, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 136, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.dark-red a.accordion-toggle:not(.collapsed) {
   color: #d04f4f;
 }
-/* line 131, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 139, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav li.dark-red a.accordion-toggle:not(.collapsed) + .accordion-body li.active a {
   color: #d04f4f;
 }
-/* line 140, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 148, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav .accordion-body li a {
   padding: 4px 10px;
   font-weight: 300;
   background: #ffffff;
   padding-left: 40px;
 }
-/* line 147, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 155, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav .accordion-body li a:hover, .side-nav .accordion-body li a:focus {
   background: #f8f8f8;
 }
-/* line 152, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 160, C:/projects/admin/documentation/sass/documentation.scss */
 .side-nav .accordion-group {
   margin: 0;
   border: none;
@@ -7167,13 +7175,13 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
 }
 
 /*main content lies here*/
-/* line 161, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 169, C:/projects/admin/documentation/sass/documentation.scss */
 .wrap {
   margin-left: 205px;
 }
 
 /*content except for header*/
-/* line 166, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 174, C:/projects/admin/documentation/sass/documentation.scss */
 .content {
   padding: 40px 3.3%;
   -webkit-transition: margin-top 0.2s;
@@ -7182,7 +7190,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   transition: margin-top 0.2s;
 }
 
-/* line 171, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 179, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header {
   border: none;
   margin: 22px 3.3% 0;
@@ -7192,17 +7200,17 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   -moz-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 182, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 190, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav.right > li {
   position: relative;
 }
-/* line 184, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 192, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav.right > li > a, .page-header .nav.right > li > a:visited {
   width: 64px;
   padding: 0;
   font-size: 30px;
 }
-/* line 189, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 197, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav.right > li > a:hover, .page-header .nav.right > li > a:visited:hover {
   color: white;
   -webkit-transition: all 0.1s;
@@ -7210,7 +7218,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-/* line 195, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 203, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav.right > li .count {
   position: absolute;
   bottom: 2px;
@@ -7225,11 +7233,11 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 209, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 217, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav > li {
   background: none;
 }
-/* line 213, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 221, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav > li.active > a, .page-header .nav > li.active > a:visited {
   background: none;
   -webkit-box-shadow: none;
@@ -7237,7 +7245,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   box-shadow: none;
   color: white;
 }
-/* line 218, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 226, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav > li.active > a:hover, .page-header .nav > li.active > a:visited:hover {
   color: white;
   background: none;
@@ -7245,7 +7253,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 225, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 233, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav > li.divider {
   display: block;
   height: 38px;
@@ -7257,7 +7265,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   background: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(102, 102, 102, 0.5), rgba(0, 0, 0, 0));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(102, 102, 102, 0.5), rgba(0, 0, 0, 0));
 }
-/* line 233, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 241, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav > li > a, .page-header .nav > li > a:visited {
   background: none;
   text-align: center;
@@ -7272,16 +7280,16 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
-/* line 244, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 252, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header .nav > li > a:hover, .page-header .nav > li > a:focus, .page-header .nav > li > a:visited:hover, .page-header .nav > li > a:visited:focus {
   color: white;
 }
 
-/* line 252, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 260, C:/projects/admin/documentation/sass/documentation.scss */
 .navbar {
   margin: 0;
 }
-/* line 255, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 263, C:/projects/admin/documentation/sass/documentation.scss */
 .navbar .btn-navbar {
   border: none;
   -webkit-box-shadow: none;
@@ -7289,7 +7297,7 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   box-shadow: none;
 }
 
-/* line 261, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 269, C:/projects/admin/documentation/sass/documentation.scss */
 .navbar-inner {
   padding: 0;
   border: none;
@@ -7301,10 +7309,15 @@ html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   box-shadow: none;
 }
 
-/* line 269, C:/projects/admin/documentation/sass/documentation.scss */
+/* line 277, C:/projects/admin/documentation/sass/documentation.scss */
 .page-header h1 {
   color: #ffffff;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   text-align: center;
+}
+
+/* line 284, C:/projects/admin/documentation/sass/documentation.scss */
+.well-white {
+  background: #ffffff;
 }
