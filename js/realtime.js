@@ -13,7 +13,7 @@ var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
 
 var graph = new Rickshaw.Graph( {
     element: document.getElementById("realtime-chart"),
-    width: $("chart-container").width(),
+    //width: 900, removing width so it fill all available space
     height: 300,
     renderer: 'area',
     stroke: true,
