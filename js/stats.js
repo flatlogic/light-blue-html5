@@ -238,14 +238,6 @@ nv.addGraph(function () {
     return chart;
 });
 
-
-function redraw() {
-    d3.select('#realtime-chart svg')
-        .datum(data)
-        .transition().duration(1000)
-        .call(chart);
-}
-
 function getData() {
     var arr = [],
         theDate = new Date(2012, 1, 1, 0, 0, 0, 0),
@@ -257,18 +249,4 @@ function getData() {
         theDate.setDate(theDate.getDate() + 1);
     }
     return arr;
-}
-
-var realtime = false;
-
-if (realtime){
-    setInterval(function () {
-        var series = data[0].values;
-        var next = new Date(series[series.length - 1].x);
-        next.setDate(next.getDate() + 1);
-        series.shift();
-        series.push({x:next.getTime(), y: series[series.length - 1].y + Math.floor(Math.random() * 5 - 2)});
-        redraw();
-    }, 1000);
-
 }

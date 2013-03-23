@@ -159,7 +159,6 @@ nv.addGraph(function() {
         }
     ];
     var colors = COLOR_VALUES.slice();
-    colors[3] = "#bbb"; // gray for other
 
     var chart = nv.models.pieChartTotal()
         .x(function(d) { return d.key })
