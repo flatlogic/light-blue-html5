@@ -6802,6 +6802,7 @@ html {
 /* line 36, C:/projects/admin/documentation/sass/_general.scss */
 body {
   min-width: 300px;
+  min-height: 620px;
   font-weight: 300;
   padding-bottom: 100px;
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjEwJSIgY3k9IjAiIHI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9InJnYmEoNzQsIDEyMSwgMTQ3LCAwLjg5KSIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSJyZ2JhKDIyNiwgMjI2LCAyMjYsIDAuODcpIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDE4NSwgMTM1LCAxMzEsIDAuODcpIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4="), url("../img/bgnoise_lg_dark.png");
@@ -6810,72 +6811,72 @@ body {
   background: -moz-radial-gradient(10% 0, farthest-side ellipse, rgba(74, 121, 147, 0.89), rgba(226, 226, 226, 0.87), rgba(185, 135, 131, 0.87)), url("../img/bgnoise_lg_dark.png");
 }
 
-/* line 49, C:/projects/admin/documentation/sass/_general.scss */
+/* line 50, C:/projects/admin/documentation/sass/_general.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
-/* line 52, C:/projects/admin/documentation/sass/_general.scss */
+/* line 53, C:/projects/admin/documentation/sass/_general.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   color: #dfdfdf;
 }
 
-/* line 56, C:/projects/admin/documentation/sass/_general.scss */
+/* line 57, C:/projects/admin/documentation/sass/_general.scss */
 h1 {
   font-size: 50px;
 }
 
-/* line 59, C:/projects/admin/documentation/sass/_general.scss */
+/* line 60, C:/projects/admin/documentation/sass/_general.scss */
 h2 {
   font-size: 26px;
 }
 
-/* line 63, C:/projects/admin/documentation/sass/_general.scss */
+/* line 64, C:/projects/admin/documentation/sass/_general.scss */
 h3 {
   font-size: 20px;
 }
 
-/* line 67, C:/projects/admin/documentation/sass/_general.scss */
+/* line 68, C:/projects/admin/documentation/sass/_general.scss */
 h4 {
   font-size: 15px;
 }
 
-/* line 71, C:/projects/admin/documentation/sass/_general.scss */
+/* line 72, C:/projects/admin/documentation/sass/_general.scss */
 h5,
 h6 {
   font-size: 11px;
 }
 
-/* line 75, C:/projects/admin/documentation/sass/_general.scss */
+/* line 76, C:/projects/admin/documentation/sass/_general.scss */
 input[type=search], input.search {
   padding-left: 26px;
   background-color: white;
   background: url(../img/search.png) 5px 5px no-repeat white;
 }
 
-/* line 82, C:/projects/admin/documentation/sass/_general.scss */
+/* line 83, C:/projects/admin/documentation/sass/_general.scss */
 ul ul,
 ol ul {
   list-style: none;
 }
 
-/* line 86, C:/projects/admin/documentation/sass/_general.scss */
+/* line 87, C:/projects/admin/documentation/sass/_general.scss */
 ul, ol {
   list-style: none;
 }
 
-/* line 90, C:/projects/admin/documentation/sass/_general.scss */
+/* line 91, C:/projects/admin/documentation/sass/_general.scss */
 hr {
   margin: 5px 0 10px;
 }
 
-/* line 97, C:/projects/admin/documentation/sass/_general.scss */
+/* line 98, C:/projects/admin/documentation/sass/_general.scss */
 iframe {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 102, C:/projects/admin/documentation/sass/_general.scss */
+/* line 103, C:/projects/admin/documentation/sass/_general.scss */
 fieldset {
   width: 100%;
 }
@@ -6883,25 +6884,25 @@ fieldset {
 /* --------------------------------------------------------	*/
 /*	Custom styled scrollbar */
 /* --------------------------------------------------------	*/
-/* line 109, C:/projects/admin/documentation/sass/_general.scss */
+/* line 110, C:/projects/admin/documentation/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
 
-/* line 113, C:/projects/admin/documentation/sass/_general.scss */
+/* line 114, C:/projects/admin/documentation/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-track-piece {
   background-color: #eee;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* line 118, C:/projects/admin/documentation/sass/_general.scss */
+/* line 119, C:/projects/admin/documentation/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:vertical {
   opacity: 0.4;
   background-color: #e5603b;
 }
 
-/* line 123, C:/projects/admin/documentation/sass/_general.scss */
+/* line 124, C:/projects/admin/documentation/sass/_general.scss */
 html:not(.osx) ::-webkit-scrollbar-thumb:horizontal {
   opacity: 0.4;
   background-color: #e5603b;
