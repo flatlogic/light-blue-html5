@@ -2,6 +2,10 @@
 //html-elements only. no classes
 
 @mixin background-radial-gradient($figure, $type, $position_x, $position_y, $color_1, $color_2, $color_3){
+  //there is a built-in compass radial-gradient function, but it does not provide enough compatibility, so need to imitate it
+  //it also has an option $experimental-support-for-svg which should generate correct svg for IE, but it works incorrect, so
+  //fixing it
+  //issue id - https://github.com/chriseppstein/compass/issues/1225
 //final w3c
   background: radial-gradient(
       $type $figure at $position_x $position_y,
