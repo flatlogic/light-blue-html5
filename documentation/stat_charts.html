@@ -11,14 +11,14 @@
 <body class="background-two">
 <nav id="sidebar" class="sidebar">
     <ul id="side-nav" class="side-nav">
-        <li class="active green">
+        <li class="green">
             <a href="index.html"><i class="icon-large icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="teal accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
+        <li class="active teal accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse in">
                 <li><a href="stat_statistics.html">Stats</a></li>
-                <li><a href="stat_charts.html">Charts</a></li>
+                <li class="active"><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
@@ -86,55 +86,83 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template</h2>
-                    <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
-                        web application or admin entrance for it.</p>
-                    <p>It's base on super powerful <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> front-end framework which
-                        uses <strong>12-column responsive grid</strong> layout.</p>
-
-                    <h2>Scss</h2>
-                    <p>Light Blue uses <a href="http://sass-lang.com/">scss</a> to generate css. This choice has been made because of significant boost
-                    scss gives when developing front-end apps like this one. I used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
-                        is absolutely up to your choice. Anyway editing css is a good old way, right? :)</p>
-                    <p>The main scss file is <a href="../sass/application.scss">application.scss</a>. It includes all libraries and partial files.</p>
+                    <h2>Charts</h2>
+                    <p>All Light Blue charts are based on amazing <a href="http://d3js.org/">D3.js</a> library. Here is what D3
+                    says about itself:</p>
+                    <blockquote>
+                        D3.js is a JavaScript library for manipulating documents based on data.
+                        D3 helps you bring data to life using HTML, SVG and CSS. D3’s emphasis on web standards
+                        gives you the full capabilities of modern browsers without tying yourself to a proprietary
+                        framework, combining powerful visualization components and a data-driven approach to DOM manipulation.
+                    </blockquote>
+                    <p>So it means that graphs are drawn with standard SVG and styled with CSS. You can customize all you like with techniques you already know.</p>
+                    <p>
+                        There are two libraries used in <strong>Light Blue</strong> which work on top of D3.js:</p>
                     <ul>
-                        <li><a href="../sass/_general.scss">general.scss</a> - all application styles. Only element styles.
-                            (<code>body</code>, <code>a</code>, <code>h2</code>, etc).</li>
-                        <li><a href="../sass/_base.scss">base.scss</a> - all application styles. Everything except elements.
-                            Every class used in Light Blue is defined here.</li>
-                        <li><a href="../sass/_font.scss">font.scss</a> - downloaded version of Open Sans font.</li>
-                        <li><a href="../sass/_responsive.scss">responsive.scss</a> - responsive styles.</li>
-                        <li><a href="../sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes etc.</li>
-                        <li><a href="../sass/_svg.scss">svg.scss</a> - svg-related styles.</li>
+                        <li><a href="http://nvd3.org/">nvd3</a> - which is focused on developing re-usable charts and chart components for d3.js without taking away the power that d3.js gives to developer, and</li>
+                        <li><a href="http://code.shutterstock.com/rickshaw/">Rickshaw</a> - a JavaScript toolkit for creating interactive time series graphs based on d3.js underneath. Rickshaw is used for displaying
+                            <a href="stat_realtime.html">realtime data</a> in Light Blue.</li>
                     </ul>
-
-                    <h3>Statistics Boxes</h3>
-                    <hr/>
-                    <p>See <a href="stat_statistics.html">statistics section</a>.</p>
-
-                    <h3>Left Sidebar</h3>
-                    <hr/>
-                    <p>Left sidebar is based on
-                        <a href="http://twitter.github.com/bootstrap/javascript.html#collapse">Bootstrap's collapse component</a>.
-                        <a href="../js/settings.js">Settings.js</a> holds additional javascript code which is used to
-                        change sidebar state and sidebar position depending on chosen option (icons, auto) and (left, right).</p>
-
-                    <h3>Top Navigation</h3>
-                    <hr/>
-                    <p>Is simple <a href="http://twitter.github.com/bootstrap/components.html#navbar">Bootstrap's Navbar</a>.
-                        User profile and settings popovers are implemented via <a href="http://twitter.github.com/bootstrap/javascript.html#popovers">Bootstrap's popover</a></p>
-
-                    <h3>Charts</h3>
-                    <hr/>
-                    <p>Charts are built with <a href="http://d3js.org/">D3.js</a>-based <a href="http://nvd3.org/">nvd3 library</a>. Read more in
-                        <a href="stat_charts.html">charts section</a></p>
-
-                    <h3>Todo application</h3>
-                    <hr/>
-                    <p>Todo is a simple example of <a href="http://backbonejs.org/">backbone</a>-based application. The detailed
-                        tutorial how this app can be implemented can be found on
-                        <a href="http://backbonejs.org/docs/todos.html">todo app example page</a></p>
-
+                </section>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <section class="widget">
+                    <h3>Top sources</h3>
+                    <p>Top sources is a <a href="http://nvd3.org/ghpages/pie.html">nvd3's pie chart</a> with a little
+                        bit of custom code which can be simply reused (<a href="../js/stats.js">stats.js</a>).</p>
+                    <p>It depends on following files:</p>
+                    <pre>
+lib/nvd3/nv.d3.custom.js
+lib/nvd3/src/models/pie.js
+lib/nvd3/src/models/legend.js
+lib/nvd3/src/models/pieChartTotal.js</pre>
+                </section>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <section class="widget">
+                    <h3>Bar Chart</h3>
+                    <p>Bar Chart is based on <a href="http://nvd3.org/ghpages/multiBar.html">nvd3's multi-bar chart</a>.</p>
+                    <p>It depends on following files:</p>
+                    <pre>
+lib/nvd3/nv.d3.custom.js
+lib/nvd3/src/models/axis.js
+lib/nvd3/src/models/legend.js
+lib/nvd3/src/models/multiBar.js
+lib/nvd3/src/models/multiBarChart.js</pre>
+                </section>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <section class="widget">
+                    <h3>Stacked Chart</h3>
+                    <p>Stacked Chart is based on <a href="http://nvd3.org/ghpages/stackedArea.html">nvd3's stacked area chart</a>.</p>
+                    <p>It depends on following files:</p>
+                    <pre>
+lib/nvd3/nv.d3.custom.js
+lib/nvd3/src/models/axis.js
+lib/nvd3/src/models/legend.js
+lib/nvd3/src/models/stackedArea.js
+lib/nvd3/src/models/stackedAreaChart.js</pre>
+                </section>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span10 offset1">
+                <section class="widget">
+                    <h3>Line Chart</h3>
+                    <p>Line Chart is based on <a href="http://nvd3.org/ghpages/stackedArea.html">nvd3's stacked area chart</a>.</p>
+                    <p>It depends on following files:</p>
+                    <pre>
+lib/nvd3/nv.d3.custom.js
+lib/nvd3/src/models/axis.js
+lib/nvd3/src/models/legend.js
+lib/nvd3/src/models/line.js
+lib/nvd3/src/models/lineChart.js</pre>
                 </section>
             </div>
         </div>
