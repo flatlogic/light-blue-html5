@@ -88,32 +88,53 @@
                 <section class="widget">
                     <h2>About Template</h2>
                     <p><strong>Deep Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
-                    web application or admin entrance for it.</p>
+                        web application or admin entrance for it.</p>
                     <p>It's base on super powerful <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> front-end framework which
                         uses <strong>12-column responsive grid</strong> layout.</p>
-                    <div class="well well-small">
-                        <h3>Left Sidebar</h3>
-                        <p>Left sidebar is based on
-                            <a href="http://twitter.github.com/bootstrap/javascript.html#collapse">Bootstrap's collapse component</a>.
-                            <a href="../js/app.js">App.js</a> holds additional javascript code which is used to
-                        change sidebar state depending on chosen option (icons, auto).</p>
-                    </div>
-                    <div class="well well-small">
-                        <h3>Top Navigation</h3>
-                        <p>Is simple <a href="http://twitter.github.com/bootstrap/components.html#navbar">Bootstrap's Navbar</a>.
+
+                    <h2>Scss</h2>
+                    <p>Deep Blue uses <a href="http://sass-lang.com/">scss</a> to generate css. This choice has been made because of significant boost
+                    scss gives when developing front-end apps like this one. I used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
+                        is absolutely up to your choice. Anyway editing css is a good old way, right? :)</p>
+                    <p>The main scss file is <a href="../sass/application.scss">application.scss</a>. It includes all libraries and partial files.</p>
+                    <ul>
+                        <li><a href="../sass/_general.scss">general.scss</a> - all application styles. Only element styles.
+                            (<code>body</code>, <code>a</code>, <code>h2</code>, etc).</li>
+                        <li><a href="../sass/_base.scss">base.scss</a> - all application styles. Everything except elements.
+                            Every class used in Deep Blue is defined here.</li>
+                        <li><a href="../sass/_font.scss">font.scss</a> - downloaded version of Open Sans font.</li>
+                        <li><a href="../sass/_responsive.scss">responsive.scss</a> - responsive styles.</li>
+                        <li><a href="../sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes etc.</li>
+                        <li><a href="../sass/_svg.scss">svg.scss</a> - svg-related styles.</li>
+                    </ul>
+
+                    <h3>Statistics Boxes</h3>
+                    <hr/>
+                    <p>See <a href="stat_statistics.html">statistics section</a>.</p>
+
+                    <h3>Left Sidebar</h3>
+                    <hr/>
+                    <p>Left sidebar is based on
+                        <a href="http://twitter.github.com/bootstrap/javascript.html#collapse">Bootstrap's collapse component</a>.
+                        <a href="../js/settings.js">Settings.js</a> holds additional javascript code which is used to
+                        change sidebar state and sidebar position depending on chosen option (icons, auto) and (left, right).</p>
+
+                    <h3>Top Navigation</h3>
+                    <hr/>
+                    <p>Is simple <a href="http://twitter.github.com/bootstrap/components.html#navbar">Bootstrap's Navbar</a>.
                         User profile and settings popovers are implemented via <a href="http://twitter.github.com/bootstrap/javascript.html#popovers">Bootstrap's popover</a></p>
-                    </div>
-                    <div class="well well-small">
-                        <h3>Charts</h3>
-                        <p>Charts are built with <a href="http://d3js.org/">D3.js</a>-based <a href="http://nvd3.org/">nvd3 library</a>. Read more in
-                            <a href="stat_charts.html">charts section</a></p>
-                    </div>
-                    <div class="well well-small">
-                        <h3>Todo application</h3>
-                        <p>Todo is a simple example of <a href="http://backbonejs.org/">backbone</a>-based application. The detailed 
+
+                    <h3>Charts</h3>
+                    <hr/>
+                    <p>Charts are built with <a href="http://d3js.org/">D3.js</a>-based <a href="http://nvd3.org/">nvd3 library</a>. Read more in
+                        <a href="stat_charts.html">charts section</a></p>
+
+                    <h3>Todo application</h3>
+                    <hr/>
+                    <p>Todo is a simple example of <a href="http://backbonejs.org/">backbone</a>-based application. The detailed
                         tutorial how this app can be implemented can be found on
-                            <a href="http://backbonejs.org/docs/todos.html">todo app example page</a></p>
-                    </div>
+                        <a href="http://backbonejs.org/docs/todos.html">todo app example page</a></p>
+
                 </section>
             </div>
         </div>
