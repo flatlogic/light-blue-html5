@@ -14,12 +14,12 @@
         <li class="green">
             <a href="index.html"><i class="icon-large icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="active teal accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse in">
+        <li class="teal accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
-                <li class="active"><a href="stat_realtime.html">Realtime</a></li>
+                <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
         <li class="blue accordion-group">
@@ -53,12 +53,12 @@
                 <li><a href="component_fileupload.html">Fileupload</a></li>
             </ul>
         </li>
-        <li class="red accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="active red accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#tables-collapse"><i class="icon-large icon-table"></i> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
+            <ul id="tables-collapse" class="accordion-body collapse in">
                 <li><a href="tables_static.html">Static</a></li>
-                <li><a href="tables_dynamic.html">Dynamic</a></li>
+                <li class="active"><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
         </li>
         <li class="orange">
@@ -83,11 +83,17 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h3>Visitors by countries</h3>
-                    <p>Visitors by countries is based on <a href="http://code.shutterstock.com/rickshaw/">Rickshaw's</a>
-                        <a href="http://code.shutterstock.com/rickshaw/examples/extensions.html">interactive realtime data example</a>. Files:</p>
-                    <pre>lib/rickshaw.js
-lib/rickshaw-extensions.js</pre>
+                    <h3>Dynamic Tables</h3>
+                    <hr/>
+                    <blockquote>
+                        <a href="http://wyuenho.github.com/backgrid/">Backgrid.js</a> is a set of components for building semantic and easily stylable data grid widgets.
+                    </blockquote>
+                    <p>It has been chosen because it offers really simple, intuitive programming interface that makes easy things easy, but hard things possible when dealing with tabular data.</p>
+                    <p>Backgrind provides editing, adding and sorting data on client side. I recommend to read more about it -
+                        <a href="http://wyuenho.github.com/backgrid/">Backgrid website</a>. Files:</p>
+                    <pre>lib/backbone-pageable.js
+lib/backgrid.js
+lib/backgrid-paginator.js</pre>
                 </section>
             </div>
         </div>

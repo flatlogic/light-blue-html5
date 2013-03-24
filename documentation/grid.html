@@ -14,12 +14,12 @@
         <li class="green">
             <a href="index.html"><i class="icon-large icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="active teal accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse in">
+        <li class="teal accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
-                <li class="active"><a href="stat_realtime.html">Realtime</a></li>
+                <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
         <li class="blue accordion-group">
@@ -61,7 +61,7 @@
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
         </li>
-        <li class="orange">
+        <li class="active orange">
             <a href="grid.html"><i class="icon-large icon-columns"></i><span class="name">Grid</span></a>
         </li>
         <li class="lime accordion-group">
@@ -83,11 +83,40 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h3>Visitors by countries</h3>
-                    <p>Visitors by countries is based on <a href="http://code.shutterstock.com/rickshaw/">Rickshaw's</a>
-                        <a href="http://code.shutterstock.com/rickshaw/examples/extensions.html">interactive realtime data example</a>. Files:</p>
-                    <pre>lib/rickshaw.js
-lib/rickshaw-extensions.js</pre>
+                    <h2>Grid</h2>
+                    <p><strong>Light Blue</strong> inherits 12-column grid system from
+                        <a href="http://twitter.github.com/bootstrap/scaffolding.html#gridSystem">Bootstrap's great one</a>.</p>
+                    <p>There are two types of grid systems: fixed and fluid. Light Blue markup is built with fluid one,
+                    but looks great with fixed too. The difference between two is that first one uses fixed 940px wide container,
+                    while second one uses 100% width.</p>
+                    <p>Bootstrap provides a documentation for 
+                        <a href="http://twitter.github.com/bootstrap/scaffolding.html#gridSystem">fixed</a> and
+                        <a href="http://twitter.github.com/bootstrap/scaffolding.html#fluidGridSystem">fluid</a> grid systems.</p>
+                    <p>If screen changes its size, grid will react accordingly and change column sizes too to look
+                    best on any screen.</p>
+                    <p>Sometimes this behaviour has to be omitted, so you can add <code>.non-responsive</code>
+                    class to <code>.row-fluid</code>. Columns within this row will not become 100% width when screen
+                    goes below 767px.</p>
+                    <h2>Widgets</h2>
+                    <p>Light Blue widget looks simple and may contain three parts: header, body and footer. But any of them
+                    can be omitted. So the basic widget structure looks like:</p>
+                    <pre>&lt;section class="widget"&gt;
+    &lt;header&gt;
+        &lt;h3&gt;Header&lt;/h3&gt;
+    &lt;/header&gt;
+    &lt;div class="body"&gt;
+        Body
+    &lt;/div&gt;
+    &lt;footer&gt;
+        Footer
+    &lt;/footer&gt;
+&lt;/section&gt;</pre>
+                    <p>You can color widget's background by adding light color class. For example
+                    <code>.light-blue</code>.</p>
+                    <p>Widget will take as much place as inner content needs, but you can control its size:
+                    <code>.tiny</code>, <code>.normal</code>, <code>.large</code>, or <code>.xlarge</code>.</p>
+                    <p>Consider using some <code>.offset*</code> for <code>.span*</code> which holds widget.
+                    Let background shine!</p>
                 </section>
             </div>
         </div>

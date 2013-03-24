@@ -14,12 +14,12 @@
         <li class="green">
             <a href="index.html"><i class="icon-large icon-desktop"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="active teal accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse in">
+        <li class="teal accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-large icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
-                <li class="active"><a href="stat_realtime.html">Realtime</a></li>
+                <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
         <li class="blue accordion-group">
@@ -64,11 +64,11 @@
         <li class="orange">
             <a href="grid.html"><i class="icon-large icon-columns"></i><span class="name">Grid</span></a>
         </li>
-        <li class="lime accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="active lime accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#special-collapse"><i class="icon-large icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse">
-                <li><a href="special_search.html">Search</a></li>
+            <ul id="special-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="special_search.html">Search</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
             </ul>
@@ -83,11 +83,10 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h3>Visitors by countries</h3>
-                    <p>Visitors by countries is based on <a href="http://code.shutterstock.com/rickshaw/">Rickshaw's</a>
-                        <a href="http://code.shutterstock.com/rickshaw/examples/extensions.html">interactive realtime data example</a>. Files:</p>
-                    <pre>lib/rickshaw.js
-lib/rickshaw-extensions.js</pre>
+                    <h3>Search page</h3>
+                    <hr/>
+                    <p>Search page contains only markup, so you may want to read about
+                        <a href="grid.html">widgets</a> or <a href="form_elements.html">forms</a>.</p>
                 </section>
             </div>
         </div>
