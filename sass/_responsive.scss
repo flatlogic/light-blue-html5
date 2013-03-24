@@ -45,81 +45,6 @@
   }
 }
 
-@media (max-width: 767px){
-  input[type=search], input.search {
-    background-position: 5px 10px;
-  }
-
-  .sidebar,
-  .sidebar-on-right .sidebar,
-  .sidebar-on-right .sidebar.sidebar-icons,
-  .sidebar.sidebar-icons{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 85px 5%;
-    width: 90%;
-    height: 0;
-    overflow: hidden;
-    padding: 0;
-
-    .brand{
-      display: none;
-    }
-
-    &.in{
-      padding: 20px 0;
-
-      .brand{
-        display: block;
-      }
-
-      h2{
-        display: block;
-      }
-
-      .side-nav li{
-        a{
-          font-size: 20px;
-          line-height: 30px;
-          padding: 13px 30px;
-          font-weight: 400;
-          text-align: left;
-          width: auto;
-
-          i[class*=icon]{
-            float: left;
-            line-height: 30px;
-            padding-top: 1px;
-          }
-        }
-
-        .name{
-          margin-left: 10px;
-          display: inline-block;
-        }
-      }
-
-      .settings{
-        display: none;
-      }
-    }
-
-    &.in + .wrap .content{
-      margin-top: 660px;
-    }
-  }
-
-  .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap{
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .nv-controlsWrap{
-    display: none;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 979px){
   .page-header .title-nav > li{
     & > a, & > a:visited{
@@ -218,6 +143,83 @@
       margin-left: 0;
       margin-right: 62px;
     }
+  }
+}
+
+//this media quiery is out of order because Chrome thinks
+//max-width: 1048px is more important than max-width: 767px
+@media (max-width: 767px){
+  input[type=search], input.search {
+    background-position: 5px 10px;
+  }
+
+  .sidebar,
+  .sidebar-on-right .sidebar,
+  .sidebar-on-right .sidebar.sidebar-icons,
+  .sidebar.sidebar-icons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 85px 5%;
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    .brand{
+      display: none;
+    }
+
+    &.in{
+      padding: 20px 0;
+
+      .brand{
+        display: block;
+      }
+
+      h2{
+        display: block;
+      }
+
+      .side-nav li{
+        a{
+          font-size: 20px;
+          line-height: 30px;
+          padding: 13px 30px;
+          font-weight: 400;
+          text-align: left;
+          width: auto;
+
+          i[class*=icon]{
+            float: left;
+            line-height: 30px;
+            padding-top: 1px;
+          }
+        }
+
+        .name{
+          margin-left: 10px;
+          display: inline-block;
+        }
+      }
+
+      .settings{
+        display: none;
+      }
+    }
+
+    &.in + .wrap .content{
+      margin-top: 660px;
+    }
+  }
+
+  .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nv-controlsWrap{
+    display: none;
   }
 }
 
