@@ -56,7 +56,6 @@ function testData(stream_names, points_count) {
 function closeNavigation(){
     var $accordion = $('#side-nav').find('.accordion-body.in');
     $accordion.collapse('hide');
-    $accordion.parent().removeClass("active");
     $accordion.siblings(".accordion-toggle").addClass("collapsed");
 }
 
