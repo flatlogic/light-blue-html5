@@ -1,62 +1,6 @@
 @import url(../lib/nvd3/src/nv.d3.css);
 @import url(./font-awesome/css/font-awesome.min.css);
 
-@mixin invalid-border {
-  border-color: $orange;
-  @include box-shadow(inset 0 1px 1px rgba($red,.075));
-}
-
-@mixin sidebar-icons($class){
-  .sidebar#{$class}{
-    width: auto;
-    padding: 20px 0;
-    margin: 30px 0 0 10px;
-
-    h2{
-      display: none;
-    }
-
-    .accordion-body li a{
-      width: 1px;
-      padding-left: 10px;
-      @include transition(width .3s);
-    }
-
-    .accordion-body.in li a{
-      width: 80px;
-    }
-  }
-
-  .side-nav#{$class} li{
-    a{
-      font-size: 16px;
-      line-height: 24px;
-      padding: 13px 16px;
-      text-align: center;
-
-      i[class*=icon]{
-        float: none;
-      }
-    }
-
-    .name{
-      display: none;
-    }
-  }
-
-  .wrap#{$class}{
-    margin-left: 62px;
-  }
-}
-
-@mixin sidebar-settings{
-  .settings{
-    .btn-small{
-      padding: 2px 8px;
-    }
-  }
-}
-
 @import "font";
 
 @import "variables";
