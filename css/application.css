@@ -193,7 +193,7 @@ textarea {
   /* line 156, C:/projects/admin/sass/bootstrap/_reset.scss */
   * {
     text-shadow: none !important;
-    color: black !important;
+    color: #000 !important;
     background: transparent !important;
     box-shadow: none !important;
   }
@@ -224,7 +224,7 @@ textarea {
   /* line 184, C:/projects/admin/sass/bootstrap/_reset.scss */
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -296,7 +296,7 @@ a:focus {
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1084,7 +1084,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   background-color: #f5f5f5;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -1849,7 +1849,7 @@ input[type="checkbox"][readonly] {
   text-align: center;
   text-shadow: 0 1px 0 white;
   background-color: #eeeeee;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 /* line 476, C:/projects/admin/sass/bootstrap/_forms.scss */
 .input-append .add-on,
@@ -3213,7 +3213,7 @@ table th[class*="span"],
   margin: 2px 0 0;
   list-style: none;
   background-color: white;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   *border-right-width: 2px;
   *border-bottom-width: 2px;
@@ -4400,7 +4400,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 114, C:/projects/admin/sass/bootstrap/_navs.scss */
 .nav-tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 
 /* line 118, C:/projects/admin/sass/bootstrap/_navs.scss */
@@ -4426,7 +4426,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a:focus {
   color: #666666;
   background-color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -4467,7 +4467,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 183, C:/projects/admin/sass/bootstrap/_navs.scss */
 .nav-tabs.nav-stacked > li > a {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4630,7 +4630,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 322, C:/projects/admin/sass/bootstrap/_navs.scss */
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
 }
 
 /* line 325, C:/projects/admin/sass/bootstrap/_navs.scss */
@@ -4655,7 +4655,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent #dddddd #dddddd #dddddd;
+  border-color: transparent #ddd #ddd #ddd;
 }
 
 /* line 350, C:/projects/admin/sass/bootstrap/_navs.scss */
@@ -4695,7 +4695,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-  border-color: #dddddd transparent #dddddd #dddddd;
+  border-color: #ddd transparent #ddd #ddd;
   *border-right-color: white;
 }
 
@@ -4722,7 +4722,7 @@ input[type="submit"].btn.btn-mini {
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
-  border-color: #dddddd #dddddd #dddddd transparent;
+  border-color: #ddd #ddd #ddd transparent;
   *border-left-color: white;
 }
 
@@ -5091,7 +5091,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #cccccc;
+  border-bottom: 7px solid #ccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -5111,7 +5111,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 329, C:/projects/admin/sass/bootstrap/_navbar.scss */
 .navbar-fixed-bottom .nav > li > .dropdown-menu:before {
-  border-top: 7px solid #cccccc;
+  border-top: 7px solid #ccc;
   border-top-color: rgba(0, 0, 0, 0.2);
   border-bottom: 0;
   bottom: -7px;
@@ -5552,7 +5552,7 @@ input[type="submit"].btn.btn-mini {
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   border-radius: 15px;
@@ -5618,9 +5618,9 @@ input[type="submit"].btn.btn-mini {
   width: 560px;
   margin-left: -280px;
   background-color: white;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.3);
-  *border: 1px solid #999999;
+  *border: 1px solid #999;
   /* IE6-7 */
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -5649,7 +5649,7 @@ input[type="submit"].btn.btn-mini {
 /* line 49, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header {
   padding: 9px 15px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 /* line 53, C:/projects/admin/sass/bootstrap/_modals.scss */
 .modal-header .close {
@@ -5680,7 +5680,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
   text-align: right;
   background-color: #f5f5f5;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
@@ -5819,7 +5819,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -5990,7 +5990,7 @@ input[type="submit"].btn.btn-mini {
   display: block;
   padding: 4px;
   line-height: 20px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
@@ -7948,7 +7948,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   /* line 136, C:/projects/admin/sass/bootstrap/_responsive-767px-max.scss */
   input[type="checkbox"],
   input[type="radio"] {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
   }
 
   /* line 142, C:/projects/admin/sass/bootstrap/_responsive-767px-max.scss */
@@ -8585,7 +8585,7 @@ div.uploader.disabled span.action {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #cccccc;
+  border-bottom: 7px solid #ccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -8816,7 +8816,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   top: 100%;
   background: #fff;
   color: #666666;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-top: 0;
   -webkit-border-radius: 0 0 1px 1px;
   -moz-border-radius: 0 0 1px 1px;
@@ -8829,7 +8829,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 /* line 150, C:/projects/admin/sass/lib/_select2.scss */
 .select2-drop.select2-drop-above {
   margin-top: 1px;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   border-bottom: 0;
   -webkit-border-radius: 1px 1px 0 0;
   -moz-border-radius: 1px 1px 0 0;
@@ -8893,7 +8893,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   outline: 0;
   font-family: sans-serif;
   font-size: 1em;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -8935,9 +8935,9 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 /* line 266, C:/projects/admin/sass/lib/_select2.scss */
 .select2-dropdown-open .select2-choice {
   border-color: #ccc;
-  -webkit-box-shadow: 0 1px 0 white inset;
-  -moz-box-shadow: 0 1px 0 white inset;
-  box-shadow: 0 1px 0 white inset;
+  -webkit-box-shadow: 0 1px 0 #fff inset;
+  -moz-box-shadow: 0 1px 0 #fff inset;
+  box-shadow: 0 1px 0 #fff inset;
 }
 
 /* line 290, C:/projects/admin/sass/lib/_select2.scss */
@@ -9099,7 +9099,7 @@ disabled look for disabled choices in the results dropdown
 .select2-container.select2-container-disabled .select2-choice {
   background-color: #f4f4f4;
   background-image: none;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   cursor: default;
 }
 
@@ -9123,7 +9123,7 @@ disabled look for disabled choices in the results dropdown
   margin: 0;
   padding: 0;
   position: relative;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   cursor: text;
   overflow: hidden;
   background-color: #fff;
@@ -9189,7 +9189,7 @@ disabled look for disabled choices in the results dropdown
 
 /* line 485, C:/projects/admin/sass/lib/_select2.scss */
 .select2-default {
-  color: #999999 !important;
+  color: #999 !important;
 }
 
 /* line 489, C:/projects/admin/sass/lib/_select2.scss */
@@ -9200,7 +9200,7 @@ disabled look for disabled choices in the results dropdown
   line-height: 14px;
   color: #666666;
   cursor: default;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
@@ -9262,14 +9262,14 @@ disabled look for disabled choices in the results dropdown
 .select2-container-multi.select2-container-disabled .select2-choices {
   background-color: #f4f4f4;
   background-image: none;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   cursor: default;
 }
 
 /* line 558, C:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice {
   padding: 3px 5px 3px 5px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   background-image: none;
   background-color: #f4f4f4;
 }
@@ -9632,7 +9632,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: block;
   height: 5px;
   width: 5px;
-  border: 1px solid black;
+  border: 1px solid #000;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -9648,7 +9648,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: block;
   height: 5px;
   width: 5px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -9672,7 +9672,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: block;
   height: 1px;
   background: #000;
-  border-top: 1px solid white;
+  border-top: 1px solid #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -9720,7 +9720,7 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #cccccc;
+  border-bottom: 7px solid #ccc;
   border-bottom-color: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: -7px;
@@ -9976,7 +9976,7 @@ html .fc,
 .fc-widget-header,
 .fc-widget-content {
   /* <td>, usually */
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 
 /* line 130, C:/projects/admin/sass/lib/_fullcalendar.scss */
@@ -10031,7 +10031,7 @@ html .fc,
   float: left;
   height: 1.9em;
   line-height: 1.9em;
-  padding: 0 0.6em;
+  padding: 0 .6em;
   white-space: nowrap;
 }
 
@@ -10066,7 +10066,7 @@ html .fc,
 /* line 229, C:/projects/admin/sass/lib/_fullcalendar.scss */
 .fc-button-next .fc-button-inner:before {
   display: block;
-  font: 22px "FontAwesome";
+  font: 22px 'FontAwesome';
   content: "\f105";
   line-height: 28px;
   padding: 0 10px;
@@ -10079,7 +10079,7 @@ html .fc,
 /* line 244, C:/projects/admin/sass/lib/_fullcalendar.scss */
 .fc-button-prev .fc-button-inner:before {
   display: block;
-  font: 22px "FontAwesome";
+  font: 22px 'FontAwesome';
   content: "\f104";
   line-height: 28px;
   padding: 0 10px;
@@ -10602,7 +10602,7 @@ table.fc-border-separate {
   width: 100%;
   max-width: 100%;
   background-color: transparent;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   border-collapse: collapse;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -10621,7 +10621,7 @@ table.fc-border-separate {
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: middle;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
 }
 
 /* line 44, C:/projects/admin/sass/lib/_backgrid.scss */
@@ -10717,14 +10717,14 @@ table.fc-border-separate {
   vertical-align: baseline;
   border-top: none;
   border-right: 4px solid transparent;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #000000;
   border-left: 4px solid transparent;
 }
 
 /* line 131, C:/projects/admin/sass/lib/_backgrid.scss */
 .backgrid .descending .sort-caret {
   vertical-align: super;
-  border-top: 4px solid black;
+  border-top: 4px solid #000000;
   border-right: 4px solid transparent;
   border-bottom: none;
   border-left: 4px solid transparent;
@@ -11261,7 +11261,7 @@ svg text {
   padding: 5px;
   position: absolute;
   background-color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   z-index: 10000;
   font-family: inherit;
   font-size: 13px;
@@ -13120,7 +13120,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 .widget:not(.widget-tabs) .tab-content {
   background: #ffffff;
   padding: 10px;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   border-top: none;
   -webkit-border-radius: 0 0 1px 1px;
   -moz-border-radius: 0 0 1px 1px;
@@ -13130,7 +13130,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 }
 /* line 1366, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-below .tab-content {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
   border-bottom: none;
   -webkit-border-radius: 1px 1px 0 0;
   -moz-border-radius: 1px 1px 0 0;
@@ -13140,8 +13140,8 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 }
 /* line 1374, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-left .tab-content {
-  border-top: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
   -webkit-border-radius: 0 1px 1px 0;
   -moz-border-radius: 0 1px 1px 0;
   -ms-border-radius: 0 1px 1px 0;
@@ -13150,8 +13150,8 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 }
 /* line 1382, C:/projects/admin/sass/_base.scss */
 .widget:not(.widget-tabs) .tabs-right .tab-content {
-  border-top: 1px solid #dddddd;
-  border-right: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   -webkit-border-radius: 1px 0 0 1px;
   -moz-border-radius: 1px 0 0 1px;
   -ms-border-radius: 1px 0 0 1px;
