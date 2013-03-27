@@ -148,6 +148,16 @@
       margin-right: 62px;
     }
   }
+  .sidebar-hidden{
+    .sidebar{
+      display: none;
+    }
+
+    .wrap{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 //this media quiery is out of order because Chrome thinks
@@ -161,6 +171,7 @@
   .sidebar-on-right .sidebar,
   .sidebar-on-right .sidebar.sidebar-icons,
   .sidebar.sidebar-icons{
+    display: block;
     position: absolute;
     top: 0;
     left: 0;

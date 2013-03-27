@@ -5,7 +5,8 @@ $(function(){
         settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
             sidebar: 'left',
             background: 'two',
-            sidebarState: 'auto'
+            sidebarState: 'auto',
+            displaySidebar: true
         },
         $pageHeader = $(".page-header"),
         $body = $("body"),
@@ -59,11 +60,19 @@ $(function(){
                 //just swallow it
             }
 
+        },
+        displaySidebar = function(display){
+            if (display == true){
+                $body.removeClass("sidebar-hidden")
+            } else {
+                $body.addClass("sidebar-hidden")
+            }
         };
 
     sidebarSide(settingsState.sidebar);
     backgroundStyle(settingsState.background);
     sidebarState(settingsState.sidebarState);
+    displaySidebar(settingsState.displaySidebar);
 
     if (!$settings[0]){
         return;
@@ -106,6 +115,16 @@ $(function(){
         localStorage.setItem("settings-state", JSON.stringify(settingsState));
     });
 
+    //sidebar visibility
+    $pageHeader.on("click", ".popover #display-sidebar-toggle .btn", function(){
+        var $this = $(this),
+            display = $this.data("value");
+        displaySidebar(display);
+        settingsState.displaySidebar = display;
+        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+    });
+
+    //sidebar state {active, icons}
     $sidebarSettings.on("click", ".btn", function(){
         var $this = $(this),
             state = $this.data("value");

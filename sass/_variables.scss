@@ -162,6 +162,17 @@ $paddingLarge:          8px 18px !default; // 44px
   .wrap#{$class}{
     margin-left: 62px;
   }
+
+  .sidebar-hidden{
+    .sidebar{
+      display: none;
+    }
+
+    .wrap{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 @mixin sidebar-settings{

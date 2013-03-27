@@ -10,7 +10,7 @@
 </head>
 <body class="background-two">
 <nav id="sidebar" class="sidebar nav-collapse collapse">
-    <a class="brand" href=""><i class="icon-laptop"></i></a>
+    <a class="brand" title="Light Blue" href="index.html"><i class="icon-laptop"></i></a>
     <h2>Actions</h2>
     <ul id="side-nav" class="side-nav">
         <li class="green">
@@ -224,6 +224,14 @@
             <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
         </div>
     </div>
+    <div class="setting clearfix">
+        Sidebar
+        <div id="display-sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
+            <% display = displaySidebar%>
+            <button type="button" data-value="true" class="btn btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-transparent <%= display? '' : 'active' %>">Hide</button>
+        </div>
+    </div>
 </script>
 
 <script type="text/template" id="sidebar-settings-template">
@@ -246,7 +254,7 @@
 <script type="text/template" id="user-template">
     <div class="user">
         <figure class="clearfix">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Vita%C5%ADt._%D0%92%D1%96%D1%82%D0%B0%D1%9E%D1%82_%28J._Aziamb%C5%82o%C5%ADski%2C_XIX%29.jpg" class="img-circle pull-left">
+            <img src="img/3.jpg" class="img-circle pull-left">
 
             <figcaption class="pull-right">Vitaut the Great</figcaption>
         </figure>
