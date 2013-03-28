@@ -13454,48 +13454,57 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   content: "\f0d7";
 }
 
-/* line 1615, C:/projects/admin/sass/_base.scss */
+/* line 1617, C:/projects/admin/sass/_base.scss */
+.fileupload-progress.fade.in .progress {
+  margin-top: 20px;
+}
+/* line 1621, C:/projects/admin/sass/_base.scss */
+.fileupload-progress.fade .progress {
+  margin: 0;
+}
+
+/* line 1630, C:/projects/admin/sass/_base.scss */
 .search-result {
   padding: 5px 15px 5px 10px;
   margin-bottom: 10px;
 }
-/* line 1619, C:/projects/admin/sass/_base.scss */
+/* line 1634, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(even) {
   background: #f8f8f8;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(1n) {
   border-left: 5px solid #e5603b;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(2n) {
   border-left: 5px solid #eac85e;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(3n) {
   border-left: 5px solid #8cbf26;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(4n) {
   border-left: 5px solid #56bc76;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(5n) {
   border-left: 5px solid #4ab0ce;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(6n) {
   border-left: 5px solid #618fb0;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(7n) {
   border-left: 5px solid #a05000;
 }
-/* line 1626, C:/projects/admin/sass/_base.scss */
+/* line 1641, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(8n) {
   border-left: 5px solid #d04f4f;
 }
-/* line 1632, C:/projects/admin/sass/_base.scss */
+/* line 1647, C:/projects/admin/sass/_base.scss */
 .search-result:hover {
   cursor: pointer;
   padding-left: 10px;
@@ -13505,20 +13514,20 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   -o-transition: border-left-color 0.2s;
   transition: border-left-color 0.2s;
 }
-/* line 1640, C:/projects/admin/sass/_base.scss */
+/* line 1655, C:/projects/admin/sass/_base.scss */
 .search-result > h3 {
   line-height: 30px;
 }
-/* line 1644, C:/projects/admin/sass/_base.scss */
+/* line 1659, C:/projects/admin/sass/_base.scss */
 .search-result > p {
   margin-bottom: 0px;
 }
 
-/* line 1653, C:/projects/admin/sass/_base.scss */
+/* line 1668, C:/projects/admin/sass/_base.scss */
 .widget-404 {
   width: 600px;
 }
-/* line 1656, C:/projects/admin/sass/_base.scss */
+/* line 1671, C:/projects/admin/sass/_base.scss */
 .widget-404 h1 {
   font-size: 140px;
   line-height: 140px;
@@ -13526,38 +13535,38 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   text-rendering: optimizeLegibility;
   color: #ffffff;
 }
-/* line 1664, C:/projects/admin/sass/_base.scss */
+/* line 1679, C:/projects/admin/sass/_base.scss */
 .widget-404 .description {
   vertical-align: middle;
   padding-top: 20px;
 }
 
-/* line 1670, C:/projects/admin/sass/_base.scss */
+/* line 1685, C:/projects/admin/sass/_base.scss */
 .widget-404-search {
   width: 600px;
 }
 
-/* line 1678, C:/projects/admin/sass/_base.scss */
+/* line 1693, C:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1682, C:/projects/admin/sass/_base.scss */
+/* line 1697, C:/projects/admin/sass/_base.scss */
 .well-white {
   background: #ffffff;
 }
 
-/* line 1686, C:/projects/admin/sass/_base.scss */
+/* line 1701, C:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1690, C:/projects/admin/sass/_base.scss */
+/* line 1705, C:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1694, C:/projects/admin/sass/_base.scss */
+/* line 1709, C:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
