@@ -13,6 +13,9 @@ javascripts_dir = "js"
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true
 environment = :development #:production
+
+#set to false if there is not need to display comments in applications.css
+#line_comments = true
 output_style = (environment == :production) ? :compressed : :expanded
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:

@@ -1,4 +1,4 @@
-var testData = testData(['Search', 'Referral', 'Direct', 'Campaign'],
+var testData = testData(['Search', 'Referral', 'Direct', 'Organic'],
         25),// just 25 points, since there are lots of charts
     pieSelect = d3.select("#sources-chart-pie"),
     pieFooter = d3.select("#data-chart-footer"),
