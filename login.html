@@ -3,13 +3,12 @@
 <head>
     <title>Login</title>
     <link href="css/application.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="utf-8">
     <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
-    <!--<script src="lib/zepto/zepto.min.js"> </script>-->
-    <script src="lib/parsley.js"> </script>
     <script src="lib/backbone/underscore-min.js"></script>
     <script src="js/settings.js"> </script>
 </head>
@@ -21,7 +20,7 @@
         </header>
         <div class="body">
             <form class="no-margin"
-                  data-validate="parsley" action="index.html" method="get">
+                  action="index.html" method="get">
                 <fieldset>
                     <div class="control-group no-margin">
                         <label class="control-label" for="email" >Email</label>
@@ -30,9 +29,8 @@
                                 <span class="add-on">
                                     <i class="icon-user icon-large"></i>
                                 </span>
-                                <input id="email" name="email" type="email"
-                                       data-trigger="change"
-                                       required="required" placeholder="Your Email">
+                                <input id="email" type="email"
+                                       placeholder="Your Email">
                             </div>
                         </div>
                     </div>
@@ -44,8 +42,8 @@
                                 <span class="add-on">
                                     <i class="icon-lock icon-large"></i>
                                 </span>
-                                <input id="password" name="email" type="email"
-                                       required="required" placeholder="Your Password">
+                                <input id="password" type="email"
+                                       placeholder="Your Password">
                             </div>
                         </div>
                     </div>
