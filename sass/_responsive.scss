@@ -238,6 +238,14 @@
   }
 }
 
+@media (max-width: 240px){
+  .content > .row-fluid.box-row > .span2{
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .comments{
     overflow-y: scroll;
