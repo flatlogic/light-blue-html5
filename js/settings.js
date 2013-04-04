@@ -67,6 +67,13 @@ $(function(){
             } else {
                 $body.addClass("sidebar-hidden")
             }
+            try {
+                if (window.onresize){
+                    window.onresize();
+                }
+            } catch (e){
+                //just swallow it
+            }
         };
 
     sidebarSide(settingsState.sidebar);
