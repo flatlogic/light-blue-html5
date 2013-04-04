@@ -313,6 +313,9 @@ input.parsley-error{
       line-height: 20px;
       color: inherit;
     }
+    h3{
+      font-size: 18px;
+    }
   }
 
   .body{
@@ -380,16 +383,6 @@ input.parsley-error{
 .chart-inline{
   margin-bottom: 12px;
   height: 44px;
-
-  svg{
-    height: 44px;
-  }
-
-  h4{
-    padding-left: 10px;
-    padding-top: 4px;
-    margin: 0;
-  }
 
   .info{
     padding: 4px 0;
@@ -540,9 +533,9 @@ input.parsley-error{
     &.right > li{
       position: relative;
       & > a, & > a:visited{
-        width: 64px;
+        width: 45px;
         padding: 0;
-        font-size: 30px;
+        font-size: 22px;
 
         &:hover{
           color: white;
@@ -592,7 +585,7 @@ input.parsley-error{
         background: none;
         text-align: center;
         vertical-align: middle;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 38px;
         color: rgba(darken($textColor, 20%), .5);
         text-shadow: none;
