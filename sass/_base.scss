@@ -393,7 +393,7 @@ input.parsley-error{
 
   .files-size{
     font-weight: 700;
-    font-size: 34px;
+    font-size: $baseFontSize * 1.5;
   }
 
   .visits{
@@ -441,7 +441,6 @@ input.parsley-error{
     }
 
     .key{
-      text-transform: lowercase;
       font-size: $fontSizeSmall;
       font-weight: 400;
       margin: 0;
