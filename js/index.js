@@ -53,8 +53,8 @@ nv.addGraph(function() {
                 '<p>' +  y + '</p>'
         })
         .total(function(count, z_count){
-            return "<h4>"+ count + " files </h4>"
-                + "<h3>" + z_count + "Gb </h3>"
+            return "<p class='files-count'>"+ count + " files </p>"
+                + "<p class='files-size'>" + z_count + "Gb </p>"
         })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});

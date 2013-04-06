@@ -70,7 +70,7 @@ nv.addGraph(function() {
                 '<p>' +  y + '</p>'
         })
         .total(function(count){
-            return "<h5 class='visits'>" + count + "<br/> visits </h5>"
+            return "<p class='visits'>" + count + "<br/> visits </p>"
         })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});
