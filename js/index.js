@@ -53,8 +53,8 @@ nv.addGraph(function() {
                 '<p>' +  y + '</p>'
         })
         .total(function(count, z_count){
-            return "<p class='files-count'>"+ count + " files </p>"
-                + "<p class='files-size'>" + z_count + "Gb </p>"
+            return "<div class='files-count'>"+ count + " files </div>"
+                + "<div class='files-size'>" + z_count + "Gb </div>"
         })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});
@@ -73,8 +73,8 @@ nv.addGraph(function() {
             return "3px solid " + colors[i];
         })
         .html(function(d) {
-            return "<h4>" + d.key + "</h4>"
-                + "<p>" + Math.floor(100 * d.y / sum) + "%</p>";
+            return "<div class='key'>" + d.key + "</div>"
+                + "<div class='value'>" + Math.floor(100 * d.y / sum) + "%</div>";
         })
         .on('click', function(d) {
             d.disabled = !d.disabled;

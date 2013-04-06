@@ -70,7 +70,7 @@ nv.addGraph(function() {
                 '<p>' +  y + '</p>'
         })
         .total(function(count){
-            return "<p class='visits'>" + count + "<br/> visits </p>"
+            return "<div class='visits'>" + count + "<br/> visits </div>"
         })
         .donut(true);
     chart.pie.margin({top: 10, bottom: -20});
@@ -90,8 +90,8 @@ nv.addGraph(function() {
             return "3px solid " + COLOR_VALUES[i];
         })
         .html(function(d) {
-            return "<h4>" + d.key + "</h4>"
-                + "<p>" + Math.floor(100 * d.y / sum) + "%</p>";
+            return "<div class='key'>" + d.key + "</div>"
+                + "<div class='value'>" + Math.floor(100 * d.y / sum) + "%</div>";
         })
         .on('click', function(d) {
             pieChartUpdate.apply(this, [d]);
