@@ -1,3 +1,4 @@
+
 @media (max-width: 480px){
   .content > .row-fluid.box-row > .span2{
     width: 48.61878%;
@@ -191,9 +192,9 @@
 
       .side-nav li{
         a{
-          font-size: 20px;
+          font-size: $fontSizeLarge;
           line-height: 30px;
-          padding: 13px 30px;
+          padding: 10px 25px;
           font-weight: 400;
           text-align: left;
           width: auto;
@@ -217,7 +218,7 @@
     }
 
     &.in + .wrap .content{
-      margin-top: 660px;
+      margin-top: 520px;
     }
   }
 
@@ -280,15 +281,6 @@
           height: 288px;
         }
       }
-
-      .pie-chart .total{
-        h4{
-          font-size: 19px;
-        }
-        h3{
-          font-size: 40px;
-        }
-      }
     }
 
     &.xlarge{
@@ -299,15 +291,6 @@
 
         .chart{
           height: 383px;
-        }
-      }
-
-      .pie-chart .total{
-        h4{
-          font-size: 19px;
-        }
-        h3{
-          font-size: 40px;
         }
       }
     }
@@ -333,22 +316,6 @@
       }
     }
 
-  }
-
-  .widget.large, .widget.xlarge{
-    .pie-chart .controls .control h4{
-      font-size: 17px;
-      margin-bottom: 7px;
-    }
-
-    .pie-chart .controls .control p{
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-  }
-
-  .pie-chart .total h5.visits{
-    font-size: 34px;
   }
 
   .chart-inline{
