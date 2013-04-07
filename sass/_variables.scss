@@ -129,7 +129,7 @@ $paddingLarge:          8px 18px !default; // 44px
   .sidebar#{$class}{
     width: auto;
     padding: 20px 0;
-    margin: 30px 0 0 10px;
+    margin: 87px 0 0 10px;
 
     h2{
       display: none;
@@ -148,12 +148,11 @@ $paddingLarge:          8px 18px !default; // 44px
 
   .side-nav#{$class} li{
     a{
-      font-size: 16px;
-      line-height: 24px;
-      padding: 13px 16px;
+      padding: 10px 16px;
       text-align: center;
 
       i[class*=icon]{
+        margin-right: 0;
         float: none;
       }
     }

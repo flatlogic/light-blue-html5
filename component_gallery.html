@@ -310,20 +310,19 @@
 </script>
 
 <script type="text/template" id="sidebar-settings-template">
-    <% auto = sidebarState == 'auto'%>
-    <% if (auto) {%>
-    <button type="button"
-            data-value="icons"
-            class="btn-icons btn btn-success btn-small">Icons</button>
+        <% auto = sidebarState == 'auto'%>
+        <% if (auto) {%>
+            <button type="button"
+                    data-value="icons"
+                    class="btn-icons btn btn-primary btn-small">Icons</button>
     <button type="button"
             data-value="auto"
             class="btn-auto btn btn-primary btn-small">Auto</button>
-
-    <%} else {%>
-    <button type="button"
-            data-value="auto"
-            class="btn btn-primary btn-small">Auto</button>
-    <% } %>
+        <%} else {%>
+            <button type="button"
+                    data-value="auto"
+                    class="btn btn-primary btn-small">Auto</button>
+        <% } %>
 </script>
 
 <script type="text/template" id="user-template">

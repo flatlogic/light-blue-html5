@@ -91,7 +91,6 @@ input.parsley-error{
     list-style: none;
 
     i[class*=icon]{
-      font-size: 15px;
       margin-right: 3px;
       line-height: 20px;
     }
@@ -543,7 +542,8 @@ input.parsley-error{
     @include border-radius(0);
     border: none;
     color: white;
-    width: 250px;
+    width: 210px;
+    font-size: $fontSizeSmall;
 
     &.bottom .arrow{
       border-bottom-color: transparent;
@@ -570,7 +570,7 @@ input.parsley-error{
 }
 
 .popover.user-info{
-  width: 220px;
+  width: 195px;
 }
 
 .user{
