@@ -153,9 +153,11 @@ $(function(){
         }
     }
     $("#notification-link").click(function(){
-        $("#settings").popover('show');
-        $(document).on("click", close);
-        return false;
+        if ( $(window).width() > 767){
+            $("#settings").popover('show');
+            $(document).on("click", close);
+            return false;
+        }
     })
 });
 
