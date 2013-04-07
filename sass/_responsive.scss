@@ -233,6 +233,17 @@
   .nv-controlsWrap{
     display: none;
   }
+
+  .logo,
+  .sidebar-on-right .logo,
+  .sidebar-hidden .logo{
+    display: block;
+    left: 1.6%;
+    right: auto;
+    padding-right: 5px;
+    width: 40px;
+    top: 15px;
+  }
 }
 
 @media (max-width: 240px){
