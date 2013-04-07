@@ -13732,18 +13732,22 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   .sidebar .settings .btn-small {
     padding: 2px 8px;
   }
+  /* line 128, C:/projects/admin/sass/_responsive.scss */
+  .sidebar .settings {
+    display: none;
+  }
 
-  /* line 130, C:/projects/admin/sass/_responsive.scss */
+  /* line 134, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .sidebar {
     right: 0;
     margin: 87px 1.6% 0 0;
   }
-  /* line 135, C:/projects/admin/sass/_responsive.scss */
+  /* line 139, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .wrap {
     margin-left: 0;
     margin-right: 62px;
   }
-  /* line 140, C:/projects/admin/sass/_responsive.scss */
+  /* line 144, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .logo {
     left: auto;
     right: 1.6%;
@@ -13752,23 +13756,23 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     top: 15px;
   }
 
-  /* line 149, C:/projects/admin/sass/_responsive.scss */
+  /* line 153, C:/projects/admin/sass/_responsive.scss */
   .sidebar-hidden .sidebar {
     display: none;
   }
-  /* line 153, C:/projects/admin/sass/_responsive.scss */
+  /* line 157, C:/projects/admin/sass/_responsive.scss */
   .sidebar-hidden .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 }
 @media (max-width: 767px) {
-  /* line 163, C:/projects/admin/sass/_responsive.scss */
+  /* line 167, C:/projects/admin/sass/_responsive.scss */
   input[type=search], input.search {
     background-position: 5px 10px;
   }
 
-  /* line 170, C:/projects/admin/sass/_responsive.scss */
+  /* line 174, C:/projects/admin/sass/_responsive.scss */
   .sidebar,
   .sidebar-on-right .sidebar,
   .sidebar-on-right .sidebar.sidebar-icons,
@@ -13783,35 +13787,35 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     overflow: hidden;
     padding: 0;
   }
-  /* line 181, C:/projects/admin/sass/_responsive.scss */
+  /* line 185, C:/projects/admin/sass/_responsive.scss */
   .sidebar .brand,
   .sidebar-on-right .sidebar .brand,
   .sidebar-on-right .sidebar.sidebar-icons .brand,
   .sidebar.sidebar-icons .brand {
     display: none;
   }
-  /* line 185, C:/projects/admin/sass/_responsive.scss */
+  /* line 189, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in,
   .sidebar-on-right .sidebar.in,
   .sidebar-on-right .sidebar.sidebar-icons.in,
   .sidebar.sidebar-icons.in {
     padding: 20px 0;
   }
-  /* line 188, C:/projects/admin/sass/_responsive.scss */
+  /* line 192, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .brand,
   .sidebar-on-right .sidebar.in .brand,
   .sidebar-on-right .sidebar.sidebar-icons.in .brand,
   .sidebar.sidebar-icons.in .brand {
     display: block;
   }
-  /* line 192, C:/projects/admin/sass/_responsive.scss */
+  /* line 196, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in h2,
   .sidebar-on-right .sidebar.in h2,
   .sidebar-on-right .sidebar.sidebar-icons.in h2,
   .sidebar.sidebar-icons.in h2 {
     display: block;
   }
-  /* line 197, C:/projects/admin/sass/_responsive.scss */
+  /* line 201, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a,
   .sidebar-on-right .sidebar.in .side-nav li a,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a,
@@ -13823,7 +13827,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     text-align: left;
     width: auto;
   }
-  /* line 205, C:/projects/admin/sass/_responsive.scss */
+  /* line 209, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a i[class*=icon],
   .sidebar-on-right .sidebar.in .side-nav li a i[class*=icon],
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a i[class*=icon],
@@ -13832,7 +13836,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     line-height: 30px;
     padding-top: 1px;
   }
-  /* line 212, C:/projects/admin/sass/_responsive.scss */
+  /* line 216, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li .name,
   .sidebar-on-right .sidebar.in .side-nav li .name,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li .name,
@@ -13840,14 +13844,14 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     margin-left: 10px;
     display: inline-block;
   }
-  /* line 218, C:/projects/admin/sass/_responsive.scss */
+  /* line 222, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .settings,
   .sidebar-on-right .sidebar.in .settings,
   .sidebar-on-right .sidebar.sidebar-icons.in .settings,
   .sidebar.sidebar-icons.in .settings {
     display: none;
   }
-  /* line 223, C:/projects/admin/sass/_responsive.scss */
+  /* line 227, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.sidebar-icons.in + .wrap .content,
@@ -13855,18 +13859,18 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     margin-top: 520px;
   }
 
-  /* line 228, C:/projects/admin/sass/_responsive.scss */
+  /* line 232, C:/projects/admin/sass/_responsive.scss */
   .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 233, C:/projects/admin/sass/_responsive.scss */
+  /* line 237, C:/projects/admin/sass/_responsive.scss */
   .nv-controlsWrap {
     display: none;
   }
 
-  /* line 239, C:/projects/admin/sass/_responsive.scss */
+  /* line 243, C:/projects/admin/sass/_responsive.scss */
   .logo,
   .sidebar-on-right .logo,
   .sidebar-hidden .logo {
@@ -13879,7 +13883,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
 }
 @media (max-width: 240px) {
-  /* line 250, C:/projects/admin/sass/_responsive.scss */
+  /* line 254, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;
@@ -13887,84 +13891,84 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
 }
 @media (max-width: 1200px) {
-  /* line 258, C:/projects/admin/sass/_responsive.scss */
+  /* line 262, C:/projects/admin/sass/_responsive.scss */
   .comments {
     overflow-y: scroll;
     height: 100%;
   }
 
-  /* line 263, C:/projects/admin/sass/_responsive.scss */
+  /* line 267, C:/projects/admin/sass/_responsive.scss */
   .widget.tiny {
     padding: 5px 10px;
   }
 
-  /* line 267, C:/projects/admin/sass/_responsive.scss */
+  /* line 271, C:/projects/admin/sass/_responsive.scss */
   .overview {
     padding: 0;
   }
 
-  /* line 271, C:/projects/admin/sass/_responsive.scss */
+  /* line 275, C:/projects/admin/sass/_responsive.scss */
   .box {
     font-size: 34px;
   }
 }
 @media (min-width: 1441px) {
-  /* line 277, C:/projects/admin/sass/_responsive.scss */
+  /* line 281, C:/projects/admin/sass/_responsive.scss */
   .box {
     font-size: 50px;
     line-height: 1.2em;
   }
-  /* line 281, C:/projects/admin/sass/_responsive.scss */
+  /* line 285, C:/projects/admin/sass/_responsive.scss */
   .box .description {
     font-size: 20px;
   }
 
-  /* line 288, C:/projects/admin/sass/_responsive.scss */
+  /* line 292, C:/projects/admin/sass/_responsive.scss */
   .widget.large {
     height: 400px;
   }
-  /* line 291, C:/projects/admin/sass/_responsive.scss */
+  /* line 295, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body {
     height: 365px;
   }
-  /* line 294, C:/projects/admin/sass/_responsive.scss */
+  /* line 298, C:/projects/admin/sass/_responsive.scss */
   .widget.large .body .chart {
     height: 288px;
   }
-  /* line 300, C:/projects/admin/sass/_responsive.scss */
+  /* line 304, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge {
     height: 500px;
   }
-  /* line 303, C:/projects/admin/sass/_responsive.scss */
+  /* line 307, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body {
     height: 465px;
   }
-  /* line 306, C:/projects/admin/sass/_responsive.scss */
+  /* line 310, C:/projects/admin/sass/_responsive.scss */
   .widget.xlarge .body .chart {
     height: 383px;
   }
-  /* line 312, C:/projects/admin/sass/_responsive.scss */
+  /* line 316, C:/projects/admin/sass/_responsive.scss */
   .widget.tiny {
     height: 188px;
   }
-  /* line 318, C:/projects/admin/sass/_responsive.scss */
+  /* line 322, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large {
     height: 415px;
   }
-  /* line 320, C:/projects/admin/sass/_responsive.scss */
+  /* line 324, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.large .body .chart {
     height: 267px;
   }
-  /* line 325, C:/projects/admin/sass/_responsive.scss */
+  /* line 329, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge {
     height: 515px;
   }
-  /* line 327, C:/projects/admin/sass/_responsive.scss */
+  /* line 331, C:/projects/admin/sass/_responsive.scss */
   .widget.tabs.xlarge .body .chart {
     height: 357px;
   }
 
-  /* line 335, C:/projects/admin/sass/_responsive.scss */
+  /* line 339, C:/projects/admin/sass/_responsive.scss */
   .chart-inline {
     height: 58px;
     margin-bottom: 18px;

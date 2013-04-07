@@ -124,6 +124,10 @@
 
   .sidebar{
     @include sidebar-settings;
+
+    .settings{
+      display: none;
+    }
   }
 
   .sidebar-on-right{
