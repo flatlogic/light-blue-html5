@@ -42,7 +42,7 @@ input.parsley-error{
 
 .logo{
   position: absolute;
-  left: 50px;
+  left: 55px;
   top: 20px;
   a{
     color: #ffffff;
@@ -60,12 +60,12 @@ input.parsley-error{
 
   background-color: #fff;
   position: absolute;
-  width: 180px;
+  width: 160px;
   padding: 20px 0;
   top: 0;
   color: $textColor;
   z-index: 1;
-  margin: 87px 0 0 25px;
+  margin: $sidebarTopMargin 0 0 25px;
 
   .settings{
     margin-top: 20px;
@@ -77,8 +77,6 @@ input.parsley-error{
   }
 
   &.sidebar-icons{
-    margin-left: 1.6%;
-
     @include sidebar-settings;
   }
 }
@@ -103,7 +101,7 @@ input.parsley-error{
       color: inherit;
       text-decoration: none;
       display: block;
-      padding: 10px 27px;
+      padding: 10px 20px;
     }
 
     $i: 1;
@@ -153,7 +151,7 @@ input.parsley-error{
 .sidebar-on-right{
   .sidebar{
     right: 0;
-    margin: 30px 25px 0 0;
+    margin: $sidebarTopMargin 25px 0 0;
 
     &.sidebar-icons{
       margin-right: 1.6%;
@@ -162,16 +160,29 @@ input.parsley-error{
 
   .wrap{
     margin-left: 0;
-    margin-right: 205px;
+    margin-right: $wrapMargin;
 
     &.sidebar-icons{
       margin-right: 62px;
     }
   }
+
+  .logo{
+    right: 67px;
+    left: auto;
+
+    &.sidebar-icons{
+      left: auto;
+      right: 1.6%;
+      padding-right: 5px;
+      width: 40px;
+      top: 15px;
+    }
+  }
 }
 
 .sidebar-hidden{
-  .sidebar{
+  .sidebar, .logo{
     display: none;
   }
 
@@ -190,9 +201,9 @@ input.parsley-error{
 
 
 
-/*main content lies here*/
+/*main content*/
 .wrap{
-  margin-left: 205px;
+  margin-left: $wrapMargin;
 }
 
 /*content except for header*/

@@ -123,23 +123,26 @@
   @include sidebar-icons("");
 
   .sidebar{
-    margin-left: 1.6%;
     @include sidebar-settings;
-
-    .settings{
-      display: none;
-    }
   }
 
   .sidebar-on-right{
     .sidebar{
       right: 0;
-      margin: 30px 1.6% 0 0;
+      margin: $sidebarTopMargin 1.6% 0 0;
     }
 
     .wrap{
       margin-left: 0;
       margin-right: 62px;
+    }
+
+    .logo{
+      left: auto;
+      right: 1.6%;
+      padding-right: 5px;
+      width: 40px;
+      top: 15px;
     }
   }
   .sidebar-hidden{

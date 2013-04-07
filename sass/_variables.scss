@@ -43,6 +43,8 @@ $widget-shadow: 0 0 12px $shadowGray;
 $widget-border-radius: 1px;
 $button-border-radius: 1px;
 $box-margin-bottom: 40px;
+$wrapMargin: 185px;
+$sidebarTopMargin: 87px;
 
 //$textColor: #6f6251 !default;
 $textColor: $gray !default;
@@ -128,8 +130,7 @@ $paddingLarge:          8px 18px !default; // 44px
 @mixin sidebar-icons($class){
   .sidebar#{$class}{
     width: auto;
-    padding: 20px 0;
-    margin: 87px 0 0 10px;
+    margin: $sidebarTopMargin 0 0 1.6%;
 
     h2{
       display: none;
@@ -175,6 +176,13 @@ $paddingLarge:          8px 18px !default; // 44px
       margin-left: 0;
       margin-right: 0;
     }
+  }
+
+  .logo#{$class}{
+    left: 1.6%;
+    padding-left: 5px;
+    width: 40px;
+    top: 15px;
   }
 }
 

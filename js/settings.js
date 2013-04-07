@@ -44,13 +44,9 @@ $(function(){
             }
             $sidebarSettings.html(_.template($template.html(), {sidebarState: state}));
             if (state == "auto"){
-                $(".sidebar").removeClass("sidebar-icons");
-                $(".side-nav").removeClass("sidebar-icons");
-                $(".wrap").removeClass("sidebar-icons");
+                $(".sidebar, .side-nav, .wrap, .logo").removeClass("sidebar-icons");
             } else {
-                $(".sidebar").addClass("sidebar-icons");
-                $(".side-nav").addClass("sidebar-icons");
-                $(".wrap").addClass("sidebar-icons");
+                $(".sidebar, .side-nav, .wrap, .logo").addClass("sidebar-icons");
             }
             try {
             if (window.onresize){
@@ -135,6 +131,9 @@ $(function(){
     $sidebarSettings.on("click", ".btn", function(){
         var $this = $(this),
             state = $this.data("value");
+        if (state == 'icons'){
+            closeNavigation();
+        }
         sidebarState(state);
         settingsState.sidebarState = state;
         localStorage.setItem("settings-state", JSON.stringify(settingsState));
