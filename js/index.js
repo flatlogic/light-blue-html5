@@ -20,6 +20,105 @@ nv.addGraph(function() {
     return chart;
 });
 
+var testdata = [
+    {
+        key: "One",
+        y: 5
+    },
+    {
+        key: "Two",
+        y: 7
+    }
+];
+
+nv.addGraph(function() {
+
+    var chart = nv.models.pieChart()
+        .margin({top: 0, right: 20, bottom: 20, left: 20})
+        .x(function(d) { return d.key })
+        .values(function(d) { return d })
+        .showLabels(false)
+        .showLegend(false)
+        .color(['#E5906C', $red])
+        .donut(true);
+
+    chart.pie.margin({top: 0, bottom: -20});
+    //chart.pie.donutLabelsOutside(true).donut(true);
+
+    d3.select("#visits-chart svg")
+        //.datum(historicalBarChart)
+        .datum([testdata])
+        .transition()
+        .call(chart);
+
+    return chart;
+});
+
+nv.addGraph(function() {
+
+    var chart = nv.models.pieChart()
+        .margin({top: 0, right: 20, bottom: 20, left: 20})
+        .x(function(d) { return d.key })
+        .values(function(d) { return d })
+        .showLabels(false)
+        .showLegend(false)
+        .color(['#EACF88', $orange])
+        .donut(true);
+
+    chart.pie.margin({top: 0, bottom: -20});
+    //chart.pie.donutLabelsOutside(true).donut(true);
+
+    d3.select("#test-chart svg")
+        //.datum(historicalBarChart)
+        .datum([[
+            {
+                key: "One",
+                y: 6
+            },
+            {
+                key: "Two",
+                y: 4
+            }
+        ]])
+        .transition()
+        .call(chart);
+
+    return chart;
+});
+
+nv.addGraph(function() {
+
+    var chart = nv.models.pieChart()
+        .margin({top: 0, right: 20, bottom: 20, left: 20})
+        .x(function(d) { return d.key })
+        .values(function(d) { return d })
+        .showLabels(false)
+        .showLegend(false)
+        .color(['#86BC8F', $green])
+        .donut(true);
+
+    chart.pie.margin({top: 0, bottom: -20});
+    //chart.pie.donutLabelsOutside(true).donut(true);
+
+    d3.select("#test2-chart svg")
+        //.datum(historicalBarChart)
+        .datum([[
+            {
+                key: "One",
+                y: 4
+            },
+            {
+                key: "Two",
+                y: 8
+            }
+        ]])
+        .transition()
+        .call(chart);
+
+    return chart;
+});
+
+
 nv.addGraph(function() {
     var testData = [
         {
@@ -139,4 +238,29 @@ $(function(){
     });
     drawSparkLines();
     $("input:checkbox").uniform();
+
+    $("#test2").sparkline([[5,2,3],[2,1,7],[1,1,8],[6,2,2],[7,2,1],[10,0,0],[2,2,6],[1,2,7],[0,1,9],[4,1,5],[3,1,6],[5,1,4]], {
+        type: 'bar',
+        barWidth: 8,
+        barSpacing: 3,
+        stackedBarColor: [$red,'#e5906c', '#eeeeee'],
+        width: '100%',
+        height: '50px'
+    });
+    $("#test3").sparkline([[10,0,0],[2,2,6],[5,2,3],[2,1,7],[1,1,8],[6,2,2],[7,2,1],[1,2,7],[0,1,9],[4,1,5],[3,1,6],[5,1,4]], {
+        type: 'bar',
+        barWidth: 8,
+        barSpacing: 3,
+        stackedBarColor: [$orange, '#EACF88', '#eeeeee'],
+        width: '100%',
+        height: '50px'
+    });
+    $("#test4").sparkline([[5,2,3],[7,2,1],[10,0,0],[2,2,6],[1,2,7],[2,1,7],[1,1,8],[6,2,2],[0,1,9],[4,1,5],[3,1,6],[5,1,4]], {
+        type: 'bar',
+        barWidth: 8,
+        barSpacing: 3,
+        stackedBarColor: [$green,'#86BC8F', '#eeeeee'],
+        width: '100%',
+        height: '50px'
+    });
 });
