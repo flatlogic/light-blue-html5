@@ -320,24 +320,24 @@
         Sidebar on the
         <div id="sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         Background
         <div id="background-toggle" class="btn-group" data-toggle="buttons-radio">
             <% two = background == 'two'%>
-            <button type="button" data-value="one" class="btn btn-transparent <%= two? '' : 'active' %>">One</button>
-            <button type="button" data-value="two" class="btn btn-transparent <%= two? 'active' : '' %>">Two</button>
+            <button type="button" data-value="one" class="btn btn-small btn-transparent <%= two? '' : 'active' %>">One</button>
+            <button type="button" data-value="two" class="btn btn-small btn-transparent <%= two? 'active' : '' %>">Two</button>
         </div>
     </div>
     <div class="setting clearfix">
         Sidebar
         <div id="display-sidebar-toggle" class="btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
