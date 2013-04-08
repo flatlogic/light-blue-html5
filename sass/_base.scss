@@ -1434,7 +1434,7 @@ $i: 1;
 
 .feed{
   height: 100%;
-  overflow-y: auto;
+  //overflow-y: auto;
   position: relative;
 
   .wrapper{
@@ -1669,6 +1669,14 @@ $i: 1;
 
 .widget-404-search{
   width: 600px;
+}
+
+//-----------------------------------------------------------
+//                 SLIMSCROLL OVERRIDE
+//-----------------------------------------------------------
+
+.slimScrollBar{
+  @include border-radius($baseBorderRadius !important);
 }
 
 //-----------------------------------------------------------

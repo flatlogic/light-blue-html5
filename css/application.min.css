@@ -13235,7 +13235,6 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /* line 1435, C:/projects/admin/sass/_base.scss */
 .feed {
   height: 100%;
-  overflow-y: auto;
   position: relative;
 }
 /* line 1440, C:/projects/admin/sass/_base.scss */
@@ -13527,31 +13526,40 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 }
 
 /* line 1678, C:/projects/admin/sass/_base.scss */
+.slimScrollBar {
+  -webkit-border-radius: 1px !important;
+  -moz-border-radius: 1px !important;
+  -ms-border-radius: 1px !important;
+  -o-border-radius: 1px !important;
+  border-radius: 1px !important;
+}
+
+/* line 1686, C:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1682, C:/projects/admin/sass/_base.scss */
+/* line 1690, C:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 1686, C:/projects/admin/sass/_base.scss */
+/* line 1694, C:/projects/admin/sass/_base.scss */
 .well-white {
   background: #ffffff;
 }
 
-/* line 1690, C:/projects/admin/sass/_base.scss */
+/* line 1698, C:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1694, C:/projects/admin/sass/_base.scss */
+/* line 1702, C:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1698, C:/projects/admin/sass/_base.scss */
+/* line 1706, C:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
