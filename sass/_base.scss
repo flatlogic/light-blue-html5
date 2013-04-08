@@ -1429,6 +1429,65 @@ $i: 1;
 }
 
 //-----------------------------------------------------------
+//                 FEED
+//-----------------------------------------------------------
+
+.feed{
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+
+  .wrapper{
+    position: relative;
+  }
+
+  .vertical-line{
+    height: 100%;
+    width: 2px;
+    background: #ffffff;
+    position: absolute;
+    left: 13px;
+  }
+}
+
+.feed-item{
+  @include clearfix;
+  .icon{
+    position: relative;
+    z-index: 1;
+    background: white;
+    text-align: center;
+    color: darken($lightGray, 10%);
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    @include border-radius(20px);
+    font-size: 16px;
+
+    img{
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.feed-item + .feed-item{
+  margin-top: 10px;
+}
+
+.feed-item-body{
+  padding-top: 3px;
+  margin-left: 40px;
+  vertical-align: bottom;
+
+  .time{
+    font-size: $fontSizeSmall;
+    line-height: 1.5em;
+  }
+}
+
+//-----------------------------------------------------------
 //                 TABLES
 //-----------------------------------------------------------
 
