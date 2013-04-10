@@ -311,7 +311,7 @@ input.parsley-error{
     height: 446px;
   }
 
-  header{
+  & > header{
     position: relative;
     background: none;
 
@@ -334,7 +334,7 @@ input.parsley-error{
     }
   }
 
-  footer{
+  & > footer{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -851,92 +851,66 @@ input.parsley-error{
 //                 CHAT
 //-----------------------------------------------------------
 
-.chat{
+.chat-messages{
+  padding-right: 15px; //some space for scroll
+}
+
+.chat-footer{
+  height: 40px;
+  @include box-sizing(border-box);
+  padding-top: 10px;
+  input{
+    margin-bottom: 0;
+  }
+}
+
+.chat-message{
+  @include clearfix;
+  .icon{
+    position: relative;
+    z-index: 1;
+    background: white;
+    text-align: center;
+    color: darken($lightGray, 10%);
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    vertical-align: middle;
+    @include border-radius(48px);
+
+    img{
+      position: relative;
+      top: -2px;
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .time{
+    font-size: $fontSizeSmall;
+    line-height: 1.5em;
+    text-align: center;
+  }
+}
+
+.chat-message + .chat-message{
   margin-top: 10px;
-  position: relative;
-  height: 100%;
+}
 
-  .controls{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 20px 5px;
+.chat-message-body{
+  margin-left: 60px;
+  padding: 10px;
+  background: #ffffff;
+  font-size: $fontSizeSmall;
+  @include border-radius($baseBorderRadius);
 
-    form, label, input{
-      margin-bottom: 0;
-    }
-
-    .new-message{
-      display: block;
-      width: 100%;
-      margin: 0;
-      height: auto;
-      @include box-sizing(border-box);
-
-      &:focus + .smile{
-        color: rgba($blue, .6);
-        @include transition(color .2s);
-      }
-    }
-
-    .smile{
-      position: absolute;
-      right: 30px;
-      top: 27px;
-      font-size: 24px;
-      color: rgba($textColor, .5);
-      @include transition(color .2s);
-    }
+  &.on-left{
+    margin-left: 0;
+    margin-right: 60px;
   }
 
-  .messages{
-    overflow-y: scroll;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 62px;  // footer height
-  }
-
-  .message{
-    margin-bottom: 10px;
-
-    padding: 0 5px;
-
-    &:last-child{
-      margin-bottom: 0;
-    }
-    &.from-me{
-      border-left: 5px solid $green;
-      padding-left: 0;
-    }
-    &:not(.from-me){
-      border-left: 5px solid $orange;
-      padding-left: 0;
-    }
-
-    .name, .time{
-      text-align: center;
-    }
-
-    .name{
-      font-weight: 700;
-
-      a{
-        color: $textColor;
-      }
-    }
-    .time{
-      line-height: 1em;
-      font-weight: 600;
-      color: desaturate($textColor, 10%);
-      font-size: 10px;
-    }
-
-    .text{
-      font-size: 13px;
-    }
+  .sender{
+    font-weight: 600;
   }
 }
 

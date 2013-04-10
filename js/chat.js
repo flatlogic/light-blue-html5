@@ -41,7 +41,7 @@ $(function(){
 
     var MessageView = Backbone.View.extend({
 
-        className: 'message from-me',
+        className: 'chat-message',
 
         template: _.template($('#message-template').html()),
 
@@ -59,10 +59,11 @@ $(function(){
 
     var AppView = Backbone.View.extend({
 
-        el: $("#chat-app"),
+        el: $("#chat"),
 
         events: {
-            "keypress #new-message":  "createOnEnter"
+            "keypress #new-message":  "createOnEnter",
+            "click #new-message-btn": "createOnClick"
         },
 
         initialize: function() {
@@ -77,7 +78,7 @@ $(function(){
 
         addOne: function(message) {
             var view = new MessageView({model: message});
-            this.$("#messages-view").append(view.render().el);
+            this.$("#chat-messages").append(view.render().el);
         },
 
         createOnEnter: function(e) {
@@ -88,7 +89,19 @@ $(function(){
                 Messages.create({text: this.input.val()});
                 this.input.val('');
 
-                var view = this.$("#messages-view")[0];
+                var view = this.$("#chat-messages")[0];
+                view.scrollTop = view.scrollHeight;
+            }
+        },
+
+        createOnClick: function(e) {
+            if (Messages.length < 10){
+                if (!this.input.val()) return;
+
+                Messages.create({text: this.input.val()});
+                this.input.val('');
+
+                var view = this.$("#chat-messages")[0];
                 view.scrollTop = view.scrollHeight;
             }
         }

@@ -165,5 +165,11 @@ $(function(){
         size: '5px',
         alwaysVisible: true
     });
+
+    $("#chat-messages").slimscroll({
+        height: '240px',
+        size: '5px',
+        alwaysVisible: true
+    });
 });
 

@@ -139,7 +139,7 @@
     </header>
     <div class="content container-fluid">
         <div class="row-fluid">
-            <div class="span5">
+            <div class="span5 offset1">
                 <section class="widget large light-gray">
                     <header>
                         <h5>
@@ -247,6 +247,106 @@
                     </div>
                 </section>
             </div>
+            <div class="span5">
+                <section class="widget large light-gray">
+                    <header>
+                        <h5>
+                            <i class="eicon-chat"></i>
+                            Chat
+                        </h5>
+                    </header>
+                    <div class="body">
+                        <div id="chat" class="chat">
+                            <div id="chat-messages" class="chat-messages">
+                                <div class="chat-message">
+                                    <div class="sender pull-left">
+                                        <div class="icon">
+                                            <img src="img/2.jpg" class="img-circle">
+                                        </div>
+                                        <div class="time">
+                                            4 min
+                                        </div>
+                                    </div>
+                                    <div class="chat-message-body">
+                                        <div class="sender">Bobby Moloney</div>
+                                        <div class="text">
+                                            Hey Sam, how is it going?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="sender pull-right">
+                                        <div class="icon">
+                                            <img src="img/1.jpg" class="img-circle">
+                                        </div>
+                                        <div class="time">
+                                            3 min
+                                        </div>
+                                    </div>
+                                    <div class="chat-message-body on-left">
+                                        <div class="sender">Sam Bore</div>
+                                        <div class="text">
+                                            Pretty good. Doing my homework..
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="sender pull-left">
+                                        <div class="icon">
+                                            <img src="img/2.jpg" class="img-circle">
+                                        </div>
+                                        <div class="time">
+                                            2 min
+                                        </div>
+                                    </div>
+                                    <div class="chat-message-body">
+                                        <div class="sender">Bobby Moloney</div>
+                                        <div class="text">
+                                            Any chance to go out?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="sender pull-right">
+                                        <div class="icon">
+                                            <img src="img/1.jpg" class="img-circle">
+                                        </div>
+                                        <div class="time">
+                                            2 min
+                                        </div>
+                                    </div>
+                                    <div class="chat-message-body on-left">
+                                        <div class="sender">Sam Bore</div>
+                                        <div class="text">
+                                            .. Maybe 40-50 mins. I don't know exactly
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-message">
+                                    <div class="sender pull-left">
+                                        <div class="icon">
+                                            <img src="img/2.jpg" class="img-circle">
+                                        </div>
+                                        <div class="time">
+                                            1 min
+                                        </div>
+                                    </div>
+                                    <div class="chat-message-body">
+                                        <div class="sender">Bobby Moloney</div>
+                                        <div class="text">
+                                            Anyway sound great!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="chat-footer controls-row">
+                                <input id="new-message" type="text" class="span10" placeholder="Enter your message..">
+                                <button type="button" id="new-message-btn" class="btn btn-primary span2">Send</button>
+                            </footer>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 </div>
@@ -334,21 +434,20 @@
 </script>
 
 <script type="text/template" id="message-template">
-    <div class="row-fluid">
-        <div class="span2">
-            <div class="name">
-                <a href="#">Vitaut</a>
+        <div class="sender pull-left">
+            <div class="icon">
+                <img src="img/2.jpg" class="img-circle">
             </div>
             <div class="time">
-                5:33AM
+                just now
             </div>
         </div>
-        <div class="span10">
+        <div class="chat-message-body">
+            <div class="sender">Bobby Moloney</div>
             <div class="text">
-                <p><%- text %></p>
+                <%- text %>
             </div>
         </div>
-    </div>
 </script>
 
 <script type="text/template" id="settings-template">
