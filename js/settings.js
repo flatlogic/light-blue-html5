@@ -27,13 +27,10 @@ $(function(){
         backgroundStyle = function(style){
             if (style == "ocean"){
                 $body.removeClass("background-morning").addClass("background-ocean");
-                $(".light-brown").removeClass("light-brown").addClass("light-blue");
             } else if (style == "morning"){
                 $body.removeClass("background-ocean").addClass("background-morning");
-                $(".light-brown").removeClass("light-brown").addClass("light-blue");
             } else {
                 $body.removeClass("background-ocean background-morning");
-                $(".light-blue").removeClass("light-blue").addClass("light-brown");
             }
         },
         sidebarState = function(state){
