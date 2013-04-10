@@ -4,7 +4,7 @@ $(function(){
         $sidebarSettings = $("#sidebar-settings"),
         settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
             sidebar: 'left',
-            background: 'two',
+            background: 'ocean',
             sidebarState: 'auto',
             displaySidebar: true
         },
@@ -25,16 +25,15 @@ $(function(){
             }
         },
         backgroundStyle = function(style){
-            if (style == "two"){
-                $body.addClass("background-two");
+            if (style == "ocean"){
+                $body.removeClass("background-morning").addClass("background-ocean");
                 $(".light-brown").removeClass("light-brown").addClass("light-blue");
-                $(".light-brown-color").removeClass("light-brown-color").addClass("light-blue-color");
-                $(".dark-brown").removeClass("dark-brown").addClass("dark-blue");
+            } else if (style == "morning"){
+                $body.removeClass("background-ocean").addClass("background-morning");
+                $(".light-brown").removeClass("light-brown").addClass("light-blue");
             } else {
-                $body.removeClass("background-two");
+                $body.removeClass("background-ocean background-morning");
                 $(".light-blue").removeClass("light-blue").addClass("light-brown");
-                $(".light-blue-color").removeClass("light-blue-color").addClass("light-brown-color");
-                $(".dark-blue").removeClass("dark-blue").addClass("dark-brown");
             }
         },
         sidebarState = function(state){

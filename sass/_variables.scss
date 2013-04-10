@@ -155,12 +155,19 @@ $paddingLarge:          8px 18px !default; // 44px
       i[class*=icon]{
         margin-right: 0;
         float: none;
+        color: $textColor;
       }
     }
 
     .name{
       display: none;
     }
+  }
+
+  .sidebar-on-right .side-nav#{$class} > li.active > a,
+  .side-nav#{$class} > li.active > a{
+    border-left: none;
+    border-right: none;
   }
 
   .wrap#{$class}{

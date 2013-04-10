@@ -91,6 +91,7 @@ input.parsley-error{
     i[class*=icon]{
       margin-right: 3px;
       line-height: 20px;
+      color: lighten($textColor, 10%);
     }
 
     a:hover, a:focus{
@@ -104,25 +105,15 @@ input.parsley-error{
       padding: 10px 20px;
     }
 
-    $i: 1;
-    @each $color in $colors{
-
-      &.#{nth($color_names, $i)}{
-
-        &.active > a{
-          color: #{$color};
-        }
-
-        a.accordion-toggle:not(.collapsed){
-          color: #{$color};
-
-          & + .accordion-body li.active a{
-            color: #{$color};
-          }
-        }
-      }
-      $i: $i + 1;
+    a.accordion-toggle:not(.collapsed) + .accordion-body li.active a{
+      background: $lightGray;
     }
+  }
+
+  & > li.active > a{
+    border-left: 4px solid $blue;
+    padding-left: 16px;
+    background: $lightGray;
   }
 
   .accordion-body li a{
@@ -152,6 +143,14 @@ input.parsley-error{
     &.sidebar-icons{
       margin-right: 1.6%;
     }
+  }
+
+  .side-nav > li.active > a{
+    border-left: none;
+    border-right: 4px solid $blue;
+    padding-left: 20px;
+    padding-right: 16px;
+    background: $lightGray;
   }
 
   .wrap{
@@ -561,19 +560,16 @@ input.parsley-error{
 
     .btn-group{
       margin-top: 0;
-      float: right;
     }
   }
 }
 
 .setting{
-  margin-bottom: 5px;
-  line-height: 30px;
-  vertical-align: middle;
   font-weight: 400;
-  &:last-child{
-    margin-bottom: 0;
-  }
+}
+
+.setting + .setting{
+  margin-top: 5px;
 }
 
 .popover.user-info{
@@ -808,6 +804,7 @@ input.parsley-error{
       line-height: 20px;
       border-radius: 50%;
       background: rgba(0,0,0,.2);
+      vertical-align: middle;
 
       i{
         position: relative;
