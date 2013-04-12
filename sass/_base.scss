@@ -1,6 +1,16 @@
 @include sidebar-icons(".sidebar-icons");
 
 $i: 1;
+@each $color in $colors{
+
+  .#{nth($color_names, $i)}{
+    background: #{$color} !important;
+    color:  #ffffff !important;
+  }
+  $i: $i + 1;
+}
+
+$i: 1;
 @each $color in $light_colors{
 
   .light-#{nth($light_color_names, $i)}{
@@ -83,7 +93,6 @@ input.parsley-error{
 
 .side-nav{
   margin: 0;
-  font-weight: 400;
 
   li{
     list-style: none;
@@ -226,15 +235,6 @@ input.parsley-error{
   margin-bottom: $box-margin-bottom;
   text-shadow: 0 1px 1px gray;
 
-  $i: 1;
-  @each $color in $colors{
-
-    &.#{nth($color_names, $i)}{
-      background: #{$color};
-    }
-    $i: $i + 1;
-  }
-
   .description{
     color: inherit;
     font-weight: 400;
@@ -359,15 +359,6 @@ input.parsley-error{
     background: rgba(white, 0.9);
   }
 
-  $i: 1;
-  @each $color in $colors{
-
-    &.#{nth($color_names, $i)}{
-      background: #{$color};
-      color:  #ffffff;
-    }
-    $i: $i + 1;
-  }
 }
 
 //-----------------------------------------------------------
@@ -375,21 +366,13 @@ input.parsley-error{
 //-----------------------------------------------------------
 
 .stat-widget{
+  height: 315px;
+
   header{
     margin: -15px -15px 0;
-    height: 33.33%;
+    height: 110px;
     @include box-sizing(border-box);
     @include box-shadow(0 1px 1px #888);
-
-    $i: 1;
-    @each $color in $colors{
-
-      &.#{nth($color_names, $i)}{
-        background: #{$color};
-        color:  #ffffff;
-      }
-      $i: $i + 1;
-    }
   }
 
   .nvtooltip{
@@ -412,6 +395,52 @@ input.parsley-error{
       font-size: $baseFontSize;
       letter-spacing: 0;
     }
+  }
+}
+
+.stat-widget-body{
+  margin-top: 20px;
+
+  .most-from, .time-period{
+    font-size: $fontSizeSmall;
+  }
+
+  .value{
+    font-size: $fontSizeLarge;
+  }
+
+  .details{
+    margin-top: 20px;
+  }
+
+  .detail{
+    padding: 8px 5px 7px;
+    @include border-radius($baseBorderRadius);
+
+    .value{
+      font-weight: 600;
+    }
+  }
+}
+
+.stat-widget-additional{
+  margin-top: 15px;
+  .sparkline{
+    margin-top: 5px;
+    padding-right: 10px;
+  }
+
+  .change{
+    @include box-sizing(border-box);
+    @include border-radius($baseBorderRadius);
+    height: 40px;
+    width: 80%;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 5px;
+    font-size: $fontSizeLarge;
+    font-weight: 600;
+    vertical-align: middle;
   }
 }
 

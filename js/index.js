@@ -80,6 +80,45 @@ nv.addGraph(function() {
 });
 
 $(function(){
+    /* Sparklines can also take their values from the first argument
+     passed to the sparkline() function */
+    function randomValue(){
+        return Math.floor( Math.random() * 40 );
+    }
+    var values = [[],[],[],[],[],[]],
+        options = {
+            width: '80%',
+            height: '40px',
+            lineColor: $blue,
+            fillColor: 'white',
+            lineWidth: '2',
+            spotRadius: '2',
+            maxSpotColor: $gray,
+            minSpotColor: $gray,
+            spotColor: $gray,
+            highlightLineColor: $gray,
+            highlightSpotColor: $gray
+        };
+    for (var i = 0; i < values.length; i++){
+        values[i] = [10 + randomValue(), 15 + randomValue(), 20 + randomValue(), 15 + randomValue(), 25 + randomValue(),
+            25 + randomValue(), 30 + randomValue(), 30 + randomValue(), 40 + randomValue()]
+    }
+
+    function drawSparkLines(){
+        var i = 0;
+        $('.sparkline').each(function(){
+            $(this).sparkline(values[i], options );
+            i++;
+        });
+    }
+    var sparkResize;
+
+    $(window).resize(function(e) {
+        clearTimeout(sparkResize);
+        sparkResize = setTimeout(drawSparkLines, 200);
+    });
+    drawSparkLines();
+
     $("input:checkbox").uniform();
 
     // Notification link click handler.

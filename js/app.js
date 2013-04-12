@@ -11,7 +11,8 @@ var $lime = "#8CBF26",
     $purple = "#A700AE",
     $brown = "#A05000",
     $teal = "#4ab0ce",
-    $textColor = "#666";
+    $gray = "#666",
+    $textColor = $gray;
 
 //turn off charts is needed
 var chartsOff = false;
