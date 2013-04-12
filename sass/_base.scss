@@ -1106,7 +1106,7 @@ input.parsley-error{
   text-shadow: none;
   @include box-shadow(none);
 
-  &:hover{
+  &:hover, &.active:hover{
     background: rgba(darken($textColor, 20%), .5);
     color: #ffffff;
   }

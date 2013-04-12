@@ -1,10 +1,10 @@
 nv.addGraph(function() {
     var chart = nv.models.multiBarChart()
-        .margin({top: 25, bottom: 5, left: 15, right: 15})
-        .showLegend(false)
-        .showControls(false)
-        .ticks(false)
-        .color(['#ffffff'])
+            .margin({top: 25, bottom: 5, left: 15, right: 15})
+            .showLegend(false)
+            .showControls(false)
+            .ticks(false)
+            .color(['#ffffff'])
         ;
 
     chart.yAxis
@@ -16,9 +16,7 @@ nv.addGraph(function() {
         .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
 
     d3.select('#visits svg')
-        //.datum(sinAndCos())
-        .datum(testData(['Search'],
-            25))
+        .datum(testData(['Visits'], 25))
         .transition().duration(500)
         .call(chart);
 
@@ -44,10 +42,8 @@ nv.addGraph(function() {
         .showMaxMin(false)
         .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
 
-    d3.select('#cs svg')
-        //.datum(sinAndCos())
-        .datum(testData(['Search'],
-            25))
+    d3.select('#orders svg')
+        .datum(testData(['Orders'], 25))
         .transition().duration(500)
         .call(chart);
 
@@ -73,10 +69,8 @@ nv.addGraph(function() {
         .showMaxMin(false)
         .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
 
-    d3.select('#bb svg')
-        //.datum(sinAndCos())
-        .datum(testData(['Search'],
-            25))
+    d3.select('#traffic svg')
+        .datum(testData(['Traffic'], 25))
         .transition().duration(500)
         .call(chart);
 
