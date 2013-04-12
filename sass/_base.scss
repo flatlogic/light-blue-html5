@@ -371,6 +371,51 @@ input.parsley-error{
 }
 
 //-----------------------------------------------------------
+//                 STATS
+//-----------------------------------------------------------
+
+.stat-widget{
+  header{
+    margin: -15px -15px 0;
+    height: 33.33%;
+    @include box-sizing(border-box);
+    @include box-shadow(0 1px 1px #888);
+
+    $i: 1;
+    @each $color in $colors{
+
+      &.#{nth($color_names, $i)}{
+        background: #{$color};
+        color:  #ffffff;
+      }
+      $i: $i + 1;
+    }
+  }
+
+  .nvtooltip{
+    color: $textColor;
+  }
+
+  .chart-info{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    z-index: 0;
+    line-height: 1em;
+
+    .total{
+      font-size: $fontSizeLarge;
+      letter-spacing: 1px;
+    }
+
+    .percentage{
+      font-size: $baseFontSize;
+      letter-spacing: 0;
+    }
+  }
+}
+
+//-----------------------------------------------------------
 //                 CHARTS
 //-----------------------------------------------------------
 
