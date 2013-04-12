@@ -85,11 +85,10 @@ $(function(){
     function randomValue(){
         return Math.floor( Math.random() * 40 );
     }
-    var values = [[],[],[],[],[],[]],
+    var values = [[],[],[]],
         options = {
             width: '80%',
             height: '40px',
-            lineColor: $blue,
             fillColor: 'white',
             lineWidth: '2',
             spotRadius: '2',
@@ -105,11 +104,12 @@ $(function(){
     }
 
     function drawSparkLines(){
-        var i = 0;
-        $('.sparkline').each(function(){
-            $(this).sparkline(values[i], options );
-            i++;
-        });
+        options.lineColor = $blue;
+        $('#growth-rate').sparkline(values[0], options );
+        options.lineColor = $green;
+        $('#conversion-rate').sparkline(values[1], options );
+        options.lineColor = $orange;
+        $('#test').sparkline(values[2], options );
     }
     var sparkResize;
 

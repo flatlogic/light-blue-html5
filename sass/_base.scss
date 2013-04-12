@@ -415,6 +415,14 @@ input.parsley-error{
 
   .value{
     font-size: $fontSizeLarge;
+
+    a{
+      color: inherit;
+
+      i{
+        font-size: small;
+      }
+    }
   }
 
   .details{
@@ -442,7 +450,7 @@ input.parsley-error{
     @include box-sizing(border-box);
     @include border-radius($baseBorderRadius);
     height: 40px;
-    width: 80%;
+    width: 70%;
     line-height: 40px;
     text-align: center;
     margin-top: 5px;
