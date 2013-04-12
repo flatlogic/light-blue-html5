@@ -54,12 +54,3 @@ svg text {
 .nvd3 .nv-axis line.zero{
   display: none;
 }
-
-.nv-legend text{
-  fill: adjust-lightness($textColor, -10%);
-  stroke-opacity: .9;
-}
-
-.nv-legend circle{
-  fill: adjust-lightness($textColor, -10%);
-}

@@ -17,7 +17,7 @@ nv.addGraph(function() {
 
     d3.select('#visits svg')
         .datum(testData(['Visits'], 25))
-        .transition().duration(500)
+        .transition()
         .call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -44,7 +44,7 @@ nv.addGraph(function() {
 
     d3.select('#orders svg')
         .datum(testData(['Orders'], 25))
-        .transition().duration(500)
+        .transition()
         .call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -71,6 +71,32 @@ nv.addGraph(function() {
 
     d3.select('#traffic svg')
         .datum(testData(['Traffic'], 25))
+        .transition()
+        .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+});
+
+nv.addGraph(function() {
+    var chart = nv.models.lineChart()
+        .margin({top: 0, bottom: 25, left: 25, right: 0})
+        //.showLegend(false)
+        .color([$blue, $green, $orange]);
+
+    chart.legend.margin({top: 3});
+
+    chart.yAxis
+        .showMaxMin(false)
+        .tickFormat(d3.format(',.f'));
+
+    chart.xAxis
+        .showMaxMin(false)
+        .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
+
+    d3.select('#visits-chart svg')
+        .datum(testData(['Visits', 'Unique', 'Pages'], 50))
         .transition().duration(500)
         .call(chart);
 

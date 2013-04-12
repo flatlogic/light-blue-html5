@@ -98,9 +98,9 @@ input.parsley-error{
     list-style: none;
 
     i[class*=icon]{
-      margin-right: 3px;
       line-height: 20px;
       color: lighten($textColor, 10%);
+      float: right;
     }
 
     a:hover, a:focus{
@@ -279,10 +279,6 @@ input.parsley-error{
 
     .body{
       height: 280px;
-
-      .chart{
-        height: 212px;
-      }
     }
   }
 
@@ -291,10 +287,6 @@ input.parsley-error{
 
     .body{
       height: 380px;
-
-      .chart{
-        height: 298px;
-      }
     }
   }
 
@@ -319,14 +311,6 @@ input.parsley-error{
 
   .body{
     margin-top: 15px;
-
-    .chart{
-      height: 60%;
-      &.pie{
-        margin-left: -15px;
-        margin-right: -15px;
-      }
-    }
   }
 
   & > footer{
@@ -426,21 +410,23 @@ input.parsley-error{
   }
 
   .details{
-    margin-top: 20px;
+    margin-top: 18px;
   }
 
   .detail{
     padding: 8px 5px 7px;
     @include border-radius($baseBorderRadius);
+    cursor: pointer;
+    background: darken($lightGray, 1%);
 
     .value{
-      font-weight: 600;
+      font-weight: 400;
     }
   }
 }
 
 .stat-widget-additional{
-  margin-top: 15px;
+  margin-top: 17px;
   .sparkline{
     margin-top: 5px;
     padding-right: 10px;
@@ -455,8 +441,9 @@ input.parsley-error{
     text-align: center;
     margin-top: 5px;
     font-size: $fontSizeLarge;
-    font-weight: 600;
+    font-weight: 400;
     vertical-align: middle;
+    cursor: pointer;
   }
 }
 
@@ -465,15 +452,12 @@ input.parsley-error{
 //-----------------------------------------------------------
 
 
-.chart-inline{
-  margin-bottom: 12px;
-  height: 44px;
+.large .pie-chart{
+  height: 212px;
+}
 
-  .info{
-    padding: 4px 0;
-    text-align: right;
-    font-weight: 700;
-  }
+.xlarge .pie-chart{
+  height: 298px;
 }
 
 .pie-chart{

@@ -207,15 +207,8 @@ nv.addGraph(function() {
     return chart;
 });
 
-var data = [{
-    "key": "Realtime something :)",
-    "area": true,
-    "values": getData()
-}];
-var chart;
-
 nv.addGraph(function () {
-    chart = nv.models.lineChart()
+    var chart = nv.models.lineChart()
         .margin({top: 0, bottom: 40, left: 40, right: 0})
         .color(keyColor)
         .showLegend(false);
