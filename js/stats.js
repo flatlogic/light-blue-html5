@@ -85,7 +85,6 @@ nv.addGraph(function() {
         .data(testData)
         .enter().append("div")
         .classed("control", true)
-        .classed("one-fourth", true)
         .style("border-top", function(d, i){
             return "3px solid " + COLOR_VALUES[i];
         })

@@ -1,3 +1,14 @@
+function triggerChartsResize(){
+    try {
+        if (window.onresize){
+            window.onresize();
+        }
+    } catch (e){
+        //just swallow it
+    }
+    $(window).trigger('resize');
+}
+
 $(function(){
     //settings
     var $settings = $("#settings"),
@@ -33,8 +44,9 @@ $(function(){
                 $body.removeClass("background-ocean background-morning");
             }
         },
-        sidebarState = function(state){
+        sidebarState = function(state, triggerResize){
             var $template = $('#sidebar-settings-template');
+            triggerResize = !!triggerResize;
             if (!$template[0]){
                 return;
             }
@@ -44,34 +56,27 @@ $(function(){
             } else {
                 $(".sidebar, .side-nav, .wrap, .logo").addClass("sidebar-icons");
             }
-            try {
-            if (window.onresize){
-                window.onresize();
-            }
-            } catch (e){
-                //just swallow it
+            if (triggerResize){
+                triggerChartsResize();
             }
 
         },
-        displaySidebar = function(display){
+        displaySidebar = function(display, triggerResize){
+            triggerResize = !!triggerResize;
             if (display == true){
                 $body.removeClass("sidebar-hidden")
             } else {
                 $body.addClass("sidebar-hidden")
             }
-            try {
-                if (window.onresize){
-                    window.onresize();
-                }
-            } catch (e){
-                //just swallow it
+            if (triggerResize){
+                triggerChartsResize();
             }
         };
 
     sidebarSide(settingsState.sidebar);
     backgroundStyle(settingsState.background);
-    sidebarState(settingsState.sidebarState);
-    displaySidebar(settingsState.displaySidebar);
+    sidebarState(settingsState.sidebarState, false);
+    displaySidebar(settingsState.displaySidebar, false);
 
     if (!$settings[0]){
         return;

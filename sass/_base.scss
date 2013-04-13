@@ -287,6 +287,15 @@ input.parsley-error{
     height: 446px;
   }
 
+  &.transparent{
+    background: transparent;
+    @include box-shadow(none);
+  }
+
+  &.adaptive-background{
+    background: rgba(white, 0.9);
+  }
+
   & > header{
     position: relative;
     background: none;
@@ -323,19 +332,6 @@ input.parsley-error{
   .chart{
     height: 100%;
   }
-}
-
-.widget, .bar{
-
-  &.transparent{
-    background: transparent;
-    @include box-shadow(none);
-  }
-
-  &.adaptive-background{
-    background: rgba(white, 0.9);
-  }
-
 }
 
 //-----------------------------------------------------------
@@ -487,25 +483,21 @@ input.parsley-error{
     font-weight: 400;
     padding: 3px 2%;
     color: lighten($textColor, 10%);
-    width: 29%;
+    width: 20.625%;
     cursor: pointer;
     @include user-select(none);
-
-    &.one-fourth{
-      width: 20.625%;
-    }
 
     margin-left: 0.5%;
 
     float:left;
 
     &:first-child{
-      border-bottom-left-radius: 2px;
+      border-bottom-left-radius: $baseBorderRadius;
       margin-left: 0;
     }
 
     &:last-child{
-      border-bottom-right-radius: 2px;
+      border-bottom-right-radius: $baseBorderRadius;
     }
 
     &.disabled{
@@ -546,7 +538,7 @@ input.parsley-error{
       & > a, & > a:visited{
         width: 45px;
         padding: 0;
-        font-size: $fontSizeNavIcons;
+        font-size: $baseFontSize * 1.6;
 
         &:hover{
           color: white;
@@ -717,111 +709,6 @@ input.parsley-error{
     position: static;
     margin: 1px 0 1px 2px;
   }
-}
-
-//-----------------------------------------------------------
-//                 TODO APPLICATION
-//-----------------------------------------------------------
-
-.todo-app{
-  height: 100%;
-  position: relative;
-
-  .new-todo{
-    display: block;
-    width: 100%;
-    margin: 0;
-    height: auto;
-    @include box-sizing(border-box);
-  }
-
-  li {
-    position: relative;
-    padding-bottom: 5px;
-    margin-bottom: 1px;
-
-    &.done label {
-      color: #777777;
-      text-decoration: line-through;
-    }
-
-    .edit {
-      display: none;
-    }
-
-    .view{
-
-
-      label {
-        position: absolute;
-        left: 35px;
-        right: 0;
-        top: 4px;
-        text-overflow: ellipsis;
-        white-space:nowrap;
-        overflow:hidden;
-      }
-    }
-
-    &.editing {
-      border-bottom: none;
-      margin-top: -1px;
-      padding: 0;
-
-      &:last-child {
-        margin-bottom: -1px;
-      }
-
-      .edit {
-        display: block;
-        width: 100%;
-        margin: 0;
-        height: auto;
-        @include box-sizing(border-box);
-        padding: 4px 24px;
-      }
-
-      .view {
-        display: none;
-      }
-
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    &:hover .destroy{
-      //display: block;
-      opacity: 1.0;
-      @include transition( opacity .2s );
-    }
-  }
-
-  .destroy {
-    position: absolute;
-    opacity: 0;
-    @include transition( opacity .2s );
-    color: inherit;
-    text-decoration: none;
-    right: 5px;
-    top: 2px;
-    //display: none;
-    cursor: pointer;
-  }
-
-  footer {
-    padding: 5px 5%;
-  }
-
-  .mark-all{
-
-  }
-}
-
-.todos{
-  padding-top: 5px;
-  height: 205px;
 }
 
 //-----------------------------------------------------------
@@ -1010,75 +897,6 @@ input.parsley-error{
       margin-left: 5px;
     }
   }
-}
-
-//-----------------------------------------------------------
-//                 MEDIA
-//-----------------------------------------------------------
-
-.media-heading{
-  font-weight: 600;
-
-  .twitter{
-    color: rgba($textColor, .7);
-  }
-}
-
-.media{
-  .actions{
-    position: static;
-    margin-right: 10px;
-    opacity: 0;
-    @include transition(opacity .2s);
-  }
-
-  li{
-    float: left;
-    margin-left: 10px;
-  }
-
-  p{
-    margin-bottom: 0;
-  }
-
-  .time{
-    font-weight: 600;
-    color: rgba($textColor, .8);
-    font-size: 13px;
-  }
-
-  .pull-left{
-    margin-right: 0;
-  }
-}
-
-.media-content{
-  border-left: 3px solid $blue;
-  padding-left: 10px;
-  position: relative;
-  margin-left: 10px;
-  font-size: 14px;
-
-  &:hover .actions{
-    @include transition(opacity .2s);
-    opacity: 1;
-  }
-
-  .arrow{
-    display: block;
-    position: absolute;
-    top: 25px;
-    left: -7px;
-    width: 0;
-    height: 0;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
-    border-right: 4px solid $blue;
-  }
-}
-
-.media-body{
-  //margin-left: 100px;
 }
 
 //-----------------------------------------------------------
@@ -1417,7 +1235,7 @@ $i: 1;
 }
 
 //-----------------------------------------------------------
-//                 Events
+//                 EVENTS
 //-----------------------------------------------------------
 
 .external-event {
