@@ -68,29 +68,12 @@
 
   background-color: #fff;
   position: absolute;
-  width: 180px;
+  width: 160px;
   padding: 20px 0;
   top: 0;
   color: $textColor;
   z-index: 1;
-  margin: 80px 0 0 25px;
-
-  h2{
-    color: inherit;
-    font-size: 30px;
-    padding-left: 30px;
-  }
-
-  .brand{
-    font-size: 30px;
-    text-shadow: none;
-    color: $textColor;
-    font-weight: 300;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    margin-bottom: 35px;
-  }
+  margin: 112px 0 0 25px;
 
   .settings{
     margin-top: 20px;
@@ -103,47 +86,37 @@
 }
 
 .side-nav{
-  font-size: 14px;
   margin: 0;
-  font-weight: 600;
 
   li{
     list-style: none;
 
     i[class*=icon]{
-      margin-right: 5px;
+      line-height: 20px;
+      color: lighten($textColor, 10%);
+      float: right;
+    }
+
+    a:hover, a:focus{
+      background: darken($lightGray,1%);
     }
 
     a{
       color: inherit;
       text-decoration: none;
       display: block;
-      padding: 18px 30px;
+      padding: 10px 20px;
     }
 
-    $i: 1;
-    @each $color in $colors{
-
-      &.#{nth($color_names, $i)}{
-
-        &.active > a{
-          color: #{$color};
-        }
-
-        a:hover {
-          color: #{$color};
-        }
-
-        a.accordion-toggle:not(.collapsed){
-          color: #{$color};
-
-          & + .accordion-body li.active a{
-            color: #{$color};
-          }
-        }
-      }
-      $i: $i + 1;
+    a.accordion-toggle:not(.collapsed) + .accordion-body li.active a{
+      background: darken($lightGray,1%);
     }
+  }
+
+  & > li.active > a{
+    border-left: 4px solid $blue;
+    padding-left: 16px;
+    background: darken($lightGray,1%);
   }
 
   .accordion-body li a{
@@ -154,7 +127,7 @@
     padding-left: 40px;
 
     &:hover, &:focus{
-      background: $lightGray;
+      background: darken($lightGray,1%);
     }
   }
 
