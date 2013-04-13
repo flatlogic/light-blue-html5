@@ -46,7 +46,7 @@ $(function(){
         },
         sidebarState = function(state, triggerResize){
             var $template = $('#sidebar-settings-template');
-            triggerResize = !!triggerResize;
+            triggerResize = triggerResize == undefined ? true : false;
             if (!$template[0]){
                 return;
             }
@@ -62,7 +62,7 @@ $(function(){
 
         },
         displaySidebar = function(display, triggerResize){
-            triggerResize = !!triggerResize;
+            triggerResize = triggerResize == undefined ? true : false;
             if (display == true){
                 $body.removeClass("sidebar-hidden")
             } else {
