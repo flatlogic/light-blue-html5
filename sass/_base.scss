@@ -104,7 +104,7 @@ input.parsley-error{
     }
 
     a:hover, a:focus{
-      background: $lightGray;
+      background: darken($lightGray,1%);
     }
 
     a{
@@ -115,7 +115,7 @@ input.parsley-error{
     }
 
     a.accordion-toggle:not(.collapsed) + .accordion-body li.active a{
-      background: $lightGray;
+      background: darken($lightGray,1%);
     }
   }
 
@@ -133,7 +133,7 @@ input.parsley-error{
     padding-left: 40px;
 
     &:hover, &:focus{
-        background: $lightGray;
+        background: darken($lightGray,1%);
     }
   }
 
@@ -226,32 +226,21 @@ input.parsley-error{
   @include border-radius($widget-border-radius);
 
   padding: 5px;
-  color: #ffffff;
-  font-size: 42px;
-  font-weight: 300;
   text-align: center;
-  line-height: 1em;
   @include box-shadow(0 0 20px rgba(0,0,0,.5));
   margin-bottom: $box-margin-bottom;
-  text-shadow: 0 1px 1px gray;
 
   .description{
-    color: inherit;
     font-weight: 400;
-    font-size: 16px;
     text-align: center;
+    margin: 10px -5px;
   }
 
-  .icon{
-    font-size: 50px;
-    line-height: 50px;
-    margin-bottom: 0;
-  }
-
-  .big-text{
-    margin: 15px 0 5px;
-    font-size: 42px;
-    line-height: 42px;
+  .icon, .big-text{
+    margin-top: 15px;
+    font-size: 36px;
+    line-height: 36px;
+    height: 36px;
     font-weight: 700;
   }
 }
@@ -329,6 +318,10 @@ input.parsley-error{
       color: inherit;
       text-decoration: none;
     }
+  }
+
+  .chart{
+    height: 100%;
   }
 }
 
@@ -985,9 +978,12 @@ input.parsley-error{
 //                 OVERVIEW-widgets
 //-----------------------------------------------------------
 
-.overview{
-  margin-top: -15px;
-  padding: 10px;
+.widget-overview{
+  padding: 15px;
+
+  .title{
+    margin-top: 0;
+  }
 
   .stats{
     margin-top: 10px;

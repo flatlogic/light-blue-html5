@@ -52,7 +52,7 @@
   }
 
   .content{
-    padding: 40px 2.3% 40px 0;
+    padding: 40px 2.3%;
 
     & > .row-fluid{
       &.box-row{
@@ -98,23 +98,6 @@
         }
       }
     }
-  }
-}
-
-@media (min-width: 980px) and (max-width: 1019px) {
-  .row-fluid.box-row{
-    & > .span2{
-      width: 31.91489%;
-      *width: 31.8617%;
-
-      &:nth-child(3n + 1){
-        margin-left: 0;
-      }
-    }
-  }
-
-  .content{
-    padding: 40px 2.3%;
   }
 }
 
@@ -205,9 +188,9 @@
           font-weight: 400;
           text-align: left;
           width: auto;
+          @include transition(width 0);
 
           i[class*=icon]{
-            float: left;
             line-height: 30px;
             padding-top: 1px;
           }
@@ -217,6 +200,12 @@
           margin-left: 10px;
           display: inline-block;
         }
+
+      }
+
+      .side-nav > li.active > a{
+        border-right: 5px solid $blue;
+        padding-right: 20px;
       }
 
       .settings{
@@ -250,94 +239,10 @@
   }
 }
 
-@media (max-width: 240px){
+@media (max-width: 250px){
   .content > .row-fluid.box-row > .span2{
     float: none;
     margin-left: 0;
     width: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .comments{
-    overflow-y: scroll;
-    height: 100%;
-  }
-
-  .widget.tiny{
-    padding: 5px 10px;
-  }
-
-  .overview{
-    padding: 0;
-  }
-
-  .box{
-    font-size: 34px;
-  }
-}
-
-@media (min-width: 1441px) {
-  .box{
-    font-size: 50px;
-    line-height: 1.2em;
-
-    .description{
-      font-size: 20px;
-    }
-  }
-
-  .widget{
-
-    &.large{
-      height: 400px;
-
-      .body{
-        height: 365px;
-
-        .chart{
-          height: 288px;
-        }
-      }
-    }
-
-    &.xlarge{
-      height: 500px;
-
-      .body{
-        height: 465px;
-
-        .chart{
-          height: 383px;
-        }
-      }
-    }
-
-    &.tiny{
-      height: 188px;
-    }
-
-    &.tabs{
-
-      &.large{
-        height: 415px; //+15px
-        .body .chart{
-          height: 267px;
-        }
-      }
-
-      &.xlarge{
-        height: 515px; //+15px
-        .body .chart{
-          height: 357px;
-        }
-      }
-    }
-
-  }
-
-  .chart-inline{
-    height: 58px;
-    margin-bottom: 18px;
   }
 }
