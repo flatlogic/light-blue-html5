@@ -936,9 +936,9 @@ input.parsley-error{
   .icon{
     position: relative;
     z-index: 1;
-    background: white;
+    background: darken($lightGray, 1%);
     text-align: center;
-    color: darken($lightGray, 10%);
+    color: white;
     width: 48px;
     height: 48px;
     line-height: 48px;
@@ -967,7 +967,7 @@ input.parsley-error{
 .chat-message-body{
   margin-left: 60px;
   padding: 10px;
-  background: #ffffff;
+  background: darken($lightGray, 1%);
   font-size: $fontSizeSmall;
   @include border-radius($baseBorderRadius);
 
@@ -1485,7 +1485,7 @@ $i: 1;
   .vertical-line{
     height: 100%;
     width: 2px;
-    background: #ffffff;
+    background: darken($lightGray, 3%);
     position: absolute;
     left: 13px;
   }
@@ -1496,9 +1496,9 @@ $i: 1;
   .icon{
     position: relative;
     z-index: 1;
-    background: white;
+    background: darken($lightGray, 3%);
     text-align: center;
-    color: darken($lightGray, 10%);
+    color: white;
     width: 28px;
     height: 28px;
     line-height: 28px;

@@ -283,7 +283,7 @@
         </div>
         <div class="row-fluid">
             <div class="span6">
-                <section class="widget large light-gray">
+                <section class="widget large">
                     <header>
                         <h4>
                             <i class="eicon-share"></i>
@@ -391,7 +391,7 @@
                 </section>
             </div>
             <div class="span6">
-                <section class="widget large light-gray">
+                <section class="widget large">
                     <header>
                         <h4>
                             <i class="eicon-chat"></i>
@@ -622,26 +622,7 @@
 
 <!-- page specific -->
 <script src="js/index.js"></script>
-<script src="js/todos.js"></script>
 <script src="js/chat.js"></script>
-
-<script type="text/template" id="item-template">
-    <div class="view">
-        <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-        <label><%- title %></label>
-        <a class="destroy"><i class="icon-remove"></i></a>
-    </div>
-    <input class="edit" type="text" value="<%- title %>" />
-</script>
-
-<script type="text/template" id="stats-template">
-    <button id="toggle-all" class="btn btn-inverse btn-small">
-        Mark all
-    </button>
-    <button id="clear-completed" class="btn btn-success btn-small clear-completed <%= done ? '' : 'disabled' %>">
-        <i class="icon-trash"></i> Clear <%= done %> completed
-    </button>
-</script>
 
 <script type="text/template" id="user-template">
     <div class="user">
