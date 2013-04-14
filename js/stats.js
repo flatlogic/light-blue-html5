@@ -206,30 +206,6 @@ nv.addGraph(function() {
     return chart;
 });
 
-nv.addGraph(function () {
-    var chart = nv.models.lineChart()
-        .margin({top: 0, bottom: 40, left: 40, right: 0})
-        .color(keyColor)
-        .showLegend(false);
-
-    chart.yAxis
-        .showMaxMin(false)
-        .tickFormat(d3.format(',.f'));
-
-    chart.xAxis
-        .showMaxMin(false)
-        .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-
-    d3.select('#chart svg')
-        .datum(data)
-        .transition().duration(500)
-        .call(chart);
-
-    nv.utils.windowResize(chart.update);
-
-    return chart;
-});
-
 function getData() {
     var arr = [],
         theDate = new Date(2012, 1, 1, 0, 0, 0, 0),
