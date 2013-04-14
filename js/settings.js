@@ -16,7 +16,7 @@ $(function(){
         settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
             sidebar: 'left',
             background: 'ocean',
-            sidebarState: 'icons',
+            sidebarState: 'auto',
             displaySidebar: true
         },
         $pageHeader = $(".page-header"),
