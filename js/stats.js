@@ -21,6 +21,15 @@ function pieChartUpdate(d){
     d3.select("#sources-chart-pie svg").transition().call(pieChart);
 }
 
+var lineResize;
+function lineChartOperaHack(){
+    //lineChart is somehow not rendered correctly after updates. Need to reupdate
+    if ($.browser.opera){
+        clearTimeout(lineResize);
+        lineResize = setTimeout(lineChart.update, 300);
+    }
+}
+
 // test Data.
 //use if needed
 function sinAndCos() {
@@ -98,6 +107,8 @@ nv.addGraph(function() {
                 stackedChart.update();
                 lineChart.update();
                 barChart.update();
+
+                lineChartOperaHack();
             }, 100);
         });
 
@@ -202,6 +213,8 @@ nv.addGraph(function() {
 
     nv.utils.windowResize(chart.update);
     lineChart = chart;
+
+    lineChartOperaHack();
 
     return chart;
 });
