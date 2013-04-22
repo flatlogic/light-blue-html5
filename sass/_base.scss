@@ -726,7 +726,7 @@ input.parsley-error{
   }
 
   .widget-404-search{
-    margin-top: 50px;
+    margin-top: 20px;
   }
 }
 
@@ -848,7 +848,7 @@ input.parsley-error{
   margin-left: 60px;
   padding: 10px;
   background: darken($lightGray, 1%);
-  font-size: $fontSizeSmall;
+  //font-size: $fontSizeSmall;
   @include border-radius($baseBorderRadius);
 
   &.on-left{
@@ -1138,17 +1138,7 @@ input.input-padding-increased{
   }
 }
 
-$i: 1;
-@each $color in $colors{
-
-  .nav-tabs > li:nth-child(#{$i}n).active > a,
-  .nav-tabs > li:nth-child(#{$i}n) > a:hover{
-    color: #{$color};
-  }
-  $i: $i + 1;
-}
-
-.nav-tabs > li:not(.active) > a{
+.nav-tabs > li > a{
   color: $textColor;
 }
 
