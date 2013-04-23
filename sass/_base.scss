@@ -305,6 +305,10 @@ input.parsley-error{
       line-height: 20px;
       color: inherit;
     }
+
+    h4{
+      font-size: $baseFontSize + 1;
+    }
   }
 
   .body{
@@ -581,7 +585,9 @@ input.parsley-error{
         height: 38px;
         width: 1px;
         margin: 0 20px;
+        $experimental-support-for-svg: true;
         @include background(linear-gradient(rgba(0,0,0,0), rgba($textColor, .5), rgba(0,0,0,0)));
+        $experimental-support-for-svg: false;
       }
 
       & > a, & > a:visited{
