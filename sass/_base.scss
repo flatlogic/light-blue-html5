@@ -227,7 +227,7 @@ input.parsley-error{
 
   padding: 5px;
   text-align: center;
-  @include box-shadow(0 0 20px rgba(0,0,0,.5));
+  @include box-shadow($widget-shadow);
   margin-bottom: $box-margin-bottom;
 
   .description{
