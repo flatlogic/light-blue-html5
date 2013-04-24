@@ -13664,14 +13664,19 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     margin-left: 0;
     margin-right: 0;
   }
+
+  /* line 138, C:/projects/admin/sass/_responsive.scss */
+  .wrap {
+    overflow: hidden;
+  }
 }
 @media (max-width: 767px) {
-  /* line 142, C:/projects/admin/sass/_responsive.scss */
+  /* line 146, C:/projects/admin/sass/_responsive.scss */
   input[type=search], input.search {
     background-position: 5px 10px;
   }
 
-  /* line 149, C:/projects/admin/sass/_responsive.scss */
+  /* line 153, C:/projects/admin/sass/_responsive.scss */
   .sidebar,
   .sidebar-on-right .sidebar,
   .sidebar-on-right .sidebar.sidebar-icons,
@@ -13686,35 +13691,35 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     overflow: hidden;
     padding: 0;
   }
-  /* line 160, C:/projects/admin/sass/_responsive.scss */
+  /* line 164, C:/projects/admin/sass/_responsive.scss */
   .sidebar .brand,
   .sidebar-on-right .sidebar .brand,
   .sidebar-on-right .sidebar.sidebar-icons .brand,
   .sidebar.sidebar-icons .brand {
     display: none;
   }
-  /* line 164, C:/projects/admin/sass/_responsive.scss */
+  /* line 168, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in,
   .sidebar-on-right .sidebar.in,
   .sidebar-on-right .sidebar.sidebar-icons.in,
   .sidebar.sidebar-icons.in {
     padding: 20px 0;
   }
-  /* line 167, C:/projects/admin/sass/_responsive.scss */
+  /* line 171, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .brand,
   .sidebar-on-right .sidebar.in .brand,
   .sidebar-on-right .sidebar.sidebar-icons.in .brand,
   .sidebar.sidebar-icons.in .brand {
     display: block;
   }
-  /* line 171, C:/projects/admin/sass/_responsive.scss */
+  /* line 175, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in h2,
   .sidebar-on-right .sidebar.in h2,
   .sidebar-on-right .sidebar.sidebar-icons.in h2,
   .sidebar.sidebar-icons.in h2 {
     display: block;
   }
-  /* line 176, C:/projects/admin/sass/_responsive.scss */
+  /* line 180, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a,
   .sidebar-on-right .sidebar.in .side-nav li a,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a,
@@ -13730,7 +13735,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     -o-transition: width 0;
     transition: width 0;
   }
-  /* line 185, C:/projects/admin/sass/_responsive.scss */
+  /* line 189, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a i[class*=icon],
   .sidebar-on-right .sidebar.in .side-nav li a i[class*=icon],
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a i[class*=icon],
@@ -13738,7 +13743,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     line-height: 30px;
     padding-top: 1px;
   }
-  /* line 191, C:/projects/admin/sass/_responsive.scss */
+  /* line 195, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li .name,
   .sidebar-on-right .sidebar.in .side-nav li .name,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li .name,
@@ -13746,7 +13751,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     margin-left: 10px;
     display: inline-block;
   }
-  /* line 198, C:/projects/admin/sass/_responsive.scss */
+  /* line 202, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav > li.active > a,
   .sidebar-on-right .sidebar.in .side-nav > li.active > a,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav > li.active > a,
@@ -13754,14 +13759,14 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     border-right: 5px solid #618fb0;
     padding-right: 20px;
   }
-  /* line 203, C:/projects/admin/sass/_responsive.scss */
+  /* line 207, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .settings,
   .sidebar-on-right .sidebar.in .settings,
   .sidebar-on-right .sidebar.sidebar-icons.in .settings,
   .sidebar.sidebar-icons.in .settings {
     display: none;
   }
-  /* line 208, C:/projects/admin/sass/_responsive.scss */
+  /* line 212, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.sidebar-icons.in + .wrap .content,
@@ -13769,18 +13774,18 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     margin-top: 520px;
   }
 
-  /* line 213, C:/projects/admin/sass/_responsive.scss */
+  /* line 217, C:/projects/admin/sass/_responsive.scss */
   .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 218, C:/projects/admin/sass/_responsive.scss */
+  /* line 222, C:/projects/admin/sass/_responsive.scss */
   .nv-controlsWrap {
     display: none;
   }
 
-  /* line 224, C:/projects/admin/sass/_responsive.scss */
+  /* line 228, C:/projects/admin/sass/_responsive.scss */
   .logo,
   .sidebar-on-right .logo,
   .sidebar-hidden .logo {
@@ -13793,7 +13798,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
 }
 @media (max-width: 250px) {
-  /* line 235, C:/projects/admin/sass/_responsive.scss */
+  /* line 239, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;
