@@ -4,43 +4,10 @@
   }
 }
 
-@media (max-width: 480px){
-  .content > .row-fluid.box-row > .span2{
-    width: 48.61878%;
-    *width: 48.56559%;
-    margin-left: 2.76243%;
-    *margin-left: 2.70924%;
-    float: left;
-
-    &:nth-child(odd){
-      margin-left: 0;
-    }
-  }
-
-  .form-condensed .controls{
-    margin-left: 0;
-  }
-
-  body{
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .login-widget, .registration-widget{
-    width: 260px;
-    input[type="email"],
-    input[type="password"]{
-      width: 222px;
-    }
-  }
-}
-
 @media (min-width: 481px) and (max-width: 767px){
   .content > .row-fluid.box-row > .span2{
     width: 31.49171%;
-    *width: 31.43852%;
     margin-left: 2.76243%;
-    *margin-left: 2.70924%;
     float: left;
 
     &:nth-child(3n + 1){
@@ -65,9 +32,7 @@
         width: 97.7%;
         & > .span2{
           width: 31.49171%;
-          *width: 31.43852%;
           margin-left: 2.76243%;
-          *margin-left: 2.70924%;
           float: left;
 
           &:nth-child(3n + 1){
@@ -246,6 +211,71 @@
 
   .modal-body{
     max-height: 240px;
+  }
+
+  .widget-404-search, .widget-404{
+    width: 402px;
+  }
+
+  .single-widget-container .widget-404-search{
+    margin-top: 0;
+
+    .search-field{
+      width: 286px;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .content > .row-fluid.box-row > .span2{
+    width: 48.61878%;
+    margin-left: 2.76243%;
+    float: left;
+
+    &:nth-child(odd){
+      margin-left: 0;
+    }
+  }
+
+  .form-condensed .controls{
+    margin-left: 0;
+  }
+
+  body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .login-widget, .registration-widget{
+    width: 260px;
+    input[type="email"],
+    input[type="password"]{
+      width: 222px;
+    }
+  }
+
+  .widget-404-search, .widget-404{
+    width: 260px;
+  }
+
+  .widget-404{
+    h1{
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    h3{
+      font-size: $fontSizeLarge;
+      line-height: $baseLineHeight + 2;
+    }
+  }
+
+  .single-widget-container .widget-404-search{
+    margin-top: 0;
+
+    .search-field{
+      width: 145px;
+    }
   }
 }
 

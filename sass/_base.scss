@@ -731,10 +731,6 @@ input.parsley-error{
   .widget {
     margin: 0 auto;
   }
-
-  .widget-404-search{
-    margin-top: 20px;
-  }
 }
 
 .login-widget, .registration-widget {
@@ -1510,7 +1506,6 @@ input.input-padding-increased{
 /**********************************/
 
 .widget-404{
-  width: 600px;
 
   h1{
     font-size: 140px;
@@ -1526,8 +1521,16 @@ input.input-padding-increased{
   }
 }
 
-.widget-404-search{
+.widget-404-search, .widget-404{
   width: 600px;
+}
+
+.single-widget-container .widget-404-search{
+  margin-top: 40px;
+
+  .search-field{
+    width: 456px;
+  }
 }
 
 /***********************************/
