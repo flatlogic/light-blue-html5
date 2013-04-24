@@ -13029,14 +13029,24 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 .dropzone {
   border: 3px dashed #dfdfdf;
   margin-top: 10px;
-  height: 100px;
   font-size: 40px;
   color: #dfdfdf;
   line-height: 100px;
   padding-left: 5%;
   vertical-align: middle;
+  *zoom: 1;
 }
-/* line 1280, C:/projects/admin/sass/_base.scss */
+/* line 15, C:/projects/admin/sass/bootstrap/_mixins.scss */
+.dropzone:before, .dropzone:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, C:/projects/admin/sass/bootstrap/_mixins.scss */
+.dropzone:after {
+  clear: both;
+}
+/* line 1281, C:/projects/admin/sass/_base.scss */
 .dropzone i {
   margin-top: 20px;
   padding-right: 10%;
@@ -13045,16 +13055,16 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          FEED                 **/
 /**********************************/
-/* line 1290, C:/projects/admin/sass/_base.scss */
+/* line 1291, C:/projects/admin/sass/_base.scss */
 .feed {
   height: 100%;
   position: relative;
 }
-/* line 1295, C:/projects/admin/sass/_base.scss */
+/* line 1296, C:/projects/admin/sass/_base.scss */
 .feed .wrapper {
   position: relative;
 }
-/* line 1299, C:/projects/admin/sass/_base.scss */
+/* line 1300, C:/projects/admin/sass/_base.scss */
 .feed .vertical-line {
   height: 100%;
   width: 2px;
@@ -13063,7 +13073,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   left: 13px;
 }
 
-/* line 1308, C:/projects/admin/sass/_base.scss */
+/* line 1309, C:/projects/admin/sass/_base.scss */
 .feed-item {
   *zoom: 1;
 }
@@ -13077,7 +13087,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 .feed-item:after {
   clear: both;
 }
-/* line 1310, C:/projects/admin/sass/_base.scss */
+/* line 1311, C:/projects/admin/sass/_base.scss */
 .feed-item .icon {
   position: relative;
   z-index: 1;
@@ -13095,7 +13105,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   border-radius: 20px;
   font-size: 16px;
 }
-/* line 1323, C:/projects/admin/sass/_base.scss */
+/* line 1324, C:/projects/admin/sass/_base.scss */
 .feed-item .icon img {
   position: relative;
   top: -2px;
@@ -13103,18 +13113,18 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   height: 26px;
 }
 
-/* line 1332, C:/projects/admin/sass/_base.scss */
+/* line 1333, C:/projects/admin/sass/_base.scss */
 .feed-item + .feed-item {
   margin-top: 10px;
 }
 
-/* line 1336, C:/projects/admin/sass/_base.scss */
+/* line 1337, C:/projects/admin/sass/_base.scss */
 .feed-item-body {
   padding-top: 3px;
   margin-left: 40px;
   vertical-align: bottom;
 }
-/* line 1341, C:/projects/admin/sass/_base.scss */
+/* line 1342, C:/projects/admin/sass/_base.scss */
 .feed-item-body .time {
   font-size: 11.05px;
   line-height: 1.5em;
@@ -13123,50 +13133,50 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          TABLES               **/
 /**********************************/
-/* line 1352, C:/projects/admin/sass/_base.scss */
+/* line 1353, C:/projects/admin/sass/_base.scss */
 .table-images td {
   height: 60px;
   vertical-align: middle;
 }
-/* line 1355, C:/projects/admin/sass/_base.scss */
+/* line 1356, C:/projects/admin/sass/_base.scss */
 .table-images td img {
   height: 60px;
 }
 
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(1n) {
   color: #e5603b;
 }
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(2n) {
   color: #eac85e;
 }
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(3n) {
   color: #8cbf26;
 }
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(4n) {
   color: #56bc76;
 }
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(5n) {
   color: #4ab0ce;
 }
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(6n) {
   color: #618fb0;
 }
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(7n) {
   color: #a05000;
 }
-/* line 1365, C:/projects/admin/sass/_base.scss */
+/* line 1366, C:/projects/admin/sass/_base.scss */
 .table-colored tbody tr:nth-child(8n) {
   color: #d04f4f;
 }
 
-/* line 1372, C:/projects/admin/sass/_base.scss */
+/* line 1373, C:/projects/admin/sass/_base.scss */
 .table-editable th a {
   display: block;
   cursor: pointer;
@@ -13174,7 +13184,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   text-decoration: underline;
 }
 
-/* line 1380, C:/projects/admin/sass/_base.scss */
+/* line 1381, C:/projects/admin/sass/_base.scss */
 .table-editable td.editor,
 .table-editable tbody tr:nth-child(odd) td.editor {
   background-color: rgba(97, 143, 176, 0.05);
@@ -13197,7 +13207,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   transition-timing-function: ease-in-out;
 }
 
-/* line 1401, C:/projects/admin/sass/_base.scss */
+/* line 1402, C:/projects/admin/sass/_base.scss */
 .table-editable td.editor input[type=text] {
   display: block;
   width: 100%;
@@ -13217,20 +13227,20 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   -moz-appearance: none;
 }
 
-/* line 1421, C:/projects/admin/sass/_base.scss */
+/* line 1422, C:/projects/admin/sass/_base.scss */
 .table-editable td.editor.error,
 .table-editable tbody tr:nth-child(odd) td.editor.error {
   background-color: rgba(234, 200, 94, 0.1);
   outline: 1px solid #eac85e;
 }
 
-/* line 1427, C:/projects/admin/sass/_base.scss */
+/* line 1428, C:/projects/admin/sass/_base.scss */
 .table-editable td.editor :focus,
 .table-editable th.editor :focus {
   outline: 0;
 }
 
-/* line 1431, C:/projects/admin/sass/_base.scss */
+/* line 1432, C:/projects/admin/sass/_base.scss */
 .table-editable .sort-caret {
   display: inline-block;
   width: 15px;
@@ -13241,12 +13251,12 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   font: 15px FontAwesome;
 }
 
-/* line 1442, C:/projects/admin/sass/_base.scss */
+/* line 1443, C:/projects/admin/sass/_base.scss */
 .table-editable .ascending .sort-caret:before {
   content: "\f0d8";
 }
 
-/* line 1448, C:/projects/admin/sass/_base.scss */
+/* line 1449, C:/projects/admin/sass/_base.scss */
 .table-editable .descending .sort-caret:before {
   content: "\f0d7";
 }
@@ -13254,11 +13264,11 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          FILEUPLOAD          **/
 /**********************************/
-/* line 1459, C:/projects/admin/sass/_base.scss */
+/* line 1460, C:/projects/admin/sass/_base.scss */
 .fileupload-progress.fade.in .progress {
   margin-top: 20px;
 }
-/* line 1463, C:/projects/admin/sass/_base.scss */
+/* line 1464, C:/projects/admin/sass/_base.scss */
 .fileupload-progress.fade .progress {
   margin: 0;
 }
@@ -13266,52 +13276,52 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          SEARCH              **/
 /**********************************/
-/* line 1472, C:/projects/admin/sass/_base.scss */
+/* line 1473, C:/projects/admin/sass/_base.scss */
 .search-result {
   padding: 5px 15px 5px 10px;
   margin-bottom: 10px;
 }
-/* line 1476, C:/projects/admin/sass/_base.scss */
+/* line 1477, C:/projects/admin/sass/_base.scss */
 .search-result h4 {
   margin: 0;
 }
-/* line 1480, C:/projects/admin/sass/_base.scss */
+/* line 1481, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(even) {
   background: #f8f8f8;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(1n) {
   border-left: 5px solid #e5603b;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(2n) {
   border-left: 5px solid #eac85e;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(3n) {
   border-left: 5px solid #8cbf26;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(4n) {
   border-left: 5px solid #56bc76;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(5n) {
   border-left: 5px solid #4ab0ce;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(6n) {
   border-left: 5px solid #618fb0;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(7n) {
   border-left: 5px solid #a05000;
 }
-/* line 1487, C:/projects/admin/sass/_base.scss */
+/* line 1488, C:/projects/admin/sass/_base.scss */
 .search-result:nth-child(8n) {
   border-left: 5px solid #d04f4f;
 }
-/* line 1493, C:/projects/admin/sass/_base.scss */
+/* line 1494, C:/projects/admin/sass/_base.scss */
 .search-result:hover {
   cursor: pointer;
   padding-left: 10px;
@@ -13321,7 +13331,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   -o-transition: border-left-color 0.2s;
   transition: border-left-color 0.2s;
 }
-/* line 1501, C:/projects/admin/sass/_base.scss */
+/* line 1502, C:/projects/admin/sass/_base.scss */
 .search-result > p {
   margin-bottom: 0px;
 }
@@ -13329,11 +13339,11 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          404                  **/
 /**********************************/
-/* line 1510, C:/projects/admin/sass/_base.scss */
+/* line 1511, C:/projects/admin/sass/_base.scss */
 .widget-404 {
   width: 600px;
 }
-/* line 1513, C:/projects/admin/sass/_base.scss */
+/* line 1514, C:/projects/admin/sass/_base.scss */
 .widget-404 h1 {
   font-size: 140px;
   line-height: 140px;
@@ -13341,13 +13351,13 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   text-rendering: optimizeLegibility;
   color: #ffffff;
 }
-/* line 1521, C:/projects/admin/sass/_base.scss */
+/* line 1522, C:/projects/admin/sass/_base.scss */
 .widget-404 .description {
   vertical-align: middle;
   padding-top: 5px;
 }
 
-/* line 1527, C:/projects/admin/sass/_base.scss */
+/* line 1528, C:/projects/admin/sass/_base.scss */
 .widget-404-search {
   width: 600px;
 }
@@ -13355,7 +13365,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 1535, C:/projects/admin/sass/_base.scss */
+/* line 1536, C:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -13367,32 +13377,32 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 1543, C:/projects/admin/sass/_base.scss */
+/* line 1544, C:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1547, C:/projects/admin/sass/_base.scss */
+/* line 1548, C:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 1551, C:/projects/admin/sass/_base.scss */
+/* line 1552, C:/projects/admin/sass/_base.scss */
 .well-white {
   background: #ffffff;
 }
 
-/* line 1555, C:/projects/admin/sass/_base.scss */
+/* line 1556, C:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1559, C:/projects/admin/sass/_base.scss */
+/* line 1560, C:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1563, C:/projects/admin/sass/_base.scss */
+/* line 1564, C:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }

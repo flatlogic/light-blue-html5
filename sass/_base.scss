@@ -1270,12 +1270,13 @@ input.input-padding-increased{
 .dropzone{
   border: 3px dashed $smallsColor;
   margin-top: 10px;
-  height: 100px;
   font-size: 40px;
   color: $smallsColor;
   line-height: 100px;
   padding-left: 5%;
   vertical-align: middle;
+
+  @include clearfix;
 
   i{
     margin-top: 20px;
