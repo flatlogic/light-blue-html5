@@ -13407,8 +13407,14 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   margin: 0 !important;
 }
 
+@media (max-width: 320px) {
+  /* line 2, C:/projects/admin/sass/_responsive.scss */
+  .hidden-phone-portrait {
+    display: none !important;
+  }
+}
 @media (max-width: 480px) {
-  /* line 3, C:/projects/admin/sass/_responsive.scss */
+  /* line 8, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 48.61878%;
     *width: 48.56559%;
@@ -13416,24 +13422,24 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     *margin-left: 2.70924%;
     float: left;
   }
-  /* line 10, C:/projects/admin/sass/_responsive.scss */
+  /* line 15, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(odd) {
     margin-left: 0;
   }
 
-  /* line 15, C:/projects/admin/sass/_responsive.scss */
+  /* line 20, C:/projects/admin/sass/_responsive.scss */
   .form-condensed .controls {
     margin-left: 0;
   }
 
-  /* line 19, C:/projects/admin/sass/_responsive.scss */
+  /* line 24, C:/projects/admin/sass/_responsive.scss */
   body {
     padding-left: 0;
     padding-right: 0;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 26, C:/projects/admin/sass/_responsive.scss */
+  /* line 31, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 31.49171%;
     *width: 31.43852%;
@@ -13441,27 +13447,27 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     *margin-left: 2.70924%;
     float: left;
   }
-  /* line 33, C:/projects/admin/sass/_responsive.scss */
+  /* line 38, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(3n + 1) {
     margin-left: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 41, C:/projects/admin/sass/_responsive.scss */
+  /* line 46, C:/projects/admin/sass/_responsive.scss */
   .page-header .title-nav > li > a, .page-header .title-nav > li > a:visited {
     padding: 0 5px;
   }
 
-  /* line 46, C:/projects/admin/sass/_responsive.scss */
+  /* line 51, C:/projects/admin/sass/_responsive.scss */
   .content {
     padding: 40px 2.3%;
   }
-  /* line 50, C:/projects/admin/sass/_responsive.scss */
+  /* line 55, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row {
     margin-left: 2.3%;
     width: 97.7%;
   }
-  /* line 53, C:/projects/admin/sass/_responsive.scss */
+  /* line 58, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 31.49171%;
     *width: 31.43852%;
@@ -13469,99 +13475,99 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     *margin-left: 2.70924%;
     float: left;
   }
-  /* line 60, C:/projects/admin/sass/_responsive.scss */
+  /* line 65, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(3n + 1) {
     margin-left: 0;
   }
-  /* line 68, C:/projects/admin/sass/_responsive.scss */
+  /* line 73, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > [class*="span"] {
     margin-left: 2.3%;
   }
-  /* line 71, C:/projects/admin/sass/_responsive.scss */
+  /* line 76, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > [class*="span"]:first-child {
     margin-left: 2.3%;
   }
-  /* line 77, C:/projects/admin/sass/_responsive.scss */
+  /* line 82, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span1 {
     width: 47.7%;
   }
-  /* line 77, C:/projects/admin/sass/_responsive.scss */
+  /* line 82, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span2 {
     width: 47.7%;
   }
-  /* line 77, C:/projects/admin/sass/_responsive.scss */
+  /* line 82, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span3 {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span4 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span4.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span5 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span5.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span6 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span6.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span7 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span7.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span8 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span8.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span9 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span9.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span10 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span10.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span11 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span11.half-width-responsive {
     width: 47.7%;
   }
-  /* line 83, C:/projects/admin/sass/_responsive.scss */
+  /* line 88, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span12 {
     width: 97.7%;
   }
-  /* line 86, C:/projects/admin/sass/_responsive.scss */
+  /* line 91, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid:not(.box-row) > .span12.half-width-responsive {
     width: 47.7%;
   }
@@ -13640,22 +13646,22 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   .sidebar .settings .btn-small {
     padding: 2px 8px;
   }
-  /* line 103, C:/projects/admin/sass/_responsive.scss */
+  /* line 108, C:/projects/admin/sass/_responsive.scss */
   .sidebar .settings {
     display: none;
   }
 
-  /* line 109, C:/projects/admin/sass/_responsive.scss */
+  /* line 114, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .sidebar {
     right: 0;
     margin: 87px 1.6% 0 0;
   }
-  /* line 114, C:/projects/admin/sass/_responsive.scss */
+  /* line 119, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .wrap {
     margin-left: 0;
     margin-right: 62px;
   }
-  /* line 119, C:/projects/admin/sass/_responsive.scss */
+  /* line 124, C:/projects/admin/sass/_responsive.scss */
   .sidebar-on-right .logo {
     left: auto;
     right: 1.6%;
@@ -13664,28 +13670,23 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     top: 15px;
   }
 
-  /* line 128, C:/projects/admin/sass/_responsive.scss */
+  /* line 133, C:/projects/admin/sass/_responsive.scss */
   .sidebar-hidden .sidebar {
     display: none;
   }
-  /* line 132, C:/projects/admin/sass/_responsive.scss */
+  /* line 137, C:/projects/admin/sass/_responsive.scss */
   .sidebar-hidden .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 138, C:/projects/admin/sass/_responsive.scss */
+  /* line 143, C:/projects/admin/sass/_responsive.scss */
   .wrap {
     overflow: hidden;
   }
 }
 @media (max-width: 767px) {
-  /* line 146, C:/projects/admin/sass/_responsive.scss */
-  input[type=search], input.search {
-    background-position: 5px 10px;
-  }
-
-  /* line 153, C:/projects/admin/sass/_responsive.scss */
+  /* line 155, C:/projects/admin/sass/_responsive.scss */
   .sidebar,
   .sidebar-on-right .sidebar,
   .sidebar-on-right .sidebar.sidebar-icons,
@@ -13700,35 +13701,35 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     overflow: hidden;
     padding: 0;
   }
-  /* line 164, C:/projects/admin/sass/_responsive.scss */
+  /* line 166, C:/projects/admin/sass/_responsive.scss */
   .sidebar .brand,
   .sidebar-on-right .sidebar .brand,
   .sidebar-on-right .sidebar.sidebar-icons .brand,
   .sidebar.sidebar-icons .brand {
     display: none;
   }
-  /* line 168, C:/projects/admin/sass/_responsive.scss */
+  /* line 170, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in,
   .sidebar-on-right .sidebar.in,
   .sidebar-on-right .sidebar.sidebar-icons.in,
   .sidebar.sidebar-icons.in {
     padding: 20px 0;
   }
-  /* line 171, C:/projects/admin/sass/_responsive.scss */
+  /* line 173, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .brand,
   .sidebar-on-right .sidebar.in .brand,
   .sidebar-on-right .sidebar.sidebar-icons.in .brand,
   .sidebar.sidebar-icons.in .brand {
     display: block;
   }
-  /* line 175, C:/projects/admin/sass/_responsive.scss */
+  /* line 177, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in h2,
   .sidebar-on-right .sidebar.in h2,
   .sidebar-on-right .sidebar.sidebar-icons.in h2,
   .sidebar.sidebar-icons.in h2 {
     display: block;
   }
-  /* line 180, C:/projects/admin/sass/_responsive.scss */
+  /* line 182, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a,
   .sidebar-on-right .sidebar.in .side-nav li a,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a,
@@ -13744,7 +13745,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     -o-transition: width 0;
     transition: width 0;
   }
-  /* line 189, C:/projects/admin/sass/_responsive.scss */
+  /* line 191, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li a i[class*=icon],
   .sidebar-on-right .sidebar.in .side-nav li a i[class*=icon],
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a i[class*=icon],
@@ -13752,7 +13753,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     line-height: 30px;
     padding-top: 1px;
   }
-  /* line 195, C:/projects/admin/sass/_responsive.scss */
+  /* line 197, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav li .name,
   .sidebar-on-right .sidebar.in .side-nav li .name,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li .name,
@@ -13760,7 +13761,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     margin-left: 10px;
     display: inline-block;
   }
-  /* line 202, C:/projects/admin/sass/_responsive.scss */
+  /* line 204, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .side-nav > li.active > a,
   .sidebar-on-right .sidebar.in .side-nav > li.active > a,
   .sidebar-on-right .sidebar.sidebar-icons.in .side-nav > li.active > a,
@@ -13768,14 +13769,14 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     border-right: 5px solid #618fb0;
     padding-right: 20px;
   }
-  /* line 207, C:/projects/admin/sass/_responsive.scss */
+  /* line 209, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in .settings,
   .sidebar-on-right .sidebar.in .settings,
   .sidebar-on-right .sidebar.sidebar-icons.in .settings,
   .sidebar.sidebar-icons.in .settings {
     display: none;
   }
-  /* line 212, C:/projects/admin/sass/_responsive.scss */
+  /* line 214, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.sidebar-icons.in + .wrap .content,
@@ -13783,18 +13784,18 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     margin-top: 520px;
   }
 
-  /* line 217, C:/projects/admin/sass/_responsive.scss */
+  /* line 219, C:/projects/admin/sass/_responsive.scss */
   .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 222, C:/projects/admin/sass/_responsive.scss */
+  /* line 224, C:/projects/admin/sass/_responsive.scss */
   .nv-controlsWrap {
     display: none;
   }
 
-  /* line 228, C:/projects/admin/sass/_responsive.scss */
+  /* line 230, C:/projects/admin/sass/_responsive.scss */
   .logo,
   .sidebar-on-right .logo,
   .sidebar-hidden .logo {
@@ -13806,13 +13807,13 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     top: 15px;
   }
 
-  /* line 237, C:/projects/admin/sass/_responsive.scss */
+  /* line 239, C:/projects/admin/sass/_responsive.scss */
   .modal-body {
     max-height: 240px;
   }
 }
 @media (max-width: 250px) {
-  /* line 243, C:/projects/admin/sass/_responsive.scss */
+  /* line 245, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;

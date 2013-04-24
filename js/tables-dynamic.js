@@ -10,38 +10,37 @@ $(function(){
         mode: "client" // page entirely on the client side
     });
 
-    var columns = [{
-        name: "id", // The key of the model attribute
-        label: "ID", // The name to display in the header
-        editable: false, // By default every cell in a column is editable, but *ID* shouldn't be
-        // Defines a cell type, and ID is displayed as an integer without the ',' separating 1000s.
-        cell: Backgrid.IntegerCell.extend({
-            orderSeparator: ''
-        })
-    }, {
-        name: "name",
-        label: "Name",
-        // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
-        cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
-    }, {
-        name: "pop",
-        label: "Population",
-        cell: "integer" // An integer cell is a number cell that displays humanized integers
-//    }, {
-//        name: "percentage",
-//        label: "% of World Population",
-//        cell: "number" // A cell type for floating point value, defaults to have a precision 2 decimal numbers
-    }, {
-        name: "url",
-        label: "URL",
-        cell: "uri" // Renders the value in an HTML <a> element
-    }];
-
 
     var pageableTerritories = new PageableTerritories(),
         initialTerritories = pageableTerritories;
 
     function createBackgrid(collection){
+        var columns = [{
+            name: "id", // The key of the model attribute
+            label: "ID", // The name to display in the header
+            editable: false, // By default every cell in a column is editable, but *ID* shouldn't be
+            // Defines a cell type, and ID is displayed as an integer without the ',' separating 1000s.
+            cell: Backgrid.IntegerCell.extend({
+                orderSeparator: ''
+            })
+        }, {
+            name: "name",
+            label: "Name",
+            // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+            cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
+        }, {
+            name: "pop",
+            label: "Population",
+            cell: "integer" // An integer cell is a number cell that displays humanized integers
+        }, {
+            name: "url",
+            label: "URL",
+            cell: "uri" // Renders the value in an HTML <a> element
+        }];
+        if ($(window).width() < 768){
+            //okendoken. removing URL-column for screens smaller than 768px
+            columns.splice(3,1)
+        }
         var pageableGrid = new Backgrid.Grid({
             columns: columns,
             collection: collection,
@@ -54,6 +53,15 @@ $(function(){
 
         $("#table-dynamic").html(pageableGrid.render().$el);
     }
+
+    var tableResize;
+
+    $(window).resize(function(e) {
+        clearTimeout(tableResize);
+        tableResize = setTimeout(function(){
+            createBackgrid(pageableTerritories);
+        }, 200);
+    });
 
     createBackgrid(pageableTerritories);
 

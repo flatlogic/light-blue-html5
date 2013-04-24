@@ -1,3 +1,8 @@
+@media (max-width: 320px) {
+  .hidden-phone-portrait{
+    display: none !important;
+  }
+}
 
 @media (max-width: 480px){
   .content > .row-fluid.box-row > .span2{
@@ -143,9 +148,6 @@
 //this media quiery is out of order because Chrome thinks
 //max-width: 1048px is more important than max-width: 767px
 @media (max-width: 767px){
-  input[type=search], input.search {
-    background-position: 5px 10px;
-  }
 
   .sidebar,
   .sidebar-on-right .sidebar,
