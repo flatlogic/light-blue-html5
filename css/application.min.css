@@ -13791,75 +13791,94 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
 
   /* line 220, C:/projects/admin/sass/_responsive.scss */
+  .widget-404 {
+    padding: 0;
+  }
+  /* line 222, C:/projects/admin/sass/_responsive.scss */
+  .widget-404 .body {
+    margin-top: 0;
+  }
+
+  /* line 227, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 223, C:/projects/admin/sass/_responsive.scss */
+  /* line 230, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
-    width: 286px;
+    width: 285px;
+  }
+
+  /* line 235, C:/projects/admin/sass/_responsive.scss */
+  .single-widget-container.error-page {
+    margin-top: -170px;
   }
 }
 @media (max-width: 480px) {
-  /* line 230, C:/projects/admin/sass/_responsive.scss */
+  /* line 241, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 48.61878%;
     margin-left: 2.76243%;
     float: left;
   }
-  /* line 235, C:/projects/admin/sass/_responsive.scss */
+  /* line 246, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(odd) {
     margin-left: 0;
   }
 
-  /* line 240, C:/projects/admin/sass/_responsive.scss */
+  /* line 251, C:/projects/admin/sass/_responsive.scss */
   .form-condensed .controls {
     margin-left: 0;
   }
 
-  /* line 244, C:/projects/admin/sass/_responsive.scss */
+  /* line 255, C:/projects/admin/sass/_responsive.scss */
   body {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 249, C:/projects/admin/sass/_responsive.scss */
+  /* line 260, C:/projects/admin/sass/_responsive.scss */
   .login-widget, .registration-widget {
     width: 260px;
   }
-  /* line 252, C:/projects/admin/sass/_responsive.scss */
+  /* line 263, C:/projects/admin/sass/_responsive.scss */
   .login-widget input[type="email"],
   .login-widget input[type="password"], .registration-widget input[type="email"],
   .registration-widget input[type="password"] {
     width: 222px;
   }
 
-  /* line 257, C:/projects/admin/sass/_responsive.scss */
+  /* line 268, C:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 260px;
   }
 
-  /* line 262, C:/projects/admin/sass/_responsive.scss */
+  /* line 273, C:/projects/admin/sass/_responsive.scss */
   .widget-404 h1 {
     font-size: 80px;
     line-height: 80px;
   }
-  /* line 267, C:/projects/admin/sass/_responsive.scss */
+  /* line 278, C:/projects/admin/sass/_responsive.scss */
   .widget-404 h3 {
     font-size: 16.25px;
     line-height: 22px;
   }
 
-  /* line 273, C:/projects/admin/sass/_responsive.scss */
+  /* line 284, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 276, C:/projects/admin/sass/_responsive.scss */
+  /* line 287, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
-    width: 145px;
+    width: 143px;
+  }
+
+  /* line 292, C:/projects/admin/sass/_responsive.scss */
+  .single-widget-container.error-page {
+    margin-top: -129px;
   }
 }
 @media (max-width: 250px) {
-  /* line 283, C:/projects/admin/sass/_responsive.scss */
+  /* line 298, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;

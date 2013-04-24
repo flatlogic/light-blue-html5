@@ -217,12 +217,23 @@
     width: 402px;
   }
 
+  .widget-404{
+    padding: 0;
+    .body{
+      margin-top: 0;
+    }
+  }
+
   .single-widget-container .widget-404-search{
     margin-top: 0;
 
     .search-field{
-      width: 286px;
+      width: 285px;
     }
+  }
+
+  .single-widget-container.error-page{
+    margin-top: -170px;
   }
 }
 
@@ -274,8 +285,12 @@
     margin-top: 0;
 
     .search-field{
-      width: 145px;
+      width: 143px;
     }
+  }
+
+  .single-widget-container.error-page{
+    margin-top: -129px;
   }
 }
 
