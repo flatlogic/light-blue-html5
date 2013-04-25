@@ -220,30 +220,16 @@ input.parsley-error{
 /**          MESSAGES            **/
 /**********************************/
 
-.messages{
-  background: $popoverBackground;
-  @include box-shadow(none);
-  @include border-radius(0);
-  border: none;
-  color: white;
-
-  .see-all{
-    padding: 6px 10px;
-  }
-}
-
-.navbar .nav > li > .messages{
-  &:before{
-    border-bottom: none;
-  }
-  &:after{
-    border-bottom-color: $popoverBackground;
-  }
+.messages .see-all{
+  padding: 6px 10px;
 }
 
 .messages > li > a{
-  color: #ffffff;
   padding: 8px 10px;
+
+  &:hover .text{
+    color: #ddd;
+  }
 }
 
 .message{
@@ -257,12 +243,9 @@ input.parsley-error{
     margin-left: 50px;
   }
 
-  .sender{
-  }
-
   .text{
     font-size: $fontSizeSmall;
-    color: #ddd;
+    color: lighten($textColor, 5%);
   }
 }
 
