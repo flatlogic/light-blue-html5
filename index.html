@@ -98,8 +98,59 @@
                     <li class="active"><a href="index.html" title="Dashboard"><i class="icon-desktop icon-large"></i> Dashboard</a></li>
                 </ul>
                 <ul class="nav right pull-right ">
-                    <li><a href="#" title="Messages"><i class="icon-comments"></i></a></li>
-                    <li><a href="#" title="8 support tickets"><i class="icon-group"></i><span class="count">8</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" title="Messages" id="messages"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            <i class="icon-comments"></i>
+                        </a>
+                        <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                            <li role="presentation">
+                                <a href="#" class="message">
+                                    <img src="img/1.jpg" alt="">
+                                    <div class="details">
+                                        <div class="sender">Jane Hew</div>
+                                        <div class="text">
+                                            Hey, John! How is it going? ...
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="message">
+                                    <img src="img/2.jpg" alt="">
+                                    <div class="details">
+                                        <div class="sender">Alies Rumiancaŭ</div>
+                                        <div class="text">
+                                            I'll definitely buy this template
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="message">
+                                    <img src="img/3.jpg" alt="">
+                                    <div class="details">
+                                        <div class="sender">Michał Rumiancaŭ</div>
+                                        <div class="text">
+                                            Is it really Lore ipsum? Lore ...
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="text-align-center">
+                                    See all messages <i class="icon-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="8 support tickets">
+                            <i class="icon-group"></i>
+                            <span class="count">8</span>
+                        </a>
+                    </li>
                     <li class="divider"></li>
                     <li class="hidden-phone">
                         <a href="#" id="settings"
@@ -325,7 +376,7 @@
                                 </section>
                                 <section class="feed-item">
                                     <div class="icon pull-left">
-                                        <img src="img/2.jpg" class="img-circle">
+                                        <img src="img/3.jpg" class="img-circle">
                                     </div>
                                     <div class="feed-item-body">
                                         <div class="text">

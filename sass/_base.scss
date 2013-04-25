@@ -217,6 +217,52 @@ input.parsley-error{
 }
 
 /***********************************/
+/**          MESSAGES            **/
+/**********************************/
+
+.messages{
+  background: $popoverBackground;
+  @include box-shadow(none);
+  @include border-radius(0);
+  border: none;
+  color: white;
+}
+
+.navbar .nav > li > .messages{
+  &:before{
+    border-bottom: none;
+  }
+  &:after{
+    border-bottom-color: $popoverBackground;
+  }
+}
+
+.messages > li > a{
+  color: #ffffff;
+  padding: 8px 10px;
+}
+
+.message{
+
+  img{
+    float: left;
+    width: 40px;
+  }
+
+  .details{
+    margin-left: 50px;
+  }
+
+  .sender{
+  }
+
+  .text{
+    font-size: $fontSizeSmall;
+    color: #ddd;
+  }
+}
+
+/***********************************/
 /**          BOXES               **/
 /**********************************/
 
@@ -535,6 +581,13 @@ input.parsley-error{
 
   @include border-radius($widget-border-radius);
 
+  .navbar .nav li.dropdown.open > .dropdown-toggle,
+  .navbar .nav li.dropdown.active > .dropdown-toggle,
+  .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
   .nav{
 
     &.right > li{
@@ -543,6 +596,7 @@ input.parsley-error{
         width: 45px;
         padding: 0;
         font-size: $baseFontSize * 1.6;
+        outline: 0;
 
         &:hover{
           color: white;
@@ -555,7 +609,7 @@ input.parsley-error{
         bottom: 2px;
         right: 2px;
         font-size: $fontSizeIndex;
-        font-weight: 600;
+        font-weight: 400;
         background:  rgba(darken($textColor, 20%), .55);
         color: rgba(white, 0.9);
         line-height: 1em;
@@ -608,7 +662,7 @@ input.parsley-error{
   }
 
   .popover{
-    background: rgba(darken($textColor, 20%), .8);
+    background: $popoverBackground;
     @include box-shadow(none);
     @include border-radius(0);
     border: none;
@@ -619,7 +673,7 @@ input.parsley-error{
     &.bottom .arrow{
       border-bottom-color: transparent;
       &:after{
-        border-bottom-color: rgba(darken($textColor, 20%), .8);
+        border-bottom-color: $popoverBackground;
       }
     }
 
@@ -638,7 +692,11 @@ input.parsley-error{
 }
 
 .popover.user-info{
-  width: 195px;
+  width: 185px;
+
+  .popover-content{
+    padding: 9px 14px 4px;
+  }
 }
 
 .user{
@@ -659,7 +717,7 @@ input.parsley-error{
   }
 
   .actions{
-    margin: 15px -14px 0; //cover padding
+    margin: 15px -15px 0; //cover padding
 
     li a{
       display: block;
@@ -669,7 +727,7 @@ input.parsley-error{
       padding: 6px 20px;
 
       &:hover{
-        background: rgba(lighten($textColor, 20%), .3);
+        @include gradient-vertical($dropdownLinkBackgroundHover, darken($dropdownLinkBackgroundHover, 5%));
       }
     }
   }

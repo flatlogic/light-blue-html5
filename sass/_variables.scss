@@ -36,7 +36,7 @@ $baseFontSize:          13px !default;
 $fontSizeLarge:         $baseFontSize * 1.25; // ~18px
 $fontSizeSmall:         $baseFontSize * 0.85; // ~12px
 $fontSizeMini:          $baseFontSize * 0.75; // ~11px
-$fontSizeIndex:         $baseFontSize * 0.65;
+$fontSizeIndex:         $baseFontSize * 0.7;
 
 $widget-shadow: 0 0 5px $shadowGray;
 $widget-border-radius: 1px;
@@ -52,6 +52,7 @@ $smallsColor: #dfdfdf;
 $backgroundBrown: #786c60 !default;
 $backgroundBlue: #426D73 !default;
 $backgroundColor: $backgroundBrown;
+$popoverBackground: rgba(darken($textColor, 20%), .92);
 
 //bootstrap override
 //responsive

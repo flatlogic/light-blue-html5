@@ -235,6 +235,14 @@
   .single-widget-container.error-page{
     margin-top: -170px;
   }
+
+  .navbar .nav > li > .dropdown-menu.messages{
+      margin-right: -88px;
+
+    &:after{
+      right: 105px;
+    }
+  }
 }
 
 @media (max-width: 480px){
@@ -291,6 +299,14 @@
 
   .single-widget-container.error-page{
     margin-top: -129px;
+  }
+
+  .navbar .nav > li > .dropdown-menu.messages{
+    margin-right: -112px;
+
+    &:after{
+      right: 129px;
+    }
   }
 }
 
