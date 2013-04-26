@@ -156,13 +156,36 @@
                             <i class="icon-cog"></i>
                         </a>
                     </li>
-                    <li class="hidden-phone">
-                        <a href="#" id="user"
-                           data-toggle="popover"
-                           data-placement="bottom"
-                           title="">
+                    <li class="hidden-phone dropdown">
+                        <a href="#" title="Account" id="account"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
                             <i class="icon-user"></i>
                         </a>
+                        <ul id="account-menu" class="dropdown-menu account" role="menu">
+                            <li role="presentation" class="account-picture">
+                                <img src="img/2.jpg" alt="">
+                                Philip Daineka
+                            </li>
+                            <li role="presentation">
+                                <a href="form_account.html" class="link">
+                                    <i class="icon-user"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="component_calendar.html" class="link">
+                                    <i class="icon-calendar"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="link">
+                                    <i class="icon-inbox"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="visible-phone">
                         <a href="#"
