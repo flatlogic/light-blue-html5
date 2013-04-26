@@ -236,11 +236,11 @@ input.parsley-error{
 
   img{
     float: left;
-    width: 40px;
+    width: 42px;
   }
 
   .details{
-    margin-left: 50px;
+    margin-left: 52px;
   }
 
   .text{
@@ -678,48 +678,6 @@ input.parsley-error{
   margin-top: 5px;
 }
 
-.popover.user-info{
-  width: 185px;
-
-  .popover-content{
-    padding: 9px 14px 4px;
-  }
-}
-
-.user{
-
-  img{
-    height: 60px;
-  }
-
-  figure{
-    margin: 0;
-  }
-
-  figcaption{
-    line-height: 60px;
-    vertical-align: middle;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .actions{
-    margin: 15px -15px 0; //cover padding
-
-    li a{
-      display: block;
-      text-decoration: none;
-      font-weight: 400;
-      color: #ffffff;
-      padding: 6px 20px;
-
-      &:hover{
-        @include gradient-vertical($dropdownLinkBackgroundHover, darken($dropdownLinkBackgroundHover, 5%));
-      }
-    }
-  }
-}
-
 .navbar{
   margin: 0;
 
@@ -730,7 +688,6 @@ input.parsley-error{
 }
 
 .navbar-inner{
-  //background: transparent;
   padding: 0;
   border: none;
   @include border-radius(0);
@@ -760,6 +717,28 @@ input.parsley-error{
     position: static;
     margin: 1px 0 1px 2px;
   }
+}
+
+/***********************************/
+/**          ACCOUNT             **/
+/**********************************/
+
+
+.account{
+  width: 180px;
+  font-weight: 400;
+}
+
+.account-picture{
+  padding: 5px 10px;
+  img{
+    width: 50px;
+    margin-right: 5px;
+  }
+}
+
+.account > li > a{
+  padding: 7px 10px;
 }
 
 /***********************************/
