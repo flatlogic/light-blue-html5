@@ -90,6 +90,7 @@ $(function(){
             '</div>' +
             '</div>',
         html: true,
+        animation: false,
         placement: 'bottom',
         content: function(){
             return _.template($('#settings-template').html(), settingsState);
@@ -105,6 +106,7 @@ $(function(){
 
     $(".page-header .dropdown-toggle").click(function(){
         $settings.popover('hide');
+        $(document).off("click", popoverClose);
     });
     //sidevar left/right
     $pageHeader.on("click", ".popover #sidebar-toggle .btn", function(){

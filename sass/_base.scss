@@ -661,7 +661,7 @@ input.parsley-error{
   color: $white;
 
   .see-all{
-    padding: 6px 10px;
+    padding: 5px 10px;
   }
 }
 
@@ -696,6 +696,49 @@ input.parsley-error{
   .text{
     font-size: $fontSizeSmall;
     color: #ddd;
+  }
+}
+
+/***********************************/
+/**          SUPPORT            **/
+/**********************************/
+
+.support{
+  background: $popoverBackground;
+  @include box-shadow(none);
+  @include border-radius(0);
+  border: none;
+  color: $white;
+
+  .see-all{
+    padding: 5px 10px;
+  }
+}
+
+.navbar .nav > li > .support{
+  &:before{
+    border-bottom: none;
+  }
+  &:after{
+    border-bottom-color: $popoverBackground;
+  }
+}
+
+.support > li > a{
+  color: $white;
+  padding: 5px 10px;
+}
+
+.support-ticket{
+
+  .picture{
+    float: left;
+    text-align: center;
+  }
+
+  .details{
+    margin-left: 30px;
+    font-size: $fontSizeSmall;
   }
 }
 
