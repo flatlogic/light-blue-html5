@@ -83,24 +83,29 @@ $(function(){
     }
 
     $settings.popover({
-        template: '<div class="popover">' +
+        template: '<div class="popover settings-popover">' +
             '<div class="arrow"></div>' +
             '<div class="popover-inner">' +
             '<div class="popover-content"></div>' +
             '</div>' +
             '</div>',
         html: true,
+        placement: 'bottom',
         content: function(){
             return _.template($('#settings-template').html(), settingsState);
         }
-    }).click(function(){
+    }).click(function(e){
+            //close all open dropdowns
+            $('.page-header .dropdown.open .dropdown-toggle').dropdown('toggle');
             // need to remove popover on anywhere-click
             $(document).on("click", popoverClose);
-            $("#user").popover('hide');
+            $(this).focus();
             return false;
         });
 
-
+    $(".page-header .dropdown-toggle").click(function(){
+        $settings.popover('hide');
+    });
     //sidevar left/right
     $pageHeader.on("click", ".popover #sidebar-toggle .btn", function(){
         var $this = $(this),

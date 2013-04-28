@@ -5,7 +5,7 @@ $i: 1;
 
   .#{nth($color_names, $i)}{
     background: #{$color} !important;
-    color:  #ffffff !important;
+    color:  $white !important;
   }
   $i: $i + 1;
 }
@@ -55,7 +55,7 @@ input.parsley-error{
   left: 65px;
   top: 20px;
   a{
-    color: #ffffff;
+    color: $white;
     text-decoration: none;
   }
 }
@@ -128,7 +128,7 @@ input.parsley-error{
   .accordion-body li a{
     padding: 4px 10px;
     font-weight: 300;
-    background: #ffffff;
+    background: $white;
 
     padding-left: 40px;
 
@@ -217,39 +217,6 @@ input.parsley-error{
 }
 
 /***********************************/
-/**          MESSAGES            **/
-/**********************************/
-
-.messages .see-all{
-  padding: 6px 10px;
-}
-
-.messages > li > a{
-  padding: 8px 10px;
-
-  &:hover .text{
-    color: #ddd;
-  }
-}
-
-.message{
-
-  img{
-    float: left;
-    width: 42px;
-  }
-
-  .details{
-    margin-left: 52px;
-  }
-
-  .text{
-    font-size: $fontSizeSmall;
-    color: lighten($textColor, 5%);
-  }
-}
-
-/***********************************/
 /**          BOXES               **/
 /**********************************/
 
@@ -288,7 +255,7 @@ input.parsley-error{
   @include box-shadow($widget-shadow);
   padding: 15px;
   color: $textColor;
-  background: #ffffff;
+  background: $white;
   margin-bottom: $box-margin-bottom;
   position: relative;
 
@@ -572,7 +539,10 @@ input.parsley-error{
   .navbar .nav li.dropdown.active > .dropdown-toggle,
   .navbar .nav li.dropdown.open.active > .dropdown-toggle {
     background-color: transparent;
-    color: #ffffff;
+    color: $transparentTextColor;
+    &:hover, &:focus{
+      color: $white;
+    }
   }
 
   .nav{
@@ -586,7 +556,7 @@ input.parsley-error{
         outline: 0;
 
         &:hover{
-          color: white;
+          color: $white;
           @include transition(all 0.1s);
         }
       }
@@ -612,10 +582,10 @@ input.parsley-error{
       &.active > a, &.active > a:visited{
         background: none;
         @include box-shadow(none);
-        color: white;
+        color: $white;
 
         &:hover{
-          color: white;
+          color: $white;
           background: none;
           @include box-shadow(none);
         }
@@ -631,51 +601,26 @@ input.parsley-error{
         $experimental-support-for-svg: false;
       }
 
-      & > a, & > a:visited{
+      & > a{
         background: none;
         text-align: center;
         vertical-align: middle;
         line-height: 38px;
-        color: rgba(darken($textColor, 20%), .5);
+        color: $transparentTextColor;
         text-shadow: none;
         padding: 0 10px;
         @include transition(all 0.1s);
 
         &:hover, &:focus{
-          color: white;
+          color: $white;
         }
+
+        //&:focus{
+        //  color: $transparentTextColor;
+        //}
       }
     }
   }
-
-  .popover{
-    background: $popoverBackground;
-    @include box-shadow(none);
-    @include border-radius(0);
-    border: none;
-    color: white;
-    width: 210px;
-    font-size: $fontSizeSmall;
-
-    &.bottom .arrow{
-      border-bottom-color: transparent;
-      &:after{
-        border-bottom-color: $popoverBackground;
-      }
-    }
-
-    .btn-group{
-      margin-top: 0;
-    }
-  }
-}
-
-.setting{
-  font-weight: 400;
-}
-
-.setting + .setting{
-  margin-top: 5px;
 }
 
 .navbar{
@@ -703,12 +648,12 @@ input.parsley-error{
     font-size: $fontSizeSmall;
     margin-bottom: 0;
     padding: 2px 9px;
-    color: white;
+    color: $white;
     text-shadow: none;
     @include border-radius(10px);
 
     a{
-      color: white;
+      color: $white;
       font-weight: 600;
     }
   }
@@ -720,17 +665,132 @@ input.parsley-error{
 }
 
 /***********************************/
+/**          MESSAGES            **/
+/**********************************/
+
+.messages{
+  background: $popoverBackground;
+  @include box-shadow(none);
+  @include border-radius(0);
+  border: none;
+  color: $white;
+
+  .see-all{
+    padding: 6px 10px;
+  }
+}
+
+.navbar .nav > li > .messages{
+  &:before{
+    border-bottom: none;
+  }
+  &:after{
+    border-bottom-color: $popoverBackground;
+  }
+}
+
+.messages > li > a{
+  color: $white;
+  padding: 8px 10px;
+}
+
+.message{
+
+  img{
+    float: left;
+    width: 40px;
+  }
+
+  .details{
+    margin-left: 50px;
+  }
+
+  .sender{
+  }
+
+  .text{
+    font-size: $fontSizeSmall;
+    color: #ddd;
+  }
+}
+
+/***********************************/
+/**          SETTINGS             **/
+/**********************************/
+
+.settings-popover{
+  background: $popoverBackground;
+  @include box-shadow(none);
+  @include border-radius(0);
+  border: none;
+  color: $white;
+  width: 179px;
+  font-size: $fontSizeSmall;
+
+  //override js-set variables
+  left: -140px !important;
+  top: 30px !important;
+
+  &.bottom .arrow{
+    border-bottom-color: transparent;
+    top: -13px;
+    margin-left: 0;
+    left: auto;
+    right: 4px;
+    &:after{
+      border-bottom-color: $popoverBackground;
+      border-width: 6px;
+    }
+  }
+
+  .btn-group{
+    margin-top: 0;
+  }
+
+  .btn-small{
+    padding: 0 7px;
+  }
+}
+
+.setting{
+  font-weight: 400;
+}
+
+.setting + .setting{
+  margin-top: 5px;
+}
+
+/***********************************/
 /**          ACCOUNT             **/
 /**********************************/
 
 
 .account{
   width: 180px;
-  font-weight: 400;
+  background: $popoverBackground;
+  @include box-shadow(none);
+  @include border-radius(0);
+  border: none;
+  color: $white;
 }
+
+.navbar .nav > li > .account{
+  &:before{
+    border-bottom: none;
+  }
+  &:after{
+    border-bottom-color: $popoverBackground;
+  }
+}
+
+.account > li > a{
+  color: $white;
+}
+
 
 .account-picture{
   padding: 5px 10px;
+  font-weight: 400;
   img{
     width: 50px;
     margin-right: 5px;
@@ -812,7 +872,7 @@ input.parsley-error{
     padding-top: 10px;
 
     a {
-      color: #ffffff;
+      color: $white;
       display: block;
       text-shadow: none;
       text-decoration: none;
@@ -845,7 +905,7 @@ input.parsley-error{
     z-index: 1;
     background: darken($lightGray, 1%);
     text-align: center;
-    color: white;
+    color: $white;
     width: 48px;
     height: 48px;
     line-height: 48px;
@@ -931,14 +991,14 @@ input.parsley-error{
 /**********************************/
 
 .btn{
-  color: #ffffff;
+  color: $white;
   text-shadow: none;
 
   @include box-shadow(none);
 
   &:hover,
   &:focus {
-    color: white;
+    color: $white;
     @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
   }
 
@@ -953,7 +1013,7 @@ input.parsley-error{
 
   &.disabled,
   &[disabled] {
-    color: white;
+    color: $white;
   }
 }
 
@@ -972,17 +1032,17 @@ input.parsley-error{
 
 .btn-transparent{
   background: rgba(darken($textColor, 20%), .4);
-  color: white;
+  color: $white;
   text-shadow: none;
   @include box-shadow(none);
 
   &:hover, &.active:hover{
-    background: rgba(darken($textColor, 20%), .5);
-    color: #ffffff;
+    background: $transparentTextColor;
+    color: $white;
   }
 
   &.active{
-    color: #ffffff;
+    color: $white;
     background: rgba(darken($textColor, 20%), .75);
   }
 
@@ -1141,7 +1201,7 @@ input.input-padding-increased{
   padding: 0;
 
   .body{
-    background: #ffffff;
+    background: $white;
     margin-top: 0;
     @include box-shadow($widget-shadow);
     padding: 15px;
@@ -1155,7 +1215,7 @@ input.input-padding-increased{
   }
 
   .nav > li:not(.active) > a{
-    background: #ffffff;
+    background: $white;
     border-bottom: none;
     color: $textColor;
   }
@@ -1172,7 +1232,7 @@ input.input-padding-increased{
 //base look for inner tabs
 .widget:not(.widget-tabs){
   .tab-content{
-    background: #ffffff;
+    background: $white;
     padding: 10px;
     border: 1px solid #ddd;
     border-top: none;
@@ -1209,7 +1269,7 @@ input.input-padding-increased{
 /**********************************/
 
 .accordion-group{
-  background: #ffffff;
+  background: $white;
 
   $i: 1;
   @each $color in $colors{
@@ -1334,7 +1394,7 @@ input.input-padding-increased{
     z-index: 1;
     background: darken($lightGray, 3%);
     text-align: center;
-    color: white;
+    color: $white;
     width: 28px;
     height: 28px;
     line-height: 28px;
@@ -1536,7 +1596,7 @@ input.input-padding-increased{
     line-height: 140px;
     margin: 0;
     text-rendering: optimizeLegibility;
-    color: #ffffff;
+    color: $white;
   }
 
   .description{
@@ -1578,7 +1638,7 @@ input.input-padding-increased{
 }
 
 .well-white{
-  background: #ffffff;
+  background: $white;
 }
 
 .margin-top{
