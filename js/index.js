@@ -92,7 +92,7 @@ nv.addGraph(function() {
     var chart = nv.models.lineChart()
         .margin({top: 0, bottom: 25, left: 25, right: 0})
         //.showLegend(false)
-        .color([$blue, $orange, $green]);
+        .color([$blue, $green, $orange]);
 
     chart.legend.margin({top: 3});
 
