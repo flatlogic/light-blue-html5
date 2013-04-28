@@ -307,7 +307,7 @@ input.parsley-error{
     }
 
     h4{
-      font-size: $baseFontSize + 1;
+      font-size: $fontSizeLarger;
     }
   }
 
@@ -343,7 +343,7 @@ input.parsley-error{
 /**********************************/
 
 .stat-widget{
-  height: 315px;
+  height: 239px;
 
   svg{
     height: 100%;
@@ -355,9 +355,8 @@ input.parsley-error{
 
   header{
     margin: -15px -15px 0;
-    height: 110px;
+    height: 90px;
     @include box-sizing(border-box);
-    @include box-shadow(0 1px 1px #888);
   }
 
   .nvtooltip{
@@ -366,48 +365,47 @@ input.parsley-error{
 
   .chart-info{
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 15px;
+    top: 7px;
     z-index: 0;
     line-height: 1em;
 
     .total{
-      font-size: $fontSizeLarge;
-      letter-spacing: 1px;
+      font-size: $fontSizeLarger;
     }
 
     .percentage{
       font-size: $baseFontSize;
-      letter-spacing: 0;
     }
   }
 }
 
 .stat-widget-body{
-  margin-top: 20px;
+  margin-top: 5px;
 
   .most-from, .time-period{
     font-size: $fontSizeSmall;
   }
 
   .value{
-    font-size: $fontSizeLarge;
+    font-size: $fontSizeLarger;
+    font-weight: 400;
 
     a{
       color: inherit;
 
       i{
-        font-size: small;
+        //font-size: small;
       }
     }
   }
 
   .details{
-    margin-top: 18px;
+    margin-top: 10px;
   }
 
   .detail{
-    padding: 8px 5px 7px;
+    padding: 2px 5px;
     @include border-radius($baseBorderRadius);
     cursor: pointer;
     background: darken($lightGray, 1%);
@@ -419,24 +417,23 @@ input.parsley-error{
 }
 
 .stat-widget-additional{
-  margin-top: 17px;
+  margin-top: 10px;
   .sparkline{
     margin-top: 5px;
     padding-right: 10px;
   }
 
   .change{
-    @include box-sizing(border-box);
-    @include border-radius($baseBorderRadius);
-    height: 40px;
-    width: 70%;
-    line-height: 40px;
-    text-align: center;
+    //@include box-sizing(border-box);
+    //@include border-radius($baseBorderRadius);
+    //height: 26px;
+    //line-height: 26px;
+    //text-align: center;
+    //margin-top: 9px;
+    //font-weight: 400;
+    //vertical-align: middle;
+    //cursor: pointer;
     margin-top: 5px;
-    font-size: $fontSizeLarge;
-    font-weight: 400;
-    vertical-align: middle;
-    cursor: pointer;
   }
 }
 
@@ -1094,7 +1091,7 @@ input.parsley-error{
 }
 
 .section{
-  font-size: $baseFontSize + 1px;
+  font-size: $fontSizeLarger;
   color: $textLightGray;
   vertical-align: middle;
   line-height: 30px;

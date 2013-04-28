@@ -4,7 +4,7 @@ nv.addGraph(function() {
             .showLegend(false)
             .showControls(false)
             .ticks(false)
-            .color(['#ffffff'])
+            .color([$blue])
         ;
 
     chart.yAxis
@@ -31,7 +31,7 @@ nv.addGraph(function() {
             .showLegend(false)
             .showControls(false)
             .ticks(false)
-            .color(['#ffffff'])
+            .color([$green])
         ;
 
     chart.yAxis
@@ -58,7 +58,7 @@ nv.addGraph(function() {
             .showLegend(false)
             .showControls(false)
             .ticks(false)
-            .color(['#ffffff'])
+            .color([$orange])
         ;
 
     chart.yAxis
@@ -92,7 +92,7 @@ nv.addGraph(function() {
     var chart = nv.models.lineChart()
         .margin({top: 0, bottom: 25, left: 25, right: 0})
         //.showLegend(false)
-        .color([$blue, $green, $orange]);
+        .color([$blue, $orange, $green]);
 
     chart.legend.margin({top: 3});
 
@@ -130,8 +130,8 @@ $(function(){
     }
     var values = [[],[],[]],
         options = {
-            width: '80%',
-            height: '40px',
+            width: '100%',
+            height: '30px',
             fillColor: 'white',
             lineWidth: '2',
             spotRadius: '2',
