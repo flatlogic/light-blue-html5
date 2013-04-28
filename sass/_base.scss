@@ -343,7 +343,7 @@ input.parsley-error{
 /**********************************/
 
 .stat-widget{
-  height: 239px;
+  height: 241px;
 
   svg{
     height: 100%;
@@ -381,7 +381,7 @@ input.parsley-error{
 }
 
 .stat-widget-body{
-  margin-top: 5px;
+  margin-top: 7px;
 
   .most-from, .time-period{
     font-size: $fontSizeSmall;
@@ -393,10 +393,6 @@ input.parsley-error{
 
     a{
       color: inherit;
-
-      i{
-        //font-size: small;
-      }
     }
   }
 
@@ -424,15 +420,6 @@ input.parsley-error{
   }
 
   .change{
-    //@include box-sizing(border-box);
-    //@include border-radius($baseBorderRadius);
-    //height: 26px;
-    //line-height: 26px;
-    //text-align: center;
-    //margin-top: 9px;
-    //font-weight: 400;
-    //vertical-align: middle;
-    //cursor: pointer;
     margin-top: 5px;
   }
 }
@@ -576,7 +563,7 @@ input.parsley-error{
 
       background: none;
 
-      &.active > a, &.active > a:visited{
+      &.active > a{
         background: none;
         @include box-shadow(none);
         color: $white;
@@ -607,6 +594,7 @@ input.parsley-error{
         text-shadow: none;
         padding: 0 10px;
         @include transition(all 0.1s);
+        font-size: $fontSizeLarger;
 
         &:hover, &:focus{
           color: $white;
