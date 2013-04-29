@@ -275,7 +275,7 @@
                     <h4><i class="icon-file-alt"></i> Article <small>Create new or edit existing article</small></h4>
                 </header>
                 <div class="body">
-                    <form class="form-horizontal" method novalidate="novalidate" data-validate="parsley">
+                    <form class="form-horizontal" method="post" novalidate="novalidate" data-validate="parsley">
                         <fieldset>
                             <div class="control-group">
                                 <label for="title" class="control-label">Title <span class="required">*</span></label>
@@ -313,7 +313,7 @@
                 </header>
                 <div class="body">
                     <form id="article-options" class="form-horizontal form-condensed label-left"
-                          method>
+                          method="post">
                         <fieldset>
                             <legend class="section">Publishing</legend>
                             <div class="control-group">
@@ -349,6 +349,8 @@
                                     </select>
                                 </div>
                             </div>
+                        </fieldset>
+                        <fieldset>
                             <legend class="section">Category & Tags</legend>
                             <div class="control-group">
                                 <label for="article-category" class="control-label">Category</label>
@@ -381,7 +383,7 @@
                 </header>
                 <div class="body">
                     <form id="article-access" class="form-horizontal form-condensed label-left"
-                          method>
+                          method="post">
                         <fieldset>
                             <div class="control-group">
                                 <label for="article-visibility" class="control-label">Visibility</label>
