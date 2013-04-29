@@ -278,7 +278,7 @@
                 <div class="body">
                     <form id="user-form" class="form-horizontal label-left"
                           novalidate="novalidate"
-                          method
+                          method="post"
                           data-validate="parsley">
                         <div class="row-fluid">
                             <div class="span4">
@@ -297,6 +297,8 @@
                         </div>
                         <fieldset>
                             <legend>Account Edit Form <small>Some explanation text</small></legend>
+                        </fieldset>
+                        <fieldset>
                             <legend class="section">Personal Info</legend>
                             <div class="control-group">
                                 <label class="control-label" for="prefix">Prefix</label>
@@ -323,7 +325,7 @@
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label for="gender" class="control-label">Gender</label>
+                                <label class="control-label">Gender</label>
                                 <div class="controls controls-row">
                                     <input id="gender-input" type="hidden" name="gender" value="female">
                                     <div id="gender" class="btn-group" data-toggle="buttons-radio" data-target="gender-input">
@@ -338,6 +340,8 @@
                                     <input id="date-of-birth" class="span6 date-picker" required="required" type="text" name="date-of-birth" value="">
                                 </div>
                             </div>
+                        </fieldset>
+                        <fieldset>
                             <legend class="section">Contact Info</legend>
                             <div class="control-group">
                                 <label id="email-label" for="email" class="control-label">Email <span class="required">*</span></label>
@@ -347,7 +351,7 @@
                                                data-trigger="change" required="required"
                                                class="span8"
                                                name="email">
-                                        <a class="btn btn-success" type="button">Write an email</a> </div>
+                                        <button class="btn btn-success" type="button">Write an email</button> </div>
                                 </div>
                             </div>
                             <div class="control-group">
@@ -380,6 +384,8 @@
                                     </div>
                                 </div>
                             </div>
+                        </fieldset>
+                        <fieldset>
                             <legend class="section">
                                 Address
                                 <button type="button" class="btn btn-primary btn-mini pull-right">
@@ -737,7 +743,7 @@
                     </div>
                 </header>
                 <div class="body">
-                    <form method>
+                    <form method="post">
                         <fieldset>
                                 <div class="control-group">
                                     <label for="exp" class="control-label">Account expiration date</label>
