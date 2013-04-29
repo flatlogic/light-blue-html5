@@ -279,7 +279,7 @@
                     </h4>
                 </header>
                 <div class="body">
-                    <form class="form-horizontal" method="">
+                    <form class="form-horizontal" method="post">
                         <fieldset>
                             <legend class="section">Horizontal form</legend>
                         <div class="control-group controls-row">
@@ -376,7 +376,7 @@
                     </h4>
                 </header>
                 <div class="body">
-                    <form method>
+                    <form method="post">
                         <fieldset>
                             <legend class="section">Default form</legend>
                             <div class="control-group">
@@ -1117,6 +1117,8 @@
                                     </select>
                                 </div>
                             </div>
+                        </fieldset>
+                        <fieldset>
                             <legend class="section">Dropdown based colored selects</legend>
                             <div class="control-group">
                                 <label class="control-label" for="simple-colored">Simple select</label>
@@ -1193,7 +1195,7 @@
                     </h4>
                 </header>
                 <div class="body">
-                    <form class="form-horizontal" method>
+                    <form class="form-horizontal" method="post">
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label">Checkboxes</label>
@@ -1301,14 +1303,14 @@
                                 <label for="simple-switch" class="control-label">Switches</label>
                                 <div class="controls">
                                     <label class="checkbox inline">
-                                    <div class="switch switch-small" data-on="primary" data-off="danger">
-                                        <input id="simple-switch" type="checkbox" checked="checked">
-                                    </div>
+                                        <span class="switch switch-small" data-on="primary" data-off="danger">
+                                            <input id="simple-switch" type="checkbox" checked="checked">
+                                        </span>
                                     </label>
                                     <label class="checkbox inline">
-                                        <div class="switch switch-small" data-on="success" data-off="warning">
+                                        <span class="switch switch-small" data-on="success" data-off="warning">
                                             <input id="simple-switch-2" type="checkbox">
-                                        </div>
+                                        </span>
                                     </label>
                                 </div>
                             </div>
@@ -1326,7 +1328,7 @@
                     </h4>
                 </header>
                 <div class="body">
-                    <form method >
+                    <form method="post" >
                         <fieldset>
                             <legend class="section">Dates</legend>
                             <div class="control-group">
@@ -1347,6 +1349,8 @@
                                     </div>
                                 </div>
                             </div>
+                        </fieldset>
+                        <fieldset>
                             <legend class="section">Colors</legend>
                             <div class="control-group">
                                 <label for="color" class="control-label">Simple Select</label>
@@ -1375,7 +1379,7 @@
                     </h4>
                 </header>
                 <div class="body">
-                    <form method>
+                    <form method="post">
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label"><code>.span6</code></label>
@@ -1435,7 +1439,7 @@
                     </h4>
                 </header>
                 <div class="body">
-                    <form method class="form-horizontal label-left">
+                    <form method="post" class="form-horizontal label-left">
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label" for="mask-phone">
