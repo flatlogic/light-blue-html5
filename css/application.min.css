@@ -11778,10 +11778,10 @@ input.parsley-error {
 /* line 214, C:/projects/admin/sass/_base.scss */
 .content {
   padding: 25px 3.3%;
-  -webkit-transition: margin-top 0.2s;
-  -moz-transition: margin-top 0.2s;
-  -o-transition: margin-top 0.2s;
-  transition: margin-top 0.2s;
+  -webkit-transition: margin-top 0.35s ease;
+  -moz-transition: margin-top 0.35s ease;
+  -o-transition: margin-top 0.35s ease;
+  transition: margin-top 0.35s ease;
 }
 
 /***********************************/
@@ -13789,46 +13789,21 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     left: 0;
     margin: 85px 5%;
     width: 90%;
-    height: 0;
-    overflow: hidden;
     padding: 0;
   }
-  /* line 139, C:/projects/admin/sass/_responsive.scss */
-  .sidebar .brand,
-  .sidebar-on-right .sidebar .brand,
-  .sidebar-on-right .sidebar.sidebar-icons .brand,
-  .sidebar.sidebar-icons .brand {
-    display: none;
+  /* line 137, C:/projects/admin/sass/_responsive.scss */
+  .sidebar .side-nav,
+  .sidebar-on-right .sidebar .side-nav,
+  .sidebar-on-right .sidebar.sidebar-icons .side-nav,
+  .sidebar.sidebar-icons .side-nav {
+    margin: 10px 0;
   }
-  /* line 143, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in,
-  .sidebar-on-right .sidebar.in,
-  .sidebar-on-right .sidebar.sidebar-icons.in,
-  .sidebar.sidebar-icons.in {
-    padding: 20px 0;
-  }
-  /* line 146, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .brand,
-  .sidebar-on-right .sidebar.in .brand,
-  .sidebar-on-right .sidebar.sidebar-icons.in .brand,
-  .sidebar.sidebar-icons.in .brand {
-    display: block;
-  }
-  /* line 150, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in h2,
-  .sidebar-on-right .sidebar.in h2,
-  .sidebar-on-right .sidebar.sidebar-icons.in h2,
-  .sidebar.sidebar-icons.in h2 {
-    display: block;
-  }
-  /* line 155, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .side-nav li a,
-  .sidebar-on-right .sidebar.in .side-nav li a,
-  .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a,
-  .sidebar.sidebar-icons.in .side-nav li a {
-    font-size: 16.25px;
-    line-height: 30px;
-    padding: 10px 25px;
+  /* line 142, C:/projects/admin/sass/_responsive.scss */
+  .sidebar .side-nav li a,
+  .sidebar-on-right .sidebar .side-nav li a,
+  .sidebar-on-right .sidebar.sidebar-icons .side-nav li a,
+  .sidebar.sidebar-icons .side-nav li a {
+    padding: 8px 25px;
     font-weight: 400;
     text-align: left;
     width: auto;
@@ -13837,57 +13812,56 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     -o-transition: width 0;
     transition: width 0;
   }
-  /* line 164, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .side-nav li a i[class*=icon],
-  .sidebar-on-right .sidebar.in .side-nav li a i[class*=icon],
-  .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li a i[class*=icon],
-  .sidebar.sidebar-icons.in .side-nav li a i[class*=icon] {
-    line-height: 30px;
+  /* line 149, C:/projects/admin/sass/_responsive.scss */
+  .sidebar .side-nav li a i[class*=icon],
+  .sidebar-on-right .sidebar .side-nav li a i[class*=icon],
+  .sidebar-on-right .sidebar.sidebar-icons .side-nav li a i[class*=icon],
+  .sidebar.sidebar-icons .side-nav li a i[class*=icon] {
     padding-top: 1px;
   }
-  /* line 170, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .side-nav li .name,
-  .sidebar-on-right .sidebar.in .side-nav li .name,
-  .sidebar-on-right .sidebar.sidebar-icons.in .side-nav li .name,
-  .sidebar.sidebar-icons.in .side-nav li .name {
+  /* line 154, C:/projects/admin/sass/_responsive.scss */
+  .sidebar .side-nav li .name,
+  .sidebar-on-right .sidebar .side-nav li .name,
+  .sidebar-on-right .sidebar.sidebar-icons .side-nav li .name,
+  .sidebar.sidebar-icons .side-nav li .name {
     margin-left: 10px;
     display: inline-block;
   }
-  /* line 177, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .side-nav > li.active > a,
-  .sidebar-on-right .sidebar.in .side-nav > li.active > a,
-  .sidebar-on-right .sidebar.sidebar-icons.in .side-nav > li.active > a,
-  .sidebar.sidebar-icons.in .side-nav > li.active > a {
+  /* line 161, C:/projects/admin/sass/_responsive.scss */
+  .sidebar .side-nav > li.active > a,
+  .sidebar-on-right .sidebar .side-nav > li.active > a,
+  .sidebar-on-right .sidebar.sidebar-icons .side-nav > li.active > a,
+  .sidebar.sidebar-icons .side-nav > li.active > a {
     border-right: 5px solid #618fb0;
     padding-right: 20px;
   }
-  /* line 182, C:/projects/admin/sass/_responsive.scss */
-  .sidebar.in .settings,
-  .sidebar-on-right .sidebar.in .settings,
-  .sidebar-on-right .sidebar.sidebar-icons.in .settings,
-  .sidebar.sidebar-icons.in .settings {
-    display: none;
+  /* line 166, C:/projects/admin/sass/_responsive.scss */
+  .sidebar .accordion-body.in li a,
+  .sidebar-on-right .sidebar .accordion-body.in li a,
+  .sidebar-on-right .sidebar.sidebar-icons .accordion-body.in li a,
+  .sidebar.sidebar-icons .accordion-body.in li a {
+    width: auto;
   }
-  /* line 187, C:/projects/admin/sass/_responsive.scss */
+  /* line 170, C:/projects/admin/sass/_responsive.scss */
   .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.in + .wrap .content,
   .sidebar-on-right .sidebar.sidebar-icons.in + .wrap .content,
   .sidebar.sidebar-icons.in + .wrap .content {
-    margin-top: 520px;
+    margin-top: 390px;
   }
 
-  /* line 192, C:/projects/admin/sass/_responsive.scss */
+  /* line 175, C:/projects/admin/sass/_responsive.scss */
   .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 197, C:/projects/admin/sass/_responsive.scss */
+  /* line 180, C:/projects/admin/sass/_responsive.scss */
   .nv-controlsWrap {
     display: none;
   }
 
-  /* line 203, C:/projects/admin/sass/_responsive.scss */
+  /* line 186, C:/projects/admin/sass/_responsive.scss */
   .logo,
   .sidebar-on-right .logo,
   .sidebar-hidden .logo {
@@ -13899,125 +13873,125 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     top: 15px;
   }
 
-  /* line 212, C:/projects/admin/sass/_responsive.scss */
+  /* line 195, C:/projects/admin/sass/_responsive.scss */
   .modal-body {
     max-height: 240px;
   }
 
-  /* line 216, C:/projects/admin/sass/_responsive.scss */
+  /* line 199, C:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 402px;
   }
 
-  /* line 220, C:/projects/admin/sass/_responsive.scss */
+  /* line 203, C:/projects/admin/sass/_responsive.scss */
   .widget-404 {
     padding: 0;
   }
-  /* line 222, C:/projects/admin/sass/_responsive.scss */
+  /* line 205, C:/projects/admin/sass/_responsive.scss */
   .widget-404 .body {
     margin-top: 0;
   }
 
-  /* line 227, C:/projects/admin/sass/_responsive.scss */
+  /* line 210, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 230, C:/projects/admin/sass/_responsive.scss */
+  /* line 213, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
     width: 285px;
   }
 
-  /* line 235, C:/projects/admin/sass/_responsive.scss */
+  /* line 218, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container.error-page {
     margin-top: -170px;
   }
 
-  /* line 240, C:/projects/admin/sass/_responsive.scss */
+  /* line 223, C:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages,
   .navbar .nav > li > .dropdown-menu.support {
     margin-right: -88px;
   }
-  /* line 243, C:/projects/admin/sass/_responsive.scss */
+  /* line 226, C:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages:after,
   .navbar .nav > li > .dropdown-menu.support:after {
     right: 105px;
   }
 }
 @media (max-width: 480px) {
-  /* line 250, C:/projects/admin/sass/_responsive.scss */
+  /* line 233, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 48.61878%;
     margin-left: 2.76243%;
     float: left;
   }
-  /* line 255, C:/projects/admin/sass/_responsive.scss */
+  /* line 238, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(odd) {
     margin-left: 0;
   }
 
-  /* line 260, C:/projects/admin/sass/_responsive.scss */
+  /* line 243, C:/projects/admin/sass/_responsive.scss */
   .form-condensed .controls {
     margin-left: 0;
   }
 
-  /* line 264, C:/projects/admin/sass/_responsive.scss */
+  /* line 247, C:/projects/admin/sass/_responsive.scss */
   body {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 269, C:/projects/admin/sass/_responsive.scss */
+  /* line 252, C:/projects/admin/sass/_responsive.scss */
   .login-widget, .registration-widget {
     width: 260px;
   }
-  /* line 272, C:/projects/admin/sass/_responsive.scss */
+  /* line 255, C:/projects/admin/sass/_responsive.scss */
   .login-widget input[type="email"],
   .login-widget input[type="password"], .registration-widget input[type="email"],
   .registration-widget input[type="password"] {
     width: 222px;
   }
 
-  /* line 277, C:/projects/admin/sass/_responsive.scss */
+  /* line 260, C:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 260px;
   }
 
-  /* line 282, C:/projects/admin/sass/_responsive.scss */
+  /* line 265, C:/projects/admin/sass/_responsive.scss */
   .widget-404 h1 {
     font-size: 80px;
     line-height: 80px;
   }
-  /* line 287, C:/projects/admin/sass/_responsive.scss */
+  /* line 270, C:/projects/admin/sass/_responsive.scss */
   .widget-404 h3 {
     font-size: 16.25px;
     line-height: 22px;
   }
 
-  /* line 293, C:/projects/admin/sass/_responsive.scss */
+  /* line 276, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 296, C:/projects/admin/sass/_responsive.scss */
+  /* line 279, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
     width: 143px;
   }
 
-  /* line 301, C:/projects/admin/sass/_responsive.scss */
+  /* line 284, C:/projects/admin/sass/_responsive.scss */
   .single-widget-container.error-page {
     margin-top: -129px;
   }
 
-  /* line 305, C:/projects/admin/sass/_responsive.scss */
+  /* line 288, C:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages {
     margin-right: -112px;
   }
-  /* line 308, C:/projects/admin/sass/_responsive.scss */
+  /* line 291, C:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages:after {
     right: 129px;
   }
 }
 @media (max-width: 250px) {
-  /* line 315, C:/projects/admin/sass/_responsive.scss */
+  /* line 298, C:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;

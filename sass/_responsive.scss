@@ -132,60 +132,43 @@
     left: 0;
     margin: 85px 5%;
     width: 90%;
-    height: 0;
-    overflow: hidden;
     padding: 0;
 
-    .brand{
-      display: none;
+    .side-nav{
+      margin: 10px 0;
     }
 
-    &.in{
-      padding: 20px 0;
+    .side-nav li{
+      a{
+        padding: 8px 25px;
+        font-weight: 400;
+        text-align: left;
+        width: auto;
+        @include transition(width 0);
 
-      .brand{
-        display: block;
-      }
-
-      h2{
-        display: block;
-      }
-
-      .side-nav li{
-        a{
-          font-size: $fontSizeLarge;
-          line-height: 30px;
-          padding: 10px 25px;
-          font-weight: 400;
-          text-align: left;
-          width: auto;
-          @include transition(width 0);
-
-          i[class*=icon]{
-            line-height: 30px;
-            padding-top: 1px;
-          }
+        i[class*=icon]{
+          padding-top: 1px;
         }
-
-        .name{
-          margin-left: 10px;
-          display: inline-block;
-        }
-
       }
 
-      .side-nav > li.active > a{
-        border-right: 5px solid $blue;
-        padding-right: 20px;
+      .name{
+        margin-left: 10px;
+        display: inline-block;
       }
 
-      .settings{
-        display: none;
-      }
+    }
+
+    .side-nav > li.active > a{
+      border-right: 5px solid $blue;
+      padding-right: 20px;
+    }
+
+    .accordion-body.in li a{
+      width: auto;
     }
 
     &.in + .wrap .content{
-      margin-top: 520px;
+      margin-top: 390px;
     }
   }
 
