@@ -528,83 +528,57 @@ input.parsley-error{
     }
   }
 
-  .nav{
+  .nav > li{
+    position: relative;
+    background: none;
 
-    &.right > li{
-      position: relative;
-      & > a, & > a:visited{
-        width: 45px;
-        padding: 0;
-        font-size: $baseFontSize * 1.6;
-        outline: 0;
+    & > a{
+      color: $transparentTextColor;
+      width: 45px;
+      padding: 0;
+      font-size: $baseFontSize * 1.6;
+      outline: 0;
+      background: none;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 36px;
+      text-shadow: none;
+      @include transition(color 0.1s);
 
-        &:hover{
-          color: $white;
-          @include transition(all 0.1s);
-        }
-      }
-
-      .count{
-        position: absolute;
-        bottom: 2px;
-        right: 2px;
-        font-size: $fontSizeIndex;
-        font-weight: 400;
-        background:  rgba(darken($textColor, 20%), .55);
-        color: rgba(white, 0.9);
-        line-height: 1em;
-        padding: 2px 4px;
-        @include border-radius(10px);
+      &:hover{
+        color: $white;
       }
     }
 
-    & > li{
+    .count{
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      font-size: $fontSizeIndex;
+      font-weight: 400;
+      background:  rgba(darken($textColor, 20%), .55);
+      color: rgba(white, 0.9);
+      line-height: 1em;
+      padding: 2px 4px;
+      @include border-radius(10px);
+    }
 
-      background: none;
-
-      &.active > a{
-        background: none;
-        @include box-shadow(none);
-        color: $white;
-
-        &:hover{
-          color: $white;
-          background: none;
-          @include box-shadow(none);
-        }
-      }
-
-      &.divider{
-        display: block;
-        height: 38px;
-        width: 1px;
-        margin: 0 20px;
-        $experimental-support-for-svg: true;
-        @include background(linear-gradient(rgba(0,0,0,0), rgba($textColor, .5), rgba(0,0,0,0)));
-        $experimental-support-for-svg: false;
-      }
-
-      & > a{
-        background: none;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 38px;
-        color: $transparentTextColor;
-        text-shadow: none;
-        padding: 0 10px;
-        @include transition(all 0.1s);
-        font-size: $fontSizeLarger;
-
-        &:hover, &:focus{
-          color: $white;
-        }
-
-        //&:focus{
-        //  color: $transparentTextColor;
-        //}
-      }
+    &.divider{
+      display: block;
+      height: 38px;
+      width: 1px;
+      margin: 0 20px;
+      $experimental-support-for-svg: true;
+      @include background(linear-gradient(rgba(0,0,0,0), rgba($textColor, .5), rgba(0,0,0,0)));
+      $experimental-support-for-svg: false;
     }
   }
+}
+
+.page-title{
+  color: $white;
+  font-weight: 700;
+  margin-top: 8px;
 }
 
 .navbar{
@@ -624,7 +598,7 @@ input.parsley-error{
 }
 
 .notifications{
-  margin: 7px 20px 7px 0;
+  margin: 6px 20px 6px 0;
 
   .alert{
     background: rgba(darken($textColor, 20%), .32);
