@@ -53,7 +53,7 @@ input.parsley-error{
 .logo{
   position: absolute;
   left: 65px;
-  top: 20px;
+  top: 13px;
   a{
     color: $white;
     text-decoration: none;
@@ -253,7 +253,7 @@ input.parsley-error{
 .widget{
   @include border-radius($widget-border-radius);
   @include box-shadow($widget-shadow);
-  padding: 15px;
+  padding: 12px 15px;
   color: $textColor;
   background: $white;
   margin-bottom: $box-margin-bottom;
@@ -312,7 +312,7 @@ input.parsley-error{
   }
 
   .body{
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
   & > footer{
@@ -372,6 +372,7 @@ input.parsley-error{
 
     .total{
       font-size: $fontSizeLarger;
+      font-weight: 400;
     }
 
     .percentage{
@@ -512,7 +513,7 @@ input.parsley-error{
 .page-header{
 
   border: none;
-  margin: 22px 3.3% 0;
+  margin: 15px 3.3% 0;
   padding: 0;
   position: relative;
 
@@ -534,9 +535,9 @@ input.parsley-error{
 
     & > a{
       color: $transparentTextColor;
-      width: 45px;
+      width: 40px;
       padding: 0;
-      font-size: $baseFontSize * 1.6;
+      font-size: $baseFontSize * 1.5;
       outline: 0;
       background: none;
       text-align: center;
@@ -578,7 +579,12 @@ input.parsley-error{
 .page-title{
   color: $white;
   font-weight: 700;
-  margin-top: 8px;
+  line-height: 1;
+  margin: 13px 0 20px;
+
+  small{
+    color: $lightGray;
+  }
 }
 
 .navbar{
