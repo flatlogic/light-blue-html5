@@ -1,6 +1,6 @@
 nv.addGraph(function() {
     var chart = nv.models.multiBarChart()
-            .margin({top: 25, bottom: 5, left: 15, right: 15})
+            .margin({top: 40, bottom: 5, left: 15, right: 15})
             .showLegend(false)
             .showControls(false)
             .ticks(false)
@@ -27,7 +27,7 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.multiBarChart()
-            .margin({top: 25, bottom: 5, left: 15, right: 15})
+            .margin({top: 40, bottom: 5, left: 15, right: 15})
             .showLegend(false)
             .showControls(false)
             .ticks(false)
@@ -54,7 +54,7 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.multiBarChart()
-            .margin({top: 25, bottom: 5, left: 15, right: 15})
+            .margin({top: 40, bottom: 5, left: 15, right: 15})
             .showLegend(false)
             .showControls(false)
             .ticks(false)

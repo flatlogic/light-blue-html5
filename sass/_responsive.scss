@@ -140,7 +140,6 @@
     .side-nav li{
       a{
         padding: 8px 25px;
-        font-weight: 400;
         text-align: left;
         width: auto;
         @include transition(width 0);
@@ -158,7 +157,7 @@
     }
 
     .side-nav > li.active > a{
-      border-right: 5px solid $blue;
+      border-right: 5px solid $white;
       padding-right: 20px;
     }
 

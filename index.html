@@ -278,9 +278,56 @@
             <div class="span4">
                 <section class="widget stat-widget">
                     <header class="">
+                        <div id="visits" class="chart-container">
+                            <div class="chart-info">
+                                <div class="total"><i class="icon-caret-up"></i> Visits <span class="percentage">+10% (7.86%)</span></div>
+                            </div>
+                            <svg></svg>
+                        </div>
+                    </header>
+                    <div class="stat-widget-body">
+                        <div class="most-from">Top 12% from:</div>
+                        <div class="value">Los Angeles, California</div>
+                        <div class="details text-align-center">
+                            <div class="row-fluid non-responsive">
+                                <div class="span6">
+                                    <div class="detail">
+                                        <div class="time-period">Total 30 days</div>
+                                        <div class="value">3 372</div>
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <div class="detail">
+                                        <div class="time-period">Unique 30 days</div>
+                                        <div class="value">1 980</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-widget-additional">
+                            <div class="row-fluid non-responsive">
+                                <div class="span6">
+                                    <div class="chart-name">Growth Rate</div>
+                                    <div id="growth-rate" class="sparkline">
+                                    </div>
+                                </div>
+                                <div class="span6">
+                                    <div class="chart-name">3 Months Change</div>
+                                    <div class="change">
+                                        <a href="#" class="btn btn-primary btn-block">+ 100.3%</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="span4">
+                <section class="widget stat-widget">
+                    <header class="">
                         <div id="traffic" class="chart-container">
                             <div class="chart-info">
-                                <div class="total"><i class="icon-angle-up"></i> Traffic <span class="percentage">+6% (1.56%)</span></div>
+                                <div class="total"><i class="icon-caret-up"></i> Traffic <span class="percentage">+6% (1.56%)</span></div>
                             </div>
                             <svg></svg>
                         </div>
@@ -327,7 +374,7 @@
                     <header class="">
                         <div id="orders" class="chart-container">
                             <div class="chart-info">
-                                <div class="total"><i class="icon-angle-up"></i> Orders <span class="percentage">+13% (19.4)</span></div>
+                                <div class="total"><i class="icon-caret-up"></i> Orders <span class="percentage">+13% (19.4)</span></div>
                             </div>
                             <svg></svg>
                         </div>
@@ -362,53 +409,6 @@
                                     <div class="chart-name">3 Months Change</div>
                                     <div class="change">
                                         <a href="#" class="btn btn-success btn-block">+ 17.8%</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span4">
-                <section class="widget stat-widget">
-                    <header class="">
-                        <div id="visits" class="chart-container">
-                            <div class="chart-info">
-                                <div class="total"><i class="icon-angle-up"></i> Visits <span class="percentage">+10% (7.86%)</span></div>
-                            </div>
-                            <svg></svg>
-                        </div>
-                    </header>
-                    <div class="stat-widget-body">
-                        <div class="most-from">Top 12% from:</div>
-                        <div class="value">Los Angeles, California</div>
-                        <div class="details text-align-center">
-                            <div class="row-fluid non-responsive">
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Total 30 days</div>
-                                        <div class="value">3 372</div>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Unique 30 days</div>
-                                        <div class="value">1 980</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="stat-widget-additional">
-                            <div class="row-fluid non-responsive">
-                                <div class="span6">
-                                    <div class="chart-name">Growth Rate</div>
-                                    <div id="growth-rate" class="sparkline">
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="chart-name">3 Months Change</div>
-                                    <div class="change">
-                                        <a href="#" class="btn btn-primary btn-block">+ 100.3%</a>
                                     </div>
                                 </div>
                             </div>
@@ -810,14 +810,14 @@
     <% if (auto) {%>
     <button type="button"
             data-value="icons"
-            class="btn-icons btn btn-primary btn-small">Icons</button>
+            class="btn-icons btn btn-transparent btn-small">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-primary btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-small">Auto</button>
     <%} else {%>
     <button type="button"
             data-value="auto"
-            class="btn btn-primary btn-small">Auto</button>
+            class="btn btn-transparent btn-small">Auto</button>
     <% } %>
 </script>
 

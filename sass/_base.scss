@@ -57,6 +57,7 @@ input.parsley-error{
   a{
     color: $white;
     text-decoration: none;
+    font-weight: normal;
   }
 }
 
@@ -66,14 +67,13 @@ input.parsley-error{
 
 .sidebar{
   @include border-radius($widget-border-radius);
-  @include box-shadow($widget-shadow);
 
-  background-color: #fff;
+  background: rgba(darken($textColor, 20%), .32);
   position: absolute;
   width: 160px;
   padding: 20px 0;
   top: 0;
-  color: $textColor;
+  color: $white;
   z-index: 1;
   margin: $sidebarTopMargin 0 0 25px;
 
@@ -89,6 +89,10 @@ input.parsley-error{
   &.sidebar-icons{
     @include sidebar-settings;
   }
+
+  .accordion-group{
+    background: none;
+  }
 }
 
 .side-nav{
@@ -99,12 +103,11 @@ input.parsley-error{
 
     i[class*=icon]{
       line-height: 20px;
-      color: lighten($textColor, 10%);
       float: right;
     }
 
     a:hover, a:focus{
-      background: darken($lightGray,1%);
+      background: rgba($lightGray, .5);
     }
 
     a{
@@ -115,25 +118,23 @@ input.parsley-error{
     }
 
     a.accordion-toggle:not(.collapsed) + .accordion-body li.active a{
-      background: darken($lightGray,1%);
+      background: rgba($lightGray, .5);
     }
   }
 
   & > li.active > a{
-    border-left: 4px solid $blue;
+    border-left: 4px solid $white;
     padding-left: 16px;
-    background: darken($lightGray,1%);
+    background: rgba($lightGray, .5);
   }
 
   .accordion-body li a{
     padding: 4px 10px;
-    font-weight: 300;
-    background: $white;
 
     padding-left: 40px;
 
     &:hover, &:focus{
-        background: darken($lightGray,1%);
+      background: rgba($lightGray, .5);
     }
   }
 
@@ -231,7 +232,7 @@ input.parsley-error{
   margin-bottom: $box-margin-bottom;
 
   .description{
-    font-weight: 400;
+    font-weight: normal;
     text-align: center;
     margin: 10px -5px;
   }
@@ -303,11 +304,12 @@ input.parsley-error{
     #{headings(1,5)}{
       margin: 0;
       line-height: 20px;
-      color: inherit;
+      @include bold-font;
     }
 
     h4{
       font-size: $fontSizeLarger;
+      @include bold-font;
     }
   }
 
@@ -366,17 +368,18 @@ input.parsley-error{
   .chart-info{
     position: absolute;
     left: 15px;
-    top: 7px;
+    top: 16px;
     z-index: 0;
     line-height: 1em;
 
     .total{
       font-size: $fontSizeLarger;
-      font-weight: 400;
+      @include bold-font;
     }
 
     .percentage{
       font-size: $baseFontSize;
+      font-weight: normal;
     }
   }
 }
@@ -384,12 +387,8 @@ input.parsley-error{
 .stat-widget-body{
   margin-top: 7px;
 
-  .most-from, .time-period{
-    font-size: $fontSizeSmall;
-  }
-
   .value{
-    font-weight: 400;
+    @include bold-font;
 
     a{
       color: inherit;
@@ -407,7 +406,7 @@ input.parsley-error{
     background: darken($lightGray, 1%);
 
     .value{
-      font-weight: 400;
+      font-weight: normal;
     }
   }
 }
@@ -447,13 +446,8 @@ input.parsley-error{
     top: 50%;
   }
 
-  .files-size{
-    font-weight: 700;
-    font-size: $baseFontSize * 1.5;
-  }
-
   .visits{
-    font-weight: 700;
+    @include bold-font;
     font-size: $fontSizeLarge;
   }
 }
@@ -468,7 +462,7 @@ input.parsley-error{
   .control{
     background: darken($lightGray, 2%);
     text-align: center;
-    font-weight: 400;
+    font-weight: normal;
     padding: 3px 2%;
     color: lighten($textColor, 10%);
     width: 20.625%;
@@ -494,13 +488,13 @@ input.parsley-error{
 
     .key{
       font-size: $fontSizeSmall;
-      font-weight: 400;
+      font-weight: normal;
       margin: 0;
     }
 
     .value{
       font-size: $fontSizeLarge;
-      font-weight: 700;
+      font-weight: bold;
       margin-bottom: 5px;
     }
   }
@@ -556,7 +550,7 @@ input.parsley-error{
       bottom: 2px;
       right: 2px;
       font-size: $fontSizeIndex;
-      font-weight: 400;
+      font-weight: normal;
       background:  rgba(darken($textColor, 20%), .55);
       color: rgba(white, 0.9);
       line-height: 1em;
@@ -578,7 +572,7 @@ input.parsley-error{
 
 .page-title{
   color: $white;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   margin: 13px 0 20px;
 
@@ -618,7 +612,7 @@ input.parsley-error{
 
     a{
       color: $white;
-      font-weight: 600;
+      font-weight: bold;
     }
   }
 
@@ -760,7 +754,7 @@ input.parsley-error{
 }
 
 .setting{
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .setting + .setting{
@@ -797,7 +791,7 @@ input.parsley-error{
 
 .account-picture{
   padding: 5px 10px;
-  font-weight: 400;
+  font-weight: normal;
   img{
     width: 50px;
     margin-right: 5px;
@@ -951,7 +945,7 @@ input.parsley-error{
   }
 
   .sender{
-    font-weight: 600;
+    @include bold-font;
   }
 }
 
@@ -977,7 +971,7 @@ input.parsley-error{
       .value{
         text-align: right;
         font-size: $fontSizeLarge;
-        font-weight: 400;
+        font-weight: normal;
       }
 
       .row-fluid{
@@ -1109,8 +1103,8 @@ input.parsley-error{
 
   small{
     font-size: $fontSizeSmall;
-    color: $smallsColor;
-    font-weight: 600;
+    color: lighten($smallsColor, 15%);
+    font-weight: bold;
   }
 }
 
@@ -1289,7 +1283,7 @@ input.input-padding-increased{
 
   .accordion-heading a{
     color: $textColor;
-    font-weight: 600;
+    @include bold-font;
   }
 }
 
@@ -1356,10 +1350,10 @@ input.input-padding-increased{
 /**********************************/
 
 .dropzone{
-  border: 3px dashed $smallsColor;
+  border: 3px dashed $dropzoneColor;
   margin-top: 10px;
   font-size: 40px;
-  color: $smallsColor;
+  color: $dropzoneColor;
   line-height: 100px;
   padding-left: 5%;
   vertical-align: middle;
@@ -1399,7 +1393,7 @@ input.input-padding-increased{
   .icon{
     position: relative;
     z-index: 1;
-    background: darken($lightGray, 3%);
+    background: darken($lightGray, 5%);
     text-align: center;
     color: $white;
     width: 28px;

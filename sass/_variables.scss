@@ -46,10 +46,11 @@ $box-margin-bottom: 30px;
 $wrapMargin: 185px;
 $sidebarTopMargin: 80px;
 
-//$textColor: #6f6251 !default;
+
 $textColor: $gray !default;
-$textLightGray: #999 !default;
-$smallsColor: #dfdfdf;
+$textLightGray: lighten($textColor, 13%) !default;
+$smallsColor: lighten($textColor, 16%);
+$dropzoneColor: #dfdfdf;
 $backgroundBrown: #786c60 !default;
 $backgroundBlue: #426D73 !default;
 $backgroundColor: $backgroundBrown;
@@ -124,6 +125,11 @@ $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 $paddingLarge:          8px 18px !default; // 44px
 
+@mixin bold-font{
+  font-weight: bold;
+  color: lighten($textColor, 5%);
+}
+
 @mixin invalid-border {
   border-color: $orange;
   @include box-shadow(inset 0 1px 1px rgba($red,.075));
@@ -157,7 +163,6 @@ $paddingLarge:          8px 18px !default; // 44px
       i[class*=icon]{
         margin-right: 0;
         float: none;
-        color: $textColor;
       }
     }
 
