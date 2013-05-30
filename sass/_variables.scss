@@ -28,8 +28,8 @@ $colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $redDark;
 //$color_names: lime, red, dark-red, blue, green, orange, brown, teal;
 $color_names: red, orange, lime, green, teal, blue, brown, dark-red;
 
-$light_colors: $lightRed, $lightOrange, $lightGreen, $lightBlue,$lightBrown, $lightGray;
-$light_color_names: red, orange, green, blue, brown, gray;
+$light_colors: $lightBlue,$lightBrown, $lightGray;
+$light_color_names: blue, brown, gray;
 
 $baseFontSize:          13px !default;
 
@@ -48,6 +48,7 @@ $sidebarTopMargin: 80px;
 
 
 $textColor: $gray !default;
+$boldTextColor: lighten($textColor, 5%);
 $textLightGray: lighten($textColor, 13%) !default;
 $smallsColor: lighten($textColor, 16%);
 $dropzoneColor: #dfdfdf;
@@ -56,6 +57,7 @@ $backgroundBlue: #426D73 !default;
 $backgroundColor: $backgroundBrown;
 $popoverBackground: rgba(darken($textColor, 20%), .85);
 $transparentTextColor: rgba(darken($textColor, 20%), .5);
+$sidebarActiveColor: rgba(darken($textColor, 20%), .3);
 
 //bootstrap override
 //responsive
@@ -127,7 +129,7 @@ $paddingLarge:          8px 18px !default; // 44px
 
 @mixin bold-font{
   font-weight: bold;
-  color: lighten($textColor, 5%);
+  color: $boldTextColor;
 }
 
 @mixin invalid-border {
@@ -157,7 +159,7 @@ $paddingLarge:          8px 18px !default; // 44px
 
   .side-nav#{$class} li{
     a{
-      padding: 10px 16px;
+      padding: 8px 16px;
       text-align: center;
 
       i[class*=icon]{
@@ -175,6 +177,7 @@ $paddingLarge:          8px 18px !default; // 44px
   .side-nav#{$class} > li.active > a{
     border-left: none;
     border-right: none;
+    padding-left: 16px;
   }
 
   .wrap#{$class}{

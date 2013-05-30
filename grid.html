@@ -84,17 +84,16 @@
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-primary btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-small">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-primary btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-small">Auto</button>
     </div>
 </nav>
 <div class="wrap">
     <header class="page-header">
         <div class="navbar">
             <div class="navbar-inner">
-                <h4 class="page-title pull-left">Grid</h4>
                 <ul class="nav pull-right">
                     <li class="dropdown">
                         <a href="#" title="Messages" id="messages"
@@ -264,6 +263,11 @@
     </header>
     <div class="content container-fluid">
         <div class="row-fluid">
+            <div class="span12">
+                <h2 class="page-title">Responsive Grid</h2>
+            </div>
+        </div>
+        <div class="row-fluid">
             <div class="span6 offset3">
                 <section class="widget tiny">
                     <header>
@@ -285,7 +289,6 @@
                 <section class="widget tiny">
                     <header>
                         <h4>
-
                             The same with 10
                         </h4>
                     </header>
@@ -299,73 +302,53 @@
         </div>
         <div class="row-fluid">
             <div class="span5">
-                <section class="widget tiny-x2 light-gray">
+                <section class="widget tiny-x2">
                     <header>
                         <h4>
-
                             Span5
                         </h4>
                     </header>
                     <div class="body">
-                        <blockquote>
-                            A little bit <code>.light-gray</code>
-                        </blockquote>
                     </div>
                 </section>
             </div>
             <div class="span4">
-                <section class="widget tiny light-red">
+                <section class="widget tiny">
                     <header>
                         <h4>
-
                             Span4
                         </h4>
                     </header>
                     <div class="body">
-                        <blockquote>
-                            A little bit <code>.light-red</code>
-                        </blockquote>
                     </div>
                 </section>
-                <section class="widget tiny light-green">
+                <section class="widget tiny">
                     <header>
                         <h4>
-
                             Span4
                         </h4>
                     </header>
                     <div class="body">
-                        <blockquote>
-                            A little bit <code>.light-green</code>
-                        </blockquote>
                     </div>
                 </section>
             </div>
             <div class="span3">
-                <section class="widget tiny light-orange">
+                <section class="widget tiny">
                     <header>
                         <h4>
-
                             Span3
                         </h4>
                     </header>
                     <div class="body">
-                        <blockquote>
-                            A little bit <code>.light-orange</code>
-                        </blockquote>
                     </div>
                 </section>
-                <section class="widget tiny light-blue">
+                <section class="widget tiny">
                     <header>
                         <h4>
-
                             Span3
                         </h4>
                     </header>
                     <div class="body">
-                        <blockquote>
-                            A little bit <code>.light-blue</code>
-                        </blockquote>
                     </div>
                 </section>
             </div>
@@ -435,14 +418,14 @@
         <% if (auto) {%>
             <button type="button"
                     data-value="icons"
-                    class="btn-icons btn btn-primary btn-small">Icons</button>
+                    class="btn-icons btn btn-transparent btn-small">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-primary btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-small">Auto</button>
         <%} else {%>
             <button type="button"
                     data-value="auto"
-                    class="btn btn-primary btn-small">Auto</button>
+                    class="btn btn-transparent btn-small">Auto</button>
         <% } %>
 </script>
 
