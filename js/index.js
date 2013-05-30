@@ -4,7 +4,7 @@ nv.addGraph(function() {
             .showLegend(false)
             .showControls(false)
             .ticks(false)
-            .color([$blue])
+            .color([$red])
         ;
 
     chart.yAxis
@@ -92,7 +92,7 @@ nv.addGraph(function() {
     var chart = nv.models.lineChart()
         .margin({top: 0, bottom: 25, left: 25, right: 0})
         //.showLegend(false)
-        .color([$blue, $green, $orange]);
+        .color([$red, $green, $orange]);
 
     chart.legend.margin({top: 3});
 
@@ -145,22 +145,6 @@ $(function(){
         values[i] = [10 + randomValue(), 15 + randomValue(), 20 + randomValue(), 15 + randomValue(), 25 + randomValue(),
             25 + randomValue(), 30 + randomValue(), 30 + randomValue(), 40 + randomValue()]
     }
-
-    function drawSparkLines(){
-        options.lineColor = $blue;
-        $('#growth-rate').sparkline(values[0], options );
-        options.lineColor = $green;
-        $('#conversion-rate').sparkline(values[1], options );
-        options.lineColor = $orange;
-        $('#test').sparkline(values[2], options );
-    }
-    var sparkResize;
-
-    $(window).resize(function(e) {
-        clearTimeout(sparkResize);
-        sparkResize = setTimeout(drawSparkLines, 200);
-    });
-    drawSparkLines();
 
     $("input:checkbox").uniform();
 
