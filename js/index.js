@@ -79,6 +79,33 @@ nv.addGraph(function() {
     return chart;
 });
 
+nv.addGraph(function() {
+    var chart = nv.models.multiBarChart()
+            .margin({top: 40, bottom: 5, left: 15, right: 15})
+            .showLegend(false)
+            .showControls(false)
+            .ticks(false)
+            .color(['#6a8da7'])
+        ;
+
+    chart.yAxis
+        .showMaxMin(false)
+        .tickFormat(d3.format(',.f'));
+
+    chart.xAxis
+        .showMaxMin(false)
+        .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
+
+    d3.select('#profit svg')
+        .datum(testData(['Profit'], 25))
+        .transition()
+        .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+});
+
 var lineResize,
     lineChart;
 function lineChartOperaHack(){
