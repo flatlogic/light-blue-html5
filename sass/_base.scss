@@ -72,7 +72,7 @@ input.parsley-error{
 .sidebar{
   @include border-radius($widget-border-radius);
 
-  background: rgba(darken($textColor, 20%), .32);
+  background: $transparentBackground;
   position: absolute;
   width: 160px;
   padding: 10px 0;
@@ -613,7 +613,7 @@ input.parsley-error{
   margin: 6px 20px;
 
   .alert{
-    background: rgba(darken($textColor, 20%), .32);
+    background: $transparentBackground;
     border: none;
     font-size: $fontSizeSmall;
     margin-bottom: 0;
