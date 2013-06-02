@@ -4,7 +4,7 @@
 var $lime = "#8CBF26",
     $red = "#e5603b",
     $redDark = "#d04f4f",
-    $blue = "#618fb0",
+    $blue = "#6a8da7",
     $green = "#56bc76",
     $orange = "#eac85e",
     $pink = "#E671B8",

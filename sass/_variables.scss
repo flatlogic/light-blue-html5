@@ -12,7 +12,8 @@ $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
 $teal:                  #4ab0ce !default;
 $gray:                  #666 !default;
-$grayDark:              #555 !default;;
+$grayDark:              #555 !default;
+$backgroundGray:        #333 !default;
 $lightGray:             #f8f8f8 !default;
 $shadowGray:            #676767 !default;
 $linkRed:               #da3712 !default;
@@ -52,10 +53,10 @@ $boldTextColor: lighten($textColor, 3%);
 $textLightGray: lighten($textColor, 13%) !default;
 $smallsColor: lighten($textColor, 16%);
 $dropzoneColor: #dfdfdf;
-$popoverBackground: rgba(darken($textColor, 20%), .85);
-$transparentTextColor: rgba(darken($textColor, 20%), .5);
-$sidebarActiveColor: rgba(darken($textColor, 20%), .3);
-$transparentBackground: rgba(darken($textColor, 20%), .4);
+$popoverBackground: rgba($backgroundGray, .85);
+$transparentTextColor: rgba($backgroundGray, .5);
+$sidebarActiveColor: rgba($backgroundGray, .3);
+$transparentBackground: rgba($backgroundGray, .4);
 
 //bootstrap override
 //responsive

@@ -85,7 +85,7 @@ nv.addGraph(function() {
             .showLegend(false)
             .showControls(false)
             .ticks(false)
-            .color(['#6a8da7'])
+            .color([$blue])
         ;
 
     chart.yAxis

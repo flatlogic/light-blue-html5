@@ -563,7 +563,7 @@ input.parsley-error{
       right: 2px;
       font-size: $fontSizeIndex;
       font-weight: normal;
-      background:  rgba(darken($textColor, 20%), .55);
+      background:  rgba($backgroundGray, .55);
       color: rgba(white, 0.9);
       line-height: 1em;
       padding: 2px 4px;
@@ -1069,7 +1069,7 @@ input.parsley-error{
 }
 
 .btn-transparent{
-  background: rgba(darken($textColor, 20%), .4);
+  background: $transparentBackground;
   color: $white;
   text-shadow: none;
   @include box-shadow(none);
@@ -1081,7 +1081,7 @@ input.parsley-error{
 
   &.active{
     color: $white;
-    background: rgba(darken($textColor, 20%), .75);
+    background: rgba($backgroundGray, .75);
   }
 
   .caret{
