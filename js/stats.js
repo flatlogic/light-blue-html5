@@ -124,6 +124,7 @@ nv.addGraph(function() {
 
 nv.addGraph(function(){
     var chart = nv.models.multiBarChart()
+        .margin({left: 40})
         .color(keyColor)
         .controlsColor([$textColor, $textColor, $textColor])
         .showLegend(false);

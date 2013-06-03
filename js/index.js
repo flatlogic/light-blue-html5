@@ -117,9 +117,12 @@ function lineChartOperaHack(){
 }
 nv.addGraph(function() {
     var chart = nv.models.lineChart()
-        .margin({top: 0, bottom: 25, left: 25, right: 0})
+        .margin({top: 0, bottom: 25, left: 25, right: 10})
         //.showLegend(false)
-        .color([$red, $green, $orange]);
+        .color([
+            $orange, '#cf6d51'
+            //'#618fb0', '#61b082'
+        ]);
 
     chart.legend.margin({top: 3});
 
@@ -130,9 +133,10 @@ nv.addGraph(function() {
     chart.xAxis
         .showMaxMin(false)
         .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-
+    var data = testData(['Unique', 'Visits'], 30);
+    data[0].area = true;
     d3.select('#visits-chart svg')
-        .datum(testData(['Visits', 'Unique', 'Pages'], 50))
+        .datum(data)
         .transition().duration(500)
         .call(chart);
 

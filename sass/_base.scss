@@ -313,7 +313,6 @@ input.parsley-error{
 
     h4{
       font-size: $fontSizeLarger;
-      @include bold-font;
     }
   }
 
@@ -337,10 +336,6 @@ input.parsley-error{
       color: inherit;
       text-decoration: none;
     }
-  }
-
-  .chart{
-    height: 100%;
   }
 }
 
@@ -504,6 +499,26 @@ input.parsley-error{
       font-weight: bold;
       margin-bottom: 5px;
     }
+  }
+}
+
+.visits-chart{
+  //height: 168px;
+  height: 200px;
+}
+
+.visits-info{
+  height: 63px;
+  margin: 12px 0 0;
+
+  .key{
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .value{
+    margin-top: 15px;
+    font-size: $baseFontSize * 1.5;
   }
 }
 
@@ -947,9 +962,9 @@ input.parsley-error{
 .chat-message-body{
   margin-left: 60px;
   padding: 8px 10px;
-  background: darken($lightGray, 1%);
+  background: $lightGray;
   position: relative;
-  border-left: 2px solid $boldTextColor;
+  border-left: 2px solid $textLightGray;
 
   @include border-radius($baseBorderRadius);
 
@@ -1430,7 +1445,7 @@ input.input-padding-increased{
   .icon{
     position: relative;
     z-index: 1;
-    background: darken($lightGray, 5%);
+    background: darken($lightGray, 4%);
     text-align: center;
     color: $white;
     width: 28px;
@@ -1698,4 +1713,8 @@ input.input-padding-increased{
 
 .no-margin{
   margin: 0 !important;
+}
+
+.weight-normal{
+  font-weight: normal;
 }

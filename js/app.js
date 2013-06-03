@@ -39,7 +39,7 @@ function testData(stream_names, points_count) {
         days_ago_date = now - days_ago,
         points_count = points_count || 45, //less for better performance
         day_per_point = days_ago_count / points_count;
-    return stream_layers(stream_names.length, points_count, .08).map(function(data, i) {
+    return stream_layers(stream_names.length, points_count, .1).map(function(data, i) {
         return {
             key: stream_names[i],
             values: data.map(function(d,j){
