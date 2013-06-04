@@ -508,9 +508,9 @@ input.parsley-error{
 }
 
 .visits-info{
-  height: 63px;
   margin: 12px 0 0;
   text-align: center;
+  padding-bottom: 0;
 
   .key{
     @include bold-font;
@@ -518,7 +518,8 @@ input.parsley-error{
   }
 
   .value{
-    margin-top: 15px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     font-size: $baseFontSize * 1.5;
   }
 }
