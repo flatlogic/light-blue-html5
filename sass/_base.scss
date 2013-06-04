@@ -510,9 +510,10 @@ input.parsley-error{
 .visits-info{
   height: 63px;
   margin: 12px 0 0;
+  text-align: center;
 
   .key{
-    font-weight: bold;
+    @include bold-font;
     border-bottom: 1px solid #ddd;
   }
 
@@ -1587,6 +1588,18 @@ input.input-padding-increased{
   &:before{
     content: "\f0d7";
   }
+}
+
+.chart-col-header{
+  width: 100px;
+}
+
+.table .chart-cell{
+  padding: 3px;
+}
+
+.source-col-header{
+  width: 30%;
 }
 
 /***********************************/

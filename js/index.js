@@ -159,23 +159,43 @@ $(function(){
     function randomValue(){
         return Math.floor( Math.random() * 40 );
     }
-    var values = [[],[],[]],
+    var values = [[],[],[],[],[]],
         options = {
-            width: '100%',
+            width: '150px',
             height: '30px',
-            fillColor: 'white',
+            lineColor: $white,
             lineWidth: '2',
             spotRadius: '2',
-            maxSpotColor: $gray,
-            minSpotColor: $gray,
-            spotColor: $gray,
             highlightLineColor: $gray,
-            highlightSpotColor: $gray
+            highlightSpotColor: $gray,
+            spotColor: false,
+            minSpotColor: false,
+            maxSpotColor: false
         };
     for (var i = 0; i < values.length; i++){
         values[i] = [10 + randomValue(), 15 + randomValue(), 20 + randomValue(), 15 + randomValue(), 25 + randomValue(),
             25 + randomValue(), 30 + randomValue(), 30 + randomValue(), 40 + randomValue()]
     }
+
+    function drawSparkLines(){
+        options.fillColor = $orange;
+        $('#direct-trend').sparkline(values[0], options );
+        options.fillColor = $green;
+        $('#refer-trend').sparkline(values[1], options );
+        options.fillColor = $blue;
+        $('#social-trend').sparkline(values[2], options );
+        options.fillColor = $red;
+        $('#search-trend').sparkline(values[3], options );
+        options.fillColor = $gray;
+        $('#internal-trend').sparkline(values[4], options );
+    }
+    var sparkResize;
+
+    $(window).resize(function(e) {
+        clearTimeout(sparkResize);
+        sparkResize = setTimeout(drawSparkLines, 200);
+    });
+    drawSparkLines();
 
     $("input:checkbox").uniform();
 

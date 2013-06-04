@@ -64,7 +64,7 @@ a {
   .#{$item}-info              { background-color: $infoText; }
   .#{$item}-info[href]        { background-color: darken($infoText, 10%); }
   // Inverse (black)
-  .#{$item}-inverse           { background-color: $grayDark; }
+  .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $grayDark to just $gray
   .#{$item}-inverse[href]     { background-color: darken($grayDark, 10%); }
 }
 

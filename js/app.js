@@ -12,6 +12,7 @@ var $lime = "#8CBF26",
     $brown = "#A05000",
     $teal = "#4ab0ce",
     $gray = "#666",
+    $white = "#fff",
     $textColor = $gray;
 
 //turn off charts is needed
