@@ -525,6 +525,58 @@ input.parsley-error{
 }
 
 /***********************************/
+/**          USERS LIST           **/
+/**********************************/
+
+.users-list{
+
+  li{
+    border-top: 1px solid #ddd;
+    padding: 12px;
+    margin: 0 -12px;
+    cursor: pointer;
+
+    &:hover{
+      background: $lightGray;
+    }
+
+    &:last-child{
+      margin-bottom: -10px;
+    }
+  }
+
+  img{
+    height: 50px;
+    width: 50px;
+  }
+
+  .user-info{
+    margin-left: 62px; /*50 + 12px padding*/
+  }
+
+  .name, .time, .position{
+    line-height: 16px;
+  }
+
+  .name{
+    text-transform: uppercase;
+
+    a{
+      text-decoration: none;
+      &:hover{
+        color: $linkColor;
+      }
+    }
+  }
+
+  .time{
+    font-size: $fontSizeSmall;
+    color: $textLightGray;
+  }
+}
+
+
+/***********************************/
 /**          HEADER               **/
 /**********************************/
 
@@ -936,17 +988,17 @@ input.parsley-error{
     background: darken($lightGray, 1%);
     text-align: center;
     color: $white;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
+    width: 53px;
+    height: 53px;
+    line-height: 53px;
     vertical-align: middle;
-    @include border-radius(48px);
+    @include border-radius(53px);
 
     img{
       position: relative;
       top: -2px;
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
     }
   }
 
@@ -962,7 +1014,7 @@ input.parsley-error{
 }
 
 .chat-message-body{
-  margin-left: 60px;
+  margin-left: 63px;
   padding: 8px 10px;
   background: $lightGray;
   position: relative;
@@ -972,7 +1024,7 @@ input.parsley-error{
 
   &.on-left{
     margin-left: 0;
-    margin-right: 60px;
+    margin-right: 63px;
     border-left: none;
     border-right: 2px solid $boldTextColor;
 
@@ -1259,7 +1311,7 @@ input.input-padding-increased{
     background: $white;
     margin-top: 0;
     @include box-shadow($widget-shadow);
-    padding: 15px;
+    padding: 10px 12px;
     @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
   }
 
@@ -1317,6 +1369,11 @@ input.input-padding-increased{
       @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
     }
   }
+}
+
+.tab-header{
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 /***********************************/
