@@ -124,7 +124,7 @@ nv.addGraph(function() {
 
 nv.addGraph(function(){
     var chart = nv.models.multiBarChart()
-        .margin({left: 40})
+        .margin({left: 30, bottom: 20, right: 0})
         .color(keyColor)
         .controlsColor([$textColor, $textColor, $textColor])
         .showLegend(false);
@@ -151,7 +151,7 @@ nv.addGraph(function(){
 
 nv.addGraph(function() {
     var chart = nv.models.stackedAreaChart()
-        .margin({top: 0, bottom: 40, left: 40, right: 0})
+        .margin({left: 0})
         .color(keyColor)
         .showControls(false)
         .showLegend(false)
@@ -190,7 +190,7 @@ nv.addGraph(function() {
 
 nv.addGraph(function() {
     var chart = nv.models.lineChart()
-        .margin({top: 0, bottom: 40, left: 40, right: 0})
+        .margin({top: 0, bottom: 25, left: 30, right: 0})
         .showLegend(false)
         .color(keyColor);
 

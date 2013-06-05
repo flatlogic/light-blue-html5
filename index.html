@@ -312,6 +312,83 @@
                         </div>
                     </div>
                 </section>
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="icon-shopping-cart"></i>
+                            Traffic Sources
+                            <small>
+                                One month tracking
+                            </small>
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table table-striped no-margin sources-table">
+                            <thead>
+                            <tr>
+                                <th class="source-col-header">Source</th>
+                                <th>Amount</th>
+                                <th>Change</th>
+                                <th class="hidden-phone">Percent.,%</th>
+                                <th>Target</th>
+                                <th class="chart-col-header hidden-phone">Trend</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="label label-important">Direct</span></td>
+                                <td>713</td>
+                                <td><strong class="color-green">+53</strong></td>
+                                <td class="hidden-phone">+12</td>
+                                <td>900</td>
+                                <td class="chart-cell hidden-phone">
+                                    <div id="direct-trend"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-warning">Refer</span></td>
+                                <td>562</td>
+                                <td><strong>+84</strong></td>
+                                <td class="hidden-phone">+64</td>
+                                <td>500</td>
+                                <td class="chart-cell hidden-phone">
+                                    <div id="refer-trend"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-success">Social</span></td>
+                                <td>148</td>
+                                <td><strong class="color-red">-12</strong></td>
+                                <td class="hidden-phone">+3</td>
+                                <td>180</td>
+                                <td class="chart-cell hidden-phone">
+                                    <div id="social-trend"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-info">Search</span></td>
+                                <td>653</td>
+                                <td><strong class="color-green">+23</strong></td>
+                                <td class="hidden-phone">+43</td>
+                                <td>876</td>
+                                <td class="chart-cell hidden-phone">
+                                    <div id="search-trend"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="label label-inverse">Internal</span></td>
+                                <td>976</td>
+                                <td><strong>+101</strong></td>
+                                <td class="hidden-phone">-7</td>
+                                <td>844</td>
+                                <td class="chart-cell hidden-phone">
+                                    <div id="internal-trend"></div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
                 <section class="widget large">
                     <header>
                         <h4>
@@ -428,86 +505,9 @@
                             </div>
                             <footer class="chat-footer controls-row">
                                 <input id="new-message" type="text" class="span10" placeholder="Enter your message..">
-                                <button type="button" id="new-message-btn" class="btn btn-inverse span2">Send</button>
+                                <button type="button" id="new-message-btn" class="btn btn-primary span2">Send</button>
                             </footer>
                         </div>
-                    </div>
-                </section>
-                <section class="widget">
-                    <header>
-                        <h4>
-                            <i class="icon-shopping-cart"></i>
-                            Traffic Sources
-                            <small>
-                                One month tracking
-                            </small>
-                        </h4>
-                    </header>
-                    <div class="body">
-                        <table class="table table-striped no-margin">
-                            <thead>
-                            <tr>
-                                <th class="source-col-header">Source</th>
-                                <th>Amount</th>
-                                <th>Change</th>
-                                <th class="hidden-phone">Percent.,%</th>
-                                <th>Target</th>
-                                <th class="chart-col-header hidden-phone">Trend</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><span class="label label-important">Direct</span></td>
-                                <td>713</td>
-                                <td><strong class="color-green">+53</strong></td>
-                                <td class="hidden-phone">+12</td>
-                                <td>900</td>
-                                <td class="chart-cell hidden-phone">
-                                    <div id="direct-trend"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="label label-warning">Refer</span></td>
-                                <td>562</td>
-                                <td><strong>+84</strong></td>
-                                <td class="hidden-phone">+64</td>
-                                <td>500</td>
-                                <td class="chart-cell hidden-phone">
-                                    <div id="refer-trend"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="label label-success">Social</span></td>
-                                <td>148</td>
-                                <td><strong class="color-red">-12</strong></td>
-                                <td class="hidden-phone">+3</td>
-                                <td>180</td>
-                                <td class="chart-cell hidden-phone">
-                                    <div id="social-trend"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="label label-info">Search</span></td>
-                                <td>653</td>
-                                <td><strong class="color-green">+23</strong></td>
-                                <td class="hidden-phone">+43</td>
-                                <td>876</td>
-                                <td class="chart-cell hidden-phone">
-                                    <div id="search-trend"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span class="label label-inverse">Internal</span></td>
-                                <td>976</td>
-                                <td><strong>+101</strong></td>
-                                <td class="hidden-phone">-7</td>
-                                <td>844</td>
-                                <td class="chart-cell hidden-phone">
-                                    <div id="internal-trend"></div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </section>
             </div>
@@ -817,136 +817,6 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row-fluid" style="display: none">
-            <div class="span3">
-                <section class="widget stat-widget">
-                    <header class="">
-                        <div id="visits" class="chart-container">
-                            <div class="chart-info">
-                                <div class="total"><i class="icon-caret-up"></i> Visits <span class="percentage">+10% (7.86%)</span></div>
-                            </div>
-                            <svg></svg>
-                        </div>
-                    </header>
-                    <div class="stat-widget-body">
-                        <div class="most-from">Top 12% from:</div>
-                        <div class="value">Los Angeles, California</div>
-                        <div class="details text-align-center">
-                            <div class="row-fluid non-responsive">
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Total 30 days</div>
-                                        <div class="value">3 372</div>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Uniq. 30 days</div>
-                                        <div class="value">1 980</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span3">
-                <section class="widget stat-widget">
-                    <header class="">
-                        <div id="traffic" class="chart-container">
-                            <div class="chart-info">
-                                <div class="total"><i class="icon-caret-up"></i> Traffic <span class="percentage">+6% (1.56%)</span></div>
-                            </div>
-                            <svg></svg>
-                        </div>
-                    </header>
-                    <div class="stat-widget-body">
-                        <div class="most-from">Keywords:</div>
-                        <div class="value"><a href="#">Admin, Template, Html5 <i class="icon-angle-right"></i></a></div>
-                        <div class="details text-align-center">
-                            <div class="row-fluid non-responsive">
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Search</div>
-                                        <div class="value">41.9%</div>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Direct</div>
-                                        <div class="value">28.7%</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span3">
-                <section class="widget stat-widget">
-                    <header class="">
-                        <div id="orders" class="chart-container">
-                            <div class="chart-info">
-                                <div class="total"><i class="icon-caret-up"></i> Orders <span class="percentage">+13% (19.4)</span></div>
-                            </div>
-                            <svg></svg>
-                        </div>
-                    </header>
-                    <div class="stat-widget-body">
-                        <div class="most-from">Best Seller:</div>
-                        <div class="value"><a href="#">Light Blue Dashboard <i class="icon-angle-right"></i></a></div>
-                        <div class="details text-align-center">
-                            <div class="row-fluid non-responsive">
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Total 30 days</div>
-                                        <div class="value">741</div>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Today</div>
-                                        <div class="value">18</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="span3">
-                <section class="widget stat-widget">
-                    <header class="">
-                        <div id="profit" class="chart-container">
-                            <div class="chart-info">
-                                <div class="total"><i class="icon-caret-up"></i> Profit <span class="percentage">+11% (1.14)</span></div>
-                            </div>
-                            <svg></svg>
-                        </div>
-                    </header>
-                    <div class="stat-widget-body">
-                        <div class="most-from">Top source:</div>
-                        <div class="value">Online sales</div>
-                        <div class="details text-align-center">
-                            <div class="row-fluid non-responsive">
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Total 30 days</div>
-                                        <div class="value">$7 410</div>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="detail">
-                                        <div class="time-period">Today</div>
-                                        <div class="value">$419</div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>

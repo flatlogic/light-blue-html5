@@ -46,7 +46,7 @@ $(function(){
             collection: collection,
             footer: Backgrid.Extension.Paginator.extend({
                 //okendoken. rewrite template to add pagination class to container
-                template: _.template('<tr><td class="pagination text-align-center" colspan="<%= colspan %>"><ul><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
+                template: _.template('<tr><td class="pagination" colspan="<%= colspan %>"><ul><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
             }),
             className: 'table table-striped table-editable no-margin'
         });

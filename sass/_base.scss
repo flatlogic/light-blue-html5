@@ -241,12 +241,16 @@ input.parsley-error{
     margin: 10px -5px;
   }
 
+  strong{
+    color: $white;
+  }
+
   .icon, .big-text{
     margin-top: 15px;
     font-size: 36px;
     line-height: 36px;
     height: 36px;
-    //font-weight: 700;
+    font-weight: bold;
   }
 }
 
@@ -289,7 +293,7 @@ input.parsley-error{
   }
 
   &.tiny-x2{
-    height: 446px;
+    height: 426px;
   }
 
   &.transparent{
@@ -390,26 +394,10 @@ input.parsley-error{
     @include bold-font;
   }
 
-  .value{
-
-    a{
-      color: inherit;
-    }
-  }
-
   .details{
     margin-top: 10px;
-  }
-
-  .detail{
     padding: 2px 0;
-    @include border-radius($baseBorderRadius);
-    cursor: pointer;
-    background: darken($lightGray, 1%);
-
-    .value{
-      font-weight: normal;
-    }
+    text-align: center;
   }
 }
 
@@ -1092,8 +1080,6 @@ input.parsley-error{
 
       .value{
         text-align: right;
-        font-size: $fontSizeLarge;
-        font-weight: normal;
       }
 
       .row-fluid{
@@ -1291,6 +1277,10 @@ input.input-padding-increased{
   }
 }
 
+.form-actions{
+  margin-bottom: 0;
+}
+
 /***********************************/
 /**          ICONS                **/
 /**********************************/
@@ -1429,10 +1419,10 @@ input.input-padding-increased{
 
 // Inverse
 .progress-inverse .bar, .progress .bar-inverse {
-  @include gradient-vertical($textColor, $textColor);
+  @include gradient-vertical($textLightGray, $textLightGray);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
-  @include gradient-striped($textColor);
+  @include gradient-striped($textLightGray);
 }
 
 /***********************************/
@@ -1674,6 +1664,16 @@ input.input-padding-increased{
 
 .source-col-header{
   width: 30%;
+}
+
+.sources-table{
+
+  td, th{
+    text-align: center;
+    &:first-child{
+      text-align: left;
+    }
+  }
 }
 
 /***********************************/
