@@ -13915,10 +13915,13 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     display: none;
   }
 
-  /* line 184, D:/projects/admin/sass/_responsive.scss */
+  /* line 187, D:/projects/admin/sass/_responsive.scss */
   .logo,
   .sidebar-on-right .logo,
-  .sidebar-hidden .logo {
+  .sidebar-hidden .logo,
+  .logo.sidebar-icons,
+  .sidebar-on-right .logo.sidebar-icons,
+  .sidebar-hidden .logo.sidebar-icons {
     display: block;
     left: 1.6%;
     right: auto;
@@ -13927,51 +13930,51 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     top: 4px;
   }
 
-  /* line 193, D:/projects/admin/sass/_responsive.scss */
+  /* line 196, D:/projects/admin/sass/_responsive.scss */
   .modal-body {
     max-height: 240px;
   }
 
-  /* line 197, D:/projects/admin/sass/_responsive.scss */
+  /* line 200, D:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 402px;
   }
 
-  /* line 201, D:/projects/admin/sass/_responsive.scss */
+  /* line 204, D:/projects/admin/sass/_responsive.scss */
   .widget-404 {
     padding: 0;
   }
-  /* line 203, D:/projects/admin/sass/_responsive.scss */
+  /* line 206, D:/projects/admin/sass/_responsive.scss */
   .widget-404 .body {
     margin-top: 0;
   }
 
-  /* line 208, D:/projects/admin/sass/_responsive.scss */
+  /* line 211, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 211, D:/projects/admin/sass/_responsive.scss */
+  /* line 214, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
     width: 285px;
   }
 
-  /* line 216, D:/projects/admin/sass/_responsive.scss */
+  /* line 219, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container.error-page {
     margin-top: -170px;
   }
 
-  /* line 221, D:/projects/admin/sass/_responsive.scss */
+  /* line 224, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages,
   .navbar .nav > li > .dropdown-menu.support {
     margin-right: -88px;
   }
-  /* line 224, D:/projects/admin/sass/_responsive.scss */
+  /* line 227, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages:after,
   .navbar .nav > li > .dropdown-menu.support:after {
     right: 105px;
   }
 
-  /* line 229, D:/projects/admin/sass/_responsive.scss */
+  /* line 232, D:/projects/admin/sass/_responsive.scss */
   .notifications {
     position: absolute;
     right: 0;
@@ -13980,80 +13983,80 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   }
 }
 @media (max-width: 480px) {
-  /* line 238, D:/projects/admin/sass/_responsive.scss */
+  /* line 241, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 48.61878%;
     margin-left: 2.76243%;
     float: left;
   }
-  /* line 243, D:/projects/admin/sass/_responsive.scss */
+  /* line 246, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(odd) {
     margin-left: 0;
   }
 
-  /* line 248, D:/projects/admin/sass/_responsive.scss */
+  /* line 251, D:/projects/admin/sass/_responsive.scss */
   .form-condensed .controls {
     margin-left: 0;
   }
 
-  /* line 252, D:/projects/admin/sass/_responsive.scss */
+  /* line 255, D:/projects/admin/sass/_responsive.scss */
   body {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 257, D:/projects/admin/sass/_responsive.scss */
+  /* line 260, D:/projects/admin/sass/_responsive.scss */
   .login-widget, .registration-widget {
     width: 260px;
   }
-  /* line 260, D:/projects/admin/sass/_responsive.scss */
+  /* line 263, D:/projects/admin/sass/_responsive.scss */
   .login-widget input[type="email"],
   .login-widget input[type="password"], .registration-widget input[type="email"],
   .registration-widget input[type="password"] {
     width: 222px;
   }
 
-  /* line 265, D:/projects/admin/sass/_responsive.scss */
+  /* line 268, D:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 260px;
   }
 
-  /* line 270, D:/projects/admin/sass/_responsive.scss */
+  /* line 273, D:/projects/admin/sass/_responsive.scss */
   .widget-404 h1 {
     font-size: 80px;
     line-height: 80px;
   }
-  /* line 275, D:/projects/admin/sass/_responsive.scss */
+  /* line 278, D:/projects/admin/sass/_responsive.scss */
   .widget-404 h3 {
     font-size: 16.25px;
     line-height: 22px;
   }
 
-  /* line 281, D:/projects/admin/sass/_responsive.scss */
+  /* line 284, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 284, D:/projects/admin/sass/_responsive.scss */
+  /* line 287, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
     width: 143px;
   }
 
-  /* line 289, D:/projects/admin/sass/_responsive.scss */
+  /* line 292, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container.error-page {
     margin-top: -129px;
   }
 
-  /* line 293, D:/projects/admin/sass/_responsive.scss */
+  /* line 296, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages {
     margin-right: -112px;
   }
-  /* line 296, D:/projects/admin/sass/_responsive.scss */
+  /* line 299, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages:after {
     right: 129px;
   }
 }
 @media (max-width: 250px) {
-  /* line 303, D:/projects/admin/sass/_responsive.scss */
+  /* line 306, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;
