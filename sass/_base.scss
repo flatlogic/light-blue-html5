@@ -262,7 +262,7 @@ input.parsley-error{
 .widget{
   @include border-radius($widget-border-radius);
   @include box-shadow($widget-shadow);
-  padding: 10px 12px;
+  padding: $widget-padding;
   color: $textColor;
   background: $white;
   margin-bottom: $box-margin-bottom;
@@ -340,76 +340,6 @@ input.parsley-error{
       color: inherit;
       text-decoration: none;
     }
-  }
-}
-
-/***********************************/
-/**          STATS                **/
-/**********************************/
-
-.stat-widget{
-  height: 177px;
-
-  svg{
-    height: 100%;
-  }
-
-  .chart-container{
-    height: 100%;
-  }
-
-  header{
-    margin: -15px -15px 0;
-    height: 90px;
-    @include box-sizing(border-box);
-  }
-
-  .nvtooltip{
-    color: $textColor;
-  }
-
-  .chart-info{
-    position: absolute;
-    left: 15px;
-    top: 16px;
-    z-index: 0;
-    line-height: 1em;
-
-    .total{
-      font-size: $fontSizeLarger;
-      @include bold-font;
-    }
-
-    .percentage{
-      font-size: $baseFontSize;
-      font-weight: normal;
-    }
-  }
-}
-
-.stat-widget-body{
-  margin-top: 7px;
-
-  .most-from{
-    @include bold-font;
-  }
-
-  .details{
-    margin-top: 10px;
-    padding: 2px 0;
-    text-align: center;
-  }
-}
-
-.stat-widget-additional{
-  margin-top: 10px;
-  .sparkline{
-    margin-top: 5px;
-    padding-right: 10px;
-  }
-
-  .change{
-    margin-top: 5px;
   }
 }
 
@@ -1060,38 +990,45 @@ input.parsley-error{
 }
 
 /***********************************/
-/**          OVERVIEW-widgets     **/
+/**          STATS-ACTIVITY       **/
 /**********************************/
 
-.widget-overview{
-  padding: 15px;
+.overall-stats{
 
-  .title{
-    margin-top: 0;
+  li{
+    margin-top: 12px;
   }
 
-  .stats{
-    margin-top: 10px;
+  .key{
+    line-height: 18px;
+    margin-left: 5px;
+  }
 
-    &.activity{
-      .icon{
-        text-align: center;
-      }
+  .icon{
+    text-align: center;
+  }
 
-      .value{
-        text-align: right;
-      }
+  .value{
+    text-align: right;
+  }
+}
 
-      .row-fluid{
-        margin-top: 10px;
-      }
+
+.server-stats{
+  margin-top: -2px;
+  margin-bottom: 2px;
+  li{
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
     }
+  }
+  .key{
+    @include bold-font;
+  }
 
-    .key{
-      line-height: 18px;
-      vertical-align: middle;
-      margin-left: 5px;
-    }
+  .progress{
+    margin-bottom: 0;
   }
 }
 
@@ -1317,7 +1254,7 @@ input.input-padding-increased{
     background: $white;
     margin-top: 0;
     @include box-shadow($widget-shadow);
-    padding: 10px 12px;
+    padding: $widget-padding;
     @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
   }
 
