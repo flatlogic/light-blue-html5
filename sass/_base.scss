@@ -530,11 +530,17 @@ input.parsley-error{
 
 .users-list{
 
+  &.user-list-no-hover li:hover{
+    background: none;
+    cursor: default;
+  }
+
   li{
     border-top: 1px solid #ddd;
     padding: 12px;
     margin: 0 -12px;
     cursor: pointer;
+    height: 50px;
 
     &:hover{
       background: $lightGray;
@@ -572,6 +578,16 @@ input.parsley-error{
   .time{
     font-size: $fontSizeSmall;
     color: $textLightGray;
+  }
+
+  .options{
+    margin-top: 5px;
+  }
+
+  .comment{
+    font-size: $fontSizeSmall;
+    color: $textLightGray;
+    line-height: 1.3em;
   }
 }
 
