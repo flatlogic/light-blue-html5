@@ -178,15 +178,20 @@ $(function(){
     }
 
     function drawSparkLines(){
-        options.fillColor = $orange;
+        options.lineColor = $orange;
+        options.fillColor = 'rgba(234, 200, 94, 0.5)';
         $('#direct-trend').sparkline(values[0], options );
-        options.fillColor = $green;
+        options.lineColor = $green;
+        options.fillColor = 'rgba(86, 188, 118, 0.5)';
         $('#refer-trend').sparkline(values[1], options );
-        options.fillColor = $blue;
+        options.lineColor = $blue;
+        options.fillColor = 'rgba(106, 141, 167, 0.5)';
         $('#social-trend').sparkline(values[2], options );
-        options.fillColor = $red;
+        options.lineColor = $red;
+        options.fillColor = 'rgba(229, 96, 59, 0.5)';
         $('#search-trend').sparkline(values[3], options );
-        options.fillColor = $gray;
+        options.lineColor = $gray;
+        options.fillColor = 'rgba(102, 102, 102, 0.5)';
         $('#internal-trend').sparkline(values[4], options );
     }
     var sparkResize;
