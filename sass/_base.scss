@@ -1448,7 +1448,7 @@ input.input-padding-increased{
   .icon{
     position: relative;
     z-index: 1;
-    background: darken($lightGray, 4%);
+    background: #e0e0e0;
     text-align: center;
     color: $white;
     width: 28px;
@@ -1684,6 +1684,11 @@ input.input-padding-increased{
 
   h3{
     font-weight: normal;
+    color: $grayDark;
+  }
+
+  p{
+    color: $grayDark;
   }
 
   .description{
@@ -1742,4 +1747,27 @@ input.input-padding-increased{
 
 .weight-normal{
   font-weight: normal;
+}
+
+.row-fluid.non-responsive {
+  width: 100%;
+  @include clearfix();
+  [class*="span"] {
+    @include input-block-level();
+    float: left;
+    margin-left: $fluidGridGutterWidth;
+    *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
+  }
+  [class*="span"]:first-child {
+    margin-left: 0;
+  }
+
+  // Space grid-sized controls properly if multiple per line
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: $fluidGridGutterWidth;
+  }
+
+  // generate .spanX and .offsetX
+  @include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+  @include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
 }

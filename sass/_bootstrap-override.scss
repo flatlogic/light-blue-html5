@@ -1,33 +1,17 @@
 /***************************/
-/*      Button Groups      */
+/*         Reset           */
 /***************************/
 
-.btn-group > .btn + .btn {
-  margin-left: 0;
-}
-
-.btn-group > .btn:hover,
-.btn-group > .btn:focus,
-.btn-group > .btn:active,
-.btn-group > .btn.active {
-  z-index: auto;
-}
-
-.btn-group > .btn + .dropdown-toggle {
-  @include box-shadow(none);
-}
-
-/***************************/
-/*      Buttons            */
-/***************************/
-
-.btn:focus {
+a:focus{
   outline: none;
 }
 
-.btn {
-  border-color: #c5c5c5;
-  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+/***************************/
+/*          Type           */
+/***************************/
+
+ul, ol {
+  margin: 0;
 }
 
 /***************************/
@@ -37,14 +21,6 @@
 code,
 pre {
   @include border-radius($baseBorderRadius);
-}
-
-/***************************/
-/*          Code           */
-/***************************/
-
-.dropdown-menu{
-  @include border-radius($borderRadiusLarge);
 }
 
 /***************************/
@@ -108,47 +84,42 @@ textarea,
 }
 
 /***************************/
-/*    Labels and badges    */
+/*        Dropdowns        */
 /***************************/
 
-.label,
-.badge {
-  text-shadow: none;
-}
-
-@each $item in label, badge {
-// Inverse (black)
-  .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $grayDark to just $gray
-  .#{$item}-inverse[href]     { background-color: darken($gray, 10%); }
+.dropdown-menu{
+  @include border-radius($borderRadiusLarge);
 }
 
 /***************************/
-/*         Modals          */
+/*      Buttons            */
 /***************************/
 
-.modal-backdrop,
-.modal-backdrop.fade.in {
-  //okendoken. 15% opacity is just enough
-  @include opacity(15);
+.btn:focus {
+  outline: none;
 }
 
-.modal {
-  @include border-radius($baseBorderRadius);
+.btn {
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
 }
 
 /***************************/
-/*         Navbars         */
+/*      Button Groups      */
 /***************************/
 
-.navbar-inner{
-  background: none;
+.btn-group > .btn + .btn {
+  margin-left: 0;
 }
 
-// Active nav items
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-  background: none;
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: auto;
+}
+
+.btn-group > .btn + .dropdown-toggle {
   @include box-shadow(none);
 }
 
@@ -195,11 +166,78 @@ textarea,
 }
 
 /***************************/
+/*         Navbars         */
+/***************************/
+
+.navbar-inner{
+  background: none;
+}
+
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background: none;
+  @include box-shadow(none);
+}
+
+/***************************/
+/*         Modals          */
+/***************************/
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  //okendoken. 15% opacity is just enough
+  @include opacity(15);
+}
+
+.modal {
+  @include border-radius($baseBorderRadius);
+}
+
+/***************************/
+/*        Tooltips         */
+/***************************/
+
+.tooltip {
+  font-size: $fontSizeSmall;
+}
+
+.tooltip-inner {
+  padding: 4px;
+}
+
+/***************************/
 /*        Popovers         */
 /***************************/
 
 .popover {
   @include border-radius($baseBorderRadius);
+}
+
+/***************************/
+/*       Thumbnails        */
+/***************************/
+
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border-color: $blue;
+  @include box-shadow(0 1px 4px rgba($blue,.25));
+}
+
+/***************************/
+/*    Labels and badges    */
+/***************************/
+
+.label,
+.badge {
+  text-shadow: none;
+}
+
+@each $item in label, badge {
+// Inverse (black)
+  .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $grayDark to just $gray
+  .#{$item}-inverse[href]     { background-color: darken($gray, 10%); }
 }
 
 /***************************/
@@ -244,44 +282,6 @@ textarea,
 }
 .progress-warning.progress-striped .bar, .progress-striped .bar-warning {
   @include gradient-striped($orange);
-}
-
-/***************************/
-/*         Reset           */
-/***************************/
-
-a:focus{
-  outline: none;
-}
-
-/***************************/
-/*       Thumbnails        */
-/***************************/
-
-a.thumbnail:hover,
-a.thumbnail:focus {
-  border-color: $blue;
-  @include box-shadow(0 1px 4px rgba($blue,.25));
-}
-
-/***************************/
-/*        Tooltips         */
-/***************************/
-
-.tooltip {
-  font-size: $fontSizeSmall;
-}
-
-.tooltip-inner {
-  padding: 4px;
-}
-
-/***************************/
-/*          Type           */
-/***************************/
-
-ul, ol {
-  margin: 0;
 }
 
 /***************************/

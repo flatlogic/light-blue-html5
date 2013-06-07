@@ -7599,46 +7599,25 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   }
 }
 /***************************/
-/*      Button Groups      */
+/*         Reset           */
 /***************************/
 /* line 5, D:/projects/admin/sass/_bootstrap-override.scss */
-.btn-group > .btn + .btn {
-  margin-left: 0;
-}
-
-/* line 12, D:/projects/admin/sass/_bootstrap-override.scss */
-.btn-group > .btn:hover,
-.btn-group > .btn:focus,
-.btn-group > .btn:active,
-.btn-group > .btn.active {
-  z-index: auto;
-}
-
-/* line 16, D:/projects/admin/sass/_bootstrap-override.scss */
-.btn-group > .btn + .dropdown-toggle {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/***************************/
-/*      Buttons            */
-/***************************/
-/* line 24, D:/projects/admin/sass/_bootstrap-override.scss */
-.btn:focus {
+a:focus {
   outline: none;
 }
 
-/* line 28, D:/projects/admin/sass/_bootstrap-override.scss */
-.btn {
-  border-color: #c5c5c5;
-  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+/***************************/
+/*          Type           */
+/***************************/
+/* line 13, D:/projects/admin/sass/_bootstrap-override.scss */
+ul, ol {
+  margin: 0;
 }
 
 /***************************/
 /*         Code            */
 /***************************/
-/* line 38, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 22, D:/projects/admin/sass/_bootstrap-override.scss */
 code,
 pre {
   -webkit-border-radius: 1px;
@@ -7647,19 +7626,9 @@ pre {
 }
 
 /***************************/
-/*          Code           */
-/***************************/
-/* line 46, D:/projects/admin/sass/_bootstrap-override.scss */
-.dropdown-menu {
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-}
-
-/***************************/
 /*         Forms           */
 /***************************/
-/* line 70, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 46, D:/projects/admin/sass/_bootstrap-override.scss */
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -7685,7 +7654,7 @@ input[type="color"]:focus,
   /* IE6-9 */
 }
 
-/* line 81, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 57, D:/projects/admin/sass/_bootstrap-override.scss */
 select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -7693,14 +7662,14 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
-/* line 87, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 63, D:/projects/admin/sass/_bootstrap-override.scss */
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
   color: #666666;
   border-color: #cccccc;
 }
-/* line 90, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 66, D:/projects/admin/sass/_bootstrap-override.scss */
 input:focus:invalid:focus,
 textarea:focus:invalid:focus,
 select:focus:invalid:focus {
@@ -7712,7 +7681,7 @@ select:focus:invalid:focus {
 
 /*adding .btn-group here because selectpicker's select become .btn-group
   need some more vertical space*/
-/* line 105, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 81, D:/projects/admin/sass/_bootstrap-override.scss */
 .btn-group + .help-block,
 input + .help-block,
 select + .help-block,
@@ -7724,60 +7693,123 @@ textarea + .help-block,
 }
 
 /***************************/
-/*    Labels and badges    */
+/*        Dropdowns        */
 /***************************/
-/* line 115, D:/projects/admin/sass/_bootstrap-override.scss */
-.label,
-.badge {
-  text-shadow: none;
-}
-
-/* line 121, D:/projects/admin/sass/_bootstrap-override.scss */
-.label-inverse {
-  background-color: #666666;
-}
-
-/* line 122, D:/projects/admin/sass/_bootstrap-override.scss */
-.label-inverse[href] {
-  background-color: #4d4d4d;
-}
-
-/* line 121, D:/projects/admin/sass/_bootstrap-override.scss */
-.badge-inverse {
-  background-color: #666666;
-}
-
-/* line 122, D:/projects/admin/sass/_bootstrap-override.scss */
-.badge-inverse[href] {
-  background-color: #4d4d4d;
-}
-
-/***************************/
-/*         Modals          */
-/***************************/
-/* line 130, D:/projects/admin/sass/_bootstrap-override.scss */
-.modal-backdrop,
-.modal-backdrop.fade.in {
-  opacity: 0.15;
-  filter: alpha(opacity=15);
-}
-
-/* line 135, D:/projects/admin/sass/_bootstrap-override.scss */
-.modal {
+/* line 90, D:/projects/admin/sass/_bootstrap-override.scss */
+.dropdown-menu {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
 }
 
 /***************************/
+/*      Buttons            */
+/***************************/
+/* line 98, D:/projects/admin/sass/_bootstrap-override.scss */
+.btn:focus {
+  outline: none;
+}
+
+/* line 102, D:/projects/admin/sass/_bootstrap-override.scss */
+.btn {
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+}
+
+/***************************/
+/*      Button Groups      */
+/***************************/
+/* line 111, D:/projects/admin/sass/_bootstrap-override.scss */
+.btn-group > .btn + .btn {
+  margin-left: 0;
+}
+
+/* line 118, D:/projects/admin/sass/_bootstrap-override.scss */
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: auto;
+}
+
+/* line 122, D:/projects/admin/sass/_bootstrap-override.scss */
+.btn-group > .btn + .dropdown-toggle {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/***************************/
+/*          Navs           */
+/***************************/
+/* line 130, D:/projects/admin/sass/_bootstrap-override.scss */
+.nav {
+  margin-bottom: 0;
+}
+
+/* line 134, D:/projects/admin/sass/_bootstrap-override.scss */
+.nav-tabs > li > a {
+  -webkit-border-radius: 1px 1px 0 0;
+  -moz-border-radius: 1px 1px 0 0;
+  border-radius: 1px 1px 0 0;
+}
+
+/* line 138, D:/projects/admin/sass/_bootstrap-override.scss */
+.nav-tabs .dropdown-menu {
+  -webkit-border-radius: 0 0 1px 1px;
+  -moz-border-radius: 0 0 1px 1px;
+  border-radius: 0 0 1px 1px;
+}
+
+/* line 141, D:/projects/admin/sass/_bootstrap-override.scss */
+.nav-pills .dropdown-menu {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+
+/* line 145, D:/projects/admin/sass/_bootstrap-override.scss */
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 1px 1px;
+  -moz-border-radius: 0 0 1px 1px;
+  border-radius: 0 0 1px 1px;
+}
+
+/* line 149, D:/projects/admin/sass/_bootstrap-override.scss */
+.tabs-left > .nav-tabs {
+  margin-right: 0;
+  border-right: none;
+}
+
+/* line 155, D:/projects/admin/sass/_bootstrap-override.scss */
+.tabs-left > .nav-tabs > li > a {
+  -webkit-border-radius: 1px 0 0 1px;
+  -moz-border-radius: 1px 0 0 1px;
+  border-radius: 1px 0 0 1px;
+}
+
+/* line 159, D:/projects/admin/sass/_bootstrap-override.scss */
+.tabs-right > .nav-tabs {
+  margin-left: 0;
+  border-left: none;
+}
+
+/* line 164, D:/projects/admin/sass/_bootstrap-override.scss */
+.tabs-right > .nav-tabs > li > a {
+  -webkit-border-radius: 0 1px 1px 0;
+  -moz-border-radius: 0 1px 1px 0;
+  border-radius: 0 1px 1px 0;
+}
+
+/***************************/
 /*         Navbars         */
 /***************************/
-/* line 143, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 172, D:/projects/admin/sass/_bootstrap-override.scss */
 .navbar-inner {
   background: none;
 }
 
-/* line 150, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 179, D:/projects/admin/sass/_bootstrap-override.scss */
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
@@ -7788,71 +7820,39 @@ textarea + .help-block,
 }
 
 /***************************/
-/*          Navs           */
+/*         Modals          */
 /***************************/
-/* line 159, D:/projects/admin/sass/_bootstrap-override.scss */
-.nav {
-  margin-bottom: 0;
+/* line 189, D:/projects/admin/sass/_bootstrap-override.scss */
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.15;
+  filter: alpha(opacity=15);
 }
 
-/* line 163, D:/projects/admin/sass/_bootstrap-override.scss */
-.nav-tabs > li > a {
-  -webkit-border-radius: 1px 1px 0 0;
-  -moz-border-radius: 1px 1px 0 0;
-  border-radius: 1px 1px 0 0;
-}
-
-/* line 167, D:/projects/admin/sass/_bootstrap-override.scss */
-.nav-tabs .dropdown-menu {
-  -webkit-border-radius: 0 0 1px 1px;
-  -moz-border-radius: 0 0 1px 1px;
-  border-radius: 0 0 1px 1px;
-}
-
-/* line 170, D:/projects/admin/sass/_bootstrap-override.scss */
-.nav-pills .dropdown-menu {
+/* line 194, D:/projects/admin/sass/_bootstrap-override.scss */
+.modal {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
 }
 
-/* line 174, D:/projects/admin/sass/_bootstrap-override.scss */
-.tabs-below > .nav-tabs > li > a {
-  -webkit-border-radius: 0 0 1px 1px;
-  -moz-border-radius: 0 0 1px 1px;
-  border-radius: 0 0 1px 1px;
+/***************************/
+/*        Tooltips         */
+/***************************/
+/* line 202, D:/projects/admin/sass/_bootstrap-override.scss */
+.tooltip {
+  font-size: 11.05px;
 }
 
-/* line 178, D:/projects/admin/sass/_bootstrap-override.scss */
-.tabs-left > .nav-tabs {
-  margin-right: 0;
-  border-right: none;
-}
-
-/* line 184, D:/projects/admin/sass/_bootstrap-override.scss */
-.tabs-left > .nav-tabs > li > a {
-  -webkit-border-radius: 1px 0 0 1px;
-  -moz-border-radius: 1px 0 0 1px;
-  border-radius: 1px 0 0 1px;
-}
-
-/* line 188, D:/projects/admin/sass/_bootstrap-override.scss */
-.tabs-right > .nav-tabs {
-  margin-left: 0;
-  border-left: none;
-}
-
-/* line 193, D:/projects/admin/sass/_bootstrap-override.scss */
-.tabs-right > .nav-tabs > li > a {
-  -webkit-border-radius: 0 1px 1px 0;
-  -moz-border-radius: 0 1px 1px 0;
-  border-radius: 0 1px 1px 0;
+/* line 206, D:/projects/admin/sass/_bootstrap-override.scss */
+.tooltip-inner {
+  padding: 4px;
 }
 
 /***************************/
 /*        Popovers         */
 /***************************/
-/* line 201, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 214, D:/projects/admin/sass/_bootstrap-override.scss */
 .popover {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -7860,9 +7860,50 @@ textarea + .help-block,
 }
 
 /***************************/
+/*       Thumbnails        */
+/***************************/
+/* line 223, D:/projects/admin/sass/_bootstrap-override.scss */
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border-color: #618fb0;
+  -webkit-box-shadow: 0 1px 4px rgba(97, 143, 176, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(97, 143, 176, 0.25);
+  box-shadow: 0 1px 4px rgba(97, 143, 176, 0.25);
+}
+
+/***************************/
+/*    Labels and badges    */
+/***************************/
+/* line 233, D:/projects/admin/sass/_bootstrap-override.scss */
+.label,
+.badge {
+  text-shadow: none;
+}
+
+/* line 239, D:/projects/admin/sass/_bootstrap-override.scss */
+.label-inverse {
+  background-color: #666666;
+}
+
+/* line 240, D:/projects/admin/sass/_bootstrap-override.scss */
+.label-inverse[href] {
+  background-color: #4d4d4d;
+}
+
+/* line 239, D:/projects/admin/sass/_bootstrap-override.scss */
+.badge-inverse {
+  background-color: #666666;
+}
+
+/* line 240, D:/projects/admin/sass/_bootstrap-override.scss */
+.badge-inverse[href] {
+  background-color: #4d4d4d;
+}
+
+/***************************/
 /*      Progress bars      */
 /***************************/
-/* line 209, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 247, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress .bar {
   background-color: #618fb0;
   background-image: -moz-linear-gradient(top, #618fb0, #618fb0);
@@ -7874,7 +7915,7 @@ textarea + .help-block,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF618FB0', endColorstr='#FF618FB0', GradientType=0);
 }
 
-/* line 213, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 251, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-striped .bar {
   background-color: #618fb0;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -7884,7 +7925,7 @@ textarea + .help-block,
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-/* line 218, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 256, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-danger .bar, .progress .bar-danger {
   background-color: #e5603b;
   background-image: -moz-linear-gradient(top, #e5603b, #e5603b);
@@ -7896,7 +7937,7 @@ textarea + .help-block,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFE5603B', endColorstr='#FFE5603B', GradientType=0);
 }
 
-/* line 221, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 259, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-danger.progress-striped .bar, .progress-striped .bar-danger {
   background-color: #e5603b;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -7906,7 +7947,7 @@ textarea + .help-block,
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-/* line 226, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 264, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-success .bar, .progress .bar-success {
   background-color: #56bc76;
   background-image: -moz-linear-gradient(top, #56bc76, #56bc76);
@@ -7918,7 +7959,7 @@ textarea + .help-block,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF56BC76', endColorstr='#FF56BC76', GradientType=0);
 }
 
-/* line 229, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 267, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-success.progress-striped .bar, .progress-striped .bar-success {
   background-color: #56bc76;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -7928,7 +7969,7 @@ textarea + .help-block,
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-/* line 234, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 272, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-info .bar, .progress .bar-info {
   background-color: #4ab0ce;
   background-image: -moz-linear-gradient(top, #4ab0ce, #4ab0ce);
@@ -7940,7 +7981,7 @@ textarea + .help-block,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF4AB0CE', endColorstr='#FF4AB0CE', GradientType=0);
 }
 
-/* line 237, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 275, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-info.progress-striped .bar, .progress-striped .bar-info {
   background-color: #4ab0ce;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -7950,7 +7991,7 @@ textarea + .help-block,
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-/* line 242, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 280, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-warning .bar, .progress .bar-warning {
   background-color: #eac85e;
   background-image: -moz-linear-gradient(top, #eac85e, #eac85e);
@@ -7962,7 +8003,7 @@ textarea + .help-block,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEAC85E', endColorstr='#FFEAC85E', GradientType=0);
 }
 
-/* line 245, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 283, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress-warning.progress-striped .bar, .progress-striped .bar-warning {
   background-color: #eac85e;
   background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
@@ -7970,47 +8011,6 @@ textarea + .help-block,
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-}
-
-/***************************/
-/*         Reset           */
-/***************************/
-/* line 253, D:/projects/admin/sass/_bootstrap-override.scss */
-a:focus {
-  outline: none;
-}
-
-/***************************/
-/*       Thumbnails        */
-/***************************/
-/* line 262, D:/projects/admin/sass/_bootstrap-override.scss */
-a.thumbnail:hover,
-a.thumbnail:focus {
-  border-color: #618fb0;
-  -webkit-box-shadow: 0 1px 4px rgba(97, 143, 176, 0.25);
-  -moz-box-shadow: 0 1px 4px rgba(97, 143, 176, 0.25);
-  box-shadow: 0 1px 4px rgba(97, 143, 176, 0.25);
-}
-
-/***************************/
-/*        Tooltips         */
-/***************************/
-/* line 271, D:/projects/admin/sass/_bootstrap-override.scss */
-.tooltip {
-  font-size: 11.05px;
-}
-
-/* line 275, D:/projects/admin/sass/_bootstrap-override.scss */
-.tooltip-inner {
-  padding: 4px;
-}
-
-/***************************/
-/*          Type           */
-/***************************/
-/* line 283, D:/projects/admin/sass/_bootstrap-override.scss */
-ul, ol {
-  margin: 0;
 }
 
 /***************************/
@@ -13736,7 +13736,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 .feed-item .icon {
   position: relative;
   z-index: 1;
-  background: #eeeeee;
+  background: #e0e0e0;
   text-align: center;
   color: white;
   width: 28px;
@@ -14026,23 +14026,28 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /* line 1685, D:/projects/admin/sass/_base.scss */
 .widget-404 h3 {
   font-weight: normal;
+  color: #555555;
 }
-/* line 1689, D:/projects/admin/sass/_base.scss */
+/* line 1690, D:/projects/admin/sass/_base.scss */
+.widget-404 p {
+  color: #555555;
+}
+/* line 1694, D:/projects/admin/sass/_base.scss */
 .widget-404 .description {
   vertical-align: middle;
   padding-top: 5px;
 }
 
-/* line 1695, D:/projects/admin/sass/_base.scss */
+/* line 1700, D:/projects/admin/sass/_base.scss */
 .widget-404-search, .widget-404 {
   width: 600px;
 }
 
-/* line 1699, D:/projects/admin/sass/_base.scss */
+/* line 1704, D:/projects/admin/sass/_base.scss */
 .single-widget-container .widget-404-search {
   margin-top: 40px;
 }
-/* line 1702, D:/projects/admin/sass/_base.scss */
+/* line 1707, D:/projects/admin/sass/_base.scss */
 .single-widget-container .widget-404-search .search-field {
   width: 456px;
 }
@@ -14050,7 +14055,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 1711, D:/projects/admin/sass/_base.scss */
+/* line 1716, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -14062,39 +14067,255 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 1719, D:/projects/admin/sass/_base.scss */
+/* line 1724, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1723, D:/projects/admin/sass/_base.scss */
+/* line 1728, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 1727, D:/projects/admin/sass/_base.scss */
+/* line 1732, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: white;
 }
 
-/* line 1731, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1735, D:/projects/admin/sass/_base.scss */
+/* line 1740, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1739, D:/projects/admin/sass/_base.scss */
+/* line 1744, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 1743, D:/projects/admin/sass/_base.scss */
+/* line 1748, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
+}
+
+/* line 1752, D:/projects/admin/sass/_base.scss */
+.row-fluid.non-responsive {
+  width: 100%;
+  *zoom: 1;
+}
+/* line 15, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive:before, .row-fluid.non-responsive:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive:after {
+  clear: both;
+}
+/* line 1755, D:/projects/admin/sass/_base.scss */
+.row-fluid.non-responsive [class*="span"] {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 2.12766%;
+  *margin-left: 2.07447%;
+}
+/* line 1761, D:/projects/admin/sass/_base.scss */
+.row-fluid.non-responsive [class*="span"]:first-child {
+  margin-left: 0;
+}
+/* line 1766, D:/projects/admin/sass/_base.scss */
+.row-fluid.non-responsive .controls-row [class*="span"] + [class*="span"] {
+  margin-left: 2.12766%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span1 {
+  width: 6.38298%;
+  *width: 6.32979%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span2 {
+  width: 14.89362%;
+  *width: 14.84043%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span3 {
+  width: 23.40426%;
+  *width: 23.35106%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span4 {
+  width: 31.91489%;
+  *width: 31.8617%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span5 {
+  width: 40.42553%;
+  *width: 40.37234%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span6 {
+  width: 48.93617%;
+  *width: 48.88298%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span7 {
+  width: 57.44681%;
+  *width: 57.39362%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span8 {
+  width: 65.95745%;
+  *width: 65.90426%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span9 {
+  width: 74.46809%;
+  *width: 74.41489%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span10 {
+  width: 82.97872%;
+  *width: 82.92553%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span11 {
+  width: 91.48936%;
+  *width: 91.43617%;
+}
+/* line 640, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .span12 {
+  width: 100%;
+  *width: 99.94681%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset1 {
+  margin-left: 10.6383%;
+  *margin-left: 10.53191%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset1:first-child {
+  margin-left: 8.51064%;
+  *margin-left: 8.40426%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset2 {
+  margin-left: 19.14894%;
+  *margin-left: 19.04255%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset2:first-child {
+  margin-left: 17.02128%;
+  *margin-left: 16.91489%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset3 {
+  margin-left: 27.65957%;
+  *margin-left: 27.55319%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset3:first-child {
+  margin-left: 25.53191%;
+  *margin-left: 25.42553%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset4 {
+  margin-left: 36.17021%;
+  *margin-left: 36.06383%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset4:first-child {
+  margin-left: 34.04255%;
+  *margin-left: 33.93617%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset5 {
+  margin-left: 44.68085%;
+  *margin-left: 44.57447%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset5:first-child {
+  margin-left: 42.55319%;
+  *margin-left: 42.44681%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset6 {
+  margin-left: 53.19149%;
+  *margin-left: 53.08511%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset6:first-child {
+  margin-left: 51.06383%;
+  *margin-left: 50.95745%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset7 {
+  margin-left: 61.70213%;
+  *margin-left: 61.59574%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset7:first-child {
+  margin-left: 59.57447%;
+  *margin-left: 59.46809%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset8 {
+  margin-left: 70.21277%;
+  *margin-left: 70.10638%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset8:first-child {
+  margin-left: 68.08511%;
+  *margin-left: 67.97872%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset9 {
+  margin-left: 78.7234%;
+  *margin-left: 78.61702%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset9:first-child {
+  margin-left: 76.59574%;
+  *margin-left: 76.48936%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset10 {
+  margin-left: 87.23404%;
+  *margin-left: 87.12766%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset10:first-child {
+  margin-left: 85.10638%;
+  *margin-left: 85.0%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset11 {
+  margin-left: 95.74468%;
+  *margin-left: 95.6383%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset11:first-child {
+  margin-left: 93.61702%;
+  *margin-left: 93.51064%;
+}
+/* line 646, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset12 {
+  margin-left: 104.25532%;
+  *margin-left: 104.14894%;
+}
+/* line 647, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
+.row-fluid.non-responsive .offset12:first-child {
+  margin-left: 102.12766%;
+  *margin-left: 102.02128%;
 }
 
 @media (max-width: 320px) {
@@ -14568,9 +14789,14 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   .navbar .nav > li > .dropdown-menu.messages:after {
     right: 129px;
   }
+
+  /* line 304, D:/projects/admin/sass/_responsive.scss */
+  .chat-footer .btn {
+    padding: 4px 0;
+  }
 }
 @media (max-width: 250px) {
-  /* line 306, D:/projects/admin/sass/_responsive.scss */
+  /* line 310, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;
