@@ -63,6 +63,10 @@ $transparentTextColor: rgba($backgroundGray, .5);
 $sidebarActiveColor: rgba($backgroundGray, .3);
 $transparentBackground: rgba($backgroundGray, .4);
 
+$sansFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$btnBorder: #bbb !default;
+
 //bootstrap override
 //responsive
 $navbarCollapseWidth: 767px !default;
@@ -130,6 +134,11 @@ $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 // Component sizing
 
 $paddingLarge:          8px 18px !default; // 44px
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          "../img/glyphicons-halflings.png" !default;
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
 
 @mixin bold-font{
   font-weight: bold;
