@@ -16,7 +16,7 @@ $(function(){
         $sidebarSettings = $("#sidebar-settings"),
         settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
             sidebar: 'left',
-            background: 'blue',
+            background: 'dark',
             sidebarState: 'auto',
             displaySidebar: true
         },
@@ -37,12 +37,10 @@ $(function(){
             }
         },
         backgroundStyle = function(style){
-            if (style == "blue"){
-                $body.removeClass("background-dark").addClass("background-blue");
-            } else if (style == "dark"){
-                $body.removeClass("background-blue").addClass("background-dark");
+            if (style == "dark"){
+                $body.addClass("background-dark");
             } else {
-                $body.removeClass("background-blue background-dark");
+                $body.removeClass("background-dark");
             }
         },
         sidebarState = function(state, triggerResize){
