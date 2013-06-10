@@ -50,8 +50,9 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: $backgroundAddition;
-  border-color: #666;
+  color: $boldTextColor;
+  background-color: $inputBackgroundColor;
+  border-color: $inputBorder;
   &:focus {
     @include box-shadow(inset 0 1px 2px $backgroundAddition);
     border-color: #ddd;
@@ -75,6 +76,14 @@ select:focus:invalid {
   &:focus {
     border-color: #ddd;
     @include box-shadow(none);
+  }
+}
+
+.input-append,
+.input-prepend {
+  .add-on {
+    background-color: $backgroundAddition;
+    border: 1px solid transparent;
   }
 }
 

@@ -380,11 +380,11 @@ input.parsley-error{
   }
 
   .control{
-    background: darken($lightGray, 2%);
+    background: $backgroundAddition;
     text-align: center;
     font-weight: normal;
     padding: 3px 2%;
-    color: lighten($textColor, 10%);
+    color: $boldTextColor;
     width: 20.625%;
     cursor: pointer;
     @include user-select(none);
@@ -503,7 +503,7 @@ input.parsley-error{
 
   .comment{
     font-size: $fontSizeSmall;
-    color: $textLightGray;
+    color: $textColor;
     line-height: 1.3em;
   }
 }
@@ -937,6 +937,7 @@ input.parsley-error{
     font-size: $fontSizeSmall;
     line-height: 1.5em;
     text-align: center;
+    color: $textLightGray;
   }
 }
 
@@ -1031,20 +1032,25 @@ input.parsley-error{
 /**********************************/
 
 .btn{
-  //color: $white;
+  color: $white;
   text-shadow: none;
 
   @include box-shadow(none);
 
   &:hover,
   &:focus {
-    //color: $white;
+    color: $white;
     @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
   }
 
   &.active:hover{
-    color: $grayDark;
+    color: $white;
     @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+  }
+
+  &.disabled,
+  &[disabled] {
+    color: $white;
   }
 
   .caret{
@@ -1087,14 +1093,12 @@ input.parsley-error{
 }
 
 .btn-inverse{
-  background: $grayDark;
-  color: $textColor;
+  color: $grayDark;
   border-bottom-color: rgba(0, 0, 0, .2);
 
   &:hover,
   &:focus{
-    color: $textColor;
-    background: $grayDark;
+    color: $grayDark;
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
   }
 
@@ -1102,12 +1106,12 @@ input.parsley-error{
   &.active:hover,
   &.active:focus{
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
-    color: $textColor;
+    color: $grayDark;
   }
 
   &.disabled,
   &[disabled] {
-    color: $textColor;
+    color: $grayDark;
   }
 
 }
@@ -1373,6 +1377,7 @@ input.input-padding-increased{
 
 // Inverse
 .progress-inverse .bar, .progress .bar-inverse {
+  color: #666;
   @include gradient-vertical($textLightGray, $textLightGray);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .bar-warning {

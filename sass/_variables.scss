@@ -52,7 +52,8 @@ $widget-padding: 10px 12px;
 $textColor: $lightGray !default;
 $linkColor: saturate(lighten($blue, 25%), 50%);
 $boldTextColor: lighten($textColor, 3%);
-$textLightGray: lighten($textColor, 13%) !default;
+$textLightGray: darken($textColor, 13%) !default;
+$placeholderColor: #bbb;
 $smallsColor: lighten($textColor, 16%);
 $dropzoneColor: #eee;
 $popoverBackground: rgba($backgroundGray, .85);
@@ -60,6 +61,7 @@ $transparentTextColor: rgba($backgroundGray, .5);
 $backgroundAddition: rgba($backgroundGray, .25);
 $sidebarActiveColor: $backgroundAddition;
 $transparentBackground: rgba($backgroundGray, .4);
+$inputBackgroundColor: rgba(255,255,255,.2);
 $paginationBackground: transparent;
 $paginationBorder: transparent;
 $paginationActiveBackground: $backgroundAddition;
@@ -67,6 +69,7 @@ $paginationActiveBackground: $backgroundAddition;
 $sansFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $btnBorder: #bbb !default;
+$inputBorder: #888;
 
 //bootstrap override
 //responsive
@@ -79,8 +82,8 @@ $borderRadiusLarge:     $widget-border-radius !default;
 $borderRadiusSmall:     0px !default;
 // Buttons
 // -------------------------
-$btnBackground:                     $textColor !default;
-$btnBackgroundHighlight:            $textColor !default;
+$btnBackground:                     $gray !default;
+$btnBackgroundHighlight:            $gray !default;
 
 $btnPrimaryBackground:              $blue !default;
 $btnPrimaryBackgroundHighlight:     $blue !default;
