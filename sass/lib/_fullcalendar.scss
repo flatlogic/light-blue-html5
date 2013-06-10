@@ -128,7 +128,7 @@ html .fc,
 	}
 
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	background: #ffc;
+	background: $backgroundAddition;
 	}
 
 .fc-cell-overlay { /* semi-transparent rectangle while dragging */
@@ -215,14 +215,18 @@ html .fc,
 
 /* button states (determines colors)  */
 
-.fc-state-default,
+.fc-state-default, .fc-state-default:hover{
+  background: none;
+  border-color: transparent;
+}
 .fc-state-default .fc-button-inner {
-	border-style: solid;
+  border-style: solid;
   //okendoken. change to default color
-	border-color: #ddd;
-	background: $btnInverseBackground;
-	color: $textColor;
-	}
+  background: $transparentBackground;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+  border-width: 1px;
+  color: $white;
+}
 
 .fc-button-next .fc-button-inner{
 
@@ -256,7 +260,7 @@ html .fc,
 
 .fc-state-hover,
 .fc-state-hover .fc-button-inner {
-  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
   @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
 	}
 

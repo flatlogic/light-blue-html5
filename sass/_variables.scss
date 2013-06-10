@@ -15,7 +15,7 @@ $gray:                  #666 !default;
 $grayDark:              #555 !default;
 $backgroundGray:        #333 !default;
 $lightGray:             #f8f8f8 !default;
-$shadowGray:            #676767 !default;
+$shadowGray:            rgba(#676767, .4) !default;
 $linkRed:               #da3712 !default;
 $white:                 #ffffff !default;
 $lightBlue:             #eff5ef !default;
@@ -40,7 +40,7 @@ $fontSizeSmall:         $baseFontSize * 0.85; // ~12px
 $fontSizeMini:          $baseFontSize * 0.75; // ~11px
 $fontSizeIndex:         $baseFontSize * 0.7;
 
-$widget-shadow: 0 0 5px $shadowGray;
+$widget-shadow: 0 -1px 1px $shadowGray, 0 1px 1px $shadowGray;
 $widget-border-radius: 1px;
 $button-border-radius: 1px;
 $box-margin-bottom: 30px;
@@ -49,15 +49,20 @@ $sidebarTopMargin: 80px;
 $widget-padding: 10px 12px;
 
 
-$textColor: $gray !default;
+$textColor: $lightGray !default;
+$linkColor: saturate(lighten($blue, 25%), 50%);
 $boldTextColor: lighten($textColor, 3%);
 $textLightGray: lighten($textColor, 13%) !default;
 $smallsColor: lighten($textColor, 16%);
-$dropzoneColor: #dfdfdf;
+$dropzoneColor: #eee;
 $popoverBackground: rgba($backgroundGray, .85);
 $transparentTextColor: rgba($backgroundGray, .5);
-$sidebarActiveColor: rgba($backgroundGray, .3);
+$backgroundAddition: rgba($backgroundGray, .25);
+$sidebarActiveColor: $backgroundAddition;
 $transparentBackground: rgba($backgroundGray, .4);
+$paginationBackground: transparent;
+$paginationBorder: transparent;
+$paginationActiveBackground: $backgroundAddition;
 
 $sansFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -74,7 +79,7 @@ $borderRadiusLarge:     $widget-border-radius !default;
 $borderRadiusSmall:     0px !default;
 // Buttons
 // -------------------------
-$btnBackground:                     lighten($textColor, 2%) !default;
+$btnBackground:                     $textColor !default;
 $btnBackgroundHighlight:            $textColor !default;
 
 $btnPrimaryBackground:              $blue !default;
@@ -102,7 +107,7 @@ $dropdownBorder:                rgba(0,0,0,.2) !default;
 $dropdownDividerTop:            #e5e5e5 !default;
 $dropdownDividerBottom:         $white !default;
 
-$dropdownLinkColor:             $textColor !default;
+$dropdownLinkColor:             $gray !default;
 $dropdownLinkColorHover:        $white !default;
 $dropdownLinkColorActive:       $dropdownLinkColor !default;
 

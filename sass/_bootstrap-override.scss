@@ -27,6 +27,13 @@ pre {
 /*         Forms           */
 /***************************/
 
+legend{
+  color: $white;
+  small{
+    color: $textColor;
+  }
+}
+
 textarea,
 input[type="text"],
 input[type="password"],
@@ -43,9 +50,11 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
+  background-color: $backgroundAddition;
+  border-color: #666;
   &:focus {
-    @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
-    border-color: $blue;
+    @include box-shadow(inset 0 1px 2px $backgroundAddition);
+    border-color: #ddd;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
   }
@@ -62,9 +71,9 @@ input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
   color: $textColor;
-  border-color: $inputBorder;
+  border-color: #ddd;
   &:focus {
-    border-color: $blue;
+    border-color: #ddd;
     @include box-shadow(none);
   }
 }
@@ -84,11 +93,50 @@ textarea,
 }
 
 /***************************/
+/*        Tables        */
+/***************************/
+
+.table .table{
+  background-color: $backgroundAddition;
+}
+
+.table-hover {
+  tbody {
+    tr:hover > td,
+    tr:hover > th {
+      background-color: $backgroundAddition;
+    }
+  }
+}
+
+.table-striped {
+  tbody {
+    > tr:nth-child(odd) > td,
+    > tr:nth-child(odd) > th {
+      background-color: $backgroundAddition;
+    }
+  }
+}
+
+.table:not(.table-bordered) td{
+  border-top: none;
+}
+
+/***************************/
 /*        Dropdowns        */
 /***************************/
 
 .dropdown-menu{
   @include border-radius($borderRadiusLarge);
+}
+
+/***************************/
+/*          Wells          */
+/***************************/
+
+.well{
+  background-color: $backgroundAddition;
+  border: none;
 }
 
 /***************************/
@@ -131,8 +179,30 @@ textarea,
   margin-bottom: 0;
 }
 
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: $backgroundAddition;
+}
+
 .nav-tabs > li > a {
   @include border-radius($baseBorderRadius $baseBorderRadius 0 0);
+  color: $textColor;
+  &:hover,
+  &:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs > .active{
+  margin-bottom: 0;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  color: $textColor;
+  background-color: $backgroundAddition;
+  border-color: transparent;
 }
 
 .nav-tabs .dropdown-menu {
@@ -140,6 +210,9 @@ textarea,
 }
 .nav-pills .dropdown-menu {
   @include border-radius($baseBorderRadius); // make rounded corners match the pills
+}
+.tabs-below > .nav-tabs {
+  border-top: none;
 }
 
 .tabs-below > .nav-tabs > li > a {
@@ -165,6 +238,48 @@ textarea,
   @include border-radius(0 $baseBorderRadius $baseBorderRadius 0);
 }
 
+.tabs-below > .nav-tabs > li {
+  margin-top: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  &:hover,
+  &:focus {
+    border-top-color: transparent;
+  }
+}
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: 0;
+}
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: transparent;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: transparent;
+}
+
+.tabs-right > .nav-tabs > li > a {
+  margin-left: 0;
+}
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: transparent;
+}
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: transparent;
+}
+
 /***************************/
 /*         Navbars         */
 /***************************/
@@ -179,6 +294,21 @@ textarea,
 .navbar .nav > .active > a:focus {
   background: none;
   @include box-shadow(none);
+}
+
+/***************************/
+/*        Pagination       */
+/***************************/
+
+.pagination ul {
+  @include box-shadow(none);
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+  background-color: $paginationBackground;
+  border: 1px solid $paginationBorder;
+  border-left-width: 0;
 }
 
 /***************************/
@@ -219,10 +349,19 @@ textarea,
 /*       Thumbnails        */
 /***************************/
 
+.thumbnail {
+  border: none;
+  @include box-shadow(none);
+  background: $backgroundAddition;
+}
+
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: $blue;
-  @include box-shadow(0 1px 4px rgba($blue,.25));
+  border: none;
+}
+
+.thumbnail .caption {
+  color: $textColor;
 }
 
 /***************************/

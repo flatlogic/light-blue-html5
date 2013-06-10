@@ -10,14 +10,14 @@ $i: 1;
   $i: $i + 1;
 }
 
-$i: 1;
-@each $color in $light_colors{
-
-  .light-#{nth($light_color_names, $i)}{
-    background: $color !important;
-  }
-  $i: $i + 1;
-}
+//$i: 1;
+//@each $color in $light_colors{
+//
+//  .light-#{nth($light_color_names, $i)}{
+//    background: $color !important;
+//  }
+//  $i: $i + 1;
+//}
 
 $i: 1;
 @each $color in $colors{
@@ -217,7 +217,7 @@ input.parsley-error{
 
 /*content except for header*/
 .content{
-  padding: 25px 3.3%;
+  padding: 25px 2.5641%;
   @include transition(margin-top .35s ease);
 }
 
@@ -234,6 +234,7 @@ input.parsley-error{
   text-align: center;
   @include box-shadow($widget-shadow);
   margin-bottom: $box-margin-bottom;
+  background: $transparentBackground;
 
   .description{
     font-weight: normal;
@@ -261,10 +262,10 @@ input.parsley-error{
 
 .widget{
   @include border-radius($widget-border-radius);
-  @include box-shadow($widget-shadow);
+  //@include box-shadow($widget-shadow);
   padding: $widget-padding;
   color: $textColor;
-  background: $white;
+  background: $transparentBackground;
   margin-bottom: $box-margin-bottom;
   position: relative;
 
@@ -321,7 +322,7 @@ input.parsley-error{
   }
 
   .body{
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   & > footer{
@@ -337,7 +338,6 @@ input.parsley-error{
     right: 0;
     top: -2px;
     a{
-      color: inherit;
       text-decoration: none;
     }
   }
@@ -432,13 +432,12 @@ input.parsley-error{
 
   .key{
     @include bold-font;
-    border-bottom: 1px solid #ddd;
   }
 
   .value{
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: $baseFontSize * 1.5;
+    font-size: $fontSizeLarge;
   }
 }
 
@@ -454,14 +453,14 @@ input.parsley-error{
   }
 
   li{
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $backgroundAddition;
     padding: 12px;
     margin: 0 -12px;
     cursor: pointer;
     height: 50px;
 
     &:hover{
-      background: $lightGray;
+      background: $backgroundAddition;
     }
 
     &:last-child{
@@ -579,7 +578,7 @@ input.parsley-error{
       width: 1px;
       margin: 0 20px;
       $experimental-support-for-svg: true;
-      @include background(linear-gradient(rgba(0,0,0,0), rgba($textColor, .5), rgba(0,0,0,0)));
+      @include background(linear-gradient(rgba($transparentTextColor, 0), $transparentTextColor, rgba($gray, 0)));
       $experimental-support-for-svg: false;
     }
   }
@@ -589,7 +588,7 @@ input.parsley-error{
   color: $white;
   font-weight: bold;
   line-height: 1;
-  margin: 13px 0 20px;
+  margin: 11px 0 15px;
 
   small{
     color: $white;
@@ -919,9 +918,7 @@ input.parsley-error{
   .icon{
     position: relative;
     z-index: 1;
-    background: darken($lightGray, 1%);
     text-align: center;
-    color: $white;
     width: 53px;
     height: 53px;
     line-height: 53px;
@@ -950,7 +947,7 @@ input.parsley-error{
 .chat-message-body{
   margin-left: 63px;
   padding: 8px 10px;
-  background: $lightGray;
+  background: $backgroundAddition;
   position: relative;
   border-left: 2px solid $textLightGray;
 
@@ -1015,16 +1012,13 @@ input.parsley-error{
 
 
 .server-stats{
-  margin-top: -2px;
+  margin-top: -3px;
   margin-bottom: 2px;
   li{
     margin-bottom: 10px;
     &:last-child{
       margin-bottom: 0;
     }
-  }
-  .key{
-    @include bold-font;
   }
 
   .progress{
@@ -1037,14 +1031,14 @@ input.parsley-error{
 /**********************************/
 
 .btn{
-  color: $white;
+  //color: $white;
   text-shadow: none;
 
   @include box-shadow(none);
 
   &:hover,
   &:focus {
-    color: $white;
+    //color: $white;
     @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
   }
 
@@ -1055,11 +1049,6 @@ input.parsley-error{
 
   .caret{
     border-top-color: #fff;
-  }
-
-  &.disabled,
-  &[disabled] {
-    color: $white;
   }
 }
 
@@ -1098,12 +1087,14 @@ input.parsley-error{
 }
 
 .btn-inverse{
+  background: $grayDark;
   color: $textColor;
   border-bottom-color: rgba(0, 0, 0, .2);
 
   &:hover,
   &:focus{
     color: $textColor;
+    background: $grayDark;
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
   }
 
@@ -1216,6 +1207,8 @@ input.input-padding-increased{
 
 .form-actions{
   margin-bottom: 0;
+  background: $backgroundAddition;
+  border-top: none;
 }
 
 /***********************************/
@@ -1251,23 +1244,41 @@ input.input-padding-increased{
   padding: 0;
 
   .body{
-    background: $white;
+    background: $transparentBackground;
     margin-top: 0;
-    @include box-shadow($widget-shadow);
     padding: $widget-padding;
     @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+  }
+
+
+  .nav-tabs{
+    border-bottom: none;
   }
 
   .nav > li > a{
     padding-top: 7px;
     padding-bottom: 6px;
-    @include box-shadow(0 -2px 2px rgba($shadowGray, .5));
+    color: $textColor;
+  }
+
+  .nav > li.active{
+    margin-bottom: 0;
+    & > a{
+      border-color: transparent;
+      background: $transparentBackground;
+      &:hover{
+        color: $textColor;
+      }
+    }
   }
 
   .nav > li:not(.active) > a{
-    background: $white;
+    background: $transparentBackground;
     border-bottom: none;
-    color: $textColor;
+    &:hover{
+      background: rgba(darken($backgroundGray, 10%), .4);
+      border-color: transparent;
+    }
   }
 
   .nav > li:first-child > a{
@@ -1275,23 +1286,23 @@ input.input-padding-increased{
   }
 }
 
-.nav-tabs > li > a{
-  color: $textColor;
+.nav-tabs{
+  border-bottom: none;
 }
 
 //base look for inner tabs
 .widget:not(.widget-tabs){
   .tab-content{
-    background: $white;
+    background: $backgroundAddition;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: none;
     border-top: none;
     @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
   }
 
   .tabs-below {
     .tab-content{
-      border-top: 1px solid #ddd;
+      //border-top: 1px solid #ddd;
       border-bottom: none;
       @include border-radius($baseBorderRadius $baseBorderRadius 0 0);
     }
@@ -1299,16 +1310,16 @@ input.input-padding-increased{
 
   .tabs-left {
     .tab-content{
-      border-top: 1px solid #ddd;
-      border-left: 1px solid #ddd;
+      //border-top: 1px solid #ddd;
+      //border-left: 1px solid #ddd;
       @include border-radius(0 $baseBorderRadius $baseBorderRadius 0);
     }
   }
 
   .tabs-right {
     .tab-content{
-      border-top: 1px solid #ddd;
-      border-right: 1px solid #ddd;
+      //border-top: 1px solid #ddd;
+      //border-right: 1px solid #ddd;
       @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
     }
   }
@@ -1325,7 +1336,8 @@ input.input-padding-increased{
 /**********************************/
 
 .accordion-group{
-  background: $white;
+  border: none;
+  background-color: $backgroundAddition;
 
   $i: 1;
   @each $color in $colors{
@@ -1340,6 +1352,10 @@ input.input-padding-increased{
     color: $textColor;
     @include bold-font;
   }
+}
+
+.accordion-inner{
+  border-top-color: $backgroundAddition;
 }
 
 
@@ -1437,7 +1453,7 @@ input.input-padding-increased{
   .vertical-line{
     height: 100%;
     width: 2px;
-    background: darken($lightGray, 3%);
+    //background: $transparentBackground;
     position: absolute;
     left: 13px;
   }
@@ -1445,10 +1461,11 @@ input.input-padding-increased{
 
 .feed-item{
   @include clearfix;
+  padding-right: 6px;
   .icon{
     position: relative;
     z-index: 1;
-    background: #e0e0e0;
+    background: $transparentBackground;
     text-align: center;
     color: $white;
     width: 28px;
@@ -1479,6 +1496,7 @@ input.input-padding-increased{
   .time{
     font-size: $fontSizeSmall;
     line-height: 1.5em;
+    color: $textLightGray;
   }
 }
 
@@ -1642,7 +1660,7 @@ input.input-padding-increased{
   }
 
   &:nth-child(even){
-    background: $lightGray;
+    background: $backgroundAddition;
   }
 
   $i: 1;
@@ -1730,7 +1748,7 @@ input.input-padding-increased{
 }
 
 .well-white{
-  background: $white;
+  background: rgba(255,255,255,.2);
 }
 
 .margin-top{
