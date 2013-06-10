@@ -868,7 +868,7 @@ input.parsley-error{
       }
     }
     .forgot {
-      color: #867868;
+      color: $white;
       text-align: center;
       text-decoration: underline;
       padding: 15px 0 15px 0;
@@ -1377,11 +1377,11 @@ input.input-padding-increased{
 
 // Inverse
 .progress-inverse .bar, .progress .bar-inverse {
-  color: #666;
-  @include gradient-vertical($textLightGray, $textLightGray);
+  color: $grayDark;
+  @include gradient-vertical($lightGray, $lightGray);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
-  @include gradient-striped($textLightGray);
+  @include gradient-striped($lightGray);
 }
 
 /***********************************/
