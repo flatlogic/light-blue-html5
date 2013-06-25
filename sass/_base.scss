@@ -590,11 +590,19 @@ input.parsley-error{
   .search-query{
     border: none;
     color: $textColor;
-    background: $transparentBackground;
+    background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
+    padding-left: 26px;
+    @include placeholder(rgba(#eee, .76));
+    @include transition(width .2s);
+    width: 60px;
+
+    &:focus{
+      width: 120px;
+    }
   }
 
   .navbar-search{
-    margin-right: 15px;
+    margin-right: 10px;
   }
 }
 
