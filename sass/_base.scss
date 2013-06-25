@@ -122,7 +122,11 @@ input.parsley-error{
     }
 
     a.accordion-toggle:not(.collapsed) + .accordion-body li.active a{
-      background: $sidebarActiveColor;
+      background: $sidebarSubMenuActiveColor;
+    }
+
+    a.accordion-toggle:not(.collapsed) + .accordion-body li a:hover{
+      background: $sidebarSubMenuActiveColor;
     }
   }
 
@@ -185,7 +189,7 @@ input.parsley-error{
       right: 1.6%;
       padding-right: 2px;
       width: 40px;
-      top: 15px;
+      top: 13px;
     }
   }
 }
@@ -581,6 +585,16 @@ input.parsley-error{
       @include background(linear-gradient(rgba($transparentTextColor, 0), $transparentTextColor, rgba($gray, 0)));
       $experimental-support-for-svg: false;
     }
+  }
+
+  .search-query{
+    border: none;
+    color: $textColor;
+    background: $transparentBackground;
+  }
+
+  .navbar-search{
+    margin-right: 15px;
   }
 }
 

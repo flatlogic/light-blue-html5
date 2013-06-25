@@ -61,6 +61,7 @@ $popoverArrowColor: $popoverBackground;
 $transparentTextColor: rgba($backgroundGray, .5);
 $backgroundAddition: rgba($backgroundGray, .25);
 $sidebarActiveColor: $backgroundAddition;
+$sidebarSubMenuActiveColor: darken($sidebarActiveColor, 15%);
 $transparentBackground: rgba($backgroundGray, .4);
 $inputBackgroundColor: #fff;
 $paginationBackground: transparent;
@@ -217,7 +218,7 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
     left: 1.6%;
     padding-left: 5px;
     width: 40px;
-    top: 15px;
+    top: 13px;
   }
 }
 

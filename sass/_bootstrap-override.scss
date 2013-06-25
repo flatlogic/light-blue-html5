@@ -99,6 +99,11 @@ textarea,
   }
 }
 
+.search-query, .navbar-search .search-query{
+  @include border-radius($baseBorderRadius);
+  line-height: $baseLineHeight;
+}
+
 /***************************/
 /*        Tables        */
 /***************************/
