@@ -70,9 +70,10 @@ $(function(){
     });
 
     $(window).resize(function(){
-       closeNavigation()
+        closeNavigation()
     });
 
+    //class-switch for button-groups
     $(".btn-group > .btn[data-toggle-class]").click(function(){
         var $this = $(this),
             $parent = $this.parent();
@@ -87,5 +88,18 @@ $(function(){
         } else {
             $this.toggleClass($(this).data("toggle-passive-class")).toggleClass($this.data("toggle-class"));
         }
+    });
+
+    $("#search-toggle").click(function(){
+        var $link = $(this);
+        $("#search-form").css('height', function(){
+            var $this = $(this);
+            $this.css('height', $this.height() == 0 ? 30 : 0);
+            if ($this.height() == 0){
+                $this.css('height', 30);
+            } else {
+                $this.css('height', 0);
+            }
+        });
     });
 });

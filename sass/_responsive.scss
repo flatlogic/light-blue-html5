@@ -121,6 +121,10 @@
 //max-width: 1048px is more important than max-width: 767px
 @media (max-width: 767px){
 
+  .page-title{
+    margin-top: 6px;
+  }
+
   .sidebar,
   .sidebar-on-right .sidebar,
   .sidebar-on-right .sidebar.sidebar-icons,
@@ -166,7 +170,7 @@
     }
 
     &.in + .wrap .content{
-      margin-top: 390px;
+      margin-top: 370px;
     }
   }
 
@@ -222,7 +226,7 @@
 
   .navbar .nav > li > .dropdown-menu.messages,
   .navbar .nav > li > .dropdown-menu.support{
-      margin-right: -88px;
+    margin-right: -88px;
 
     &:after{
       right: 105px;
@@ -238,6 +242,14 @@
 }
 
 @media (max-width: 480px){
+
+  .sidebar,
+  .sidebar-on-right .sidebar,
+  .sidebar-on-right .sidebar.sidebar-icons,
+  .sidebar.sidebar-icons{
+    margin: 90px 2.5641%;
+    width: 94.8718%;
+  }
   .content > .row-fluid.box-row > .span2{
     width: 48.61878%;
     margin-left: 2.76243%;
@@ -303,6 +315,25 @@
 
   .chat-footer .btn{
     padding: 4px 0;
+  }
+
+  .page-header .navbar-search{
+    margin: 10px 0 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    @include transition(height .3s ease);
+  }
+
+  .page-header .search-query{
+    @include input-block-level();
+    &:focus{
+      width: 100%;
+    }
+  }
+
+  .visible-phone-landscape{
+    display: block !important;
   }
 }
 
