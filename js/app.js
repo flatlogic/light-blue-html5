@@ -90,16 +90,36 @@ $(function(){
         }
     });
 
+    var $sidebar = $('#sidebar');
+
     $("#search-toggle").click(function(){
-        var $link = $(this);
+        //first hide menu if open
+
+        if ($sidebar.data('collapse')){
+            $sidebar.collapse('hide');
+        }
+
+        var $notifications = $('.notifications'),
+            notificationsPresent = !$notifications.is(':empty');
+
         $("#search-form").css('height', function(){
             var $this = $(this);
-            $this.css('height', $this.height() == 0 ? 30 : 0);
             if ($this.height() == 0){
-                $this.css('height', 30);
+                $this.css('height', 40);
+                notificationsPresent && $notifications.css('top', 86);
             } else {
                 $this.css('height', 0);
+                notificationsPresent && $notifications.css('top', '');
             }
         });
     });
+
+
+    //hide search field if open
+    $sidebar.on('show', function () {
+        var $notifications = $('.notifications'),
+            notificationsPresent = !$notifications.is(':empty');
+        $("#search-form").css('height', 0);
+        notificationsPresent && $notifications.css('top', '');
+    })
 });

@@ -14965,10 +14965,14 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     right: 0;
     top: 46px;
     margin: 0;
+    -webkit-transition: top 0.3s ease;
+    -moz-transition: top 0.3s ease;
+    -o-transition: top 0.3s ease;
+    transition: top 0.3s ease;
   }
 }
 @media (max-width: 480px) {
-  /* line 249, D:/projects/admin/sass/_responsive.scss */
+  /* line 251, D:/projects/admin/sass/_responsive.scss */
   .sidebar,
   .sidebar-on-right .sidebar,
   .sidebar-on-right .sidebar.sidebar-icons,
@@ -14977,84 +14981,84 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     width: 94.8718%;
   }
 
-  /* line 253, D:/projects/admin/sass/_responsive.scss */
+  /* line 255, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     width: 48.61878%;
     margin-left: 2.76243%;
     float: left;
   }
-  /* line 258, D:/projects/admin/sass/_responsive.scss */
+  /* line 260, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2:nth-child(odd) {
     margin-left: 0;
   }
 
-  /* line 263, D:/projects/admin/sass/_responsive.scss */
+  /* line 265, D:/projects/admin/sass/_responsive.scss */
   .form-condensed .controls {
     margin-left: 0;
   }
 
-  /* line 267, D:/projects/admin/sass/_responsive.scss */
+  /* line 269, D:/projects/admin/sass/_responsive.scss */
   body {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 272, D:/projects/admin/sass/_responsive.scss */
+  /* line 274, D:/projects/admin/sass/_responsive.scss */
   .login-widget, .registration-widget {
     width: 260px;
   }
-  /* line 275, D:/projects/admin/sass/_responsive.scss */
+  /* line 277, D:/projects/admin/sass/_responsive.scss */
   .login-widget input[type="email"],
   .login-widget input[type="password"], .registration-widget input[type="email"],
   .registration-widget input[type="password"] {
     width: 222px;
   }
 
-  /* line 280, D:/projects/admin/sass/_responsive.scss */
+  /* line 282, D:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 260px;
   }
 
-  /* line 285, D:/projects/admin/sass/_responsive.scss */
+  /* line 287, D:/projects/admin/sass/_responsive.scss */
   .widget-404 h1 {
     font-size: 80px;
     line-height: 80px;
   }
-  /* line 290, D:/projects/admin/sass/_responsive.scss */
+  /* line 292, D:/projects/admin/sass/_responsive.scss */
   .widget-404 h3 {
     font-size: 16.25px;
     line-height: 22px;
   }
 
-  /* line 296, D:/projects/admin/sass/_responsive.scss */
+  /* line 298, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 299, D:/projects/admin/sass/_responsive.scss */
+  /* line 301, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
     width: 143px;
   }
 
-  /* line 304, D:/projects/admin/sass/_responsive.scss */
+  /* line 306, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container.error-page {
     margin-top: -129px;
   }
 
-  /* line 308, D:/projects/admin/sass/_responsive.scss */
+  /* line 310, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages {
     margin-right: -112px;
   }
-  /* line 311, D:/projects/admin/sass/_responsive.scss */
+  /* line 313, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages:after {
     right: 129px;
   }
 
-  /* line 316, D:/projects/admin/sass/_responsive.scss */
+  /* line 318, D:/projects/admin/sass/_responsive.scss */
   .chat-footer .btn {
     padding: 4px 0;
   }
 
-  /* line 320, D:/projects/admin/sass/_responsive.scss */
+  /* line 322, D:/projects/admin/sass/_responsive.scss */
   .page-header .navbar-search {
     margin: 10px 0 0;
     width: 100%;
@@ -15066,7 +15070,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     transition: height 0.3s ease;
   }
 
-  /* line 328, D:/projects/admin/sass/_responsive.scss */
+  /* line 330, D:/projects/admin/sass/_responsive.scss */
   .page-header .search-query {
     display: block;
     width: 100%;
@@ -15075,18 +15079,18 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 330, D:/projects/admin/sass/_responsive.scss */
+  /* line 332, D:/projects/admin/sass/_responsive.scss */
   .page-header .search-query:focus {
     width: 100%;
   }
 
-  /* line 335, D:/projects/admin/sass/_responsive.scss */
+  /* line 337, D:/projects/admin/sass/_responsive.scss */
   .visible-phone-landscape {
     display: block !important;
   }
 }
 @media (max-width: 250px) {
-  /* line 341, D:/projects/admin/sass/_responsive.scss */
+  /* line 343, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;
