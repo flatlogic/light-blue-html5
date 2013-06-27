@@ -273,7 +273,7 @@ textarea {
 /* line 9, D:/projects/admin/sass/bootstrap-original/_scaffolding.scss */
 body {
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: 20px;
   color: #f8f8f8;
@@ -1194,7 +1194,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* line 55, D:/projects/admin/sass/bootstrap-original/_forms.scss */
@@ -4255,7 +4255,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -11982,6 +11982,224 @@ table.fc-border-separate {
   border-radius: 1px;
 }
 
+/*
+ * Table
+ */
+/* line 5, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+table.dataTable {
+  margin: 0 auto;
+  clear: both;
+  width: 100%;
+  background: rgba(51, 51, 51, 0.25);
+}
+
+/* line 12, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+table.dataTable thead th {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  *cursor: hand;
+}
+/* line 18, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+table.dataTable thead th.sorting_disabled {
+  cursor: default;
+  text-decoration: none;
+}
+
+/* line 24, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+table.dataTable tfoot th {
+  font-weight: bold;
+}
+
+/* line 29, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+table.dataTable td.center,
+table.dataTable td.dataTables_empty {
+  text-align: center;
+}
+
+/*
+ * Table wrapper
+ */
+/* line 37, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_wrapper {
+  position: relative;
+  clear: both;
+  *zoom: 1;
+}
+
+/*
+ * Page length menu
+ */
+/* line 47, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_length {
+  float: left;
+}
+
+/*
+ * Filter
+ */
+/* line 55, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_filter {
+  float: right;
+  text-align: right;
+}
+
+/*
+ * Table information
+ */
+/* line 64, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_info {
+  clear: both;
+  float: left;
+}
+
+/*
+ * Pagination
+ */
+/* line 73, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_paginate {
+  float: right;
+  text-align: right;
+}
+
+/* Two button pagination - previous / next */
+/* line 82, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paginate_disabled_previous,
+.paginate_enabled_previous,
+.paginate_disabled_next,
+.paginate_enabled_next {
+  height: 19px;
+  float: left;
+  cursor: pointer;
+  *cursor: hand;
+  color: #111 !important;
+}
+
+/* line 92, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paginate_disabled_previous:hover,
+.paginate_enabled_previous:hover,
+.paginate_disabled_next:hover,
+.paginate_enabled_next:hover {
+  text-decoration: none !important;
+}
+
+/* line 98, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paginate_disabled_previous:active,
+.paginate_enabled_previous:active,
+.paginate_disabled_next:active,
+.paginate_enabled_next:active {
+  outline: none;
+}
+
+/* line 103, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paginate_disabled_previous,
+.paginate_disabled_next {
+  color: #666 !important;
+}
+
+/* line 107, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paginate_disabled_previous,
+.paginate_enabled_previous {
+  padding-left: 23px;
+}
+
+/* line 111, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paginate_disabled_next,
+.paginate_enabled_next {
+  padding-right: 23px;
+  margin-left: 10px;
+}
+
+/* Full number pagination */
+/* line 117, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paging_full_numbers {
+  height: 22px;
+  line-height: 22px;
+}
+
+/* line 121, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paging_full_numbers a:active {
+  outline: none;
+}
+
+/* line 124, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paging_full_numbers a:hover {
+  text-decoration: none;
+}
+
+/* line 129, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active {
+  border: 1px solid #aaa;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 0 3px;
+  cursor: pointer;
+  *cursor: hand;
+  color: #333 !important;
+}
+
+/* line 141, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paging_full_numbers a.paginate_button {
+  background-color: #ddd;
+}
+
+/* line 145, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paging_full_numbers a.paginate_button:hover {
+  background-color: #ccc;
+  text-decoration: none !important;
+}
+
+/* line 150, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.paging_full_numbers a.paginate_active {
+  background-color: #99B3FF;
+}
+
+/*
+ * Processing indicator
+ */
+/* line 158, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 30px;
+  margin-left: -125px;
+  margin-top: -15px;
+  padding: 14px 0 2px 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  background-color: white;
+}
+
+/*
+ * Sorting
+ */
+/* line 180, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+table.dataTable thead th:active,
+table.dataTable thead td:active {
+  outline: none;
+}
+
+/*
+ * Scrolling
+ */
+/* line 188, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_scroll {
+  clear: both;
+}
+
+/* line 192, D:/projects/admin/sass/lib/_jquery.datatables.scss */
+.dataTables_scrollBody {
+  *margin-top: -1px;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* line 1, D:/projects/admin/sass/_svg.scss */
 .stat-widget header .nvd3.nv-multibar .nv-group {
   fill-opacity: 1 !important;
@@ -14176,14 +14394,69 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   text-align: left;
 }
 
+/* line 1673, D:/projects/admin/sass/_base.scss */
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+  cursor: pointer;
+  *cursor: hand;
+}
+
+/* line 1678, D:/projects/admin/sass/_base.scss */
+table.table thead .sorting {
+  background: url("../img/datatables/sort_both.png") no-repeat center right;
+}
+
+/* line 1679, D:/projects/admin/sass/_base.scss */
+table.table thead .sorting_asc {
+  background: url("../img/datatables/sort_asc.png") no-repeat center right;
+}
+
+/* line 1680, D:/projects/admin/sass/_base.scss */
+table.table thead .sorting_desc {
+  background: url("../img/datatables/sort_desc.png") no-repeat center right;
+}
+
+/* line 1682, D:/projects/admin/sass/_base.scss */
+table.table thead .sorting_asc_disabled {
+  background: url("../img/datatables/sort_asc_disabled.png") no-repeat center right;
+}
+
+/* line 1683, D:/projects/admin/sass/_base.scss */
+table.table thead .sorting_desc_disabled {
+  background: url("../img/datatables/sort_desc_disabled.png") no-repeat center right;
+}
+
+/* line 1685, D:/projects/admin/sass/_base.scss */
+.per-page-selector label {
+  vertical-align: middle;
+  line-height: 26px;
+}
+
+/* line 1690, D:/projects/admin/sass/_base.scss */
+.table-top-control {
+  margin-bottom: 5px;
+}
+
+/* line 1694, D:/projects/admin/sass/_base.scss */
+.table-bottom-control {
+  margin-top: 10px;
+}
+/* line 1696, D:/projects/admin/sass/_base.scss */
+.table-bottom-control .pagination {
+  margin: 0;
+}
+
 /***********************************/
 /**          FILEUPLOAD          **/
 /**********************************/
-/* line 1673, D:/projects/admin/sass/_base.scss */
+/* line 1708, D:/projects/admin/sass/_base.scss */
 .fileupload-progress.fade.in .progress {
   margin-top: 20px;
 }
-/* line 1677, D:/projects/admin/sass/_base.scss */
+/* line 1712, D:/projects/admin/sass/_base.scss */
 .fileupload-progress.fade .progress {
   margin: 0;
 }
@@ -14191,52 +14464,52 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          SEARCH              **/
 /**********************************/
-/* line 1686, D:/projects/admin/sass/_base.scss */
+/* line 1721, D:/projects/admin/sass/_base.scss */
 .search-result {
   padding: 5px 15px 5px 10px;
   margin-bottom: 10px;
 }
-/* line 1690, D:/projects/admin/sass/_base.scss */
+/* line 1725, D:/projects/admin/sass/_base.scss */
 .search-result h4 {
   margin: 0;
 }
-/* line 1694, D:/projects/admin/sass/_base.scss */
+/* line 1729, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(even) {
   background: rgba(51, 51, 51, 0.25);
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(1n) {
   border-left: 5px solid #e5603b;
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(2n) {
   border-left: 5px solid #eac85e;
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(3n) {
   border-left: 5px solid #8cbf26;
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(4n) {
   border-left: 5px solid #56bc76;
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(5n) {
   border-left: 5px solid #4ab0ce;
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(6n) {
   border-left: 5px solid #618fb0;
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(7n) {
   border-left: 5px solid #a05000;
 }
-/* line 1701, D:/projects/admin/sass/_base.scss */
+/* line 1736, D:/projects/admin/sass/_base.scss */
 .search-result:nth-child(8n) {
   border-left: 5px solid #d04f4f;
 }
-/* line 1707, D:/projects/admin/sass/_base.scss */
+/* line 1742, D:/projects/admin/sass/_base.scss */
 .search-result:hover {
   cursor: pointer;
   padding-left: 10px;
@@ -14246,7 +14519,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   -o-transition: border-left-color 0.2s;
   transition: border-left-color 0.2s;
 }
-/* line 1715, D:/projects/admin/sass/_base.scss */
+/* line 1750, D:/projects/admin/sass/_base.scss */
 .search-result > p {
   margin-bottom: 0px;
 }
@@ -14254,7 +14527,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          404                  **/
 /**********************************/
-/* line 1726, D:/projects/admin/sass/_base.scss */
+/* line 1761, D:/projects/admin/sass/_base.scss */
 .widget-404 h1 {
   font-size: 140px;
   font-weight: 300;
@@ -14263,31 +14536,31 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   text-rendering: optimizeLegibility;
   color: white;
 }
-/* line 1735, D:/projects/admin/sass/_base.scss */
+/* line 1770, D:/projects/admin/sass/_base.scss */
 .widget-404 h3 {
   font-weight: normal;
   color: #555555;
 }
-/* line 1740, D:/projects/admin/sass/_base.scss */
+/* line 1775, D:/projects/admin/sass/_base.scss */
 .widget-404 p {
   color: #555555;
 }
-/* line 1744, D:/projects/admin/sass/_base.scss */
+/* line 1779, D:/projects/admin/sass/_base.scss */
 .widget-404 .description {
   vertical-align: middle;
   padding-top: 5px;
 }
 
-/* line 1750, D:/projects/admin/sass/_base.scss */
+/* line 1785, D:/projects/admin/sass/_base.scss */
 .widget-404-search, .widget-404 {
   width: 600px;
 }
 
-/* line 1754, D:/projects/admin/sass/_base.scss */
+/* line 1789, D:/projects/admin/sass/_base.scss */
 .single-widget-container .widget-404-search {
   margin-top: 40px;
 }
-/* line 1757, D:/projects/admin/sass/_base.scss */
+/* line 1792, D:/projects/admin/sass/_base.scss */
 .single-widget-container .widget-404-search .search-field {
   width: 456px;
 }
@@ -14295,7 +14568,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 1766, D:/projects/admin/sass/_base.scss */
+/* line 1801, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -14307,42 +14580,42 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 1774, D:/projects/admin/sass/_base.scss */
+/* line 1809, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1778, D:/projects/admin/sass/_base.scss */
+/* line 1813, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 1782, D:/projects/admin/sass/_base.scss */
+/* line 1817, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 1786, D:/projects/admin/sass/_base.scss */
+/* line 1821, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1790, D:/projects/admin/sass/_base.scss */
+/* line 1825, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1794, D:/projects/admin/sass/_base.scss */
+/* line 1829, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 1798, D:/projects/admin/sass/_base.scss */
+/* line 1833, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 1802, D:/projects/admin/sass/_base.scss */
+/* line 1837, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive {
   width: 100%;
   *zoom: 1;
@@ -14357,7 +14630,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 .row-fluid.non-responsive:after {
   clear: both;
 }
-/* line 1805, D:/projects/admin/sass/_base.scss */
+/* line 1840, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"] {
   display: block;
   width: 100%;
@@ -14369,11 +14642,11 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   margin-left: 2.12766%;
   *margin-left: 2.07447%;
 }
-/* line 1811, D:/projects/admin/sass/_base.scss */
+/* line 1846, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"]:first-child {
   margin-left: 0;
 }
-/* line 1816, D:/projects/admin/sass/_base.scss */
+/* line 1851, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive .controls-row [class*="span"] + [class*="span"] {
   margin-left: 2.12766%;
 }
@@ -14558,7 +14831,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   *margin-left: 102.02128%;
 }
 
-/* line 1825, D:/projects/admin/sass/_base.scss */
+/* line 1860, D:/projects/admin/sass/_base.scss */
 .visible-phone-landscape {
   display: none;
 }
@@ -15088,9 +15361,14 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
   .visible-phone-landscape {
     display: block !important;
   }
+
+  /* line 341, D:/projects/admin/sass/_responsive.scss */
+  .hidden-phone-landscape {
+    display: none !important;
+  }
 }
 @media (max-width: 250px) {
-  /* line 343, D:/projects/admin/sass/_responsive.scss */
+  /* line 347, D:/projects/admin/sass/_responsive.scss */
   .content > .row-fluid.box-row > .span2 {
     float: none;
     margin-left: 0;
