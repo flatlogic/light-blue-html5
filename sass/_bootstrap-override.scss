@@ -104,6 +104,19 @@ textarea,
   line-height: $baseLineHeight;
 }
 
+.form-horizontal{
+  input,
+  select,
+  textarea,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    + .help-block {
+      margin-top: $baseLineHeight / 4;
+    }
+  }
+}
+
 /***************************/
 /*        Tables        */
 /***************************/
@@ -290,6 +303,23 @@ textarea,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
   border-color: transparent;
+}
+
+.nav-pills > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  @include border-radius($baseBorderRadius);
+  background: $backgroundAddition;
+}
+
+// Active state
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  color: $white;
+  background: none;
 }
 
 /***************************/
