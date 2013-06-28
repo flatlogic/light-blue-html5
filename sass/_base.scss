@@ -1242,9 +1242,9 @@ input.input-padding-increased{
   border-top: none;
 }
 
-.wizard{
+.form-wizard{
   .progress{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1254,6 +1254,10 @@ input.input-padding-increased{
   a{
     color: $textColor;
   }
+}
+
+.pager .disabled button{
+  @extend .btn.disabled;
 }
 
 /***********************************/

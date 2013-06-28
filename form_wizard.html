@@ -281,7 +281,7 @@
                 </h4>
             </header>
             <div class="body">
-                <div id="rootwizard" class="wizard">
+                <div id="wizard" class="form-wizard">
                     <ul class="row-fluid wizard-navigation">
                         <li class="span3"><a class="" href="#tab1" data-toggle="tab"><small>1.</small><strong> Your Details</strong></a></li>
                         <li class="span3"><a class="" href="#tab2" data-toggle="tab"><small>2.</small> <strong>Shipping</strong></a></li>
@@ -628,15 +628,15 @@
                                         </div>
                                     </div>
                                     <div class="form-row control-group ">
-                                        <label class="control-label" for="mask-phone">Credit Card Number </label>
+                                        <label class="control-label" for="credit">Credit Card Number </label>
                                         <div class="controls">
-                                            <input id="mask-phone" type="text" tabindex="3" class="span10">
+                                            <input id="credit" type="text" tabindex="3" class="span10">
                                         </div>
                                     </div>
                                     <div class="form-row control-group">
-                                        <label for="datepicker1" class="control-label">Expiration Date</label>
+                                        <label for="expiration-date" class="control-label">Expiration Date</label>
                                         <div class="controls">
-                                            <input type="text" id="datepicker1"  class="span10">
+                                            <input type="text" id="expiration-date"  class="span10">
                                         </div>
                                     </div>
                                 </fieldset>
@@ -653,6 +653,9 @@
                                 </li>
                                 <li class="next">
                                     <button class="btn btn-primary pull-right" >Next <i class="icon-caret-right"></i></button>
+                                </li>
+                                <li class="finish" style="display: none">
+                                    <button class="btn btn-success pull-right" >Finish <i class="icon-ok"></i></button>
                                 </li>
                             </ul>
                         </div>
