@@ -27,10 +27,10 @@
                data-parent="#side-nav" href="#forms-collapse"><i class=" icon-edit"></i> <span class="name">Forms</span></a>
             <ul id="forms-collapse" class="accordion-body collapse in">
                 <li><a href="form_account.html">Account</a></li>
-                <li class="active"><a href="form_article.html">Article</a></li>
+                <li><a href="form_article.html">Article</a></li>
                 <li><a href="form_elements.html">Elements</a></li>
                 <li><a href="form_validation.html">Validation</a></li>
-                <li><a href="form_wizard.html">Wizard</a></li>
+                <li class="active"><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
         <li class="brown accordion-group">
@@ -84,9 +84,60 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>Article Demo</h2>
-                    <p>Article is a demo page. It contains lots of components so you may want to check out <a href="form_elements.html">elements</a>,
-                        <a href="form_validation">validation</a> or <a href="ui_buttons">buttons</a> pages.</p>
+                    <h2>Wizard</h2>
+                    <p><a href="http://vadimg.com/twitter-bootstrap-wizard-example/">Twitter Bootstrap Wizard Plugin</a> is used to build wizard-enabled widget.</p>
+                    <blockquote>This twitter bootstrap plugin builds a wizard out of a formatter tabbable structure. It allows to build a wizard functionality using buttons to go through the different wizard steps and using events allows to hook into each step individually.
+                    </blockquote>
+                    <p>To activate it you need to call <code>$("#rootwizard").bootstrapWizard();</code> on your markup to create wizard.</p>
+                    <p>Files:</p>
+                    <pre>lib/jquery.bootstrap.wizard.js</pre>
+                    <p>Example Markup:</p>
+                    <pre>&lt;div id=&quot;rootwizard&quot;&gt;
+	&lt;div class=&quot;navbar&quot;&gt;
+	  &lt;div class=&quot;navbar-inner&quot;&gt;
+	    &lt;div class=&quot;container&quot;&gt;
+	&lt;ul&gt;
+	  	&lt;li&gt;&lt;a href=&quot;#tab1&quot; data-toggle=&quot;tab&quot;&gt;First&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab2&quot; data-toggle=&quot;tab&quot;&gt;Second&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab3&quot; data-toggle=&quot;tab&quot;&gt;Third&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab4&quot; data-toggle=&quot;tab&quot;&gt;Forth&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab5&quot; data-toggle=&quot;tab&quot;&gt;Fifth&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab6&quot; data-toggle=&quot;tab&quot;&gt;Sixth&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#tab7&quot; data-toggle=&quot;tab&quot;&gt;Seventh&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	 &lt;/div&gt;
+	  &lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;tab-content&quot;&gt;
+	    &lt;div class=&quot;tab-pane&quot; id=&quot;tab1&quot;&gt;
+	      1
+	    &lt;/div&gt;
+	    &lt;div class=&quot;tab-pane&quot; id=&quot;tab2&quot;&gt;
+	      2
+	    &lt;/div&gt;
+		&lt;div class=&quot;tab-pane&quot; id=&quot;tab3&quot;&gt;
+			3
+	    &lt;/div&gt;
+		&lt;div class=&quot;tab-pane&quot; id=&quot;tab4&quot;&gt;
+			4
+	    &lt;/div&gt;
+		&lt;div class=&quot;tab-pane&quot; id=&quot;tab5&quot;&gt;
+			5
+	    &lt;/div&gt;
+		&lt;div class=&quot;tab-pane&quot; id=&quot;tab6&quot;&gt;
+			6
+	    &lt;/div&gt;
+		&lt;div class=&quot;tab-pane&quot; id=&quot;tab7&quot;&gt;
+			7
+	    &lt;/div&gt;
+		&lt;ul class=&quot;pager wizard&quot;&gt;
+			&lt;li class=&quot;previous first&quot; style=&quot;display:none;&quot;&gt;&lt;a href=&quot;#&quot;&gt;First&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;#&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
+			&lt;li class=&quot;next last&quot; style=&quot;display:none;&quot;&gt;&lt;a href=&quot;#&quot;&gt;Last&lt;/a&gt;&lt;/li&gt;
+		  	&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;#&quot;&gt;Next&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
                 </section>
             </div>
         </div>
