@@ -59,6 +59,12 @@ function closeNavigation(){
     $accordion.siblings(".accordion-toggle").addClass("collapsed");
 }
 
+function resetContentMargin(){
+    if ($(window).width() > 767){
+        $(".content").css("margin-top", '');
+    }
+}
+
 $(function(){
 
     $("#sidebar").on("mouseleave",function(){
@@ -70,7 +76,8 @@ $(function(){
     });
 
     $(window).resize(function(){
-        closeNavigation()
+        closeNavigation();
+        resetContentMargin();
     });
 
     //class-switch for button-groups
@@ -121,5 +128,22 @@ $(function(){
             notificationsPresent = !$notifications.is(':empty');
         $("#search-form").css('height', 0);
         notificationsPresent && $notifications.css('top', '');
-    })
+    });
+
+    /*   Move content down when second-level menu opened */
+    $("#side-nav").find("a.accordion-toggle").click(function(){
+        var $this = $(this),
+            initialContentMargin = 370; //if changed in css change here!
+        if ($(window).width() < 768){
+            var $secondLevelMenu = $this.find("+ ul"),
+                $menuChildren = $secondLevelMenu.find("> li"),
+                menuHeight = $menuChildren.length * $menuChildren.height(),
+                $content = $(".content");
+            if (!$secondLevelMenu.is(".in")){
+                $content.css("margin-top", initialContentMargin + menuHeight + 'px');
+            } else {
+                $content.css("margin-top", '');
+            }
+        }
+    });
 });
