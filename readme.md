@@ -1,4 +1,4 @@
-Light Blue v1.1
+Light Blue v1.2
 =========
 
 Light Blue is a **next generation** admin dashboard template based on the latest **Flat** design. There are few reasons why we have created it:.
@@ -9,13 +9,11 @@ Light Blue is a **next generation** admin dashboard template based on the latest
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 1.1 Released
+New Version 1.2 Released!
 -
 
-  - Generic Search Field
-  - Form Wizard
-  - jQuery Datatables
-  - UI improvements
+  - Generic UI improvements
+  - Few bug fixes
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework and uses powerful Sass (CSS preprocessor) technology.
@@ -24,6 +22,16 @@ Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let me know!
 Email me at [philip.daineka@gmail.com](mailto:philip.daineka@gmail.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). I will do my best to help you.
+
+Changelog
+-
+
+Version 1.1
+
+  - Generic Search Field
+  - Form Wizard
+  - jQuery Datatables
+  - UI improvements
 
 Next Release Plan
 -
