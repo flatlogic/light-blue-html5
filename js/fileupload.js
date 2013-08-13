@@ -1,7 +1,6 @@
 $(function () {
     'use strict';
 
-    $("input:checkbox").uniform();
 
     // Initialize the jQuery File Upload widget:
     var $fileupload = $('#fileupload');

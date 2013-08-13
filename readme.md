@@ -13,7 +13,7 @@ New Version 1.3 Released!
 -
 
   - Overall UI improvements
-  - Few bug fixes
+  - New iCheck library instead of out-of-date uniform
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework and uses powerful Sass (CSS preprocessor) technology.

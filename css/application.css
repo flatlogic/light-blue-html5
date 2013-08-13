@@ -8992,350 +8992,107 @@ a.thumbnail:focus {
   background-position: -456px -144px;
 }
 
-/* General settings */
-/* line 134, D:/projects/admin/sass/lib/_uniform.scss */
-div.selector,
-div.selector span,
-div.checker span,
-div.radio span,
-div.uploader,
-div.uploader span.action,
-div.button,
-div.button span {
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 145, D:/projects/admin/sass/lib/_uniform.scss */
-.selector,
-.checker,
-.button,
-div.radio,
-.uploader {
-  display: -moz-inline-box;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
+/************************************************************/
+/*                                                          */
+/*                                                          */
+/*                 !!!!! IMPORTANT !!!!!!!                  */
+/*                                                          */
+/*                                                          */
+/************************************************************/
+/* line 16, D:/projects/admin/sass/lib/_icheckbox.scss */
+[class*="icheckbox"], [class*="iradio"] {
+  display: inline-block !important;
   vertical-align: middle;
+  margin: 0 5px !important;
 }
 
-/* line 153, D:/projects/admin/sass/lib/_uniform.scss */
-.selector select:focus,
-.radio input:focus,
-.checker input:focus,
-.uploader input:focus {
-  outline: 0;
-}
+/************************************************************/
+/*                                                          */
+/*                                                          */
+/*                !!!!! END IMPORTANT !!!!!!!               */
+/*                                                          */
+/*                                                          */
+/************************************************************/
+/* iCheck plugin Square skin, grey
 
-/* line 168, D:/projects/admin/sass/lib/_uniform.scss */
-.selector,
-div.radio,
-.checker,
-.uploader,
-.button,
-.selector *,
-div.radio *,
-.checker *,
-.uploader *,
-.button * {
+ okendoken: Go to http://damirfoy.com/iCheck/ to find more skins. There are tons of!!
+
+----------------------------------- */
+/* line 38, D:/projects/admin/sass/lib/_icheckbox.scss */
+.icheckbox_square-grey,
+.iradio_square-grey {
+  display: block;
   margin: 0;
   padding: 0;
-}
-
-/* line 173, D:/projects/admin/sass/lib/_uniform.scss */
-.highContrastDetect {
-  background: url("../images/bg-input.png") repeat-x 0 0;
-  width: 0px;
-  height: 0px;
-}
-
-/* Checkbox */
-/* line 183, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker,
-div.checker span,
-div.checker input {
-  width: 30px;
-  height: 20px;
-}
-
-/* line 188, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker {
-  position: relative;
-}
-
-/* line 192, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker span {
-  display: -moz-inline-box;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  text-align: center;
-  background-position: 2px -25px;
-}
-
-/* line 198, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker input {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -moz-opacity: 0;
+  width: 22px;
+  height: 22px;
+  background: url(../img/icheck/square/grey.png) no-repeat;
   border: none;
-  background: none;
-  display: -moz-inline-box;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
+  cursor: pointer;
 }
 
-/* line 204, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker:active span,
-div.checker.active span {
-  background-position: -58px -25px;
+/* line 49, D:/projects/admin/sass/lib/_icheckbox.scss */
+.icheckbox_square-grey {
+  background-position: 0 0;
 }
 
-/* line 209, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker.focus span,
-div.checker:hover span {
-  background-position: -28px -25px;
+/* line 52, D:/projects/admin/sass/lib/_icheckbox.scss */
+.icheckbox_square-grey.hover {
+  background-position: -24px 0;
 }
 
-/* line 216, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker.focus:active span,
-div.checker:active:hover span,
-div.checker.active:hover span,
-div.checker.focus.active span {
-  background-position: -58px -25px;
+/* line 55, D:/projects/admin/sass/lib/_icheckbox.scss */
+.icheckbox_square-grey.checked {
+  background-position: -48px 0;
 }
 
-/* line 220, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker span.checked {
-  background-position: -88px -25px;
+/* line 58, D:/projects/admin/sass/lib/_icheckbox.scss */
+.icheckbox_square-grey.disabled {
+  background-position: -72px 0;
+  cursor: default;
 }
 
-/* line 225, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker:active span.checked,
-div.checker.active span.checked {
-  background-position: -148px -25px;
+/* line 62, D:/projects/admin/sass/lib/_icheckbox.scss */
+.icheckbox_square-grey.checked.disabled {
+  background-position: -96px 0;
 }
 
-/* line 230, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker.focus span.checked,
-div.checker:hover span.checked {
-  background-position: -118px -25px;
-}
-
-/* line 237, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker.focus:active span.checked,
-div.checker:hover:active span.checked,
-div.checker.active:hover span.checked,
-div.checker.active.focus span.checked {
-  background-position: -148px -25px;
-}
-
-/* line 243, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker.disabled span,
-div.checker.disabled:active span,
-div.checker.disabled.active span {
-  background-position: -178px -25px;
-}
-
-/* line 249, D:/projects/admin/sass/lib/_uniform.scss */
-div.checker.disabled span.checked,
-div.checker.disabled:active span.checked,
-div.checker.disabled.active span.checked {
-  background-position: -208px -25px;
-}
-
-/* Radio */
-/* line 257, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio,
-div.radio span,
-div.radio input {
-  width: 30px;
-  height: 20px;
-}
-
-/* line 262, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio {
-  position: relative;
-}
-
-/* line 266, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio span {
-  display: -moz-inline-box;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  text-align: center;
-  background-position: 0px 0;
-}
-
-/* line 272, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio input {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -moz-opacity: 0;
-  border: none;
-  background: none;
-  display: -moz-inline-box;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  text-align: center;
-}
-
-/* line 279, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio:active span,
-div.radio.active span {
-  background-position: -60px 0;
-}
-
-/* line 284, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus span,
-div.radio:hover span {
-  background-position: -30px 0;
-}
-
-/* line 291, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus:active span,
-div.radio:active:hover span,
-div.radio.active:hover span,
-div.radio.active.focus span {
-  background-position: -60px 0;
-}
-
-/* line 295, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio span.checked {
-  background-position: -90px 0;
-}
-
-/* line 300, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio:active span.checked,
-div.radio.active span.checked {
-  background-position: -150px 0;
-}
-
-/* line 305, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus span.checked,
-div.radio:hover span.checked {
+/* line 66, D:/projects/admin/sass/lib/_icheckbox.scss */
+.iradio_square-grey {
   background-position: -120px 0;
 }
 
-/* line 312, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio.focus:active span.checked,
-div.radio:hover:active span.checked,
-div.radio.focus.active span.checked,
-div.radio.active:hover span.checked {
-  background-position: -150px 0;
+/* line 69, D:/projects/admin/sass/lib/_icheckbox.scss */
+.iradio_square-grey.hover {
+  background-position: -144px 0;
 }
 
-/* line 318, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio.disabled span,
-div.radio.disabled:active span,
-div.radio.disabled.active span {
-  background-position: -240px 0;
+/* line 72, D:/projects/admin/sass/lib/_icheckbox.scss */
+.iradio_square-grey.checked {
+  background-position: -168px 0;
 }
 
-/* line 324, D:/projects/admin/sass/lib/_uniform.scss */
-div.radio.disabled span.checked,
-div.radio.disabled:active span.checked,
-div.radio.disabled.active span.checked {
-  background-position: -270px 0;
-}
-
-/* Uploader */
-/* line 330, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader {
-  background-position: 0 -20px;
-  height: 28px;
-  width: 190px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-/* line 339, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader span.action {
-  background-position: right -132px;
-  height: 28px;
-  line-height: 28px;
-  width: 85px;
-  text-align: center;
-  float: left;
-  display: inline;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-/* line 351, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader span.filename {
-  text-overflow: ellipsis;
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  float: left;
+/* line 75, D:/projects/admin/sass/lib/_icheckbox.scss */
+.iradio_square-grey.disabled {
+  background-position: -192px 0;
   cursor: default;
-  height: 24px;
-  margin: 2px 0 2px 2px;
-  line-height: 24px;
-  width: 82px;
-  padding: 0 10px;
 }
 
-/* line 362, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader input {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -moz-opacity: 0;
-  border: none;
-  background: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  float: right;
-  cursor: default;
-  width: 100%;
-  height: 100%;
+/* line 79, D:/projects/admin/sass/lib/_icheckbox.scss */
+.iradio_square-grey.checked.disabled {
+  background-position: -216px 0;
 }
 
-/* line 375, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader.focus,
-div.uploader.hover,
-div.uploader:hover {
-  background-position: 0 -76px;
+/* Retina support */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 89, D:/projects/admin/sass/lib/_icheckbox.scss */
+  .icheckbox_square-grey,
+  .iradio_square-grey {
+    background-image: url(../img/icheck/square/grey@2x.png);
+    -webkit-background-size: 240px 24px;
+    background-size: 240px 24px;
+  }
 }
-
-/* line 381, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader.focus span.action,
-div.uploader.hover span.action,
-div.uploader:hover span.action {
-  background-position: right -160px;
-}
-
-/* line 386, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader.active span.action,
-div.uploader:active span.action {
-  background-position: right -188px;
-}
-
-/* line 393, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader.focus.active span.action,
-div.uploader:focus.active span.action,
-div.uploader.focus:active span.action,
-div.uploader:focus:active span.action {
-  background-position: right -216px;
-}
-
-/* line 397, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader.disabled {
-  background-position: 0 -48px;
-}
-
-/* line 401, D:/projects/admin/sass/lib/_uniform.scss */
-div.uploader.disabled span.action {
-  background-position: right -104px;
-}
-
 /*!
  * Datepicker for Bootstrap
  *

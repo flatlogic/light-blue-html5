@@ -1,5 +1,6 @@
 V1.3
 - Overall UI improvements
+- New iCheck library instead of out-of-date uniform
 Files changed:
  html:
   * all html files: icon-desktop replaced with icon-home
@@ -8,6 +9,17 @@ Files changed:
   * _bootstrap-override.scss
   * _general.scss
   * _variables.scss
+  * application.scss
+ js:
+  * form-elemets.js
+  * forms.js
+ lib:
+  * --new-- lib/icheck.js/jquery.icheck.js
+  * --removed-- lib/uniform/*
+ images:
+  * --new-- img/icheck/square/*
+  * --removed-- img/sprite.png
+  * --removed-- img/sprite.psd
 
 
 V1.2

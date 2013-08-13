@@ -106,7 +106,10 @@ $(function(){
         stylesheets: []
     });
 
-    $("input.uniform").uniform();
+    $(".iCheck").iCheck({
+        checkboxClass: 'icheckbox_square-grey',
+        radioClass: 'iradio_square-grey'
+    });
 
     $('.date-picker').datepicker({
         autoclose: true

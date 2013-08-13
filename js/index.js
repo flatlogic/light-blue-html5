@@ -94,7 +94,6 @@ $(function(){
     });
     drawSparkLines();
 
-    $("input:checkbox").uniform();
 
     // Notification link click handler.
     // JUST FOR DEMO.

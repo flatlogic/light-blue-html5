@@ -27,7 +27,10 @@ $(function(){
         }
     });
 
-    $("input:checkbox").uniform();
+    $("input:checkbox").iCheck({
+        checkboxClass: 'icheckbox_square-grey',
+        radioClass: 'iradio_square-grey'
+    });
 
     var customWysihtml5Templates = {
         "font-styles": function(locale) {
