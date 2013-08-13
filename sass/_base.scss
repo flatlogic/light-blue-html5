@@ -119,6 +119,7 @@ input.parsley-error{
 
     a{
       color: inherit;
+      @include transition(background-color .2s);
       text-decoration: none;
       display: block;
       padding: 8px 20px;
