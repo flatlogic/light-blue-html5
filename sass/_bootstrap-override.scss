@@ -30,7 +30,7 @@ pre {
 legend{
   color: $white;
   small{
-    color: $textColor;
+    color: $smallsColor;
   }
 }
 
@@ -153,6 +153,10 @@ textarea,
 
 .dropdown-menu{
   @include border-radius($borderRadiusLarge);
+}
+
+.dropdown-menu > li > a {
+  font-weight: $baseFontWeight;
 }
 
 /***************************/

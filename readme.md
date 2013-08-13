@@ -1,4 +1,4 @@
-Light Blue v1.2
+Light Blue v1.3
 =========
 
 Light Blue is a **next generation** admin dashboard template based on the latest **Flat** design. There are few reasons why we have created it:.
@@ -9,10 +9,10 @@ Light Blue is a **next generation** admin dashboard template based on the latest
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 1.2 Released!
+New Version 1.3 Released!
 -
 
-  - Generic UI improvements
+  - Overall UI improvements
   - Few bug fixes
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
@@ -25,6 +25,11 @@ Email me at [philip.daineka@gmail.com](mailto:philip.daineka@gmail.com) or tweet
 
 Changelog
 -
+
+Version 1.2
+
+  - Generic UI improvements
+  - Few bug fixes
 
 Version 1.1
 

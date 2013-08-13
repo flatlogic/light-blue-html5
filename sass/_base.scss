@@ -78,7 +78,8 @@ input.parsley-error{
   width: 160px;
   padding: 10px 0;
   top: 0;
-  color: $white;
+  color: $textLightGray;
+  font-size: $baseFontSize - 1;
   z-index: 1;
   margin: $sidebarTopMargin 0 0 25px;
 
@@ -109,6 +110,7 @@ input.parsley-error{
     i[class*=icon]{
       line-height: 20px;
       float: right;
+      font-size: $fontSizeLarge;
     }
 
     a:hover, a:focus{
@@ -135,6 +137,7 @@ input.parsley-error{
     border-left: 4px solid $white;
     padding-left: 16px;
     background: $sidebarActiveColor;
+    color: $textColor;
   }
 
   .accordion-body li a{
@@ -318,7 +321,10 @@ input.parsley-error{
     #{headings(1,5)}{
       margin: 0;
       line-height: 20px;
-      @include bold-font;
+      font-weight: 600;
+      small{
+        text-transform: lowercase;
+      }
     }
 
     h4{
@@ -612,12 +618,12 @@ input.parsley-error{
 
 .page-title{
   color: $white;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 1;
   margin: 11px 0 15px;
 
   small{
-    color: $white;
+    color: $textLightGray;
   }
 }
 
@@ -1170,7 +1176,7 @@ input.parsley-error{
 
   small{
     font-size: $fontSizeSmall;
-    color: lighten($smallsColor, 15%);
+    color: $smallsColor;
     font-weight: bold;
   }
 }
