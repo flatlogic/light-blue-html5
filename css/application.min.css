@@ -15206,3 +15206,25 @@ table.table thead .sorting_desc_disabled {
     width: 100%;
   }
 }
+@media print {
+  /* line 2, D:/projects/admin/sass/_print.scss */
+  .sidebar {
+    display: none;
+  }
+
+  /* line 6, D:/projects/admin/sass/_print.scss */
+  .wrap {
+    margin: 0;
+  }
+
+  /* line 10, D:/projects/admin/sass/_print.scss */
+  .page-header {
+    display: none;
+  }
+
+  /* line 14, D:/projects/admin/sass/_print.scss */
+  .logo {
+    position: static;
+    width: auto;
+  }
+}

@@ -13,6 +13,7 @@ New Version 1.3 Released!
 -
 
   - Overall UI improvements
+  - Print Optimized
   - New iCheck library instead of out-of-date uniform
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
@@ -52,6 +53,7 @@ Full feature list
     *   Unobtrusive colors and widgets
     *   Option to select between two perfectly chosen background gradients
   - Fully Responsive Layout: from small mobile to large desktop devices.
+  - Print Optimized
   - 3 Sidebar Options
     *   Sidebar can be shown or hidden
     *   It can be placed on the left or right side
