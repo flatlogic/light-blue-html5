@@ -27,6 +27,14 @@ pre {
 /*         Forms           */
 /***************************/
 
+label,
+input,
+button,
+select,
+textarea {
+  font-weight: $baseFontWeight;
+}
+
 legend{
   color: $white;
   small{
@@ -430,12 +438,21 @@ a.thumbnail:focus {
 .label,
 .badge {
   text-shadow: none;
+  font-weight: $baseFontWeight;
 }
 
 @each $item in label, badge {
 // Inverse (black)
   .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $grayDark to just $gray
   .#{$item}-inverse[href]     { background-color: darken($gray, 10%); }
+}
+
+/***************************/
+/*          Alerts         */
+/***************************/
+
+.alert {
+  text-shadow: none;
 }
 
 /***************************/

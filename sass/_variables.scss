@@ -122,20 +122,20 @@ $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
 
 // Form states and alerts
 // -------------------------
-$warningText:             $orange !default;
-$warningBackground:       #fcf8e3 !default;
+$warningText:             $textColor !default;
+$warningBackground:       $orange !default;
 $warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
 
-$errorText:               $red !default;
-$errorBackground:         #f2dede !default;
+$errorText:               $textColor !default;
+$errorBackground:         $red !default;
 $errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
 
-$successText:             $green !default;
-$successBackground:       #dff0d8 !default;
+$successText:             $textColor !default;
+$successBackground:       $green !default;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
 
-$infoText:                $blue !default;
-$infoBackground:          #d9edf7 !default;
+$infoText:                $textColor !default;
+$infoBackground:          $blue !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 // Component sizing
