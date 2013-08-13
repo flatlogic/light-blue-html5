@@ -89,6 +89,7 @@ Full feature list
     *   Datepicker
     *   Colorpicker
     *   Masked inputs
+    *   Form Wizard
   - Statistic Elements
     *   Metro-like Tiles
     *   Progress Bars
