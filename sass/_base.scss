@@ -1820,6 +1820,36 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 /***********************************/
+/**            INVOICE            **/
+/***********************************/
+
+.invoice-logo{
+  width: 253px;
+  height: 70px;
+}
+
+.invoice-number{
+  font-size: $baseFontSize * 1.5;
+  margin-top: 15px;
+}
+
+.invoice-number-info{
+  color: $textLightGray;
+  font-size: $fontSizeLarger;
+}
+
+.invoice-info{
+  .details-title{
+    color: $textLightGray;
+    margin: 0;
+  }
+}
+
+.invoice-actions{
+  margin-top: $baseLineHeight;
+}
+
+/***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
 

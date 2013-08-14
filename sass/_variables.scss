@@ -138,6 +138,10 @@ $infoText:                $textColor !default;
 $infoBackground:          $blue !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
+//table colors
+
+$tableBorder:                       rgba($backgroundGray, .35) !default; // table and cell border
+
 // Component sizing
 
 $paddingLarge:          8px 18px !default; // 44px
