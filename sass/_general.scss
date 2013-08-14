@@ -70,6 +70,13 @@ input[type=search], input.search {
   padding-left: 26px;
   background-color: $inputBackgroundColor;
   background:url(../img/search.png) 5px 5px no-repeat $inputBackgroundColor;
+
+  &.input-transparent{
+    border: none;
+    color: $textColor;
+    background: url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
+    @include placeholder(rgba(#eee, .76));
+  }
 }
 
 ul ul,

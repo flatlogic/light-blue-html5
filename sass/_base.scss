@@ -1212,6 +1212,13 @@ input.parsley-error{
   }
 }
 
+input.input-transparent{
+  border: none;
+  color: $textColor;
+  background-color: $transparentBackground;
+  @include placeholder(rgba(#eee, .76));
+}
+
 input.input-padding-increased{
   @include box-sizing(border-box);
   height: 38px;
@@ -1872,6 +1879,25 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     padding-left: 10px;
     color: $textColor;
   }
+}
+
+.mailbox{
+  .folder-title{
+    margin: 0;
+    line-height: 30px;
+  }
+
+  .input-search{
+    width: 140px;
+    @include transition(width .2s);
+    &:focus{
+      width: 200px;
+    }
+  }
+}
+
+.mailbox-content{
+  margin-top: $baseLineHeight;
 }
 
 /***********************************/
