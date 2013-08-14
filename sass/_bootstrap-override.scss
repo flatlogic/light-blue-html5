@@ -442,6 +442,18 @@ a.thumbnail:focus {
 }
 
 @each $item in label, badge {
+// Important (red)
+  .#{$item}-important         { background-color: $red; }
+  .#{$item}-important[href]   { background-color: darken($red, 10%); }
+// Warnings (orange)
+  .#{$item}-warning           { background-color: $orange; }
+  .#{$item}-warning[href]     { background-color: darken($orange, 10%); }
+// Success (green)
+  .#{$item}-success           { background-color: $green; }
+  .#{$item}-success[href]     { background-color: darken($green, 10%); }
+// Info (turquoise)
+  .#{$item}-info              { background-color: $blue; }
+  .#{$item}-info[href]        { background-color: darken($blue, 10%); }
 // Inverse (black)
   .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $grayDark to just $gray
   .#{$item}-inverse[href]     { background-color: darken($gray, 10%); }
