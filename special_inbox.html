@@ -286,7 +286,7 @@
                         <div class="row-fluid">
                             <div class="span2">
                                 <button id="compose-btn" class="btn btn-danger btn-block">Compose</button>
-                                <ul class="mailbox-folders">
+                                <ul id="folders-list" class="mailbox-folders">
                                     <li class="active"><a href="#">Inbox</a></li>
                                     <li><a href="#">Sent</a></li>
                                     <li><a href="#">Drafts</a></li>
@@ -454,6 +454,10 @@
     <td class="subject"><%= subject %></td>
     <td class="tiny-column"><% if (attachment) {%><i class="icon-paper-clip"><% } %></i></td>
     <td class="date"><%= this.formatDate(timestamp) %></td>
+</script>
+
+<script type="text/template" id="folder-template">
+    <a href="#"><%= name %></a>
 </script>
 
 </body>

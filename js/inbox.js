@@ -26,6 +26,7 @@ $(function(){
                     read: true,
                     starred: false,
                     attachment: false,
+                    folderId: 1,
 
                     selected:false
                 }
@@ -44,12 +45,63 @@ $(function(){
         });
 
 
+        var Folder = Backbone.Model.extend({
+
+            defaults: {
+                name: '',
+                current: false,
+                order: 100
+            }
+        });
+
+        var FolderList = Backbone.Collection.extend({
+
+            model: Folder,
+
+            url: 'js/folders.json',
+
+
+            comparator: 'order'
+        });
+
+        var Folders = new FolderList();
+
+        var FolderView = Backbone.View.extend({
+
+            tagName:  "li",
+
+            template: _.template($('#folder-template').html()),
+
+            events: {
+                "click": 'selectFolder'
+            },
+
+
+            initialize: function() {
+                this.listenTo(this.model, 'change', this.render);
+            },
+
+            render: function() {
+                this.$el.attr('class', this.model.get("current") ? 'active' : '');
+                this.$el.html(this.template(this.model.toJSON()));
+                return this;
+            },
+
+
+            selectFolder: function(){
+                var that = this;
+                Folders.each(function(folder){
+                    folder.save({current: folder == that.model})
+                });
+            }
+
+        });
 
         var EmailList = Backbone.Collection.extend({
 
             model: Email,
 
-            url: 'js/inbox.json',
+            url: 'js/emails.json',
 
 
             comparator: function(mail){
@@ -104,7 +156,7 @@ $(function(){
                     now = new Date(),
                     todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
                 if (date.getTime() > todayStart){
-                    return date.getHours() + ":" + date.getMinutes();
+                    return date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
                 }
                 return ['Jan', 'Feb', 'Mar', 'Apr',
                     'May', 'Jun', 'Jul', 'Aug',
@@ -139,19 +191,27 @@ $(function(){
             },
 
             initialize: function() {
-                this.collection = new EmailList();
-                this.listenTo(this.collection, 'reset', this.renderEmails);
-                this.listenTo(this.collection, 'all', this.render);
+                this.currentFolderEmails = new EmailList();
+                this.folders = Folders;
+
+                this.listenTo(this.currentFolderEmails, 'reset', this.renderEmails);
+                this.listenTo(this.currentFolderEmails, 'all', this.render);
+                this.listenTo(this.folders, 'reset', this.renderFolders);
+                this.listenTo(this.folders, 'change', this.resetEmails);
+
+
                 this.$folderActions = this.$('#folder-actions');
                 this.$toggleAllCheckbox = this.$('#toggle-all');
                 var view = this;
-                Emails.fetch({success: function(){
-                    view.collection.reset(Emails.slice());
+                this.folders.fetch({success: function(){
+                    Emails.fetch({success: function(){
+                        view.resetEmails();
+                    }});
                 }});
             },
 
             render: function() {
-                var allSelected = this.collection.where({selected: true}).length == this.collection.length;
+                var allSelected = this.currentFolderEmails.where({selected: true}).length == this.currentFolderEmails.length;
                 this.$folderActions.html(this.folderActionsTemplate({allSelected: allSelected}));
                 this.$toggleAllCheckbox = this.$('#toggle-all');
                 this.$el.find("#toggle-all").iCheck({
@@ -168,16 +228,42 @@ $(function(){
 
             renderEmails: function() {
                 this.resetFolderView();
-                this.collection.each(this.addOne, this);
+                this.currentFolderEmails.each(this.addOne, this);
+            },
+
+
+            renderFolders: function(){
+                this.resetFoldersList();
+                this.folders.each(this.addFolder, this);
             },
 
             resetFolderView: function(){
                 this.$("#folder-view").find("tbody").html('');
             },
 
+            resetEmails: function(){
+                var item = this.folders.where({current: true})[0],
+                    folderId = 1;
+                if (item){
+                    folderId = item.get("id");
+                }
+                this.currentFolderEmails.reset(Emails.where({
+                    folderId: folderId
+                }));
+            },
+
+            resetFoldersList: function(){
+                this.$("#folders-list").html('');
+            },
+
+            addFolder: function(folder){
+                var view = new FolderView({model: folder});
+                this.$("#folders-list").append(view.render().el);
+            },
+
             toggleAll: function(){
                 var selectAll = this.$toggleAllCheckbox.prop('checked');
-                this.collection.each(function (email) { email.save({'selected': selectAll}); });
+                this.currentFolderEmails.each(function (email) { email.save({'selected': selectAll}); });
             },
 
             selectAll: function(){
@@ -192,21 +278,20 @@ $(function(){
 
             selectRead: function(){
                 this.selectNone();
-                _(this.collection.where({read: true})).each(function (email) { email.save({'selected': true}); });
+                _(this.currentFolderEmails.where({read: true})).each(function (email) { email.save({'selected': true}); });
             },
 
             selectUnread: function(){
                 this.selectNone();
-                _(this.collection.where({read: false})).each(function (email) { email.save({'selected': true}); });
+                _(this.currentFolderEmails.where({read: false})).each(function (email) { email.save({'selected': true}); });
             },
 
             search: function(){
-                this.collection.reset(Emails.search($('#mailbox-search').val()));
+                this.currentFolderEmails.reset(Emails.search($('#mailbox-search').val()));
             }
 
         });
 
-        // Finally, we kick things off by creating the **App**.
         var App = new AppView;
 
     });
