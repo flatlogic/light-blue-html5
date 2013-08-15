@@ -1898,6 +1898,29 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .mailbox-content{
   margin-top: $baseLineHeight;
+
+  .folder-view{
+    .icheckbox_square-grey{
+      @include transform(scale(0.72));
+    }
+
+    .total-pages{
+      text-align: right;
+    }
+
+    .tiny-column{
+      width: 18px;
+    }
+
+    .name{
+      width: 140px;
+    }
+
+    .date{
+      text-align: right;
+      width: 60px;
+    }
+  }
 }
 
 /***********************************/

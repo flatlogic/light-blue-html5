@@ -14601,11 +14601,36 @@ table.table thead .sorting_desc_disabled {
 .mailbox-content {
   margin-top: 20px;
 }
+/* line 1903, D:/projects/admin/sass/_base.scss */
+.mailbox-content .folder-view .icheckbox_square-grey {
+  -webkit-transform: scale(0.72);
+  -moz-transform: scale(0.72);
+  -ms-transform: scale(0.72);
+  -o-transform: scale(0.72);
+  transform: scale(0.72);
+}
+/* line 1907, D:/projects/admin/sass/_base.scss */
+.mailbox-content .folder-view .total-pages {
+  text-align: right;
+}
+/* line 1911, D:/projects/admin/sass/_base.scss */
+.mailbox-content .folder-view .tiny-column {
+  width: 18px;
+}
+/* line 1915, D:/projects/admin/sass/_base.scss */
+.mailbox-content .folder-view .name {
+  width: 140px;
+}
+/* line 1919, D:/projects/admin/sass/_base.scss */
+.mailbox-content .folder-view .date {
+  text-align: right;
+  width: 60px;
+}
 
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 1907, D:/projects/admin/sass/_base.scss */
+/* line 1930, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -14617,42 +14642,42 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 1915, D:/projects/admin/sass/_base.scss */
+/* line 1938, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1919, D:/projects/admin/sass/_base.scss */
+/* line 1942, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 1923, D:/projects/admin/sass/_base.scss */
+/* line 1946, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 1927, D:/projects/admin/sass/_base.scss */
+/* line 1950, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1931, D:/projects/admin/sass/_base.scss */
+/* line 1954, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1935, D:/projects/admin/sass/_base.scss */
+/* line 1958, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 1939, D:/projects/admin/sass/_base.scss */
+/* line 1962, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 1943, D:/projects/admin/sass/_base.scss */
+/* line 1966, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive {
   width: 100%;
   *zoom: 1;
@@ -14667,7 +14692,7 @@ table.table thead .sorting_desc_disabled {
 .row-fluid.non-responsive:after {
   clear: both;
 }
-/* line 1946, D:/projects/admin/sass/_base.scss */
+/* line 1969, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"] {
   display: block;
   width: 100%;
@@ -14679,11 +14704,11 @@ table.table thead .sorting_desc_disabled {
   margin-left: 2.12766%;
   *margin-left: 2.07447%;
 }
-/* line 1952, D:/projects/admin/sass/_base.scss */
+/* line 1975, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"]:first-child {
   margin-left: 0;
 }
-/* line 1957, D:/projects/admin/sass/_base.scss */
+/* line 1980, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive .controls-row [class*="span"] + [class*="span"] {
   margin-left: 2.12766%;
 }
@@ -14868,7 +14893,7 @@ table.table thead .sorting_desc_disabled {
   *margin-left: 102.02128%;
 }
 
-/* line 1966, D:/projects/admin/sass/_base.scss */
+/* line 1989, D:/projects/admin/sass/_base.scss */
 .visible-phone-landscape {
   display: none;
 }

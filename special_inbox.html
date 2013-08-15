@@ -293,7 +293,7 @@
                                 </ul>
                             </div>
                             <div class="span10">
-                                <h2 class="folder-title pull-left">Inbox</h2>
+                                <h2 class="folder-title pull-left">Inbox <small>(2 unread messages)</small></h2>
                                 <form class="form-inline form-search text-align-right" action="">
                                     <label>
                                         <input type="search" id="mailbox-search" class="input-transparent input-search" placeholder="Search folder..."/>
@@ -302,40 +302,42 @@
                                 <div id="mailbox-content" class="mailbox-content">
                                     <table class="folder-view table table-striped">
                                         <thead>
-
+                                        <tr>
+                                            <th colspan="3">
+                                                <input type="checkbox"/>
+                                                <div class="btn-group">
+                                                    <a class="btn btn-small" href="#" data-toggle="dropdown">
+                                                        Select
+                                                        <i class="icon-angle-down "></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">All</a></li>
+                                                        <li><a href="#">None</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Read</a></li>
+                                                        <li><a href="#">Unread</a></li>
+                                                    </ul>
+                                                </div>
+                                            </th>
+                                            <th colspan="3" class="total-pages">
+                                                1-30 of 1,421
+                                                <button class="btn btn-mini">
+                                                    <i class="icon-angle-left icon-large"></i>
+                                                </button>
+                                                <button class="btn btn-mini">
+                                                    <i class="icon-angle-right icon-large"></i>
+                                                </button>
+                                            </th>
+                                        </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td><input type="checkbox"/></td>
-                                            <td><i class="icon-star"></i></td>
-                                            <td class="name">Philip Daineka</td>
+                                            <td class="tiny-column"><input type="checkbox"/></td>
+                                            <td class="tiny-column"><i class="icon-star"></i></td>
+                                            <td class="name hidden-phone">Philip Daineka</td>
                                             <td class="subject">Light Blue template</td>
-                                            <td><i class="icon-paper-clip"></i></td>
-                                            <td>Aug 13</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"/></td>
-                                            <td><i class="icon-star"></i></td>
-                                            <td class="name">Philip Daineka</td>
-                                            <td class="subject">Light Blue template</td>
-                                            <td><i class="icon-paper-clip"></i></td>
-                                            <td>Aug 13</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"/></td>
-                                            <td><i class="icon-star"></i></td>
-                                            <td class="name">Philip Daineka</td>
-                                            <td class="subject">Light Blue template</td>
-                                            <td><i class="icon-paper-clip"></i></td>
-                                            <td>Aug 13</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox"/></td>
-                                            <td><i class="icon-star"></i></td>
-                                            <td class="name">Philip Daineka</td>
-                                            <td class="subject">Light Blue template</td>
-                                            <td><i class="icon-paper-clip"></i></td>
-                                            <td>Aug 13</td>
+                                            <td class="tiny-column"><i class="icon-paper-clip"></i></td>
+                                            <td class="date">Aug 13</td>
                                         </tr>
                                         </tbody>
                                     </table>
