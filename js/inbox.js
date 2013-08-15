@@ -9,16 +9,6 @@ $(function(){
  Inspired by https://github.com/krisys/backbone-gmail-example
  */
 
-//test data, can be loaded via ajax
-var twoHoursAgo = new Date(new Date().getTime() - 2*60*60*1000);
-var data = [
-    {'sender': 'Google', 'subject': 'Hi, Welcome to Google Mail', read: false, starred: true, 'timestamp': twoHoursAgo },
-    {'sender': 'StackExchange', 'subject': 'New Python questions for this week!',  read: false, attachment: true, 'timestamp': new Date(2013, 7, 2, 10,30,45) },
-    {'senderMail': 'notifications@facebook.com', 'subject': 'Someone just commented on your photo!', 'timestamp': new Date(2013, 7, 1, 10,30,45) },
-    {'sender': 'Twitter', 'subject': '@hackernews is now following you on Twitter', starred: true, attachment: true, 'timestamp': new Date(2013, 6, 20, 10,30,45) },
-    {'sender': 'LinkedIn', 'subject': 'Jobs you may be interested in', 'timestamp': new Date(2013, 6, 11, 10,30,45) }
-];
-
 $(function(){
 
     "use strict";
@@ -32,7 +22,7 @@ $(function(){
                     sender: '',
                     senderMail: '',
                     subject: '',
-                    timestamp: new Date(),
+                    timestamp: new Date(new Date().getTime() - 2*60*60*1000).getTime(),  //two hours ago
                     read: true,
                     starred: false,
                     attachment: false,
@@ -46,20 +36,16 @@ $(function(){
 
             starMail: function() {
                 this.save( { star: !this.get("star")} );
-            },
-
-            selectMail: function() {
-                this.save( { selected: !this.get("selected")} );
             }
-
         });
+
 
 
         var EmailList = Backbone.Collection.extend({
 
             model: Email,
 
-            localStorage: new Backbone.LocalStorage("todos-backbone"),
+            url: 'js/inbox.json',
 
 
             comparator: function(mail){
@@ -68,7 +54,7 @@ $(function(){
 
         });
 
-        var Emails = new EmailList(data);
+        var Emails = new EmailList();
 
         var EmailView = Backbone.View.extend({
 
@@ -96,8 +82,9 @@ $(function(){
             },
 
 
-            formatDate: function(date){
-                var now = new Date(),
+            formatDate: function(dateInt){
+                var date = new Date(dateInt),
+                    now = new Date(),
                     todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
                 if (date.getTime() > todayStart){
                     return date.getHours() + ":" + date.getMinutes();
@@ -114,13 +101,31 @@ $(function(){
 
             el: $("#mailbox-app"),
 
+            folderActionsTemplate: _.template($('#folder-actions-template').html()),
+
+            events: {
+                "click #toggle-all":  "toggleAll",
+                "ifToggled #toggle-all": "toggleAll" //handle iCheck events
+            },
+
             initialize: function() {
+                this.listenTo(Emails, 'reset', this.addAll);
                 this.listenTo(Emails, 'all', this.render);
-                this.reset();
+                this.resetFolderView();
                 this.addAll();
+                this.$folderActions = this.$('#folder-actions');
+                this.$toggleAllCheckbox = this.$('#toggle-all');
+                Emails.fetch();
             },
 
             render: function() {
+                var allSelected = Emails.where({selected: true}).length == Emails.length;
+                this.$folderActions.html(this.folderActionsTemplate({allSelected: allSelected}));
+                this.$toggleAllCheckbox = this.$('#toggle-all');
+                this.$el.find("#toggle-all").iCheck({
+                    checkboxClass: 'icheckbox_square-grey',
+                    radioClass: 'iradio_square-grey'
+                });
             },
 
 
@@ -133,8 +138,13 @@ $(function(){
                 Emails.each(this.addOne, this);
             },
 
-            reset: function(){
+            resetFolderView: function(){
                 this.$("#folder-view").find("tbody").html('');
+            },
+
+            toggleAll: function(){
+                var selectAll = this.$toggleAllCheckbox.prop('checked');
+                Emails.each(function (email) { email.save({'selected': selectAll}); });
             }
 
         });

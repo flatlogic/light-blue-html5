@@ -303,9 +303,9 @@
                                     <table id="folder-view" class="folder-view table table-striped">
                                         <thead>
                                         <tr>
-                                            <th colspan="3">
-                                                <input type="checkbox"/>
-                                                <div class="btn-group">
+                                            <th colspan="3" id="folder-actions">
+                                                <input id="toggle-all" type="checkbox"/>
+                                                <span class="btn-group">
                                                     <a class="btn btn-small" href="#" data-toggle="dropdown">
                                                         Select
                                                         <i class="icon-angle-down "></i>
@@ -317,7 +317,7 @@
                                                         <li><a href="#">Read</a></li>
                                                         <li><a href="#">Unread</a></li>
                                                     </ul>
-                                                </div>
+                                                </span>
                                             </th>
                                             <th colspan="3" class="total-pages">
                                                 1-30 of 1,421
@@ -430,18 +430,22 @@
 </script>
 
 <!-- Page Specific Templates -->
-<script type="text/template" id="summary-tmpl">
-    <li>
-        <a href="#" id="inbox">
-            <% if (inbox > 0 ) { %> <strong> Inbox (<%= inbox %>) </strong> <% } else { %> Inbox <% } %>
+<script type="text/template" id="folder-actions-template">
+    <input id="toggle-all" type="checkbox" <%= allSelected ? 'checked' : '' %>/>
+    <span class="btn-group">
+        <a class="btn btn-small" href="#" data-toggle="dropdown">
+            Select
+            <i class="icon-angle-down "></i>
         </a>
-    </li>
-    <li>
-        <a href="#" id="starred">
-            <% if (starred > 0 ) { %> <strong> Starred (<%= starred %>) </strong> <% } else { %> Starred <% } %>
-        </a>
-    </li>
-    <li><a href="#" id="allmail">All Mail</a></li>
+        <ul class="dropdown-menu">
+            <li><a href="#">All</a></li>
+            <li><a href="#">None</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Read</a></li>
+            <li><a href="#">Unread</a></li>
+        </ul>
+    </span>
+    I came from template
 </script>
 
 <script type="text/template" id="mail-item-template">
