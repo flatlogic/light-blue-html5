@@ -115,7 +115,11 @@ $(function(){
 
             events: {
                 "click #toggle-all":  "toggleAll",
-                "ifToggled #toggle-all": "toggleAll" //handle iCheck events
+                "ifToggled #toggle-all": "toggleAll", //handle iCheck events
+                "click #select-all": 'selectAll',
+                "click #select-none": 'selectNone',
+                "click #select-read": 'selectRead',
+                "click #select-unread": 'selectUnread'
             },
 
             initialize: function() {
@@ -155,6 +159,26 @@ $(function(){
             toggleAll: function(){
                 var selectAll = this.$toggleAllCheckbox.prop('checked');
                 Emails.each(function (email) { email.save({'selected': selectAll}); });
+            },
+
+            selectAll: function(){
+                this.$toggleAllCheckbox.prop('checked', true);
+                this.toggleAll();
+            },
+
+            selectNone: function(){
+                this.$toggleAllCheckbox.prop('checked', false);
+                this.toggleAll();
+            },
+
+            selectRead: function(){
+                this.selectNone();
+                _(Emails.where({read: true})).each(function (email) { email.save({'selected': true}); });
+            },
+
+            selectUnread: function(){
+                this.selectNone();
+                _(Emails.where({read: false})).each(function (email) { email.save({'selected': true}); });
             }
 
         });
