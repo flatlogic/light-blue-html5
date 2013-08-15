@@ -54,6 +54,16 @@ $(function(){
 
             comparator: function(mail){
                 return -mail.get('timestamp');
+            },
+
+            search: function(word){
+                if (word=="") return this.slice();
+
+                var pat = new RegExp(word, 'gi');
+                return this.filter( function(mail) {
+                        return pat.test(mail.get('subject')) || pat.test(mail.get('sender'));
+                    }
+                );
             }
 
         });
@@ -124,21 +134,24 @@ $(function(){
                 "click #select-all": 'selectAll',
                 "click #select-none": 'selectNone',
                 "click #select-read": 'selectRead',
-                "click #select-unread": 'selectUnread'
+                "click #select-unread": 'selectUnread',
+                "keyup #mailbox-search": 'search'
             },
 
             initialize: function() {
-                this.listenTo(Emails, 'reset', this.addAll);
-                this.listenTo(Emails, 'all', this.render);
-                this.resetFolderView();
-                this.addAll();
+                this.collection = new EmailList();
+                this.listenTo(this.collection, 'reset', this.renderEmails);
+                this.listenTo(this.collection, 'all', this.render);
                 this.$folderActions = this.$('#folder-actions');
                 this.$toggleAllCheckbox = this.$('#toggle-all');
-                Emails.fetch();
+                var view = this;
+                Emails.fetch({success: function(){
+                    view.collection.reset(Emails.slice());
+                }});
             },
 
             render: function() {
-                var allSelected = Emails.where({selected: true}).length == Emails.length;
+                var allSelected = this.collection.where({selected: true}).length == this.collection.length;
                 this.$folderActions.html(this.folderActionsTemplate({allSelected: allSelected}));
                 this.$toggleAllCheckbox = this.$('#toggle-all');
                 this.$el.find("#toggle-all").iCheck({
@@ -148,13 +161,14 @@ $(function(){
             },
 
 
-            addOne: function(todo) {
-                var view = new EmailView({model: todo});
+            addOne: function(email) {
+                var view = new EmailView({model: email});
                 this.$("#folder-view").find("tbody").append(view.render().el);
             },
 
-            addAll: function() {
-                Emails.each(this.addOne, this);
+            renderEmails: function() {
+                this.resetFolderView();
+                this.collection.each(this.addOne, this);
             },
 
             resetFolderView: function(){
@@ -163,7 +177,7 @@ $(function(){
 
             toggleAll: function(){
                 var selectAll = this.$toggleAllCheckbox.prop('checked');
-                Emails.each(function (email) { email.save({'selected': selectAll}); });
+                this.collection.each(function (email) { email.save({'selected': selectAll}); });
             },
 
             selectAll: function(){
@@ -178,12 +192,16 @@ $(function(){
 
             selectRead: function(){
                 this.selectNone();
-                _(Emails.where({read: true})).each(function (email) { email.save({'selected': true}); });
+                _(this.collection.where({read: true})).each(function (email) { email.save({'selected': true}); });
             },
 
             selectUnread: function(){
                 this.selectNone();
-                _(Emails.where({read: false})).each(function (email) { email.save({'selected': true}); });
+                _(this.collection.where({read: false})).each(function (email) { email.save({'selected': true}); });
+            },
+
+            search: function(){
+                this.collection.reset(Emails.search($('#mailbox-search').val()));
             }
 
         });
