@@ -1900,6 +1900,10 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   margin-top: $baseLineHeight;
 
   .folder-view{
+
+    tbody{
+      color: $textLightGray;
+    }
     .icheckbox_square-grey{
       @include transform(scale(0.72));
     }
@@ -1919,6 +1923,11 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     .date{
       text-align: right;
       width: 60px;
+    }
+
+    .unread{
+      font-weight: 600;
+      color: $textColor;
     }
   }
 }
