@@ -445,12 +445,11 @@
             <li><a id="select-unread" href="#">Unread</a></li>
         </ul>
     </span>
-    I came from template
 </script>
 
 <script type="text/template" id="mail-item-template">
     <td class="tiny-column"><input class="selected-checkbox" type="checkbox"<%= selected ? ' checked="ckeched"' : ''%>/></td>
-    <td class="tiny-column"><i class="<%= starred ? 'icon-star color-orange' : 'icon-star-empty'%>"></i></td>
+    <td class="tiny-column"><span class="starred"><i class="<%= starred ? 'icon-star color-orange' : 'icon-star-empty'%>"></i></span></td>
     <td class="name hidden-phone"><%= sender ? sender : senderMail %></td>
     <td class="subject"><%= subject %></td>
     <td class="tiny-column"><% if (attachment) {%><i class="icon-paper-clip"><% } %></i></td>

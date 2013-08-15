@@ -14635,11 +14635,24 @@ table.table thead .sorting_desc_disabled {
   font-weight: 600;
   color: #f8f8f8;
 }
+/* line 1933, D:/projects/admin/sass/_base.scss */
+.mailbox-content .folder-view .starred {
+  color: #d2d2d2;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 1937, D:/projects/admin/sass/_base.scss */
+.mailbox-content .folder-view .starred:hover {
+  color: #f8f8f8;
+}
 
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 1939, D:/projects/admin/sass/_base.scss */
+/* line 1948, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -14651,42 +14664,42 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 1947, D:/projects/admin/sass/_base.scss */
+/* line 1956, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1951, D:/projects/admin/sass/_base.scss */
+/* line 1960, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 1955, D:/projects/admin/sass/_base.scss */
+/* line 1964, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 1959, D:/projects/admin/sass/_base.scss */
+/* line 1968, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1963, D:/projects/admin/sass/_base.scss */
+/* line 1972, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1967, D:/projects/admin/sass/_base.scss */
+/* line 1976, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 1971, D:/projects/admin/sass/_base.scss */
+/* line 1980, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 1975, D:/projects/admin/sass/_base.scss */
+/* line 1984, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive {
   width: 100%;
   *zoom: 1;
@@ -14701,7 +14714,7 @@ table.table thead .sorting_desc_disabled {
 .row-fluid.non-responsive:after {
   clear: both;
 }
-/* line 1978, D:/projects/admin/sass/_base.scss */
+/* line 1987, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"] {
   display: block;
   width: 100%;
@@ -14713,11 +14726,11 @@ table.table thead .sorting_desc_disabled {
   margin-left: 2.12766%;
   *margin-left: 2.07447%;
 }
-/* line 1984, D:/projects/admin/sass/_base.scss */
+/* line 1993, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"]:first-child {
   margin-left: 0;
 }
-/* line 1989, D:/projects/admin/sass/_base.scss */
+/* line 1998, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive .controls-row [class*="span"] + [class*="span"] {
   margin-left: 2.12766%;
 }
@@ -14902,7 +14915,7 @@ table.table thead .sorting_desc_disabled {
   *margin-left: 102.02128%;
 }
 
-/* line 1998, D:/projects/admin/sass/_base.scss */
+/* line 2007, D:/projects/admin/sass/_base.scss */
 .visible-phone-landscape {
   display: none;
 }

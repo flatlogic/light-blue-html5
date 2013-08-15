@@ -34,8 +34,8 @@ $(function(){
                 this.save( {read: true } );
             },
 
-            starMail: function() {
-                this.save( { star: !this.get("star")} );
+            toggleStarred: function() {
+                this.save( { starred: !this.get("starred")} );
             },
 
             toggleSelected: function(){
@@ -69,7 +69,8 @@ $(function(){
 
             events: {
                 "click .selected-checkbox": 'toggleSelected',
-                "ifToggled .selected-checkbox": 'toggleSelected'
+                "ifToggled .selected-checkbox": 'toggleSelected',
+                "click .starred": 'toggleStarred'
             },
 
 
@@ -102,6 +103,10 @@ $(function(){
 
             toggleSelected: function(){
                 this.model.toggleSelected();
+            },
+
+            toggleStarred: function(){
+                this.model.toggleStarred();
             }
 
         });

@@ -1929,6 +1929,15 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       font-weight: 600;
       color: $textColor;
     }
+
+    .starred{
+      color: $textLightGray;
+      cursor: pointer;
+      @include transition(color .2s);
+      &:hover{
+        color: $textColor;
+      }
+    }
   }
 }
 
