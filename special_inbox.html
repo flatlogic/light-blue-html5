@@ -449,7 +449,7 @@
 </script>
 
 <script type="text/template" id="mail-item-template">
-    <td class="tiny-column"><input type="checkbox"<%= selected ? ' checked="ckeched"' : ''%>/></td>
+    <td class="tiny-column"><input class="selected-checkbox" type="checkbox"<%= selected ? ' checked="ckeched"' : ''%>/></td>
     <td class="tiny-column"><i class="<%= starred ? 'icon-star color-orange' : 'icon-star-empty'%>"></i></td>
     <td class="name hidden-phone"><%= sender ? sender : senderMail %></td>
     <td class="subject"><%= subject %></td>

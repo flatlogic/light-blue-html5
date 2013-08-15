@@ -36,6 +36,10 @@ $(function(){
 
             starMail: function() {
                 this.save( { star: !this.get("star")} );
+            },
+
+            toggleSelected: function(){
+                this.save( {selected: !this.get("selected")});
             }
         });
 
@@ -64,6 +68,8 @@ $(function(){
 
 
             events: {
+                "click .selected-checkbox": 'toggleSelected',
+                "ifToggled .selected-checkbox": 'toggleSelected'
             },
 
 
@@ -92,6 +98,10 @@ $(function(){
                 return ['Jan', 'Feb', 'Mar', 'Apr',
                     'May', 'Jun', 'Jul', 'Aug',
                     'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate();
+            },
+
+            toggleSelected: function(){
+                this.model.toggleSelected();
             }
 
         });
