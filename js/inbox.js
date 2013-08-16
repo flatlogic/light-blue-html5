@@ -247,6 +247,13 @@ $(function(){
             renderEmails: function() {
                 this.resetFolderView();
                 this.currentFolderEmails.each(this.addOne, this);
+                var currentFolder = this.folders.where({current: true})[0],
+                    unreadCount = this.currentFolderEmails.where({read: false}).length,
+                    currentFolderTitle = 'Inbox';
+                if (currentFolder){
+                    currentFolderTitle = currentFolder.get("name");
+                }
+                this.$('#folder-title').html(currentFolderTitle + ' <small>(' + unreadCount + ' unread messages)</small>')
             },
 
 
