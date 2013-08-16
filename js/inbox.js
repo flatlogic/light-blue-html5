@@ -268,6 +268,7 @@ $(function(){
 
             render: function() {
                 this.resetEmails();
+                this.delegateEvents(this.events);
                 return this;
             },
 
