@@ -1939,6 +1939,68 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       }
     }
   }
+
+
+  .email-view{
+    hr{
+      margin: 5px 0;
+    }
+
+    .print{
+      color: $textLightGray;
+      text-decoration: none;
+      @include transition(color .2s);
+      &:hover{
+        color: $textColor;
+      }
+    }
+
+    .email-body{
+      margin-top: $baseLineHeight;
+    }
+  }
+
+  .email-details img{
+    width: 30px;
+    height: 30px;
+    float: left;
+  }
+
+  .email-details-content{
+    margin-left: 30px;
+    padding: 0 5px;
+
+    .email{
+      color: $textLightGray;
+      font-size: $fontSizeSmall;
+    }
+
+    .receiver{
+      display: block;
+      color: $textLightGray;
+      margin-top: -6px;
+    }
+
+    .email-date{
+      margin-right: 10px;
+      line-height: 24px;
+      vertical-align: middle;
+    }
+  }
+
+  .email-attachments{
+    .attachment{
+      img{
+        display: block;
+      }
+
+      .title{
+        margin: 0;
+        font-weight: bold;
+      }
+
+    }
+  }
 }
 
 /***********************************/

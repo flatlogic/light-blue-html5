@@ -185,6 +185,58 @@ $(function(){
 
         });
 
+        //noinspection JSJQueryEfficiency
+        var EmailOpenedView = Backbone.View.extend({
+
+            tagName:  "tr",
+
+            template: _.template($('#mail-item-template').html()),
+
+
+            events: {
+                "click .selected-checkbox": 'toggleSelected',
+                "ifToggled .selected-checkbox": 'toggleSelected',
+                "click .starred": 'toggleStarred'
+            },
+
+
+            initialize: function() {
+                this.listenTo(this.model, 'change', this.render);
+            },
+
+            render: function() {
+                this.$el.attr('class', this.model.get("read") ? '' : 'unread');
+                this.$el.html(this.template(this.model.toJSON()));
+                this.$el.find("input[type='checkbox']").iCheck({
+                    checkboxClass: 'icheckbox_square-grey',
+                    radioClass: 'iradio_square-grey'
+                });
+                return this;
+            },
+
+
+            formatDate: function(dateInt){
+                var date = new Date(dateInt),
+                    now = new Date(),
+                    todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+                if (date.getTime() > todayStart){
+                    return date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+                }
+                return ['Jan', 'Feb', 'Mar', 'Apr',
+                    'May', 'Jun', 'Jul', 'Aug',
+                    'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate();
+            },
+
+            toggleSelected: function(){
+                this.model.toggleSelected();
+            },
+
+            toggleStarred: function(){
+                this.model.toggleStarred();
+            }
+
+        });
+
         var AppView = Backbone.View.extend({
 
 

@@ -14648,11 +14648,69 @@ table.table thead .sorting_desc_disabled {
 .mailbox-content .folder-view .starred:hover {
   color: #f8f8f8;
 }
+/* line 1945, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-view hr {
+  margin: 5px 0;
+}
+/* line 1949, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-view .print {
+  color: #d2d2d2;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 1953, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-view .print:hover {
+  color: #f8f8f8;
+}
+/* line 1958, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-view .email-body {
+  margin-top: 20px;
+}
+/* line 1963, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-details img {
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+/* line 1969, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-details-content {
+  margin-left: 30px;
+  padding: 0 5px;
+}
+/* line 1973, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-details-content .email {
+  color: #d2d2d2;
+  font-size: 11.05px;
+}
+/* line 1978, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-details-content .receiver {
+  display: block;
+  color: #d2d2d2;
+  margin-top: -6px;
+}
+/* line 1984, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-details-content .email-date {
+  margin-right: 10px;
+  line-height: 24px;
+  vertical-align: middle;
+}
+/* line 1993, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-attachments .attachment img {
+  display: block;
+}
+/* line 1997, D:/projects/admin/sass/_base.scss */
+.mailbox-content .email-attachments .attachment .title {
+  margin: 0;
+  font-weight: bold;
+}
 
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 1948, D:/projects/admin/sass/_base.scss */
+/* line 2010, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -14664,42 +14722,42 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 1956, D:/projects/admin/sass/_base.scss */
+/* line 2018, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 1960, D:/projects/admin/sass/_base.scss */
+/* line 2022, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 1964, D:/projects/admin/sass/_base.scss */
+/* line 2026, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 1968, D:/projects/admin/sass/_base.scss */
+/* line 2030, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 1972, D:/projects/admin/sass/_base.scss */
+/* line 2034, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 1976, D:/projects/admin/sass/_base.scss */
+/* line 2038, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 1980, D:/projects/admin/sass/_base.scss */
+/* line 2042, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 1984, D:/projects/admin/sass/_base.scss */
+/* line 2046, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive {
   width: 100%;
   *zoom: 1;
@@ -14714,7 +14772,7 @@ table.table thead .sorting_desc_disabled {
 .row-fluid.non-responsive:after {
   clear: both;
 }
-/* line 1987, D:/projects/admin/sass/_base.scss */
+/* line 2049, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"] {
   display: block;
   width: 100%;
@@ -14726,11 +14784,11 @@ table.table thead .sorting_desc_disabled {
   margin-left: 2.12766%;
   *margin-left: 2.07447%;
 }
-/* line 1993, D:/projects/admin/sass/_base.scss */
+/* line 2055, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive [class*="span"]:first-child {
   margin-left: 0;
 }
-/* line 1998, D:/projects/admin/sass/_base.scss */
+/* line 2060, D:/projects/admin/sass/_base.scss */
 .row-fluid.non-responsive .controls-row [class*="span"] + [class*="span"] {
   margin-left: 2.12766%;
 }
@@ -14915,7 +14973,7 @@ table.table thead .sorting_desc_disabled {
   *margin-left: 102.02128%;
 }
 
-/* line 2007, D:/projects/admin/sass/_base.scss */
+/* line 2069, D:/projects/admin/sass/_base.scss */
 .visible-phone-landscape {
   display: none;
 }

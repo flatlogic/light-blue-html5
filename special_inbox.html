@@ -300,47 +300,73 @@
                                     </label>
                                 </form>
                                 <div id="mailbox-content" class="mailbox-content">
-                                    <table id="folder-view" class="folder-view table table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th colspan="3" id="folder-actions">
-                                                <input id="toggle-all" type="checkbox"/>
-                                                <span class="btn-group">
-                                                    <a class="btn btn-small" href="#" data-toggle="dropdown">
-                                                        Select
-                                                        <i class="icon-angle-down "></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="#">All</a></li>
-                                                        <li><a href="#">None</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Read</a></li>
-                                                        <li><a href="#">Unread</a></li>
-                                                    </ul>
-                                                </span>
-                                            </th>
-                                            <th colspan="3" class="total-pages">
-                                                1-30 of 1,421
-                                                <button class="btn btn-mini">
-                                                    <i class="icon-angle-left icon-large"></i>
-                                                </button>
-                                                <button class="btn btn-mini">
-                                                    <i class="icon-angle-right icon-large"></i>
-                                                </button>
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td class="tiny-column"><input type="checkbox"/></td>
-                                            <td class="tiny-column"><i class="icon-star"></i></td>
-                                            <td class="name hidden-phone">Philip Daineka</td>
-                                            <td class="subject">Light Blue template</td>
-                                            <td class="tiny-column"><i class="icon-paper-clip"></i></td>
-                                            <td class="date">Aug 13</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                    <div id="email-view" class="email-view">
+                                        <span class="pull-right"><a href="#" class="print"><i class="icon-print icon-large"></i></a></span>
+                                        <h4>New Python questions for this week!</h4>
+                                        <div class="email-details clearfix">
+                                            <img src="img/13.jpg" alt="John Doe"/>
+                                            <div class="email-details-content">
+                                                <div class="pull-left">
+                                                    <strong>Philip Daineka</strong>
+                                                    <span class="email">&lt;philip.daineka@gmail.com&gt;</span>
+                                                    <span class="receiver">to Wrapbootstrap</span>
+                                                </div>
+                                                <div class="email-actions pull-right">
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-small btn-transparent">
+                                                            <i class="icon-reply"></i> Reply
+                                                        </button>
+                                                        <button class="btn btn-small btn-transparent dropdown-toggle" data-toggle="dropdown">
+                                                            <i class="icon-angle-down"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu pull-right">
+                                                            <li><a href="#"><i class="icon-reply reply-btn"></i> Reply</a></li>
+                                                            <li><a href="#"><i class="icon-arrow-right reply-btn"></i> Forward</a></li>
+                                                            <li><a href="#"><i class="icon-print"></i> Print</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#"><i class="icon-ban-circle"></i> Spam</a></li>
+                                                            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="email-date pull-right">
+                                                    Aug 14 (2 days ago)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="email-body">
+                                            <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
+                                            <p><strong>On then sake home</strong> is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
+                                            <p>Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed excited suppose to shortly.</p>
+                                        </div>
+                                        <div class="email-attachments">
+                                            <div class="row-fluid">
+                                                <div class="span6">
+                                                    <hr>
+                                                    <p class="details"><strong>2 attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
+                                                        &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
+                                                    <section class="attachment">
+                                                        <img src="img/10.jpg" alt=""/>
+                                                        <h5 class="title">some-cool-image.jpg</h5>
+                                                        <p class="details">
+                                                            841K  &nbsp;&nbsp;
+                                                            <a href="#">View</a> &nbsp;&nbsp;
+                                                            <a href="#">Download</a>
+                                                        </p>
+                                                    </section>
+                                                    <section class="attachment">
+                                                        <img src="img/12.jpg" alt=""/>
+                                                        <h5 class="title">one-more-cool-image.jpg</h5>
+                                                        <p class="details">
+                                                            1,221K  &nbsp;&nbsp;
+                                                            <a href="#">View</a> &nbsp;&nbsp;
+                                                            <a href="#">Download</a>
+                                                        </p>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -383,7 +409,7 @@
 <script src="js/settings.js"></script>
 
 <!-- page-specifix js-->
-<script src="js/inbox.js"></script>
+<!--<script src="js/inbox.js"></script>-->
 
 
 <script type="text/template" id="settings-template">
