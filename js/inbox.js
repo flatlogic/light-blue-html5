@@ -153,7 +153,7 @@ $(function(){
             },
 
             render: function() {
-                this.$el.addClass(this.model.get("read") ? '' : 'unread');
+                this.$el.attr('class', this.model.get("read") ? '' : 'unread');
                 this.$el.html(this.template(this.model.toJSON()));
                 this.$el.find("input[type='checkbox']").iCheck({
                     checkboxClass: 'icheckbox_square-grey',
@@ -199,7 +199,9 @@ $(function(){
                 "click #select-none": 'selectNone',
                 "click #select-read": 'selectRead',
                 "click #select-unread": 'selectUnread',
-                "keyup #mailbox-search": 'search'
+                "keyup #mailbox-search": 'search',
+                "click #mark-as-read": 'markSelectedAsRead',
+                "click #mark-as-unread": 'markSelectedAsUnread'
             },
 
             initialize: function() {
@@ -223,8 +225,10 @@ $(function(){
             },
 
             render: function() {
-                var allSelected = this.currentFolderEmails.where({selected: true}).length == this.currentFolderEmails.length;
-                this.$folderActions.html(this.folderActionsTemplate({allSelected: allSelected}));
+                var selectedCount = this.currentFolderEmails.where({selected: true}).length,
+                    allSelected = selectedCount == this.currentFolderEmails.length,
+                    anySelected = selectedCount > 0;
+                this.$folderActions.html(this.folderActionsTemplate({allSelected: allSelected, anySelected: anySelected}));
                 this.$toggleAllCheckbox = this.$('#toggle-all');
                 this.$el.find("#toggle-all").iCheck({
                     checkboxClass: 'icheckbox_square-grey',
@@ -306,6 +310,14 @@ $(function(){
 
             search: function(){
                 this.currentFolderEmails.reset(Emails.search($('#mailbox-search').val()));
+            },
+
+            markSelectedAsRead: function(){
+                _(this.currentFolderEmails.where({selected: true})).each(function (email) { email.save({'read': true}); });
+            },
+
+            markSelectedAsUnread: function(){
+                _(this.currentFolderEmails.where({selected: true})).each(function (email) { email.save({'read': false}); });
             }
 
         });

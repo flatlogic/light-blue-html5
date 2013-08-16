@@ -445,6 +445,24 @@
             <li><a id="select-unread" href="#">Unread</a></li>
         </ul>
     </span>
+    <% if (anySelected) { %>
+        <span class="btn-group">
+            <a class="btn btn-small btn-inverse" href="#" data-toggle="dropdown">
+                Actions
+                <i class="icon-angle-down "></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a id="reply" href="#">Reply</a></li>
+                <li><a id="forward" href="#">Forward</a></li>
+                <li><a id="archive" href="#">Archive</a></li>
+                <li class="divider"></li>
+                <li><a id="mark-as-read" href="#">Mark As Read</a></li>
+                <li><a id="mark-as-unread" href="#">Mark As Unread</a></li>
+                <li class="divider"></li>
+                <li><a id="delete" href="#">Delete</a></li>
+            </ul>
+        </span>
+    <% } %>
 </script>
 
 <script type="text/template" id="mail-item-template">
