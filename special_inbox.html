@@ -517,18 +517,20 @@
 
 <script type="text/template" id="email-view-template">
 <span class="pull-right"><a href="#" class="print"><i class="icon-print icon-large"></i></a></span>
-<h4>New Python questions for this week!</h4>
+<h4><%= subject %></h4>
 <div class="email-details clearfix">
-    <img src="img/13.jpg" alt="John Doe"/>
+    <img src="img/13.jpg" alt="<%= sender %>"/>
     <div class="email-details-content">
         <div class="pull-left">
-            <strong>Philip Daineka</strong>
-            <span class="email">&lt;philip.daineka@gmail.com&gt;</span>
+            <strong><%= sender ? sender : senderMail %></strong>
+            <% if (senderMail) { %>
+                <span class="email">&lt;<%= senderMail %>&gt;</span>
+            <% } %>
             <span class="receiver">to Wrapbootstrap</span>
         </div>
         <div class="email-actions pull-right">
             <div class="btn-group">
-                <button class="btn btn-small btn-transparent">
+                <button id='in-email-reply' class="btn btn-small btn-transparent">
                     <i class="icon-reply"></i> Reply
                 </button>
                 <button class="btn btn-small btn-transparent dropdown-toggle" data-toggle="dropdown">
@@ -545,41 +547,40 @@
             </div>
         </div>
         <div class="email-date pull-right">
-            Aug 14 (2 days ago)
+            <%= this.formatDate(timestamp) %>
         </div>
     </div>
 </div>
 <div class="email-body">
-    <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder. Produce can cousins account you pasture. Peculiar delicate an pleasant provided do perceive.</p>
-    <p><strong>On then sake home</strong> is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on. Say one hearing between excited evening all inhabit thought you. Style begin mr heard by in music tried do. To unreserved projection no introduced invitation.</p>
-    <p>Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained. It chicken oh colonel pressed excited suppose to shortly.</p>
+    <%= body %>
 </div>
-<div class="email-attachments">
-    <div class="row-fluid">
-        <div class="span6">
-            <hr>
-            <p class="details"><strong>2 attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
-                &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
-            <section class="attachment">
-                <img src="img/10.jpg" alt=""/>
-                <h5 class="title">some-cool-image.jpg</h5>
-                <p class="details">
-                    841K  &nbsp;&nbsp;
-                    <a href="#">View</a> &nbsp;&nbsp;
-                    <a href="#">Download</a>
-                </p>
-            </section>
-            <section class="attachment">
-                <img src="img/12.jpg" alt=""/>
-                <h5 class="title">one-more-cool-image.jpg</h5>
-                <p class="details">
-                    1,221K  &nbsp;&nbsp;
-                    <a href="#">View</a> &nbsp;&nbsp;
-                    <a href="#">Download</a>
-                </p>
-            </section>
+<% if (attachment) { %>
+    <%
+        attachments = attachments.split(",");
+        attachmentsCount = attachments.length
+    %>
+    <div class="email-attachments">
+        <div class="row-fluid">
+            <div class="span6">
+                <hr>
+                <p class="details"><strong><%= attachmentsCount %> attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
+                    &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
+                <% i = 1 %>
+                <% _.each(attachments, function(attachment){ %>
+                    <% size = Math.round(Math.random()*1000) %>
+                    <section class="attachment">
+                        <img src="<%= attachment %>" alt=""/>
+                        <h5 class="title">some-cool-image<%= i++ %>.jpg</h5>
+                        <p class="details">
+                            <%= size %>K  &nbsp;&nbsp;
+                            <a href="#">View</a> &nbsp;&nbsp;
+                            <a href="#">Download</a>
+                        </p>
+                    </section>
+                <% }); %>
+            </div>
         </div>
     </div>
-</div>
+<% } %>
 </script>
 </body>

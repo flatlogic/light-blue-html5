@@ -5,9 +5,9 @@ $(function(){
     });
 });
 
-/*
- Inspired by https://github.com/krisys/backbone-gmail-example
- */
+var dummyBodies = ["<p>Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>",
+"somm text bodt. Reall small. ust few lines", "<p>Lose john poor same it case do year we. Full how way even the sigh. Extremely nor furniture fat questions now provision incommode preserved. Our side fail find like now. Discovered travelling for insensible partiality unpleasing impossible she. Sudden up my excuse to suffer ladies though or. Bachelor possible marianne directly confined relation as on he.</p>",
+"empty"];
 
 $(function(){
 
@@ -24,6 +24,7 @@ $(function(){
                     sender: '',
                     senderMail: '',
                     subject: '',
+                    body: dummyBodies[Math.round(Math.random()*3)],
                     timestamp: new Date(new Date().getTime() - 2*60*60*1000).getTime(),  //two hours ago
                     read: true,
                     starred: false,
@@ -105,6 +106,7 @@ $(function(){
                 Folders.each(function(folder){
                     folder.save({current: folder == that.model})
                 });
+                App.showEmailsView();
             }
 
         });
@@ -185,8 +187,7 @@ $(function(){
             },
 
             openEmail: function(){
-                var view = new EmailOpenedView({model: this.model});
-                $("#mailbox-content").html(view.render().el);
+                App.setCurrentView(new EmailOpenedView({model: this.model}));
             }
 
         });
@@ -210,6 +211,20 @@ $(function(){
             render: function() {
                 this.$el.html(this.template(this.model.toJSON()));
                 return this;
+            },
+
+
+            formatDate: function(dateInt){
+                var date = new Date(dateInt),
+                    now = new Date(),
+                    todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+                if (date.getTime() > todayStart){
+                    return date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
+                }
+                var daysAgo = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
+                return ['Jan', 'Feb', 'Mar', 'Apr',
+                    'May', 'Jun', 'Jul', 'Aug',
+                    'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate() + ' (' + daysAgo + ' days ago)';
             }
 
         });
@@ -411,6 +426,12 @@ $(function(){
             search: function(){
                 if (typeof this.currentView.search === 'function'){
                     this.currentView.search();
+                }
+            },
+
+            showEmailsView: function(){
+                if (this.currentView != EmailsView){
+                    this.setCurrentView(EmailsView)
                 }
             }
 
