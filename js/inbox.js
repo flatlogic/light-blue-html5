@@ -15,6 +15,8 @@ $(function(){
 
     $(function(){
 
+        var STARRED_FOLDER_ID = 33;
+
         var Email = Backbone.Model.extend({
 
             defaults:function(){
@@ -51,6 +53,10 @@ $(function(){
                 name: '',
                 current: false,
                 order: 100
+            },
+
+            sync: function(){
+                //just swallow this call
             }
         });
 
@@ -61,7 +67,13 @@ $(function(){
             url: 'js/folders.json',
 
 
-            comparator: 'order'
+            comparator: 'order',
+
+            parse: function(response){
+                //add fake starred folder
+                response.push({name: 'Starred', id: STARRED_FOLDER_ID, order: 4});
+                return response;
+            }
         });
 
         var Folders = new FolderList();
@@ -247,9 +259,15 @@ $(function(){
                 if (item){
                     folderId = item.get("id");
                 }
-                this.currentFolderEmails.reset(Emails.where({
-                    folderId: folderId
-                }));
+                if (folderId == STARRED_FOLDER_ID){
+                    this.currentFolderEmails.reset(Emails.where({
+                        starred: true
+                    }));
+                } else {
+                    this.currentFolderEmails.reset(Emails.where({
+                        folderId: folderId
+                    }));
+                }
             },
 
             resetFoldersList: function(){
