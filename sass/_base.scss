@@ -1920,6 +1920,10 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       width: 140px;
     }
 
+    .name, .subject{
+      cursor: pointer;
+    }
+
     .date{
       text-align: right;
       width: 60px;
@@ -1947,6 +1951,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     }
 
     .print{
+      margin-right: 6px;
       color: $textLightGray;
       text-decoration: none;
       @include transition(color .2s);

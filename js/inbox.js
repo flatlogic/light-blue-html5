@@ -120,12 +120,12 @@ $(function(){
                 return -mail.get('timestamp');
             },
 
-            search: function(word){
-                if (word=="") return this.slice();
+            search: function(word, folderId){
+                if (word=="") return this.where({folderId: folderId});
 
                 var pat = new RegExp(word, 'gi');
                 return this.filter( function(mail) {
-                        return pat.test(mail.get('subject')) || pat.test(mail.get('sender'));
+                        return mail.get("folderId") == folderId && pat.test(mail.get('subject')) || pat.test(mail.get('sender'));
                     }
                 );
             }
@@ -144,7 +144,8 @@ $(function(){
             events: {
                 "click .selected-checkbox": 'toggleSelected',
                 "ifToggled .selected-checkbox": 'toggleSelected',
-                "click .starred": 'toggleStarred'
+                "click .starred": 'toggleStarred',
+                "click .name,.subject": 'openEmail'
             },
 
 
@@ -181,6 +182,11 @@ $(function(){
 
             toggleStarred: function(){
                 this.model.toggleStarred();
+            },
+
+            openEmail: function(){
+                var view = new EmailOpenedView({model: this.model});
+                $("#mailbox-content").html(view.render().el);
             }
 
         });
@@ -188,15 +194,12 @@ $(function(){
         //noinspection JSJQueryEfficiency
         var EmailOpenedView = Backbone.View.extend({
 
-            tagName:  "tr",
 
-            template: _.template($('#mail-item-template').html()),
+            template: _.template($('#email-view-template').html()),
 
-
-            events: {
-                "click .selected-checkbox": 'toggleSelected',
-                "ifToggled .selected-checkbox": 'toggleSelected',
-                "click .starred": 'toggleStarred'
+            attributes: {
+                id: 'email-view',
+                class: 'email-view'
             },
 
 
@@ -205,42 +208,23 @@ $(function(){
             },
 
             render: function() {
-                this.$el.attr('class', this.model.get("read") ? '' : 'unread');
                 this.$el.html(this.template(this.model.toJSON()));
-                this.$el.find("input[type='checkbox']").iCheck({
-                    checkboxClass: 'icheckbox_square-grey',
-                    radioClass: 'iradio_square-grey'
-                });
                 return this;
-            },
-
-
-            formatDate: function(dateInt){
-                var date = new Date(dateInt),
-                    now = new Date(),
-                    todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-                if (date.getTime() > todayStart){
-                    return date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
-                }
-                return ['Jan', 'Feb', 'Mar', 'Apr',
-                    'May', 'Jun', 'Jul', 'Aug',
-                    'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate();
-            },
-
-            toggleSelected: function(){
-                this.model.toggleSelected();
-            },
-
-            toggleStarred: function(){
-                this.model.toggleStarred();
             }
 
         });
 
-        var AppView = Backbone.View.extend({
+        var EmailListView = Backbone.View.extend({
+
+            tagName: 'table',
+
+            attributes: {
+                id: 'folder-view',
+                class: 'folder-view table table-striped'
+            },
 
 
-            el: $("#mailbox-app"),
+            template: _.template($('#folders-view-template').html()),
 
             folderActionsTemplate: _.template($('#folder-actions-template').html()),
 
@@ -251,38 +235,32 @@ $(function(){
                 "click #select-none": 'selectNone',
                 "click #select-read": 'selectRead',
                 "click #select-unread": 'selectUnread',
-                "keyup #mailbox-search": 'search',
                 "click #mark-as-read": 'markSelectedAsRead',
                 "click #mark-as-unread": 'markSelectedAsUnread',
                 "click #delete": 'deleteEmails'
             },
 
+
             initialize: function() {
                 this.currentFolderEmails = new EmailList();
                 this.folders = Folders;
 
-                this.listenTo(this.currentFolderEmails, 'reset', this.renderEmails);
-                this.listenTo(this.currentFolderEmails, 'all', this.renderFolderActions);
-                this.listenTo(this.currentFolderEmails, 'destroy', this.renderEmails);
-                this.listenTo(this.folders, 'reset', this.renderFolders);
-                this.listenTo(this.folders, 'change', this.resetEmails);
+                this.listenTo(this.currentFolderEmails, 'reset', this.renderEmails);  //when displayed first time, and after
+                this.listenTo(this.currentFolderEmails, 'all', this.renderFolderActions); //when something starred or selected display folder actions
+                this.listenTo(this.currentFolderEmails, 'destroy', this.renderEmails); //when model deleted
+                this.listenTo(this.folders, 'change', this.resetEmails); //when current folder changed
+            },
 
-
-                this.$folderActions = this.$('#folder-actions');
-                this.$toggleAllCheckbox = this.$('#toggle-all');
-                var view = this;
-                this.folders.fetch({success: function(){
-                    Emails.fetch({success: function(){
-                        view.resetEmails();
-                    }});
-                }});
+            render: function() {
+                this.resetEmails();
+                return this;
             },
 
             renderFolderActions: function() {
                 var selectedCount = this.currentFolderEmails.where({selected: true}).length,
                     allSelected = selectedCount == this.currentFolderEmails.length,
                     anySelected = selectedCount > 0;
-                this.$folderActions.html(this.folderActionsTemplate({allSelected: allSelected, anySelected: anySelected}));
+                this.$('#folder-actions').html(this.folderActionsTemplate({allSelected: allSelected, anySelected: anySelected}));
                 this.$toggleAllCheckbox = this.$('#toggle-all');
                 this.$el.find("#toggle-all").iCheck({
                     checkboxClass: 'icheckbox_square-grey',
@@ -293,11 +271,11 @@ $(function(){
 
             addOne: function(email) {
                 var view = new EmailView({model: email});
-                this.$("#folder-view").find("tbody").append(view.render().el);
+                this.$el.find("tbody").append(view.render().el);
             },
 
             renderEmails: function() {
-                this.resetFolderView();
+                this.reset();
                 this.currentFolderEmails.each(this.addOne, this);
                 var currentFolder = this.folders.where({current: true})[0],
                     unreadCount = this.currentFolderEmails.where({read: false}).length,
@@ -305,17 +283,11 @@ $(function(){
                 if (currentFolder){
                     currentFolderTitle = currentFolder.get("name");
                 }
-                this.$('#folder-title').html(currentFolderTitle + ' <small>(' + unreadCount + ' unread messages)</small>')
+                $('#folder-title').html(currentFolderTitle + ' <small>(' + unreadCount + ' unread messages)</small>')
             },
 
-
-            renderFolders: function(){
-                this.resetFoldersList();
-                this.folders.each(this.addFolder, this);
-            },
-
-            resetFolderView: function(){
-                this.$("#folder-view").find("tbody").html('');
+            reset: function(){
+                this.$el.html(this.template());
             },
 
             resetEmails: function(){
@@ -333,15 +305,6 @@ $(function(){
                         folderId: folderId
                     }));
                 }
-            },
-
-            resetFoldersList: function(){
-                this.$("#folders-list").html('');
-            },
-
-            addFolder: function(folder){
-                var view = new FolderView({model: folder});
-                this.$("#folders-list").append(view.render().el);
             },
 
             toggleAll: function(){
@@ -370,7 +333,12 @@ $(function(){
             },
 
             search: function(){
-                this.currentFolderEmails.reset(Emails.search($('#mailbox-search').val()));
+                var item = this.folders.where({current: true})[0],
+                    folderId = 1;
+                if (item){
+                    folderId = item.get("id");
+                }
+                this.currentFolderEmails.reset(Emails.search($('#mailbox-search').val(), folderId));
             },
 
             markSelectedAsRead: function(){
@@ -383,6 +351,67 @@ $(function(){
 
             deleteEmails: function(){
                 _(this.currentFolderEmails.where({selected: true})).each(function (email) { email.destroy(); });
+            }
+
+        });
+
+
+
+        var EmailsView = new EmailListView();
+
+
+
+        var AppView = Backbone.View.extend({
+
+
+            el: $("#mailbox-app"),
+            $content: $("#mailbox-content"),
+
+            events: {
+                "keyup #mailbox-search": 'search'
+            },
+
+            initialize: function() {
+                this.currentView = EmailsView;
+                this.folders = Folders;
+
+                this.listenTo(this.folders, 'reset', this.renderFolders);
+
+                var view = this;
+                this.folders.fetch({success: function(){
+                    Emails.fetch({success: function(){
+                        view.render();
+                    }});
+                }});
+            },
+
+            render: function(){
+                this.$content.html(this.currentView.render().el);
+            },
+
+            setCurrentView: function(view){
+                this.currentView = view;
+                this.render();
+            },
+
+            renderFolders: function(){
+                this.resetFoldersList();
+                this.folders.each(this.addFolder, this);
+            },
+
+            resetFoldersList: function(){
+                this.$("#folders-list").html('');
+            },
+
+            addFolder: function(folder){
+                var view = new FolderView({model: folder});
+                this.$("#folders-list").append(view.render().el);
+            },
+
+            search: function(){
+                if (typeof this.currentView.search === 'function'){
+                    this.currentView.search();
+                }
             }
 
         });
