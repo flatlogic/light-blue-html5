@@ -201,7 +201,8 @@ $(function(){
                 "click #select-unread": 'selectUnread',
                 "keyup #mailbox-search": 'search',
                 "click #mark-as-read": 'markSelectedAsRead',
-                "click #mark-as-unread": 'markSelectedAsUnread'
+                "click #mark-as-unread": 'markSelectedAsUnread',
+                "click #delete": 'deleteEmails'
             },
 
             initialize: function() {
@@ -209,7 +210,8 @@ $(function(){
                 this.folders = Folders;
 
                 this.listenTo(this.currentFolderEmails, 'reset', this.renderEmails);
-                this.listenTo(this.currentFolderEmails, 'all', this.render);
+                this.listenTo(this.currentFolderEmails, 'all', this.renderFolderActions);
+                this.listenTo(this.currentFolderEmails, 'destroy', this.renderEmails);
                 this.listenTo(this.folders, 'reset', this.renderFolders);
                 this.listenTo(this.folders, 'change', this.resetEmails);
 
@@ -224,7 +226,7 @@ $(function(){
                 }});
             },
 
-            render: function() {
+            renderFolderActions: function() {
                 var selectedCount = this.currentFolderEmails.where({selected: true}).length,
                     allSelected = selectedCount == this.currentFolderEmails.length,
                     anySelected = selectedCount > 0;
@@ -318,6 +320,10 @@ $(function(){
 
             markSelectedAsUnread: function(){
                 _(this.currentFolderEmails.where({selected: true})).each(function (email) { email.save({'read': false}); });
+            },
+
+            deleteEmails: function(){
+                _(this.currentFolderEmails.where({selected: true})).each(function (email) { email.destroy(); });
             }
 
         });
