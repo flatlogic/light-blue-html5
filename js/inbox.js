@@ -187,6 +187,7 @@ $(function(){
             },
 
             openEmail: function(){
+                this.model.save({read: true});
                 App.setCurrentView(new EmailOpenedView({model: this.model}));
             }
 
