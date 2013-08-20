@@ -18,6 +18,14 @@ hr {
   border-top: none;
 }
 
+blockquote{
+  border-left-color: $transparentBackground;
+  p{
+    font-size: inherit;
+    margin-bottom: $baseLineHeight / 2;
+  }
+}
+
 /***************************/
 /*         Code            */
 /***************************/

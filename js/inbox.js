@@ -3,110 +3,6 @@ $(function(){
         checkboxClass: 'icheckbox_square-grey',
         radioClass: 'iradio_square-grey'
     });
-
-    var customWysihtml5Templates = {
-        "font-styles": function(locale) {
-            return "<li class='dropdown'>" +
-                "<a class='btn btn-small btn-transparent dropdown-toggle' data-toggle='dropdown' href='#'>" +
-                "<i class='icon-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;&nbsp;<i class='icon-caret-down'></i>" +
-                "</a>" +
-                "<ul class='dropdown-menu'>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>" + locale.font_styles.normal + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='p'>" + locale.font_styles.normal + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatInline' data-wysihtml5-command-value='span'>" + locale.font_styles.normal + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1'>" + locale.font_styles.h1 + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2'>" + locale.font_styles.h2 + "</a></li>" +
-                "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3'>" + locale.font_styles.h3 + "</a></li>" +
-                "</ul>" +
-                "</li>"
-        },
-        "emphasis":  function(locale) {
-            return "<li>" +
-                "<div class='btn-group'>"
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='bold' title='CTRL+B'><i class='icon-bold'></i></a>"
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='italic' title='CTRL+I'><i class='icon-italic'></i></a>"
-                //,+ "<a class='btn' data-wysihtml5-command='underline' title='CTRL+U'>Underline</a>"
-                + "</div>"
-                + "</li>"
-        },
-        "lists": function(locale) {
-            return "<li>"
-                + "<div class='btn-group'>"
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list'></i></a>"
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-th-list'></i></a>"
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right'></i></a>"
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left'></i></a>"
-                + "</div>"
-                + "</li>"
-        },
-
-        "link": function(locale) {
-            return "<li>"
-
-                + "<div class='bootstrap-wysihtml5-insert-link-modal modal hide fade'>"
-                + "<div class='modal-header'>"
-                + "<a class='close' data-dismiss='modal'>×</a>"
-                + "<h3>" + locale.link.insert + "</h3>"
-                + "</div>"
-                + "<div class='modal-body'>"
-                + "<input value='http://' class='bootstrap-wysihtml5-insert-link-url input-xlarge'>"
-                + "</div>"
-                + "<div class='modal-footer'>"
-                + "<a href='#' class='btn' data-dismiss='modal'>" + locale.link.cancel + "</a>"
-                + "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>"
-                + "</div>"
-                + "</div>"
-
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share'></i></a>"
-
-                + "</li>"
-        },
-
-        "image": function(locale) {
-            return "<li>"
-
-                + "<div class='bootstrap-wysihtml5-insert-image-modal modal hide fade'>"
-                + "<div class='modal-header'>"
-                + "<a class='close' data-dismiss='modal'>×</a>"
-                + "<h3>" + locale.image.insert + "</h3>"
-                + "</div>"
-                + "<div class='modal-body'>"
-                + "<input value='http://' class='bootstrap-wysihtml5-insert-image-url input-xlarge'>"
-                + "</div>"
-                + "<div class='modal-footer'>"
-                + "<a href='#' class='btn' data-dismiss='modal'>" + locale.image.cancel + "</a>"
-                + "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>"
-                + "</div>"
-                + "</div>"
-
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture'></i></a>"
-
-                + "</li>"
-        },
-
-        "html": function(locale) {
-            return "<li>"
-                + "<div class='btn-group'>"
-                + "<a class='btn btn-small btn-transparent ' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil'></i></a>"
-                + "</div>"
-                + "</li>"
-        }
-    };
-    $("#email-body").wysihtml5({
-        html: true,
-        customTemplates: customWysihtml5Templates,
-        stylesheets: ['css/bootstrap-original/bootstrap.css'],
-        events: {
-            load: function(){
-                $(this.composer.doc.head).prepend("<style>body{background: none !important;}</style>");
-            }
-        }
-    });
-
-    $('#email-compose').fileupload({
-        url: 'server/php/',
-        autoUpload: true
-    });
 });
 
 var dummyBodies = ["<p>Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>",
@@ -129,6 +25,7 @@ $(function(){
                     senderMail: '',
                     subject: '',
                     body: dummyBodies[Math.round(Math.random()*3)],
+                    receiver: '',
                     timestamp: new Date(new Date().getTime() - 2*60*60*1000).getTime(),  //two hours ago
                     read: true,
                     starred: false,
@@ -297,7 +194,6 @@ $(function(){
 
         });
 
-        //noinspection JSJQueryEfficiency
         var EmailOpenedView = Backbone.View.extend({
 
 
@@ -306,6 +202,10 @@ $(function(){
             attributes: {
                 id: 'email-view',
                 class: 'email-view'
+            },
+
+            events: {
+                "click #email-opened-reply": 'replyEmail'
             },
 
 
@@ -330,6 +230,153 @@ $(function(){
                 return ['Jan', 'Feb', 'Mar', 'Apr',
                     'May', 'Jun', 'Jul', 'Aug',
                     'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate() + ' (' + daysAgo + ' days ago)';
+            },
+
+
+            replyEmail: function(){
+                var body = "<br/><br/><br/>" +
+                    "<blockquote>" +
+                    this.model.get("body") +
+                    "</blockquote> <br/>",
+                    newEmail = new Email({
+                        body: body,
+                        receiver: this.model.get("sender") ? this.model.get("sender") : this.model.get("senderMail"),
+                        subject: "Re: " + this.model.get("subject")
+                    });
+                App.showComposeView(newEmail);
+            }
+
+        });
+
+        var ComposeView = Backbone.View.extend({
+
+
+            template: _.template($('#compose-view-template').html()),
+
+            attributes: {
+                id: 'compose-view',
+                class: 'compose-view'
+            },
+
+            events: {
+                "click #compose-save-button, #compose-send-button, #compose-discard-button": 'backToFolders'
+            },
+
+            render: function() {
+                this.$el.html(this.template(this.model.toJSON()));
+                this._initViewComponents();
+                return this;
+            },
+
+            backToFolders: function(){
+                App.showEmailsView();
+            },
+
+            _initViewComponents: function(){
+                var customWysihtml5Templates = {
+                    "font-styles": function(locale) {
+                        return "<li class='dropdown'>" +
+                            "<a class='btn btn-small btn-transparent dropdown-toggle' data-toggle='dropdown' href='#'>" +
+                            "<i class='icon-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;&nbsp;<i class='icon-caret-down'></i>" +
+                            "</a>" +
+                            "<ul class='dropdown-menu'>" +
+                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>" + locale.font_styles.normal + "</a></li>" +
+                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='p'>" + locale.font_styles.normal + "</a></li>" +
+                            "<li><a data-wysihtml5-command='formatInline' data-wysihtml5-command-value='span'>" + locale.font_styles.normal + "</a></li>" +
+                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1'>" + locale.font_styles.h1 + "</a></li>" +
+                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2'>" + locale.font_styles.h2 + "</a></li>" +
+                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3'>" + locale.font_styles.h3 + "</a></li>" +
+                            "</ul>" +
+                            "</li>"
+                    },
+                    "emphasis":  function(locale) {
+                        return "<li>" +
+                            "<div class='btn-group'>"
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='bold' title='CTRL+B'><i class='icon-bold'></i></a>"
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='italic' title='CTRL+I'><i class='icon-italic'></i></a>"
+                            //,+ "<a class='btn' data-wysihtml5-command='underline' title='CTRL+U'>Underline</a>"
+                            + "</div>"
+                            + "</li>"
+                    },
+                    "lists": function(locale) {
+                        return "<li>"
+                            + "<div class='btn-group'>"
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list'></i></a>"
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-th-list'></i></a>"
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right'></i></a>"
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left'></i></a>"
+                            + "</div>"
+                            + "</li>"
+                    },
+
+                    "link": function(locale) {
+                        return "<li>"
+
+                            + "<div class='bootstrap-wysihtml5-insert-link-modal modal hide fade'>"
+                            + "<div class='modal-header'>"
+                            + "<a class='close' data-dismiss='modal'>×</a>"
+                            + "<h3>" + locale.link.insert + "</h3>"
+                            + "</div>"
+                            + "<div class='modal-body'>"
+                            + "<input value='http://' class='bootstrap-wysihtml5-insert-link-url input-xlarge'>"
+                            + "</div>"
+                            + "<div class='modal-footer'>"
+                            + "<a href='#' class='btn' data-dismiss='modal'>" + locale.link.cancel + "</a>"
+                            + "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>"
+                            + "</div>"
+                            + "</div>"
+
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share'></i></a>"
+
+                            + "</li>"
+                    },
+
+                    "image": function(locale) {
+                        return "<li>"
+
+                            + "<div class='bootstrap-wysihtml5-insert-image-modal modal hide fade'>"
+                            + "<div class='modal-header'>"
+                            + "<a class='close' data-dismiss='modal'>×</a>"
+                            + "<h3>" + locale.image.insert + "</h3>"
+                            + "</div>"
+                            + "<div class='modal-body'>"
+                            + "<input value='http://' class='bootstrap-wysihtml5-insert-image-url input-xlarge'>"
+                            + "</div>"
+                            + "<div class='modal-footer'>"
+                            + "<a href='#' class='btn' data-dismiss='modal'>" + locale.image.cancel + "</a>"
+                            + "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>"
+                            + "</div>"
+                            + "</div>"
+
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture'></i></a>"
+
+                            + "</li>"
+                    },
+
+                    "html": function(locale) {
+                        return "<li>"
+                            + "<div class='btn-group'>"
+                            + "<a class='btn btn-small btn-transparent ' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil'></i></a>"
+                            + "</div>"
+                            + "</li>"
+                    }
+                };
+                this.$("#email-body").wysihtml5({
+                    html: true,
+                    customTemplates: customWysihtml5Templates,
+                    stylesheets: ['css/application.min.css'],
+                    parserRules: wysihtml5ParserRules,
+                    events: {
+                        load: function(){
+                            $(this.composer.doc.head).prepend("<style>body{background: none !important;}</style>");
+                        }
+                    }
+                });
+
+                this.$('#email-compose').fileupload({
+                    url: 'server/php/',
+                    autoUpload: true
+                });
             }
 
         });
@@ -489,7 +536,8 @@ $(function(){
             $content: $("#mailbox-content"),
 
             events: {
-                "keyup #mailbox-search": 'search'
+                "keyup #mailbox-search": 'search',
+                "click #compose-btn": 'handleComposeBtnClick'
             },
 
             initialize: function() {
@@ -539,6 +587,15 @@ $(function(){
                 if (this.currentView != EmailsView){
                     this.setCurrentView(EmailsView)
                 }
+            },
+
+            handleComposeBtnClick: function(){
+                this.showComposeView();
+            },
+
+            showComposeView: function(model){
+                model = model ? model : new Email({body: ''});
+                this.setCurrentView(new ComposeView({model: model}));
             }
 
         });
