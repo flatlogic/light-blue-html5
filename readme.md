@@ -1,4 +1,4 @@
-Light Blue v1.3
+Light Blue v1.4
 =========
 
 Light Blue is a **next generation** admin dashboard template based on the latest **Flat** design. There are few reasons why we have created it:.
@@ -9,12 +9,11 @@ Light Blue is a **next generation** admin dashboard template based on the latest
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 1.3 Released!
+New Version 1.4 Released!
 -
 
-  - Overall UI improvements
-  - Print Optimized
-  - New iCheck library instead of out-of-date uniform
+  - Bootstrap 3 support
+  - Ready-to-use Inbox App
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework and uses powerful Sass (CSS preprocessor) technology.
@@ -26,6 +25,13 @@ Email me at [philip.daineka@gmail.com](mailto:philip.daineka@gmail.com) or tweet
 
 Changelog
 -
+
+Version 1.3
+
+  - Overall UI improvements
+  - Print Optimized
+  - New iCheck library instead of out-of-date uniform
+  - Invoice Page
 
 Version 1.2
 
@@ -120,5 +126,7 @@ Full feature list
     *   Search Page
     *   404 Page
     *   Login Page
+    *   Invoice Page
+    *   Inbox Page
 
 Please note that support is provided via email as mentioned in the documentation page.

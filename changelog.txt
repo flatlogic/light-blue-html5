@@ -1,10 +1,29 @@
+V1.4
+- Bootstrap 3 support
+- Ready-to-use Inbox App
+
+Files changed:
+ html:
+  * --new-- special_inbox.html
+ styles:
+  * sass/bootstrap-original/*
+ js:
+  * inbox.js
+  * folders.json
+  * emails.json
+ lib:
+  * --new-- lib/wysihtml5/advanced.js
+
 V1.3
 - Overall UI improvements
 - New iCheck library instead of out-of-date uniform
 - Print Optimized
+- Invoice Page
+
 Files changed:
  html:
   * all html files: icon-desktop replaced with icon-home
+  * --new-- special_invoice.html
  styles:
   * _base.scss
   * _bootstrap-override.scss
