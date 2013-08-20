@@ -1,42 +1,24 @@
 /*
-Syntax error: Invalid CSS after "...dropdown-toggle": expected "{", was "& {"
-              
-              "&" may only be used at the beginning of a compound selector.
-        on line 415 of D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss
-        from line 13 of D:/projects/admin/bs3/sass/bootstrap-original/bootstrap.scss
-        from line 14 of D:/projects/admin/bs3/sass/application.scss
+Syntax error: Undefined mixin 'ie7-restore-right-whitespace'.
+        on line 537 of D:/projects/admin/bs3/sass/_bootstrap-override.scss, in `ie7-restore-right-whitespace'
+        from line 537 of D:/projects/admin/bs3/sass/_bootstrap-override.scss
+        from line 13 of D:/projects/admin/bs3/sass/application.scss
 
 Backtrace:
-D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss:415
-D:/projects/admin/bs3/sass/bootstrap-original/bootstrap.scss:13
-D:/projects/admin/bs3/sass/application.scss:14
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:1147:in `expected'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:1083:in `expected'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:691:in `block in simple_selector_sequence'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:1093:in `throw_error'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:691:in `simple_selector_sequence'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:645:in `_selector'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:618:in `selector'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:608:in `selector_sequence'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:527:in `ruleset'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:590:in `block in declaration_or_ruleset'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:1103:in `block in catch_error'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:1103:in `catch'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:1103:in `catch_error'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:590:in `declaration_or_ruleset'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:553:in `block_child'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:545:in `block_contents'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:534:in `block'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:186:in `mixin_directive'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:174:in `special_directive'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:146:in `directive'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:552:in `block_child'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:545:in `block_contents'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:82:in `stylesheet'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/scss/parser.rb:27:in `parse'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/engine.rb:342:in `_to_tree'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/engine.rb:274:in `to_tree'
-C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+D:/projects/admin/bs3/sass/_bootstrap-override.scss:537:in `ie7-restore-right-whitespace'
+D:/projects/admin/bs3/sass/_bootstrap-override.scss:537
+D:/projects/admin/bs3/sass/application.scss:13
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/base.rb:37:in `visit'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:100:in `visit'
 C:/Ruby193/lib/ruby/gems/1.9.1/gems/sass-3.2.10/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
@@ -99,4 +81,4 @@ C:/Ruby193/bin/compass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...dropdown-toggle\": expected \"{\", was \"& {\"\A               \A               \"&\" may only be used at the beginning of a compound selector.\A         on line 415 of D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss\A         from line 13 of D:/projects/admin/bs3/sass/bootstrap-original/bootstrap.scss\A         from line 14 of D:/projects/admin/bs3/sass/application.scss"; }
+  content: "Syntax error: Undefined mixin 'ie7-restore-right-whitespace'.\A         on line 537 of D:/projects/admin/bs3/sass/_bootstrap-override.scss, in `ie7-restore-right-whitespace'\A         from line 537 of D:/projects/admin/bs3/sass/_bootstrap-override.scss\A         from line 13 of D:/projects/admin/bs3/sass/application.scss"; }
