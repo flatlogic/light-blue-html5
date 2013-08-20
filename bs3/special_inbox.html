@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light Blue - Admin Template</title>
+    <link href="css/application.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-dark">
+<div class="logo">
+    <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
+</div>
+<nav id="sidebar" class="sidebar nav-collapse collapse">
+    <ul id="side-nav" class="side-nav">
+        <li >
+            <a href="index.html"><i class="icon-home"></i> <span class="name">Dashboard</span></a>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="accordion-body collapse">
+                <li><a href="form_account.html">Account</a></li>
+                <li><a href="form_article.html">Article</a></li>
+                <li><a href="form_elements.html">Elements</a></li>
+                <li><a href="form_validation.html">Validation</a></li>
+                <li><a href="form_wizard.html">Wizard</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="accordion-body collapse">
+                <li><a href="stat_statistics.html">Stats</a></li>
+                <li><a href="stat_charts.html">Charts</a></li>
+                <li><a href="stat_realtime.html">Realtime</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
+            <ul id="ui-collapse" class="accordion-body collapse">
+                <li><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_icons.html">Icons</a></li>
+                <li><a href="ui_tabs.html">Tabs</a></li>
+                <li><a href="ui_accordion.html">Accordion</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
+            <ul id="components-collapse" class="accordion-body collapse">
+                <li><a href="component_calendar.html">Calendar</a></li>
+                <li><a href="component_maps.html">Maps</a></li>
+                <li><a href="component_gallery.html">Gallery</a></li>
+                <li><a href="component_fileupload.html">Fileupload</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class="icon-table"></i> <span class="name">Tables</span></a>
+            <ul id="tables-collapse" class="accordion-body collapse">
+                <li><a href="tables_static.html">Static</a></li>
+                <li><a href="tables_dynamic.html">Dynamic</a></li>
+            </ul>
+        </li>
+        <li >
+            <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
+        </li>
+        <li class="active accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
+            <ul id="special-collapse" class="accordion-body collapse in">
+                <li><a href="special_search.html">Search</a></li>
+                <li><a href="special_invoice.html">Invoice</a></li>
+                <li class="active"><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="special_404.html">404</a></li>
+            </ul>
+        </li>
+        <li class="visible-phone">
+            <a href="login.html"><i class="icon-signout"></i> <span class="name">Sign Out</span></a>
+        </li>
+    </ul>
+    <div id="sidebar-settings" class="settings">
+        <button type="button"
+                data-value="icons"
+                class="btn-icons btn btn-transparent btn-small">Icons</button>
+        <button type="button"
+                data-value="auto"
+                class="btn-auto btn btn-transparent btn-small">Auto</button>
+    </div>
+</nav>
+<div class="wrap">
+<header class="page-header">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav pull-right">
+                <li class="dropdown">
+                    <a href="#" title="Messages" id="messages"
+                       class="dropdown-toggle"
+                       data-toggle="dropdown">
+                        <i class="icon-comments"></i>
+                    </a>
+                    <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                        <li role="presentation">
+                            <a href="#" class="message">
+                                <img src="img/1.jpg" alt="">
+                                <div class="details">
+                                    <div class="sender">Jane Hew</div>
+                                    <div class="text">
+                                        Hey, John! How is it going? ...
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="message">
+                                <img src="img/2.jpg" alt="">
+                                <div class="details">
+                                    <div class="sender">Alies Rumiancaŭ</div>
+                                    <div class="text">
+                                        I'll definitely buy this template
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="message">
+                                <img src="img/3.jpg" alt="">
+                                <div class="details">
+                                    <div class="sender">Michał Rumiancaŭ</div>
+                                    <div class="text">
+                                        Is it really Lore ipsum? Lore ...
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="text-align-center see-all">
+                                See all messages <i class="icon-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" title="8 support tickets"
+                       class="dropdown-toggle"
+                       data-toggle="dropdown">
+                        <i class="icon-group"></i>
+                        <span class="count">8</span>
+                    </a>
+                    <ul id="support-menu" class="dropdown-menu support" role="menu">
+                        <li role="presentation">
+                            <a href="#" class="support-ticket">
+                                <div class="picture">
+                                    <span class="label label-important"><i class="icon-bell-alt"></i></span>
+                                </div>
+                                <div class="details">
+                                    Check out this awesome ticket
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="support-ticket">
+                                <div class="picture">
+                                    <span class="label label-warning"><i class="icon-question-sign"></i></span>
+                                </div>
+                                <div class="details">
+                                    "What is the best way to get ...
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="support-ticket">
+                                <div class="picture">
+                                    <span class="label label-success"><i class="icon-tag"></i></span>
+                                </div>
+                                <div class="details">
+                                    This is just a simple notification
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="support-ticket">
+                                <div class="picture">
+                                    <span class="label label-info"><i class="icon-info-sign"></i></span>
+                                </div>
+                                <div class="details">
+                                    12 new orders has arrived today
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="support-ticket">
+                                <div class="picture">
+                                    <span class="label label-important"><i class="icon-plus"></i></span>
+                                </div>
+                                <div class="details">
+                                    One more thing that just happened
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="text-align-center see-all">
+                                See all tickets <i class="icon-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="hidden-phone">
+                    <a href="#" id="settings"
+                       data-toggle="popover"
+                       data-placement="bottom"
+                       title="">
+                        <i class="icon-cog"></i>
+                    </a>
+                </li>
+                <li class="hidden-phone dropdown">
+                    <a href="#" title="Account" id="account"
+                       class="dropdown-toggle"
+                       data-toggle="dropdown">
+                        <i class="icon-user"></i>
+                    </a>
+                    <ul id="account-menu" class="dropdown-menu account" role="menu">
+                        <li role="presentation" class="account-picture">
+                            <img src="img/2.jpg" alt="">
+                            Philip Daineka
+                        </li>
+                        <li role="presentation">
+                            <a href="form_account.html" class="link">
+                                <i class="icon-user"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="component_calendar.html" class="link">
+                                <i class="icon-calendar"></i>
+                                Calendar
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#" class="link">
+                                <i class="icon-inbox"></i>
+                                Inbox
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="visible-phone">
+                    <a href="#"
+                       class="btn-navbar"
+                       data-toggle="collapse"
+                       data-target=".sidebar"
+                       title="">
+                        <i class="icon-reorder"></i>
+                    </a>
+                </li>
+                <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
+            </ul>
+            <form class="navbar-search pull-right">
+                <input type="search" class="search-query" placeholder="Search...">
+            </form>
+        </div>
+    </div>
+</header>
+<div class="content container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <h2 class="page-title">Inbox <small>user email</small></h2>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <section class="widget">
+                <header>
+                    <h4>
+                        Inbox App
+                    </h4>
+                </header>
+                <div class="body">
+                    <div id="mailbox-app" class="mailbox">
+                        <div class="row-fluid">
+                            <div class="span2">
+                                <button id="compose-btn" class="btn btn-danger btn-block">Compose</button>
+                                <ul id="folders-list" class="mailbox-folders">
+                                    <li class="active"><a href="#">Inbox</a></li>
+                                    <li><a href="#">Sent</a></li>
+                                    <li><a href="#">Drafts</a></li>
+                                </ul>
+                            </div>
+                            <div class="span10">
+                                <h2 id='folder-title' class="folder-title pull-left">Inbox <small>(2 unread messages)</small></h2>
+                                <form class="form-inline form-search text-align-right" action="">
+                                    <label>
+                                        <input type="search" id="mailbox-search" class="input-transparent input-search" placeholder="Search folder..."/>
+                                    </label>
+                                </form>
+                                <div id="mailbox-content" class="mailbox-content">
+                                    <table id="folder-view" class="folder-view table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th colspan="3" id="folder-actions">
+                                                <input id="toggle-all" type="checkbox"/>
+                                                <span class="btn-group">
+                                                <a class="btn btn-small" href="#" data-toggle="dropdown">
+                                                    Select
+                                                    <i class="icon-angle-down "></i>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">All</a></li>
+                                                    <li><a href="#">None</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Read</a></li>
+                                                    <li><a href="#">Unread</a></li>
+                                                </ul>
+                                                </span>
+                                            </th>
+                                            <th colspan="3" class="total-pages">
+                                                1-30 of 1,421
+                                                <button class="btn btn-mini">
+                                                    <i class="icon-angle-left icon-large"></i>
+                                                </button>
+                                                <button class="btn btn-mini">
+                                                    <i class="icon-angle-right icon-large"></i>
+                                                </button>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="tiny-column"><input type="checkbox"/></td>
+                                            <td class="tiny-column"><i class="icon-star"></i></td>
+                                            <td class="name hidden-phone">Philip Daineka</td>
+                                            <td class="subject">Light Blue template</td>
+                                            <td class="tiny-column"><i class="icon-paper-clip"></i></td>
+                                            <td class="date">Aug 13</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- jquery and friends -->
+<script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+<script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
+
+<!-- jquery plugins -->
+<script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>
+<script src="lib/parsley/parsley.js"> </script>
+<script src="lib/icheck.js/jquery.icheck.js"></script>
+<script src="lib/select2.js"></script>
+
+<!--backbone and friends -->
+<script src="lib/backbone/underscore-min.js"></script>
+<script src="lib/backbone/backbone.js"></script>
+<script src="lib/backbone/backbone.localStorage-min.js"></script>
+
+<!-- bootstrap default plugins -->
+<script src="js/bootstrap/bootstrap-transition.js"></script>
+<script src="js/bootstrap/bootstrap-collapse.js"></script>
+<script src="js/bootstrap/bootstrap-alert.js"></script>
+<script src="js/bootstrap/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap/bootstrap-popover.js"></script>
+<script src="js/bootstrap/bootstrap-button.js"></script>
+<script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap/bootstrap-modal.js"></script>
+<script src="js/bootstrap/bootstrap-tab.js"> </script>
+
+<!-- bootstrap plugins -->
+<script src="lib/wysihtml5/wysihtml5-0.3.0_rc2.js"></script>
+<script src="lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+<!-- advanced parser rules -->
+<script src="lib/wysihtml5/advanced.js"></script>
+
+<!-- fileupload stuff. see component_fileupload.html -->
+<script src="lib/vendor/jquery.ui.widget.js"></script>
+<script src="lib/vendor/http_blueimp.github.io_JavaScript-Templates_js_tmpl.js"></script>
+<script src="lib/vendor/http_blueimp.github.io_JavaScript-Load-Image_js_load-image.js"></script>
+<script src="lib/vendor/http_blueimp.github.io_JavaScript-Canvas-to-Blob_js_canvas-to-blob.js"></script>
+<script src="lib/jquery.iframe-transport.js"></script>
+<script src="lib/jquery.fileupload.js"></script>
+<script src="lib/jquery.fileupload-fp.js"></script>
+<script src="lib/jquery.fileupload-ui.js"></script>
+
+<!-- basic application js-->
+<script src="js/app.js"></script>
+<script src="js/settings.js"></script>
+
+<!-- page-specifix js-->
+<script src="js/inbox.js"></script>
+
+
+<script type="text/template" id="settings-template">
+    <div class="setting clearfix">
+        <div>Background</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% dark = background == 'dark'; light = background == 'light';%>
+            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Sidebar on the</div>
+        <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% onRight = sidebar == 'right'%>
+            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Sidebar</div>
+        <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% display = displaySidebar%>
+            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+    <% auto = sidebarState == 'auto'%>
+    <% if (auto) {%>
+    <button type="button"
+            data-value="icons"
+            class="btn-icons btn btn-transparent btn-small">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-transparent btn-small">Auto</button>
+    <%} else {%>
+    <button type="button"
+            data-value="auto"
+            class="btn btn-transparent btn-small">Auto</button>
+    <% } %>
+</script>
+
+<!-- Page Specific Templates -->
+<script type="text/template" id="folder-actions-template">
+    <input id="toggle-all" type="checkbox" <%= allSelected ? 'checked' : '' %>/>
+    <span class="btn-group">
+        <a class="btn btn-small" href="#" data-toggle="dropdown">
+            Select
+            <i class="icon-angle-down "></i>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a id="select-all" href="#">All</a></li>
+            <li><a id="select-none" href="#">None</a></li>
+            <li class="divider"></li>
+            <li><a id="select-read" href="#">Read</a></li>
+            <li><a id="select-unread" href="#">Unread</a></li>
+        </ul>
+    </span>
+    <% if (anySelected) { %>
+        <span class="btn-group">
+            <a class="btn btn-small btn-inverse" href="#" data-toggle="dropdown">
+                Actions
+                <i class="icon-angle-down "></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a id="reply" href="#">Reply</a></li>
+                <li><a id="forward" href="#">Forward</a></li>
+                <li><a id="archive" href="#">Archive</a></li>
+                <li class="divider"></li>
+                <li><a id="mark-as-read" href="#">Mark As Read</a></li>
+                <li><a id="mark-as-unread" href="#">Mark As Unread</a></li>
+                <li class="divider"></li>
+                <li><a id="delete" href="#">Delete</a></li>
+            </ul>
+        </span>
+    <% } %>
+</script>
+
+<script type="text/template" id="mail-item-template">
+    <td class="tiny-column"><input class="selected-checkbox" type="checkbox"<%= selected ? ' checked="ckeched"' : ''%>/></td>
+    <td class="tiny-column"><span class="starred"><i class="<%= starred ? 'icon-star color-orange' : 'icon-star-empty'%>"></i></span></td>
+    <td class="name hidden-phone"><%= sender ? sender : senderMail %></td>
+    <td class="subject"><%= subject %></td>
+    <td class="tiny-column"><% if (attachment) {%><i class="icon-paper-clip"><% } %></i></td>
+    <td class="date"><%= this.formatDate(timestamp) %></td>
+</script>
+
+<script type="text/template" id="folder-template">
+    <a href="#"><%= name %></a>
+</script>
+
+<script type="text/template" id="folders-view-template">
+    <table id="folder-view" class="folder-view table table-striped">
+        <thead>
+        <tr>
+            <th colspan="3" id="folder-actions">
+                <input id="toggle-all" type="checkbox"/>
+                <span class="btn-group">
+                    <a class="btn btn-small" href="#" data-toggle="dropdown">
+                        Select
+                        <i class="icon-angle-down "></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">None</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Read</a></li>
+                        <li><a href="#">Unread</a></li>
+                    </ul>
+                </span>
+            </th>
+            <th colspan="3" class="total-pages">
+                1-30 of 1,421
+                <button class="btn btn-mini">
+                    <i class="icon-angle-left icon-large"></i>
+                </button>
+                <button class="btn btn-mini">
+                    <i class="icon-angle-right icon-large"></i>
+                </button>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</script>
+
+
+<script type="text/template" id="email-view-template">
+<span class="pull-right"><a href="#" class="print"><i class="icon-print icon-large"></i></a></span>
+<h4><%= subject %></h4>
+<div class="email-details clearfix">
+    <img src="img/13.jpg" alt="<%= sender %>"/>
+    <div class="email-details-content">
+        <div class="pull-left">
+            <strong><%= sender ? sender : senderMail %></strong>
+            <% if (senderMail) { %>
+                <span class="email">&lt;<%= senderMail %>&gt;</span>
+            <% } %>
+            <span class="receiver">to Wrapbootstrap</span>
+        </div>
+        <div class="email-actions pull-right">
+            <div class="btn-group">
+                <button id='email-opened-reply' class="btn btn-small btn-transparent">
+                    <i class="icon-reply"></i> Reply
+                </button>
+                <button class="btn btn-small btn-transparent dropdown-toggle" data-toggle="dropdown">
+                    <i class="icon-angle-down"></i>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#"><i class="icon-reply reply-btn"></i> Reply</a></li>
+                    <li><a href="#"><i class="icon-arrow-right reply-btn"></i> Forward</a></li>
+                    <li><a href="#"><i class="icon-print"></i> Print</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="icon-ban-circle"></i> Spam</a></li>
+                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="email-date pull-right">
+            <%= this.formatDate(timestamp) %>
+        </div>
+    </div>
+</div>
+<div class="email-body">
+    <%= body %>
+</div>
+<% if (attachment) { %>
+    <%
+        attachments = attachments.split(",");
+        attachmentsCount = attachments.length
+    %>
+    <div class="email-attachments">
+        <div class="row-fluid">
+            <div class="span6">
+                <hr>
+                <p class="details"><strong><%= attachmentsCount %> attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
+                    &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
+                <% i = 1 %>
+                <% _.each(attachments, function(attachment){ %>
+                    <% size = Math.round(Math.random()*1000) %>
+                    <section class="attachment">
+                        <img src="<%= attachment %>" alt=""/>
+                        <h5 class="title">some-cool-image<%= i++ %>.jpg</h5>
+                        <p class="details">
+                            <%= size %>K  &nbsp;&nbsp;
+                            <a href="#">View</a> &nbsp;&nbsp;
+                            <a href="#">Download</a>
+                        </p>
+                    </section>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+<% } %>
+</script>
+
+<script type="text/template" id="compose-view-template">
+    <form id="email-compose" class="form-horizontal form-email-compose" method="POST" enctype="multipart/form-data">
+        <div class="control-group">
+            <label for="input-to">
+                <input type="email" id="input-to" placeholder="To" class="input-transparent input-block-level"
+                       value="<%= receiver %>">
+            </label>
+        </div>
+        <div class="control-group">
+            <label for="input-subject">
+                <input type="text" id="input-subject" placeholder="Subject" class="input-transparent input-block-level"
+                       value="<%= subject %>">
+            </label>
+        </div>
+        <div class="control-group no-margin">
+            <label>
+                <textarea rows="12" class="input-block-level input-transparent" id="email-body"><%- body %></textarea>
+            </label>
+        </div>
+        <div class="control-group">
+            <div class="fileupload-buttonbar">
+                <span class="btn btn-small btn-transparent fileinput-button">
+                    <i class="icon-paper-clip"></i>
+                    Attach files...
+                    <input type="file" name="files[]" multiple="">
+                </span>
+            </div>
+            <table role="presentation" class="table table-striped no-margin"><tbody class="files"></tbody></table>
+        </div>
+        <div class="control-group">
+            <button type="submit" id="compose-send-button" class="btn btn-small btn-primary">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+            <button type="button" id="compose-save-button" class="btn btn-small btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+            <button type="reset" id="compose-discard-button" class="btn btn-small btn-transparent">Discard</button>
+        </div>
+    </form>
+</script>
+
+<script id="template-upload" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td class="preview"><span class="fade"></span></td>
+        <td class="name"><span>{%=file.name%}</span></td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        {% if (file.error) { %}
+        <td class="error" colspan="2"><span class="label label-important">Error</span> {%=file.error%}</td>
+        {% } else if (o.files.valid && !i) { %}
+        <td>
+            <div class="progress progress-inverse progress-small progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="bar" style="width:0%;"></div>
+            </div>
+        </td>
+        <td>{% if (!o.options.autoUpload) { %}
+            <button class="btn btn-primary btn-small start">
+                <i class="icon-upload"></i>
+                <span>Start</span>
+            </button>
+            {% } %}</td>
+        {% } else { %}
+        <td colspan="2"></td>
+        {% } %}
+        <td>{% if (!i) { %}
+            <button class="btn btn-transparent btn-small cancel">
+                <i class="icon-ban-circle"></i>
+                <span>Cancel</span>
+            </button>
+            {% } %}</td>
+    </tr>
+    {% } %}
+</script>
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        {% if (file.error) { %}
+        <td></td>
+        <td class="name"><span>{%=file.name%}</span></td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        <td class="error" colspan="2"><span class="label label-important">Error</span> {%=file.error%}</td>
+        {% } else { %}
+        <td class="preview">{% if (file.thumbnail_url) { %}
+            <a href="{%=file.url%}" title="{%=file.name%}" data-gallery="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
+            {% } %}</td>
+        <td class="name">
+            <a href="{%=file.url%}" title="{%=file.name%}" data-gallery="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
+        </td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        <td colspan="2"></td>
+        {% } %}
+        <td>
+            <button class="btn btn-transparent btn-small delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            <i class="icon-trash"></i>
+            <span>Delete</span>
+            </button>
+        </td>
+    </tr>
+    {% } %}
+</script>
+</body>
