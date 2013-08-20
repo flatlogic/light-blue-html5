@@ -374,7 +374,7 @@ $(function(){
                 });
 
                 this.$('#email-compose').fileupload({
-                    url: 'server/php/',
+                    url: '../server/php/',
                     autoUpload: true
                 });
             }
