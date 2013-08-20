@@ -1212,11 +1212,17 @@ input.parsley-error{
   }
 }
 
-input.input-transparent{
-  border: none;
-  color: $textColor;
-  background-color: $transparentBackground;
-  @include placeholder(rgba(#eee, .76));
+input, textarea{
+ &.input-transparent{
+   border: none;
+   color: $textColor;
+   background-color: $transparentBackground;
+   @include placeholder(rgba(#eee, .76));
+
+   &:focus{
+     color: $textColor;
+   }
+ }
 }
 
 input.input-padding-increased{
@@ -2004,6 +2010,24 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
         font-weight: bold;
       }
 
+    }
+  }
+
+  .form-email-compose{
+    .control-label{
+      width: 46px;
+    }
+
+    .controls{
+      margin-left: 51px;
+    }
+
+    .wysihtml5-sandbox{
+      width: 100% !important;
+    }
+
+    .control-group{
+      margin-bottom: $baseLineHeight / 2;
     }
   }
 }

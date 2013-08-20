@@ -300,47 +300,81 @@
                                     </label>
                                 </form>
                                 <div id="mailbox-content" class="mailbox-content">
-                                    <table id="folder-view" class="folder-view table table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th colspan="3" id="folder-actions">
-                                                <input id="toggle-all" type="checkbox"/>
-                                                <span class="btn-group">
-                                                    <a class="btn btn-small" href="#" data-toggle="dropdown">
-                                                        Select
-                                                        <i class="icon-angle-down "></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li><a href="#">All</a></li>
-                                                        <li><a href="#">None</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Read</a></li>
-                                                        <li><a href="#">Unread</a></li>
-                                                    </ul>
-                                                </span>
-                                            </th>
-                                            <th colspan="3" class="total-pages">
-                                                1-30 of 1,421
-                                                <button class="btn btn-mini">
-                                                    <i class="icon-angle-left icon-large"></i>
-                                                </button>
-                                                <button class="btn btn-mini">
-                                                    <i class="icon-angle-right icon-large"></i>
-                                                </button>
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td class="tiny-column"><input type="checkbox"/></td>
-                                            <td class="tiny-column"><i class="icon-star"></i></td>
-                                            <td class="name hidden-phone">Philip Daineka</td>
-                                            <td class="subject">Light Blue template</td>
-                                            <td class="tiny-column"><i class="icon-paper-clip"></i></td>
-                                            <td class="date">Aug 13</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                    <!--<table id="folder-view" class="folder-view table table-striped">-->
+                                        <!--<thead>-->
+                                        <!--<tr>-->
+                                            <!--<th colspan="3" id="folder-actions">-->
+                                                <!--<input id="toggle-all" type="checkbox"/>-->
+                                                <!--<span class="btn-group">-->
+                                                    <!--<a class="btn btn-small" href="#" data-toggle="dropdown">-->
+                                                        <!--Select-->
+                                                        <!--<i class="icon-angle-down "></i>-->
+                                                    <!--</a>-->
+                                                    <!--<ul class="dropdown-menu">-->
+                                                        <!--<li><a href="#">All</a></li>-->
+                                                        <!--<li><a href="#">None</a></li>-->
+                                                        <!--<li class="divider"></li>-->
+                                                        <!--<li><a href="#">Read</a></li>-->
+                                                        <!--<li><a href="#">Unread</a></li>-->
+                                                    <!--</ul>-->
+                                                <!--</span>-->
+                                            <!--</th>-->
+                                            <!--<th colspan="3" class="total-pages">-->
+                                                <!--1-30 of 1,421-->
+                                                <!--<button class="btn btn-mini">-->
+                                                    <!--<i class="icon-angle-left icon-large"></i>-->
+                                                <!--</button>-->
+                                                <!--<button class="btn btn-mini">-->
+                                                    <!--<i class="icon-angle-right icon-large"></i>-->
+                                                <!--</button>-->
+                                            <!--</th>-->
+                                        <!--</tr>-->
+                                        <!--</thead>-->
+                                        <!--<tbody>-->
+                                        <!--<tr>-->
+                                            <!--<td class="tiny-column"><input type="checkbox"/></td>-->
+                                            <!--<td class="tiny-column"><i class="icon-star"></i></td>-->
+                                            <!--<td class="name hidden-phone">Philip Daineka</td>-->
+                                            <!--<td class="subject">Light Blue template</td>-->
+                                            <!--<td class="tiny-column"><i class="icon-paper-clip"></i></td>-->
+                                            <!--<td class="date">Aug 13</td>-->
+                                        <!--</tr>-->
+                                        <!--</tbody>-->
+                                    <!--</table>-->
+                                    <div id="compose-view" class="compose-view">
+                                        <form id="email-compose" class="form-horizontal form-email-compose" method="POST" enctype="multipart/form-data">
+                                            <div class="control-group">
+                                                <label for="input-to">
+                                                    <input type="email" id="input-to" placeholder="To" class="input-transparent input-block-level">
+                                                </label>
+                                            </div>
+                                            <div class="control-group">
+                                                <label for="input-subject">
+                                                    <input type="text" id="input-subject" placeholder="Subject" class="input-transparent input-block-level">
+                                                </label>
+                                            </div>
+                                            <div class="control-group no-margin">
+                                                <label>
+                                                    <textarea rows="10" class="input-block-level input-transparent" id="email-body"></textarea>
+                                                </label>
+                                            </div>
+                                            <div class="control-group">
+                                                <div class="fileupload-buttonbar">
+                                                    <span class="btn btn-small btn-transparent fileinput-button">
+                                                        <i class="icon-paper-clip"></i>
+                                                        Attach files...
+                                                        <input type="file" name="files[]" multiple="">
+                                                    </span>
+                                                </div>
+                                                <table role="presentation" class="table table-striped no-margin"><tbody class="files"></tbody></table>
+                                            </div>
+                                            <div class="control-group">
+                                                <button type="submit" class="btn btn-small btn-primary">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+                                                <button type="button" class="btn btn-small btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+                                                <button type="reset" class="btn btn-small btn-transparent">Discard</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -377,6 +411,20 @@
 <script src="js/bootstrap/bootstrap-dropdown.js"></script>
 <script src="js/bootstrap/bootstrap-modal.js"></script>
 <script src="js/bootstrap/bootstrap-tab.js"> </script>
+
+<!-- bootstrap plugins -->
+<script src="lib/wysihtml5/wysihtml5-0.3.0_rc2.js"></script>
+<script src="lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+
+<!-- fileupload stuff. see component_fileupload.html -->
+<script src="lib/vendor/jquery.ui.widget.js"></script>
+<script src="lib/vendor/http_blueimp.github.io_JavaScript-Templates_js_tmpl.js"></script>
+<script src="lib/vendor/http_blueimp.github.io_JavaScript-Load-Image_js_load-image.js"></script>
+<script src="lib/vendor/http_blueimp.github.io_JavaScript-Canvas-to-Blob_js_canvas-to-blob.js"></script>
+<script src="lib/jquery.iframe-transport.js"></script>
+<script src="lib/jquery.fileupload.js"></script>
+<script src="lib/jquery.fileupload-fp.js"></script>
+<script src="lib/jquery.fileupload-ui.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
@@ -582,5 +630,66 @@
         </div>
     </div>
 <% } %>
+</script>
+
+<script id="template-upload" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td class="preview"><span class="fade"></span></td>
+        <td class="name"><span>{%=file.name%}</span></td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        {% if (file.error) { %}
+        <td class="error" colspan="2"><span class="label label-important">Error</span> {%=file.error%}</td>
+        {% } else if (o.files.valid && !i) { %}
+        <td>
+            <div class="progress progress-inverse progress-small progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="bar" style="width:0%;"></div>
+            </div>
+        </td>
+        <td>{% if (!o.options.autoUpload) { %}
+            <button class="btn btn-primary btn-small start">
+                <i class="icon-upload"></i>
+                <span>Start</span>
+            </button>
+            {% } %}</td>
+        {% } else { %}
+        <td colspan="2"></td>
+        {% } %}
+        <td>{% if (!i) { %}
+            <button class="btn btn-transparent btn-small cancel">
+                <i class="icon-ban-circle"></i>
+                <span>Cancel</span>
+            </button>
+            {% } %}</td>
+    </tr>
+    {% } %}
+</script>
+<!-- The template to display files available for download -->
+<script id="template-download" type="text/x-tmpl">
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade">
+        {% if (file.error) { %}
+        <td></td>
+        <td class="name"><span>{%=file.name%}</span></td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        <td class="error" colspan="2"><span class="label label-important">Error</span> {%=file.error%}</td>
+        {% } else { %}
+        <td class="preview">{% if (file.thumbnail_url) { %}
+            <a href="{%=file.url%}" title="{%=file.name%}" data-gallery="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
+            {% } %}</td>
+        <td class="name">
+            <a href="{%=file.url%}" title="{%=file.name%}" data-gallery="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
+        </td>
+        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
+        <td colspan="2"></td>
+        {% } %}
+        <td>
+            <button class="btn btn-transparent btn-small delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            <i class="icon-trash"></i>
+            <span>Delete</span>
+            </button>
+        </td>
+    </tr>
+    {% } %}
 </script>
 </body>
