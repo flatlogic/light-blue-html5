@@ -80,7 +80,7 @@
 			cursor: pointer;
             @include border-radius($baseBorderRadius);
 			&:hover {
-				background: $grayLighter;
+				background: $gray-lighter;
 			}
 			&.active {
               //okendoken. commenting this out
@@ -90,7 +90,7 @@
 				//text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
 			&.old {
-				color: $grayLight;
+				color: $gray-light;
 			}
 		}
 	}
@@ -108,7 +108,7 @@
 	thead tr:first-child th {
 		cursor: pointer;
 		&:hover{
-			background: $grayLighter;
+			background: $gray-lighter;
 		}
 	}
 	/*.dow {

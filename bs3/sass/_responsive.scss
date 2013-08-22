@@ -291,7 +291,7 @@
 
     h3{
       font-size: $fontSizeLarge;
-      line-height: $baseLineHeight + 2;
+      line-height: $line-height-base + 2;
     }
   }
 
@@ -328,7 +328,6 @@
   }
 
   .page-header .search-query{
-    @include input-block-level();
     &:focus{
       width: 100%;
     }
