@@ -184,6 +184,10 @@ textarea,
   border-top: none;
 }
 
+.table thead > tr > th{
+  border-bottom: none;
+}
+
 /***************************/
 /*        Dropdowns        */
 /***************************/
@@ -216,6 +220,12 @@ textarea,
 .btn {
   border-color: #c5c5c5;
   border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+}
+
+.btn-xs{
+  font-size: $font-size-mini;
+  line-height: $line-height-base;
+  padding: 0 6px;
 }
 
 /***************************/
@@ -466,8 +476,13 @@ a.thumbnail:focus {
 
 .label,
 .badge {
+  display: inline-block;
+  @include box-sizing(content-box);
+  padding: 2px 4px;
+  line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
   font-weight: $font-weight-base;
+  font-size: $font-size-small;
 }
 
 @each $item in label, badge {

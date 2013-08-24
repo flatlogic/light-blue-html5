@@ -228,6 +228,7 @@ input.parsley-error{
 .content{
   padding: 25px 2.5641%;
   @include transition(margin-top .35s ease);
+  max-width: none;
 }
 
 /***********************************/
@@ -271,6 +272,7 @@ input.parsley-error{
 
 .widget{
   @include border-radius($widget-border-radius);
+  @include box-sizing(content-box);
   //@include box-shadow($widget-shadow);
   padding: $widget-padding;
   color: $text-color;
@@ -534,6 +536,10 @@ input.parsley-error{
 
   @include border-radius($widget-border-radius);
 
+  .navbar{
+    min-height: 40px;
+  }
+
   .navbar .nav li.dropdown.open > .dropdown-toggle,
   .navbar .nav li.dropdown.active > .dropdown-toggle,
   .navbar .nav li.dropdown.open.active > .dropdown-toggle {
@@ -600,8 +606,10 @@ input.parsley-error{
   }
 
   .search-query{
-    border: none;
+    @include box-sizing(content-box);
+    padding: 4px 14px;
     color: $text-color;
+    border: none;
     background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
     padding-left: 26px;
     @include placeholder(rgba(#eee, .76));
@@ -613,8 +621,9 @@ input.parsley-error{
     }
   }
 
-  .navbar-search{
-    margin-right: 15px;
+  .navbar-form{
+    margin: 5px 15px 0 0;
+    padding: 0;
   }
 }
 
