@@ -411,7 +411,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
-  line-height: 1.42857;
+  line-height: 20px;
   color: #f8f8f8;
   background-color: white;
 }
@@ -471,7 +471,7 @@ img {
 /* line 89, D:/projects/admin/bs3/sass/bootstrap-original/_scaffolding.scss */
 .img-thumbnail, .thumbnail {
   padding: 4px;
-  line-height: 1.42857;
+  line-height: 20px;
   background-color: white;
   border: 1px solid #dddddd;
   border-radius: 1px;
@@ -700,7 +700,7 @@ dl {
 /* line 135, D:/projects/admin/bs3/sass/bootstrap-original/_type.scss */
 dt,
 dd {
-  line-height: 1.42857;
+  line-height: 20px;
 }
 
 /* line 138, D:/projects/admin/bs3/sass/bootstrap-original/_type.scss */
@@ -772,7 +772,7 @@ blockquote p:last-child {
 /* line 194, D:/projects/admin/bs3/sass/bootstrap-original/_type.scss */
 blockquote small {
   display: block;
-  line-height: 1.42857;
+  line-height: 20px;
   color: #999999;
 }
 /* line 198, D:/projects/admin/bs3/sass/bootstrap-original/_type.scss */
@@ -813,7 +813,7 @@ address {
   display: block;
   margin-bottom: 20px;
   font-style: normal;
-  line-height: 1.42857;
+  line-height: 20px;
 }
 
 /* line 8, D:/projects/admin/bs3/sass/bootstrap-original/_code.scss */
@@ -838,7 +838,7 @@ pre {
   padding: 9.5px;
   margin: 0 0 10px;
   font-size: 12px;
-  line-height: 1.42857;
+  line-height: 20px;
   word-break: break-all;
   word-wrap: break-word;
   color: #555555;
@@ -1824,7 +1824,7 @@ th {
 .table tfoot > tr > th,
 .table tfoot > tr > td {
   padding: 8px;
-  line-height: 1.42857;
+  line-height: 20px;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -2135,10 +2135,10 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
-  padding: 6px 12px;
+  height: 30px;
+  padding: 4px 12px;
   font-size: 13px;
-  line-height: 1.42857;
+  line-height: 20px;
   color: #666666;
   vertical-align: middle;
   background-color: white;
@@ -2243,10 +2243,10 @@ input[type="checkbox"],
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
+  height: 26px;
+  padding: 2px 10px;
+  font-size: 11.05px;
+  line-height: 1.9;
   border-radius: 0;
 }
 
@@ -2254,8 +2254,8 @@ input[type="checkbox"],
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn {
-  height: 30px;
-  line-height: 30px;
+  height: 26px;
+  line-height: 26px;
 }
 
 /* line 727, D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss */
@@ -2269,9 +2269,9 @@ textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 44px;
-  padding: 10px 16px;
-  font-size: 17px;
+  height: 39px;
+  padding: 8px 18px;
+  font-size: 16.25px;
   line-height: 1.33;
   border-radius: 1px;
 }
@@ -2280,8 +2280,8 @@ textarea.input-sm, .input-group-sm > textarea.form-control,
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn {
-  height: 44px;
-  line-height: 44px;
+  height: 39px;
+  line-height: 39px;
 }
 
 /* line 727, D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss */
@@ -2366,7 +2366,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 /* line 257, D:/projects/admin/bs3/sass/bootstrap-original/_forms.scss */
 .form-control-static {
   margin-bottom: 0;
-  padding-top: 7px;
+  padding-top: 5px;
 }
 
 /* line 268, D:/projects/admin/bs3/sass/bootstrap-original/_forms.scss */
@@ -2414,7 +2414,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 7px;
+  padding-top: 5px;
 }
 /* line 342, D:/projects/admin/bs3/sass/bootstrap-original/_forms.scss */
 .form-horizontal .form-group {
@@ -2442,11 +2442,11 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 /* line 10, D:/projects/admin/bs3/sass/bootstrap-original/_buttons.scss */
 .btn {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 4px 12px;
   margin-bottom: 0;
   font-size: 13px;
   font-weight: 300;
-  line-height: 1.42857;
+  line-height: 20px;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -2710,8 +2710,8 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 
 /* line 124, D:/projects/admin/bs3/sass/bootstrap-original/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 17px;
+  padding: 8px 18px;
+  font-size: 16.25px;
   line-height: 1.33;
   border-radius: 1px;
 }
@@ -2720,9 +2720,9 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 .btn-sm, .btn-group-sm > .btn,
 .btn-xs,
 .btn-group-xs > .btn {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
+  padding: 2px 10px;
+  font-size: 11.05px;
+  line-height: 1.9;
   border-radius: 0;
 }
 
@@ -3861,7 +3861,7 @@ input[type="button"].btn-block {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.42857;
+  line-height: 20px;
   color: #666666;
   white-space: nowrap;
 }
@@ -3908,8 +3908,8 @@ input[type="button"].btn-block {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
-  line-height: 1.42857;
+  font-size: 11.05px;
+  line-height: 20px;
   color: #999999;
 }
 
@@ -4244,7 +4244,7 @@ input[type="button"].btn-block {
 
 /* line 59, D:/projects/admin/bs3/sass/bootstrap-original/_input-groups.scss */
 .input-group-addon {
-  padding: 6px 12px;
+  padding: 4px 12px;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -4257,16 +4257,16 @@ input[type="button"].btn-block {
 .input-group-addon.input-sm,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 2px 10px;
+  font-size: 11.05px;
   border-radius: 0;
 }
 /* line 75, D:/projects/admin/bs3/sass/bootstrap-original/_input-groups.scss */
 .input-group-addon.input-lg,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
-  padding: 10px 16px;
-  font-size: 17px;
+  padding: 8px 18px;
+  font-size: 16.25px;
   border-radius: 1px;
 }
 /* line 83, D:/projects/admin/bs3/sass/bootstrap-original/_input-groups.scss */
@@ -4397,7 +4397,7 @@ input[type="button"].btn-block {
 /* line 79, D:/projects/admin/bs3/sass/bootstrap-original/_navs.scss */
 .nav-tabs > li > a {
   margin-right: 2px;
-  line-height: 1.42857;
+  line-height: 20px;
   border: 1px solid transparent;
   border-radius: 1px 1px 0 0;
 }
@@ -4678,7 +4678,7 @@ input[type="button"].btn-block {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 17px;
+  font-size: 16.25px;
   line-height: 20px;
 }
 /* line 156, D:/projects/admin/bs3/sass/bootstrap-original/_navbar.scss */
@@ -4794,8 +4794,8 @@ input[type="button"].btn-block {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   /* line 288, D:/projects/admin/bs3/sass/bootstrap-original/_navbar.scss */
@@ -4839,8 +4839,8 @@ input[type="button"].btn-block {
 
 /* line 334, D:/projects/admin/bs3/sass/bootstrap-original/_navbar.scss */
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* line 343, D:/projects/admin/bs3/sass/bootstrap-original/_navbar.scss */
@@ -5109,8 +5109,8 @@ input[type="button"].btn-block {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 6px 12px;
-  line-height: 1.42857;
+  padding: 4px 12px;
+  line-height: 20px;
   text-decoration: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -5160,8 +5160,8 @@ input[type="button"].btn-block {
 /* line 459, D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss */
 .pagination-lg > li > a,
 .pagination-lg > li > span {
-  padding: 10px 16px;
-  font-size: 17px;
+  padding: 8px 18px;
+  font-size: 16.25px;
 }
 /* line 465, D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss */
 .pagination-lg > li:first-child > a,
@@ -5179,8 +5179,8 @@ input[type="button"].btn-block {
 /* line 459, D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss */
 .pagination-sm > li > a,
 .pagination-sm > li > span {
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 2px 10px;
+  font-size: 11.05px;
 }
 /* line 465, D:/projects/admin/bs3/sass/bootstrap-original/_mixins.scss */
 .pagination-sm > li:first-child > a,
@@ -5335,7 +5335,7 @@ input[type="button"].btn-block {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
+  font-size: 11.05px;
   font-weight: bold;
   color: white;
   line-height: 1;
@@ -5381,7 +5381,7 @@ a.list-group-item.active > .badge,
   margin-bottom: 30px;
   font-size: 19.5px;
   font-weight: 200;
-  line-height: 2.14286;
+  line-height: 30px;
   color: inherit;
   background-color: #eeeeee;
 }
@@ -5606,7 +5606,7 @@ a.thumbnail:focus {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 12px;
+  font-size: 11.05px;
   color: white;
   text-align: center;
   background-color: #618fb0;
@@ -6177,7 +6177,7 @@ body.modal-open {
 .modal-header {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
-  min-height: 16.42857px;
+  min-height: 35px;
 }
 
 /* line 92, D:/projects/admin/bs3/sass/bootstrap-original/_modals.scss */
@@ -6188,7 +6188,7 @@ body.modal-open {
 /* line 97, D:/projects/admin/bs3/sass/bootstrap-original/_modals.scss */
 .modal-title {
   margin: 0;
-  line-height: 1.42857;
+  line-height: 20px;
 }
 
 /* line 104, D:/projects/admin/bs3/sass/bootstrap-original/_modals.scss */
@@ -6251,7 +6251,7 @@ body.modal-open {
   z-index: 1030;
   display: block;
   visibility: visible;
-  font-size: 12px;
+  font-size: 11.05px;
   line-height: 1.4;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -7998,7 +7998,7 @@ textarea + .help-block,
 /***************************/
 /* line 399, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tooltip {
-  font-size: 12px;
+  font-size: 11.05px;
 }
 
 /* line 403, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
@@ -12079,16 +12079,16 @@ form {
   margin-bottom: 0;
 }
 
-/* line 176, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 184, D:/projects/admin/bs3/sass/_variables.scss */
 .sidebar.sidebar-icons {
   width: auto;
   margin: 80px 0 0 1.6%;
 }
-/* line 180, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 188, D:/projects/admin/bs3/sass/_variables.scss */
 .sidebar.sidebar-icons h2 {
   display: none;
 }
-/* line 184, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 192, D:/projects/admin/bs3/sass/_variables.scss */
 .sidebar.sidebar-icons .accordion-body li a {
   width: 1px;
   padding-left: 10px;
@@ -12097,27 +12097,27 @@ form {
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
-/* line 190, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 198, D:/projects/admin/bs3/sass/_variables.scss */
 .sidebar.sidebar-icons .accordion-body.in li a {
   width: 80px;
 }
 
-/* line 196, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 204, D:/projects/admin/bs3/sass/_variables.scss */
 .side-nav.sidebar-icons li a {
   padding: 8px 16px;
   text-align: center;
 }
-/* line 200, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 208, D:/projects/admin/bs3/sass/_variables.scss */
 .side-nav.sidebar-icons li a i[class*=icon] {
   margin-right: 0;
   float: none;
 }
-/* line 206, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 214, D:/projects/admin/bs3/sass/_variables.scss */
 .side-nav.sidebar-icons li .name {
   display: none;
 }
 
-/* line 212, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 220, D:/projects/admin/bs3/sass/_variables.scss */
 .sidebar-on-right .side-nav.sidebar-icons > li.active > a,
 .side-nav.sidebar-icons > li.active > a {
   border-left: none;
@@ -12125,22 +12125,22 @@ form {
   padding-left: 16px;
 }
 
-/* line 218, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 226, D:/projects/admin/bs3/sass/_variables.scss */
 .wrap.sidebar-icons {
   margin-left: 62px;
 }
 
-/* line 223, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 231, D:/projects/admin/bs3/sass/_variables.scss */
 .sidebar-hidden .sidebar {
   display: none;
 }
-/* line 227, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 235, D:/projects/admin/bs3/sass/_variables.scss */
 .sidebar-hidden .wrap {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 233, D:/projects/admin/bs3/sass/_variables.scss */
+/* line 241, D:/projects/admin/bs3/sass/_variables.scss */
 .logo.sidebar-icons {
   left: 1.6%;
   padding-left: 5px;
@@ -12249,7 +12249,7 @@ input.parsley-error {
 
 /* line 40, D:/projects/admin/bs3/sass/_base.scss */
 .parsley-error-list {
-  font-size: 12px;
+  font-size: 11.05px;
 }
 /* line 43, D:/projects/admin/bs3/sass/_base.scss */
 .parsley-error-list li {
@@ -12307,8 +12307,8 @@ input.parsley-error {
 .sidebar .settings .btn-auto {
   display: none;
 }
-/* line 243, D:/projects/admin/bs3/sass/_variables.scss */
-.sidebar.sidebar-icons .settings .btn-small {
+/* line 251, D:/projects/admin/bs3/sass/_variables.scss */
+.sidebar.sidebar-icons .settings .btn-sm, .sidebar.sidebar-icons .settings .btn-group-sm > .btn {
   padding: 2px 8px;
 }
 /* line 99, D:/projects/admin/bs3/sass/_base.scss */
@@ -12328,7 +12328,7 @@ input.parsley-error {
 .side-nav li i[class*=icon] {
   line-height: 20px;
   float: right;
-  font-size: 17px;
+  font-size: 16.25px;
 }
 /* line 116, D:/projects/admin/bs3/sass/_base.scss */
 .side-nav li a:hover, .side-nav li a:focus {
@@ -12616,7 +12616,7 @@ input.parsley-error {
 .pie-chart .visits {
   font-weight: 300;
   color: white;
-  font-size: 17px;
+  font-size: 16.25px;
 }
 
 /* line 389, D:/projects/admin/bs3/sass/_base.scss */
@@ -12656,13 +12656,13 @@ input.parsley-error {
 }
 /* line 421, D:/projects/admin/bs3/sass/_base.scss */
 .pie-chart-footer .control .key {
-  font-size: 12px;
+  font-size: 11.05px;
   font-weight: normal;
   margin: 0;
 }
 /* line 427, D:/projects/admin/bs3/sass/_base.scss */
 .pie-chart-footer .control .value {
-  font-size: 17px;
+  font-size: 16.25px;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -12687,7 +12687,7 @@ input.parsley-error {
 .visits-info .value {
   margin-top: 16px;
   margin-bottom: 16px;
-  font-size: 17px;
+  font-size: 16.25px;
 }
 
 /***********************************/
@@ -12742,7 +12742,7 @@ input.parsley-error {
 }
 /* line 507, D:/projects/admin/bs3/sass/_base.scss */
 .users-list .time {
-  font-size: 12px;
+  font-size: 11.05px;
   color: #d2d2d2;
 }
 /* line 512, D:/projects/admin/bs3/sass/_base.scss */
@@ -12751,7 +12751,7 @@ input.parsley-error {
 }
 /* line 516, D:/projects/admin/bs3/sass/_base.scss */
 .users-list .comment {
-  font-size: 12px;
+  font-size: 11.05px;
   color: #f8f8f8;
   line-height: 1.3em;
 }
@@ -12825,7 +12825,7 @@ input.parsley-error {
   position: absolute;
   bottom: 2px;
   right: 2px;
-  font-size: 10px;
+  font-size: 9.1px;
   font-weight: normal;
   background: rgba(51, 51, 51, 0.55);
   color: rgba(255, 255, 255, 0.9);
@@ -12937,7 +12937,7 @@ input.parsley-error {
 .notifications .alert {
   background: rgba(51, 51, 51, 0.4);
   border: none;
-  font-size: 12px;
+  font-size: 11.05px;
   margin-bottom: 0;
   padding: 2px 9px;
   color: white;
@@ -13007,7 +13007,7 @@ input.parsley-error {
 }
 /* line 717, D:/projects/admin/bs3/sass/_base.scss */
 .message .text {
-  font-size: 12px;
+  font-size: 11.05px;
   color: #ddd;
 }
 
@@ -13056,7 +13056,7 @@ input.parsley-error {
 /* line 760, D:/projects/admin/bs3/sass/_base.scss */
 .support-ticket .details {
   margin-left: 30px;
-  font-size: 12px;
+  font-size: 11.05px;
 }
 
 /***********************************/
@@ -13076,7 +13076,7 @@ input.parsley-error {
   border: none;
   color: white;
   width: 114px;
-  font-size: 12px;
+  font-size: 11.05px;
   left: -76px !important;
   top: 30px !important;
 }
@@ -13098,7 +13098,7 @@ input.parsley-error {
   margin-top: 0;
 }
 /* line 799, D:/projects/admin/bs3/sass/_base.scss */
-.settings-popover .btn-small {
+.settings-popover .btn-sm, .settings-popover .btn-group-sm > .btn {
   padding: 0 7px;
 }
 
@@ -13198,7 +13198,7 @@ input.parsley-error {
   padding: 20px 15px 0 15px;
 }
 /* line 886, D:/projects/admin/bs3/sass/_base.scss */
-.login-widget .form-actions .btn-large, .registration-widget .form-actions .btn-large {
+.login-widget .form-actions .btn-lg, .login-widget .form-actions .btn-group-lg > .btn, .registration-widget .form-actions .btn-lg, .registration-widget .form-actions .btn-group-lg > .btn {
   padding: 10px 18px;
 }
 /* line 890, D:/projects/admin/bs3/sass/_base.scss */
@@ -13299,7 +13299,7 @@ input.parsley-error {
 }
 /* line 970, D:/projects/admin/bs3/sass/_base.scss */
 .chat-message .time {
-  font-size: 12px;
+  font-size: 11.05px;
   line-height: 1.5em;
   text-align: center;
   color: #d2d2d2;
@@ -13520,7 +13520,7 @@ input.parsley-error {
 }
 /* line 1179, D:/projects/admin/bs3/sass/_base.scss */
 .section small {
-  font-size: 12px;
+  font-size: 11.05px;
   color: #cfcfcf;
   font-weight: bold;
 }
@@ -13532,7 +13532,7 @@ input.parsley-error {
 
 /* line 1190, D:/projects/admin/bs3/sass/_base.scss */
 .help-block {
-  font-size: 12px;
+  font-size: 11.05px;
 }
 
 /* line 1196, D:/projects/admin/bs3/sass/_base.scss */
@@ -14025,7 +14025,7 @@ input.input-padding-increased[type=search], input.input-padding-increased.search
 }
 /* line 1567, D:/projects/admin/bs3/sass/_base.scss */
 .feed-item-body .time {
-  font-size: 12px;
+  font-size: 11.05px;
   line-height: 1.5em;
   color: #d2d2d2;
 }
@@ -14532,7 +14532,7 @@ table.table thead .sorting_desc_disabled {
 /* line 1985, D:/projects/admin/bs3/sass/_base.scss */
 .mailbox-content .email-details-content .email {
   color: #d2d2d2;
-  font-size: 12px;
+  font-size: 11.05px;
 }
 /* line 1990, D:/projects/admin/bs3/sass/_base.scss */
 .mailbox-content .email-details-content .receiver {
@@ -14764,16 +14764,16 @@ table.table thead .sorting_desc_disabled {
   }
 }
 @media (max-width: 1048px) {
-  /* line 176, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 184, D:/projects/admin/bs3/sass/_variables.scss */
   .sidebar {
     width: auto;
     margin: 80px 0 0 1.6%;
   }
-  /* line 180, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 188, D:/projects/admin/bs3/sass/_variables.scss */
   .sidebar h2 {
     display: none;
   }
-  /* line 184, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 192, D:/projects/admin/bs3/sass/_variables.scss */
   .sidebar .accordion-body li a {
     width: 1px;
     padding-left: 10px;
@@ -14782,27 +14782,27 @@ table.table thead .sorting_desc_disabled {
     -o-transition: width 0.3s;
     transition: width 0.3s;
   }
-  /* line 190, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 198, D:/projects/admin/bs3/sass/_variables.scss */
   .sidebar .accordion-body.in li a {
     width: 80px;
   }
 
-  /* line 196, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 204, D:/projects/admin/bs3/sass/_variables.scss */
   .side-nav li a {
     padding: 8px 16px;
     text-align: center;
   }
-  /* line 200, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 208, D:/projects/admin/bs3/sass/_variables.scss */
   .side-nav li a i[class*=icon] {
     margin-right: 0;
     float: none;
   }
-  /* line 206, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 214, D:/projects/admin/bs3/sass/_variables.scss */
   .side-nav li .name {
     display: none;
   }
 
-  /* line 212, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 220, D:/projects/admin/bs3/sass/_variables.scss */
   .sidebar-on-right .side-nav > li.active > a,
   .side-nav > li.active > a {
     border-left: none;
@@ -14810,22 +14810,22 @@ table.table thead .sorting_desc_disabled {
     padding-left: 16px;
   }
 
-  /* line 218, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 226, D:/projects/admin/bs3/sass/_variables.scss */
   .wrap {
     margin-left: 62px;
   }
 
-  /* line 223, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 231, D:/projects/admin/bs3/sass/_variables.scss */
   .sidebar-hidden .sidebar {
     display: none;
   }
-  /* line 227, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 235, D:/projects/admin/bs3/sass/_variables.scss */
   .sidebar-hidden .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 233, D:/projects/admin/bs3/sass/_variables.scss */
+  /* line 241, D:/projects/admin/bs3/sass/_variables.scss */
   .logo {
     left: 1.6%;
     padding-left: 5px;
@@ -14833,8 +14833,8 @@ table.table thead .sorting_desc_disabled {
     top: 13px;
   }
 
-  /* line 243, D:/projects/admin/bs3/sass/_variables.scss */
-  .sidebar .settings .btn-small {
+  /* line 251, D:/projects/admin/bs3/sass/_variables.scss */
+  .sidebar .settings .btn-sm, .sidebar .settings .btn-group-sm > .btn {
     padding: 2px 8px;
   }
   /* line 80, D:/projects/admin/bs3/sass/_responsive.scss */
@@ -15090,7 +15090,7 @@ table.table thead .sorting_desc_disabled {
   }
   /* line 292, D:/projects/admin/bs3/sass/_responsive.scss */
   .widget-404 h3 {
-    font-size: 17px;
+    font-size: 16.25px;
     line-height: 22px;
   }
 

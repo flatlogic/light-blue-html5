@@ -69,19 +69,31 @@ $link-color:            saturate(lighten($blue, 25%), 50%);
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
 $font-size-base:          13px !default;
-$font-size-large:         ceil($font-size-base * 1.25) !default; // 16px
+$font-size-large:         $font-size-base * 1.25 !default; // 16px
 $font-size-larger:        $font-size-base + 1;    // 14px
-$font-size-small:         ceil($font-size-base * 0.85) !default; // 12px
-$font-size-mini:          ceil($font-size-base * 0.75) !default; // 11px
-$font-size-index:         ceil($font-size-base * 0.7) !default; //10px
+$font-size-small:         $font-size-base * 0.85 !default; // 12px
+$font-size-mini:          $font-size-base * 0.75 !default; // 11px
+$font-size-index:         $font-size-base * 0.7 !default; //10px
 
-$line-height-base:        1.428571429 !default;
-$line-height-computed:    20px !default; // ~20px
+$line-height-base:        20px !default;
+$line-height-computed:    $line-height-base !default; // ~20px
 
 $font-weight-base:        300;
 
 // Components
 // -------------------------
+
+$padding-base-vertical:          4px !default;
+$padding-base-horizontal:        12px !default;
+
+$padding-large-vertical:         8px !default;
+$padding-large-horizontal:       18px !default;
+
+$padding-small-vertical:         2px !default;
+$padding-small-horizontal:       10px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.9 !default;
 
 $border-radius-base:             $widget-border-radius !default;
 $border-radius-large:            $border-radius-base !default;
@@ -137,10 +149,6 @@ $state-info-bg:                  $blue !default;
 //table colors
 
 $tableBorder:                       rgba($backgroundGray, .35) !default; // table and cell border
-
-// Component sizing
-
-$paddingLarge:          8px 18px !default; // 44px
 
 // Popovers
 // -------------------------
@@ -240,7 +248,7 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
 
 @mixin sidebar-settings{
   .settings{
-    .btn-small{
+    .btn-sm{
       padding: 2px 8px;
     }
   }

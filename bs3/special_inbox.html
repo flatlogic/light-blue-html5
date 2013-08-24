@@ -87,10 +87,10 @@
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-transparent btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-transparent btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -306,7 +306,7 @@
                                             <th colspan="3" id="folder-actions">
                                                 <input id="toggle-all" type="checkbox"/>
                                                 <span class="btn-group">
-                                                <a class="btn btn-small" href="#" data-toggle="dropdown">
+                                                <a class="btn btn-sm" href="#" data-toggle="dropdown">
                                                     Select
                                                     <i class="icon-angle-down "></i>
                                                 </a>
@@ -321,10 +321,10 @@
                                             </th>
                                             <th colspan="3" class="total-pages">
                                                 1-30 of 1,421
-                                                <button class="btn btn-mini">
+                                                <button class="btn btn-xs">
                                                     <i class="icon-angle-left icon-large"></i>
                                                 </button>
-                                                <button class="btn btn-mini">
+                                                <button class="btn btn-xs">
                                                     <i class="icon-angle-right icon-large"></i>
                                                 </button>
                                             </th>
@@ -407,24 +407,24 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
@@ -434,14 +434,14 @@
     <% if (auto) {%>
     <button type="button"
             data-value="icons"
-            class="btn-icons btn btn-transparent btn-small">Icons</button>
+            class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-transparent btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
     <%} else {%>
     <button type="button"
             data-value="auto"
-            class="btn btn-transparent btn-small">Auto</button>
+            class="btn btn-transparent btn-sm">Auto</button>
     <% } %>
 </script>
 
@@ -449,7 +449,7 @@
 <script type="text/template" id="folder-actions-template">
     <input id="toggle-all" type="checkbox" <%= allSelected ? 'checked' : '' %>/>
     <span class="btn-group">
-        <a class="btn btn-small" href="#" data-toggle="dropdown">
+        <a class="btn btn-sm" href="#" data-toggle="dropdown">
             Select
             <i class="icon-angle-down "></i>
         </a>
@@ -463,7 +463,7 @@
     </span>
     <% if (anySelected) { %>
         <span class="btn-group">
-            <a class="btn btn-small btn-inverse" href="#" data-toggle="dropdown">
+            <a class="btn btn-sm btn-inverse" href="#" data-toggle="dropdown">
                 Actions
                 <i class="icon-angle-down "></i>
             </a>
@@ -501,7 +501,7 @@
             <th colspan="3" id="folder-actions">
                 <input id="toggle-all" type="checkbox"/>
                 <span class="btn-group">
-                    <a class="btn btn-small" href="#" data-toggle="dropdown">
+                    <a class="btn btn-sm" href="#" data-toggle="dropdown">
                         Select
                         <i class="icon-angle-down "></i>
                     </a>
@@ -516,10 +516,10 @@
             </th>
             <th colspan="3" class="total-pages">
                 1-30 of 1,421
-                <button class="btn btn-mini">
+                <button class="btn btn-xs">
                     <i class="icon-angle-left icon-large"></i>
                 </button>
-                <button class="btn btn-mini">
+                <button class="btn btn-xs">
                     <i class="icon-angle-right icon-large"></i>
                 </button>
             </th>
@@ -546,10 +546,10 @@
         </div>
         <div class="email-actions pull-right">
             <div class="btn-group">
-                <button id='email-opened-reply' class="btn btn-small btn-transparent">
+                <button id='email-opened-reply' class="btn btn-sm btn-transparent">
                     <i class="icon-reply"></i> Reply
                 </button>
-                <button class="btn btn-small btn-transparent dropdown-toggle" data-toggle="dropdown">
+                <button class="btn btn-sm btn-transparent dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-angle-down"></i>
                 </button>
                 <ul class="dropdown-menu pull-right">
@@ -621,7 +621,7 @@
         </div>
         <div class="control-group">
             <div class="fileupload-buttonbar">
-                <span class="btn btn-small btn-transparent fileinput-button">
+                <span class="btn btn-sm btn-transparent fileinput-button">
                     <i class="icon-paper-clip"></i>
                     Attach files...
                     <input type="file" name="files[]" multiple="">
@@ -630,9 +630,9 @@
             <table role="presentation" class="table table-striped no-margin"><tbody class="files"></tbody></table>
         </div>
         <div class="control-group">
-            <button type="submit" id="compose-send-button" class="btn btn-small btn-primary">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
-            <button type="button" id="compose-save-button" class="btn btn-small btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
-            <button type="reset" id="compose-discard-button" class="btn btn-small btn-transparent">Discard</button>
+            <button type="submit" id="compose-send-button" class="btn btn-sm btn-primary">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+            <button type="button" id="compose-save-button" class="btn btn-sm btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+            <button type="reset" id="compose-discard-button" class="btn btn-sm btn-transparent">Discard</button>
         </div>
     </form>
 </script>
@@ -652,7 +652,7 @@
             </div>
         </td>
         <td>{% if (!o.options.autoUpload) { %}
-            <button class="btn btn-primary btn-small start">
+            <button class="btn btn-primary btn-sm start">
                 <i class="icon-upload"></i>
                 <span>Start</span>
             </button>
@@ -661,7 +661,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>{% if (!i) { %}
-            <button class="btn btn-transparent btn-small cancel">
+            <button class="btn btn-transparent btn-sm cancel">
                 <i class="icon-ban-circle"></i>
                 <span>Cancel</span>
             </button>
@@ -689,7 +689,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>
-            <button class="btn btn-transparent btn-small delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            <button class="btn btn-transparent btn-sm delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
             <i class="icon-trash"></i>
             <span>Delete</span>
             </button>

@@ -87,10 +87,10 @@
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-transparent btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-transparent btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -297,16 +297,16 @@
                                 </div>
                             </div>
                             <div class="form-actions fileupload-buttonbar no-margin">
-                                <span class="btn btn-small fileinput-button">
+                                <span class="btn btn-sm fileinput-button">
                                         <i class="icon-plus"></i>
                                         <span>Add files...</span>
                                         <input type="file" name="files[]" multiple="">
                                     </span>
-                                <button type="submit" class="btn btn-primary btn-small start">
+                                <button type="submit" class="btn btn-primary btn-sm start">
                                     <i class="icon-upload"></i>
                                     <span>Start upload</span>
                                 </button>
-                                <button type="reset" class="btn btn-inverse btn-small cancel">
+                                <button type="reset" class="btn btn-inverse btn-sm cancel">
                                     <i class="icon-ban-circle"></i>
                                     <span>Cancel upload</span>
                                 </button>
@@ -391,7 +391,7 @@
             </div>
         </td>
         <td>{% if (!o.options.autoUpload) { %}
-            <button class="btn btn-primary btn-small start">
+            <button class="btn btn-primary btn-sm start">
                 <i class="icon-upload"></i>
                 <span>Start</span>
             </button>
@@ -400,7 +400,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>{% if (!i) { %}
-            <button class="btn btn-warning btn-small cancel">
+            <button class="btn btn-warning btn-sm cancel">
                 <i class="icon-ban-circle"></i>
                 <span>Cancel</span>
             </button>
@@ -428,7 +428,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>
-            <button class="btn btn-danger btn-small delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            <button class="btn btn-danger btn-sm delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
             <i class="icon-trash"></i>
             <span>Delete</span>
             </button>
@@ -442,24 +442,24 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
@@ -469,14 +469,14 @@
         <% if (auto) {%>
             <button type="button"
                     data-value="icons"
-                    class="btn-icons btn btn-transparent btn-small">Icons</button>
+                    class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-transparent btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
         <%} else {%>
             <button type="button"
                     data-value="auto"
-                    class="btn btn-transparent btn-small">Auto</button>
+                    class="btn btn-transparent btn-sm">Auto</button>
         <% } %>
 </script>
 
