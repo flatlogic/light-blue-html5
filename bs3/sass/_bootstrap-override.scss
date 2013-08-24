@@ -389,6 +389,28 @@ textarea,
   @include box-shadow(none);
 }
 
+.navbar-nav {
+  margin: ($navbar-padding-vertical / 2) -$navbar-padding-horizontal;
+
+  > li > a {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: $line-height-computed;
+  }
+
+  @media (max-width: $screen-xs-max) {
+  // Dropdowns get custom display when collapsed
+    .open .dropdown-menu {
+      position: absolute;
+      float: left;
+      margin: 2px 0 0;
+      background-color: $popover-bg;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}
+
 /***************************/
 /*        Pagination       */
 /***************************/

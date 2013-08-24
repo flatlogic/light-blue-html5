@@ -4,6 +4,14 @@
   }
 }
 
+@media (min-width: 768px) {
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+    display: block;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 979px){
 
   .page-header{
@@ -61,6 +69,11 @@
 //this media quiery is out of order because Chrome thinks
 //max-width: 1048px is more important than max-width: 767px
 @media (max-width: 767px){
+
+  body{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   .page-title{
     margin-top: 6px;
@@ -167,10 +180,10 @@
 
   .navbar .nav > li > .dropdown-menu.messages,
   .navbar .nav > li > .dropdown-menu.support{
-    margin-right: -88px;
+    margin-right: -68px;
 
     &:after{
-      right: 105px;
+      right: 85px;
     }
   }
 
@@ -181,6 +194,12 @@
     margin: 0;
 
     @include transition(top .3s ease);
+  }
+
+  .nav-collapse,
+  .nav-collapse.collapse {
+    overflow: hidden;
+    height: 0;
   }
 }
 
@@ -260,6 +279,7 @@
   }
 
   .page-header .search-query{
+    @include input-block-level();
     &:focus{
       width: 100%;
     }

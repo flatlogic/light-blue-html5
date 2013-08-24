@@ -625,6 +625,48 @@ input.parsley-error{
   .navbar-form{
     margin: 5px 15px 0 0;
     padding: 0;
+    border: none;
+    @include box-shadow(none);
+  }
+
+  .navbar-nav{
+    margin: 0;
+  }
+
+  // Menu position and menu carets
+  .navbar .nav > li > .dropdown-menu {
+    &:after {
+      content: '';
+      display: inline-block;
+      border-left:   6px solid transparent;
+      border-right:  6px solid transparent;
+      border-bottom: 6px solid $popover-bg;
+      position: absolute;
+      top: -6px;
+      left: 10px;
+    }
+  }
+
+  // Right aligned menus need alt position
+  .navbar .pull-right > li > .dropdown-menu,
+  .navbar .nav > li > .dropdown-menu.pull-right {
+    left: auto;
+    right: 0;
+    &:before {
+      left: auto;
+      right: 12px;
+    }
+    &:after {
+      left: auto;
+      right: 13px;
+    }
+    .dropdown-menu {
+      left: auto;
+      right: 100%;
+      margin-left: 0;
+      margin-right: -1px;
+      @include border-radius(6px 0 6px 6px);
+    }
   }
 }
 
@@ -691,10 +733,6 @@ input.parsley-error{
   @include border-radius(0);
   border: none;
   color: $white;
-
-  .see-all{
-    padding: 5px 10px;
-  }
 }
 
 .navbar .nav > li > .messages{
@@ -704,11 +742,15 @@ input.parsley-error{
   &:after{
     border-bottom-color: $popover-bg;
   }
-}
 
-.messages > li > a{
-  color: $white;
-  padding: 8px 10px;
+  > li > a{
+    color: $white;
+    padding: 8px 10px;
+  }
+
+  .see-all{
+    padding: 5px 10px;
+  }
 }
 
 .message{
@@ -742,9 +784,7 @@ input.parsley-error{
   border: none;
   color: $white;
 
-  .see-all{
-    padding: 5px 10px;
-  }
+
 }
 
 .navbar .nav > li > .support{
@@ -754,11 +794,15 @@ input.parsley-error{
   &:after{
     border-bottom-color: $popover-bg;
   }
-}
 
-.support > li > a{
-  color: $white;
-  padding: 5px 10px;
+  > li > a{
+    color: $white;
+    padding: 5px 10px;
+  }
+
+  .see-all{
+    padding: 5px 10px;
+  }
 }
 
 .support-ticket{
