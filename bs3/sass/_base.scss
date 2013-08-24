@@ -96,7 +96,7 @@ input.parsley-error{
     @include sidebar-settings;
   }
 
-  .accordion-group{
+  .panel{
     background: none;
   }
 }
@@ -125,11 +125,11 @@ input.parsley-error{
       padding: 8px 20px;
     }
 
-    a.accordion-toggle:not(.collapsed) + .accordion-body li.active a{
+    a.accordion-toggle:not(.collapsed) + .panel-collapse li.active a{
       background: $sidebarSubMenuActiveColor;
     }
 
-    a.accordion-toggle:not(.collapsed) + .accordion-body li a:hover{
+    a.accordion-toggle:not(.collapsed) + .panel-collapse li a:hover{
       background: $sidebarSubMenuActiveColor;
     }
   }
@@ -141,7 +141,7 @@ input.parsley-error{
     color: $text-color;
   }
 
-  .accordion-body li a{
+  .panel-collapse li a{
     padding: 4px 10px;
 
     padding-left: 40px;
@@ -151,7 +151,7 @@ input.parsley-error{
     }
   }
 
-  .accordion-group{
+  .panel{
     margin: 0;
     border: none;
     @include border-radius(0);
@@ -1405,26 +1405,27 @@ input.input-padding-increased{
 /**          ACCORDION           **/
 /**********************************/
 
-.accordion-group{
+.panel{
   border: none;
   background-color: $backgroundAddition;
+  @include box-shadow(none);
 
   $i: 1;
   @each $color in $colors{
 
-    &:nth-child(#{$i}n) .accordion-heading{
+    &:nth-child(#{$i}n) .panel-heading{
       border-left: 5px solid #{$color};
     }
     $i: $i + 1;
   }
 
-  .accordion-heading a{
+  .panel-heading a{
     color: $text-color;
     @include bold-font;
   }
 }
 
-.accordion-inner{
+.panel-body{
   border-top-color: $backgroundAddition;
 }
 
@@ -2073,7 +2074,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   font-weight: normal;
 }
 
-.visible-phone-landscape{
+.visible-xs-landscape{
   display: none;
 }
 

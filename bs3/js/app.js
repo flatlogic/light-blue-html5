@@ -54,7 +54,7 @@ function testData(stream_names, points_count) {
 }
 
 function closeNavigation(){
-    var $accordion = $('#side-nav').find('.accordion-body.in');
+    var $accordion = $('#side-nav').find('.panel-collapse.in');
     $accordion.collapse('hide');
     $accordion.siblings(".accordion-toggle").addClass("collapsed");
 }

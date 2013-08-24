@@ -189,13 +189,13 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
       display: none;
     }
 
-    .accordion-body li a{
+    .panel-collapse li a{
       width: 1px;
       padding-left: 10px;
       @include transition(width .3s);
     }
 
-    .accordion-body.in li a{
+    .panel-collapse.in li a{
       width: 80px;
     }
   }
