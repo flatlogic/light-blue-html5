@@ -4,66 +4,7 @@
   }
 }
 
-@media (min-width: 481px) and (max-width: 767px){
-  .content > .row-fluid.box-row > .span2{
-    width: 31.49171%;
-    margin-left: 2.76243%;
-    float: left;
-
-    &:nth-child(3n + 1){
-      margin-left: 0;
-    }
-  }
-}
-
 @media (min-width: 768px) and (max-width: 979px){
-
-  .content{
-    padding: 25px 2.3% 25px 0;
-
-    & > .row-fluid{
-      &.box-row{
-        margin-left: 2.3%;
-        width: 97.7%;
-        & > .span2{
-          width: 31.49171%;
-          margin-left: 2.76243%;
-          float: left;
-
-          &:nth-child(3n + 1){
-            margin-left: 0;
-          }
-        }
-      }
-
-      &:not(.box-row){
-
-        & > [class*="span"]{
-          margin-left: 2.3%;
-
-          &:first-child{
-            margin-left: 2.3%;
-          }
-        }
-
-        @for $i from 1 through 3 {
-          & > .span#{$i} {
-            width: 47.7%;
-          }
-        }
-
-        @for $i from 4 through 12 {
-          & > .span#{$i} {
-            width: 97.7%;
-
-            &.half-width-responsive{
-              width: 47.7%;
-            }
-          }
-        }
-      }
-    }
-  }
 
   .page-header{
     margin: 22px 2.3% 0;
@@ -252,15 +193,6 @@
     margin: 90px 2.5641%;
     width: 94.8718%;
   }
-  .content > .row-fluid.box-row > .span2{
-    width: 48.61878%;
-    margin-left: 2.76243%;
-    float: left;
-
-    &:nth-child(odd){
-      margin-left: 0;
-    }
-  }
 
   .form-condensed .controls{
     margin-left: 0;
@@ -339,13 +271,5 @@
 
   .hidden-phone-landscape{
     display: none !important;
-  }
-}
-
-@media (max-width: 250px){
-  .content > .row-fluid.box-row > .span2{
-    float: none;
-    margin-left: 0;
-    width: 100%;
   }
 }
