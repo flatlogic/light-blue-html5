@@ -156,6 +156,17 @@ input.parsley-error{
     border: none;
     @include border-radius(0);
   }
+
+  .panel-collapse.collapse {
+    display: block;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    @include transition(height .35s ease);
+    &.in {
+      height: auto;
+    }
+  }
 }
 
 .sidebar-on-right{

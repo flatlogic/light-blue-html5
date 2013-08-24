@@ -67,11 +67,26 @@ function resetContentMargin(){
 
 $(function(){
 
-    $("#sidebar").on("mouseleave",function(){
+    var $sidebar = $('#sidebar');
+
+    $sidebar.on("mouseleave",function(){
         if (($(this).is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
             setTimeout(function(){
                 closeNavigation();
             }, 300); // some timeout for animation
+        }
+    });
+
+    //need some class to present right after click
+    $sidebar.on('show.bs.collapse', function(e){
+        e.target == this && $sidebar.addClass('open');
+    });
+
+    $sidebar.on('hide.bs.collapse', function(e){
+        if (e.target == this) {
+            $sidebar.removeClass('open');
+            $(".content").css("margin-top", '');
+            closeNavigation();
         }
     });
 
@@ -97,7 +112,6 @@ $(function(){
         }
     });
 
-    var $sidebar = $('#sidebar');
 
     $("#search-toggle").click(function(){
         //first hide menu if open
