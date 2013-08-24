@@ -22,10 +22,14 @@ $(function(){
         },
         $pageHeader = $(".page-header"),
         $body = $("body"),
+        popoverReallyHide = function(){
+            $settings.data('bs.popover').hoverState = 'out'; //yeah. cool BS3 fix. popover programmatic APi works only on HOVER
+            $settings.popover('hide');
+        },
         popoverClose = function(e){
             var $popover = $settings.siblings(".popover");
             if(!$.contains($popover[0], e.target)){
-                $settings.popover('hide');
+                popoverReallyHide();
                 $(document).off("click", popoverClose);
             }
         },
@@ -104,7 +108,7 @@ $(function(){
         });
 
     $(".page-header .dropdown-toggle").click(function(){
-        $settings.popover('hide');
+        popoverReallyHide()
         $(document).off("click", popoverClose);
     });
     //sidevar left/right
