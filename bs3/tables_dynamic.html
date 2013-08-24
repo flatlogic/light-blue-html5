@@ -96,8 +96,12 @@
 <div class="wrap">
     <header class="page-header">
         <div class="navbar">
-            <div class="navbar-inner">
-                <ul class="nav pull-right">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="visible-phone-landscape">
+                        <a href="#" id="search-toggle">
+                            <i class="icon-search"></i>
+                        </a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
@@ -213,9 +217,9 @@
                     <li class="divider"></li>
                     <li class="hidden-xs">
                         <a href="#" id="settings"
+                           title="Settings"
                            data-toggle="popover"
-                           data-placement="bottom"
-                           title="">
+                           data-placement="bottom">
                             <i class="icon-cog"></i>
                         </a>
                     </li>
@@ -261,10 +265,9 @@
                     </li>
                     <li class="hidden-xs"><a href="login.html"><i class="icon-signout"></i></a></li>
                 </ul>
-                <form class="navbar-search pull-right">
+                <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="search-query" placeholder="Search...">
                 </form>
-            </div>
         </div>
     </header>
     <div class="content container-fluid">
@@ -707,15 +710,15 @@
 <script src="lib/backgrid/backgrid-paginator.js"></script>
 
 <!-- bootstrap default plugins -->
-<script src="js/bootstrap/bootstrap-transition.js"></script>
-<script src="js/bootstrap/bootstrap-collapse.js"></script>
-<script src="js/bootstrap/bootstrap-alert.js"></script>
-<script src="js/bootstrap/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap/bootstrap-popover.js"></script>
-<script src="js/bootstrap/bootstrap-button.js"></script>
-<script src="js/bootstrap/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap/bootstrap-modal.js"></script>
-<script src="js/bootstrap/bootstrap-tab.js"> </script>
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/collapse.js"></script>
+<script src="lib/bootstrap/alert.js"></script>
+<script src="lib/bootstrap/tooltip.js"></script>
+<script src="lib/bootstrap/popover.js"></script>
+<script src="lib/bootstrap/button.js"></script>
+<script src="lib/bootstrap/dropdown.js"></script>
+<script src="lib/bootstrap/modal.js"></script>
+<script src="lib/bootstrap/tab.js"> </script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
