@@ -10,19 +10,13 @@
 @import "compass/css3";
 
 $border: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-$white: #ffffff;
-//okendoken. setting blue the same as .btn-primary color from outer space
-//$blue: #0088cc;
-$blue: $btnPrimaryBackground;
-$gray: #e6e6e6;
-$border-radius: $baseBorderRadius;
 
 .has-switch {
   display: inline-block;
   cursor: pointer;
-  //okendoken. adding $baseBorderRadius instead of predefined one
+  //okendoken. adding $border-radius-base-base instead of predefined one
   //@include border-radius(5px);
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
   border: 1px solid;
   border-color: $border;
   background: $gray;
@@ -130,7 +124,7 @@ $border-radius: $baseBorderRadius;
 
     //okendoken. let it look like .btn-inverse
     //@include background-image(linear-gradient(top, $white, $gray));
-    background: $btnInverseBackground;
+    background: $btn-inverse-bg;
   }
 
   span {
@@ -141,18 +135,18 @@ $border-radius: $baseBorderRadius;
     @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15));
 
     &.switch-left {
-      @include border-top-left-radius($border-radius);
-      @include border-bottom-left-radius($border-radius);
+      @include border-top-left-radius($border-radius-base);
+      @include border-bottom-left-radius($border-radius-base);
     }
     &.switch-right {
       //okendoken. changing to default theme color
       //color: black;
       color: #ffffff;
-      @include border-top-right-radius($border-radius);
-      @include border-bottom-right-radius($border-radius);
+      @include border-top-right-radius($border-radius-base);
+      @include border-bottom-right-radius($border-radius-base);
       //okendoken. let it look like .btn
       //@include background-image(linear-gradient(bottom, $white, $gray));
-      background: $btnBackground;
+      background: $btn-default-bg;
     }
 
     //okendoken. overriding predefined colors
@@ -191,22 +185,22 @@ $border-radius: $baseBorderRadius;
       background: $blue;
     }
     &.switch-info {
-      $startColor: $btnInfoBackground;
+      $startColor: $btn-info-bg;
       color: $white;
       background: $startColor;
     }
     &.switch-success {
-      $startColor: $btnSuccessBackground;
+      $startColor: $btn-success-bg;
       color: $white;
       background: $startColor;
     }
     &.switch-warning {
-      $startColor: $btnWarningBackground;
+      $startColor: $btn-warning-bg;
       color: $white;
       background: $startColor;
     }
     &.switch-danger {
-      $startColor: $btnDangerBackground;
+      $startColor: $btn-danger-bg;
       color: $white;
       background: $startColor;
     }

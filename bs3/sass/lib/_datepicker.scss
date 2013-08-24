@@ -12,8 +12,8 @@
 	left: 0;
 	padding: 4px;
 	margin-top: 1px;
-  color: $grayDark;
-	@include border-radius($baseBorderRadius);
+  color: $gray-dark;
+	@include border-radius($border-radius-base);
 	&:before {
 		content: '';
 		display: inline-block;
@@ -47,7 +47,7 @@
 		text-align: center;
 		width: 20px;
 		height: 20px;
-        @include border-radius($baseBorderRadius);
+        @include border-radius($border-radius-base);
 	}
 	td {
 		&.day:hover {
@@ -59,13 +59,13 @@
 		}
 		&.old,
 		&.new {
-			color: lighten($textColor, 20%);
+			color: lighten($text-color, 20%);
 		}
 		&.active,
 		&.active:hover {
             //okendoken. commenting this out
-            //@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
-            background: $btnPrimaryBackground;
+            //@include buttonBackground($btn-primary-bg, adjust-hue($btn-primary-bg, 20));
+            background: $btn-primary-bg;
             color: #fff;
             //okendoken. removed
             //text-shadow: 0 -1px 0 rgba(0,0,0,.25);
@@ -78,14 +78,14 @@
 			float: left;
 			margin: 2px;
 			cursor: pointer;
-            @include border-radius($baseBorderRadius);
+            @include border-radius($border-radius-base);
 			&:hover {
 				background: $gray-lighter;
 			}
 			&.active {
               //okendoken. commenting this out
-              //@include buttonBackground($btnPrimaryBackground, adjust-hue($btnPrimaryBackground, 20));
-              background: $btnPrimaryBackground;
+              //@include buttonBackground($btn-primary-bg, adjust-hue($btn-primary-bg, 20));
+              background: $btn-primary-bg;
 				color: #fff;
 				//text-shadow: 0 -1px 0 rgba(0,0,0,.25);
 			}
@@ -101,7 +101,7 @@
 		}
 		&.next,
 		&.prev {
-			font-size: $baseFontSize * 1.5;
+			font-size: $font-size-base * 1.5;
 		}
 	}
 	

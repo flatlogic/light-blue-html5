@@ -38,7 +38,7 @@ input.parsley-error{
 }
 
 .parsley-error-list{
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 
   li{
     list-style: none;
@@ -79,7 +79,7 @@ input.parsley-error{
   padding: 10px 0;
   top: 0;
   color: $textLightGray;
-  font-size: $baseFontSize - 1;
+  font-size: $font-size-base - 1;
   z-index: 1;
   margin: $sidebarTopMargin 0 0 25px;
 
@@ -110,7 +110,7 @@ input.parsley-error{
     i[class*=icon]{
       line-height: 20px;
       float: right;
-      font-size: $fontSizeLarge;
+      font-size: $font-size-large;
     }
 
     a:hover, a:focus{
@@ -138,7 +138,7 @@ input.parsley-error{
     border-left: 4px solid $white;
     padding-left: 16px;
     background: $sidebarActiveColor;
-    color: $textColor;
+    color: $text-color;
   }
 
   .accordion-body li a{
@@ -273,7 +273,7 @@ input.parsley-error{
   @include border-radius($widget-border-radius);
   //@include box-shadow($widget-shadow);
   padding: $widget-padding;
-  color: $textColor;
+  color: $text-color;
   background: $transparentBackground;
   margin-bottom: $box-margin-bottom;
   position: relative;
@@ -329,7 +329,7 @@ input.parsley-error{
     }
 
     h4{
-      font-size: $fontSizeLarger;
+      font-size: $font-size-larger;
     }
   }
 
@@ -380,7 +380,7 @@ input.parsley-error{
 
   .visits{
     @include bold-font;
-    font-size: $fontSizeLarge;
+    font-size: $font-size-large;
   }
 }
 
@@ -406,12 +406,12 @@ input.parsley-error{
     float:left;
 
     &:first-child{
-      border-bottom-left-radius: $baseBorderRadius;
+      border-bottom-left-radius: $border-radius-base;
       margin-left: 0;
     }
 
     &:last-child{
-      border-bottom-right-radius: $baseBorderRadius;
+      border-bottom-right-radius: $border-radius-base;
     }
 
     &.disabled{
@@ -419,13 +419,13 @@ input.parsley-error{
     }
 
     .key{
-      font-size: $fontSizeSmall;
+      font-size: $font-size-small;
       font-weight: normal;
       margin: 0;
     }
 
     .value{
-      font-size: $fontSizeLarge;
+      font-size: $font-size-large;
       font-weight: bold;
       margin-bottom: 5px;
     }
@@ -449,7 +449,7 @@ input.parsley-error{
   .value{
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: $fontSizeLarge;
+    font-size: $font-size-large;
   }
 }
 
@@ -499,13 +499,13 @@ input.parsley-error{
     a{
       text-decoration: none;
       &:hover{
-        color: $linkColor;
+        color: $link-color;
       }
     }
   }
 
   .time{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     color: $textLightGray;
   }
 
@@ -514,8 +514,8 @@ input.parsley-error{
   }
 
   .comment{
-    font-size: $fontSizeSmall;
-    color: $textColor;
+    font-size: $font-size-small;
+    color: $text-color;
     line-height: 1.3em;
   }
 }
@@ -560,7 +560,7 @@ input.parsley-error{
       color: $transparentTextColor;
       width: 40px;
       padding: 0;
-      font-size: $baseFontSize * 1.5;
+      font-size: $font-size-base * 1.5;
       outline: 0;
       background: none;
       text-align: center;
@@ -578,7 +578,7 @@ input.parsley-error{
       position: absolute;
       bottom: 2px;
       right: 2px;
-      font-size: $fontSizeIndex;
+      font-size: $font-size-index;
       font-weight: normal;
       background:  rgba($backgroundGray, .55);
       color: rgba(white, 0.9);
@@ -600,7 +600,7 @@ input.parsley-error{
 
   .search-query{
     border: none;
-    color: $textColor;
+    color: $text-color;
     background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
     padding-left: 26px;
     @include placeholder(rgba(#eee, .76));
@@ -651,7 +651,7 @@ input.parsley-error{
   .alert{
     background: $transparentBackground;
     border: none;
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     margin-bottom: 0;
     padding: 2px 9px;
     color: $white;
@@ -675,7 +675,7 @@ input.parsley-error{
 /**********************************/
 
 .messages{
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
@@ -691,7 +691,7 @@ input.parsley-error{
     border-bottom: none;
   }
   &:after{
-    border-bottom-color: $popoverBackground;
+    border-bottom-color: $popover-bg;
   }
 }
 
@@ -715,7 +715,7 @@ input.parsley-error{
   }
 
   .text{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     color: #ddd;
   }
 }
@@ -725,7 +725,7 @@ input.parsley-error{
 /**********************************/
 
 .support{
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
@@ -741,7 +741,7 @@ input.parsley-error{
     border-bottom: none;
   }
   &:after{
-    border-bottom-color: $popoverBackground;
+    border-bottom-color: $popover-bg;
   }
 }
 
@@ -759,7 +759,7 @@ input.parsley-error{
 
   .details{
     margin-left: 30px;
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
   }
 }
 
@@ -768,13 +768,13 @@ input.parsley-error{
 /**********************************/
 
 .settings-popover{
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
   color: $white;
   width: 114px;
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 
   //override js-set variables
   left: -76px !important;
@@ -787,7 +787,7 @@ input.parsley-error{
     left: auto;
     right: 4px;
     &:after{
-      border-bottom-color: $popoverBackground;
+      border-bottom-color: $popover-bg;
       border-width: 6px;
     }
   }
@@ -816,7 +816,7 @@ input.parsley-error{
 
 .account{
   width: 180px;
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
@@ -828,7 +828,7 @@ input.parsley-error{
     border-bottom: none;
   }
   &:after{
-    border-bottom-color: $popoverBackground;
+    border-bottom-color: $popover-bg;
   }
 }
 
@@ -968,7 +968,7 @@ input.parsley-error{
   }
 
   .time{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     line-height: 1.5em;
     text-align: center;
     color: $textLightGray;
@@ -986,7 +986,7 @@ input.parsley-error{
   position: relative;
   border-left: 2px solid $textLightGray;
 
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 
   &.on-left{
     margin-left: 0;
@@ -1122,17 +1122,18 @@ input.parsley-error{
   }
 
   .caret{
-    border-top-color: $textColor;
+    border-top-color: $text-color;
   }
 }
 
 .btn-inverse{
-  color: $grayDark;
+  color: $btn-inverse-color;
   border-bottom-color: rgba(0, 0, 0, .2);
+  background: $btn-inverse-bg;
 
   &:hover,
   &:focus{
-    color: $grayDark;
+    color: $btn-inverse-color;
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
   }
 
@@ -1140,12 +1141,12 @@ input.parsley-error{
   &.active:hover,
   &.active:focus{
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
-    color: $grayDark;
+    color: $btn-inverse-color;
   }
 
   &.disabled,
   &[disabled] {
-    color: $grayDark;
+    color: $btn-inverse-color;
   }
 
 }
@@ -1169,14 +1170,14 @@ input.parsley-error{
 }
 
 .section{
-  font-size: $fontSizeLarger;
+  font-size: $font-size-larger;
   color: $textLightGray;
   vertical-align: middle;
   line-height: 30px;
   padding: 10px 0 0;
 
   small{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     color: $smallsColor;
     font-weight: bold;
   }
@@ -1187,7 +1188,7 @@ input.parsley-error{
 }
 
 .help-block{
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 }
 
 .input-prepend, .input-apppend{
@@ -1215,12 +1216,12 @@ input.parsley-error{
 input, textarea{
  &.input-transparent{
    border: none;
-   color: $textColor;
+   color: $text-color;
    background-color: $transparentBackground;
    @include placeholder(rgba(#eee, .76));
 
    &:focus{
-     color: $textColor;
+     color: $text-color;
    }
  }
 }
@@ -1272,7 +1273,7 @@ input.input-padding-increased{
   margin-bottom: 5px;
 
   a{
-    color: $textColor;
+    color: $text-color;
   }
 }
 
@@ -1316,7 +1317,7 @@ input.input-padding-increased{
     background: $transparentBackground;
     margin-top: 0;
     padding: $widget-padding;
-    @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+    @include border-radius(0 0 $border-radius-base $border-radius-base);
   }
 
 
@@ -1327,7 +1328,7 @@ input.input-padding-increased{
   .nav > li > a{
     padding-top: 7px;
     padding-bottom: 6px;
-    color: $textColor;
+    color: $text-color;
   }
 
   .nav > li.active{
@@ -1336,7 +1337,7 @@ input.input-padding-increased{
       border-color: transparent;
       background: $transparentBackground;
       &:hover{
-        color: $textColor;
+        color: $text-color;
       }
     }
   }
@@ -1366,14 +1367,14 @@ input.input-padding-increased{
     padding: 10px;
     border: none;
     border-top: none;
-    @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+    @include border-radius(0 0 $border-radius-base $border-radius-base);
   }
 
   .tabs-below {
     .tab-content{
       //border-top: 1px solid #ddd;
       border-bottom: none;
-      @include border-radius($baseBorderRadius $baseBorderRadius 0 0);
+      @include border-radius($border-radius-base $border-radius-base 0 0);
     }
   }
 
@@ -1381,7 +1382,7 @@ input.input-padding-increased{
     .tab-content{
       //border-top: 1px solid #ddd;
       //border-left: 1px solid #ddd;
-      @include border-radius(0 $baseBorderRadius $baseBorderRadius 0);
+      @include border-radius(0 $border-radius-base $border-radius-base 0);
     }
   }
 
@@ -1389,7 +1390,7 @@ input.input-padding-increased{
     .tab-content{
       //border-top: 1px solid #ddd;
       //border-right: 1px solid #ddd;
-      @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
+      @include border-radius($border-radius-base 0 0 $border-radius-base);
     }
   }
 }
@@ -1397,7 +1398,7 @@ input.input-padding-increased{
 .tab-header{
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: $fontSizeLarger;
+  font-size: $font-size-larger;
 }
 
 /***********************************/
@@ -1418,7 +1419,7 @@ input.input-padding-increased{
   }
 
   .accordion-heading a{
-    color: $textColor;
+    color: $text-color;
     @include bold-font;
   }
 }
@@ -1442,7 +1443,7 @@ input.input-padding-increased{
 
 // Inverse
 .progress-inverse .bar, .progress .bar-inverse {
-  color: $grayDark;
+  color: $gray-dark;
   @include gradient-vertical($lightGray, $lightGray);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
@@ -1564,7 +1565,7 @@ input.input-padding-increased{
   vertical-align: bottom;
 
   .time{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     line-height: 1.5em;
     color: $textLightGray;
   }
@@ -1602,7 +1603,7 @@ input.input-padding-increased{
 .table-editable th a{
   display: block;
   cursor: pointer;
-  color: $textColor;
+  color: $text-color;
   text-decoration: underline;
 }
 
@@ -1807,11 +1808,11 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   h3{
     font-weight: normal;
-    color: $grayDark;
+    color: $gray-dark;
   }
 
   p{
-    color: $grayDark;
+    color: $gray-dark;
   }
 
   .description{
@@ -1842,13 +1843,13 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .invoice-number{
-  font-size: $baseFontSize * 1.5;
+  font-size: $font-size-base * 1.5;
   margin-top: 15px;
 }
 
 .invoice-number-info{
   color: $textLightGray;
-  font-size: $fontSizeLarger;
+  font-size: $font-size-larger;
 }
 
 .invoice-info{
@@ -1859,7 +1860,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .invoice-actions{
-  margin-top: $line-height-base;
+  margin-top: $line-height-computed;
 }
 
 /***********************************/
@@ -1867,7 +1868,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 /***********************************/
 
 .mailbox-folders{
-  margin-top: $line-height-base;
+  margin-top: $line-height-computed;
 
   li a{
     display: block;
@@ -1876,14 +1877,14 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     text-decoration: none;
     @include transition(color .2s);
     &:hover{
-      color: $textColor;
+      color: $text-color;
     }
   }
 
   .active a{
     border-left: 5px solid $red;
     padding-left: 10px;
-    color: $textColor;
+    color: $text-color;
   }
 }
 
@@ -1903,7 +1904,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .mailbox-content{
-  margin-top: $line-height-base;
+  margin-top: $line-height-computed;
 
   .folder-view{
 
@@ -1937,7 +1938,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
     .unread{
       font-weight: 600;
-      color: $textColor;
+      color: $text-color;
     }
 
     .starred{
@@ -1945,7 +1946,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       cursor: pointer;
       @include transition(color .2s);
       &:hover{
-        color: $textColor;
+        color: $text-color;
       }
     }
   }
@@ -1962,12 +1963,12 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       text-decoration: none;
       @include transition(color .2s);
       &:hover{
-        color: $textColor;
+        color: $text-color;
       }
     }
 
     .email-body{
-      margin-top: $line-height-base;
+      margin-top: $line-height-computed;
     }
   }
 
@@ -1983,7 +1984,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
     .email{
       color: $textLightGray;
-      font-size: $fontSizeSmall;
+      font-size: $font-size-small;
     }
 
     .receiver{
@@ -2027,7 +2028,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     }
 
     .control-group{
-      margin-bottom: $line-height-base / 2;
+      margin-bottom: $line-height-computed / 2;
     }
   }
 }
@@ -2037,7 +2038,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 /**********************************/
 
 .slimScrollBar{
-  @include border-radius($baseBorderRadius !important);
+  @include border-radius($border-radius-base !important);
 }
 
 /***********************************/

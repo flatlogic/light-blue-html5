@@ -21,7 +21,7 @@
 	font-family: Arial, sans-serif;
   //okendoken. changing to default theme border-radius
 	//border-radius: 3px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 	padding: 6px;
 	opacity: 0.5;
 	border: 1px solid #e0e0e0;
@@ -29,14 +29,14 @@
 	position: absolute;
 	background: white;
 	white-space: nowrap;
-  color: $grayDark;
+  color: $gray-dark;
 }
 .rickshaw_graph .detail .item {
 	position: absolute;
 	z-index: 2;
   //okendoken. changing to default theme border-radius
   //border-radius: 3px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 	padding: 0.25em;
 	font-size: 12px;
 	font-family: Arial, sans-serif;
@@ -66,7 +66,7 @@
 	margin-top: -3px;
   //okendoken. changing to default theme border-radius
   //border-radius: 5px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 	position: absolute;
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 	background: white;
@@ -124,7 +124,7 @@
 	top: -3px;
   //okendoken. changing to default theme border-radius
   //border-radius: 5px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 	background-color: rgba(0, 0, 0, 0.25);
 }
 .rickshaw_graph .annotation_line {
@@ -162,7 +162,7 @@
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
   //okendoken. changing to default theme border-radius
   //border-radius: 3px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 	position: relative;
 	z-index: 20;
 	font-size: 12px;
@@ -261,14 +261,14 @@
 	font-family: Arial;
 	font-size: 12px;
   //okendoken. changing color to default theme color
-	color: $textColor;
+	color: $text-color;
   //okendoken. removing background
 	//background: white;
 	display: inline-block;
 	padding: 12px 5px;
   //okendoken. changing to default theme border-radius
   //border-radius: 2px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 	position: relative;
 }
 .rickshaw_legend:hover {
@@ -289,7 +289,7 @@
 	margin-right: 3px;
   //okendoken. changing to default theme border-radius
   //border-radius: 2px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 }
 .rickshaw_legend .label {
 	margin: 0;
@@ -334,11 +334,11 @@
 	background: rgba(255, 255, 255, 0.08);
   //okendoken. changing to default theme border-radius
   //border-radius: 3px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 }
 .rickshaw_legend li:active {
 	background: rgba(255, 255, 255, 0.2);
   //okendoken. changing to default theme border-radius
   //border-radius: 3px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 }

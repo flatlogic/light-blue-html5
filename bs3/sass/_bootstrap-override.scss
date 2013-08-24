@@ -22,7 +22,7 @@ blockquote{
   border-left-color: $transparentBackground;
   p{
     font-size: inherit;
-    margin-bottom: $line-height-base / 2;
+    margin-bottom: $line-height-computed / 2;
   }
 }
 
@@ -32,7 +32,7 @@ blockquote{
 
 code,
 pre {
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 }
 
 /***************************/
@@ -44,16 +44,12 @@ input,
 button,
 select,
 textarea {
-  font-weight: $baseFontWeight;
+  font-weight: $font-weight-base;
 }
 
-legend{
-  color: $white;
-  small{
-    color: $smallsColor;
-  }
+legend small{
+  color: $smallsColor;
 }
-
 textarea,
 input[type="text"],
 input[type="password"],
@@ -70,7 +66,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  color: $grayDark;
+  color: $gray-dark;
   &:focus {
     @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
     border-color: $blue;
@@ -89,8 +85,8 @@ input[type="checkbox"]:focus {
 input:focus:invalid,
 textarea:focus:invalid,
 select:focus:invalid {
-  color: $grayDark;
-  border-color: $inputBorder;
+  color: $gray-dark;
+  border-color: $input-border;
   &:focus {
     border-color: $blue;
     @include box-shadow(none);
@@ -115,13 +111,13 @@ textarea,
 .input-prepend,
 .input-append {
   + .help-block {
-    margin-top: $line-height-base / 4;
+    margin-top: $line-height-computed / 4;
   }
 }
 
 .search-query, .navbar-search .search-query{
-  @include border-radius($baseBorderRadius);
-  line-height: $line-height-base;
+  @include border-radius($border-radius-base);
+  line-height: $line-height-computed;
 }
 
 .form-horizontal{
@@ -132,7 +128,7 @@ textarea,
   .input-prepend,
   .input-append {
     + .help-block {
-      margin-top: $line-height-base / 4;
+      margin-top: $line-height-computed / 4;
     }
   }
 }
@@ -172,11 +168,11 @@ textarea,
 /***************************/
 
 .dropdown-menu{
-  @include border-radius($borderRadiusLarge);
+  @include border-radius($border-radius-large);
 }
 
 .dropdown-menu > li > a {
-  font-weight: $baseFontWeight;
+  font-weight: $font-weight-base;
 }
 
 /***************************/
@@ -234,8 +230,8 @@ textarea,
 }
 
 .nav-tabs > li > a {
-  @include border-radius($baseBorderRadius $baseBorderRadius 0 0);
-  color: $textColor;
+  @include border-radius($border-radius-base $border-radius-base 0 0);
+  color: $text-color;
   &:hover,
   &:focus {
     border-color: transparent;
@@ -249,23 +245,23 @@ textarea,
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
-  color: $textColor;
+  color: $text-color;
   background-color: $backgroundAddition;
   border-color: transparent;
 }
 
 .nav-tabs .dropdown-menu {
-  @include border-radius(0 0 $baseBorderRadius $baseBorderRadius); // remove the top rounded corners here since there is a hard edge above the menu
+  @include border-radius(0 0 $border-radius-base $border-radius-base); // remove the top rounded corners here since there is a hard edge above the menu
 }
 .nav-pills .dropdown-menu {
-  @include border-radius($baseBorderRadius); // make rounded corners match the pills
+  @include border-radius($border-radius-base); // make rounded corners match the pills
 }
 .tabs-below > .nav-tabs {
   border-top: none;
 }
 
 .tabs-below > .nav-tabs > li > a {
-  @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+  @include border-radius(0 0 $border-radius-base $border-radius-base);
 }
 
 .tabs-left > .nav-tabs {
@@ -275,7 +271,7 @@ textarea,
 }
 
 .tabs-left > .nav-tabs > li > a {
-  @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
+  @include border-radius($border-radius-base 0 0 $border-radius-base);
 }
 
 .tabs-right > .nav-tabs {
@@ -284,7 +280,7 @@ textarea,
   border-left: none;
 }
 .tabs-right > .nav-tabs > li > a {
-  @include border-radius(0 $baseBorderRadius $baseBorderRadius 0);
+  @include border-radius(0 $border-radius-base $border-radius-base 0);
 }
 
 .tabs-below > .nav-tabs > li {
@@ -334,7 +330,7 @@ textarea,
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
   background: $backgroundAddition;
 }
 
@@ -372,8 +368,8 @@ textarea,
 
 .pagination ul > li > a,
 .pagination ul > li > span {
-  background-color: $paginationBackground;
-  border: 1px solid $paginationBorder;
+  background-color: $pagination-bg;
+  border: 1px solid $pagination-border;
   border-left-width: 0;
 }
 
@@ -388,11 +384,11 @@ textarea,
 }
 
 .modal {
-  color: $grayDark;
-  @include border-radius($baseBorderRadius);
+  color: $gray-dark;
+  @include border-radius($border-radius-base);
 
   #{headings()}{
-    color: $grayDark;
+    color: $gray-dark;
   }
 }
 
@@ -401,7 +397,7 @@ textarea,
 /***************************/
 
 .tooltip {
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 }
 
 .tooltip-inner {
@@ -413,15 +409,15 @@ textarea,
 /***************************/
 
 .popover {
-  color: $textColor;
-  @include border-radius($baseBorderRadius);
+  color: $text-color;
+  @include border-radius($border-radius-base);
   #{headings()}{
-    color: $textColor;
+    color: $text-color;
   }
 }
 
 .popover-title {
-  @include border-radius($baseBorderRadius $baseBorderRadius 0 0);
+  @include border-radius($border-radius-base $border-radius-base 0 0);
 }
 
 /***************************/
@@ -440,7 +436,7 @@ a.thumbnail:focus {
 }
 
 .thumbnail .caption {
-  color: $textColor;
+  color: $text-color;
 }
 
 /***************************/
@@ -450,7 +446,7 @@ a.thumbnail:focus {
 .label,
 .badge {
   text-shadow: none;
-  font-weight: $baseFontWeight;
+  font-weight: $font-weight-base;
 }
 
 @each $item in label, badge {
@@ -467,7 +463,7 @@ a.thumbnail:focus {
   .#{$item}-info              { background-color: $blue; }
   .#{$item}-info[href]        { background-color: darken($blue, 10%); }
 // Inverse (black)
-  .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $grayDark to just $gray
+  .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $gray-dark to just $gray
   .#{$item}-inverse[href]     { background-color: darken($gray, 10%); }
 }
 
@@ -477,50 +473,6 @@ a.thumbnail:focus {
 
 .alert {
   text-shadow: none;
-}
-
-/***************************/
-/*      Progress bars      */
-/***************************/
-
-.progress .bar {
-  @include gradient-vertical($btnPrimaryBackground, $btnPrimaryBackground);
-}
-
-.progress-striped .bar {
-  @include gradient-striped($btnPrimaryBackground);
-}
-
-// Danger (red)
-.progress-danger .bar, .progress .bar-danger {
-  @include gradient-vertical($red, $red);
-}
-.progress-danger.progress-striped .bar, .progress-striped .bar-danger {
-  @include gradient-striped($red);
-}
-
-// Success (green)
-.progress-success .bar, .progress .bar-success {
-  @include gradient-vertical($green, $green);
-}
-.progress-success.progress-striped .bar, .progress-striped .bar-success {
-  @include gradient-striped($green);
-}
-
-// Info (teal)
-.progress-info .bar, .progress .bar-info {
-  @include gradient-vertical($teal, $teal);
-}
-.progress-info.progress-striped .bar, .progress-striped .bar-info {
-  @include gradient-striped($teal);
-}
-
-// Warning (orange)
-.progress-warning .bar, .progress .bar-warning {
-  @include gradient-vertical($orange, $orange);
-}
-.progress-warning.progress-striped .bar, .progress-striped .bar-warning {
-  @include gradient-striped($orange);
 }
 
 /***************************/

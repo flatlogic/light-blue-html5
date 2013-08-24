@@ -22,7 +22,7 @@ $colorPickerAlphaImage:      '../img/alpha.png';
 		height: 5px;
 		width: 5px;
 		border: 1px solid #000;
-		@include border-radius($baseBorderRadius);
+		@include border-radius($border-radius-base);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -32,7 +32,7 @@ $colorPickerAlphaImage:      '../img/alpha.png';
 			height: 5px;
 			width: 5px;
 			border: 1px solid #fff;
-			@include border-radius($baseBorderRadius);
+			@include border-radius($border-radius-base);
 		}
 	}
 }
@@ -71,7 +71,7 @@ $colorPickerAlphaImage:      '../img/alpha.png';
 	min-width: 120px;
   //okendoken. commentiong out
 	//margin-top: 1px;
-	@include border-radius($baseBorderRadius);
+	@include border-radius($border-radius-base);
 	&:before {
 		content: '';
 		display: inline-block;
