@@ -211,7 +211,7 @@
                     </ul>
                 </li>
                 <li class="divider"></li>
-                <li class="hidden-phone">
+                <li class="hidden-xs">
                     <a href="#" id="settings"
                        data-toggle="popover"
                        data-placement="bottom"
@@ -219,7 +219,7 @@
                         <i class="icon-cog"></i>
                     </a>
                 </li>
-                <li class="hidden-phone dropdown">
+                <li class="hidden-xs dropdown">
                     <a href="#" title="Account" id="account"
                        class="dropdown-toggle"
                        data-toggle="dropdown">
@@ -259,7 +259,7 @@
                         <i class="icon-reorder"></i>
                     </a>
                 </li>
-                <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
+                <li class="hidden-xs"><a href="login.html"><i class="icon-signout"></i></a></li>
             </ul>
             <form class="navbar-search pull-right">
                 <input type="search" class="search-query" placeholder="Search...">
@@ -334,7 +334,7 @@
                                         <tr>
                                             <td class="tiny-column"><input type="checkbox"/></td>
                                             <td class="tiny-column"><i class="icon-star"></i></td>
-                                            <td class="name hidden-phone">Philip Daineka</td>
+                                            <td class="name hidden-xs">Philip Daineka</td>
                                             <td class="subject">Light Blue template</td>
                                             <td class="tiny-column"><i class="icon-paper-clip"></i></td>
                                             <td class="date">Aug 13</td>
@@ -484,7 +484,7 @@
 <script type="text/template" id="mail-item-template">
     <td class="tiny-column"><input class="selected-checkbox" type="checkbox"<%= selected ? ' checked="ckeched"' : ''%>/></td>
     <td class="tiny-column"><span class="starred"><i class="<%= starred ? 'icon-star color-orange' : 'icon-star-empty'%>"></i></span></td>
-    <td class="name hidden-phone"><%= sender ? sender : senderMail %></td>
+    <td class="name hidden-xs"><%= sender ? sender : senderMail %></td>
     <td class="subject"><%= subject %></td>
     <td class="tiny-column"><% if (attachment) {%><i class="icon-paper-clip"><% } %></i></td>
     <td class="date"><%= this.formatDate(timestamp) %></td>

@@ -207,7 +207,7 @@ $(function(){
     });
 
     $("#datatable-table").dataTable({
-        "sDom": "<'row-fluid table-top-control'<'span6 hidden-phone per-page-selector'l><'span6'f>r>t<'row-fluid table-bottom-control'<'span6'i><'span6'p>>",
+        "sDom": "<'row-fluid table-top-control'<'span6 hidden-xs per-page-selector'l><'span6'f>r>t<'row-fluid table-bottom-control'<'span6'i><'span6'p>>",
         "oLanguage": {
             "sLengthMenu": "_MENU_ &nbsp; records per page"
         },

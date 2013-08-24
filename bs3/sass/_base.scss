@@ -555,6 +555,7 @@ input.parsley-error{
   .nav > li{
     position: relative;
     background: none;
+    float: left;
 
     & > a{
       color: $transparentTextColor;
@@ -2074,8 +2075,8 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   font-weight: normal;
 }
 
-.visible-xs-landscape{
-  display: none;
+.visible-phone-landscape{
+  display: none !important;
 }
 
 .hidden-phone-landscape{
