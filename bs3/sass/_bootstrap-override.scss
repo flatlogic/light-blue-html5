@@ -68,8 +68,13 @@ textarea {
   font-weight: $font-weight-base;
 }
 
+legend{
+  line-height: $line-height-base * 2;
+}
+
 legend small{
   color: $smallsColor;
+  font-size: $font-size-larger;
 }
 textarea,
 input[type="text"],
@@ -88,11 +93,22 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   color: $gray-dark;
+  min-height: 30px;
+
+  background-color: $input-bg;
+  border: 1px solid $input-border;
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  @include transition(border linear .2s, box-shadow linear .2s);
   &:focus {
     @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
     border-color: $blue;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
+  }
+
+  &.form-control, &[class*="col-"]{
+    padding-left: 6px;
+    padding-right: 6px;
   }
 }
 
@@ -152,6 +168,10 @@ textarea,
       margin-top: $line-height-computed / 4;
     }
   }
+}
+
+.form-group{
+  margin-bottom: 0;
 }
 
 /***************************/

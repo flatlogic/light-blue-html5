@@ -1222,6 +1222,58 @@ input.parsley-error{
 /**          FORMS                **/
 /**********************************/
 
+// Margin to space out fieldsets
+.control-group {
+  margin-bottom: $line-height-base / 2;
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+legend + .control-group {
+  margin-top: $line-height-base;
+  -webkit-margin-top-collapse: separate;
+}
+
+// Horizontal-specific styles
+// --------------------------
+
+.form-horizontal {
+  // Increase spacing between groups
+  .control-group {
+    margin-bottom: $line-height-base;
+    @include clearfix();
+  }
+  // Float the labels left
+  .control-label {
+    float: left;
+    width: $horizontalComponentOffset - 20;
+    padding-top: 5px;
+    text-align: right;
+  }
+  // Move over all input controls and content
+  .controls {
+    margin-left: $horizontalComponentOffset;
+  }
+  // Remove bottom margin on block level help text since that's accounted for on .control-group
+  .help-block {
+    margin-bottom: 0;
+  }
+  // And apply it only to .help-block instances that follow a form control
+  input,
+  select,
+  textarea,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    + .help-block {
+      margin-top: $line-height-base / 2;
+    }
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-left: $horizontalComponentOffset;
+  }
+}
+
 .form-horizontal.label-left .control-label{
   text-align: left;
 }
@@ -1324,10 +1376,18 @@ input.input-padding-increased{
   }
 }
 
-.form-actions{
-  margin-bottom: 0;
-  background: $backgroundAddition;
-  border-top: none;
+// FORM ACTIONS
+// ------------
+
+.form-actions {
+  padding: ($line-height-base - 1) 20px $line-height-base;
+  margin-top: $line-height-base;
+  background-color: $backgroundAddition;
+  @include clearfix(); // Adding clearfix to allow for .pull-right button containers
+}
+
+.form-group [class*="col-"]{
+  padding: 0;
 }
 
 .form-wizard{
