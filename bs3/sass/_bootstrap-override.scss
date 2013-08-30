@@ -453,7 +453,7 @@ textarea,
 .modal-backdrop,
 .modal-backdrop.fade.in {
   //okendoken. 15% opacity is just enough
-  @include opacity(15);
+  @include opacity(0.15);
 }
 
 .modal {
@@ -463,6 +463,10 @@ textarea,
   #{headings()}{
     color: $gray-dark;
   }
+}
+
+.modal-footer{
+  background-color: #f5f5f5;
 }
 
 /***************************/
