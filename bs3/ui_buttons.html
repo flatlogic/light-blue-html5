@@ -293,7 +293,7 @@
                             <div class="row-fluid non-responsive">
                                 <div class="span4">
                                     <button type="button" class="btn btn-default"
-                                            data-placement="top" data-original-title=".btn">
+                                            data-placement="top" data-original-title=".btn .btn-default">
                                         Default
                                     </button>
                                 </div>
@@ -356,8 +356,8 @@
                         <div class="well well-sm well-white">
                             <div class="row-fluid non-responsive">
                                 <div class="span4">
-                                    <button type="button" class="btn btn-sm"
-                                            data-placement="top" data-original-title=".btn .btn-sm">
+                                    <button type="button" class="btn btn-default btn-sm"
+                                            data-placement="top" data-original-title=".btn .btn-default .btn-sm">
                                         Default
                                     </button>
                                 </div>
@@ -420,8 +420,8 @@
                         <div class="well">
                             <div class="row-fluid non-responsive">
                                 <div class="span4">
-                                    <button type="button" class="btn btn-lg"
-                                            data-placement="top" data-original-title=".btn .btn-lg">
+                                    <button type="button" class="btn btn-default btn-lg"
+                                            data-placement="top" data-original-title=".btn .btn-default .btn-lg">
                                         Default
                                     </button>
                                 </div>
@@ -488,7 +488,7 @@
                             <div class="row-fluid margin-bottom text-align-center">
                                 <div class="span12">
                                     <button type="button"
-                                            class="btn"
+                                            class="btn btn-default"
                                             disabled="disabled">
                                         Default
                                     </button>
@@ -581,7 +581,7 @@
                                         </ul>
                                     </div>
                                     <div class="btn-group">
-                                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                             &nbsp; Two &nbsp;
                                             <i class="icon-caret-down"></i>
                                         </button>
@@ -614,8 +614,8 @@
                             <div class="row-fluid margin-bottom text-align-center">
                                 <div class="span12">
                                     <div class="btn-group">
-                                        <button class="btn btn-lg">Gray</button>
-                                        <button class="btn btn-lg dropdown-toggle" data-toggle="dropdown">
+                                        <button class="btn btn-default btn-lg">Gray</button>
+                                        <button class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">
                                             <i class="icon-caret-down"></i>
                                         </button>
                                         <ul class="dropdown-menu">
@@ -672,10 +672,16 @@
                             <blockquote>Checkboxes</blockquote>
                             <div class="row-fluid margin-bottom text-align-center">
                                 <div class="span12">
-                                    <div class="btn-group" data-toggle="buttons-checkbox">
-                                        <button class="btn">Left way</button>
-                                        <button class="btn">Middle way</button>
-                                        <button class="btn">Right way</button>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default">
+                                            <input type="checkbox"> Left way
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="checkbox"> Middle way
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="checkbox"> Right way
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -684,10 +690,16 @@
                             <blockquote>Radio</blockquote>
                             <div class="row-fluid margin-bottom text-align-center">
                                 <div class="span12">
-                                    <div class="btn-group" data-toggle="buttons-radio">
-                                        <button type="button" class="btn btn-success">Left way</button>
-                                        <button type="button" class="btn btn-success">Middle way</button>
-                                        <button type="button" data-toggle="button" class="btn btn-success active">Right way</button>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-success">
+                                            <input type="radio" name="options" id="option1"> Left way
+                                        </label>
+                                        <label class="btn btn-success">
+                                            <input type="radio" name="options" id="option2"> Middle way
+                                        </label>
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option3"> Right way
+                                        </label>
                                     </div>
                                 </div>
                             </div>
