@@ -1179,14 +1179,17 @@ input.parsley-error{
   text-shadow: none;
   @include box-shadow(none);
 
-  &:hover, &.active:hover{
+  &:hover{
     background: $transparentTextColor;
     color: $white;
   }
 
   &.active{
     color: $white;
-    background: rgba($backgroundGray, .75);
+    background: rgba($backgroundGray, .55);
+    &:hover{
+      background: rgba($backgroundGray, .55);
+    }
   }
 
   .caret{

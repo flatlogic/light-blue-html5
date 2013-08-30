@@ -272,6 +272,16 @@ textarea,
   @include box-shadow(none);
 }
 
+.btn-toolbar {
+  font-size: 0; // Hack to remove whitespace that results from using inline-block
+  margin-top: $line-height-base / 2;
+  margin-bottom: $line-height-base / 2;
+  > .btn + .btn,
+  > .btn-group + .btn,
+  > .btn + .btn-group {
+    margin-left: 5px;
+  }
+}
 /***************************/
 /*          Navs           */
 /***************************/

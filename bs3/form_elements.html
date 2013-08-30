@@ -504,7 +504,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="default-textarea">Default textarea</label>
                                 <div class="controls form-group">
-                                    <textarea rows="4" class="input-block-level" id="default-textarea"></textarea>
+                                    <textarea rows="4" class="form-control" id="default-textarea"></textarea>
                                 </div>
                             </div>
                             <div class="control-group">
@@ -512,7 +512,7 @@
                                     Auto-growing textarea
                                 </label>
                                 <div class="controls form-group">
-                                    <textarea rows="3" class="autogrow input-block-level" id="elastic-textarea"
+                                    <textarea rows="3" class="autogrow form-control" id="elastic-textarea"
                                               placeholder="Try to add few new lines.."></textarea>
                                 </div>
                             </div>
@@ -524,10 +524,10 @@
                                     </span>
                                 </label>
                                 <div class="controls form-group">
-                                    <textarea rows="4" class="input-block-level" id="wysiwyg"></textarea>
+                                    <textarea rows="4" class="form-control" id="wysiwyg"></textarea>
                                     <div class="btn-toolbar pull-right">
                                         <button type="button" class="btn btn-sm btn-danger">Save</button>
-                                        <button type="button" class="btn btn-sm">Clear</button>
+                                        <button type="button" class="btn btn-sm btn-default">Clear</button>
                                     </div>
                                 </div>
                             </div>
@@ -1141,7 +1141,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="simple-colored">Simple select</label>
                                 <div class="controls form-group">
-                                    <select class="selectpicker"
+                                    <select class="selectpicker" data-style="btn-default"
                                             tabindex="-1" id="simple-colored">
                                         <option value="0">Option One</option>
                                         <option value="1">Option Two</option>
@@ -1185,15 +1185,15 @@
                             <div class="control-group">
                                 <label class="control-label" for="simple-big">Big one</label>
                                 <div class="controls form-group">
-                                    <select class="selectpicker span8"
-                                            data-style="btn-primary"
+                                    <select class="selectpicker"
+                                            data-style="btn-primary btn-lg"
                                             tabindex="-1" id="simple-big">
                                         <option value="0">Fourth Item</option>
                                         <option value="1">Fifth Item</option>
                                         <option value="2">Sixth item</option>
                                     </select>
                                     <span class="help-block">
-                                        Size can be controlled via <code>.span*</code>
+                                        Size can be controlled via <code>.btn-*</code>
                                     </span>
                                 </div>
                             </div>
@@ -1248,23 +1248,26 @@
                             <div class="control-group">
                                 <label class="control-label">As button groups</label>
                                 <div class="controls form-group">
-                                    <input id="btn-group-checkbox-1-input" type="hidden" name="bg" value="female">
-                                    <div id="btn-group-checkbox-1" class="btn-group" data-toggle="buttons-checkbox" data-target="btn-group-checkbox-1-input">
-                                        <button type="button" class="btn btn-sm btn-inverse" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
-                                                value="test4">One</button>
-                                        <button type="button" class="btn btn-sm btn-success active" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
-                                                value="test3">Two</button>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-default" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> One
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-default" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Two
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="controls form-group">
-                                    <input id="btn-group-checkbox-2-input" type="hidden" name="gender" value="female">
-                                    <div id="btn-group-checkbox-2" class="btn-group" data-toggle="buttons-checkbox" data-target="btn-group-checkbox-2-input">
-                                        <button type="button" class="btn btn-sm btn-primary active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse"
-                                                value="test1">Left</button>
-                                        <button type="button" class="btn btn-sm btn-inverse" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Straight</button>
-                                        <button type="button" class="btn btn-sm btn-inverse" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Right</button>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary btn-sm active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Left
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Straight
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Right
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -1299,21 +1302,26 @@
                             <div class="control-group">
                                 <label class="control-label">As button groups</label>
                                 <div class="controls form-group">
-                                    <input id="button-group-1-input" type="hidden" name="bg" value="female">
-                                    <div id="button-group-1" class="btn-group" data-toggle="buttons-radio" data-target="button-group-1-input">
-                                        <button type="button" class="btn btn-sm" data-toggle-class="btn-success" value="test4">Windows</button>
-                                        <button type="button" class="btn btn-sm btn-success active" data-toggle-class="btn-success" value="test3">&nbsp; Doors &nbsp;</button>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-transparent btn-sm">
+                                            <input type="radio"> One
+                                        </label>
+                                        <label class="btn btn-transparent btn-sm">
+                                            <input type="radio"> Two
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="controls form-group">
-                                    <input id="button-group-2-input" type="hidden" name="gender" value="female">
-                                    <div id="button-group-2" class="btn-group" data-toggle="buttons-radio" data-target="button-group-2-input">
-                                        <button type="button" class="btn btn-sm btn-danger active" data-toggle-class="btn-danger" data-toggle-passive-class="btn-inverse"
-                                                value="test1">Left</button>
-                                        <button type="button" class="btn btn-sm btn-inverse" data-toggle-class="btn-danger" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Straight</button>
-                                        <button type="button" class="btn btn-sm btn-inverse" data-toggle-class="btn-danger" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Right</button>
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary btn-sm active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="radio"> Left
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="radio"> Straight
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="radio"> Right
+                                        </label>
                                     </div>
                                 </div>
                             </div>
