@@ -1357,37 +1357,41 @@
                     <form method="post" >
                         <fieldset>
                             <legend class="section">Dates</legend>
-                            <div class="control-group">
-                                <label for="in-place-date" class="control-label">In place</label>
-                                <div class="controls form-group">
-                                    <input id="in-place-date" class="col-sm-6 date-picker" type="text" name="in-place-date" value="">
+                            <div class="row"><div class="col-sm-8">
+                                <div class="control-group">
+                                    <label for="in-place-date" class="control-label">In place</label>
+
+                                    <input id="in-place-date" class="form-control date-picker" type="text" name="in-place-date" value="">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label for="btn-enabled-date" class="control-label">Button-enabled</label>
-                                <div class="controls form-group">
-                                    <div class="input-group span6">
-                                        <input id="btn-enabled-date" class="col-sm-11" type="text" name="btn-enabled-date" value="">
-                                        <a href="#" id="btn-select-calendar" class="btn btn-danger"
-                                                data-date-format="yyyy/mm/dd" data-date="2013/02/25">
-                                            <i class="icon-calendar"></i>
-                                        </a>
+                                <div class="control-group">
+                                    <label for="btn-enabled-date" class="control-label">Button-enabled</label>
+
+                                    <div class="input-group">
+                                        <input id="btn-enabled-date" class="form-control" type="text" name="btn-enabled-date" value="">
+
+                                    <span class="input-group-btn"><a href="#" id="btn-select-calendar" class="btn btn-danger"
+                                                                     data-date-format="yyyy/mm/dd" data-date="2013/02/25">
+                                        <i class="icon-calendar"></i>
+                                    </a></span>
                                     </div>
+
                                 </div>
-                            </div>
+                            </div></div>
                         </fieldset>
                         <fieldset>
                             <legend class="section">Colors</legend>
-                            <div class="control-group">
-                                <label for="color" class="control-label">Simple Select</label>
-                                <div class="controls form-group">
+                            <div class="row"><div class="col-sm-8">
+                                <div class="control-group">
+                                    <label for="color" class="control-label">Simple Select</label>
                                     <div class="input-group">
-                                    <input id="color" class=" colorpicker" type="text" name="color"
-                                           value="#eac85e">
-                                        <span id="color-holder" class="add-on" style="background-color: #eac85e;">&nbsp;&nbsp;&nbsp;</span>
+                                        <input id="color" class="form-control colorpicker" type="text" name="color"
+                                               value="#eac85e">
+                                        <span id="color-holder" class="input-group-addon" style="background-color: #eac85e;">&nbsp;&nbsp;&nbsp;</span>
                                     </div>
+
                                 </div>
-                            </div>
+                            </div></div>
                         </fieldset>
                     </form>
                 </div>
@@ -1401,56 +1405,70 @@
                     <h4>
                         <i class="icon-align-left"></i>
                         Input Sizing
-                        <small>From <code>.span1</code> to <code>.span12</code></small>
+                        <small>From <code>.col-*-1</code> to <code>.col-*-12</code></small>
                     </h4>
                 </header>
                 <div class="body">
                     <form method="post">
                         <fieldset>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span6</code></label>
-                                <div class="controls form-group">
-                                    <input type="text" class="col-sm-6">
+                            <div class="row"><div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><code>.col-sm-6</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span4</code></label>
-                                <div class="controls form-group">
-                                    <input type="text" class="col-sm-4">
+                            </div></div>
+                            <div class="row"><div class="col-sm-4">
+                                <div class="form-group">
+                                    <label><code>.col-sm-4</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span2</code></label>
-                                <div class="controls form-group">
-                                    <input type="text" class="col-sm-2">
+                            </div></div>
+                            <div class="row"><div class="col-sm-2">
+                                <div class="form-group">
+                                    <label><code>.col-sm-2</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span12</code>
-                                    or
-                                    <code>.form-control</code></label>
-                                <div class="controls form-group">
-                                    <input type="text" class="col-sm-12">
+                            </div></div>
+
+                            <div class="row"><div class="col-sm-12">
+                                <div class="form-group">
+                                    <label><code>.col-sm-12</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span11</code></label>
-                                <div class="controls form-group">
-                                    <input type="text" class="col-sm-11">
+                            </div></div>
+                            <div class="row"><div class="col-sm-11">
+                                <div class="form-group">
+                                    <label><code>.col-sm-11</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span9</code></label>
-                                <div class="controls form-group">
-                                    <input type="text" class="col-sm-9">
+                            </div></div>
+
+                            <div class="row"><div class="col-sm-9">
+                                <div class="form-group">
+                                    <label><code>.col-sm-9</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span7</code></label>
-                                <div class="controls form-group">
-                                    <input type="text" class="col-sm-7">
+                            </div></div>
+                            <div class="row"><div class="col-sm-7">
+                                <div class="form-group">
+                                    <label><code>.col-sm-7</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
+                            </div></div>
                         </fieldset>
                     </form>
                 </div>
@@ -1473,7 +1491,7 @@
                                     <span class="help-block">(123) 456-7890</span>
                                 </label>
                                 <div class="controls form-group">
-                                    <input id="mask-phone" type="text" class="col-sm-7">
+                                    <input id="mask-phone" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1482,7 +1500,7 @@
                                     <span class="help-block">+375 123 456 789</span>
                                 </label>
                                 <div class="controls form-group">
-                                    <input id="mask-int-phone" type="text" class="col-sm-7">
+                                    <input id="mask-int-phone" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1491,7 +1509,7 @@
                                     <span class="help-block">07-03-2013</span>
                                 </label>
                                 <div class="controls form-group">
-                                    <input id="mask-date" type="text" class="col-sm-7">
+                                    <input id="mask-date" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1500,7 +1518,7 @@
                                     <span class="help-block">13:43</span>
                                 </label>
                                 <div class="controls form-group">
-                                    <input id="mask-time" type="text" class="col-sm-7">
+                                    <input id="mask-time" type="text" class="form-control">
                                 </div>
                             </div>
                         </fieldset>
