@@ -8,7 +8,7 @@ $(function(){
         var $current = index+1;
         var $percent = ($current/$total) * 100;
         var $wizard = $("#wizard");
-        $wizard.find('.bar').css({width:$percent+'%'});
+        $wizard.find('.progress-bar').css({width:$percent+'%'});
 
         if($current >= $total) {
             $wizard.find('.pager .next').hide();

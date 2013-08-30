@@ -272,12 +272,12 @@
 </header>
 <div class="content container">
     <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
             <h2 class="page-title">Form Wizard <small>Form validation</small></h2>
         </div>
     </div>
     <div class="row">
-        <div class="span7 offset1">
+        <div class="col-md-7 col-md-offset-1">
             <section class="widget">
             <header>
                 <h4>
@@ -288,14 +288,14 @@
             </header>
             <div class="body">
                 <div id="wizard" class="form-wizard">
-                    <ul class="row wizard-navigation">
-                        <li class="span3"><a class="" href="#tab1" data-toggle="tab"><small>1.</small><strong> Your Details</strong></a></li>
-                        <li class="span3"><a class="" href="#tab2" data-toggle="tab"><small>2.</small> <strong>Shipping</strong></a></li>
-                        <li class="span3"><a class="" href="#tab3" data-toggle="tab"><small>3.</small> <strong>Pay</strong></a></li>
-                        <li class="span3"><a class="" href="#tab4" data-toggle="tab"><small>4.</small> <strong>Thank you!</strong></a></li>
+                    <ul class="wizard-navigation nav-justified">
+                        <li><a href="#tab1" data-toggle="tab"><small>1.</small><strong> Your Details</strong></a></li>
+                        <li><a href="#tab2" data-toggle="tab"><small>2.</small> <strong>Shipping</strong></a></li>
+                        <li><a href="#tab3" data-toggle="tab"><small>3.</small> <strong>Pay</strong></a></li>
+                        <li><a href="#tab4" data-toggle="tab"><small>4.</small> <strong>Thank you!</strong></a></li>
                     </ul>
-                    <div id="bar" class="progress progress-inverse progress-small">
-                        <div class="bar"></div>
+                    <div id="bar" class="progress progress-small">
+                        <div class="progress-bar progress-bar-inverse"></div>
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane" id="tab1">
@@ -304,25 +304,32 @@
                                     <div class="control-group">
                                         <!-- Username -->
                                         <label class="control-label"  for="username">Username</label>
-                                        <div class="controls">
-                                            <input type="text" id="username" name="username" placeholder="" class="span10">
-                                            <span class="help-block">Username can contain any letters or numbers, without spaces</span>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="username" name="username" placeholder="" class="form-control">
+                                                <span class="help-block">Username can contain any letters or numbers, without spaces</span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <!-- Email -->
                                         <label class="control-label"  for="email">Email</label>
-                                        <div class="controls">
-                                            <input type="text" id="email" name="email" placeholder="" class="span10">
-                                            <span class="help-block">Please provide your E-mail</span>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="email" name="email"
+                                                                          placeholder="" class="form-control">
+                                                <span class="help-block">Please provide your E-mail</span>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <!-- Password -->
                                         <label class="control-label"  for="address">Address</label>
-                                        <div class="controls">
-                                            <input type="text" id="address" name="address" placeholder="" class="span10">
-                                            <span class="help-block">Please provide your address</span>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10">
+                                                <input type="text" id="address" name="address" placeholder="" class="form-control">
+                                                <span class="help-block">Please provide your address</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -334,8 +341,8 @@
                                     <div class="control-group">
                                     <label for="country-select" class="control-label">Destination Country</label>
 
-                                    <div class="controls">
-                                        <select id="country-select" data-placeholder="Choose a Country..." class="span10 chzn-select">
+                                    <div class="controls form-group">
+                                        <div class="col-md-10"><select id="country-select" data-placeholder="Choose a Country..." class="select-block-level chzn-select">
                                             <option value=""></option>
                                             <option value="United States">United States</option>
                                             <option value="United Kingdom">United Kingdom</option>
@@ -581,33 +588,33 @@
                                             <option value="Zambia">Zambia</option>
                                             <option value="Zimbabwe">Zimbabwe</option>
                                         </select>
-                                        <span class="help-block pull-left">Please choose your country destination</span>
+                                        <span class="help-block pull-left">Please choose your country destination</span></div>
                                     </div>
                                     </div>
                                     <div class="form-row control-group">
                                         <label for="courier" class="control-label">Choose shipping option</label>
-                                        <div class="controls">
-                                            <select id="courier" data-placeholder="Choose an option.." class="span10 chzn-select">
+                                        <div class="controls form-group">
+                                            <div class="col-md-10"><select id="courier" data-placeholder="Choose an option.." class="select-block-level chzn-select">
                                                 <option value=""></option>
                                                 <option value="Australia Post">Australia Post</option>
                                                 <option value="DHL US">DHL US</option>
                                                 <option value="Other">Other</option>
                                             </select>
-                                            <span class="help-block pull-left">Please choose your shipping option</span>
+                                            <span class="help-block pull-left">Please choose your shipping option</span></div>
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <label class="control-label" for="destination">Destination Zip Code</label>
-                                        <div class="controls">
-                                            <input type="text" id="destination" name="destination" placeholder="" class="span10">
-                                            <span class="help-block">Please provide your Destination Zip Code</span>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10"><input type="text" id="destination" name="destination" placeholder="" class="form-control">
+                                            <span class="help-block">Please provide your Destination Zip Code</span></div>
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <label class="control-label" for="dest-address">Destination Address</label>
-                                        <div class="controls">
-                                            <input type="text" id="dest-address" name="address" placeholder="" class="span10">
-                                            <span class="help-block">Please provide the destination address</span>
+                                        <div class="controls form-group">
+                                            <div class="col-md-10"><input type="text" id="dest-address" name="address" placeholder="" class="form-control">
+                                            <span class="help-block">Please provide the destination address</span></div>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -618,31 +625,31 @@
                                 <fieldset>
                                     <div class="control-group">
                                         <label class="control-label"  for="name">Name on the Card</label>
-                                        <div class="controls">
-                                            <input type="text" id="name" name="name" placeholder="" class="span10">
+                                        <div class="controls form-group">
+                                            <div class="col-md-10"><input type="text" id="name" name="name" placeholder="" class="form-control"></div>
                                         </div>
                                     </div>
                                     <div class="form-row control-group">
                                         <label for="credit-card-type" class="control-label">Credit Card Type</label>
-                                        <div class="controls">
-                                            <select id="credit-card-type" data-placeholder="Please select.." class="chzn-select span10">
+                                        <div class="controls form-group">
+                                            <div class="col-md-10"><select id="credit-card-type" data-placeholder="Please select.." class="chzn-select select-block-level">
                                                 <option value=""></option>
                                                 <option value="Visa">Visa</option>
                                                 <option value="Mastercard">Mastercard</option>
                                                 <option value="Other">Other</option>
-                                            </select>
+                                            </select></div>
                                         </div>
                                     </div>
                                     <div class="form-row control-group ">
                                         <label class="control-label" for="credit">Credit Card Number </label>
-                                        <div class="controls">
-                                            <input id="credit" type="text" tabindex="3" class="span10">
+                                        <div class="controls form-group">
+                                            <div class="col-md-10"><input id="credit" type="text" tabindex="3" class="form-control"></div>
                                         </div>
                                     </div>
                                     <div class="form-row control-group">
                                         <label for="expiration-date" class="control-label">Expiration Date</label>
-                                        <div class="controls">
-                                            <input type="text" id="expiration-date"  class="span10">
+                                        <div class="controls form-group">
+                                            <div class="col-md-10"><input type="text" id="expiration-date"  class="form-control"></div>
                                         </div>
                                     </div>
                                 </fieldset>

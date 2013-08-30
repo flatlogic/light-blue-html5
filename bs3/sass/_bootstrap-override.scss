@@ -392,8 +392,8 @@ textarea,
 }
 
 .nav-pills > li > a {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   margin-top: 2px;
   margin-bottom: 2px;
   @include border-radius($border-radius-base);
@@ -401,11 +401,15 @@ textarea,
 }
 
 // Active state
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover,
-.nav-pills > .active > a:focus {
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
   color: $white;
   background: none;
+}
+
+.nav-justified > li {
+  padding: 0 1.28%;
 }
 
 /***************************/
