@@ -1310,27 +1310,6 @@ legend + .control-group {
   font-size: $font-size-small;
 }
 
-.input-prepend, .input-apppend{
-  &.input-padding-increased{
-    input{
-      @include box-sizing(border-box);
-      height: 38px;
-      padding: 8px 10px;
-
-      &[type=search], &.search{
-        background-position: 5px 10px;
-        padding-left: 26px;
-      }
-    }
-
-    .add-on{
-      height: 28px;
-      line-height: 28px;
-      min-width: 26px;
-      vertical-align: middle;
-    }
-  }
-}
 
 input, textarea{
  &.input-transparent{

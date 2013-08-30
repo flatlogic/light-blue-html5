@@ -109,6 +109,14 @@ input[type="color"],
   &.form-control, &[class*="col-"]{
     padding-left: 6px;
     padding-right: 6px;
+
+    &[type=search], &.search{
+      padding-left: 26px;
+    }
+  }
+
+  &[disabled]{
+    @extend .form-control[disabled];
   }
 }
 
@@ -130,12 +138,9 @@ select:focus:invalid {
   }
 }
 
-.input-append,
-.input-prepend {
-  .add-on {
+.input-group-addon {
     background-color: $backgroundAddition;
     border: 1px solid transparent;
-  }
 }
 
 /*adding .btn-group here because selectpicker's select become .btn-group

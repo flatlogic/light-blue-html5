@@ -271,13 +271,13 @@
         </div>
 </header>
 <div class="content container">
-    <div class="row-fluid">
-        <div class="span12">
+    <div class="row">
+        <div class="col-md-12">
             <h2 class="page-title">Form Elements <small>Inputs, controls and more</small></h2>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span6">
+    <div class="row">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
@@ -289,92 +289,94 @@
                     <form class="form-horizontal" method="post">
                         <fieldset>
                             <legend class="section">Horizontal form</legend>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="normal-field">Normal field</label>
-                            <div class="controls">
-                                <input type="text" id="normal-field" class="span8" placeholder="May have placeholder">
+                            <div class="controls form-group">
+                                <div class="col-sm-8">
+                                    <input type="text" id="normal-field" class="form-control" placeholder="May have placeholder">
+                                </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="hint-field">
                                 Label hint
                                 <span class="help-block">Some help text</span>
                             </label>
-                            <div class="controls">
-                                <input type="text" id="hint-field" class="span8">
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="hint-field" class="form-control"></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label " for="tooltip-enabled">Tooltip enabled</label>
-                            <div class="controls">
-                                <input type="text" id="tooltip-enabled" class="span8"
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="tooltip-enabled" class="form-control"
                                        data-placement="top" data-original-title="Some explanation text here"
-                                       placeholder="Hover over me..">
+                                       placeholder="Hover over me.."></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label " for="disabled-input">Disabled input</label>
-                            <div class="controls">
-                                <input type="text" id="disabled-input"  class="span8"
-                                       disabled="disabled" value="Default value" >
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="disabled-input" class="form-control"
+                                       disabled="disabled" value="Default value" ></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label " for="max-length">Max length</label>
-                            <div class="controls">
-                                <input type="text" id="max-length" maxlength="3"
-                                       class="span8"
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="max-length" maxlength="3"
+                                       class="form-control"
                                        placeholder="Max length 3 characters"
-                                       data-placement="top" data-original-title="You cannot write more than 3 characters.">
+                                       data-placement="top" data-original-title="You cannot write more than 3 characters."></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="prepended-input">Prepended input</label>
-                            <div class="controls">
-                                <div class="input-prepend span10">
-                                    <span class="add-on pull-left"><i class="icon-user"></i></span>
-                                    <input id="prepended-input" class="span8" size="16" type="text" placeholder="Username">
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <span class="input-group-addon"><i class="icon-user"></i></span>
+                                    <input id="prepended-input" class="form-control" size="16" type="text" placeholder="Username">
                                 </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="password-field">Password</label>
-                            <div class="controls">
-                                <div class="input-prepend span10">
-                                    <span class="add-on pull-left"><i class="icon-lock"></i></span>
-                                    <input type="password" class="span8" id="password-field">
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <span class="input-group-addon"><i class="icon-lock"></i></span>
+                                    <input type="password" class="form-control" id="password-field" placeholder="Password">
                                 </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="appended-input">Appended input</label>
-                            <div class="controls">
-                                <div class="input-append span10">
-                                    <input id="appended-input" class="span8" size="16" type="text">
-                                    <span class="add-on pull-left">.00</span> </div>
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <input id="appended-input" class="form-control" size="16" type="text">
+                                    <span class="input-group-addon">.00</span> </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="combined-input">Combined</label>
-                            <div class="controls">
-                                <div class="input-prepend input-append span10">
-                                    <span class="add-on pull-left">$</span>
-                                    <input id="combined-input" class="span8" size="16" type="text">
-                                    <span class="add-on pull-left">.00</span> </div>
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <span class="input-group-addon">$</span>
+                                    <input id="combined-input" class="form-control" size="16" type="text">
+                                    <span class="input-group-addon">.00</span> </div>
                             </div>
                         </div>
                         </fieldset>
-                        <div class="form-actions ">
+                        <div class="form-actions">
                             <div>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn">Cancel</button>
+                                <button type="button" class="btn btn-default">Cancel</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </section>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
@@ -386,89 +388,98 @@
                     <form method="post">
                         <fieldset>
                             <legend class="section">Default form</legend>
-                            <div class="control-group">
-                                <label class="control-label" for="search-input">Search type input</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="search" id="search-input">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+
+                                        <label for="search-input">Search type input</label>
+
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" id="search-input">
+                                    <span class="input-group-btn">
                                         <button type="button" class="btn btn-transparent">Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="bar">Whole bar appended</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="text" id="bar">
-                                        <button type="button" class="btn btn-danger"><i class="icon-pencil"></i></button>
-                                        <button type="button" class="btn btn-warning"><i class="icon-plus"></i></button>
-                                        <button type="button" class="btn btn-success"><i class="icon-refresh"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="dropdown-appended">Actions dropdown</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="text" id="dropdown-appended">
-                                        <div class="btn-group">
-                                            <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                                Action
-                                                <i class="icon-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Action</a></li>
-                                                <li><a href="#">Another action</a></li>
-                                                <li><a href="#">Something else here</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link</a></li>
-                                            </ul>
+                                    </span>
                                         </div>
+
                                     </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="type-dropdown-appended">Types dropdown</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="text" id="type-dropdown-appended">
-                                        <select id="phone-type" class="selectpicker"
-                                                data-style="btn-primary">
-                                            <option>Type one</option>
-                                            <option>Some another type</option>
-                                            <option>Even more types</option>
-                                        </select>
-                                        <span class="help-block">You can select some type of a field just right in the place.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="segmented-dropdown">Segmented dropdown</label>
-                                <div class="controls">
-                                    <div class="input-prepend">
-                                        <div class="btn-group">
-                                            <button class="btn btn-warning" tabindex="-1">Action</button>
-                                            <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                                                <i class="icon-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Action</a></li>
-                                                <li><a href="#">Another action</a></li>
-                                                <li><a href="#">Something else here</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link</a></li>
-                                            </ul>
+                                    <div class="form-group">
+                                        <label for="bar">Whole bar appended</label>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="bar">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-danger"><i class="icon-pencil"></i></button>
+                                                <button type="button" class="btn btn-warning"><i class="icon-plus"></i></button>
+                                                <button type="button" class="btn btn-success"><i class="icon-refresh"></i></button>
+                                            </div>
                                         </div>
-                                        <input id="segmented-dropdown" type="text">
-                                        <span class="help-block">Everything can be appended to the left</span>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dropdown-appended">Actions dropdown</label>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dropdown-appended">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                                    Action
+                                                    <i class="icon-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="type-dropdown-appended">Types dropdown</label>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="type-dropdown-appended">
+                                            <div class="input-group-btn">
+                                                <select id="phone-type" class="selectpicker"
+                                                    data-style="btn-primary">
+                                                <option>Type one</option>
+                                                <option>Some another type</option>
+                                                <option>Even more types</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p class="help-block">You can select some type of a field just right in the place.</p>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="segmented-dropdown">Segmented dropdown</label>
+
+                                        <div class="input-group">
+                                            <input id="segmented-dropdown" class="form-control" type="text">
+                                            <div class="input-group-btn btn-group">
+                                                <button class="btn btn-warning" tabindex="-1">Action</button>
+                                                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="icon-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="help-block">Everything can be appended to the right</span>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
                         <div class="form-actions ">
-                            <div class=" visible-desktop"></div>
                             <div class=" ">
-                                <button type="submit" class="btn">Save Changes</button>
+                                <button type="submit" class="btn btn-default">Save Changes</button>
                                 <button type="button" class="btn btn-inverse">Cancel</button>
                             </div>
                         </div>
@@ -477,8 +488,8 @@
             </section>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span6">
+    <div class="row">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
@@ -492,7 +503,7 @@
                             <legend class="section">Condensed form</legend>
                             <div class="control-group">
                                 <label class="control-label" for="default-textarea">Default textarea</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <textarea rows="4" class="input-block-level" id="default-textarea"></textarea>
                                 </div>
                             </div>
@@ -500,7 +511,7 @@
                                 <label class="control-label" for="elastic-textarea">
                                     Auto-growing textarea
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <textarea rows="3" class="autogrow input-block-level" id="elastic-textarea"
                                               placeholder="Try to add few new lines.."></textarea>
                                 </div>
@@ -512,7 +523,7 @@
                                         With bottom toolbar appended
                                     </span>
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <textarea rows="4" class="input-block-level" id="wysiwyg"></textarea>
                                     <div class="btn-toolbar pull-right">
                                         <button type="button" class="btn btn-sm btn-danger">Save</button>
@@ -525,7 +536,7 @@
                 </div>
             </section>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
@@ -539,7 +550,7 @@
                             <legend class="section">Default form with labels on left</legend>
                             <div class="control-group">
                                 <label class="control-label" for="default-select">Default select</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select data-placeholder="Which galaxy is closest to Milky Way?"
                                             data-width="off"
                                             data-minimum-results-for-search="10"
@@ -559,7 +570,7 @@
                                 <label for="country" class="control-label">
                                     Select with search
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select id="country" required="required"
                                             data-placeholder="Select country" class="select-block-level chzn-select"
                                             tabindex="-1"
@@ -814,7 +825,7 @@
                                     Multiple select
                                     <span class="help-block">With search too</span>
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select data-placeholder="Multiple countries this time"
                                         class="chzn-select select-block-level" tabindex="-1"
                                         multiple="multiple"
@@ -1067,7 +1078,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="grouped">Select with groups</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select data-placeholder="Your Favorite Football Team"
                                             class="chzn-select select-block-level"
                                             multiple="multiple"
@@ -1129,7 +1140,7 @@
                             <legend class="section">Dropdown based colored selects</legend>
                             <div class="control-group">
                                 <label class="control-label" for="simple-colored">Simple select</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select class="selectpicker"
                                             tabindex="-1" id="simple-colored">
                                         <option value="0">Option One</option>
@@ -1146,7 +1157,7 @@
                                         A bit of Japanese
                                     </span>
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select class="selectpicker"
                                             data-style="btn-danger"
                                             tabindex="-1" id="simple-red">
@@ -1173,7 +1184,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="simple-big">Big one</label>
-                                <div class="controls controls-row">
+                                <div class="controls form-group">
                                     <select class="selectpicker span8"
                                             data-style="btn-primary"
                                             tabindex="-1" id="simple-big">
@@ -1192,8 +1203,8 @@
             </section>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span7">
+    <div class="row">
+        <div class="col-md-7">
             <section class="widget">
                 <header>
                     <h4>
@@ -1206,7 +1217,7 @@
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label">Checkboxes</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="checkbox">
                                         <input type="checkbox" id="checkbox-1" checked="checked" class="iCheck">
                                         Not so much needs to be done </label>
@@ -1220,7 +1231,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Inline ones</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="checkbox inline">
                                         <input type="checkbox" id="checkbox-4" class="iCheck" value="true" checked="checked">
                                         True </label>
@@ -1236,7 +1247,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">As button groups</label>
-                                <div class="controls controls-row">
+                                <div class="controls form-group">
                                     <input id="btn-group-checkbox-1-input" type="hidden" name="bg" value="female">
                                     <div id="btn-group-checkbox-1" class="btn-group" data-toggle="buttons-checkbox" data-target="btn-group-checkbox-1-input">
                                         <button type="button" class="btn btn-sm btn-inverse" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
@@ -1245,7 +1256,7 @@
                                                 value="test3">Two</button>
                                     </div>
                                 </div>
-                                <div class="controls controls-row">
+                                <div class="controls form-group">
                                     <input id="btn-group-checkbox-2-input" type="hidden" name="gender" value="female">
                                     <div id="btn-group-checkbox-2" class="btn-group" data-toggle="buttons-checkbox" data-target="btn-group-checkbox-2-input">
                                         <button type="button" class="btn btn-sm btn-primary active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse"
@@ -1259,7 +1270,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Radio Buttons</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="radio">
                                         <input type="radio" id="radio-4" class="iCheck" name="can" checked="checked">
                                         We can sing</label>
@@ -1273,7 +1284,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Same Inline</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="radio inline">
                                         <input type="radio" id="radio-1" class="iCheck" name="cani" checked="checked">
                                         Sing</label>
@@ -1287,14 +1298,14 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">As button groups</label>
-                                <div class="controls controls-row">
+                                <div class="controls form-group">
                                     <input id="button-group-1-input" type="hidden" name="bg" value="female">
                                     <div id="button-group-1" class="btn-group" data-toggle="buttons-radio" data-target="button-group-1-input">
                                         <button type="button" class="btn btn-sm" data-toggle-class="btn-success" value="test4">Windows</button>
                                         <button type="button" class="btn btn-sm btn-success active" data-toggle-class="btn-success" value="test3">&nbsp; Doors &nbsp;</button>
                                     </div>
                                 </div>
-                                <div class="controls controls-row">
+                                <div class="controls form-group">
                                     <input id="button-group-2-input" type="hidden" name="gender" value="female">
                                     <div id="button-group-2" class="btn-group" data-toggle="buttons-radio" data-target="button-group-2-input">
                                         <button type="button" class="btn btn-sm btn-danger active" data-toggle-class="btn-danger" data-toggle-passive-class="btn-inverse"
@@ -1308,7 +1319,7 @@
                             </div>
                             <div class="control-group">
                                 <label for="simple-switch" class="control-label">Switches</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="checkbox inline">
                                         <span class="switch switch-small" data-on="primary" data-off="danger">
                                             <input id="simple-switch" type="checkbox" checked="checked">
@@ -1326,7 +1337,7 @@
                 </div>
             </section>
         </div>
-        <div class="span5">
+        <div class="col-md-5">
             <section class="widget">
                 <header>
                     <h4>
@@ -1340,15 +1351,15 @@
                             <legend class="section">Dates</legend>
                             <div class="control-group">
                                 <label for="in-place-date" class="control-label">In place</label>
-                                <div class="controls controls-row">
-                                    <input id="in-place-date" class="span6 date-picker" type="text" name="in-place-date" value="">
+                                <div class="controls form-group">
+                                    <input id="in-place-date" class="col-sm-6 date-picker" type="text" name="in-place-date" value="">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="btn-enabled-date" class="control-label">Button-enabled</label>
-                                <div class="controls controls-row">
-                                    <div class="input-append span6">
-                                        <input id="btn-enabled-date" class="span11" type="text" name="btn-enabled-date" value="">
+                                <div class="controls form-group">
+                                    <div class="input-group span6">
+                                        <input id="btn-enabled-date" class="col-sm-11" type="text" name="btn-enabled-date" value="">
                                         <a href="#" id="btn-select-calendar" class="btn btn-danger"
                                                 data-date-format="yyyy/mm/dd" data-date="2013/02/25">
                                             <i class="icon-calendar"></i>
@@ -1361,8 +1372,8 @@
                             <legend class="section">Colors</legend>
                             <div class="control-group">
                                 <label for="color" class="control-label">Simple Select</label>
-                                <div class="controls controls-row">
-                                    <div class="input-append">
+                                <div class="controls form-group">
+                                    <div class="input-group">
                                     <input id="color" class=" colorpicker" type="text" name="color"
                                            value="#eac85e">
                                         <span id="color-holder" class="add-on" style="background-color: #eac85e;">&nbsp;&nbsp;&nbsp;</span>
@@ -1375,8 +1386,8 @@
             </section>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span6">
+    <div class="row">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
@@ -1390,46 +1401,46 @@
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label"><code>.span6</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span6">
+                                <div class="controls form-group">
+                                    <input type="text" class="col-sm-6">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label"><code>.span4</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span4">
+                                <div class="controls form-group">
+                                    <input type="text" class="col-sm-4">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label"><code>.span2</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span2">
+                                <div class="controls form-group">
+                                    <input type="text" class="col-sm-2">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label"><code>.span12</code>
                                     or
-                                    <code>.input-block-level</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span12">
+                                    <code>.form-control</code></label>
+                                <div class="controls form-group">
+                                    <input type="text" class="col-sm-12">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label"><code>.span11</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span11">
+                                <div class="controls form-group">
+                                    <input type="text" class="col-sm-11">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label"><code>.span9</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span9">
+                                <div class="controls form-group">
+                                    <input type="text" class="col-sm-9">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label"><code>.span7</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input type="text" class="col-sm-7">
                                 </div>
                             </div>
                         </fieldset>
@@ -1437,7 +1448,7 @@
                 </div>
             </section>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
@@ -1453,8 +1464,8 @@
                                     Phone
                                     <span class="help-block">(123) 456-7890</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-phone" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-phone" type="text" class="col-sm-7">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1462,8 +1473,8 @@
                                     International Phone
                                     <span class="help-block">+375 123 456 789</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-int-phone" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-int-phone" type="text" class="col-sm-7">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1471,8 +1482,8 @@
                                     Date Format
                                     <span class="help-block">07-03-2013</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-date" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-date" type="text" class="col-sm-7">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1480,8 +1491,8 @@
                                     Time
                                     <span class="help-block">13:43</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-time" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-time" type="text" class="col-sm-7">
                                 </div>
                             </div>
                         </fieldset>
