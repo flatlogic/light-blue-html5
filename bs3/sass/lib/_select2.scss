@@ -33,7 +33,7 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   -moz-background-clip   : padding;
   -webkit-background-clip: padding-box;
   background-clip        : padding-box;
-  border: 1px solid $btn-default-border;
+  border: 1px solid $input-border;
   //-webkit-box-shadow: 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
   //-moz-box-shadow   : 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
   //box-shadow        : 0 0 3px #ffffff inset, 0 1px 1px rgba(0,0,0,0.1);
@@ -42,8 +42,8 @@ Version: @@ver@@ Timestamp: @@timestamp@@
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  height: 28px;
-  line-height: 28px;
+  height: 30px;
+  line-height: 30px;
   padding: 0 0 0 8px;
   color: $gray-dark;
   text-decoration: none;
@@ -467,7 +467,8 @@ disabled look for disabled choices in the results dropdown
 
 .select2-container-multi .select2-choices .select2-search-field input {
   padding: 5px;
-  margin: 1px 0;
+  //okendoken. bs3 styling
+  //margin: 1px 0;
 
   //okendoken
   //font-family: sans-serif;

@@ -620,6 +620,7 @@ input.parsley-error{
 
   .search-query{
     @include box-sizing(content-box);
+    min-height: 0;
     padding: 4px 14px;
     color: $text-color;
     border: none;
@@ -1222,10 +1223,6 @@ input.parsley-error{
 /**          FORMS                **/
 /**********************************/
 
-// Margin to space out fieldsets
-.control-group {
-  margin-bottom: $line-height-base / 2;
-}
 
 // Legend collapses margin, so next element is responsible for spacing
 legend + .control-group {
@@ -1239,7 +1236,6 @@ legend + .control-group {
 .form-horizontal {
   // Increase spacing between groups
   .control-group {
-    margin-bottom: $line-height-base;
     @include clearfix();
   }
   // Float the labels left

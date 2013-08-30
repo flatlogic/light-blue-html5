@@ -105,9 +105,10 @@ $(function(){
     //class-switch for button-groups
     $(".btn-group > .btn[data-toggle-class]").click(function(){
         var $this = $(this),
+            isRadio = $this.find('input').is('[type=radio]'),
             $parent = $this.parent();
 
-        if ($parent.data("toggle") == "buttons-radio"){
+        if (isRadio){
             $parent.children(".btn[data-toggle-class]").removeClass(function(){
                 return $(this).data("toggle-class")
             }).addClass(function(){

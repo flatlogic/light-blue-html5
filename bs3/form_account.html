@@ -334,17 +334,20 @@
                             <div class="control-group">
                                 <label class="control-label">Gender</label>
                                 <div class="controls form-group">
-                                    <input id="gender-input" type="hidden" name="gender" value="female">
-                                    <div id="gender" class="btn-group" data-toggle="buttons-radio" data-target="#gender-input">
-                                        <button type="button" class="btn" data-toggle-class="btn-primary" name="gender" value="male">&nbsp; Male &nbsp;</button>
-                                        <button type="button" class="btn btn-primary active" data-toggle-class="btn-primary" name="gender" value="female">Female</button>
+                                    <div id="gender" class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                            <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                                        </label>
+                                        <label class="btn btn-primary active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                            <input type="radio" name="gender" value="female"> Female
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="date-of-birth" class="control-label">Date Of Birth <span class="required">*</span></label>
                                 <div class="controls form-group">
-                                    <input id="date-of-birth" class="col-xs-6 col-xs-11 date-picker" required="required" type="text" name="date-of-birth" value="">
+                                    <input id="date-of-birth" class="col-sm-6 col-xs-11 date-picker" required="required" type="text" name="date-of-birth" value="">
                                 </div>
                             </div>
                         </fieldset>
@@ -375,7 +378,7 @@
                                                    required="required" type="text"
                                                    name="phone" maxlength="28">
                                             <span class="input-group-btn">
-                                                <select id="phone-type" class="selectpicker">
+                                                <select id="phone-type" class="selectpicker" data-style="btn-default">
                                                     <option>Mobile</option>
                                                     <option>Home</option>
                                                     <option>Work</option>
@@ -393,7 +396,7 @@
                                             <input id="fax" class="form-control" type="text"
                                                    name="phone" maxlength="28">
                                             <span class="input-group-btn">
-                                                 <select id="fax-type" class="selectpicker">
+                                                 <select id="fax-type" class="selectpicker" data-style="btn-default">
                                                      <option>Mobile</option>
                                                      <option>Home</option>
                                                      <option>Work</option>
@@ -420,7 +423,7 @@
                                             <input id="address" class="form-control" type="text"
                                                    name="address">
                                             <span class="input-group-btn">
-                                                 <select id="address-type" class="selectpicker">
+                                                 <select id="address-type" class="selectpicker" data-style="btn-default">
                                                      <option>Mobile</option>
                                                      <option>Home</option>
                                                      <option>Work</option>
@@ -754,7 +757,7 @@
                         </fieldset>
                         <div class="form-actions">
                             <button type="submit" class="btn btn-primary">Validate &amp; Submit</button>
-                            <button type="button" class="btn">Cancel</button>
+                            <button type="button" class="btn btn-default">Cancel</button>
                         </div>
                     </form>
                 </div>
@@ -772,47 +775,42 @@
                     <form method="post">
                         <fieldset>
                                 <div class="form-group">
-                                    <label for="exp" class="control-label">Account expiration date</label>
-                                    <div class="controls form-group">
-                                        <input id="exp" class="form-control date-picker" type="text" name="exp" value="">
-                                        <span class="help-block">Bootstrap datepicker</span>
-                                    </div>
+                                    <label for="exp">Account expiration date</label>
+                                    <input id="exp" class="form-control date-picker" type="text" name="exp" value="">
+                                    <p class="help-block">Bootstrap datepicker</p>
                                 </div>
                                 <div class="form-group">
-                                    <label for="website" class="control-label">Associate to Website</label>
-                                    <div class="controls form-group">
-                                        <select id="website" class="chzn-select select-block-level"
-                                                data-width="off"
-                                                data-minimum-results-for-search="10"
-                                                name="website">
-                                            <option selected="selected" value="0">Admin</option>
-                                            <option value="1">Main Website</option>
-                                        </select>
-                                    </div>
+                                    <label for="website">Associate to Website</label>
+                                    <select id="website" class="chzn-select select-block-level"
+                                            data-width="off"
+                                            data-minimum-results-for-search="10"
+                                            name="website">
+                                        <option selected="selected" value="0">Admin</option>
+                                        <option value="1">Main Website</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="created_by" class="control-label">Created By</label>
-                                    <div class="controls form-group">
-                                        <input id="created_by" class="form-control" type="text" name="created_by"
-                                               value="Admin" disabled="disabled">
-                                    </div>
+                                    <label for="created_by">Created By</label>
+
+                                    <input id="created_by" class="form-control" type="text" name="created_by"
+                                           value="Admin" disabled="disabled">
+
                                 </div>
                                 <div class="form-group">
-                                    <label for="groups" class="control-label">Account Group</label>
-                                    <div class="controls form-group">
-                                        <select id="groups" name="groups" class="chzn-select select-block-level" multiple
-                                                data-placeholder="Choose one or more groups for account"
-                                                data-width="off">
-                                            <option value="0">Subscriber</option>
-                                            <option value="1">Retailer</option>
-                                            <option value="2">Supplier</option>
-                                            <option value="3">Manager</option>
-                                        </select>
-                                    </div>
+                                    <label for="groups">Account Group</label>
+                                    <select id="groups" name="groups" class="chzn-select select-block-level" multiple
+                                            data-placeholder="Choose one or more groups for account"
+                                            data-width="off">
+                                        <option value="0">Subscriber</option>
+                                        <option value="1">Retailer</option>
+                                        <option value="2">Supplier</option>
+                                        <option value="3">Manager</option>
+                                    </select>
+
                                 </div>
                                 <div class="control-group">
                                     <div class="controls">
-                                        <label class="checkbox">
+                                        <label class="checkbox" for="change-password">
                                         <input type="checkbox" id="change-password" name="change-password">
                                             Request password change
                                         </label>
