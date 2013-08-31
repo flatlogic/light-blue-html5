@@ -405,6 +405,7 @@ input.parsley-error{
   }
 
   .control{
+    @include box-sizing(content-box);
     background: $backgroundAddition;
     text-align: center;
     font-weight: normal;
