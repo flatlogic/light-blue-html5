@@ -550,6 +550,10 @@ a.thumbnail:focus {
   font-size: $font-size-small;
 }
 
+.badge{
+  padding: 2px 9px;
+}
+
 @each $item in label, badge {
 // Important (red)
   .#{$item}-important         { background-color: $red; }

@@ -1554,6 +1554,7 @@ input.input-padding-increased{
 // Inverse
 .progress-inverse .bar, .progress .progress-bar-inverse {
   color: $gray-dark;
+  background-color: $lightGray;
   @include gradient-vertical($lightGray, $lightGray);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .progress-bar-inverse {
