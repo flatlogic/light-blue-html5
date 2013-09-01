@@ -272,19 +272,19 @@
 </header>
 <div class="content container">
     <div class="row hidden-print">
-        <div class="span12">
+        <div class="col-md-12">
             <h2 class="page-title">Invoice <small>Print optimized page</small></h2>
         </div>
     </div>
     <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
             <section class="widget">
                 <div class="body no-margin">
-                    <div class="row print-non-responsive">
-                        <div class="span6">
+                    <div class="row">
+                        <div class="col-sm-6 col-print-6">
                             <img src="img/logo.png" alt="Logo" class="invoice-logo"/>
                         </div>
-                        <div class="span6">
+                        <div class="col-sm-6 col-print-6">
                             <div class="invoice-number text-align-right">
                                 #4346345 / 14 Aug 2013
                             </div>
@@ -295,8 +295,8 @@
                     </div>
                     <hr>
                     <section class="invoice-info well">
-                        <div class="row print-non-responsive">
-                            <div class="span6">
+                        <div class="row">
+                            <div class="col-sm-6 col-print-6">
                                 <h4 class="details-title">Company Information</h4>
                                 <h3 class="company-name">
                                     Wrapbootstrap LLC
@@ -310,7 +310,7 @@
                                     <abbr title="Work Fax">fax:</abbr> (012) 678-132-901
                                 </address>
                             </div>
-                            <div class="span6 text-align-right">
+                            <div class="col-sm-6 col-print-6 text-align-right">
                                 <h4 class="details-title">Client Information</h4>
                                 <h3 class="client-name">
                                     Veronica Niasvizhskaja
@@ -374,20 +374,21 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div class="row print-non-responsive">
-                        <div class="span6">
+                    <div class="row">
+                        <div class="col-sm-6 col-print-6">
                             <blockquote>
                                 <strong>Note:</strong> Keep in mind, sometimes bad things happen. But it's just sometimes.
                             </blockquote>
                         </div>
-                        <div class="span6">
-                            <div class="row non-responsive text-align-right">
-                                <div class="span3 offset6">
+                        <div class="col-sm-6 col-print-6">
+                            <div class="row text-align-right">
+                                <div class="col-xs-6"></div> <!-- instead of offset -->
+                                <div class="col-xs-3">
                                     <p>Subtotal</p>
                                     <p>Tax(10%)</p>
                                     <p class="no-margin"><strong>Total</strong></p>
                                 </div>
-                                <div class="span3">
+                                <div class="col-xs-3">
                                     <p>1,598.88</p>
                                     <p>159.89</p>
                                     <p class="no-margin"><strong>1,758.77</strong></p>

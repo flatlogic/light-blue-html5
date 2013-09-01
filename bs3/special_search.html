@@ -272,27 +272,35 @@
     </header>
     <div class="content container">
         <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
                 <h2 class="page-title">Search Results <small>Search result and form</small></h2>
             </div>
         </div>
         <div class="row">
-            <div class="span8 offset2">
+            <div class="col-md-8 col-md-offset-2">
                 <section class="widget">
                     <div class="body no-margin">
-                        <form class="form-search no-margin text-align-center">
-                            <input type="search" class="span10"
-                                    placeholder="Keywords: Node.js, History">
-                            <button class="btn btn-primary">
-                                Search
-                            </button>
-                        </form>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <form class="form-inline form-search no-margin text-align-center" role="form">
+                                    <div class="input-group">
+                                        <input type="search" class="form-control"
+                                               placeholder="Keywords: Node.js, History">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary">
+                                        Search
+                                    </button>
+                                </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
         <div class="row">
-            <div class="span10 offset1">
+            <div class="col-md-10 col-md-offset-1">
                 <section class="widget padding-increased">
                     <header>
                         <h4>
@@ -337,8 +345,8 @@
                             <p>Who are the Belarusians, anyway? What is this strange country - Belarus - which appeared
                                 on the map a few years ago, a country that used to be called Belorussia, Byelorussia or even White Russia?</p>
                         </section>
-                        <div class="pagination text-align-center">
-                            <ul>
+                        <div class="text-align-center">
+                            <ul class="pagination">
                                 <li class="disabled"><a href="#">Prev</a></li>
                                 <li class="active"><a href="#">1</a></li>
                                 <li><a href="#">2</a></li>
