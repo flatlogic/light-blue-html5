@@ -615,6 +615,32 @@ a.thumbnail:focus {
 }
 
 /***************************/
+/*          Panels         */
+/***************************/
+
+.panel-heading {
+  padding: 0;
+
+  > .accordion-toggle{
+    display: block;
+    padding: 8px 15px;
+  }
+}
+
+.panel-group {
+  .panel-heading {
+    + .panel-collapse .panel-body {
+      border-top: 1px solid $backgroundAddition;
+    }
+  }
+  .panel-footer {
+    + .panel-collapse .panel-body {
+      border-bottom: 1px solid $backgroundAddition;
+    }
+  }
+}
+
+/***************************/
 /*         Icons           */
 /***************************/
 
