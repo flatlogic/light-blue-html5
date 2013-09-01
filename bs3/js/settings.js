@@ -154,4 +154,14 @@ $(function(){
     if (($("#sidebar").is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
         closeNavigation();
     }
+
+    //imitate buttons radio behavior
+    $pageHeader.on("click", ".popover [data-toggle='buttons-radio'] .btn:not(.active)", function(){
+        var $this = $(this),
+            $buttons = $this.parent().find('.btn');
+        $buttons.removeClass('active');
+        setTimeout(function(){
+            $this.addClass('active');
+        }, 0)
+    });
 });

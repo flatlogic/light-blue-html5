@@ -51,6 +51,7 @@ input.parsley-error{
 /**********************************/
 
 .logo{
+  @include box-sizing(content-box);
   position: absolute;
   left: 65px;
   top: 13px;
