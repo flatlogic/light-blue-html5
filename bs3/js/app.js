@@ -94,13 +94,6 @@ $(function(){
         closeNavigation();
     });
 
-    $("[data-toggle='buttons-radio'] button").click(function(){
-        var $this = $(this),
-            $parent = $this.parent(),
-            $targetInput = $($parent.data('target'));
-        $targetInput.val($this.val());
-    });
-
     //class-switch for button-groups
     $(".btn-group > .btn[data-toggle-class]").click(function(){
         var $this = $(this),

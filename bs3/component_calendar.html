@@ -272,12 +272,12 @@
     </header>
     <div class="content container">
         <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
                 <h2 class="page-title">Calendar <small>Draggable access</small></h2>
             </div>
         </div>
         <div class="row">
-            <div class="span8">
+            <div class="col-md-8">
                 <section class="widget">
                     <header>
                         <h4>
@@ -288,13 +288,16 @@
                             <button id="today" type="button" class="btn btn-sm btn-warning">
                                 Today
                             </button>
-                            <div id="calendar-switcher" class="btn-group" data-toggle="buttons-radio" data-target="btn-group-checkbox-2-input">
-                                <button type="button" class="btn btn-sm btn-success active" data-toggle-class="btn-success"
-                                        value="month">Month</button>
-                                <button type="button" class="btn btn-sm" data-toggle-class="btn-success"
-                                        value="agendaWeek">Week</button>
-                                <button type="button" class="btn btn-sm" data-toggle-class="btn-success"
-                                        value="agendaDay">Day</button>
+                            <div id="calendar-switcher" class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-sm btn-success active" data-toggle-class="btn-success" data-toggle-passive-class="btn-default">
+                                    <input type="radio" name="view" value="month"> Month
+                                </label>
+                                <label class="btn btn-sm btn-default" data-toggle-class="btn-success" data-toggle-passive-class="btn-default">
+                                    <input type="radio" name="view" value="agendaWeek"> Week
+                                </label>
+                                <label class="btn btn-sm btn-default" data-toggle-class="btn-success" data-toggle-passive-class="btn-default">
+                                    <input type="radio" name="view" value="agendaDay"> Day
+                                </label>
                             </div>
                         </div>
                     </header>
@@ -303,7 +306,7 @@
                     </div>
                 </section>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <section class="widget">
                     <header>
                         <h5>
@@ -326,37 +329,46 @@
     </div>
 </div>
 
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h4 id="myModalLabel">Map click</h4>
-    </div>
-    <div class="modal-body">
-        <p>One fine body…</p>
-    </div>
-    <div class="modal-footer">
-        <button data-dismiss="modal" class="btn btn-primary">OK</button>
-    </div>
-</div>
-
-<div id="edit-modal" class="modal hide fade" tabindex="-1" role="dialog">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h4 id="edit-modal-label">Create new event</h4>
-    </div>
-    <div class="modal-body">
-        <div class="control-group">
-            <label for="event-name" class="control-label">Event name</label>
-            <div class="controls">
-                <input type="text" id="event-name" name="name">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
             </div>
-        </div>
-    </div>
-    <div class="modal-footer">
-        <button data-dismiss="modal" class="btn">Cancel</button>
-        <button data-dismiss="modal" id="create-event" class="btn btn-success">OK</button>
-    </div>
-</div>
+            <div class="modal-body">
+                <p>One fine body…</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="control-group">
+                    <label for="event-name" class="control-label">Event name</label>
+                    <div class="controls">
+                        <input type="text" id="event-name" name="name">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default">Cancel</button>
+                <button data-dismiss="modal" id="create-event" class="btn btn-success">OK</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 
 <!-- jquery and friends -->
 <script src="lib/jquery/jquery.1.9.0.min.js"> </script>

@@ -467,6 +467,12 @@ input.parsley-error{
   }
 }
 
+.jqstooltip{
+  &, *{
+    @include box-sizing(content-box);
+  }
+}
+
 /***********************************/
 /**          USERS LIST           **/
 /**********************************/
@@ -1568,6 +1574,10 @@ input.input-padding-increased{
 
 .map{
   height: 100%;
+  *{
+    //bs3 fix
+    @include box-sizing(content-box);
+  }
 }
 
 /***********************************/

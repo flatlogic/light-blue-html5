@@ -272,12 +272,12 @@
     </header>
     <div class="content container">
         <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
                 <h2 class="page-title">Maps <small>Built-in google & vector maps</small></h2>
             </div>
         </div>
         <div class="row">
-            <div class="span6">
+            <div class="col-md-6">
                 <section class="widget large">
                     <header>
                         <h4>
@@ -292,7 +292,7 @@
                     </div>
                 </section>
             </div>
-            <div class="span6">
+            <div class="col-md-6">
                 <section class="widget large">
                     <header>
                         <h4>
@@ -300,7 +300,7 @@
                             Address and location
                         </h4>
                         <div class="actions">
-                            <input id="address" type="text" placeholder="Enter Address">
+                            <input id="address" type="text" class="input-transparent" placeholder="Enter Address">
                         </div>
                     </header>
                     <div class="body">
@@ -312,7 +312,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="span6">
+            <div class="col-md-6">
                 <section class="widget large">
                     <header>
                         <h4>
@@ -335,7 +335,7 @@
                     </div>
                 </section>
             </div>
-            <div class="span6">
+            <div class="col-md-6">
                 <section class="widget large">
                     <header>
                         <h4>
@@ -354,18 +354,22 @@
     </div>
 </div>
 
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h4 id="myModalLabel">Map click</h4>
-    </div>
-    <div class="modal-body">
-        <p>One fine body…</p>
-    </div>
-    <div class="modal-footer">
-        <button data-dismiss="modal" class="btn btn-primary">OK</button>
-    </div>
-</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body…</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <!-- jquery and friends -->
 <script src="lib/jquery/jquery.1.9.0.min.js"> </script>

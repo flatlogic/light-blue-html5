@@ -94,6 +94,8 @@ input[type="color"],
 .uneditable-input {
   color: $gray-dark;
   min-height: 30px;
+  padding-left: 6px;
+  padding-right: 6px;
 
   background-color: $input-bg;
   border: 1px solid $input-border;
@@ -107,8 +109,6 @@ input[type="color"],
   }
 
   &.form-control, &[class*="col-"]{
-    padding-left: 6px;
-    padding-right: 6px;
 
     &[type=search], &.search{
       padding-left: 26px;
