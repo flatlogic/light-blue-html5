@@ -57,7 +57,7 @@ function closeNavigation(){
     var $accordion = $('#side-nav').find('.panel-collapse.in');
     $accordion.collapse('hide');
     $accordion.siblings(".accordion-toggle").addClass("collapsed");
-    $('.content').css("margin-top", '');
+    resetContentMargin();
 }
 
 function resetContentMargin(){
@@ -92,7 +92,6 @@ $(function(){
 
     $(window).resize(function(){
         closeNavigation();
-        resetContentMargin();
     });
 
     $("[data-toggle='buttons-radio'] button").click(function(){
@@ -183,6 +182,16 @@ $(function(){
                 }
             }
         }
+    });
+
+    //need some class to present right after click for submenu
+    var $subMenus = $sidebar.find('.panel-collapse');
+    $subMenus.on('show.bs.collapse', function(){
+        $(this).addClass('open');
+    });
+
+    $subMenus.on('hide.bs.collapse', function(){
+        $(this).removeClass('open');
     });
 
 });

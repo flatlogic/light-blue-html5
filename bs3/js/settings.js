@@ -152,8 +152,6 @@ $(function(){
 
     //close navigation if sidebar in icons state
     if (($("#sidebar").is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
-        var $activeAccordion = $("#side-nav").find("> .panel.active");
-        $activeAccordion.find(".accordion-toggle").addClass("collapsed");
-        $activeAccordion.find(".panel-collapse.collapse").removeClass("in");
+        closeNavigation();
     }
 });
