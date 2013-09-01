@@ -951,7 +951,17 @@ input.parsley-error{
 
   input[type="email"],
   input[type="password"]{
-    width: 313px;
+    font-size: $font-size-base;
+  }
+
+  .input-group-addon{
+    padding: 8px 7px;
+    i{
+      &, &:before, &:after{
+        width: 20px;
+        margin: 0;
+      }
+    }
   }
 
   .form-actions {
@@ -990,6 +1000,7 @@ input.parsley-error{
   }
 
   .facebook-login {
+    @include box-sizing(content-box);
     height: 30px;
     background: $blue;
     text-align: center;
@@ -1332,17 +1343,6 @@ input, textarea{
      color: $text-color;
    }
  }
-}
-
-input.input-padding-increased{
-  @include box-sizing(border-box);
-  height: 38px;
-  padding: 8px 10px;
-
-  &[type=search], &.search{
-    background-position: 5px 10px;
-    padding-left: 26px;
-  }
 }
 
 .select-block-level{
@@ -1958,6 +1958,11 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .widget-404-search, .widget-404{
   width: 600px;
+}
+
+.widget-404-search{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .single-widget-container .widget-404-search{
