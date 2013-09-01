@@ -272,12 +272,12 @@
 </header>
 <div class="content container">
     <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
             <h2 class="page-title">Inbox <small>user email</small></h2>
         </div>
     </div>
     <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
             <section class="widget">
                 <header>
                     <h4>
@@ -287,7 +287,7 @@
                 <div class="body">
                     <div id="mailbox-app" class="mailbox">
                         <div class="row">
-                            <div class="span2">
+                            <div class="col-sm-2">
                                 <button id="compose-btn" class="btn btn-danger btn-block">Compose</button>
                                 <ul id="folders-list" class="mailbox-folders">
                                     <li class="active"><a href="#">Inbox</a></li>
@@ -295,7 +295,7 @@
                                     <li><a href="#">Drafts</a></li>
                                 </ul>
                             </div>
-                            <div class="span10">
+                            <div class="col-sm-10">
                                 <h2 id='folder-title' class="folder-title pull-left">Inbox <small>(2 unread messages)</small></h2>
                                 <form class="form-inline form-search text-align-right" action="">
                                     <label>
@@ -309,7 +309,7 @@
                                             <th colspan="3" id="folder-actions">
                                                 <input id="toggle-all" type="checkbox"/>
                                                 <span class="btn-group">
-                                                <a class="btn btn-sm" href="#" data-toggle="dropdown">
+                                                <a class="btn btn-default btn-sm" href="#" data-toggle="dropdown">
                                                     Select
                                                     <i class="icon-angle-down "></i>
                                                 </a>
@@ -324,10 +324,10 @@
                                             </th>
                                             <th colspan="3" class="total-pages">
                                                 1-30 of 1,421
-                                                <button class="btn btn-xs">
+                                                <button class="btn btn-default btn-xs">
                                                     <i class="icon-angle-left icon-large"></i>
                                                 </button>
-                                                <button class="btn btn-xs">
+                                                <button class="btn btn-default btn-xs">
                                                     <i class="icon-angle-right icon-large"></i>
                                                 </button>
                                             </th>
@@ -452,7 +452,7 @@
 <script type="text/template" id="folder-actions-template">
     <input id="toggle-all" type="checkbox" <%= allSelected ? 'checked' : '' %>/>
     <span class="btn-group">
-        <a class="btn btn-sm" href="#" data-toggle="dropdown">
+        <a class="btn btn-default btn-sm" href="#" data-toggle="dropdown">
             Select
             <i class="icon-angle-down "></i>
         </a>
@@ -504,7 +504,7 @@
             <th colspan="3" id="folder-actions">
                 <input id="toggle-all" type="checkbox"/>
                 <span class="btn-group">
-                    <a class="btn btn-sm" href="#" data-toggle="dropdown">
+                    <a class="btn btn-default btn-sm" href="#" data-toggle="dropdown">
                         Select
                         <i class="icon-angle-down "></i>
                     </a>
@@ -519,10 +519,10 @@
             </th>
             <th colspan="3" class="total-pages">
                 1-30 of 1,421
-                <button class="btn btn-xs">
+                <button class="btn btn-default btn-xs">
                     <i class="icon-angle-left icon-large"></i>
                 </button>
-                <button class="btn btn-xs">
+                <button class="btn btn-default btn-xs">
                     <i class="icon-angle-right icon-large"></i>
                 </button>
             </th>
@@ -580,7 +580,7 @@
     %>
     <div class="email-attachments">
         <div class="row">
-            <div class="span6">
+            <div class="col-sm-6">
                 <hr>
                 <p class="details"><strong><%= attachmentsCount %> attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
                     &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
