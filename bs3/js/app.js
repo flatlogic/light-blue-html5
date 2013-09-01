@@ -57,6 +57,7 @@ function closeNavigation(){
     var $accordion = $('#side-nav').find('.panel-collapse.in');
     $accordion.collapse('hide');
     $accordion.siblings(".accordion-toggle").addClass("collapsed");
+    $('.content').css("margin-top", '');
 }
 
 function resetContentMargin(){
@@ -86,7 +87,6 @@ $(function(){
         if (e.target == this) {
             $sidebar.removeClass('open');
             $(".content").css("margin-top", '');
-            closeNavigation();
         }
     });
 
@@ -124,7 +124,7 @@ $(function(){
     $("#search-toggle").click(function(){
         //first hide menu if open
 
-        if ($sidebar.data('collapse')){
+        if ($sidebar.data('bs.collapse')){
             $sidebar.collapse('hide');
         }
 
@@ -145,27 +145,44 @@ $(function(){
 
 
     //hide search field if open
-    $sidebar.on('show', function () {
+    $sidebar.on('show.bs.collapse', function () {
         var $notifications = $('.notifications'),
             notificationsPresent = !$notifications.is(':empty');
         $("#search-form").css('height', 0);
         notificationsPresent && $notifications.css('top', '');
     });
 
+    var INITIAL_CONTENT_MARGIN = 370;  //if changed in css change here!
+
     /*   Move content down when second-level menu opened */
     $("#side-nav").find("a.accordion-toggle").click(function(){
-        var $this = $(this),
-            initialContentMargin = 370; //if changed in css change here!
         if ($(window).width() < 768){
-            var $secondLevelMenu = $this.find("+ ul"),
+            var $this = $(this),
+                $secondLevelMenu = $this.find("+ ul"),
                 $menuChildren = $secondLevelMenu.find("> li"),
                 menuHeight = $menuChildren.length * $menuChildren.height(),
                 $content = $(".content");
             if (!$secondLevelMenu.is(".in")){
-                $content.css("margin-top", initialContentMargin + menuHeight + 'px');
+                $content.css("margin-top", INITIAL_CONTENT_MARGIN + menuHeight + 'px');
             } else {
                 $content.css("margin-top", '');
             }
         }
     });
+
+    $sidebar.on('show.bs.collapse', function(e){
+        if (e.target == this){
+            if ($(window).width() < 768){
+                var $activeLink = $('#side-nav').find('> li > a.accordion-toggle:not(.collapsed)'),
+                    $secondLevelMenu = $activeLink.find("+ ul"),
+                    $menuChildren = $secondLevelMenu.find("> li"),
+                    menuHeight = $menuChildren.length * $menuChildren.height(),
+                    $content = $(".content");
+                if ($secondLevelMenu.is('.in')){
+                    $content.css("margin-top", INITIAL_CONTENT_MARGIN + menuHeight + 'px');
+                }
+            }
+        }
+    });
+
 });

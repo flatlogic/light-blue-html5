@@ -288,19 +288,53 @@ textarea,
 
 .nav {
   margin-bottom: 0;
+
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $nav-link-hover-bg;
+      border-color: transparent;
+    }
+  }
 }
 
 .nav > li > a:hover,
-.nav > li > a:focus {
+.nav > li > a:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus{
   background-color: $backgroundAddition;
 }
 
 .nav-tabs > li > a {
   @include border-radius($border-radius-base $border-radius-base 0 0);
   color: $text-color;
+  padding-top: 8px;
+  padding-bottom: 8px;
   &:hover,
   &:focus {
     border-color: transparent;
+  }
+}
+
+.nav-tabs {
+  > li {
+    &.active > a {
+      &.dropdown-toggle{
+        &,
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
+      }
+      &,
+      &:hover,
+      &:focus {
+        color: $text-color;
+        cursor: default;
+      }
+    }
   }
 }
 
@@ -308,9 +342,9 @@ textarea,
   margin-bottom: 0;
 }
 
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover,
-.nav-tabs > .active > a:focus {
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
   color: $text-color;
   background-color: $backgroundAddition;
   border-color: transparent;

@@ -7982,14 +7982,22 @@ textarea + .help-block,
 .nav {
   margin-bottom: 0;
 }
+/* line 295, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: #eeeeee;
+  border-color: transparent;
+}
 
-/* line 294, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 306, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav > li > a:hover,
-.nav > li > a:focus {
+.nav > li > a:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
   background-color: rgba(51, 51, 51, 0.25);
 }
 
-/* line 298, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 310, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-tabs > li > a {
   -webkit-border-radius: 1px 1px 0 0;
   -moz-border-radius: 1px 1px 0 0;
@@ -7997,27 +8005,39 @@ textarea + .help-block,
   -o-border-radius: 1px 1px 0 0;
   border-radius: 1px 1px 0 0;
   color: #f8f8f8;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
-/* line 302, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 316, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
   border-color: transparent;
 }
 
-/* line 307, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 327, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+.nav-tabs > li.active > a.dropdown-toggle, .nav-tabs > li.active > a.dropdown-toggle:hover, .nav-tabs > li.active > a.dropdown-toggle:focus {
+  cursor: pointer;
+}
+/* line 333, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: #f8f8f8;
+  cursor: default;
+}
+
+/* line 341, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-tabs > .active {
   margin-bottom: 0;
 }
 
-/* line 313, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover,
-.nav-tabs > .active > a:focus {
+/* line 347, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
   color: #f8f8f8;
   background-color: rgba(51, 51, 51, 0.25);
   border-color: transparent;
 }
 
-/* line 319, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 353, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-tabs .dropdown-menu {
   -webkit-border-radius: 0 0 1px 1px;
   -moz-border-radius: 0 0 1px 1px;
@@ -8026,7 +8046,7 @@ textarea + .help-block,
   border-radius: 0 0 1px 1px;
 }
 
-/* line 322, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 356, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-pills .dropdown-menu {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -8035,12 +8055,12 @@ textarea + .help-block,
   border-radius: 1px;
 }
 
-/* line 325, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 359, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-below > .nav-tabs {
   border-top: none;
 }
 
-/* line 329, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 363, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-below > .nav-tabs > li > a {
   -webkit-border-radius: 0 0 1px 1px;
   -moz-border-radius: 0 0 1px 1px;
@@ -8049,13 +8069,13 @@ textarea + .help-block,
   border-radius: 0 0 1px 1px;
 }
 
-/* line 333, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 367, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs {
   margin-right: 0;
   border-right: none;
 }
 
-/* line 339, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 373, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li > a {
   -webkit-border-radius: 1px 0 0 1px;
   -moz-border-radius: 1px 0 0 1px;
@@ -8064,13 +8084,13 @@ textarea + .help-block,
   border-radius: 1px 0 0 1px;
 }
 
-/* line 343, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 377, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs {
   margin-left: 0;
   border-left: none;
 }
 
-/* line 348, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 382, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs > li > a {
   -webkit-border-radius: 0 1px 1px 0;
   -moz-border-radius: 0 1px 1px 0;
@@ -8079,60 +8099,60 @@ textarea + .help-block,
   border-radius: 0 1px 1px 0;
 }
 
-/* line 352, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 386, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-below > .nav-tabs > li {
   margin-top: 0;
 }
 
-/* line 358, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 392, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
   border-top-color: transparent;
 }
 
-/* line 364, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 398, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
   border-color: transparent;
 }
 
-/* line 368, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 402, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li > a {
   margin-right: 0;
 }
 
-/* line 372, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 406, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li > a:hover,
 .tabs-left > .nav-tabs > li > a:focus {
   border-color: transparent;
 }
 
-/* line 377, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 411, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
   border-color: transparent;
 }
 
-/* line 381, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 415, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs > li > a {
   margin-left: 0;
 }
 
-/* line 385, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 419, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs > li > a:hover,
 .tabs-right > .nav-tabs > li > a:focus {
   border-color: transparent;
 }
 
-/* line 390, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 424, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
   border-color: transparent;
 }
 
-/* line 394, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 428, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-pills > li > a {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -8146,7 +8166,7 @@ textarea + .help-block,
   background: rgba(51, 51, 51, 0.25);
 }
 
-/* line 406, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 440, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
@@ -8154,7 +8174,7 @@ textarea + .help-block,
   background: none;
 }
 
-/* line 411, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 445, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .nav-justified > li, .nav-tabs.nav-justified > li {
   padding: 0 1.28%;
 }
@@ -8162,12 +8182,12 @@ textarea + .help-block,
 /***************************/
 /*         Navbars         */
 /***************************/
-/* line 419, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 453, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .navbar-inner {
   background: none;
 }
 
-/* line 426, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 460, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
@@ -8176,18 +8196,18 @@ textarea + .help-block,
   box-shadow: none;
 }
 
-/* line 431, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 465, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .navbar-nav {
   margin: -7.5px;
 }
-/* line 434, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 468, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
 }
 @media (max-width: 767px) {
-  /* line 442, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+  /* line 476, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
   .navbar-nav .open .dropdown-menu {
     position: absolute;
     float: left;
@@ -8201,13 +8221,13 @@ textarea + .help-block,
 /***************************/
 /*        Pagination       */
 /***************************/
-/* line 457, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 491, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .pagination ul {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 462, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 496, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .pagination ul > li > a,
 .pagination ul > li > span {
   background-color: transparent;
@@ -8218,14 +8238,14 @@ textarea + .help-block,
 /***************************/
 /*         Modals          */
 /***************************/
-/* line 473, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 507, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .modal-backdrop,
 .modal-backdrop.fade.in {
   opacity: 0.15;
   filter: alpha(opacity=15);
 }
 
-/* line 478, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 512, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .modal {
   color: #555555;
   -webkit-border-radius: 1px;
@@ -8234,12 +8254,12 @@ textarea + .help-block,
   -o-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 482, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 516, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
   color: #555555;
 }
 
-/* line 487, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 521, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .modal-footer {
   background-color: #f5f5f5;
 }
@@ -8247,12 +8267,12 @@ textarea + .help-block,
 /***************************/
 /*        Tooltips         */
 /***************************/
-/* line 495, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 529, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tooltip {
   font-size: 11.05px;
 }
 
-/* line 499, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 533, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .tooltip-inner {
   padding: 4px;
 }
@@ -8260,7 +8280,7 @@ textarea + .help-block,
 /***************************/
 /*        Popovers         */
 /***************************/
-/* line 507, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 541, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .popover {
   color: #f8f8f8;
   -webkit-border-radius: 1px;
@@ -8269,12 +8289,12 @@ textarea + .help-block,
   -o-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 510, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 544, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .popover h1, .popover h2, .popover h3, .popover h4, .popover h5, .popover h6 {
   color: #f8f8f8;
 }
 
-/* line 515, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .popover-title {
   -webkit-border-radius: 1px 1px 0 0;
   -moz-border-radius: 1px 1px 0 0;
@@ -8286,7 +8306,7 @@ textarea + .help-block,
 /***************************/
 /*       Thumbnails        */
 /***************************/
-/* line 523, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 557, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .thumbnail {
   border: none;
   -webkit-box-shadow: none;
@@ -8294,13 +8314,13 @@ textarea + .help-block,
   background: rgba(51, 51, 51, 0.25);
 }
 
-/* line 530, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 564, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 a.thumbnail:hover,
 a.thumbnail:focus {
   border: none;
 }
 
-/* line 534, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 568, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .thumbnail .caption {
   color: #f8f8f8;
 }
@@ -8308,7 +8328,7 @@ a.thumbnail:focus {
 /***************************/
 /*    Labels and badges    */
 /***************************/
-/* line 543, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 577, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label,
 .badge {
   display: inline-block;
@@ -8322,107 +8342,107 @@ a.thumbnail:focus {
   font-size: 11.05px;
 }
 
-/* line 553, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 587, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge {
   padding: 2px 9px;
 }
 
-/* line 559, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 593, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-important {
   background-color: #e5603b;
 }
 
-/* line 560, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 594, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-important[href] {
   background-color: #d1431c;
 }
 
-/* line 562, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 596, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-warning {
   background-color: #eac85e;
 }
 
-/* line 563, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 597, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-warning[href] {
   background-color: #e4b931;
 }
 
-/* line 565, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 599, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-success {
   background-color: #56bc76;
 }
 
-/* line 566, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 600, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-success[href] {
   background-color: #3fa05e;
 }
 
-/* line 568, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 602, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-info {
   background-color: #618fb0;
 }
 
-/* line 569, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 603, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-info[href] {
   background-color: #4a7594;
 }
 
-/* line 571, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 605, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-inverse {
   background-color: #666666;
 }
 
-/* line 572, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 606, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .label-inverse[href] {
   background-color: #4d4d4d;
 }
 
-/* line 559, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 593, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-important {
   background-color: #e5603b;
 }
 
-/* line 560, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 594, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-important[href] {
   background-color: #d1431c;
 }
 
-/* line 562, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 596, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-warning {
   background-color: #eac85e;
 }
 
-/* line 563, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 597, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-warning[href] {
   background-color: #e4b931;
 }
 
-/* line 565, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 599, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-success {
   background-color: #56bc76;
 }
 
-/* line 566, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 600, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-success[href] {
   background-color: #3fa05e;
 }
 
-/* line 568, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 602, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-info {
   background-color: #618fb0;
 }
 
-/* line 569, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 603, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-info[href] {
   background-color: #4a7594;
 }
 
-/* line 571, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 605, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-inverse {
   background-color: #666666;
 }
 
-/* line 572, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 606, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .badge-inverse[href] {
   background-color: #4d4d4d;
 }
@@ -8430,7 +8450,7 @@ a.thumbnail:focus {
 /***************************/
 /*          Alerts         */
 /***************************/
-/* line 579, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 613, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .alert {
   text-shadow: none;
 }
@@ -8438,7 +8458,7 @@ a.thumbnail:focus {
 /***************************/
 /*         Icons           */
 /***************************/
-/* line 590, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 624, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 [class^="gicon-"],
 [class*=" gicon-"] {
   display: inline-block;
@@ -8453,7 +8473,7 @@ a.thumbnail:focus {
 }
 
 /* White gicons with optional class, or on hover/focus/active states of certain elements */
-/* line 619, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 653, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-white,
 .nav-pills > .active > a > [class^="gicon-"],
 .nav-pills > .active > a > [class*=" gicon-"],
@@ -8474,705 +8494,705 @@ a.thumbnail:focus {
   background-image: url("../img/glyphicons-halflings-white.png");
 }
 
-/* line 623, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 657, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-glass {
   background-position: 0      0;
 }
 
-/* line 624, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 658, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-music {
   background-position: -24px  0;
 }
 
-/* line 625, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 659, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-search {
   background-position: -48px  0;
 }
 
-/* line 626, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 660, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-envelope {
   background-position: -72px  0;
 }
 
-/* line 627, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 661, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-heart {
   background-position: -96px  0;
 }
 
-/* line 628, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 662, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-star {
   background-position: -120px 0;
 }
 
-/* line 629, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 663, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-star-empty {
   background-position: -144px 0;
 }
 
-/* line 630, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 664, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-user {
   background-position: -168px 0;
 }
 
-/* line 631, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 665, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-film {
   background-position: -192px 0;
 }
 
-/* line 632, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 666, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-th-large {
   background-position: -216px 0;
 }
 
-/* line 633, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 667, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-th {
   background-position: -240px 0;
 }
 
-/* line 634, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 668, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-th-list {
   background-position: -264px 0;
 }
 
-/* line 635, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 669, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-ok {
   background-position: -288px 0;
 }
 
-/* line 636, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 670, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-remove {
   background-position: -312px 0;
 }
 
-/* line 637, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 671, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-zoom-in {
   background-position: -336px 0;
 }
 
-/* line 638, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 672, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-zoom-out {
   background-position: -360px 0;
 }
 
-/* line 639, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 673, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-off {
   background-position: -384px 0;
 }
 
-/* line 640, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 674, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-signal {
   background-position: -408px 0;
 }
 
-/* line 641, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 675, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-cog {
   background-position: -432px 0;
 }
 
-/* line 642, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 676, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-trash {
   background-position: -456px 0;
 }
 
-/* line 644, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 678, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-home {
   background-position: 0      -24px;
 }
 
-/* line 645, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 679, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-file {
   background-position: -24px  -24px;
 }
 
-/* line 646, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 680, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-time {
   background-position: -48px  -24px;
 }
 
-/* line 647, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 681, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-road {
   background-position: -72px  -24px;
 }
 
-/* line 648, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 682, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-download-alt {
   background-position: -96px  -24px;
 }
 
-/* line 649, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 683, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-download {
   background-position: -120px -24px;
 }
 
-/* line 650, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 684, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-upload {
   background-position: -144px -24px;
 }
 
-/* line 651, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 685, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-inbox {
   background-position: -168px -24px;
 }
 
-/* line 652, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 686, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-play-circle {
   background-position: -192px -24px;
 }
 
-/* line 653, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 687, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-repeat {
   background-position: -216px -24px;
 }
 
-/* line 654, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 688, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-refresh {
   background-position: -240px -24px;
 }
 
-/* line 655, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 689, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-list-alt {
   background-position: -264px -24px;
 }
 
-/* line 656, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 690, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-lock {
   background-position: -287px -24px;
 }
 
-/* line 657, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 691, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-flag {
   background-position: -312px -24px;
 }
 
-/* line 658, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 692, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-headphones {
   background-position: -336px -24px;
 }
 
-/* line 659, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 693, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-volume-off {
   background-position: -360px -24px;
 }
 
-/* line 660, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 694, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-volume-down {
   background-position: -384px -24px;
 }
 
-/* line 661, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 695, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-volume-up {
   background-position: -408px -24px;
 }
 
-/* line 662, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 696, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-qrcode {
   background-position: -432px -24px;
 }
 
-/* line 663, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 697, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-barcode {
   background-position: -456px -24px;
 }
 
-/* line 665, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 699, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-tag {
   background-position: 0      -48px;
 }
 
-/* line 666, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 700, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-tags {
   background-position: -25px  -48px;
 }
 
-/* line 667, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 701, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-book {
   background-position: -48px  -48px;
 }
 
-/* line 668, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 702, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-bookmark {
   background-position: -72px  -48px;
 }
 
-/* line 669, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 703, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-print {
   background-position: -96px  -48px;
 }
 
-/* line 670, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 704, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-camera {
   background-position: -120px -48px;
 }
 
-/* line 671, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 705, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-font {
   background-position: -144px -48px;
 }
 
-/* line 672, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 706, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-bold {
   background-position: -167px -48px;
 }
 
-/* line 673, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 707, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-italic {
   background-position: -192px -48px;
 }
 
-/* line 674, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 708, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-text-height {
   background-position: -216px -48px;
 }
 
-/* line 675, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 709, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-text-width {
   background-position: -240px -48px;
 }
 
-/* line 676, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 710, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-align-left {
   background-position: -264px -48px;
 }
 
-/* line 677, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 711, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-align-center {
   background-position: -288px -48px;
 }
 
-/* line 678, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 712, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-align-right {
   background-position: -312px -48px;
 }
 
-/* line 679, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 713, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-align-justify {
   background-position: -336px -48px;
 }
 
-/* line 680, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 714, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-list {
   background-position: -360px -48px;
 }
 
-/* line 681, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 715, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-indent-left {
   background-position: -384px -48px;
 }
 
-/* line 682, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 716, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-indent-right {
   background-position: -408px -48px;
 }
 
-/* line 683, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 717, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-facetime-video {
   background-position: -432px -48px;
 }
 
-/* line 684, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 718, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-picture {
   background-position: -456px -48px;
 }
 
-/* line 686, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 720, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-pencil {
   background-position: 0      -72px;
 }
 
-/* line 687, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 721, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-map-marker {
   background-position: -24px  -72px;
 }
 
-/* line 688, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 722, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-adjust {
   background-position: -48px  -72px;
 }
 
-/* line 689, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 723, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-tint {
   background-position: -72px  -72px;
 }
 
-/* line 690, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 724, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-edit {
   background-position: -96px  -72px;
 }
 
-/* line 691, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 725, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-share {
   background-position: -120px -72px;
 }
 
-/* line 692, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 726, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-check {
   background-position: -144px -72px;
 }
 
-/* line 693, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 727, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-move {
   background-position: -168px -72px;
 }
 
-/* line 694, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 728, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-step-backward {
   background-position: -192px -72px;
 }
 
-/* line 695, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 729, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-fast-backward {
   background-position: -216px -72px;
 }
 
-/* line 696, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 730, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-backward {
   background-position: -240px -72px;
 }
 
-/* line 697, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 731, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-play {
   background-position: -264px -72px;
 }
 
-/* line 698, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 732, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-pause {
   background-position: -288px -72px;
 }
 
-/* line 699, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 733, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-stop {
   background-position: -312px -72px;
 }
 
-/* line 700, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 734, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-forward {
   background-position: -336px -72px;
 }
 
-/* line 701, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 735, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-fast-forward {
   background-position: -360px -72px;
 }
 
-/* line 702, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 736, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-step-forward {
   background-position: -384px -72px;
 }
 
-/* line 703, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 737, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-eject {
   background-position: -408px -72px;
 }
 
-/* line 704, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 738, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-chevron-left {
   background-position: -432px -72px;
 }
 
-/* line 705, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 739, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-chevron-right {
   background-position: -456px -72px;
 }
 
-/* line 707, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 741, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-plus-sign {
   background-position: 0      -96px;
 }
 
-/* line 708, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 742, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-minus-sign {
   background-position: -24px  -96px;
 }
 
-/* line 709, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 743, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-remove-sign {
   background-position: -48px  -96px;
 }
 
-/* line 710, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 744, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-ok-sign {
   background-position: -72px  -96px;
 }
 
-/* line 711, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 745, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-question-sign {
   background-position: -96px  -96px;
 }
 
-/* line 712, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 746, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-info-sign {
   background-position: -120px -96px;
 }
 
-/* line 713, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 747, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-screenshot {
   background-position: -144px -96px;
 }
 
-/* line 714, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 748, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-remove-circle {
   background-position: -168px -96px;
 }
 
-/* line 715, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 749, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-ok-circle {
   background-position: -192px -96px;
 }
 
-/* line 716, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 750, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-ban-circle {
   background-position: -216px -96px;
 }
 
-/* line 717, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 751, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-arrow-left {
   background-position: -240px -96px;
 }
 
-/* line 718, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 752, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-arrow-right {
   background-position: -264px -96px;
 }
 
-/* line 719, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 753, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-arrow-up {
   background-position: -289px -96px;
 }
 
-/* line 720, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 754, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-arrow-down {
   background-position: -312px -96px;
 }
 
-/* line 721, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 755, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-share-alt {
   background-position: -336px -96px;
 }
 
-/* line 722, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 756, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-resize-full {
   background-position: -360px -96px;
 }
 
-/* line 723, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 757, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-resize-small {
   background-position: -384px -96px;
 }
 
-/* line 724, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 758, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-plus {
   background-position: -408px -96px;
 }
 
-/* line 725, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 759, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-minus {
   background-position: -433px -96px;
 }
 
-/* line 726, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 760, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-asterisk {
   background-position: -456px -96px;
 }
 
-/* line 728, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 762, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-exclamation-sign {
   background-position: 0      -120px;
 }
 
-/* line 729, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 763, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-gift {
   background-position: -24px  -120px;
 }
 
-/* line 730, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 764, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-leaf {
   background-position: -48px  -120px;
 }
 
-/* line 731, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 765, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-fire {
   background-position: -72px  -120px;
 }
 
-/* line 732, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 766, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-eye-open {
   background-position: -96px  -120px;
 }
 
-/* line 733, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 767, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-eye-close {
   background-position: -120px -120px;
 }
 
-/* line 734, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 768, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-warning-sign {
   background-position: -144px -120px;
 }
 
-/* line 735, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 769, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-plane {
   background-position: -168px -120px;
 }
 
-/* line 736, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 770, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-calendar {
   background-position: -192px -120px;
 }
 
-/* line 737, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 771, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-random {
   background-position: -216px -120px;
   width: 16px;
 }
 
-/* line 738, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 772, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-comment {
   background-position: -240px -120px;
 }
 
-/* line 739, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 773, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-magnet {
   background-position: -264px -120px;
 }
 
-/* line 740, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 774, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-chevron-up {
   background-position: -288px -120px;
 }
 
-/* line 741, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 775, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-chevron-down {
   background-position: -313px -119px;
 }
 
-/* line 742, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 776, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-retweet {
   background-position: -336px -120px;
 }
 
-/* line 743, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 777, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-shopping-cart {
   background-position: -360px -120px;
 }
 
-/* line 744, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 778, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-folder-close {
   background-position: -384px -120px;
   width: 16px;
 }
 
-/* line 745, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 779, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-folder-open {
   background-position: -408px -120px;
   width: 16px;
 }
 
-/* line 746, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 780, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-resize-vertical {
   background-position: -432px -119px;
 }
 
-/* line 747, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 781, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-resize-horizontal {
   background-position: -456px -118px;
 }
 
-/* line 749, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 783, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-hdd {
   background-position: 0      -144px;
 }
 
-/* line 750, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 784, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-bullhorn {
   background-position: -24px  -144px;
 }
 
-/* line 751, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 785, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-bell {
   background-position: -48px  -144px;
 }
 
-/* line 752, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 786, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-certificate {
   background-position: -72px  -144px;
 }
 
-/* line 753, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 787, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-thumbs-up {
   background-position: -96px  -144px;
 }
 
-/* line 754, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 788, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-thumbs-down {
   background-position: -120px -144px;
 }
 
-/* line 755, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 789, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-hand-right {
   background-position: -144px -144px;
 }
 
-/* line 756, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 790, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-hand-left {
   background-position: -168px -144px;
 }
 
-/* line 757, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 791, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-hand-up {
   background-position: -192px -144px;
 }
 
-/* line 758, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 792, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-hand-down {
   background-position: -216px -144px;
 }
 
-/* line 759, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 793, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-circle-arrow-right {
   background-position: -240px -144px;
 }
 
-/* line 760, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 794, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-circle-arrow-left {
   background-position: -264px -144px;
 }
 
-/* line 761, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 795, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-circle-arrow-up {
   background-position: -288px -144px;
 }
 
-/* line 762, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 796, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-circle-arrow-down {
   background-position: -312px -144px;
 }
 
-/* line 763, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 797, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-globe {
   background-position: -336px -144px;
 }
 
-/* line 764, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 798, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-wrench {
   background-position: -360px -144px;
 }
 
-/* line 765, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 799, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-tasks {
   background-position: -384px -144px;
 }
 
-/* line 766, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 800, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-filter {
   background-position: -408px -144px;
 }
 
-/* line 767, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 801, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-briefcase {
   background-position: -432px -144px;
 }
 
-/* line 768, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
+/* line 802, D:/projects/admin/bs3/sass/_bootstrap-override.scss */
 .gicon-fullscreen {
   background-position: -456px -144px;
 }
