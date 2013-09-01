@@ -272,17 +272,17 @@
     </header>
     <div class="content container">
         <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
                 <h2 class="page-title">Fileupload <small>Drag & drop fileupload</small></h2>
             </div>
         </div>
         <div class="row">
-            <div class="span8 offset1">
+            <div class="col-md-8 col-md-offset-1">
                 <section class="widget">
                     <div class="body">
                         <form id="fileupload" action="../server/php/" method="POST" enctype="multipart/form-data">
                             <div class="row">
-                                <div class="span12">
+                                <div class="col-md-12">
                                     <div id="dropzone"  class="dropzone">
                                         Drop files here
                                         <i class="icon-download-alt pull-right"></i>
@@ -290,7 +290,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="span12 fileupload-progress fade">
+                                <div class="col-md-12 fileupload-progress fade">
                                     <!-- The global progress bar -->
                                     <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                                         <div class="bar" style="width:0%;"></div>
@@ -300,7 +300,7 @@
                                 </div>
                             </div>
                             <div class="form-actions fileupload-buttonbar no-margin">
-                                <span class="btn btn-sm fileinput-button">
+                                <span class="btn btn-sm btn-default fileinput-button">
                                         <i class="icon-plus"></i>
                                         <span>Add files...</span>
                                         <input type="file" name="files[]" multiple="">
