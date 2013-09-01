@@ -49,7 +49,7 @@ $(function(){
             collection: collection,
             footer: Backgrid.Extension.Paginator.extend({
                 //okendoken. rewrite template to add pagination class to container
-                template: _.template('<tr><td class="pagination" colspan="<%= colspan %>"><ul><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
+                template: _.template('<tr><td colspan="<%= colspan %>"><ul class="pagination"><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
             }),
             className: 'table table-striped table-editable no-margin'
         });
@@ -89,7 +89,7 @@ $(function(){
 
     /* Set the defaults for DataTables initialisation */
     $.extend( true, $.fn.dataTable.defaults, {
-        "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+        "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
         "sPaginationType": "bootstrap",
         "oLanguage": {
             "sLengthMenu": "_MENU_ records per page"
@@ -132,8 +132,8 @@ $(function(){
                     }
                 };
 
-                $(nPaging).addClass('pagination').append(
-                    '<ul>'+
+                $(nPaging).append(
+                    '<ul class="pagination">'+
                         '<li class="prev disabled"><a href="#">'+oLang.sPrevious+'</a></li>'+
                         '<li class="next disabled"><a href="#">'+oLang.sNext+'</a></li>'+
                         '</ul>'
@@ -207,7 +207,7 @@ $(function(){
     });
 
     $("#datatable-table").dataTable({
-        "sDom": "<'row-fluid table-top-control'<'span6 hidden-xs per-page-selector'l><'span6'f>r>t<'row-fluid table-bottom-control'<'span6'i><'span6'p>>",
+        "sDom": "<'row table-top-control'<'col-md-6 hidden-xs per-page-selector'l><'col-md-6'f>r>t<'row table-bottom-control'<'col-md-6'i><'col-md-6'p>>",
         "oLanguage": {
             "sLengthMenu": "_MENU_ &nbsp; records per page"
         },

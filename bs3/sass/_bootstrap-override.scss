@@ -20,6 +20,7 @@ hr {
 
 blockquote{
   border-left-color: $transparentBackground;
+  padding: 0 0 0 15px;
   p{
     font-size: inherit;
     margin-bottom: $line-height-computed / 2;
@@ -189,6 +190,9 @@ textarea,
 
 .table-hover {
   tbody {
+    td, th{
+      @include transition(background-color .2s);
+    }
     tr:hover > td,
     tr:hover > th {
       background-color: $backgroundAddition;
@@ -488,15 +492,20 @@ textarea,
 /*        Pagination       */
 /***************************/
 
-.pagination ul {
-  @include box-shadow(none);
+.pagination {
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
 }
 
-.pagination ul > li > a,
-.pagination ul > li > span {
-  background-color: $pagination-bg;
-  border: 1px solid $pagination-border;
-  border-left-width: 0;
+.pagination > li > a,
+.pagination > li > span{
+  margin-left: 0;
 }
 
 /***************************/

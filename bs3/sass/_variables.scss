@@ -12,6 +12,7 @@ $brown:                 #A05000 !default;
 $teal:                  #4ab0ce !default;
 $gray:                  #666 !default;
 $gray-dark:              #555 !default;
+$gray-light:             lighten(#000, 60%) !default;   // #999
 $backgroundGray:        #333 !default;
 $lightGray:             #f8f8f8 !default;
 $shadowGray:            rgba(#676767, .4) !default;
@@ -154,7 +155,7 @@ $state-info-bg:                  $blue !default;
 
 //table colors
 
-$tableBorder:                       rgba($backgroundGray, .35) !default; // table and cell border
+$table-border-color:                       rgba($backgroundGray, .35) !default; // table and cell border
 
 // Popovers
 // -------------------------
@@ -167,7 +168,10 @@ $popover-arrow-color:                 $popover-bg !default;
 $pagination-bg:                        transparent !default;
 $pagination-border:                    transparent !default;
 
+$pagination-hover-bg:                  $backgroundAddition !default;
+
 $pagination-active-bg:                 $backgroundAddition !default;
+$pagination-active-color:              $gray-light !default;
 
 // Sprite icons path
 // -------------------------
