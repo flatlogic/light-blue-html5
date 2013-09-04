@@ -606,21 +606,15 @@
 <script type="text/template" id="compose-view-template">
     <form id="email-compose" class="form-horizontal form-email-compose" method="POST" enctype="multipart/form-data">
         <div class="control-group">
-            <label for="input-to">
-                <input type="email" id="input-to" placeholder="To" class="input-transparent input-block-level"
+                <input type="email" id="input-to" placeholder="To" class="input-transparent form-control"
                        value="<%= receiver %>">
-            </label>
         </div>
         <div class="control-group">
-            <label for="input-subject">
-                <input type="text" id="input-subject" placeholder="Subject" class="input-transparent input-block-level"
+                <input type="text" id="input-subject" placeholder="Subject" class="input-transparent form-control"
                        value="<%= subject %>">
-            </label>
         </div>
-        <div class="control-group no-margin">
-            <label>
-                <textarea rows="12" class="input-block-level input-transparent" id="email-body"><%- body %></textarea>
-            </label>
+        <div class="control-group">
+                <textarea rows="12" class="input-transparent" id="email-body"><%- body %></textarea>
         </div>
         <div class="control-group">
             <div class="fileupload-buttonbar">
