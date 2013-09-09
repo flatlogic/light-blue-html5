@@ -40,8 +40,13 @@
     display: none !important;
   }
 
-  $grid-columns: 12;
+  //invoice page
+  .client-details{
+    text-align: right;
+  }
+
   //special print grid system
+  $grid-columns: 12;
   .col-print-1,
   .col-print-2,
   .col-print-3,
