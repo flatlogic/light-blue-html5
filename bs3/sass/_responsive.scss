@@ -205,6 +205,31 @@
     overflow: hidden;
     height: 0;
   }
+
+  .mailbox{
+    .folder-title{
+      float: none;
+    }
+    .form-search{
+      margin-top: $line-height-computed / 2;
+      label{
+        display: block;
+      }
+
+      .input-search{
+        width: 100%;
+        height: 30px;
+        @include box-sizing(border-box);
+        &:hover{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mailbox-content{
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 480px){
