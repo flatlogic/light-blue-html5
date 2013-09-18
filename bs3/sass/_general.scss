@@ -106,3 +106,11 @@ fieldset{
 form{
   margin-bottom: 0;
 }
+
+a{
+  @include transition(color .2s);
+}
+
+.btn{
+  @include transition(background-color .2s);
+}

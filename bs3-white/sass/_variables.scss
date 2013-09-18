@@ -21,7 +21,7 @@ $white:                 #ffffff !default;
 // Scaffolding
 // -------------------------
 
-$text-color:            $lightGray !default;
+$text-color:            $gray !default;
 
 //$colors: $lime, $red, $redDark, $blue, $green, $orange, $brown, $teal;
 $colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $redDark;
@@ -30,19 +30,20 @@ $color_names: red, orange, lime, green, teal, blue, brown, dark-red;
 
 $widget-shadow: 0 -1px 1px $shadowGray, 0 1px 1px $shadowGray;
 $widget-border-radius: 1px;
+$widget-background: white;
 $box-margin-bottom: 30px;
 $wrapMargin: 185px;
 $sidebarTopMargin: 80px;
 $widget-padding: 10px 12px;
 
-$boldTextColor: lighten($text-color, 3%);
-$textLightGray: darken($text-color, 15%) !default;
-$smallsColor: darken($text-color, 16%);
+$boldTextColor: $text-color;
+$textLightGray: lighten($text-color, 10%) !default;
+$smallsColor: $textLightGray;
 $dropzoneColor: #eee;
 $transparentTextColor: rgba($backgroundGray, .5);
-$backgroundAddition: rgba($backgroundGray, .25);
-$sidebarActiveColor: $backgroundAddition;
-$sidebarSubMenuActiveColor: darken($sidebarActiveColor, 15%);
+$background-addition: whitesmoke;
+$sidebarActiveColor: $background-addition;
+$sidebarSubMenuActiveColor: darken($sidebarActiveColor, 10%);
 $transparentBackground: rgba($backgroundGray, .4);
 
 // Horizontal forms & lists
@@ -65,10 +66,6 @@ $brand-warning:         $orange !default;
 $brand-danger:          $red !default;
 $brand-info:            $teal !default;
 
-// Links
-// -------------------------
-
-$link-color:            saturate(lighten($blue, 25%), 50%);
 
 // Typography
 // -------------------------
@@ -85,7 +82,7 @@ $font-size-index:         $font-size-base * 0.7 !default; //10px
 $line-height-base:        20px !default;
 $line-height-computed:    $line-height-base !default; // ~20px
 
-$font-weight-base:        300;
+$font-weight-base:        normal;
 
 // Components
 // -------------------------
@@ -124,20 +121,6 @@ $btn-inverse-bg:                 $lightGray !default;
 $input-border: #888;
 
 $legend-color:                   $white !default;
-
-// Dropdowns
-// -------------------------
-
-$dropdown-bg:                    $white !default;
-$dropdown-border:                rgba(0,0,0,.2) !default;
-
-$dropdown-link-active-color:     #fff !default;
-$dropdown-link-active-bg:        $blue !default;
-
-$dropdown-link-color:            $gray !default;
-$dropdown-link-hover-color:      $white !default;
-$dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
-
 // Form states and alerts
 // -------------------------
 
@@ -152,26 +135,6 @@ $state-success-bg:               $green !default;
 
 $state-info-text:                $text-color !default;
 $state-info-bg:                  $blue !default;
-
-//table colors
-
-$table-border-color:                       rgba($backgroundGray, .35) !default; // table and cell border
-
-// Popovers
-// -------------------------
-$popover-bg:                          rgba($backgroundGray, .85) !default;
-$popover-arrow-color:                 $popover-bg !default;
-
-// Pagination
-// -------------------------
-
-$pagination-bg:                        transparent !default;
-$pagination-border:                    transparent !default;
-
-$pagination-hover-bg:                  $backgroundAddition !default;
-
-$pagination-active-bg:                 $backgroundAddition !default;
-$pagination-active-color:              $gray-light !default;
 
 // Sprite icons path
 // -------------------------
