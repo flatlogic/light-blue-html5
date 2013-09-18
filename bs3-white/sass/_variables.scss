@@ -40,11 +40,14 @@ $boldTextColor: $text-color;
 $textLightGray: lighten($text-color, 10%) !default;
 $smallsColor: $textLightGray;
 $dropzoneColor: #eee;
-$transparentTextColor: rgba($backgroundGray, .5);
+$transparentTextColor: rgba(white, .8);
 $background-addition: whitesmoke;
 $sidebarActiveColor: $background-addition;
 $sidebarSubMenuActiveColor: darken($sidebarActiveColor, 10%);
-$transparentBackground: rgba($backgroundGray, .4);
+$transparentBackground: rgba(white, .4);
+
+$box-shadow-header: 0 0 2px rgba(0,0,0,.3);
+$text-shadow-header: 0 0 3px rgba(0,0,0,.3);
 
 // Horizontal forms & lists
 // -------------------------
@@ -115,12 +118,6 @@ $btn-default-border:             rgba(0, 0, 0, 0.15) !default;
 $btn-inverse-color:              $gray-dark !default;
 $btn-inverse-bg:                 $lightGray !default;
 
-// Forms
-// -------------------------
-
-$input-border: #888;
-
-$legend-color:                   $white !default;
 // Form states and alerts
 // -------------------------
 

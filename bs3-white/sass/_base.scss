@@ -594,6 +594,7 @@ input.parsley-error{
       line-height: 36px;
       text-shadow: none;
       @include transition(color 0.1s);
+      text-shadow: $text-shadow-header;
 
       &:hover{
         color: $white;
@@ -628,16 +629,18 @@ input.parsley-error{
     @include box-sizing(content-box);
     min-height: 0;
     padding: 4px 14px;
-    color: white;
+    color: $textLightGray;
     border: none;
     background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
     padding-left: 26px;
-    @include placeholder(rgba(#eee, .76));
+    @include placeholder(rgba($textLightGray, .76));
     @include transition(width .2s);
     width: 100px;
+    @include box-shadow($box-shadow-header);
 
     &:focus{
       width: 120px;
+      @include box-shadow($box-shadow-header);
     }
   }
 
@@ -694,6 +697,10 @@ input.parsley-error{
   font-weight: 300;
   line-height: 1;
   margin: 11px 0 15px;
+
+  small{
+    color: #eee;
+  }
 }
 
 .navbar{
@@ -718,16 +725,17 @@ input.parsley-error{
 
   .alert{
     background: $transparentBackground;
+    color: $textLightGray;
     border: none;
     font-size: $font-size-small;
     margin-bottom: 0;
     padding: 2px 9px;
-    color: $white;
     text-shadow: none;
     @include border-radius(10px);
+    @include box-shadow($box-shadow-header);
 
     a{
-      color: $white;
+      color: $textLightGray;
       font-weight: bold;
     }
   }
@@ -743,11 +751,7 @@ input.parsley-error{
 /**********************************/
 
 .messages{
-  background: $popover-bg;
-  @include box-shadow(none);
   @include border-radius(0);
-  border: none;
-  color: $white;
 }
 
 .navbar .nav > li > .messages{
@@ -759,7 +763,6 @@ input.parsley-error{
   }
 
   > li > a{
-    color: $white;
     padding: 8px 10px;
   }
 
@@ -784,7 +787,7 @@ input.parsley-error{
 
   .text{
     font-size: $font-size-small;
-    color: #ddd;
+    color: $textLightGray;
   }
 }
 
@@ -793,13 +796,7 @@ input.parsley-error{
 /**********************************/
 
 .support{
-  background: $popover-bg;
-  @include box-shadow(none);
   @include border-radius(0);
-  border: none;
-  color: $white;
-
-
 }
 
 .navbar .nav > li > .support{
@@ -811,7 +808,6 @@ input.parsley-error{
   }
 
   > li > a{
-    color: $white;
     padding: 5px 10px;
   }
 
@@ -838,10 +834,8 @@ input.parsley-error{
 /**********************************/
 
 .settings-popover{
-  @include box-shadow(none);
   @include border-radius(0);
   border: none;
-  color: $white;
   width: 114px;
   font-size: $font-size-small;
 
@@ -884,11 +878,7 @@ input.parsley-error{
 
 .account{
   width: 180px;
-  background: $popover-bg;
-  @include box-shadow(none);
   @include border-radius(0);
-  border: none;
-  color: $white;
 }
 
 .navbar .nav > li > .account{
@@ -898,10 +888,6 @@ input.parsley-error{
   &:after{
     border-bottom-color: $popover-bg;
   }
-}
-
-.account > li > a{
-  color: $white;
 }
 
 
@@ -1186,7 +1172,6 @@ input.parsley-error{
 
 .btn-transparent{
   background: $transparentBackground;
-  color: $white;
   text-shadow: none;
   @include box-shadow(none);
 
@@ -1307,7 +1292,7 @@ legend + .control-group {
 input, textarea{
  &.input-transparent{
    border: none;
-   color: white;
+   color: $textLightGray;
    background-color: $transparentBackground;
    @include placeholder(rgba(#eee, .76));
 
