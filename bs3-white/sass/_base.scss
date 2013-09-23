@@ -966,7 +966,7 @@ input.parsley-error{
       }
     }
     .forgot {
-      color: $white;
+      color: $textLightGray;
       text-align: center;
       text-decoration: underline;
       padding: 15px 0 15px 0;
@@ -1487,12 +1487,12 @@ input, textarea{
 
 // Inverse
 .progress-inverse .bar, .progress .progress-bar-inverse {
-  color: $gray-dark;
-  background-color: $lightGray;
-  @include gradient-vertical($lightGray, $lightGray);
+  color: white;
+  background-color: $gray-light;
+  @include gradient-vertical($gray-light, $gray-light);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .progress-bar-inverse {
-  @include gradient-striped($lightGray);
+  @include gradient-striped($gray-light);
 }
 
 /***********************************/
