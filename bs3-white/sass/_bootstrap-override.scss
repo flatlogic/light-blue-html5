@@ -246,73 +246,33 @@ textarea,
 .nav-pills .dropdown-menu {
   @include border-radius($border-radius-base); // make rounded corners match the pills
 }
-.tabs-below > .nav-tabs {
-  border-top: none;
+
+.nav > li > a{
+  @include transition(background-color .2s);
 }
 
-.tabs-below > .nav-tabs > li > a {
-  @include border-radius(0 0 $border-radius-base $border-radius-base);
-}
+.tabs-below .nav-tabs{
+  border-bottom: none;
+  border-top: 1px solid #ddd;
 
-.tabs-left > .nav-tabs {
-  //okendoken. removing margin and border-right
-  margin-right: 0;
-  border-right: none;
-}
+  > li{
+    margin-bottom: 0;
+    margin-top: -1px;
 
-.tabs-left > .nav-tabs > li > a {
-  @include border-radius($border-radius-base 0 0 $border-radius-base);
-}
+    &.active > a{
+      border-bottom-color: $nav-tabs-border-color;
+      border-top-color: transparent;
 
-.tabs-right > .nav-tabs {
-  //okendoken. removing margin and border-left
-  margin-left: 0;
-  border-left: none;
-}
-.tabs-right > .nav-tabs > li > a {
-  @include border-radius(0 $border-radius-base $border-radius-base 0);
-}
+      &:hover{
+        border: 1px solid $nav-tabs-active-link-hover-border-color;
+        border-top-color: transparent;
+      }
+    }
 
-.tabs-below > .nav-tabs > li {
-  margin-top: 0;
-}
-
-.tabs-below > .nav-tabs > li > a {
-  &:hover,
-  &:focus {
-    border-top-color: transparent;
+    > a:hover{
+      border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+    }
   }
-}
-.tabs-below > .nav-tabs > .active > a,
-.tabs-below > .nav-tabs > .active > a:hover,
-.tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent;
-}
-
-.tabs-left > .nav-tabs > li > a {
-  margin-right: 0;
-}
-.tabs-left > .nav-tabs > li > a:hover,
-.tabs-left > .nav-tabs > li > a:focus {
-  border-color: transparent;
-}
-.tabs-left > .nav-tabs .active > a,
-.tabs-left > .nav-tabs .active > a:hover,
-.tabs-left > .nav-tabs .active > a:focus {
-  border-color: transparent;
-}
-
-.tabs-right > .nav-tabs > li > a {
-  margin-left: 0;
-}
-.tabs-right > .nav-tabs > li > a:hover,
-.tabs-right > .nav-tabs > li > a:focus {
-  border-color: transparent;
-}
-.tabs-right > .nav-tabs .active > a,
-.tabs-right > .nav-tabs .active > a:hover,
-.tabs-right > .nav-tabs .active > a:focus {
-  border-color: transparent;
 }
 
 .nav-justified > li {

@@ -629,7 +629,7 @@ input.parsley-error{
     @include box-sizing(content-box);
     min-height: 0;
     padding: 4px 14px;
-    color: $textLightGray;
+    color: $text-color;
     border: none;
     background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
     padding-left: 26px;
@@ -1420,7 +1420,7 @@ input, textarea{
     background: $widget-background;
     border-bottom: none;
     &:hover{
-      background: rgba(darken($backgroundGray, 10%), .4);
+      background: darken($widget-background, 10%);
       border-color: transparent;
     }
   }
@@ -1430,42 +1430,11 @@ input, textarea{
   }
 }
 
-.nav-tabs{
-  border-bottom: none;
-}
-
 //base look for inner tabs
 .widget:not(.widget-tabs){
   .tab-content{
-    background: $background-addition;
     padding: 10px;
-    border: none;
-    border-top: none;
     @include border-radius(0 0 $border-radius-base $border-radius-base);
-  }
-
-  .tabs-below {
-    .tab-content{
-      //border-top: 1px solid #ddd;
-      border-bottom: none;
-      @include border-radius($border-radius-base $border-radius-base 0 0);
-    }
-  }
-
-  .tabs-left {
-    .tab-content{
-      //border-top: 1px solid #ddd;
-      //border-left: 1px solid #ddd;
-      @include border-radius(0 $border-radius-base $border-radius-base 0);
-    }
-  }
-
-  .tabs-right {
-    .tab-content{
-      //border-top: 1px solid #ddd;
-      //border-right: 1px solid #ddd;
-      @include border-radius($border-radius-base 0 0 $border-radius-base);
-    }
   }
 }
 
