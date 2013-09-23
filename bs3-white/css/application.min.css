@@ -9867,7 +9867,7 @@ html .fc,
   background: white;
   border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
   border-width: 1px;
-  color: white;
+  color: #666666;
 }
 
 /* line 233, D:/projects/admin/bs3-white/sass/lib/_fullcalendar.scss */
@@ -11289,21 +11289,21 @@ svg text {
 .nvtooltip {
   padding: 5px;
   position: absolute;
-  background-color: rgba(51, 51, 51, 0.6);
-  border: none;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
   z-index: 10000;
   font-family: inherit;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -moz-border-radius: 0;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   border-radius: 0;
-  transition: none;
-  -moz-transition: none;
   -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
-/* line 44, D:/projects/admin/bs3-white/sass/_svg.scss */
+/* line 39, D:/projects/admin/bs3-white/sass/_svg.scss */
 .nvtooltip h3, .nvtooltip h4 {
   margin: 0;
   padding: 0;
@@ -11311,7 +11311,7 @@ svg text {
   text-align: center;
 }
 
-/* line 52, D:/projects/admin/bs3-white/sass/_svg.scss */
+/* line 47, D:/projects/admin/bs3-white/sass/_svg.scss */
 .nvd3 .nv-axis line.zero {
   display: none;
 }
@@ -11360,7 +11360,7 @@ input[type=search], input.search {
 /* line 74, D:/projects/admin/bs3-white/sass/_general.scss */
 input[type=search].input-transparent, input.search.input-transparent {
   border: none;
-  background: url(../img/search-white.png) 5px 5px no-repeat rgba(255, 255, 255, 0.4);
+  background: url(../img/search.png) 5px 5px no-repeat rgba(255, 255, 255, 0.4);
 }
 /* line 57, D:/projects/admin/bs3-white/sass/bootstrap-original/_mixins.scss */
 input[type=search].input-transparent:-moz-placeholder, input.search.input-transparent:-moz-placeholder {
@@ -12388,7 +12388,7 @@ input.parsley-error {
 /* line 726, D:/projects/admin/bs3-white/sass/_base.scss */
 .notifications .alert {
   background: rgba(255, 255, 255, 0.4);
-  color: gray;
+  color: #666666;
   border: none;
   font-size: 11.05px;
   margin-bottom: 0;
