@@ -14,9 +14,9 @@ $(function(){
     //settings
     var $settings = $("#settings"),
         $sidebarSettings = $("#sidebar-settings"),
-        settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
+        settingsState = JSON.parse(localStorage.getItem("lb-white-settings-state")) || {
             sidebar: 'left',
-            background: 'dark',
+            background: 'light',
             sidebarState: 'auto',
             displaySidebar: true
         },
@@ -117,7 +117,7 @@ $(function(){
             side = $this.data("value");
         sidebarSide(side);
         settingsState.sidebar = side;
-        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+        localStorage.setItem("lb-white-settings-state", JSON.stringify(settingsState));
     });
 
     //background
@@ -126,7 +126,7 @@ $(function(){
             style = $this.data("value");
         backgroundStyle(style);
         settingsState.background = style;
-        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+        localStorage.setItem("lb-white-settings-state", JSON.stringify(settingsState));
     });
 
     //sidebar visibility
@@ -135,7 +135,7 @@ $(function(){
             display = $this.data("value");
         displaySidebar(display);
         settingsState.displaySidebar = display;
-        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+        localStorage.setItem("lb-white-settings-state", JSON.stringify(settingsState));
     });
 
     //sidebar state {active, icons}
@@ -147,7 +147,7 @@ $(function(){
         }
         sidebarState(state);
         settingsState.sidebarState = state;
-        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+        localStorage.setItem("lb-white-settings-state", JSON.stringify(settingsState));
     });
 
     //close navigation if sidebar in icons state
