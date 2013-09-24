@@ -595,7 +595,6 @@ input.parsley-error{
       vertical-align: middle;
       line-height: 36px;
       text-shadow: none;
-      @include transition(color 0.1s);
 
       &:hover{
         color: $white;
@@ -1239,6 +1238,12 @@ input.parsley-error{
     color: $btn-inverse-color;
   }
 
+}
+
+.btn-white{
+  background: none;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
 /***********************************/
@@ -2175,6 +2180,92 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
     .control-group{
       margin-bottom: $line-height-computed / 2;
+    }
+  }
+}
+
+/***********************************/
+/**            LANDING            **/
+/***********************************/
+
+.landing{
+  .page-header{
+    margin-left: 0;
+    margin-right: 0;
+    .nav > li{
+      > a{
+        line-height: 40px;
+        padding: 0 10px;
+        width: auto;
+        font-size: $font-size-large;
+      }
+    }
+  }
+
+  .navbar-buttons{
+    margin-right: 20px;
+    > li > button{
+      margin: 7px 10px;
+    }
+  }
+
+  .logo{
+    position: static;
+  }
+
+  .content{
+    padding: 25px 0;
+  }
+
+  .lead{
+    font-weight: normal;
+  }
+
+  .btn{
+    font-weight: normal;
+  }
+}
+
+.carousel-landing{
+  height: 450px;
+  overflow: hidden;
+
+  h1{
+    font-size: 45px;
+    line-height: 1.1;
+  }
+
+  .item > .row > *:first-child{
+    text-align: right;
+  }
+
+  .slide-one-header{
+    margin-top: 80px;
+  }
+}
+
+.carousel-fade{
+  .carousel-inner{
+    > .item{
+      @include transition(opacity .2s ease-in-out);
+    }
+
+    > .next,
+    > .prev {
+      left: auto;
+    }
+    > .next.left,
+    > .prev.right {
+      opacity: 1;
+      left: auto;
+    }
+
+    > .active.left,
+    > .active.right,
+    > .next,
+    > .prev{
+      opacity: 0;
+      left: auto;
     }
   }
 }

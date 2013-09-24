@@ -12,7 +12,7 @@ nv.addGraph(function() {
         .margin({top: 0, bottom: 25, left: 25, right: 0})
         //.showLegend(false)
         .color([
-            $orange, '#cf6d51'
+            $blue, $red
             //'#618fb0', '#61b082'
         ]);
 
