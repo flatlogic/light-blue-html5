@@ -10,15 +10,6 @@ $i: 1;
   $i: $i + 1;
 }
 
-//$i: 1;
-//@each $color in $light_colors{
-//
-//  .light-#{nth($light_color_names, $i)}{
-//    background: $color !important;
-//  }
-//  $i: $i + 1;
-//}
-
 $i: 1;
 @each $color in $colors{
 
@@ -234,7 +225,7 @@ input.parsley-error{
   margin-left: $wrapMargin;
 }
 
-/*content except for header*/
+/*content except of header*/
 .content{
   padding: 25px 2.5641%;
   @include transition(margin-top .35s ease);
@@ -290,6 +281,8 @@ input.parsley-error{
   margin-bottom: $box-margin-bottom;
   position: relative;
 
+
+  //widget sizes
   &.normal{
     height: 220px;
   }
@@ -321,10 +314,6 @@ input.parsley-error{
   &.transparent{
     background: transparent;
     @include box-shadow(none);
-  }
-
-  &.adaptive-background{
-    background: rgba(white, 0.9);
   }
 
   & > header{
@@ -446,7 +435,6 @@ input.parsley-error{
 }
 
 .visits-chart{
-  //height: 168px;
   height: 200px;
 }
 
@@ -466,6 +454,7 @@ input.parsley-error{
   }
 }
 
+/* disable bootstrap 3 border-box for tooltips */
 .jqstooltip{
   &, *{
     @include box-sizing(content-box);
@@ -700,22 +689,6 @@ input.parsley-error{
   small{
     color: #eee;
   }
-}
-
-.navbar{
-  margin: 0;
-
-  .btn-navbar {
-    border: none;
-    @include box-shadow(none);
-  }
-}
-
-.navbar-inner{
-  padding: 0;
-  border: none;
-  @include border-radius(0);
-  @include box-shadow(none);
 }
 
 .notifications{
@@ -1128,46 +1101,7 @@ input.parsley-error{
 /***********************************/
 /**          BUTTONS              **/
 /**********************************/
-
-.btn{
-  color: $white;
-  text-shadow: none;
-
-  @include box-shadow(none);
-
-  &:hover,
-  &:focus {
-    color: $white;
-    @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
-  }
-
-  &.active:hover{
-    color: $white;
-    @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
-  }
-
-  &.disabled,
-  &[disabled] {
-    color: $white;
-  }
-
-  .caret{
-    border-top-color: #fff;
-  }
-}
-
-.btn-primary,
-.btn-warning,
-.btn-danger,
-.btn-success,
-.btn-info{
-  &.active{
-    color: rgba(white, .9);
-    &:hover{
-      color: rgba(white, .9);
-    }
-  }
-}
+/* Custom behavior. For overridden bootstrap btns see bootstrap-override */
 
 .btn-transparent{
   background: $transparentBackground;
@@ -1444,41 +1378,8 @@ input, textarea{
 }
 
 /***********************************/
-/**          ACCORDION           **/
-/**********************************/
-
-.panel{
-  border: none;
-  background-color: $background-addition;
-  @include box-shadow(none);
-
-  $i: 1;
-  @each $color in $colors{
-
-    &:nth-child(#{$i}n) .panel-heading{
-      border-left: 5px solid #{$color};
-    }
-    $i: $i + 1;
-  }
-
-  .panel-heading a{
-    color: $text-color;
-    @include bold-font;
-  }
-}
-
-.panel-body{
-  border-top-color: $background-addition;
-}
-
-
-/***********************************/
 /**          PROGRESSBARS         **/
 /**********************************/
-
-.progress{
-  background: rgba(black, .15);
-}
 
 .progress-small{
   height: 8px;
@@ -2150,4 +2051,34 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .hidden-phone-landscape{
 
+}
+
+.background-danger{
+  background: $brand-danger;
+  color: white;
+}
+
+.background-warning{
+  background: $brand-warning;
+  color: white;
+}
+
+.background-success{
+  background: $brand-success;
+  color: white;
+}
+
+.background-primary{
+  background: $brand-primary;
+  color: white;
+}
+
+.background-info{
+  background: $brand-info;
+  color: white;
+}
+
+.background-lime{
+  background: $lime;
+  color: white;
 }
