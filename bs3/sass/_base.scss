@@ -2189,6 +2189,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 /***********************************/
 
 .landing{
+  padding-bottom: 40px;
   .page-header{
     margin-left: 0;
     margin-right: 0;
@@ -2223,6 +2224,71 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   .btn{
     font-weight: normal;
+  }
+
+  .widget p{
+    font-size: $font-size-larger;
+  }
+
+  .widget-about{
+    margin-top: 60px;
+    padding: 20px;
+
+    h2, h4{
+      margin-top: 0;
+      font-weight: bold;
+    }
+
+    .preview{
+      margin: 40px 0;
+    }
+
+    .btn{
+      color: white;
+    }
+  }
+
+  .img-about{
+    margin-top: 8px;
+  }
+
+  .features{
+    margin-top: 60px;
+  }
+
+  .feature{
+    text-align: center;
+
+    .icon{
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      font-size: 40px;
+      line-height: 60px;
+      vertical-align: middle;
+      border-radius: 50%;
+      > i{
+        color: #ffffff;
+      }
+    }
+  }
+
+  .thanks{
+    margin-top: 60px;
+  }
+
+  .back-to-top{
+    color: $text-color
+  }
+}
+
+.widget-white{
+  background: $white;
+  color: $gray;
+  @include box-shadow(0 -1px 1px $shadowGray, 0 1px 1px $shadowGray);
+
+  *{
+    color: $gray;
   }
 }
 
@@ -2329,4 +2395,34 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .hidden-phone-landscape{
 
+}
+
+.background-danger{
+  background: $brand-danger;
+  color: white;
+}
+
+.background-warning{
+  background: $brand-warning;
+  color: white;
+}
+
+.background-success{
+  background: $brand-success;
+  color: white;
+}
+
+.background-primary{
+  background: $brand-primary;
+  color: white;
+}
+
+.background-info{
+  background: $brand-info;
+  color: white;
+}
+
+.background-lime{
+  background: $lime;
+  color: white;
 }

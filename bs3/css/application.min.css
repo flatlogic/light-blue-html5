@@ -19239,94 +19239,167 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**            LANDING            **/
 /***********************************/
-/* line 2192, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2191, D:/projects/admin/bs3/sass/_base.scss */
+.landing {
+  padding-bottom: 40px;
+}
+/* line 2193, D:/projects/admin/bs3/sass/_base.scss */
 .landing .page-header {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 2196, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2197, D:/projects/admin/bs3/sass/_base.scss */
 .landing .page-header .nav > li > a {
   line-height: 40px;
   padding: 0 10px;
   width: auto;
   font-size: 16.25px;
 }
-/* line 2205, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2206, D:/projects/admin/bs3/sass/_base.scss */
 .landing .navbar-buttons {
   margin-right: 20px;
 }
-/* line 2207, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2208, D:/projects/admin/bs3/sass/_base.scss */
 .landing .navbar-buttons > li > button {
   margin: 7px 10px;
 }
-/* line 2212, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2213, D:/projects/admin/bs3/sass/_base.scss */
 .landing .logo {
   position: static;
 }
-/* line 2216, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2217, D:/projects/admin/bs3/sass/_base.scss */
 .landing .content {
   padding: 25px 0;
 }
-/* line 2220, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2221, D:/projects/admin/bs3/sass/_base.scss */
 .landing .lead {
   font-weight: normal;
 }
-/* line 2224, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2225, D:/projects/admin/bs3/sass/_base.scss */
 .landing .btn {
   font-weight: normal;
 }
-
 /* line 2229, D:/projects/admin/bs3/sass/_base.scss */
+.landing .widget p {
+  font-size: 14px;
+}
+/* line 2233, D:/projects/admin/bs3/sass/_base.scss */
+.landing .widget-about {
+  margin-top: 60px;
+  padding: 20px;
+}
+/* line 2237, D:/projects/admin/bs3/sass/_base.scss */
+.landing .widget-about h2, .landing .widget-about h4 {
+  margin-top: 0;
+  font-weight: bold;
+}
+/* line 2242, D:/projects/admin/bs3/sass/_base.scss */
+.landing .widget-about .preview {
+  margin: 40px 0;
+}
+/* line 2246, D:/projects/admin/bs3/sass/_base.scss */
+.landing .widget-about .btn {
+  color: white;
+}
+/* line 2251, D:/projects/admin/bs3/sass/_base.scss */
+.landing .img-about {
+  margin-top: 8px;
+}
+/* line 2255, D:/projects/admin/bs3/sass/_base.scss */
+.landing .features {
+  margin-top: 60px;
+}
+/* line 2259, D:/projects/admin/bs3/sass/_base.scss */
+.landing .feature {
+  text-align: center;
+}
+/* line 2262, D:/projects/admin/bs3/sass/_base.scss */
+.landing .feature .icon {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  font-size: 40px;
+  line-height: 60px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+/* line 2270, D:/projects/admin/bs3/sass/_base.scss */
+.landing .feature .icon > i {
+  color: #ffffff;
+}
+/* line 2276, D:/projects/admin/bs3/sass/_base.scss */
+.landing .thanks {
+  margin-top: 60px;
+}
+/* line 2280, D:/projects/admin/bs3/sass/_base.scss */
+.landing .back-to-top {
+  color: #f8f8f8;
+}
+
+/* line 2285, D:/projects/admin/bs3/sass/_base.scss */
+.widget-white {
+  background: white;
+  color: #666666;
+  -webkit-box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
+  -moz-box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
+  box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
+}
+/* line 2290, D:/projects/admin/bs3/sass/_base.scss */
+.widget-white * {
+  color: #666666;
+}
+
+/* line 2295, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-landing {
   height: 450px;
   overflow: hidden;
 }
-/* line 2233, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2299, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-landing h1 {
   font-size: 45px;
   line-height: 1.1;
 }
-/* line 2238, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2304, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-landing .item > .row > *:first-child {
   text-align: right;
 }
-/* line 2242, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2308, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-landing .slide-one-header {
   margin-top: 80px;
 }
-/* line 2246, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2312, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-landing .slide-two-header {
   margin-bottom: 40px;
 }
-/* line 2250, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2316, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-landing .slide-three-header {
   margin-top: 100px;
   margin-bottom: 20px;
 }
-/* line 2255, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2321, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-landing .btn-version-preview {
   margin-top: 20px;
 }
 
-/* line 2262, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2328, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-fade .carousel-inner > .item {
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
 }
-/* line 2267, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2333, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-fade .carousel-inner > .next,
 .carousel-fade .carousel-inner > .prev {
   left: auto;
 }
-/* line 2271, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2337, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-fade .carousel-inner > .next.left,
 .carousel-fade .carousel-inner > .prev.right {
   opacity: 1;
   left: auto;
 }
-/* line 2279, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2345, D:/projects/admin/bs3/sass/_base.scss */
 .carousel-fade .carousel-inner > .active.left,
 .carousel-fade .carousel-inner > .active.right,
 .carousel-fade .carousel-inner > .next,
@@ -19338,7 +19411,7 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 2290, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2356, D:/projects/admin/bs3/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -19350,44 +19423,80 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 2298, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2364, D:/projects/admin/bs3/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 2302, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2368, D:/projects/admin/bs3/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 2306, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2372, D:/projects/admin/bs3/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 2310, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2376, D:/projects/admin/bs3/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 2314, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2380, D:/projects/admin/bs3/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 2318, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2384, D:/projects/admin/bs3/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 2322, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2388, D:/projects/admin/bs3/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 2326, D:/projects/admin/bs3/sass/_base.scss */
+/* line 2392, D:/projects/admin/bs3/sass/_base.scss */
 .visible-phone-landscape {
   display: none !important;
+}
+
+/* line 2400, D:/projects/admin/bs3/sass/_base.scss */
+.background-danger {
+  background: #e5603b;
+  color: white;
+}
+
+/* line 2405, D:/projects/admin/bs3/sass/_base.scss */
+.background-warning {
+  background: #eac85e;
+  color: white;
+}
+
+/* line 2410, D:/projects/admin/bs3/sass/_base.scss */
+.background-success {
+  background: #56bc76;
+  color: white;
+}
+
+/* line 2415, D:/projects/admin/bs3/sass/_base.scss */
+.background-primary {
+  background: #618fb0;
+  color: white;
+}
+
+/* line 2420, D:/projects/admin/bs3/sass/_base.scss */
+.background-info {
+  background: #4ab0ce;
+  color: white;
+}
+
+/* line 2425, D:/projects/admin/bs3/sass/_base.scss */
+.background-lime {
+  background: #8cbf26;
+  color: white;
 }
 
 @media (max-width: 320px) {
