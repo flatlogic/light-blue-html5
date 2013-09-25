@@ -299,7 +299,7 @@
                                 <h2 id='folder-title' class="folder-title">Inbox <small>(2 unread messages)</small></h2>
                                 <form class="form-inline form-search text-align-right" action="">
                                     <label>
-                                        <input type="search" id="mailbox-search" class="input-transparent input-search" placeholder="Search folder..."/>
+                                        <input type="search" id="mailbox-search" class="input-search" placeholder="Search folder..."/>
                                     </label>
                                 </form>
                                 <div id="mailbox-content" class="mailbox-content">
@@ -549,10 +549,10 @@
         </div>
         <div class="email-actions pull-right">
             <div class="btn-group">
-                <button id='email-opened-reply' class="btn btn-sm btn-transparent">
+                <button id='email-opened-reply' class="btn btn-sm btn-inverse">
                     <i class="icon-reply"></i> Reply
                 </button>
-                <button class="btn btn-sm btn-transparent dropdown-toggle" data-toggle="dropdown">
+                <button class="btn btn-sm btn-inverse dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-angle-down"></i>
                 </button>
                 <ul class="dropdown-menu pull-right">
@@ -606,19 +606,19 @@
 <script type="text/template" id="compose-view-template">
     <form id="email-compose" class="form-horizontal form-email-compose" method="POST" enctype="multipart/form-data">
         <div class="control-group">
-                <input type="email" id="input-to" placeholder="To" class="input-transparent form-control"
+                <input type="email" id="input-to" placeholder="To" class="form-control"
                        value="<%= receiver %>">
         </div>
         <div class="control-group">
-                <input type="text" id="input-subject" placeholder="Subject" class="input-transparent form-control"
+                <input type="text" id="input-subject" placeholder="Subject" class="form-control"
                        value="<%= subject %>">
         </div>
         <div class="control-group">
-                <textarea rows="12" class="input-transparent" id="email-body"><%- body %></textarea>
+                <textarea rows="12" id="email-body"><%- body %></textarea>
         </div>
         <div class="control-group">
             <div class="fileupload-buttonbar">
-                <span class="btn btn-sm btn-transparent fileinput-button">
+                <span class="btn btn-sm btn-inverse fileinput-button">
                     <i class="icon-paper-clip"></i>
                     Attach files...
                     <input type="file" name="files[]" multiple="">
@@ -628,8 +628,8 @@
         </div>
         <div class="control-group">
             <button type="submit" id="compose-send-button" class="btn btn-sm btn-primary">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
-            <button type="button" id="compose-save-button" class="btn btn-sm btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
-            <button type="reset" id="compose-discard-button" class="btn btn-sm btn-transparent">Discard</button>
+            <button type="button" id="compose-save-button" class="btn btn-sm btn-inverse">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+            <button type="reset" id="compose-discard-button" class="btn btn-sm btn-inverse">Discard</button>
         </div>
     </form>
 </script>
@@ -658,7 +658,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>{% if (!i) { %}
-            <button class="btn btn-transparent btn-sm cancel">
+            <button class="btn btn-inverse btn-sm cancel">
                 <i class="icon-ban-circle"></i>
                 <span>Cancel</span>
             </button>
@@ -686,7 +686,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>
-            <button class="btn btn-transparent btn-sm delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            <button class="btn btn-inverse btn-sm delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
             <i class="icon-trash"></i>
             <span>Delete</span>
             </button>

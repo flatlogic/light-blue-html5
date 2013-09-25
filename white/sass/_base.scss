@@ -619,7 +619,7 @@ input.parsley-error{
     padding: 4px 14px;
     color: $text-color;
     border: none;
-    background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
+    background:url(../img/search.png) 5px 5px no-repeat $transparentBackground;
     padding-left: 26px;
     @include placeholder(rgba($textLightGray, .76));
     @include transition(width .2s);
@@ -1128,6 +1128,18 @@ input.parsley-error{
 
 .btn-inverse{
   @include button-variant($btn-inverse-color, $btn-inverse-bg, #ccc);
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $gray-light;
+    }
+  }
 }
 
 /***********************************/
