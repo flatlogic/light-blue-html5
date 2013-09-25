@@ -2224,6 +2224,10 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   .btn{
     font-weight: normal;
+
+    + .btn{
+      margin-left: 10px;
+    }
   }
 
   .widget p{
@@ -2296,6 +2300,10 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   height: 450px;
   overflow: hidden;
 
+  img{
+    max-width: 100%;
+  }
+
   h1{
     font-size: 45px;
     line-height: 1.1;
@@ -2320,6 +2328,9 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   .btn-version-preview{
     margin-top: 20px;
+    @media (min-width: 480px) and (max-width: 768px) {
+      display: none;
+    }
   }
 }
 

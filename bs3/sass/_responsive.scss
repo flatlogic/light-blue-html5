@@ -68,6 +68,37 @@
   .wrap{
     overflow: hidden;
   }
+
+  .landing{
+    .slide-one-header,
+    .slide-two-header,
+    .slide-three-header{
+      margin: 10px 0;
+    }
+
+    .logo{
+      width: auto;
+    }
+
+    .widget-about{
+      margin-top: 0;
+    }
+  }
+
+  .carousel-landing{
+    height: 370px;
+    h1{
+      font-size: 30px;
+    }
+
+    .btn{
+      margin-bottom: 10px;
+    }
+
+    .btn-version-preview{
+      margin-top: 0;
+    }
+  }
 }
 
 //this media quiery is out of order because Chrome thinks
@@ -233,6 +264,34 @@
 
   .client-details{
     text-align: left;
+  }
+
+  .landing{
+    .logo{
+      width: auto;
+
+      small{
+        display: none;
+      }
+    }
+
+    .features{
+      + .features{
+        margin-top: 0;
+      }
+    }
+
+    .feature{
+      margin-bottom: 20px;
+    }
+  }
+
+  .carousel-landing{
+    height: 215px;
+    margin-bottom: -24px;
+    h1{
+      font-size: 20px;
+    }
   }
 }
 
