@@ -18,10 +18,10 @@
         <li >
             <a href="index.html"><i class="icon-home"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
-            <ul id="forms-collapse" class="accordion-body collapse">
+            <ul id="forms-collapse" class="panel-collapse collapse">
                 <li><a href="form_account.html">Account</a></li>
                 <li><a href="form_article.html">Article</a></li>
                 <li><a href="form_elements.html">Elements</a></li>
@@ -29,18 +29,18 @@
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
+            <ul id="stats-collapse" class="panel-collapse collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
-        <li class="active accordion-group">
+        <li class="active panel">
             <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse in">
+            <ul id="ui-collapse" class="panel-collapse in">
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_dialogs.html">Dialogs</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
@@ -48,20 +48,20 @@
                 <li class="active"><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
+            <ul id="components-collapse" class="panel-collapse collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
                 <li><a href="component_maps.html">Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#tables-collapse"><i class="icon-table"></i> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
+            <ul id="tables-collapse" class="panel-collapse collapse">
                 <li><a href="tables_static.html">Static</a></li>
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
@@ -69,10 +69,10 @@
         <li >
             <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse">
+            <ul id="special-collapse" class="panel-collapse collapse">
                 <li><a href="special_search.html">Search</a></li>
                 <li><a href="special_invoice.html">Invoice</a></li>
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
@@ -80,24 +80,28 @@
                 <li><a href="special_404.html">404</a></li>
             </ul>
         </li>
-        <li class="visible-phone">
+        <li class="visible-xs">
             <a href="login.html"><i class="icon-signout"></i> <span class="name">Sign Out</span></a>
         </li>
     </ul>
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-transparent btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-transparent btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
     <header class="page-header">
         <div class="navbar">
-            <div class="navbar-inner">
-                <ul class="nav pull-right">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="visible-phone-landscape">
+                        <a href="#" id="search-toggle">
+                            <i class="icon-search"></i>
+                        </a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
@@ -211,15 +215,15 @@
                         </ul>
                     </li>
                     <li class="divider"></li>
-                    <li class="hidden-phone">
+                    <li class="hidden-xs">
                         <a href="#" id="settings"
+                           title="Settings"
                            data-toggle="popover"
-                           data-placement="bottom"
-                           title="">
+                           data-placement="bottom">
                             <i class="icon-cog"></i>
                         </a>
                     </li>
-                    <li class="hidden-phone dropdown">
+                    <li class="hidden-xs dropdown">
                         <a href="#" title="Account" id="account"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
@@ -250,7 +254,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="visible-phone">
+                    <li class="visible-xs">
                         <a href="#"
                            class="btn-navbar"
                            data-toggle="collapse"
@@ -259,22 +263,21 @@
                             <i class="icon-reorder"></i>
                         </a>
                     </li>
-                    <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
+                    <li class="hidden-xs"><a href="login.html"><i class="icon-signout"></i></a></li>
                 </ul>
-                <form class="navbar-search pull-right">
+                <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="search-query" placeholder="Search...">
                 </form>
-            </div>
         </div>
     </header>
-    <div class="content container-fluid">
-        <div class="row-fluid">
-            <div class="span12">
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-12">
                 <h2 class="page-title">Accordion <small>Simple and toggle accordion</small></h2>
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="span6">
+        <div class="row">
+            <div class="col-md-6">
                 <section class="widget">
                     <header>
                         <h5>
@@ -283,43 +286,43 @@
                         </h5>
                     </header>
                     <div class="body">
-                        <div class="accordion" id="accordion2">
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
+                        <div class="panel-group" id="accordion2">
+                            <div class="panel">
+                                <div class="panel-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
                                         Collapsible Group Item #1
                                     </a>
                                 </div>
-                                <div id="collapseOne" class="accordion-body in collapse" style="height: auto;">
-                                    <div class="accordion-inner">
+                                <div id="collapseOne" class="panel-collapse in collapse" style="height: auto;">
+                                    <div class="panel-body">
                                         Light Blue - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:
                                         We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one.
                                         We searched for a solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
+                            <div class="panel">
+                                <div class="panel-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
                                         Collapsible Group Item #2
                                     </a>
                                 </div>
-                                <div id="collapseTwo" class="accordion-body collapse">
-                                    <div class="accordion-inner">
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
                                         Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually. Everyone knows what is lore ipsum - it is
                                         easy to understand if text is lore ipsum. You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one? You start to read it!
                                         But the goal of this text is different. So a bit of Lore Ipsum is always great practice.
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
+                            <div class="panel">
+                                <div class="panel-heading">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
                                         Collapsible Group Item #3
                                     </a>
                                 </div>
-                                <div id="collapseThree" class="accordion-body collapse">
-                                    <div class="accordion-inner">
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
                                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
                                     </div>
                                 </div>
@@ -328,7 +331,7 @@
                     </div>
                 </section>
             </div>
-            <div class="span6">
+            <div class="col-md-6">
                 <section class="widget">
                     <header>
                         <h5>
@@ -337,43 +340,43 @@
                         </h5>
                     </header>
                     <div class="body">
-                        <div class="accordion" id="accordion3">
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
+                        <div class="panel-group" id="accordion3">
+                            <div class="panel">
+                                <div class="panel-heading">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOneTwo">
                                         Collapsible Group Item #1
                                     </a>
                                 </div>
-                                <div id="collapseOneTwo" class="accordion-body collapse">
-                                    <div class="accordion-inner">
+                                <div id="collapseOneTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
                                         Light Blue - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it:
                                         We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one.
                                         We searched for a solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
+                            <div class="panel">
+                                <div class="panel-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" href="#collapseTwoTwo">
                                         Collapsible Group Item #2
                                     </a>
                                 </div>
-                                <div id="collapseTwoTwo" class="accordion-body in collapse">
-                                    <div class="accordion-inner">
+                                <div id="collapseTwoTwo" class="panel-collapse in collapse">
+                                    <div class="panel-body">
                                         Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually. Everyone knows what is lore ipsum - it is
                                         easy to understand if text is lore ipsum. You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one? You start to read it!
                                         But the goal of this text is different. The goal is the example. So a bit of Lore Ipsum is always very good practice. Keep it in mind!
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
+                            <div class="panel">
+                                <div class="panel-heading">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThreeTwo">
                                         Collapsible Group Item #3
                                     </a>
                                 </div>
-                                <div id="collapseThreeTwo" class="accordion-body collapse">
-                                    <div class="accordion-inner">
+                                <div id="collapseThreeTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
                                         Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
                                     </div>
                                 </div>
@@ -401,16 +404,16 @@
 <script src="lib/backbone/underscore-min.js"></script>
 
 <!-- bootstrap default plugins -->
-<script src="js/bootstrap/bootstrap-transition.js"></script>
-<script src="js/bootstrap/bootstrap-transition.js"></script>
-<script src="js/bootstrap/bootstrap-collapse.js"></script>
-<script src="js/bootstrap/bootstrap-alert.js"></script>
-<script src="js/bootstrap/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap/bootstrap-popover.js"></script>
-<script src="js/bootstrap/bootstrap-button.js"></script>
-<script src="js/bootstrap/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap/bootstrap-modal.js"></script>
-<script src="js/bootstrap/bootstrap-tab.js"> </script>
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/collapse.js"></script>
+<script src="lib/bootstrap/alert.js"></script>
+<script src="lib/bootstrap/tooltip.js"></script>
+<script src="lib/bootstrap/popover.js"></script>
+<script src="lib/bootstrap/button.js"></script>
+<script src="lib/bootstrap/dropdown.js"></script>
+<script src="lib/bootstrap/modal.js"></script>
+<script src="lib/bootstrap/tab.js"> </script>
 
 <!-- bootstrap custom plugins -->
 <script src="lib/bootstrap-datepicker.js"></script>
@@ -427,24 +430,24 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
@@ -454,14 +457,14 @@
         <% if (auto) {%>
             <button type="button"
                     data-value="icons"
-                    class="btn-icons btn btn-transparent btn-small">Icons</button>
+                    class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-transparent btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
         <%} else {%>
             <button type="button"
                     data-value="auto"
-                    class="btn btn-transparent btn-small">Auto</button>
+                    class="btn btn-transparent btn-sm">Auto</button>
         <% } %>
 </script>
 

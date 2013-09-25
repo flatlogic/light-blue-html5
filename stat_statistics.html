@@ -8,7 +8,7 @@
     <script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
     <script src="lib/icheck.js/jquery.icheck.js"></script>
     <!--<script src="lib/zepto/zepto.min.js"> </script>-->
-    <script src="js/bootstrap/bootstrap-tab.js"> </script>
+    <script src="lib/bootstrap/tab.js"> </script>
     <script src="lib/parsley/parsley.js"> </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -24,10 +24,10 @@
         <li >
             <a href="index.html"><i class="icon-home"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
-            <ul id="forms-collapse" class="accordion-body collapse">
+            <ul id="forms-collapse" class="panel-collapse collapse">
                 <li><a href="form_account.html">Account</a></li>
                 <li><a href="form_article.html">Article</a></li>
                 <li><a href="form_elements.html">Elements</a></li>
@@ -35,18 +35,18 @@
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="active accordion-group">
+        <li class="active panel">
             <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse in">
+            <ul id="stats-collapse" class="panel-collapse in">
                 <li class="active"><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse">
+            <ul id="ui-collapse" class="panel-collapse collapse">
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_dialogs.html">Dialogs</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
@@ -54,20 +54,20 @@
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
+            <ul id="components-collapse" class="panel-collapse collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
                 <li><a href="component_maps.html">Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#tables-collapse"><i class="icon-table"></i> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
+            <ul id="tables-collapse" class="panel-collapse collapse">
                 <li><a href="tables_static.html">Static</a></li>
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
@@ -75,10 +75,10 @@
         <li >
             <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse">
+            <ul id="special-collapse" class="panel-collapse collapse">
                 <li><a href="special_search.html">Search</a></li>
                 <li><a href="special_invoice.html">Invoice</a></li>
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
@@ -86,24 +86,28 @@
                 <li><a href="special_404.html">404</a></li>
             </ul>
         </li>
-        <li class="visible-phone">
+        <li class="visible-xs">
             <a href="login.html"><i class="icon-signout"></i> <span class="name">Sign Out</span></a>
         </li>
     </ul>
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-transparent btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-transparent btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
     <header class="page-header">
         <div class="navbar">
-            <div class="navbar-inner">
-                <ul class="nav pull-right">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="visible-phone-landscape">
+                        <a href="#" id="search-toggle">
+                            <i class="icon-search"></i>
+                        </a>
+                    </li>
                     <li class="dropdown">
                         <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
@@ -217,15 +221,15 @@
                         </ul>
                     </li>
                     <li class="divider"></li>
-                    <li class="hidden-phone">
+                    <li class="hidden-xs">
                         <a href="#" id="settings"
+                           title="Settings"
                            data-toggle="popover"
-                           data-placement="bottom"
-                           title="">
+                           data-placement="bottom">
                             <i class="icon-cog"></i>
                         </a>
                     </li>
-                    <li class="hidden-phone dropdown">
+                    <li class="hidden-xs dropdown">
                         <a href="#" title="Account" id="account"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
@@ -256,7 +260,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="visible-phone">
+                    <li class="visible-xs">
                         <a href="#"
                            class="btn-navbar"
                            data-toggle="collapse"
@@ -265,22 +269,21 @@
                             <i class="icon-reorder"></i>
                         </a>
                     </li>
-                    <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
+                    <li class="hidden-xs"><a href="login.html"><i class="icon-signout"></i></a></li>
                 </ul>
-                <form class="navbar-search pull-right">
+                <form id="search-form" class="navbar-form pull-right" role="search">
                     <input type="search" class="search-query" placeholder="Search...">
                 </form>
-            </div><!-- /navbar-inner -->
         </div>
     </header>
-    <div class="content container-fluid">
-        <div class="row-fluid">
-            <div class="span12">
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-12">
                 <h2 class="page-title">Basic Stats <small>Tiles, bars and more</small></h2>
             </div>
         </div>
-        <div class="row-fluid box-row">
-            <div class="span2">
+        <div class="row">
+            <div class="col-md-2 col-sm-4 col-xs-6">
                 <div class="box">
                     <div class="icon">
                         <i class="icon-calendar"></i>
@@ -290,7 +293,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span2">
+            <div class="col-md-2 col-sm-4 col-xs-6">
                 <div class="box">
                     <div class="big-text">
                         3.28%
@@ -301,7 +304,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span2">
+            <div class="col-md-2 col-sm-4 col-xs-6">
                 <div class="box">
                     <div class="icon">
                         <i class="icon-user"></i>
@@ -312,7 +315,7 @@
                 </div>
             </div>
 
-            <div class="span2">
+            <div class="col-md-2 col-sm-4 col-xs-6">
                 <div class="box">
                     <div class="big-text">
                         +512
@@ -323,7 +326,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span2">
+            <div class="col-md-2 col-sm-4 col-xs-6">
                 <div class="box">
                     <div class="icon">
                         <i class="icon-shopping-cart"></i>
@@ -333,7 +336,7 @@
                     </div>
                 </div>
             </div>
-            <div class="span2">
+            <div class="col-md-2 col-sm-4 col-xs-6">
                 <div class="box">
                     <div class="big-text">
                         6.42%
@@ -345,8 +348,8 @@
                 </div>
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="span4">
+        <div class="row">
+            <div class="col-md-4">
                 <section class="widget normal">
                     <header>
                         <h4>
@@ -357,22 +360,22 @@
                     <div class="body">
                         <h5 class="no-margin weight-normal">Simple one</h5>
                         <div class="progress">
-                            <div class="bar" style="width: 60%;"></div>
+                            <div class="progress-bar" style="width: 60%;"></div>
                         </div>
                         <h5 class="no-margin weight-normal">Styled ones</h5>
-                        <div class="progress progress-inverse">
-                            <div class="bar" style="width: 33%;"></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-inverse" style="width: 33%;"></div>
                         </div>
-                        <div class="progress progress-warning">
-                            <div class="bar" style="width: 52%;"></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-warning" style="width: 52%;"></div>
                         </div>
-                        <div class="progress progress-danger">
-                            <div class="bar" style="width: 43%;"></div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger" style="width: 43%;"></div>
                         </div>
                     </div>
                 </section>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <section class="widget normal">
                     <header>
                         <h4>
@@ -382,26 +385,26 @@
                     </header>
                     <div class="body">
                         <h5 class="no-margin weight-normal">Colors</h5>
-                        <div class="progress progress-small progress-inverse">
-                            <div class="bar" style="width: 23%;"></div>
+                        <div class="progress progress-small">
+                            <div class="progress-bar progress-bar-inverse" style="width: 23%;"></div>
                         </div>
-                        <div class="progress progress-small progress-warning">
-                            <div class="bar" style="width: 76%;"></div>
+                        <div class="progress progress-small">
+                            <div class="progress-bar progress-bar-warning" style="width: 76%;"></div>
                         </div>
-                        <div class="progress progress-small progress-success">
-                            <div class="bar" style="width: 43%;"></div>
+                        <div class="progress progress-small">
+                            <div class="progress-bar progress-bar-success" style="width: 43%;"></div>
                         </div>
-                        <div class="progress progress-small progress-danger">
-                            <div class="bar" style="width: 53%;"></div>
+                        <div class="progress progress-small">
+                            <div class="progress-bar progress-bar-danger" style="width: 53%;"></div>
                         </div>
                         <h5 class="no-margin weight-normal">Default progressbar</h5>
                         <div class="progress progress-small">
-                            <div class="bar" style="width: 60%;"></div>
+                            <div class="progress-bar" style="width: 60%;"></div>
                         </div>
                     </div>
                 </section>
             </div>
-            <div class="span4">
+            <div class="col-md-4">
                 <section class="widget normal">
                     <header>
                         <h4>
@@ -412,22 +415,22 @@
                     <div class="body">
                         <h5 class="no-margin weight-normal">With embedded percentage</h5>
                         <div class="progress">
-                            <div class="bar" style="width: 79%;">79%</div>
+                            <div class="progress-bar" style="width: 79%;">79%</div>
                         </div>
                         <h5 class="no-margin weight-normal">Active one</h5>
-                        <div class="progress progress-warning progress-striped active">
-                            <div class="bar" style="width: 51%;">51%</div>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-warning" style="width: 51%;">51%</div>
                         </div>
                         <h5 class="no-margin weight-normal">Inversed progress-bar</h5>
-                        <div class="progress progress-inverse progress-striped active">
-                            <div class="bar" style="width: 64%;">64%</div>
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-inverse" style="width: 64%;">64%</div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="span3 offset3">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">
                 <section class="widget">
                     <header>
                         <h4>
@@ -442,7 +445,7 @@
                                 <div class="stat">
                                     <div class="info">60% / 37&deg;C / 3.3 Ghz</div>
                                     <div class="progress progress-small">
-                                        <div class="bar" style="width: 70%;"></div>
+                                        <div class="progress-bar" style="width: 70%;"></div>
                                     </div>
                                 </div>
                             </li>
@@ -450,8 +453,8 @@
                                 <div class="key pull-right">Mem</div>
                                 <div class="stat">
                                     <div class="info">29% / 4GB (16 GB)</div>
-                                    <div class="progress progress-small progress-warning">
-                                        <div class="bar" style="width: 29%;"></div>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar progress-bar-warning" style="width: 29%;"></div>
                                     </div>
                                 </div>
                             </li>
@@ -459,8 +462,8 @@
                                 <div class="key pull-right">LAN</div>
                                 <div class="stat">
                                     <div class="info">6 Mb/s <i class="icon-caret-down"></i> &nbsp; 3 Mb/s <i class="icon-caret-up"></i></div>
-                                    <div class="progress progress-small progress-danger">
-                                        <div class="bar" style="width: 48%;"></div>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar progress-bar-danger" style="width: 48%;"></div>
                                     </div>
                                 </div>
                             </li>
@@ -468,8 +471,8 @@
                                 <div class="key pull-right">Access</div>
                                 <div class="stat">
                                     <div class="info">17 Mb/s <i class="icon-caret-up"></i> &nbsp; (+18%)</div>
-                                    <div class="progress progress-small progress-success">
-                                        <div class="bar" style="width: 64%;"></div>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar progress-bar-success" style="width: 64%;"></div>
                                     </div>
                                 </div>
                             </li>
@@ -477,7 +480,7 @@
                     </div>
                 </section>
             </div>
-            <div class="span3">
+            <div class="col-md-3">
                 <section class="widget widget-overview">
                     <header>
                         <h4>
@@ -553,12 +556,12 @@
 <script src="lib/backbone/underscore-min.js"></script>
 
 <!-- bootstrap default plugins -->
-<script src="js/bootstrap/bootstrap-transition.js"></script>
-<script src="js/bootstrap/bootstrap-collapse.js"></script>
-<script src="js/bootstrap/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap/bootstrap-popover.js"></script>
-<script src="js/bootstrap/bootstrap-button.js"></script>
-<script src="js/bootstrap/bootstrap-dropdown.js"></script>
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/collapse.js"></script>
+<script src="lib/bootstrap/tooltip.js"></script>
+<script src="lib/bootstrap/popover.js"></script>
+<script src="lib/bootstrap/button.js"></script>
+<script src="lib/bootstrap/dropdown.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
@@ -573,24 +576,24 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
@@ -602,14 +605,14 @@
         <% if (auto) {%>
             <button type="button"
                     data-value="icons"
-                    class="btn-icons btn btn-transparent btn-small">Icons</button>
+                    class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-transparent btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
         <%} else {%>
             <button type="button"
                     data-value="auto"
-                    class="btn btn-transparent btn-small">Auto</button>
+                    class="btn btn-transparent btn-sm">Auto</button>
         <% } %>
 </script>
 

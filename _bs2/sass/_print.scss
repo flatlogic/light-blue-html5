@@ -1,0 +1,65 @@
+@media print {
+
+  hr{
+    border-bottom-color: $grayLight;
+  }
+
+  blockquote{
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .sidebar{
+    display: none;
+  }
+
+  .wrap{
+    margin: 0;
+  }
+
+  .page-header{
+    display: none;
+  }
+
+  .logo{
+    position: static;
+    width: auto;
+  }
+
+  .table, .table td, .table th{
+    background: $white !important;
+    border: none !important;
+  }
+
+  .table td{
+    border-top: 1px solid $grayLight !important;
+  }
+
+  .hidden-print{
+    display: none !important;
+  }
+
+  .row-fluid.print-non-responsive {
+    width: 100%;
+    @include clearfix();
+    [class*="span"] {
+      @include input-block-level();
+      float: left;
+      margin-left: $fluidGridGutterWidth;
+      *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
+    }
+    [class*="span"]:first-child {
+      margin-left: 0;
+    }
+
+    // Space grid-sized controls properly if multiple per line
+    .controls-row [class*="span"] + [class*="span"] {
+      margin-left: $fluidGridGutterWidth;
+    }
+
+    // generate .spanX and .offsetX
+    @include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+    @include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
+  }
+}

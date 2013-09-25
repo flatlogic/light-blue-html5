@@ -38,7 +38,7 @@ input.parsley-error{
 }
 
 .parsley-error-list{
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 
   li{
     list-style: none;
@@ -51,6 +51,7 @@ input.parsley-error{
 /**********************************/
 
 .logo{
+  @include box-sizing(content-box);
   position: absolute;
   left: 65px;
   top: 13px;
@@ -79,7 +80,7 @@ input.parsley-error{
   padding: 10px 0;
   top: 0;
   color: $textLightGray;
-  font-size: $baseFontSize - 1;
+  font-size: $font-size-base - 1;
   z-index: 1;
   margin: $sidebarTopMargin 0 0 25px;
 
@@ -96,7 +97,7 @@ input.parsley-error{
     @include sidebar-settings;
   }
 
-  .accordion-group{
+  .panel{
     background: none;
   }
 }
@@ -110,7 +111,7 @@ input.parsley-error{
     i[class*=icon]{
       line-height: 20px;
       float: right;
-      font-size: $fontSizeLarge;
+      font-size: $font-size-large;
     }
 
     a:hover, a:focus{
@@ -125,11 +126,11 @@ input.parsley-error{
       padding: 8px 20px;
     }
 
-    a.accordion-toggle:not(.collapsed) + .accordion-body li.active a{
+    a.accordion-toggle:not(.collapsed) + .panel-collapse li.active a{
       background: $sidebarSubMenuActiveColor;
     }
 
-    a.accordion-toggle:not(.collapsed) + .accordion-body li a:hover{
+    a.accordion-toggle:not(.collapsed) + .panel-collapse li a:hover{
       background: $sidebarSubMenuActiveColor;
     }
   }
@@ -138,10 +139,10 @@ input.parsley-error{
     border-left: 4px solid $white;
     padding-left: 16px;
     background: $sidebarActiveColor;
-    color: $textColor;
+    color: $text-color;
   }
 
-  .accordion-body li a{
+  .panel-collapse li a{
     padding: 4px 10px;
 
     padding-left: 40px;
@@ -151,10 +152,21 @@ input.parsley-error{
     }
   }
 
-  .accordion-group{
+  .panel{
     margin: 0;
     border: none;
     @include border-radius(0);
+  }
+
+  .panel-collapse.collapse {
+    display: block;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    @include transition(height .35s ease);
+    &.in {
+      height: auto;
+    }
   }
 }
 
@@ -228,6 +240,7 @@ input.parsley-error{
 .content{
   padding: 25px 2.5641%;
   @include transition(margin-top .35s ease);
+  max-width: none;
 }
 
 /***********************************/
@@ -271,9 +284,10 @@ input.parsley-error{
 
 .widget{
   @include border-radius($widget-border-radius);
+  @include box-sizing(content-box);
   //@include box-shadow($widget-shadow);
   padding: $widget-padding;
-  color: $textColor;
+  color: $text-color;
   background: $transparentBackground;
   margin-bottom: $box-margin-bottom;
   position: relative;
@@ -329,7 +343,7 @@ input.parsley-error{
     }
 
     h4{
-      font-size: $fontSizeLarger;
+      font-size: $font-size-larger;
     }
   }
 
@@ -380,7 +394,7 @@ input.parsley-error{
 
   .visits{
     @include bold-font;
-    font-size: $fontSizeLarge;
+    font-size: $font-size-large;
   }
 }
 
@@ -392,6 +406,7 @@ input.parsley-error{
   }
 
   .control{
+    @include box-sizing(content-box);
     background: $backgroundAddition;
     text-align: center;
     font-weight: normal;
@@ -406,12 +421,12 @@ input.parsley-error{
     float:left;
 
     &:first-child{
-      border-bottom-left-radius: $baseBorderRadius;
+      border-bottom-left-radius: $border-radius-base;
       margin-left: 0;
     }
 
     &:last-child{
-      border-bottom-right-radius: $baseBorderRadius;
+      border-bottom-right-radius: $border-radius-base;
     }
 
     &.disabled{
@@ -419,13 +434,13 @@ input.parsley-error{
     }
 
     .key{
-      font-size: $fontSizeSmall;
+      font-size: $font-size-small;
       font-weight: normal;
       margin: 0;
     }
 
     .value{
-      font-size: $fontSizeLarge;
+      font-size: $font-size-large;
       font-weight: bold;
       margin-bottom: 5px;
     }
@@ -449,7 +464,13 @@ input.parsley-error{
   .value{
     margin-top: 16px;
     margin-bottom: 16px;
-    font-size: $fontSizeLarge;
+    font-size: $font-size-large;
+  }
+}
+
+.jqstooltip{
+  &, *{
+    @include box-sizing(content-box);
   }
 }
 
@@ -465,6 +486,7 @@ input.parsley-error{
   }
 
   li{
+    @include box-sizing(content-box);
     border-top: 1px solid $backgroundAddition;
     padding: 12px;
     margin: 0 -12px;
@@ -499,13 +521,13 @@ input.parsley-error{
     a{
       text-decoration: none;
       &:hover{
-        color: $linkColor;
+        color: $link-color;
       }
     }
   }
 
   .time{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     color: $textLightGray;
   }
 
@@ -514,8 +536,8 @@ input.parsley-error{
   }
 
   .comment{
-    font-size: $fontSizeSmall;
-    color: $textColor;
+    font-size: $font-size-small;
+    color: $text-color;
     line-height: 1.3em;
   }
 }
@@ -533,6 +555,11 @@ input.parsley-error{
   position: relative;
 
   @include border-radius($widget-border-radius);
+
+  .navbar{
+    min-height: 40px;
+    border: none;
+  }
 
   .navbar .nav li.dropdown.open > .dropdown-toggle,
   .navbar .nav li.dropdown.active > .dropdown-toggle,
@@ -555,19 +582,19 @@ input.parsley-error{
   .nav > li{
     position: relative;
     background: none;
+    float: left;
 
     & > a{
       color: $transparentTextColor;
       width: 40px;
       padding: 0;
-      font-size: $baseFontSize * 1.5;
+      font-size: $font-size-base * 1.5;
       outline: 0;
       background: none;
       text-align: center;
       vertical-align: middle;
       line-height: 36px;
       text-shadow: none;
-      @include transition(color 0.1s);
 
       &:hover{
         color: $white;
@@ -578,7 +605,7 @@ input.parsley-error{
       position: absolute;
       bottom: 2px;
       right: 2px;
-      font-size: $fontSizeIndex;
+      font-size: $font-size-index;
       font-weight: normal;
       background:  rgba($backgroundGray, .55);
       color: rgba(white, 0.9);
@@ -599,8 +626,11 @@ input.parsley-error{
   }
 
   .search-query{
+    @include box-sizing(content-box);
+    min-height: 0;
+    padding: 4px 14px;
+    color: $text-color;
     border: none;
-    color: $textColor;
     background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
     padding-left: 26px;
     @include placeholder(rgba(#eee, .76));
@@ -612,8 +642,51 @@ input.parsley-error{
     }
   }
 
-  .navbar-search{
-    margin-right: 15px;
+  .navbar-form{
+    margin: 5px 15px 0 0;
+    padding: 0;
+    border: none;
+    @include box-shadow(none);
+  }
+
+  .navbar-nav{
+    margin: 0;
+  }
+
+  // Menu position and menu carets
+  .navbar .nav > li > .dropdown-menu {
+    &:after {
+      content: '';
+      display: inline-block;
+      border-left:   6px solid transparent;
+      border-right:  6px solid transparent;
+      border-bottom: 6px solid $popover-bg;
+      position: absolute;
+      top: -6px;
+      left: 10px;
+    }
+  }
+
+  // Right aligned menus need alt position
+  .navbar .pull-right > li > .dropdown-menu,
+  .navbar .nav > li > .dropdown-menu.pull-right {
+    left: auto;
+    right: 0;
+    &:before {
+      left: auto;
+      right: 12px;
+    }
+    &:after {
+      left: auto;
+      right: 13px;
+    }
+    .dropdown-menu {
+      left: auto;
+      right: 100%;
+      margin-left: 0;
+      margin-right: -1px;
+      @include border-radius(6px 0 6px 6px);
+    }
   }
 }
 
@@ -651,7 +724,7 @@ input.parsley-error{
   .alert{
     background: $transparentBackground;
     border: none;
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     margin-bottom: 0;
     padding: 2px 9px;
     color: $white;
@@ -675,15 +748,11 @@ input.parsley-error{
 /**********************************/
 
 .messages{
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
   color: $white;
-
-  .see-all{
-    padding: 5px 10px;
-  }
 }
 
 .navbar .nav > li > .messages{
@@ -691,13 +760,17 @@ input.parsley-error{
     border-bottom: none;
   }
   &:after{
-    border-bottom-color: $popoverBackground;
+    border-bottom-color: $popover-bg;
   }
-}
 
-.messages > li > a{
-  color: $white;
-  padding: 8px 10px;
+  > li > a{
+    color: $white;
+    padding: 8px 10px;
+  }
+
+  .see-all{
+    padding: 5px 10px;
+  }
 }
 
 .message{
@@ -715,7 +788,7 @@ input.parsley-error{
   }
 
   .text{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     color: #ddd;
   }
 }
@@ -725,15 +798,13 @@ input.parsley-error{
 /**********************************/
 
 .support{
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
   color: $white;
 
-  .see-all{
-    padding: 5px 10px;
-  }
+
 }
 
 .navbar .nav > li > .support{
@@ -741,13 +812,17 @@ input.parsley-error{
     border-bottom: none;
   }
   &:after{
-    border-bottom-color: $popoverBackground;
+    border-bottom-color: $popover-bg;
   }
-}
 
-.support > li > a{
-  color: $white;
-  padding: 5px 10px;
+  > li > a{
+    color: $white;
+    padding: 5px 10px;
+  }
+
+  .see-all{
+    padding: 5px 10px;
+  }
 }
 
 .support-ticket{
@@ -759,7 +834,7 @@ input.parsley-error{
 
   .details{
     margin-left: 30px;
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
   }
 }
 
@@ -768,13 +843,13 @@ input.parsley-error{
 /**********************************/
 
 .settings-popover{
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
   color: $white;
   width: 114px;
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 
   //override js-set variables
   left: -76px !important;
@@ -787,7 +862,7 @@ input.parsley-error{
     left: auto;
     right: 4px;
     &:after{
-      border-bottom-color: $popoverBackground;
+      border-bottom-color: $popover-bg;
       border-width: 6px;
     }
   }
@@ -796,7 +871,7 @@ input.parsley-error{
     margin-top: 0;
   }
 
-  .btn-small{
+  .btn-sm{
     padding: 0 7px;
   }
 }
@@ -816,7 +891,7 @@ input.parsley-error{
 
 .account{
   width: 180px;
-  background: $popoverBackground;
+  background: $popover-bg;
   @include box-shadow(none);
   @include border-radius(0);
   border: none;
@@ -828,7 +903,7 @@ input.parsley-error{
     border-bottom: none;
   }
   &:after{
-    border-bottom-color: $popoverBackground;
+    border-bottom-color: $popover-bg;
   }
 }
 
@@ -876,14 +951,24 @@ input.parsley-error{
 
   input[type="email"],
   input[type="password"]{
-    width: 313px;
+    font-size: $font-size-base;
+  }
+
+  .input-group-addon{
+    padding: 8px 7px;
+    i{
+      &, &:before, &:after{
+        width: 20px;
+        margin: 0;
+      }
+    }
   }
 
   .form-actions {
     margin: 0 -12px;
     padding: 20px 15px 0 15px;
 
-    .btn-large{
+    .btn-lg{
       padding: 10px 18px;
     }
 
@@ -915,6 +1000,7 @@ input.parsley-error{
   }
 
   .facebook-login {
+    @include box-sizing(content-box);
     height: 30px;
     background: $blue;
     text-align: center;
@@ -968,7 +1054,7 @@ input.parsley-error{
   }
 
   .time{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     line-height: 1.5em;
     text-align: center;
     color: $textLightGray;
@@ -986,7 +1072,7 @@ input.parsley-error{
   position: relative;
   border-left: 2px solid $textLightGray;
 
-  @include border-radius($baseBorderRadius);
+  @include border-radius($border-radius-base);
 
   &.on-left{
     margin-left: 0;
@@ -1111,28 +1197,32 @@ input.parsley-error{
   text-shadow: none;
   @include box-shadow(none);
 
-  &:hover, &.active:hover{
+  &:hover{
     background: $transparentTextColor;
     color: $white;
   }
 
   &.active{
     color: $white;
-    background: rgba($backgroundGray, .75);
+    background: rgba($backgroundGray, .55);
+    &:hover{
+      background: rgba($backgroundGray, .55);
+    }
   }
 
   .caret{
-    border-top-color: $textColor;
+    border-top-color: $text-color;
   }
 }
 
 .btn-inverse{
-  color: $grayDark;
+  color: $btn-inverse-color;
   border-bottom-color: rgba(0, 0, 0, .2);
+  background: $btn-inverse-bg;
 
   &:hover,
   &:focus{
-    color: $grayDark;
+    color: $btn-inverse-color;
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
   }
 
@@ -1140,19 +1230,76 @@ input.parsley-error{
   &.active:hover,
   &.active:focus{
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
-    color: $grayDark;
+    color: $btn-inverse-color;
   }
 
   &.disabled,
   &[disabled] {
-    color: $grayDark;
+    color: $btn-inverse-color;
   }
 
+}
+
+.btn-white{
+  background: none;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
 /***********************************/
 /**          FORMS                **/
 /**********************************/
+
+
+// Legend collapses margin, so next element is responsible for spacing
+legend + .control-group {
+  margin-top: $line-height-base;
+  -webkit-margin-top-collapse: separate;
+}
+
+// Horizontal-specific styles
+// --------------------------
+
+.form-horizontal {
+  // Increase spacing between groups
+  .control-group {
+    @include clearfix();
+  }
+  // Float the labels left
+  .control-label {
+    float: left;
+    width: $horizontalComponentOffset - 20;
+    padding-top: 5px;
+    text-align: right;
+  }
+  // Move over all input controls and content
+  .controls {
+    margin-left: $horizontalComponentOffset;
+  }
+
+  .form-group{
+    margin-right: 0;
+  }
+  // Remove bottom margin on block level help text since that's accounted for on .control-group
+  .help-block {
+    margin-bottom: 0;
+  }
+  // And apply it only to .help-block instances that follow a form control
+  input,
+  select,
+  textarea,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    + .help-block {
+      margin-top: 5px;
+    }
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-left: $horizontalComponentOffset;
+  }
+}
 
 .form-horizontal.label-left .control-label{
   text-align: left;
@@ -1169,14 +1316,14 @@ input.parsley-error{
 }
 
 .section{
-  font-size: $fontSizeLarger;
+  font-size: $font-size-larger;
   color: $textLightGray;
   vertical-align: middle;
   line-height: 30px;
   padding: 10px 0 0;
 
   small{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     color: $smallsColor;
     font-weight: bold;
   }
@@ -1187,53 +1334,21 @@ input.parsley-error{
 }
 
 .help-block{
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 }
 
-.input-prepend, .input-apppend{
-  &.input-padding-increased{
-    input{
-      @include box-sizing(border-box);
-      height: 38px;
-      padding: 8px 10px;
-
-      &[type=search], &.search{
-        background-position: 5px 10px;
-        padding-left: 26px;
-      }
-    }
-
-    .add-on{
-      height: 28px;
-      line-height: 28px;
-      min-width: 26px;
-      vertical-align: middle;
-    }
-  }
-}
 
 input, textarea{
  &.input-transparent{
    border: none;
-   color: $textColor;
+   color: $text-color;
    background-color: $transparentBackground;
    @include placeholder(rgba(#eee, .76));
 
    &:focus{
-     color: $textColor;
+     color: $text-color;
    }
  }
-}
-
-input.input-padding-increased{
-  @include box-sizing(border-box);
-  height: 38px;
-  padding: 8px 10px;
-
-  &[type=search], &.search{
-    background-position: 5px 10px;
-    padding-left: 26px;
-  }
 }
 
 .select-block-level{
@@ -1256,10 +1371,18 @@ input.input-padding-increased{
   }
 }
 
-.form-actions{
-  margin-bottom: 0;
-  background: $backgroundAddition;
-  border-top: none;
+// FORM ACTIONS
+// ------------
+
+.form-actions {
+  padding: ($line-height-base - 1) 20px $line-height-base;
+  margin-top: $line-height-base;
+  background-color: $backgroundAddition;
+  @include clearfix(); // Adding clearfix to allow for .pull-right button containers
+}
+
+.form-group [class*="col-"]{
+  padding: 0;
 }
 
 .form-wizard{
@@ -1272,7 +1395,7 @@ input.input-padding-increased{
   margin-bottom: 5px;
 
   a{
-    color: $textColor;
+    color: $text-color;
   }
 }
 
@@ -1316,7 +1439,7 @@ input.input-padding-increased{
     background: $transparentBackground;
     margin-top: 0;
     padding: $widget-padding;
-    @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+    @include border-radius(0 0 $border-radius-base $border-radius-base);
   }
 
 
@@ -1327,7 +1450,7 @@ input.input-padding-increased{
   .nav > li > a{
     padding-top: 7px;
     padding-bottom: 6px;
-    color: $textColor;
+    color: $text-color;
   }
 
   .nav > li.active{
@@ -1336,7 +1459,7 @@ input.input-padding-increased{
       border-color: transparent;
       background: $transparentBackground;
       &:hover{
-        color: $textColor;
+        color: $text-color;
       }
     }
   }
@@ -1366,14 +1489,14 @@ input.input-padding-increased{
     padding: 10px;
     border: none;
     border-top: none;
-    @include border-radius(0 0 $baseBorderRadius $baseBorderRadius);
+    @include border-radius(0 0 $border-radius-base $border-radius-base);
   }
 
   .tabs-below {
     .tab-content{
       //border-top: 1px solid #ddd;
       border-bottom: none;
-      @include border-radius($baseBorderRadius $baseBorderRadius 0 0);
+      @include border-radius($border-radius-base $border-radius-base 0 0);
     }
   }
 
@@ -1381,7 +1504,7 @@ input.input-padding-increased{
     .tab-content{
       //border-top: 1px solid #ddd;
       //border-left: 1px solid #ddd;
-      @include border-radius(0 $baseBorderRadius $baseBorderRadius 0);
+      @include border-radius(0 $border-radius-base $border-radius-base 0);
     }
   }
 
@@ -1389,7 +1512,7 @@ input.input-padding-increased{
     .tab-content{
       //border-top: 1px solid #ddd;
       //border-right: 1px solid #ddd;
-      @include border-radius($baseBorderRadius 0 0 $baseBorderRadius);
+      @include border-radius($border-radius-base 0 0 $border-radius-base);
     }
   }
 }
@@ -1397,33 +1520,34 @@ input.input-padding-increased{
 .tab-header{
   margin-top: 0;
   margin-bottom: 1em;
-  font-size: $fontSizeLarger;
+  font-size: $font-size-larger;
 }
 
 /***********************************/
 /**          ACCORDION           **/
 /**********************************/
 
-.accordion-group{
+.panel{
   border: none;
   background-color: $backgroundAddition;
+  @include box-shadow(none);
 
   $i: 1;
   @each $color in $colors{
 
-    &:nth-child(#{$i}n) .accordion-heading{
+    &:nth-child(#{$i}n) .panel-heading{
       border-left: 5px solid #{$color};
     }
     $i: $i + 1;
   }
 
-  .accordion-heading a{
-    color: $textColor;
+  .panel-heading a{
+    color: $text-color;
     @include bold-font;
   }
 }
 
-.accordion-inner{
+.panel-body{
   border-top-color: $backgroundAddition;
 }
 
@@ -1441,11 +1565,12 @@ input.input-padding-increased{
 }
 
 // Inverse
-.progress-inverse .bar, .progress .bar-inverse {
-  color: $grayDark;
+.progress-inverse .bar, .progress .progress-bar-inverse {
+  color: $gray-dark;
+  background-color: $lightGray;
   @include gradient-vertical($lightGray, $lightGray);
 }
-.progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
+.progress-inverse.progress-striped .bar, .progress-striped .progress-bar-inverse {
   @include gradient-striped($lightGray);
 }
 
@@ -1455,6 +1580,10 @@ input.input-padding-increased{
 
 .map{
   height: 100%;
+  *{
+    //bs3 fix
+    @include box-sizing(content-box);
+  }
 }
 
 /***********************************/
@@ -1479,11 +1608,24 @@ input.input-padding-increased{
 }
 
 /***********************************/
+/**            MODALS            **/
+/**********************************/
+
+
+.modal img{
+  max-width: 100%;
+}
+
+/***********************************/
 /**          THUMBNAILS          **/
 /**********************************/
 
 .thumbnail img{
   width: 100%;
+}
+
+.thumbnails > li {
+  margin-bottom: 20px;
 }
 
 /***********************************/
@@ -1564,7 +1706,7 @@ input.input-padding-increased{
   vertical-align: bottom;
 
   .time{
-    font-size: $fontSizeSmall;
+    font-size: $font-size-small;
     line-height: 1.5em;
     color: $textLightGray;
   }
@@ -1602,7 +1744,7 @@ input.input-padding-increased{
 .table-editable th a{
   display: block;
   cursor: pointer;
-  color: $textColor;
+  color: $text-color;
   text-decoration: underline;
 }
 
@@ -1807,11 +1949,11 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   h3{
     font-weight: normal;
-    color: $grayDark;
+    color: $gray-dark;
   }
 
   p{
-    color: $grayDark;
+    color: $gray-dark;
   }
 
   .description{
@@ -1822,6 +1964,11 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .widget-404-search, .widget-404{
   width: 600px;
+}
+
+.widget-404-search{
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .single-widget-container .widget-404-search{
@@ -1842,13 +1989,13 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .invoice-number{
-  font-size: $baseFontSize * 1.5;
+  font-size: $font-size-base * 1.5;
   margin-top: 15px;
 }
 
 .invoice-number-info{
   color: $textLightGray;
-  font-size: $fontSizeLarger;
+  font-size: $font-size-larger;
 }
 
 .invoice-info{
@@ -1859,7 +2006,11 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .invoice-actions{
-  margin-top: $baseLineHeight;
+  margin-top: $line-height-computed;
+}
+
+.client-details{
+  text-align: right;
 }
 
 /***********************************/
@@ -1867,7 +2018,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 /***********************************/
 
 .mailbox-folders{
-  margin-top: $baseLineHeight;
+  margin-top: $line-height-computed;
 
   li a{
     display: block;
@@ -1876,14 +2027,14 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     text-decoration: none;
     @include transition(color .2s);
     &:hover{
-      color: $textColor;
+      color: $text-color;
     }
   }
 
   .active a{
     border-left: 5px solid $red;
     padding-left: 10px;
-    color: $textColor;
+    color: $text-color;
   }
 }
 
@@ -1891,6 +2042,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   .folder-title{
     margin: 0;
     line-height: 30px;
+    float: left;
   }
 
   .input-search{
@@ -1903,7 +2055,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .mailbox-content{
-  margin-top: $baseLineHeight;
+  margin-top: $line-height-computed;
 
   .folder-view{
 
@@ -1937,7 +2089,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
     .unread{
       font-weight: 600;
-      color: $textColor;
+      color: $text-color;
     }
 
     .starred{
@@ -1945,7 +2097,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       cursor: pointer;
       @include transition(color .2s);
       &:hover{
-        color: $textColor;
+        color: $text-color;
       }
     }
   }
@@ -1962,12 +2114,12 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       text-decoration: none;
       @include transition(color .2s);
       &:hover{
-        color: $textColor;
+        color: $text-color;
       }
     }
 
     .email-body{
-      margin-top: $baseLineHeight;
+      margin-top: $line-height-computed;
     }
   }
 
@@ -1983,7 +2135,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
     .email{
       color: $textLightGray;
-      font-size: $fontSizeSmall;
+      font-size: $font-size-small;
     }
 
     .receiver{
@@ -2027,7 +2179,183 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     }
 
     .control-group{
-      margin-bottom: $baseLineHeight / 2;
+      margin-bottom: $line-height-computed / 2;
+    }
+  }
+}
+
+/***********************************/
+/**            LANDING            **/
+/***********************************/
+
+.landing{
+  padding-bottom: 40px;
+  .page-header{
+    margin-left: 0;
+    margin-right: 0;
+    .nav > li{
+      > a{
+        line-height: 40px;
+        padding: 0 10px;
+        width: auto;
+        font-size: $font-size-large;
+      }
+    }
+  }
+
+  .navbar-buttons{
+    margin-right: 20px;
+    > li > button{
+      margin: 7px 10px;
+    }
+  }
+
+  .logo{
+    position: static;
+  }
+
+  .content{
+    padding: 25px 0;
+  }
+
+  .lead{
+    font-weight: normal;
+  }
+
+  .btn{
+    font-weight: normal;
+
+    + .btn{
+      margin-left: 10px;
+    }
+  }
+
+  .widget p{
+    font-size: $font-size-larger;
+  }
+
+  .widget-about{
+    margin-top: 60px;
+    padding: 20px;
+
+    h2, h4{
+      margin-top: 0;
+      font-weight: bold;
+    }
+
+    .preview{
+      margin: 40px 0;
+    }
+
+    .btn{
+      color: white;
+    }
+  }
+
+  .img-about{
+    margin-top: 8px;
+  }
+
+  .features{
+    margin-top: 60px;
+  }
+
+  .feature{
+    text-align: center;
+
+    .icon{
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      font-size: 40px;
+      line-height: 60px;
+      vertical-align: middle;
+      border-radius: 50%;
+      > i{
+        color: #ffffff;
+      }
+    }
+  }
+
+  .thanks{
+    margin-top: 60px;
+  }
+
+  .back-to-top{
+    color: $text-color
+  }
+}
+
+.widget-white{
+  background: $white;
+  color: $gray;
+  @include box-shadow(0 -1px 1px $shadowGray, 0 1px 1px $shadowGray);
+
+  *{
+    color: $gray;
+  }
+}
+
+.carousel-landing{
+  height: 450px;
+  overflow: hidden;
+
+  img{
+    max-width: 100%;
+  }
+
+  h1{
+    font-size: 45px;
+    line-height: 1.1;
+  }
+
+  .item > .row > *:first-child{
+    text-align: right;
+  }
+
+  .slide-one-header{
+    margin-top: 80px;
+  }
+
+  .slide-two-header{
+    margin-bottom: 40px;
+  }
+
+  .slide-three-header{
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+  .btn-version-preview{
+    margin-top: 20px;
+    @media (min-width: 480px) and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.carousel-fade{
+  .carousel-inner{
+    > .item{
+      @include transition(opacity .2s ease-in-out);
+    }
+
+    > .next,
+    > .prev {
+      left: auto;
+    }
+    > .next.left,
+    > .prev.right {
+      opacity: 1;
+      left: auto;
+    }
+
+    > .active.left,
+    > .active.right,
+    > .next,
+    > .prev{
+      opacity: 0;
+      left: auto;
     }
   }
 }
@@ -2037,7 +2365,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 /**********************************/
 
 .slimScrollBar{
-  @include border-radius($baseBorderRadius !important);
+  @include border-radius($border-radius-base !important);
 }
 
 /***********************************/
@@ -2072,33 +2400,40 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   font-weight: normal;
 }
 
-.row-fluid.non-responsive {
-  width: 100%;
-  @include clearfix();
-  [class*="span"] {
-    @include input-block-level();
-    float: left;
-    margin-left: $fluidGridGutterWidth;
-    *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
-  }
-  [class*="span"]:first-child {
-    margin-left: 0;
-  }
-
-  // Space grid-sized controls properly if multiple per line
-  .controls-row [class*="span"] + [class*="span"] {
-    margin-left: $fluidGridGutterWidth;
-  }
-
-  // generate .spanX and .offsetX
-  @include grid-fluid-span-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
-  @include grid-fluid-offset-x($gridColumns, $fluidGridColumnWidth, $fluidGridGutterWidth);
-}
-
 .visible-phone-landscape{
-  display: none;
+  display: none !important;
 }
 
 .hidden-phone-landscape{
 
+}
+
+.background-danger{
+  background: $brand-danger;
+  color: white;
+}
+
+.background-warning{
+  background: $brand-warning;
+  color: white;
+}
+
+.background-success{
+  background: $brand-success;
+  color: white;
+}
+
+.background-primary{
+  background: $brand-primary;
+  color: white;
+}
+
+.background-info{
+  background: $brand-info;
+  color: white;
+}
+
+.background-lime{
+  background: $lime;
+  color: white;
 }

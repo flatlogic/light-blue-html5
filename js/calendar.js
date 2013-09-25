@@ -149,8 +149,8 @@ $(function(){
 
     });
 
-    $("#calendar-switcher").find("button").click(function(){
-        calendar.fullCalendar( 'changeView', $(this).val() )
+    $("#calendar-switcher").find("label").click(function(){
+        calendar.fullCalendar( 'changeView', $(this).find('input').val() )
     });
     $("#today").click(function(){
         calendar.fullCalendar('today');

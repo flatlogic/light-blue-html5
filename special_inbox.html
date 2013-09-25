@@ -18,10 +18,10 @@
         <li >
             <a href="index.html"><i class="icon-home"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
-            <ul id="forms-collapse" class="accordion-body collapse">
+            <ul id="forms-collapse" class="panel-collapse collapse">
                 <li><a href="form_account.html">Account</a></li>
                 <li><a href="form_article.html">Article</a></li>
                 <li><a href="form_elements.html">Elements</a></li>
@@ -29,18 +29,18 @@
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
+            <ul id="stats-collapse" class="panel-collapse collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse">
+            <ul id="ui-collapse" class="panel-collapse collapse">
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_dialogs.html">Dialogs</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
@@ -48,20 +48,20 @@
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
+            <ul id="components-collapse" class="panel-collapse collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
                 <li><a href="component_maps.html">Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#tables-collapse"><i class="icon-table"></i> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
+            <ul id="tables-collapse" class="panel-collapse collapse">
                 <li><a href="tables_static.html">Static</a></li>
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
@@ -69,10 +69,10 @@
         <li >
             <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
         </li>
-        <li class="active accordion-group">
+        <li class="active panel">
             <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse in">
+            <ul id="special-collapse" class="panel-collapse in">
                 <li><a href="special_search.html">Search</a></li>
                 <li><a href="special_invoice.html">Invoice</a></li>
                 <li class="active"><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
@@ -80,201 +80,204 @@
                 <li><a href="special_404.html">404</a></li>
             </ul>
         </li>
-        <li class="visible-phone">
+        <li class="visible-xs">
             <a href="login.html"><i class="icon-signout"></i> <span class="name">Sign Out</span></a>
         </li>
     </ul>
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-transparent btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-transparent btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
 <header class="page-header">
     <div class="navbar">
-        <div class="navbar-inner">
-            <ul class="nav pull-right">
-                <li class="dropdown">
-                    <a href="#" title="Messages" id="messages"
-                       class="dropdown-toggle"
-                       data-toggle="dropdown">
-                        <i class="icon-comments"></i>
-                    </a>
-                    <ul id="messages-menu" class="dropdown-menu messages" role="menu">
-                        <li role="presentation">
-                            <a href="#" class="message">
-                                <img src="img/1.jpg" alt="">
-                                <div class="details">
-                                    <div class="sender">Jane Hew</div>
-                                    <div class="text">
-                                        Hey, John! How is it going? ...
-                                    </div>
+        <ul class="nav navbar-nav navbar-right pull-right">
+            <li class="visible-phone-landscape">
+                <a href="#" id="search-toggle">
+                    <i class="icon-search"></i>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" title="Messages" id="messages"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                    <i class="icon-comments"></i>
+                </a>
+                <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                    <li role="presentation">
+                        <a href="#" class="message">
+                            <img src="img/1.jpg" alt="">
+                            <div class="details">
+                                <div class="sender">Jane Hew</div>
+                                <div class="text">
+                                    Hey, John! How is it going? ...
                                 </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="message">
-                                <img src="img/2.jpg" alt="">
-                                <div class="details">
-                                    <div class="sender">Alies Rumiancaŭ</div>
-                                    <div class="text">
-                                        I'll definitely buy this template
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="message">
-                                <img src="img/3.jpg" alt="">
-                                <div class="details">
-                                    <div class="sender">Michał Rumiancaŭ</div>
-                                    <div class="text">
-                                        Is it really Lore ipsum? Lore ...
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="text-align-center see-all">
-                                See all messages <i class="icon-arrow-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" title="8 support tickets"
-                       class="dropdown-toggle"
-                       data-toggle="dropdown">
-                        <i class="icon-group"></i>
-                        <span class="count">8</span>
-                    </a>
-                    <ul id="support-menu" class="dropdown-menu support" role="menu">
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-important"><i class="icon-bell-alt"></i></span>
-                                </div>
-                                <div class="details">
-                                    Check out this awesome ticket
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-warning"><i class="icon-question-sign"></i></span>
-                                </div>
-                                <div class="details">
-                                    "What is the best way to get ...
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-success"><i class="icon-tag"></i></span>
-                                </div>
-                                <div class="details">
-                                    This is just a simple notification
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-info"><i class="icon-info-sign"></i></span>
-                                </div>
-                                <div class="details">
-                                    12 new orders has arrived today
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-important"><i class="icon-plus"></i></span>
-                                </div>
-                                <div class="details">
-                                    One more thing that just happened
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="text-align-center see-all">
-                                See all tickets <i class="icon-arrow-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="divider"></li>
-                <li class="hidden-phone">
-                    <a href="#" id="settings"
-                       data-toggle="popover"
-                       data-placement="bottom"
-                       title="">
-                        <i class="icon-cog"></i>
-                    </a>
-                </li>
-                <li class="hidden-phone dropdown">
-                    <a href="#" title="Account" id="account"
-                       class="dropdown-toggle"
-                       data-toggle="dropdown">
-                        <i class="icon-user"></i>
-                    </a>
-                    <ul id="account-menu" class="dropdown-menu account" role="menu">
-                        <li role="presentation" class="account-picture">
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="message">
                             <img src="img/2.jpg" alt="">
-                            Philip Daineka
-                        </li>
-                        <li role="presentation">
-                            <a href="form_account.html" class="link">
-                                <i class="icon-user"></i>
-                                Profile
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="component_calendar.html" class="link">
-                                <i class="icon-calendar"></i>
-                                Calendar
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="link">
-                                <i class="icon-inbox"></i>
-                                Inbox
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="visible-phone">
-                    <a href="#"
-                       class="btn-navbar"
-                       data-toggle="collapse"
-                       data-target=".sidebar"
-                       title="">
-                        <i class="icon-reorder"></i>
-                    </a>
-                </li>
-                <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
-            </ul>
-            <form class="navbar-search pull-right">
-                <input type="search" class="search-query" placeholder="Search...">
-            </form>
-        </div>
+                            <div class="details">
+                                <div class="sender">Alies Rumiancaŭ</div>
+                                <div class="text">
+                                    I'll definitely buy this template
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="message">
+                            <img src="img/3.jpg" alt="">
+                            <div class="details">
+                                <div class="sender">Michał Rumiancaŭ</div>
+                                <div class="text">
+                                    Is it really Lore ipsum? Lore ...
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="text-align-center see-all">
+                            See all messages <i class="icon-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" title="8 support tickets"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                    <i class="icon-group"></i>
+                    <span class="count">8</span>
+                </a>
+                <ul id="support-menu" class="dropdown-menu support" role="menu">
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="icon-bell-alt"></i></span>
+                            </div>
+                            <div class="details">
+                                Check out this awesome ticket
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-warning"><i class="icon-question-sign"></i></span>
+                            </div>
+                            <div class="details">
+                                "What is the best way to get ...
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-success"><i class="icon-tag"></i></span>
+                            </div>
+                            <div class="details">
+                                This is just a simple notification
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-info"><i class="icon-info-sign"></i></span>
+                            </div>
+                            <div class="details">
+                                12 new orders has arrived today
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="icon-plus"></i></span>
+                            </div>
+                            <div class="details">
+                                One more thing that just happened
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="text-align-center see-all">
+                            See all tickets <i class="icon-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li class="hidden-xs">
+                <a href="#" id="settings"
+                   title="Settings"
+                   data-toggle="popover"
+                   data-placement="bottom">
+                    <i class="icon-cog"></i>
+                </a>
+            </li>
+            <li class="hidden-xs dropdown">
+                <a href="#" title="Account" id="account"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                    <i class="icon-user"></i>
+                </a>
+                <ul id="account-menu" class="dropdown-menu account" role="menu">
+                    <li role="presentation" class="account-picture">
+                        <img src="img/2.jpg" alt="">
+                        Philip Daineka
+                    </li>
+                    <li role="presentation">
+                        <a href="form_account.html" class="link">
+                            <i class="icon-user"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="component_calendar.html" class="link">
+                            <i class="icon-calendar"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="icon-inbox"></i>
+                            Inbox
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="visible-xs">
+                <a href="#"
+                   class="btn-navbar"
+                   data-toggle="collapse"
+                   data-target=".sidebar"
+                   title="">
+                    <i class="icon-reorder"></i>
+                </a>
+            </li>
+            <li class="hidden-xs"><a href="login.html"><i class="icon-signout"></i></a></li>
+        </ul>
+        <form id="search-form" class="navbar-form pull-right" role="search">
+            <input type="search" class="search-query" placeholder="Search...">
+        </form>
     </div>
 </header>
-<div class="content container-fluid">
-    <div class="row-fluid">
-        <div class="span12">
+<div class="content container">
+    <div class="row">
+        <div class="col-md-12">
             <h2 class="page-title">Inbox <small>user email</small></h2>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span12">
+    <div class="row">
+        <div class="col-md-12">
             <section class="widget">
                 <header>
                     <h4>
@@ -283,8 +286,8 @@
                 </header>
                 <div class="body">
                     <div id="mailbox-app" class="mailbox">
-                        <div class="row-fluid">
-                            <div class="span2">
+                        <div class="row">
+                            <div class="col-sm-2">
                                 <button id="compose-btn" class="btn btn-danger btn-block">Compose</button>
                                 <ul id="folders-list" class="mailbox-folders">
                                     <li class="active"><a href="#">Inbox</a></li>
@@ -292,8 +295,8 @@
                                     <li><a href="#">Drafts</a></li>
                                 </ul>
                             </div>
-                            <div class="span10">
-                                <h2 id='folder-title' class="folder-title pull-left">Inbox <small>(2 unread messages)</small></h2>
+                            <div class="col-sm-10">
+                                <h2 id='folder-title' class="folder-title">Inbox <small>(2 unread messages)</small></h2>
                                 <form class="form-inline form-search text-align-right" action="">
                                     <label>
                                         <input type="search" id="mailbox-search" class="input-transparent input-search" placeholder="Search folder..."/>
@@ -306,7 +309,7 @@
                                             <th colspan="3" id="folder-actions">
                                                 <input id="toggle-all" type="checkbox"/>
                                                 <span class="btn-group">
-                                                <a class="btn btn-small" href="#" data-toggle="dropdown">
+                                                <a class="btn btn-default btn-sm" href="#" data-toggle="dropdown">
                                                     Select
                                                     <i class="icon-angle-down "></i>
                                                 </a>
@@ -321,10 +324,10 @@
                                             </th>
                                             <th colspan="3" class="total-pages">
                                                 1-30 of 1,421
-                                                <button class="btn btn-mini">
+                                                <button class="btn btn-default btn-xs">
                                                     <i class="icon-angle-left icon-large"></i>
                                                 </button>
-                                                <button class="btn btn-mini">
+                                                <button class="btn btn-default btn-xs">
                                                     <i class="icon-angle-right icon-large"></i>
                                                 </button>
                                             </th>
@@ -334,7 +337,7 @@
                                         <tr>
                                             <td class="tiny-column"><input type="checkbox"/></td>
                                             <td class="tiny-column"><i class="icon-star"></i></td>
-                                            <td class="name hidden-phone">Philip Daineka</td>
+                                            <td class="name hidden-xs">Philip Daineka</td>
                                             <td class="subject">Light Blue template</td>
                                             <td class="tiny-column"><i class="icon-paper-clip"></i></td>
                                             <td class="date">Aug 13</td>
@@ -368,15 +371,15 @@
 <script src="lib/backbone/backbone.localStorage-min.js"></script>
 
 <!-- bootstrap default plugins -->
-<script src="js/bootstrap/bootstrap-transition.js"></script>
-<script src="js/bootstrap/bootstrap-collapse.js"></script>
-<script src="js/bootstrap/bootstrap-alert.js"></script>
-<script src="js/bootstrap/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap/bootstrap-popover.js"></script>
-<script src="js/bootstrap/bootstrap-button.js"></script>
-<script src="js/bootstrap/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap/bootstrap-modal.js"></script>
-<script src="js/bootstrap/bootstrap-tab.js"> </script>
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/collapse.js"></script>
+<script src="lib/bootstrap/alert.js"></script>
+<script src="lib/bootstrap/tooltip.js"></script>
+<script src="lib/bootstrap/popover.js"></script>
+<script src="lib/bootstrap/button.js"></script>
+<script src="lib/bootstrap/dropdown.js"></script>
+<script src="lib/bootstrap/modal.js"></script>
+<script src="lib/bootstrap/tab.js"> </script>
 
 <!-- bootstrap plugins -->
 <script src="lib/wysihtml5/wysihtml5-0.3.0_rc2.js"></script>
@@ -407,24 +410,24 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
@@ -434,14 +437,14 @@
     <% if (auto) {%>
     <button type="button"
             data-value="icons"
-            class="btn-icons btn btn-transparent btn-small">Icons</button>
+            class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-transparent btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
     <%} else {%>
     <button type="button"
             data-value="auto"
-            class="btn btn-transparent btn-small">Auto</button>
+            class="btn btn-transparent btn-sm">Auto</button>
     <% } %>
 </script>
 
@@ -449,7 +452,7 @@
 <script type="text/template" id="folder-actions-template">
     <input id="toggle-all" type="checkbox" <%= allSelected ? 'checked' : '' %>/>
     <span class="btn-group">
-        <a class="btn btn-small" href="#" data-toggle="dropdown">
+        <a class="btn btn-default btn-sm" href="#" data-toggle="dropdown">
             Select
             <i class="icon-angle-down "></i>
         </a>
@@ -463,7 +466,7 @@
     </span>
     <% if (anySelected) { %>
         <span class="btn-group">
-            <a class="btn btn-small btn-inverse" href="#" data-toggle="dropdown">
+            <a class="btn btn-sm btn-inverse" href="#" data-toggle="dropdown">
                 Actions
                 <i class="icon-angle-down "></i>
             </a>
@@ -484,7 +487,7 @@
 <script type="text/template" id="mail-item-template">
     <td class="tiny-column"><input class="selected-checkbox" type="checkbox"<%= selected ? ' checked="ckeched"' : ''%>/></td>
     <td class="tiny-column"><span class="starred"><i class="<%= starred ? 'icon-star color-orange' : 'icon-star-empty'%>"></i></span></td>
-    <td class="name hidden-phone"><%= sender ? sender : senderMail %></td>
+    <td class="name hidden-xs"><%= sender ? sender : senderMail %></td>
     <td class="subject"><%= subject %></td>
     <td class="tiny-column"><% if (attachment) {%><i class="icon-paper-clip"><% } %></i></td>
     <td class="date"><%= this.formatDate(timestamp) %></td>
@@ -501,7 +504,7 @@
             <th colspan="3" id="folder-actions">
                 <input id="toggle-all" type="checkbox"/>
                 <span class="btn-group">
-                    <a class="btn btn-small" href="#" data-toggle="dropdown">
+                    <a class="btn btn-default btn-sm" href="#" data-toggle="dropdown">
                         Select
                         <i class="icon-angle-down "></i>
                     </a>
@@ -516,10 +519,10 @@
             </th>
             <th colspan="3" class="total-pages">
                 1-30 of 1,421
-                <button class="btn btn-mini">
+                <button class="btn btn-default btn-xs">
                     <i class="icon-angle-left icon-large"></i>
                 </button>
-                <button class="btn btn-mini">
+                <button class="btn btn-default btn-xs">
                     <i class="icon-angle-right icon-large"></i>
                 </button>
             </th>
@@ -546,10 +549,10 @@
         </div>
         <div class="email-actions pull-right">
             <div class="btn-group">
-                <button id='email-opened-reply' class="btn btn-small btn-transparent">
+                <button id='email-opened-reply' class="btn btn-sm btn-transparent">
                     <i class="icon-reply"></i> Reply
                 </button>
-                <button class="btn btn-small btn-transparent dropdown-toggle" data-toggle="dropdown">
+                <button class="btn btn-sm btn-transparent dropdown-toggle" data-toggle="dropdown">
                     <i class="icon-angle-down"></i>
                 </button>
                 <ul class="dropdown-menu pull-right">
@@ -576,8 +579,8 @@
         attachmentsCount = attachments.length
     %>
     <div class="email-attachments">
-        <div class="row-fluid">
-            <div class="span6">
+        <div class="row">
+            <div class="col-sm-6">
                 <hr>
                 <p class="details"><strong><%= attachmentsCount %> attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
                     &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
@@ -603,25 +606,19 @@
 <script type="text/template" id="compose-view-template">
     <form id="email-compose" class="form-horizontal form-email-compose" method="POST" enctype="multipart/form-data">
         <div class="control-group">
-            <label for="input-to">
-                <input type="email" id="input-to" placeholder="To" class="input-transparent input-block-level"
+                <input type="email" id="input-to" placeholder="To" class="input-transparent form-control"
                        value="<%= receiver %>">
-            </label>
         </div>
         <div class="control-group">
-            <label for="input-subject">
-                <input type="text" id="input-subject" placeholder="Subject" class="input-transparent input-block-level"
+                <input type="text" id="input-subject" placeholder="Subject" class="input-transparent form-control"
                        value="<%= subject %>">
-            </label>
         </div>
-        <div class="control-group no-margin">
-            <label>
-                <textarea rows="12" class="input-block-level input-transparent" id="email-body"><%- body %></textarea>
-            </label>
+        <div class="control-group">
+                <textarea rows="12" class="input-transparent" id="email-body"><%- body %></textarea>
         </div>
         <div class="control-group">
             <div class="fileupload-buttonbar">
-                <span class="btn btn-small btn-transparent fileinput-button">
+                <span class="btn btn-sm btn-transparent fileinput-button">
                     <i class="icon-paper-clip"></i>
                     Attach files...
                     <input type="file" name="files[]" multiple="">
@@ -630,9 +627,9 @@
             <table role="presentation" class="table table-striped no-margin"><tbody class="files"></tbody></table>
         </div>
         <div class="control-group">
-            <button type="submit" id="compose-send-button" class="btn btn-small btn-primary">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
-            <button type="button" id="compose-save-button" class="btn btn-small btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
-            <button type="reset" id="compose-discard-button" class="btn btn-small btn-transparent">Discard</button>
+            <button type="submit" id="compose-send-button" class="btn btn-sm btn-primary">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+            <button type="button" id="compose-save-button" class="btn btn-sm btn-transparent">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+            <button type="reset" id="compose-discard-button" class="btn btn-sm btn-transparent">Discard</button>
         </div>
     </form>
 </script>
@@ -652,7 +649,7 @@
             </div>
         </td>
         <td>{% if (!o.options.autoUpload) { %}
-            <button class="btn btn-primary btn-small start">
+            <button class="btn btn-primary btn-sm start">
                 <i class="icon-upload"></i>
                 <span>Start</span>
             </button>
@@ -661,7 +658,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>{% if (!i) { %}
-            <button class="btn btn-transparent btn-small cancel">
+            <button class="btn btn-transparent btn-sm cancel">
                 <i class="icon-ban-circle"></i>
                 <span>Cancel</span>
             </button>
@@ -689,7 +686,7 @@
         <td colspan="2"></td>
         {% } %}
         <td>
-            <button class="btn btn-transparent btn-small delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+            <button class="btn btn-transparent btn-sm delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
             <i class="icon-trash"></i>
             <span>Delete</span>
             </button>

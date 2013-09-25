@@ -18,11 +18,11 @@
 <div class="single-widget-container error-page">
     <section class="widget transparent widget-404">
         <div class="body">
-            <div class="row-fluid">
-                <div class="span5">
+            <div class="row">
+                <div class="col-md-5">
                     <h1 class="text-align-center">404</h1>
                 </div>
-                <div class="span7">
+                <div class="col-md-7">
                     <div class="description">
                         <h3>Opps, it seems that this page does not exist here.</h3>
                         <p>If you are sure it should, search for it.</p>
@@ -33,12 +33,17 @@
     </section>
     <section class="widget widget-404-search">
         <div class="body no-margin">
-            <form class="form-search no-margin text-align-center" method="get" action="special_search.html">
-                <input type="search" class="search-field"
-                       placeholder="Pages: Posts, Tags">
-                <button class="btn btn-primary" type="submit">
-                    &nbsp; Search &nbsp;
-                </button>
+            <form class="form-inline form-search no-margin text-align-center" method="get" action="special_search.html"
+                  role="form">
+                <div class="input-group">
+                    <input type="search" class="form-control"
+                           placeholder="Pages: Posts, Tags">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">
+                            &nbsp; Search &nbsp;
+                        </button>
+                    </span>
+                </div>
             </form>
         </div>
     </section>

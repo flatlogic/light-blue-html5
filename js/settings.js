@@ -22,10 +22,14 @@ $(function(){
         },
         $pageHeader = $(".page-header"),
         $body = $("body"),
+        popoverReallyHide = function(){
+            $settings.data('bs.popover').hoverState = 'out'; //yeah. cool BS3 fix. popover programmatic APi works only on HOVER
+            $settings.popover('hide');
+        },
         popoverClose = function(e){
             var $popover = $settings.siblings(".popover");
             if(!$.contains($popover[0], e.target)){
-                $settings.popover('hide');
+                popoverReallyHide();
                 $(document).off("click", popoverClose);
             }
         },
@@ -104,7 +108,7 @@ $(function(){
         });
 
     $(".page-header .dropdown-toggle").click(function(){
-        $settings.popover('hide');
+        popoverReallyHide()
         $(document).off("click", popoverClose);
     });
     //sidevar left/right
@@ -148,8 +152,16 @@ $(function(){
 
     //close navigation if sidebar in icons state
     if (($("#sidebar").is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
-        var $activeAccordion = $("#side-nav").find("> .accordion-group.active");
-        $activeAccordion.find(".accordion-toggle").addClass("collapsed");
-        $activeAccordion.find(".accordion-body.collapse").removeClass("in");
+        closeNavigation();
     }
+
+    //imitate buttons radio behavior
+    $pageHeader.on("click", ".popover [data-toggle='buttons-radio'] .btn:not(.active)", function(){
+        var $this = $(this),
+            $buttons = $this.parent().find('.btn');
+        $buttons.removeClass('active');
+        setTimeout(function(){
+            $this.addClass('active');
+        }, 0)
+    });
 });

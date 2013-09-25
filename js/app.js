@@ -54,9 +54,10 @@ function testData(stream_names, points_count) {
 }
 
 function closeNavigation(){
-    var $accordion = $('#side-nav').find('.accordion-body.in');
+    var $accordion = $('#side-nav').find('.panel-collapse.in');
     $accordion.collapse('hide');
     $accordion.siblings(".accordion-toggle").addClass("collapsed");
+    resetContentMargin();
 }
 
 function resetContentMargin(){
@@ -67,7 +68,9 @@ function resetContentMargin(){
 
 $(function(){
 
-    $("#sidebar").on("mouseleave",function(){
+    var $sidebar = $('#sidebar');
+
+    $sidebar.on("mouseleave",function(){
         if (($(this).is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
             setTimeout(function(){
                 closeNavigation();
@@ -75,23 +78,29 @@ $(function(){
         }
     });
 
-    $(window).resize(function(){
-        closeNavigation();
-        resetContentMargin();
+    //need some class to present right after click
+    $sidebar.on('show.bs.collapse', function(e){
+        e.target == this && $sidebar.addClass('open');
     });
 
-    $("[data-toggle='buttons-radio'] button").click(function(){
-        var $this = $(this),
-            $parent = $this.parent(),
-            $targetInput = $($parent.data('target'));
-        $targetInput.val($this.val());
+    $sidebar.on('hide.bs.collapse', function(e){
+        if (e.target == this) {
+            $sidebar.removeClass('open');
+            $(".content").css("margin-top", '');
+        }
     });
+
+    $(window).resize(function(){
+        closeNavigation();
+    });
+
     //class-switch for button-groups
     $(".btn-group > .btn[data-toggle-class]").click(function(){
         var $this = $(this),
+            isRadio = $this.find('input').is('[type=radio]'),
             $parent = $this.parent();
 
-        if ($parent.data("toggle") == "buttons-radio"){
+        if (isRadio){
             $parent.children(".btn[data-toggle-class]").removeClass(function(){
                 return $(this).data("toggle-class")
             }).addClass(function(){
@@ -103,12 +112,11 @@ $(function(){
         }
     });
 
-    var $sidebar = $('#sidebar');
 
     $("#search-toggle").click(function(){
         //first hide menu if open
 
-        if ($sidebar.data('collapse')){
+        if ($sidebar.data('bs.collapse')){
             $sidebar.collapse('hide');
         }
 
@@ -129,27 +137,54 @@ $(function(){
 
 
     //hide search field if open
-    $sidebar.on('show', function () {
+    $sidebar.on('show.bs.collapse', function () {
         var $notifications = $('.notifications'),
             notificationsPresent = !$notifications.is(':empty');
         $("#search-form").css('height', 0);
         notificationsPresent && $notifications.css('top', '');
     });
 
+    var INITIAL_CONTENT_MARGIN = 370;  //if changed in css change here!
+
     /*   Move content down when second-level menu opened */
     $("#side-nav").find("a.accordion-toggle").click(function(){
-        var $this = $(this),
-            initialContentMargin = 370; //if changed in css change here!
         if ($(window).width() < 768){
-            var $secondLevelMenu = $this.find("+ ul"),
+            var $this = $(this),
+                $secondLevelMenu = $this.find("+ ul"),
                 $menuChildren = $secondLevelMenu.find("> li"),
                 menuHeight = $menuChildren.length * $menuChildren.height(),
                 $content = $(".content");
             if (!$secondLevelMenu.is(".in")){
-                $content.css("margin-top", initialContentMargin + menuHeight + 'px');
+                $content.css("margin-top", INITIAL_CONTENT_MARGIN + menuHeight + 'px');
             } else {
                 $content.css("margin-top", '');
             }
         }
     });
+
+    $sidebar.on('show.bs.collapse', function(e){
+        if (e.target == this){
+            if ($(window).width() < 768){
+                var $activeLink = $('#side-nav').find('> li > a.accordion-toggle:not(.collapsed)'),
+                    $secondLevelMenu = $activeLink.find("+ ul"),
+                    $menuChildren = $secondLevelMenu.find("> li"),
+                    menuHeight = $menuChildren.length * $menuChildren.height(),
+                    $content = $(".content");
+                if ($secondLevelMenu.is('.in')){
+                    $content.css("margin-top", INITIAL_CONTENT_MARGIN + menuHeight + 'px');
+                }
+            }
+        }
+    });
+
+    //need some class to present right after click for submenu
+    var $subMenus = $sidebar.find('.panel-collapse');
+    $subMenus.on('show.bs.collapse', function(){
+        $(this).addClass('open');
+    });
+
+    $subMenus.on('hide.bs.collapse', function(){
+        $(this).removeClass('open');
+    });
+
 });
