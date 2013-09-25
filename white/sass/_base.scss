@@ -139,6 +139,11 @@ input.parsley-error{
     &:hover, &:focus{
       background: $sidebarActiveColor;
     }
+
+    i[class*="icon"]{
+      float: none;
+      font-size: inherit;
+    }
   }
 
   .panel{
@@ -707,7 +712,7 @@ input.parsley-error{
     @include box-shadow($box-shadow-header);
 
     a{
-      color: $textLightGray;
+      color: $text-color;
       font-weight: bold;
     }
   }

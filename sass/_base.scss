@@ -137,6 +137,11 @@ input.parsley-error{
     &:hover, &:focus{
       background: $sidebarActiveColor;
     }
+
+    i[class*="icon"]{
+      float: none;
+      font-size: inherit;
+    }
   }
 
   .panel{
@@ -2088,20 +2093,24 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   .page-header{
     margin-left: 0;
     margin-right: 0;
-    .nav > li{
-      > a{
-        line-height: 40px;
-        padding: 0 10px;
-        width: auto;
-        font-size: $font-size-large;
-      }
+  }
+
+  .navbar-menu > li{
+    > a{
+      line-height: 40px;
+      padding: 0 10px;
+      width: auto;
+      font-size: $font-size-large;
     }
   }
 
   .navbar-buttons{
     margin-right: 20px;
-    > li > button{
-      margin: 7px 10px;
+    > li{
+      float: left;
+      > a{
+        margin: 7px 10px;
+      }
     }
   }
 

@@ -1,5 +1,4 @@
 function triggerChartsResize(){
-    debugger;
     try {
         if (window.onresize){
             window.onresize();
