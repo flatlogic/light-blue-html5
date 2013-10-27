@@ -34,7 +34,9 @@ $widget-background: white;
 $box-margin-bottom: 30px;
 $wrapMargin: 185px;
 $sidebarTopMargin: 80px;
-$widget-padding: 10px 12px;
+$widget-padding-vertical: 10px;
+$widget-padding-horizontal: 12px;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 $boldTextColor: $text-color;
 $textLightGray: lighten($text-color, 10%) !default;
@@ -132,6 +134,11 @@ $state-success-bg:               $green !default;
 
 $state-info-text:                $text-color !default;
 $state-info-bg:                  $blue !default;
+
+// Breadcrumbs
+// -------------------------
+$breadcrumb-bg:               transparent !default;
+$breadcrumb-color:            $text-color !default;
 
 // Sprite icons path
 // -------------------------

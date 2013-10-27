@@ -33,7 +33,9 @@ $widget-border-radius: 1px;
 $box-margin-bottom: 30px;
 $wrapMargin: 185px;
 $sidebarTopMargin: 80px;
-$widget-padding: 10px 12px;
+$widget-padding-vertical: 10px;
+$widget-padding-horizontal: 12px;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 $boldTextColor: lighten($text-color, 3%);
 $textLightGray: darken($text-color, 15%) !default;
@@ -172,6 +174,12 @@ $pagination-hover-bg:                  $backgroundAddition !default;
 
 $pagination-active-bg:                 $backgroundAddition !default;
 $pagination-active-color:              $gray-light !default;
+
+// Breadcrumbs
+// -------------------------
+$breadcrumb-bg:               transparent !default;
+$breadcrumb-color:            $text-color !default;
+$breadcrumb-active-color:     darken($breadcrumb-color, 25%) !default;
 
 // Sprite icons path
 // -------------------------

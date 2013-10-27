@@ -5090,7 +5090,7 @@ input[type="button"].btn-block {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: whitesmoke;
+  background-color: transparent;
   border-radius: 1px;
 }
 /* line 12, D:/projects/admin/white/sass/bootstrap-original/_breadcrumbs.scss */
@@ -5101,7 +5101,7 @@ input[type="button"].btn-block {
 .breadcrumb > li + li:before {
   content: "/\00a0";
   padding: 0 5px;
-  color: #cccccc;
+  color: #666666;
 }
 /* line 20, D:/projects/admin/white/sass/bootstrap-original/_breadcrumbs.scss */
 .breadcrumb > .active {
@@ -8377,6 +8377,23 @@ textarea + .help-block,
   border-top-color: whitesmoke;
 }
 
+/***************************/
+/*       Breadcrumbs       */
+/***************************/
+/* line 546, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.breadcrumb a {
+  color: #666666;
+  text-decoration: none;
+}
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.breadcrumb a:hover {
+  color: #999999;
+}
+/* line 554, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.widget > .breadcrumb {
+  margin: -10px -12px;
+}
+
 /************************************************************/
 /*                                                          */
 /*                                                          */
@@ -11557,16 +11574,16 @@ a {
   transition: background-color 0.2s;
 }
 
-/* line 154, D:/projects/admin/white/sass/_variables.scss */
+/* line 161, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons {
   width: auto;
   margin: 80px 0 0 1.6%;
 }
-/* line 158, D:/projects/admin/white/sass/_variables.scss */
+/* line 165, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons h2 {
   display: none;
 }
-/* line 162, D:/projects/admin/white/sass/_variables.scss */
+/* line 169, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons .panel-collapse li a {
   width: 1px;
   padding-left: 10px;
@@ -11575,27 +11592,27 @@ a {
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
-/* line 168, D:/projects/admin/white/sass/_variables.scss */
+/* line 175, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons .panel-collapse.open li a {
   width: 80px;
 }
 
-/* line 174, D:/projects/admin/white/sass/_variables.scss */
+/* line 181, D:/projects/admin/white/sass/_variables.scss */
 .side-nav.sidebar-icons li a {
   padding: 8px 16px;
   text-align: center;
 }
-/* line 178, D:/projects/admin/white/sass/_variables.scss */
+/* line 185, D:/projects/admin/white/sass/_variables.scss */
 .side-nav.sidebar-icons li a i[class*=icon] {
   margin-right: 0;
   float: none;
 }
-/* line 184, D:/projects/admin/white/sass/_variables.scss */
+/* line 191, D:/projects/admin/white/sass/_variables.scss */
 .side-nav.sidebar-icons li .name {
   display: none;
 }
 
-/* line 190, D:/projects/admin/white/sass/_variables.scss */
+/* line 197, D:/projects/admin/white/sass/_variables.scss */
 .sidebar-on-right .side-nav.sidebar-icons > li.active > a,
 .side-nav.sidebar-icons > li.active > a {
   border-left: none;
@@ -11603,22 +11620,22 @@ a {
   padding-left: 16px;
 }
 
-/* line 196, D:/projects/admin/white/sass/_variables.scss */
+/* line 203, D:/projects/admin/white/sass/_variables.scss */
 .wrap.sidebar-icons {
   margin-left: 62px;
 }
 
-/* line 201, D:/projects/admin/white/sass/_variables.scss */
+/* line 208, D:/projects/admin/white/sass/_variables.scss */
 .sidebar-hidden .sidebar {
   display: none;
 }
-/* line 205, D:/projects/admin/white/sass/_variables.scss */
+/* line 212, D:/projects/admin/white/sass/_variables.scss */
 .sidebar-hidden .wrap {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 211, D:/projects/admin/white/sass/_variables.scss */
+/* line 218, D:/projects/admin/white/sass/_variables.scss */
 .logo.sidebar-icons {
   left: 1.6%;
   padding-left: 5px;
@@ -11787,7 +11804,7 @@ input.parsley-error {
 .sidebar .settings .btn-auto {
   display: none;
 }
-/* line 221, D:/projects/admin/white/sass/_variables.scss */
+/* line 228, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons .settings .btn-sm, .sidebar.sidebar-icons .settings .btn-group-sm > .btn {
   padding: 2px 8px;
 }
@@ -14171,16 +14188,16 @@ table.table thead .sorting_desc_disabled {
   }
 }
 @media (max-width: 1048px) {
-  /* line 154, D:/projects/admin/white/sass/_variables.scss */
+  /* line 161, D:/projects/admin/white/sass/_variables.scss */
   .sidebar {
     width: auto;
     margin: 80px 0 0 1.6%;
   }
-  /* line 158, D:/projects/admin/white/sass/_variables.scss */
+  /* line 165, D:/projects/admin/white/sass/_variables.scss */
   .sidebar h2 {
     display: none;
   }
-  /* line 162, D:/projects/admin/white/sass/_variables.scss */
+  /* line 169, D:/projects/admin/white/sass/_variables.scss */
   .sidebar .panel-collapse li a {
     width: 1px;
     padding-left: 10px;
@@ -14189,27 +14206,27 @@ table.table thead .sorting_desc_disabled {
     -o-transition: width 0.3s;
     transition: width 0.3s;
   }
-  /* line 168, D:/projects/admin/white/sass/_variables.scss */
+  /* line 175, D:/projects/admin/white/sass/_variables.scss */
   .sidebar .panel-collapse.open li a {
     width: 80px;
   }
 
-  /* line 174, D:/projects/admin/white/sass/_variables.scss */
+  /* line 181, D:/projects/admin/white/sass/_variables.scss */
   .side-nav li a {
     padding: 8px 16px;
     text-align: center;
   }
-  /* line 178, D:/projects/admin/white/sass/_variables.scss */
+  /* line 185, D:/projects/admin/white/sass/_variables.scss */
   .side-nav li a i[class*=icon] {
     margin-right: 0;
     float: none;
   }
-  /* line 184, D:/projects/admin/white/sass/_variables.scss */
+  /* line 191, D:/projects/admin/white/sass/_variables.scss */
   .side-nav li .name {
     display: none;
   }
 
-  /* line 190, D:/projects/admin/white/sass/_variables.scss */
+  /* line 197, D:/projects/admin/white/sass/_variables.scss */
   .sidebar-on-right .side-nav > li.active > a,
   .side-nav > li.active > a {
     border-left: none;
@@ -14217,22 +14234,22 @@ table.table thead .sorting_desc_disabled {
     padding-left: 16px;
   }
 
-  /* line 196, D:/projects/admin/white/sass/_variables.scss */
+  /* line 203, D:/projects/admin/white/sass/_variables.scss */
   .wrap {
     margin-left: 62px;
   }
 
-  /* line 201, D:/projects/admin/white/sass/_variables.scss */
+  /* line 208, D:/projects/admin/white/sass/_variables.scss */
   .sidebar-hidden .sidebar {
     display: none;
   }
-  /* line 205, D:/projects/admin/white/sass/_variables.scss */
+  /* line 212, D:/projects/admin/white/sass/_variables.scss */
   .sidebar-hidden .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 211, D:/projects/admin/white/sass/_variables.scss */
+  /* line 218, D:/projects/admin/white/sass/_variables.scss */
   .logo {
     left: 1.6%;
     padding-left: 5px;
@@ -14240,7 +14257,7 @@ table.table thead .sorting_desc_disabled {
     top: 13px;
   }
 
-  /* line 221, D:/projects/admin/white/sass/_variables.scss */
+  /* line 228, D:/projects/admin/white/sass/_variables.scss */
   .sidebar .settings .btn-sm, .sidebar .settings .btn-group-sm > .btn {
     padding: 2px 8px;
   }

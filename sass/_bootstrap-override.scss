@@ -546,6 +546,24 @@ textarea,
 }
 
 /***************************/
+/*       Breadcrumbs       */
+/***************************/
+
+.breadcrumb{
+  a{
+    color: $breadcrumb-color;
+    text-decoration: none;
+    &:hover{
+      color: $breadcrumb-active-color;
+    }
+  }
+
+  .widget > &{
+    margin: -($widget-padding-vertical) (-($widget-padding-horizontal));
+  }
+}
+
+/***************************/
 /*        Pagination       */
 /***************************/
 

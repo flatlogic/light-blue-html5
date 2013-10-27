@@ -9,8 +9,8 @@
     <meta name="author" content="">
     <meta charset="utf-8">
 </head>
-<body>
-<div class="logo hidden-print">
+<body class="background-dark">
+<div class="logo">
     <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
 </div>
 <nav id="sidebar" class="sidebar nav-collapse collapse">
@@ -48,15 +48,15 @@
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="active panel">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="panel-collapse collapse">
+            <ul id="components-collapse" class="panel-collapse in">
                 <li><a href="component_calendar.html">Calendar</a></li>
                 <li><a href="component_maps.html">Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
-                <li><a href="component_bootstrap.html">Bootstrap</a></li>
+                <li class="active"><a href="component_bootstrap.html">Bootstrap</a></li>
             </ul>
         </li>
         <li class="panel">
@@ -70,17 +70,17 @@
         <li >
             <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
         </li>
-        <li class="active panel">
-            <a class="accordion-toggle" data-toggle="collapse"
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="panel-collapse in">
+            <ul id="special-collapse" class="panel-collapse collapse">
                 <li><a href="special_search.html">Search</a></li>
-                <li class="active"><a href="special_invoice.html">Invoice</a></li>
+                <li><a href="special_invoice.html">Invoice</a></li>
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
-                <li><a href="../landing.html">Landing</a></li>
-                <li><a href="../index.html">Transparent <i class="icon-external-link-sign"></i></a></li>
+                <li><a href="landing.html">Landing</a></li>
+                <li><a href="white/index.html">White <i class="icon-external-link-sign"></i></a></li>
             </ul>
         </li>
         <li class="visible-xs">
@@ -90,10 +90,10 @@
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-inverse btn-sm">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-inverse btn-sm">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -274,149 +274,42 @@
     </div>
 </header>
 <div class="content container">
-    <div class="row hidden-print">
+    <div class="row">
         <div class="col-md-12">
-            <h2 class="page-title">Invoice <small>Print optimized page</small></h2>
+            <h2 class="page-title">Bootstrap Components <small>Built-in components</small></h2>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <section class="widget">
-                <div class="body no-margin">
-                    <div class="row">
-                        <div class="col-sm-6 col-print-6">
-                            <img src="img/logo.png" alt="Logo" class="invoice-logo"/>
-                        </div>
-                        <div class="col-sm-6 col-print-6">
-                            <div class="invoice-number text-align-right">
-                                #4346345 / 14 Aug 2013
-                            </div>
-                            <div class="invoice-number-info text-align-right">
-                                Some Invoice number description or whatever
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <section class="invoice-info well">
-                        <div class="row">
-                            <div class="col-sm-6 col-print-6">
-                                <h4 class="details-title">Company Information</h4>
-                                <h3 class="company-name">
-                                    Wrapbootstrap LLC
-                                </h3>
-                                <address>
-                                    <strong>2 Infinite Loop</strong><br>
-                                    Minsk, Belarus 220004<br>
-                                    088.253.5345<br>
-                                    <abbr title="Work email">e-mail:</abbr> <a href="mailto:#">email@example.com</a><br>
-                                    <abbr title="Work Phone">phone:</abbr> (012) 345-678-901<br>
-                                    <abbr title="Work Fax">fax:</abbr> (012) 678-132-901
-                                </address>
-                            </div>
-                            <div class="col-sm-6 col-print-6 client-details">
-                                <h4 class="details-title">Client Information</h4>
-                                <h3 class="client-name">
-                                    Veronica Niasvizhskaja
-                                </h3>
-                                <address>
-                                    <strong>Consultant</strong> at
-                                    <strong><a href="#">Allspana</a></strong><br>
-                                    <abbr title="Work email">e-mail:</abbr> <a href="mailto:#">maryna@allspana.by</a><br>
-                                    <abbr title="Work Phone">phone:</abbr> (012) 345-678-901<br>
-                                    <abbr title="Work Fax">fax:</abbr> (012) 678-132-901
-                                    <div class="separator line"></div>
-                                    <p class="margin-none"><strong>Note:</strong><br>Some nights I stay up cashing in my bad luck.
-                                        Some nights I call it a draw</p>
-                                </address>
-                            </div>
-                        </div>
-                    </section>
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Item</th>
-                            <th class="hidden-xs">Description</th>
-                            <th>Quantity</th>
-                            <th class="hidden-xs">Price per Unit</th>
-                            <th>Total</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Brand-new 27' monitor</td>
-                            <td class="hidden-xs">2,560x1,440-pixel (WQHD) resolution supported!</td>
-                            <td>2</td>
-                            <td class="hidden-xs">700</td>
-                            <td>1,400.00</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Domain: okendoken.com</td>
-                            <td class="hidden-xs">6-month registration</td>
-                            <td>1</td>
-                            <td class="hidden-xs">10.99</td>
-                            <td>21.88</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Atlas Shrugged</td>
-                            <td class="hidden-xs">Novel by Ayn Rand, first published in 1957 in the United States</td>
-                            <td>5</td>
-                            <td class="hidden-xs">35</td>
-                            <td>175.00</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>New Song by Dr. Pre</td>
-                            <td class="hidden-xs">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
-                            <td>1</td>
-                            <td class="hidden-xs">2</td>
-                            <td>2.00</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <div class="row">
-                        <div class="col-sm-6 col-print-6">
-                            <blockquote>
-                                <strong>Note:</strong> Keep in mind, sometimes bad things happen. But it's just sometimes.
-                            </blockquote>
-                        </div>
-                        <div class="col-sm-6 col-print-6">
-                            <div class="row text-align-right">
-                                <div class="col-xs-6"></div> <!-- instead of offset -->
-                                <div class="col-xs-3">
-                                    <p>Subtotal</p>
-                                    <p>Tax(10%)</p>
-                                    <p class="no-margin"><strong>Total</strong></p>
-                                </div>
-                                <div class="col-xs-3">
-                                    <p>1,598.88</p>
-                                    <p>159.89</p>
-                                    <p class="no-margin"><strong>1,758.77</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="invoice-actions text-align-right hidden-print">
-                        <button id="print" class="btn btn-inverse">
-                            <i class="icon-print"></i>
-                            &nbsp;&nbsp;
-                            Print
-                        </button>
-                        <button class="btn btn-danger">
-                            <i class="icon-arrow-right"></i>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Proceed with Payment
-                        </button>
-                    </div>
-                </div>
+                <ol class="breadcrumb">
+                    <li><a href=""><i class="icon-home"></i> Home</a></li>
+                    <li><a href=""><i class="icon-book"></i> Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
             </section>
         </div>
     </div>
 </div>
 </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Preview image</h4>
+            </div>
+            <div class="modal-body">
+                <img src="img/5.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger pull-left btn-sm"> <i class="icon-angle-left"></i> Previous</button>
+                <button class="btn btn-danger btn-sm">&nbsp; Next <i class="icon-angle-right"></i>  &nbsp; </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <!-- jquery and friends -->
 <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
@@ -427,6 +320,7 @@
 <script src="lib/parsley/parsley.js"> </script>
 <script src="lib/icheck.js/jquery.icheck.js"></script>
 <script src="lib/select2.js"></script>
+
 
 <!--backbone and friends -->
 <script src="lib/backbone/underscore-min.js"></script>
@@ -442,37 +336,42 @@
 <script src="lib/bootstrap/modal.js"></script>
 <script src="lib/bootstrap/tab.js"> </script>
 
+<!-- bootstrap custom plugins -->
+<script src="lib/bootstrap-datepicker.js"></script>
+<script src="lib/bootstrap-select/bootstrap-select.js"></script>
+<script src="lib/wysihtml5/wysihtml5-0.3.0_rc2.js"></script>
+<script src="lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+
 <!-- basic application js-->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
 
-<!-- page-specific -->
-<script type="text/javascript" src="js/print.js"></script>
-
+<!-- delete -->
+<script src="js/_holder.js"></script>
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-sm btn-inverse <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-sm btn-inverse <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-sm btn-inverse <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-sm btn-inverse <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-sm btn-inverse <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-sm btn-inverse <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
@@ -482,14 +381,14 @@
     <% if (auto) {%>
     <button type="button"
             data-value="icons"
-            class="btn-icons btn btn-inverse btn-sm">Icons</button>
+            class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-inverse btn-sm">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
     <%} else {%>
     <button type="button"
             data-value="auto"
-            class="btn btn-inverse btn-sm">Auto</button>
+            class="btn btn-transparent btn-sm">Auto</button>
     <% } %>
 </script>
 
