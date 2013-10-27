@@ -467,22 +467,46 @@ textarea,
   padding: 2px 9px;
 }
 
-@each $item in label, badge {
-// Important (red)
-  .#{$item}-important         { background-color: $red; }
-  .#{$item}-important[href]   { background-color: darken($red, 10%); }
-// Warnings (orange)
-  .#{$item}-warning           { background-color: $orange; }
-  .#{$item}-warning[href]     { background-color: darken($orange, 10%); }
-// Success (green)
-  .#{$item}-success           { background-color: $green; }
-  .#{$item}-success[href]     { background-color: darken($green, 10%); }
-// Info (turquoise)
-  .#{$item}-info              { background-color: $blue; }
-  .#{$item}-info[href]        { background-color: darken($blue, 10%); }
-// Inverse (black)
-  .#{$item}-inverse           { background-color: $gray; } //okendoken. changing $gray-dark to just $gray
-  .#{$item}-inverse[href]     { background-color: darken($gray, 10%); }
+.badge-default {
+  @include label-variant($label-default-bg);
+}
+
+.badge-primary {
+  @include label-variant($label-primary-bg);
+}
+
+.badge-success {
+  @include label-variant($label-success-bg);
+}
+
+.badge-info {
+  @include label-variant($label-info-bg);
+}
+
+.badge-warning {
+  @include label-variant($label-warning-bg);
+}
+
+.badge-danger {
+  @include label-variant($label-danger-bg);
+}
+
+.label-important{
+  @extend .label-danger;
+}
+
+.label-inverse{
+  @extend .label-default;
+}
+
+/***************************/
+/*        Jumbotron        */
+/***************************/
+
+.jumbotron{
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  }
 }
 
 /***************************/

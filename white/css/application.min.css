@@ -36,6 +36,13 @@
   src: local("Open Sans Italic"), local("OpenSans-Italic"), url(font/open-sans-italic.woff) format("woff");
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url(font/open-sans-italic-light.woff) format("woff");
+}
+
 /*!
  * Bootstrap v3.0.0
  *
@@ -5292,11 +5299,11 @@ input[type="button"].btn-block {
 }
 
 /* line 36, D:/projects/admin/white/sass/bootstrap-original/_labels.scss */
-.label-default {
+.label-default, .label-inverse {
   background-color: #999999;
 }
 /* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.label-default[href]:hover, .label-default[href]:focus {
+.label-default[href]:hover, [href].label-inverse:hover, .label-default[href]:focus, [href].label-inverse:focus {
   background-color: gray;
 }
 
@@ -5337,11 +5344,11 @@ input[type="button"].btn-block {
 }
 
 /* line 56, D:/projects/admin/white/sass/bootstrap-original/_labels.scss */
-.label-danger {
+.label-danger, .label-important {
   background-color: #e5603b;
 }
 /* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.label-danger[href]:hover, .label-danger[href]:focus {
+.label-danger[href]:hover, [href].label-important:hover, .label-danger[href]:focus, [href].label-important:focus {
   background-color: #d1431c;
 }
 
@@ -5398,7 +5405,7 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: transparent;
 }
 /* line 15, D:/projects/admin/white/sass/bootstrap-original/_jumbotron.scss */
 .jumbotron h1 {
@@ -8197,110 +8204,72 @@ textarea + .help-block,
   padding: 2px 9px;
 }
 
-/* line 472, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-important {
-  background-color: #e5603b;
+/* line 470, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.badge-default {
+  background-color: #999999;
+}
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.badge-default[href]:hover, .badge-default[href]:focus {
+  background-color: gray;
 }
 
-/* line 473, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-important[href] {
-  background-color: #d1431c;
-}
-
-/* line 475, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-warning {
-  background-color: #eac85e;
-}
-
-/* line 476, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-warning[href] {
-  background-color: #e4b931;
-}
-
-/* line 478, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-success {
-  background-color: #56bc76;
-}
-
-/* line 479, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-success[href] {
-  background-color: #3fa05e;
-}
-
-/* line 481, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-info {
+/* line 474, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.badge-primary {
   background-color: #618fb0;
 }
-
-/* line 482, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-info[href] {
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.badge-primary[href]:hover, .badge-primary[href]:focus {
   background-color: #4a7594;
-}
-
-/* line 484, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-inverse {
-  background-color: #666666;
-}
-
-/* line 485, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.label-inverse[href] {
-  background-color: #4d4d4d;
-}
-
-/* line 472, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-important {
-  background-color: #e5603b;
-}
-
-/* line 473, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-important[href] {
-  background-color: #d1431c;
-}
-
-/* line 475, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-warning {
-  background-color: #eac85e;
-}
-
-/* line 476, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-warning[href] {
-  background-color: #e4b931;
 }
 
 /* line 478, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge-success {
   background-color: #56bc76;
 }
-
-/* line 479, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-success[href] {
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.badge-success[href]:hover, .badge-success[href]:focus {
   background-color: #3fa05e;
 }
 
-/* line 481, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-info {
-  background-color: #618fb0;
-}
-
 /* line 482, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-info[href] {
-  background-color: #4a7594;
+.badge-info {
+  background-color: #4ab0ce;
+}
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.badge-info[href]:hover, .badge-info[href]:focus {
+  background-color: #3196b4;
 }
 
-/* line 484, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-inverse {
-  background-color: #666666;
+/* line 486, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.badge-warning {
+  background-color: #eac85e;
+}
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.badge-warning[href]:hover, .badge-warning[href]:focus {
+  background-color: #e4b931;
 }
 
-/* line 485, D:/projects/admin/white/sass/_bootstrap-override.scss */
-.badge-inverse[href] {
-  background-color: #4d4d4d;
+/* line 490, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.badge-danger {
+  background-color: #e5603b;
+}
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.badge-danger[href]:hover, .badge-danger[href]:focus {
+  background-color: #d1431c;
+}
+
+/***************************/
+/*        Jumbotron        */
+/***************************/
+/* line 507, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.widget > .jumbotron {
+  margin: -10px -12px;
 }
 
 /***************************/
 /*          Alerts         */
 /***************************/
-/* line 492, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 516, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .alert {
   text-shadow: none;
 }
@@ -8308,7 +8277,7 @@ textarea + .help-block,
 /***********************************/
 /**            Progress           **/
 /**********************************/
-/* line 500, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 524, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .progress {
   background: rgba(0, 0, 0, 0.15);
 }
@@ -8316,63 +8285,63 @@ textarea + .help-block,
 /***************************/
 /*          Panels         */
 /***************************/
-/* line 508, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 532, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel-heading {
   padding: 0;
 }
-/* line 511, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 535, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel-heading > .accordion-toggle {
   display: block;
   padding: 8px 15px;
 }
 
-/* line 517, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 541, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel {
   border: none;
   background-color: whitesmoke;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(1n) .panel-heading {
   border-left: 5px solid #e5603b;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(2n) .panel-heading {
   border-left: 5px solid #eac85e;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(3n) .panel-heading {
   border-left: 5px solid #8cbf26;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(4n) .panel-heading {
   border-left: 5px solid #56bc76;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(5n) .panel-heading {
   border-left: 5px solid #4ab0ce;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(6n) .panel-heading {
   border-left: 5px solid #618fb0;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(7n) .panel-heading {
   border-left: 5px solid #a05000;
 }
-/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(8n) .panel-heading {
   border-left: 5px solid #d04f4f;
 }
-/* line 531, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 555, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel .panel-heading a {
   color: #666666;
   font-weight: normal;
   color: #666666;
 }
 
-/* line 537, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 561, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel-body {
   border-top-color: whitesmoke;
 }
@@ -8380,16 +8349,16 @@ textarea + .help-block,
 /***************************/
 /*       Breadcrumbs       */
 /***************************/
-/* line 546, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 570, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .breadcrumb a {
   color: #666666;
   text-decoration: none;
 }
-/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 573, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .breadcrumb a:hover {
   color: #999999;
 }
-/* line 554, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 578, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget > .breadcrumb {
   margin: -10px -12px;
 }
@@ -11574,16 +11543,16 @@ a {
   transition: background-color 0.2s;
 }
 
-/* line 161, D:/projects/admin/white/sass/_variables.scss */
+/* line 169, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons {
   width: auto;
   margin: 80px 0 0 1.6%;
 }
-/* line 165, D:/projects/admin/white/sass/_variables.scss */
+/* line 173, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons h2 {
   display: none;
 }
-/* line 169, D:/projects/admin/white/sass/_variables.scss */
+/* line 177, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons .panel-collapse li a {
   width: 1px;
   padding-left: 10px;
@@ -11592,27 +11561,27 @@ a {
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
-/* line 175, D:/projects/admin/white/sass/_variables.scss */
+/* line 183, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons .panel-collapse.open li a {
   width: 80px;
 }
 
-/* line 181, D:/projects/admin/white/sass/_variables.scss */
+/* line 189, D:/projects/admin/white/sass/_variables.scss */
 .side-nav.sidebar-icons li a {
   padding: 8px 16px;
   text-align: center;
 }
-/* line 185, D:/projects/admin/white/sass/_variables.scss */
+/* line 193, D:/projects/admin/white/sass/_variables.scss */
 .side-nav.sidebar-icons li a i[class*=icon] {
   margin-right: 0;
   float: none;
 }
-/* line 191, D:/projects/admin/white/sass/_variables.scss */
+/* line 199, D:/projects/admin/white/sass/_variables.scss */
 .side-nav.sidebar-icons li .name {
   display: none;
 }
 
-/* line 197, D:/projects/admin/white/sass/_variables.scss */
+/* line 205, D:/projects/admin/white/sass/_variables.scss */
 .sidebar-on-right .side-nav.sidebar-icons > li.active > a,
 .side-nav.sidebar-icons > li.active > a {
   border-left: none;
@@ -11620,22 +11589,22 @@ a {
   padding-left: 16px;
 }
 
-/* line 203, D:/projects/admin/white/sass/_variables.scss */
+/* line 211, D:/projects/admin/white/sass/_variables.scss */
 .wrap.sidebar-icons {
   margin-left: 62px;
 }
 
-/* line 208, D:/projects/admin/white/sass/_variables.scss */
+/* line 216, D:/projects/admin/white/sass/_variables.scss */
 .sidebar-hidden .sidebar {
   display: none;
 }
-/* line 212, D:/projects/admin/white/sass/_variables.scss */
+/* line 220, D:/projects/admin/white/sass/_variables.scss */
 .sidebar-hidden .wrap {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 218, D:/projects/admin/white/sass/_variables.scss */
+/* line 226, D:/projects/admin/white/sass/_variables.scss */
 .logo.sidebar-icons {
   left: 1.6%;
   padding-left: 5px;
@@ -11804,7 +11773,7 @@ input.parsley-error {
 .sidebar .settings .btn-auto {
   display: none;
 }
-/* line 228, D:/projects/admin/white/sass/_variables.scss */
+/* line 236, D:/projects/admin/white/sass/_variables.scss */
 .sidebar.sidebar-icons .settings .btn-sm, .sidebar.sidebar-icons .settings .btn-group-sm > .btn {
   padding: 2px 8px;
 }
@@ -14188,16 +14157,16 @@ table.table thead .sorting_desc_disabled {
   }
 }
 @media (max-width: 1048px) {
-  /* line 161, D:/projects/admin/white/sass/_variables.scss */
+  /* line 169, D:/projects/admin/white/sass/_variables.scss */
   .sidebar {
     width: auto;
     margin: 80px 0 0 1.6%;
   }
-  /* line 165, D:/projects/admin/white/sass/_variables.scss */
+  /* line 173, D:/projects/admin/white/sass/_variables.scss */
   .sidebar h2 {
     display: none;
   }
-  /* line 169, D:/projects/admin/white/sass/_variables.scss */
+  /* line 177, D:/projects/admin/white/sass/_variables.scss */
   .sidebar .panel-collapse li a {
     width: 1px;
     padding-left: 10px;
@@ -14206,27 +14175,27 @@ table.table thead .sorting_desc_disabled {
     -o-transition: width 0.3s;
     transition: width 0.3s;
   }
-  /* line 175, D:/projects/admin/white/sass/_variables.scss */
+  /* line 183, D:/projects/admin/white/sass/_variables.scss */
   .sidebar .panel-collapse.open li a {
     width: 80px;
   }
 
-  /* line 181, D:/projects/admin/white/sass/_variables.scss */
+  /* line 189, D:/projects/admin/white/sass/_variables.scss */
   .side-nav li a {
     padding: 8px 16px;
     text-align: center;
   }
-  /* line 185, D:/projects/admin/white/sass/_variables.scss */
+  /* line 193, D:/projects/admin/white/sass/_variables.scss */
   .side-nav li a i[class*=icon] {
     margin-right: 0;
     float: none;
   }
-  /* line 191, D:/projects/admin/white/sass/_variables.scss */
+  /* line 199, D:/projects/admin/white/sass/_variables.scss */
   .side-nav li .name {
     display: none;
   }
 
-  /* line 197, D:/projects/admin/white/sass/_variables.scss */
+  /* line 205, D:/projects/admin/white/sass/_variables.scss */
   .sidebar-on-right .side-nav > li.active > a,
   .side-nav > li.active > a {
     border-left: none;
@@ -14234,22 +14203,22 @@ table.table thead .sorting_desc_disabled {
     padding-left: 16px;
   }
 
-  /* line 203, D:/projects/admin/white/sass/_variables.scss */
+  /* line 211, D:/projects/admin/white/sass/_variables.scss */
   .wrap {
     margin-left: 62px;
   }
 
-  /* line 208, D:/projects/admin/white/sass/_variables.scss */
+  /* line 216, D:/projects/admin/white/sass/_variables.scss */
   .sidebar-hidden .sidebar {
     display: none;
   }
-  /* line 212, D:/projects/admin/white/sass/_variables.scss */
+  /* line 220, D:/projects/admin/white/sass/_variables.scss */
   .sidebar-hidden .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 218, D:/projects/admin/white/sass/_variables.scss */
+  /* line 226, D:/projects/admin/white/sass/_variables.scss */
   .logo {
     left: 1.6%;
     padding-left: 5px;
@@ -14257,7 +14226,7 @@ table.table thead .sorting_desc_disabled {
     top: 13px;
   }
 
-  /* line 228, D:/projects/admin/white/sass/_variables.scss */
+  /* line 236, D:/projects/admin/white/sass/_variables.scss */
   .sidebar .settings .btn-sm, .sidebar .settings .btn-group-sm > .btn {
     padding: 2px 8px;
   }
