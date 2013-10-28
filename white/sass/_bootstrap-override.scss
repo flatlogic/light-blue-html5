@@ -515,6 +515,9 @@ textarea,
 
 .alert {
   text-shadow: none;
+  border: none;
+  color: white;
+  @include box-shadow($widget-shadow);
 }
 
 /***********************************/
