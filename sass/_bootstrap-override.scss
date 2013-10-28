@@ -784,24 +784,34 @@ a.thumbnail:focus {
 /*        Carousel         */
 /***************************/
 
+.carousel{
+  .widget > &{
+    margin: 0 (-($widget-padding-horizontal)) 5px;
+  }
+}
+
 .carousel-control {
-  opacity: 1;
-  width: 2%;
-  //font-size: 50px;
-  text-shadow: 0 0 8px rgba(255,255,255, .6);
-
-  @media screen and (min-width: $screen-tablet) {
-    .icon-prev,
-    .icon-next {
-      font-size: 50px;
-    }
-  }
-
-
-  &.left {
+  &.left, &.right{
     background: none;
   }
-  &.right {
-    background: none;
+  i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+}
+
+.carousel-indicators{
+  &.outer{
+    bottom: -10px;
+  }
+  li{
+    background-color: $transparentBackground;
   }
 }

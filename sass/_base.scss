@@ -2264,6 +2264,28 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   }
 }
 
+.carousel-control-landing {
+  opacity: 1;
+  width: 2%;
+  //font-size: 50px;
+  text-shadow: 0 0 8px rgba(255,255,255, .6);
+
+  @media screen and (min-width: $screen-tablet) {
+    .icon-prev,
+    .icon-next {
+      font-size: 50px;
+    }
+  }
+
+
+  &.left {
+    background: none;
+  }
+  &.right {
+    background: none;
+  }
+}
+
 /***********************************/
 /**      SLIMSCROLL OVERRIDE      **/
 /**********************************/

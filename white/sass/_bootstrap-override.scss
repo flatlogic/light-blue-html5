@@ -579,3 +579,39 @@ textarea,
     margin: -($widget-padding-vertical) (-($widget-padding-horizontal));
   }
 }
+
+/***************************/
+/*        Carousel         */
+/***************************/
+
+.carousel{
+  .widget > &{
+    margin: 0 (-($widget-padding-horizontal)) 5px;
+  }
+}
+
+.carousel-control {
+  &.left, &.right{
+    background: none;
+  }
+  i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+}
+
+.carousel-indicators{
+  &.outer{
+    bottom: -10px;
+  }
+  li{
+    background-color: $gray-lighter;
+  }
+}

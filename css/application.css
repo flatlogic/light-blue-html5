@@ -6599,13 +6599,13 @@ body.modal-open {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15%;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  width: 6%;
+  opacity: 1;
+  filter: alpha(opacity=100);
   font-size: 20px;
   color: white;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: none;
 }
 /* line 82, D:/projects/admin/sass/bootstrap-original/_carousel.scss */
 .carousel-control.left {
@@ -6682,7 +6682,7 @@ body.modal-open {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid white;
+  border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -6691,7 +6691,7 @@ body.modal-open {
   margin: 0;
   width: 12px;
   height: 12px;
-  background-color: white;
+  background-color: #e5603b;
 }
 
 /* line 168, D:/projects/admin/sass/bootstrap-original/_carousel.scss */
@@ -6705,7 +6705,7 @@ body.modal-open {
   padding-bottom: 20px;
   color: white;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-shadow: none;
 }
 /* line 179, D:/projects/admin/sass/bootstrap-original/_carousel.scss */
 .carousel-caption .btn {
@@ -8584,26 +8584,35 @@ a.thumbnail:focus {
 /***************************/
 /*        Carousel         */
 /***************************/
-/* line 787, D:/projects/admin/sass/_bootstrap-override.scss */
-.carousel-control {
-  opacity: 1;
-  width: 2%;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+/* line 788, D:/projects/admin/sass/_bootstrap-override.scss */
+.widget > .carousel {
+  margin: 0 -12px 5px;
 }
-@media screen and (min-width: 768px) {
-  /* line 795, D:/projects/admin/sass/_bootstrap-override.scss */
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    font-size: 50px;
-  }
-}
-/* line 801, D:/projects/admin/sass/_bootstrap-override.scss */
-.carousel-control.left {
+
+/* line 794, D:/projects/admin/sass/_bootstrap-override.scss */
+.carousel-control.left, .carousel-control.right {
   background: none;
 }
-/* line 804, D:/projects/admin/sass/_bootstrap-override.scss */
-.carousel-control.right {
-  background: none;
+/* line 797, D:/projects/admin/sass/_bootstrap-override.scss */
+.carousel-control i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+/* line 811, D:/projects/admin/sass/_bootstrap-override.scss */
+.carousel-indicators.outer {
+  bottom: -10px;
+}
+/* line 814, D:/projects/admin/sass/_bootstrap-override.scss */
+.carousel-indicators li {
+  background-color: rgba(51, 51, 51, 0.4);
 }
 
 /************************************************************/
@@ -16664,16 +16673,16 @@ a {
   transition: background-color 0.2s;
 }
 
-/* line 210, D:/projects/admin/sass/_variables.scss */
+/* line 221, D:/projects/admin/sass/_variables.scss */
 .sidebar.sidebar-icons {
   width: auto;
   margin: 80px 0 0 1.6%;
 }
-/* line 214, D:/projects/admin/sass/_variables.scss */
+/* line 225, D:/projects/admin/sass/_variables.scss */
 .sidebar.sidebar-icons h2 {
   display: none;
 }
-/* line 218, D:/projects/admin/sass/_variables.scss */
+/* line 229, D:/projects/admin/sass/_variables.scss */
 .sidebar.sidebar-icons .panel-collapse li a {
   width: 1px;
   padding-left: 10px;
@@ -16682,27 +16691,27 @@ a {
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
-/* line 224, D:/projects/admin/sass/_variables.scss */
+/* line 235, D:/projects/admin/sass/_variables.scss */
 .sidebar.sidebar-icons .panel-collapse.open li a {
   width: 80px;
 }
 
-/* line 230, D:/projects/admin/sass/_variables.scss */
+/* line 241, D:/projects/admin/sass/_variables.scss */
 .side-nav.sidebar-icons li a {
   padding: 8px 16px;
   text-align: center;
 }
-/* line 234, D:/projects/admin/sass/_variables.scss */
+/* line 245, D:/projects/admin/sass/_variables.scss */
 .side-nav.sidebar-icons li a i[class*=icon] {
   margin-right: 0;
   float: none;
 }
-/* line 240, D:/projects/admin/sass/_variables.scss */
+/* line 251, D:/projects/admin/sass/_variables.scss */
 .side-nav.sidebar-icons li .name {
   display: none;
 }
 
-/* line 246, D:/projects/admin/sass/_variables.scss */
+/* line 257, D:/projects/admin/sass/_variables.scss */
 .sidebar-on-right .side-nav.sidebar-icons > li.active > a,
 .side-nav.sidebar-icons > li.active > a {
   border-left: none;
@@ -16710,22 +16719,22 @@ a {
   padding-left: 16px;
 }
 
-/* line 252, D:/projects/admin/sass/_variables.scss */
+/* line 263, D:/projects/admin/sass/_variables.scss */
 .wrap.sidebar-icons {
   margin-left: 62px;
 }
 
-/* line 257, D:/projects/admin/sass/_variables.scss */
+/* line 268, D:/projects/admin/sass/_variables.scss */
 .sidebar-hidden .sidebar {
   display: none;
 }
-/* line 261, D:/projects/admin/sass/_variables.scss */
+/* line 272, D:/projects/admin/sass/_variables.scss */
 .sidebar-hidden .wrap {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 267, D:/projects/admin/sass/_variables.scss */
+/* line 278, D:/projects/admin/sass/_variables.scss */
 .logo.sidebar-icons {
   left: 1.6%;
   padding-left: 5px;
@@ -16895,7 +16904,7 @@ input.parsley-error {
 .sidebar .settings .btn-auto {
   display: none;
 }
-/* line 277, D:/projects/admin/sass/_variables.scss */
+/* line 288, D:/projects/admin/sass/_variables.scss */
 .sidebar.sidebar-icons .settings .btn-sm, .sidebar.sidebar-icons .settings .btn-group-sm > .btn {
   padding: 2px 8px;
 }
@@ -19389,10 +19398,32 @@ table.table thead .sorting_desc_disabled {
   left: auto;
 }
 
+/* line 2267, D:/projects/admin/sass/_base.scss */
+.carousel-control-landing {
+  opacity: 1;
+  width: 2%;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 768px) {
+  /* line 2275, D:/projects/admin/sass/_base.scss */
+  .carousel-control-landing .icon-prev,
+  .carousel-control-landing .icon-next {
+    font-size: 50px;
+  }
+}
+/* line 2281, D:/projects/admin/sass/_base.scss */
+.carousel-control-landing.left {
+  background: none;
+}
+/* line 2284, D:/projects/admin/sass/_base.scss */
+.carousel-control-landing.right {
+  background: none;
+}
+
 /***********************************/
 /**      SLIMSCROLL OVERRIDE      **/
 /**********************************/
-/* line 2271, D:/projects/admin/sass/_base.scss */
+/* line 2293, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -19404,77 +19435,77 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 2279, D:/projects/admin/sass/_base.scss */
+/* line 2301, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 2283, D:/projects/admin/sass/_base.scss */
+/* line 2305, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 2287, D:/projects/admin/sass/_base.scss */
+/* line 2309, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 2291, D:/projects/admin/sass/_base.scss */
+/* line 2313, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 2295, D:/projects/admin/sass/_base.scss */
+/* line 2317, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 2299, D:/projects/admin/sass/_base.scss */
+/* line 2321, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 2303, D:/projects/admin/sass/_base.scss */
+/* line 2325, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 2307, D:/projects/admin/sass/_base.scss */
+/* line 2329, D:/projects/admin/sass/_base.scss */
 .visible-phone-landscape {
   display: none !important;
 }
 
-/* line 2315, D:/projects/admin/sass/_base.scss */
+/* line 2337, D:/projects/admin/sass/_base.scss */
 .background-danger {
   background: #e5603b;
   color: white;
 }
 
-/* line 2320, D:/projects/admin/sass/_base.scss */
+/* line 2342, D:/projects/admin/sass/_base.scss */
 .background-warning {
   background: #eac85e;
   color: white;
 }
 
-/* line 2325, D:/projects/admin/sass/_base.scss */
+/* line 2347, D:/projects/admin/sass/_base.scss */
 .background-success {
   background: #56bc76;
   color: white;
 }
 
-/* line 2330, D:/projects/admin/sass/_base.scss */
+/* line 2352, D:/projects/admin/sass/_base.scss */
 .background-primary {
   background: #618fb0;
   color: white;
 }
 
-/* line 2335, D:/projects/admin/sass/_base.scss */
+/* line 2357, D:/projects/admin/sass/_base.scss */
 .background-info {
   background: #4ab0ce;
   color: white;
 }
 
-/* line 2340, D:/projects/admin/sass/_base.scss */
+/* line 2362, D:/projects/admin/sass/_base.scss */
 .background-lime {
   background: #8cbf26;
   color: white;
@@ -19506,16 +19537,16 @@ table.table thead .sorting_desc_disabled {
   }
 }
 @media (max-width: 1048px) {
-  /* line 210, D:/projects/admin/sass/_variables.scss */
+  /* line 221, D:/projects/admin/sass/_variables.scss */
   .sidebar {
     width: auto;
     margin: 80px 0 0 1.6%;
   }
-  /* line 214, D:/projects/admin/sass/_variables.scss */
+  /* line 225, D:/projects/admin/sass/_variables.scss */
   .sidebar h2 {
     display: none;
   }
-  /* line 218, D:/projects/admin/sass/_variables.scss */
+  /* line 229, D:/projects/admin/sass/_variables.scss */
   .sidebar .panel-collapse li a {
     width: 1px;
     padding-left: 10px;
@@ -19524,27 +19555,27 @@ table.table thead .sorting_desc_disabled {
     -o-transition: width 0.3s;
     transition: width 0.3s;
   }
-  /* line 224, D:/projects/admin/sass/_variables.scss */
+  /* line 235, D:/projects/admin/sass/_variables.scss */
   .sidebar .panel-collapse.open li a {
     width: 80px;
   }
 
-  /* line 230, D:/projects/admin/sass/_variables.scss */
+  /* line 241, D:/projects/admin/sass/_variables.scss */
   .side-nav li a {
     padding: 8px 16px;
     text-align: center;
   }
-  /* line 234, D:/projects/admin/sass/_variables.scss */
+  /* line 245, D:/projects/admin/sass/_variables.scss */
   .side-nav li a i[class*=icon] {
     margin-right: 0;
     float: none;
   }
-  /* line 240, D:/projects/admin/sass/_variables.scss */
+  /* line 251, D:/projects/admin/sass/_variables.scss */
   .side-nav li .name {
     display: none;
   }
 
-  /* line 246, D:/projects/admin/sass/_variables.scss */
+  /* line 257, D:/projects/admin/sass/_variables.scss */
   .sidebar-on-right .side-nav > li.active > a,
   .side-nav > li.active > a {
     border-left: none;
@@ -19552,22 +19583,22 @@ table.table thead .sorting_desc_disabled {
     padding-left: 16px;
   }
 
-  /* line 252, D:/projects/admin/sass/_variables.scss */
+  /* line 263, D:/projects/admin/sass/_variables.scss */
   .wrap {
     margin-left: 62px;
   }
 
-  /* line 257, D:/projects/admin/sass/_variables.scss */
+  /* line 268, D:/projects/admin/sass/_variables.scss */
   .sidebar-hidden .sidebar {
     display: none;
   }
-  /* line 261, D:/projects/admin/sass/_variables.scss */
+  /* line 272, D:/projects/admin/sass/_variables.scss */
   .sidebar-hidden .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 267, D:/projects/admin/sass/_variables.scss */
+  /* line 278, D:/projects/admin/sass/_variables.scss */
   .logo {
     left: 1.6%;
     padding-left: 5px;
@@ -19575,7 +19606,7 @@ table.table thead .sorting_desc_disabled {
     top: 13px;
   }
 
-  /* line 277, D:/projects/admin/sass/_variables.scss */
+  /* line 288, D:/projects/admin/sass/_variables.scss */
   .sidebar .settings .btn-sm, .sidebar .settings .btn-group-sm > .btn {
     padding: 2px 8px;
   }
