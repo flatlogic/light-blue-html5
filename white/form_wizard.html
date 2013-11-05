@@ -68,7 +68,12 @@
             </ul>
         </li>
         <li >
-            <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#grid-collapse"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
+            <ul id="grid-collapse" class="panel-collapse collapse">
+                <li><a href="grid.html">Basic</a></li>
+                <li><a href="grid_live.html">Live &nbsp; <span class="label label-important">new</span></a></li>
+            </ul>
         </li>
         <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
@@ -685,8 +690,8 @@
 </div>
 
 <!-- jquery and friends -->
-<script src="lib/jquery/jquery.1.9.0.min.js"> </script>
-<script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
+<script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+
 
 <!-- jquery plugins -->
 <script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>

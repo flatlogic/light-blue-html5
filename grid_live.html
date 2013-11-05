@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <meta charset="utf-8">
 </head>
-<body>
+<body class="background-dark">
 <div class="logo">
     <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
 </div>
@@ -48,14 +48,14 @@
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="active panel">
-            <a class="accordion-toggle" data-toggle="collapse"
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="panel-collapse in">
+            <ul id="components-collapse" class="panel-collapse collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
                 <li><a href="component_maps.html">Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
-                <li class="active"><a href="component_fileupload.html">Fileupload</a></li>
+                <li><a href="component_fileupload.html">Fileupload</a></li>
                 <li><a href="component_bootstrap.html">Bootstrap</a></li>
             </ul>
         </li>
@@ -67,12 +67,12 @@
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
         </li>
-        <li >
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="panel active">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#grid-collapse"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
-            <ul id="grid-collapse" class="panel-collapse collapse">
+            <ul id="grid-collapse" class="panel-collapse in">
                 <li><a href="grid.html">Basic</a></li>
-                <li><a href="grid_live.html">Live &nbsp; <span class="label label-important">new</span></a></li>
+                <li class="active"><a href="grid_live.html">Live &nbsp; <span class="label label-important">new</span></a></li>
             </ul>
         </li>
         <li class="panel">
@@ -84,8 +84,8 @@
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
-                <li><a href="../landing.html">Landing</a></li>
-                <li><a href="../index.html">Transparent <i class="icon-external-link-sign"></i></a></li>
+                <li><a href="landing.html">Landing</a></li>
+                <li><a href="white/index.html">White <i class="icon-external-link-sign"></i></a></li>
             </ul>
         </li>
         <li class="visible-xs">
@@ -95,10 +95,10 @@
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-inverse btn-sm">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-inverse btn-sm">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
@@ -281,53 +281,7 @@
     <div class="content container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="page-title">Fileupload <small>Drag & drop fileupload</small></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-1">
-                <section class="widget">
-                    <div class="body">
-                        <form id="fileupload" action="../server/php/" method="POST" enctype="multipart/form-data">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="dropzone"  class="dropzone">
-                                        Drop files here
-                                        <i class="icon-download-alt pull-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 fileupload-progress fade">
-                                    <!-- The global progress bar -->
-                                    <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="bar" style="width:0%;"></div>
-                                    </div>
-                                    <!-- The extended global progress information -->
-                                    <div class="progress-extended">&nbsp;</div>
-                                </div>
-                            </div>
-                            <div class="form-actions fileupload-buttonbar no-margin">
-                                <span class="btn btn-sm btn-default fileinput-button">
-                                        <i class="icon-plus"></i>
-                                        <span>Add files...</span>
-                                        <input type="file" name="files[]" multiple="">
-                                    </span>
-                                <button type="submit" class="btn btn-primary btn-sm start">
-                                    <i class="icon-upload"></i>
-                                    <span>Start upload</span>
-                                </button>
-                                <button type="reset" class="btn btn-inverse btn-sm cancel">
-                                    <i class="icon-ban-circle"></i>
-                                    <span>Cancel upload</span>
-                                </button>
-                            </div>
-                            <div class="fileupload-loading"><i class="icon-spin icon-spinner"></i></div>
-                            <!-- The table listing the files available for upload/download -->
-                            <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
-                        </form>
-                    </div>
-                </section>
+                <h2 class="page-title">Live Grid <small>Draggable widgets</small></h2>
             </div>
         </div>
     </div>
@@ -335,29 +289,6 @@
 
 <!-- jquery and friends -->
 <script src="lib/jquery/jquery-2.0.3.min.js"> </script>
-
-
-<!-- jquery plugins -->
-<script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>
-<script src="lib/parsley/parsley.js"> </script>
-<script src="lib/icheck.js/jquery.icheck.js"></script>
-<script src="lib/select2.js"></script>
-
-<script src="lib/vendor/jquery.ui.widget.js"></script>
-<!-- The Templates plugin is included to render the upload/download listings -->
-<script src="lib/vendor/http_blueimp.github.io_JavaScript-Templates_js_tmpl.js"></script>
-<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="lib/vendor/http_blueimp.github.io_JavaScript-Load-Image_js_load-image.js"></script>
-<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="lib/vendor/http_blueimp.github.io_JavaScript-Canvas-to-Blob_js_canvas-to-blob.js"></script>
-<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="lib/jquery.iframe-transport.js"></script>
-<!-- The basic File Upload plugin -->
-<script src="lib/jquery.fileupload.js"></script>
-<!-- The File Upload file processing plugin -->
-<script src="lib/jquery.fileupload-fp.js"></script>
-<!-- The File Upload user interface plugin -->
-<script src="lib/jquery.fileupload-ui.js"></script>
 
 
 <!--backbone and friends -->
@@ -374,103 +305,34 @@
 <script src="lib/bootstrap/modal.js"></script>
 <script src="lib/bootstrap/tab.js"> </script>
 
-<!-- bootstrap custom plugins -->
-<script src="lib/bootstrap-datepicker.js"></script>
-<script src="lib/bootstrap-select/bootstrap-select.js"></script>
-<script src="lib/wysihtml5/wysihtml5-0.3.0_rc2.js"></script>
-<script src="lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
-
 <!-- basic application js-->
 <script src="js/app.js"></script>
 <script src="js/settings.js"></script>
 
-<!-- page specific -->
-<script src="js/fileupload.js"></script>
-
-<script id="template-upload" type="text/x-tmpl">
-    {% for (var i=0, file; file=o.files[i]; i++) { %}
-    <tr class="template-upload fade">
-        <td class="preview"><span class="fade"></span></td>
-        <td class="name"><span>{%=file.name%}</span></td>
-        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
-        {% if (file.error) { %}
-        <td class="error" colspan="2"><span class="label label-important">Error</span> {%=file.error%}</td>
-        {% } else if (o.files.valid && !i) { %}
-        <td>
-            <div class="progress progress-success progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                <div class="bar" style="width:0%;"></div>
-            </div>
-        </td>
-        <td>{% if (!o.options.autoUpload) { %}
-            <button class="btn btn-primary btn-sm start">
-                <i class="icon-upload"></i>
-                <span>Start</span>
-            </button>
-            {% } %}</td>
-        {% } else { %}
-        <td colspan="2"></td>
-        {% } %}
-        <td>{% if (!i) { %}
-            <button class="btn btn-warning btn-sm cancel">
-                <i class="icon-ban-circle"></i>
-                <span>Cancel</span>
-            </button>
-            {% } %}</td>
-    </tr>
-    {% } %}
-</script>
-<!-- The template to display files available for download -->
-<script id="template-download" type="text/x-tmpl">
-    {% for (var i=0, file; file=o.files[i]; i++) { %}
-    <tr class="template-download fade">
-        {% if (file.error) { %}
-        <td></td>
-        <td class="name"><span>{%=file.name%}</span></td>
-        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
-        <td class="error" colspan="2"><span class="label label-important">Error</span> {%=file.error%}</td>
-        {% } else { %}
-        <td class="preview">{% if (file.thumbnail_url) { %}
-            <a href="{%=file.url%}" title="{%=file.name%}" data-gallery="gallery" download="{%=file.name%}"><img src="{%=file.thumbnail_url%}"></a>
-            {% } %}</td>
-        <td class="name">
-            <a href="{%=file.url%}" title="{%=file.name%}" data-gallery="{%=file.thumbnail_url&&'gallery'%}" download="{%=file.name%}">{%=file.name%}</a>
-        </td>
-        <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
-        <td colspan="2"></td>
-        {% } %}
-        <td>
-            <button class="btn btn-danger btn-sm delete" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}"{% if (file.delete_with_credentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
-            <i class="icon-trash"></i>
-            <span>Delete</span>
-            </button>
-        </td>
-    </tr>
-    {% } %}
-</script>
 
 <script type="text/template" id="settings-template">
     <div class="setting clearfix">
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-sm btn-inverse <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-sm btn-inverse <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-sm btn-inverse <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-sm btn-inverse <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-sm btn-inverse <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-sm btn-inverse <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
         </div>
     </div>
 </script>
@@ -480,14 +342,14 @@
         <% if (auto) {%>
             <button type="button"
                     data-value="icons"
-                    class="btn-icons btn btn-inverse btn-sm">Icons</button>
+                    class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-inverse btn-sm">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
         <%} else {%>
             <button type="button"
                     data-value="auto"
-                    class="btn btn-inverse btn-sm">Auto</button>
+                    class="btn btn-transparent btn-sm">Auto</button>
         <% } %>
 </script>
 

@@ -2,7 +2,7 @@ var lineResize,
     lineChart;
 function lineChartOperaHack(){
     //lineChart is somehow not rendered correctly after updates. Need to reupdate
-    if ($.browser.opera){
+    if (navigator.userAgent.indexOf("Opera")){
         clearTimeout(lineResize);
         lineResize = setTimeout(lineChart.update, 300);
     }
