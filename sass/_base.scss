@@ -483,6 +483,7 @@ input.parsley-error{
     margin: 0 -12px;
     cursor: pointer;
     height: 50px;
+    @include transition(background-color .2s ease-out);
 
     &:hover{
       background: $backgroundAddition;
