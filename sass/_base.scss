@@ -466,14 +466,22 @@ input.parsley-error{
 }
 
 /***********************************/
-/**          USERS LIST           **/
+/**          NEWS LIST           **/
 /**********************************/
+/**
+ * Legacy .users-list. Will be removed in next release.
+ */
 
+.news-list,
 .users-list{
 
-  &.user-list-no-hover li:hover{
+  &.news-list-no-hover li:hover{
     background: none;
     cursor: default;
+  }
+
+  &.stretchable > li{
+    height: auto;
   }
 
   li{
@@ -494,12 +502,21 @@ input.parsley-error{
     }
   }
 
-  img{
+  img,
+  .icon{
+    float: left;
     height: 50px;
     width: 50px;
   }
 
-  .user-info{
+  .icon{
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .news-item-info{
     margin-left: 62px; /*50 + 12px padding*/
   }
 
@@ -507,7 +524,12 @@ input.parsley-error{
     line-height: 16px;
   }
 
+  h4.name{
+    text-transform: none;
+  }
+
   .name{
+    margin: 0;
     text-transform: uppercase;
 
     a{
@@ -516,6 +538,12 @@ input.parsley-error{
         color: $link-color;
       }
     }
+  }
+
+  p{
+    margin-top: 5px;
+    font-size: 90%;
+    line-height: 1.4;
   }
 
   .time{
@@ -2377,4 +2405,20 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 .background-lime{
   background: $lime;
   color: white;
+}
+
+.loader{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  .spinner{
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    font-size: 20px;
+  }
 }
