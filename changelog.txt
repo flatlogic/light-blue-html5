@@ -1,6 +1,7 @@
 V1.6
 - Bootstrap components page
 - Live Grid
+- List Groups
 - jquery 2.0, lib updates
 - Font Awesome 4.0.3
 
@@ -8,11 +9,12 @@ Files changed:
  html:
   * --new-- grid_live.html
   * --new-- component_bootstrap.html
+  * --new-- component_list_groups.html
  styles:
   * sass/_base
   * sass/_bootstrap-override
   * sass/_responsive
-  * sass/lib/_animate
+  * --new-- sass/lib/_nestable
  js:
    * inbox.js
    * stats.js
