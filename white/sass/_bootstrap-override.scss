@@ -520,6 +520,32 @@ textarea,
   @include box-shadow($widget-shadow);
 }
 
+/***************************/
+/*        List Groups      */
+/***************************/
+
+.list-group{
+  margin-bottom: 0;
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  }
+}
+
+.list-group-item{
+  border: none;
+  @include transition(background-color .2s ease-out);
+
+  + .list-group-item{
+    border-top: 1px solid $background-addition;
+  }
+
+  > .icon-chevron-right{
+    margin-top: 3px;
+    margin-left: 6px;
+    color: darken($text-color, 5%);
+  }
+}
+
 /***********************************/
 /**            Progress           **/
 /**********************************/
