@@ -15,7 +15,7 @@ $(function(){
         $sidebarSettings = $("#sidebar-settings"),
         settingsState = JSON.parse(localStorage.getItem("lb-white-settings-state")) || {
             sidebar: 'left',
-            background: 'light',
+            background: 'dark',
             sidebarState: 'auto',
             displaySidebar: true
         },
