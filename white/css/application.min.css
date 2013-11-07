@@ -14083,9 +14083,25 @@ table.table thead .sorting_desc_disabled {
 }
 
 /***********************************/
-/**          SLIMSCROLL OVERRIDE  **/
+/**           LIVE GRID           **/
 /**********************************/
 /* line 2030, D:/projects/admin/white/sass/_base.scss */
+.widget-container {
+  min-height: 30px;
+}
+
+/* line 2034, D:/projects/admin/white/sass/_base.scss */
+.widget-placeholder {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/***********************************/
+/**          SLIMSCROLL OVERRIDE  **/
+/**********************************/
+/* line 2043, D:/projects/admin/white/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -14097,77 +14113,77 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 2038, D:/projects/admin/white/sass/_base.scss */
+/* line 2051, D:/projects/admin/white/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 2042, D:/projects/admin/white/sass/_base.scss */
+/* line 2055, D:/projects/admin/white/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 2046, D:/projects/admin/white/sass/_base.scss */
+/* line 2059, D:/projects/admin/white/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 2050, D:/projects/admin/white/sass/_base.scss */
+/* line 2063, D:/projects/admin/white/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 2054, D:/projects/admin/white/sass/_base.scss */
+/* line 2067, D:/projects/admin/white/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 2058, D:/projects/admin/white/sass/_base.scss */
+/* line 2071, D:/projects/admin/white/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 2062, D:/projects/admin/white/sass/_base.scss */
+/* line 2075, D:/projects/admin/white/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 2066, D:/projects/admin/white/sass/_base.scss */
+/* line 2079, D:/projects/admin/white/sass/_base.scss */
 .visible-phone-landscape {
   display: none !important;
 }
 
-/* line 2074, D:/projects/admin/white/sass/_base.scss */
+/* line 2087, D:/projects/admin/white/sass/_base.scss */
 .background-danger {
   background: #e5603b;
   color: white;
 }
 
-/* line 2079, D:/projects/admin/white/sass/_base.scss */
+/* line 2092, D:/projects/admin/white/sass/_base.scss */
 .background-warning {
   background: #eac85e;
   color: white;
 }
 
-/* line 2084, D:/projects/admin/white/sass/_base.scss */
+/* line 2097, D:/projects/admin/white/sass/_base.scss */
 .background-success {
   background: #56bc76;
   color: white;
 }
 
-/* line 2089, D:/projects/admin/white/sass/_base.scss */
+/* line 2102, D:/projects/admin/white/sass/_base.scss */
 .background-primary {
   background: #618fb0;
   color: white;
 }
 
-/* line 2094, D:/projects/admin/white/sass/_base.scss */
+/* line 2107, D:/projects/admin/white/sass/_base.scss */
 .background-info {
   background: #4ab0ce;
   color: white;
 }
 
-/* line 2099, D:/projects/admin/white/sass/_base.scss */
+/* line 2112, D:/projects/admin/white/sass/_base.scss */
 .background-lime {
   background: #8cbf26;
   color: white;

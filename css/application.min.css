@@ -19426,9 +19426,22 @@ table.table thead .sorting_desc_disabled {
 }
 
 /***********************************/
-/**      SLIMSCROLL OVERRIDE      **/
+/**           LIVE GRID           **/
 /**********************************/
 /* line 2294, D:/projects/admin/sass/_base.scss */
+.widget-container {
+  min-height: 30px;
+}
+
+/* line 2298, D:/projects/admin/sass/_base.scss */
+.widget-placeholder {
+  background: rgba(51, 51, 51, 0.2);
+}
+
+/***********************************/
+/**      SLIMSCROLL OVERRIDE      **/
+/**********************************/
+/* line 2306, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -19440,77 +19453,77 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 2302, D:/projects/admin/sass/_base.scss */
+/* line 2314, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 2306, D:/projects/admin/sass/_base.scss */
+/* line 2318, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 2310, D:/projects/admin/sass/_base.scss */
+/* line 2322, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 2314, D:/projects/admin/sass/_base.scss */
+/* line 2326, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 2318, D:/projects/admin/sass/_base.scss */
+/* line 2330, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 2322, D:/projects/admin/sass/_base.scss */
+/* line 2334, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 2326, D:/projects/admin/sass/_base.scss */
+/* line 2338, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 2330, D:/projects/admin/sass/_base.scss */
+/* line 2342, D:/projects/admin/sass/_base.scss */
 .visible-phone-landscape {
   display: none !important;
 }
 
-/* line 2338, D:/projects/admin/sass/_base.scss */
+/* line 2350, D:/projects/admin/sass/_base.scss */
 .background-danger {
   background: #e5603b;
   color: white;
 }
 
-/* line 2343, D:/projects/admin/sass/_base.scss */
+/* line 2355, D:/projects/admin/sass/_base.scss */
 .background-warning {
   background: #eac85e;
   color: white;
 }
 
-/* line 2348, D:/projects/admin/sass/_base.scss */
+/* line 2360, D:/projects/admin/sass/_base.scss */
 .background-success {
   background: #56bc76;
   color: white;
 }
 
-/* line 2353, D:/projects/admin/sass/_base.scss */
+/* line 2365, D:/projects/admin/sass/_base.scss */
 .background-primary {
   background: #618fb0;
   color: white;
 }
 
-/* line 2358, D:/projects/admin/sass/_base.scss */
+/* line 2370, D:/projects/admin/sass/_base.scss */
 .background-info {
   background: #4ab0ce;
   color: white;
 }
 
-/* line 2363, D:/projects/admin/sass/_base.scss */
+/* line 2375, D:/projects/admin/sass/_base.scss */
 .background-lime {
   background: #8cbf26;
   color: white;
