@@ -1,3 +1,4 @@
+@charset "IBM866";
 @import url(../lib/nvd3/src/nv.d3.css);
 @import url(./fontello/css/fontello.css);
 @font-face {
@@ -18705,6 +18706,246 @@ body {
   animation-duration: 0.25s;
 }
 
+/**
+ * Nestable
+ */
+/* line 5, D:/projects/admin/sass/lib/_nestable.scss */
+.dd {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+  list-style: none;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* line 16, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-list {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 24, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-list .dd-list {
+  padding-left: 30px;
+}
+
+/* line 28, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-collapsed .dd-list {
+  display: none;
+}
+
+/* line 34, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-item,
+.dd-empty,
+.dd-placeholder {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 20px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* line 44, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-handle {
+  display: block;
+  height: 30px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  color: #f8f8f8;
+  text-decoration: none;
+  background: rgba(51, 51, 51, 0.4);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 56, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-item > button {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  width: 25px;
+  height: 20px;
+  margin: 5px 0;
+  padding: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #f8f8f8;
+}
+
+/* line 77, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-item > button:before {
+  content: '+';
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  text-indent: 0;
+}
+
+/* line 86, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-item > button[data-action="collapse"]:before {
+  content: '-';
+}
+
+/* line 91, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-placeholder,
+.dd-empty {
+  margin: 5px 0;
+  padding: 0;
+  min-height: 30px;
+  background: rgba(51, 51, 51, 0.2);
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* line 101, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-empty {
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  min-height: 100px;
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+/* line 108, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-dragel {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* line 114, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-dragel > .dd-item .dd-handle {
+  margin-top: 0;
+}
+
+/* line 118, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-dragel .dd-handle {
+  -webkit-box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+/**
+ * Nestable Extras
+ */
+/* line 127, D:/projects/admin/sass/lib/_nestable.scss */
+.nestable-lists {
+  display: block;
+  clear: both;
+  padding: 30px 0;
+  width: 100%;
+  border: 0;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+
+@media only screen and (min-width: 700px) {
+  /* line 138, D:/projects/admin/sass/lib/_nestable.scss */
+  .dd + .dd {
+    margin-left: 2%;
+  }
+}
+/* line 144, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-hover > .dd-handle {
+  background: #2ea8e5 !important;
+}
+
+/**
+ * Nestable Draggable Handles
+ */
+/* line 152, D:/projects/admin/sass/lib/_nestable.scss */
+.dd3-content {
+  display: block;
+  height: 30px;
+  margin: 5px 0;
+  padding: 5px 10px 5px 40px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  background: -webkit-linear-gradient(top, #fafafa 0%, #eeeeee 100%);
+  background: -moz-linear-gradient(top, #fafafa 0%, #eeeeee 100%);
+  background: linear-gradient(top, #fafafa 0%, #eeeeee 100%);
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* line 171, D:/projects/admin/sass/lib/_nestable.scss */
+.dd3-content:hover {
+  color: #2ea8e5;
+  background: #fff;
+}
+
+/* line 176, D:/projects/admin/sass/lib/_nestable.scss */
+.dd-dragel > .dd3-item > .dd3-content {
+  margin: 0;
+}
+
+/* line 180, D:/projects/admin/sass/lib/_nestable.scss */
+.dd3-item > button {
+  margin-left: 30px;
+}
+
+/* line 184, D:/projects/admin/sass/lib/_nestable.scss */
+.dd3-handle {
+  position: absolute;
+  margin: 0;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  width: 30px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  background: #ddd;
+  background: -webkit-linear-gradient(top, #dddddd 0%, #bbbbbb 100%);
+  background: -moz-linear-gradient(top, #dddddd 0%, #bbbbbb 100%);
+  background: linear-gradient(top, #dddddd 0%, #bbbbbb 100%);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* line 203, D:/projects/admin/sass/lib/_nestable.scss */
+.dd3-handle:before {
+  content: '≡';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 100%;
+  text-align: center;
+  text-indent: 0;
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+/* line 217, D:/projects/admin/sass/lib/_nestable.scss */
+.dd3-handle:hover {
+  background: #ddd;
+}
+
 /* line 1, D:/projects/admin/sass/_svg.scss */
 .stat-widget header .nvd3.nv-multibar .nv-group {
   fill-opacity: 1 !important;
@@ -21693,15 +21934,15 @@ table.table thead .sorting_desc_disabled {
 /* line 2339, D:/projects/admin/sass/_base.scss */
 .widget-placeholder {
   background: rgba(51, 51, 51, 0.2);
-  border: 2px dashed rgba(255, 255, 255, 0.6);
-  margin: -2px -2px 28px -2px;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  margin: -1px -1px 29px -1px;
 }
 
 /* line 2345, D:/projects/admin/sass/_base.scss */
 .list-group-item-placeholder {
   background: rgba(51, 51, 51, 0.2);
-  border: 2px dashed rgba(255, 255, 255, 0.6);
-  margin: -2px;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  margin: -1px;
 }
 
 /***********************************/
