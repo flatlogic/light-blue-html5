@@ -2159,3 +2159,11 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     font-size: 20px;
   }
 }
+
+.attention{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  @include border-radius(50%);
+}
