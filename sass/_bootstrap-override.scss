@@ -732,6 +732,13 @@ a.thumbnail:focus {
   .widget > &{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
   }
+  .widget .body > &{
+    margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+
+    .list-group-item:first-child{
+      border-top: 1px solid $backgroundAddition;
+    }
+  }
 }
 
 .list-group-item{
