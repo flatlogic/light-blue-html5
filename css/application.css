@@ -5758,8 +5758,8 @@ a.thumbnail:focus {
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
-  background-color: transparent;
-  border: 1px solid rgba(51, 51, 51, 0.25);
+  background-color: rgba(51, 51, 51, 0.4);
+  border: 1px solid transparent;
 }
 /* line 27, D:/projects/admin/sass/bootstrap-original/_list-group.scss */
 .list-group-item:first-child {
@@ -8500,37 +8500,52 @@ a.thumbnail:focus {
   border: none;
 }
 
+/* line 726, D:/projects/admin/sass/_bootstrap-override.scss */
+.close {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  text-shadow: none;
+}
+
 /***************************/
 /*        List Groups      */
 /***************************/
-/* line 730, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 735, D:/projects/admin/sass/_bootstrap-override.scss */
 .list-group {
   margin-bottom: 0;
 }
-/* line 732, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 737, D:/projects/admin/sass/_bootstrap-override.scss */
 .widget > .list-group {
   margin: -10px -12px;
 }
-/* line 735, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 740, D:/projects/admin/sass/_bootstrap-override.scss */
 .widget .body > .list-group {
   margin: 0 -12px -10px;
 }
-/* line 738, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 743, D:/projects/admin/sass/_bootstrap-override.scss */
 .widget .body > .list-group .list-group-item:first-child {
   border-top: 1px solid rgba(51, 51, 51, 0.25);
 }
 
-/* line 744, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 749, D:/projects/admin/sass/_bootstrap-override.scss */
 .list-group-item {
   border: none;
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
-/* line 748, D:/projects/admin/sass/_bootstrap-override.scss */
-.list-group-item + .list-group-item {
+/* line 753, D:/projects/admin/sass/_bootstrap-override.scss */
+.widget .list-group-item {
+  background: none;
+}
+/* line 755, D:/projects/admin/sass/_bootstrap-override.scss */
+.widget .list-group-item + .list-group-item {
   border-top: 1px solid rgba(51, 51, 51, 0.25);
 }
-/* line 752, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 761, D:/projects/admin/sass/_bootstrap-override.scss */
+.list-group-outer .list-group-item + .list-group-item {
+  margin-top: 10px;
+}
+/* line 766, D:/projects/admin/sass/_bootstrap-override.scss */
 .list-group-item > .fa-chevron-right {
   margin-top: 3px;
   margin-left: 6px;
@@ -8540,7 +8555,7 @@ a.thumbnail:focus {
 /***************************/
 /*         Progress        */
 /***************************/
-/* line 764, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 778, D:/projects/admin/sass/_bootstrap-override.scss */
 .progress {
   background: rgba(0, 0, 0, 0.15);
 }
@@ -8548,72 +8563,72 @@ a.thumbnail:focus {
 /***************************/
 /*          Panels         */
 /***************************/
-/* line 772, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 786, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel-heading {
   padding: 0;
 }
-/* line 775, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 789, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel-heading > .accordion-toggle {
   display: block;
   padding: 8px 15px;
 }
 
-/* line 783, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 797, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel-group .panel-heading + .panel-collapse .panel-body {
   border-top: 1px solid rgba(51, 51, 51, 0.25);
 }
-/* line 788, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel-group .panel-footer + .panel-collapse .panel-body {
   border-bottom: 1px solid rgba(51, 51, 51, 0.25);
 }
 
-/* line 794, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 808, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel {
   border: none;
   background-color: rgba(51, 51, 51, 0.25);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(1n) .panel-heading {
   border-left: 5px solid #e5603b;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(2n) .panel-heading {
   border-left: 5px solid #eac85e;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(3n) .panel-heading {
   border-left: 5px solid #8cbf26;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(4n) .panel-heading {
   border-left: 5px solid #56bc76;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(5n) .panel-heading {
   border-left: 5px solid #4ab0ce;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(6n) .panel-heading {
   border-left: 5px solid #618fb0;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(7n) .panel-heading {
   border-left: 5px solid #a05000;
 }
-/* line 802, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 816, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel:nth-child(8n) .panel-heading {
   border-left: 5px solid #d04f4f;
 }
-/* line 808, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 822, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel .panel-heading a {
   color: #f8f8f8;
   font-weight: 300;
   color: white;
 }
 
-/* line 814, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 828, D:/projects/admin/sass/_bootstrap-override.scss */
 .panel-body {
   border-top-color: rgba(51, 51, 51, 0.25);
 }
@@ -8621,16 +8636,16 @@ a.thumbnail:focus {
 /***************************/
 /*        Carousel         */
 /***************************/
-/* line 823, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 837, D:/projects/admin/sass/_bootstrap-override.scss */
 .widget > .carousel {
   margin: 0 -12px 5px;
 }
 
-/* line 829, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 843, D:/projects/admin/sass/_bootstrap-override.scss */
 .carousel-control.left, .carousel-control.right {
   background: none;
 }
-/* line 832, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 846, D:/projects/admin/sass/_bootstrap-override.scss */
 .carousel-control i {
   position: absolute;
   top: 50%;
@@ -8643,11 +8658,11 @@ a.thumbnail:focus {
   margin-top: -10px;
 }
 
-/* line 846, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 860, D:/projects/admin/sass/_bootstrap-override.scss */
 .carousel-indicators.outer {
   bottom: -10px;
 }
-/* line 849, D:/projects/admin/sass/_bootstrap-override.scss */
+/* line 863, D:/projects/admin/sass/_bootstrap-override.scss */
 .carousel-indicators li {
   background-color: rgba(51, 51, 51, 0.4);
 }
@@ -21682,10 +21697,17 @@ table.table thead .sorting_desc_disabled {
   margin: -2px -2px 28px -2px;
 }
 
+/* line 2345, D:/projects/admin/sass/_base.scss */
+.list-group-item-placeholder {
+  background: rgba(51, 51, 51, 0.2);
+  border: 2px dashed rgba(255, 255, 255, 0.6);
+  margin: -2px;
+}
+
 /***********************************/
 /**      SLIMSCROLL OVERRIDE      **/
 /**********************************/
-/* line 2349, D:/projects/admin/sass/_base.scss */
+/* line 2355, D:/projects/admin/sass/_base.scss */
 .slimScrollBar {
   -webkit-border-radius: 1px !important;
   -moz-border-radius: 1px !important;
@@ -21697,83 +21719,83 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 2357, D:/projects/admin/sass/_base.scss */
+/* line 2363, D:/projects/admin/sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 2361, D:/projects/admin/sass/_base.scss */
+/* line 2367, D:/projects/admin/sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 2365, D:/projects/admin/sass/_base.scss */
+/* line 2371, D:/projects/admin/sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 2369, D:/projects/admin/sass/_base.scss */
+/* line 2375, D:/projects/admin/sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 2373, D:/projects/admin/sass/_base.scss */
+/* line 2379, D:/projects/admin/sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 2377, D:/projects/admin/sass/_base.scss */
+/* line 2383, D:/projects/admin/sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 2381, D:/projects/admin/sass/_base.scss */
+/* line 2387, D:/projects/admin/sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 2385, D:/projects/admin/sass/_base.scss */
+/* line 2391, D:/projects/admin/sass/_base.scss */
 .visible-phone-landscape {
   display: none !important;
 }
 
-/* line 2393, D:/projects/admin/sass/_base.scss */
+/* line 2399, D:/projects/admin/sass/_base.scss */
 .background-danger {
   background: #e5603b;
   color: white;
 }
 
-/* line 2398, D:/projects/admin/sass/_base.scss */
+/* line 2404, D:/projects/admin/sass/_base.scss */
 .background-warning {
   background: #eac85e;
   color: white;
 }
 
-/* line 2403, D:/projects/admin/sass/_base.scss */
+/* line 2409, D:/projects/admin/sass/_base.scss */
 .background-success {
   background: #56bc76;
   color: white;
 }
 
-/* line 2408, D:/projects/admin/sass/_base.scss */
+/* line 2414, D:/projects/admin/sass/_base.scss */
 .background-primary {
   background: #618fb0;
   color: white;
 }
 
-/* line 2413, D:/projects/admin/sass/_base.scss */
+/* line 2419, D:/projects/admin/sass/_base.scss */
 .background-info {
   background: #4ab0ce;
   color: white;
 }
 
-/* line 2418, D:/projects/admin/sass/_base.scss */
+/* line 2424, D:/projects/admin/sass/_base.scss */
 .background-lime {
   background: #8cbf26;
   color: white;
 }
 
-/* line 2423, D:/projects/admin/sass/_base.scss */
+/* line 2429, D:/projects/admin/sass/_base.scss */
 .loader {
   position: absolute;
   top: 0;
@@ -21782,7 +21804,7 @@ table.table thead .sorting_desc_disabled {
   right: 0;
   text-align: center;
 }
-/* line 2431, D:/projects/admin/sass/_base.scss */
+/* line 2437, D:/projects/admin/sass/_base.scss */
 .loader .spinner {
   position: absolute;
   top: 50%;
@@ -21790,7 +21812,7 @@ table.table thead .sorting_desc_disabled {
   font-size: 20px;
 }
 
-/* line 2439, D:/projects/admin/sass/_base.scss */
+/* line 2445, D:/projects/admin/sass/_base.scss */
 .attention {
   display: inline-block;
   width: 8px;

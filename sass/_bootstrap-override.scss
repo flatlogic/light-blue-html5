@@ -723,6 +723,11 @@ a.thumbnail:focus {
   border: none;
 }
 
+.close{
+  @include transition(opacity .2s ease-out);
+  text-shadow: none;
+}
+
 /***************************/
 /*        List Groups      */
 /***************************/
@@ -745,8 +750,17 @@ a.thumbnail:focus {
   border: none;
   @include transition(background-color .2s ease-out);
 
-  + .list-group-item{
-    border-top: 1px solid $backgroundAddition;
+  .widget &{
+    background: none;
+    + .list-group-item{
+      border-top: 1px solid $backgroundAddition;
+    }
+  }
+
+  .list-group-outer &{
+    + .list-group-item{
+      margin-top: 10px;
+    }
   }
 
   > .fa-chevron-right{

@@ -520,6 +520,11 @@ textarea,
   @include box-shadow($widget-shadow);
 }
 
+.close{
+  @include transition(opacity .2s ease-out);
+  text-shadow: none;
+}
+
 /***************************/
 /*        List Groups      */
 /***************************/
@@ -542,8 +547,18 @@ textarea,
   border: none;
   @include transition(background-color .2s ease-out);
 
-  + .list-group-item{
-    border-top: 1px solid $background-addition;
+  .widget &{
+    background: none;
+    + .list-group-item{
+      border-top: 1px solid $background-addition;
+    }
+  }
+
+  .list-group-outer &{
+    @include box-shadow($widget-shadow);
+    + .list-group-item{
+      margin-top: 10px;
+    }
   }
 
   > .fa-chevron-right{

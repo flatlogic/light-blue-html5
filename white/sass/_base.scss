@@ -2079,6 +2079,13 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   margin: -2px -2px ($box-margin-bottom - 2px) -2px;
 }
 
+.list-group-item-placeholder{
+  background:  rgba($widget-background, .2);
+  @include box-shadow(none !important);
+  border: 2px dashed rgba(white, .6);
+  margin: -2px;
+}
+
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
