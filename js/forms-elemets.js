@@ -7,7 +7,7 @@ $(function(){
 
     $('.selectpicker').selectpicker();
     //selectpicker doesn't seem to be flexible enough (can't change template), so need to replace span.caret externally
-    $('.selectpicker + .bootstrap-select span.caret').replaceWith("<i class='icon-caret-down'></i>");
+    $('.selectpicker + .bootstrap-select span.caret').replaceWith("<i class='fa fa-caret-down'></i>");
     $('.selectpicker + .bootstrap-select span.pull-left').removeClass("pull-left");
 
     $(".autogrow").autogrow();
@@ -16,7 +16,7 @@ $(function(){
         "font-styles": function(locale) {
             return "<li class='dropdown'>" +
                 "<a class='btn btn-sm btn-inverse dropdown-toggle' data-toggle='dropdown' href='#'>" +
-                "<i class='icon-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;&nbsp;<i class='icon-caret-down'></i>" +
+                "<i class='fa fa-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;&nbsp;<i class='fa fa-caret-down'></i>" +
                 "</a>" +
                 "<ul class='dropdown-menu'>" +
                 "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>" + locale.font_styles.normal + "</a></li>" +
@@ -31,8 +31,8 @@ $(function(){
         "emphasis":  function(locale) {
             return "<li>" +
                 "<div class='btn-group'>"
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='bold' title='CTRL+B'><i class='icon-bold'></i></a>"
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='italic' title='CTRL+I'><i class='icon-italic'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='bold' title='CTRL+B'><i class='fa fa-bold'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='italic' title='CTRL+I'><i class='fa fa-italic'></i></a>"
                 //,+ "<a class='btn' data-wysihtml5-command='underline' title='CTRL+U'>Underline</a>"
                 + "</div>"
                 + "</li>"
@@ -40,10 +40,10 @@ $(function(){
         "lists": function(locale) {
             return "<li>"
                 + "<div class='btn-group'>"
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='icon-list'></i></a>"
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='icon-th-list'></i></a>"
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='icon-indent-right'></i></a>"
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='icon-indent-left'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='fa fa-list'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='fa fa-th-list'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='fa fa-outdent'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='fa fa-indent'></i></a>"
                 + "</div>"
                 + "</li>"
         },
@@ -65,7 +65,7 @@ $(function(){
                 + "</div>"
                 + "</div>"
 
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='icon-share'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='fa fa-share'></i></a>"
 
                 + "</li>"
         },
@@ -87,7 +87,7 @@ $(function(){
                 + "</div>"
                 + "</div>"
 
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='icon-picture'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='fa fa-picture-o'></i></a>"
 
                 + "</li>"
         },
@@ -95,7 +95,7 @@ $(function(){
         "html": function(locale) {
             return "<li>"
                 + "<div class='btn-group'>"
-                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='icon-pencil'></i></a>"
+                + "<a class='btn btn-sm btn-inverse ' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='fa fa-pencil'></i></a>"
                 + "</div>"
                 + "</li>"
         }

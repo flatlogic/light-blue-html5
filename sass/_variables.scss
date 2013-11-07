@@ -47,6 +47,12 @@ $sidebarActiveColor: $backgroundAddition;
 $sidebarSubMenuActiveColor: darken($sidebarActiveColor, 15%);
 $transparentBackground: rgba($backgroundGray, .4);
 
+/////////////////////////////////////////////////
+//              Font Awesome vars              //
+/////////////////////////////////////////////////
+
+$fa-font-path: "./fonts/font-awesome";
+
 // Horizontal forms & lists
 // -------------------------
 $horizontalComponentOffset:       180px !default;
@@ -248,7 +254,7 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
       padding: 8px 16px;
       text-align: center;
 
-      i[class*=icon]{
+      i[class*=fa]{
         margin-right: 0;
         float: none;
       }

@@ -51,6 +51,12 @@ $transparentBackground: rgba(white, .4);
 $box-shadow-header: 0 0 2px rgba(0,0,0,.3);
 $text-shadow-header: 0 0 3px rgba(0,0,0,.3);
 
+/////////////////////////////////////////////////
+//              Font Awesome vars              //
+/////////////////////////////////////////////////
+
+$fa-font-path: "./fonts/font-awesome";
+
 // Horizontal forms & lists
 // -------------------------
 $horizontalComponentOffset:       180px !default;
@@ -208,7 +214,7 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
       padding: 8px 16px;
       text-align: center;
 
-      i[class*=icon]{
+      i[class*=fa]{
         margin-right: 0;
         float: none;
       }
