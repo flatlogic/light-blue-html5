@@ -1,6 +1,8 @@
 Light Blue v1.6 (November 7)
 =========
 
+Now in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!
+
 Light Blue is a **next generation** admin dashboard template based on the latest **Flat** design. There are few reasons why we have created it:.
 
   - We didn't like the darkness of most of admin templates, so we created this **light** one.
@@ -15,7 +17,7 @@ New Version 1.6 Released!
 - Bootstrap components page
 - Draggable Grid
 - List Groups
-- jquery 2.0, lib updates
+- Jquery 2.0, lib updates
 - Font Awesome 4.0.3
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
@@ -24,7 +26,7 @@ New Version 1.6 Released!
 Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let me know!
-Email me at [philip.daineka@gmail.com](mailto:philip.daineka@gmail.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). I will do my best to help you.
+Email us at [contact@icedmint.com](mailto:contact@icedmint.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). I will do my best to help you.
 
 Changelog
 -
