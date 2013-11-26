@@ -58,6 +58,10 @@ function closeNavigation(){
     $accordion.collapse('hide');
     $accordion.siblings(".accordion-toggle").addClass("collapsed");
     resetContentMargin();
+    var $sidebar = $('#sidebar');
+    if ($(window).width() < 768 && $sidebar.is('.in')){
+        $sidebar.collapse('hide');
+    }
 }
 
 function resetContentMargin(){
@@ -144,20 +148,21 @@ $(function(){
         notificationsPresent && $notifications.css('top', '');
     });
 
-    var INITIAL_CONTENT_MARGIN = 370;  //if changed in css change here!
-
     /*   Move content down when second-level menu opened */
     $("#side-nav").find("a.accordion-toggle").click(function(){
         if ($(window).width() < 768){
             var $this = $(this),
+                $sideNav = $('#side-nav'),
+                menuHeight = $sideNav.height() + parseInt($sideNav.css('margin-top')) + parseInt($sideNav.css('margin-bottom')),
+                contentMargin = menuHeight + 20,
                 $secondLevelMenu = $this.find("+ ul"),
-                $menuChildren = $secondLevelMenu.find("> li"),
-                menuHeight = $menuChildren.length * $menuChildren.height(),
+                $subMenuChildren = $secondLevelMenu.find("> li"),
+                subMenuHeight = $subMenuChildren.length * $subMenuChildren.height(),
                 $content = $(".content");
             if (!$secondLevelMenu.is(".in")){
-                $content.css("margin-top", INITIAL_CONTENT_MARGIN + menuHeight + 'px');
+                $content.css("margin-top", contentMargin + subMenuHeight + 'px');
             } else {
-                $content.css("margin-top", '');
+                $content.css("margin-top", contentMargin -subMenuHeight + 'px');
             }
         }
     });
@@ -165,13 +170,17 @@ $(function(){
     $sidebar.on('show.bs.collapse', function(e){
         if (e.target == this){
             if ($(window).width() < 768){
-                var $activeLink = $('#side-nav').find('> li > a.accordion-toggle:not(.collapsed)'),
+                var $sideNav = $('#side-nav'),
+                    menuHeight = $sideNav.height() + parseInt($sideNav.css('margin-top')) + parseInt($sideNav.css('margin-bottom')),
+                    contentMargin = menuHeight + 20,
+                    $activeLink = $sideNav.find('> li > a.accordion-toggle:not(.collapsed)'),
                     $secondLevelMenu = $activeLink.find("+ ul"),
-                    $menuChildren = $secondLevelMenu.find("> li"),
-                    menuHeight = $menuChildren.length * $menuChildren.height(),
+                    $subMenuChildren = $secondLevelMenu.find("> li"),
+                    subMenuHeight = $subMenuChildren.length * $subMenuChildren.height(),
                     $content = $(".content");
+                $content.css("margin-top", contentMargin + 'px');
                 if ($secondLevelMenu.is('.in')){
-                    $content.css("margin-top", INITIAL_CONTENT_MARGIN + menuHeight + 'px');
+                    $content.css("margin-top", contentMargin + subMenuHeight + 'px');
                 }
             }
         }
