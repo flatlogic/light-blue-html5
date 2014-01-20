@@ -1390,7 +1390,8 @@ input, textarea{
   margin-top: 20px;
 }
 
-.the-icons li{
+.the-icons li,
+.fontawesome-icon-list > div{
   line-height: 40px;
   i{
     @include transition(font-size .2s);
@@ -1399,6 +1400,10 @@ input, textarea{
   &:hover i{
     font-size: 26px;
   }
+}
+
+.fontawesome-icon-list i{
+  min-width: 20px;
 }
 
 .i-code{
