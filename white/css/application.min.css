@@ -11076,13 +11076,13 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 
 /* line 247, D:/projects/admin/white/sass/lib/_select2.scss */
 .select2-search input.select2-active {
-  background: white url("select2-spinner.gif") no-repeat 100%;
-  background: url("select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
-  background: url("select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, -ms-linear-gradient(top, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+  background: #fff no-repeat 100%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+  background: -ms-linear-gradient(top, white 85%, #eeeeee 99%);
+  background: linear-gradient(top, #ffffff 85%, #eeeeee 99%);
 }
 
 /* line 258, D:/projects/admin/white/sass/lib/_select2.scss */
@@ -11247,7 +11247,7 @@ disabled look for disabled choices in the results dropdown
 
 /* line 393, D:/projects/admin/white/sass/lib/_select2.scss */
 .select2-more-results.select2-active {
-  background: #f4f4f4 url("select2-spinner.gif") no-repeat 100%;
+  background: #f4f4f4 no-repeat 100%;
 }
 
 /* line 397, D:/projects/admin/white/sass/lib/_select2.scss */
@@ -11343,7 +11343,7 @@ disabled look for disabled choices in the results dropdown
 
 /* line 485, D:/projects/admin/white/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-field input.select2-active {
-  background: white url("select2-spinner.gif") no-repeat 100% !important;
+  background: #fff no-repeat 100% !important;
 }
 
 /* line 489, D:/projects/admin/white/sass/lib/_select2.scss */
@@ -12688,11 +12688,10 @@ table.fc-border-separate {
 
 /* line 38, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
 .progress-animated .bar {
-  background: url(../img/progressbar.gif) !important;
   filter: none;
 }
 
-/* line 42, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+/* line 41, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
 .fileupload-loading {
   position: absolute;
   left: 50%;
@@ -12701,46 +12700,46 @@ table.fc-border-separate {
   display: none;
 }
 
-/* line 51, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+/* line 50, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
 .fileupload-processing .fileupload-loading {
   display: block;
 }
 
 /* Fix for IE 6: */
-/* line 56, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+/* line 55, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
 * html .fileinput-button {
   line-height: 24px;
   margin: 1px -3px 0 0;
 }
 
 /* Fix for IE 7: */
-/* line 62, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+/* line 61, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
 * + html .fileinput-button {
   padding: 2px 15px;
   margin: 1px 0 0 0;
 }
 
 @media (max-width: 767px) {
-  /* line 70, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 69, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
   .fileupload-buttonbar .toggle,
   .files .toggle,
   .files .btn span {
     display: none;
   }
 
-  /* line 73, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 72, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
   .files .preview * {
     width: 40px;
   }
 
-  /* line 76, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 75, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
   .files .name * {
     width: 80px;
     display: inline-block;
     word-wrap: break-word;
   }
 
-  /* line 81, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 80, D:/projects/admin/white/sass/lib/_jquery.fileupload-ui.scss */
   .files .progress {
     width: 20px;
   }

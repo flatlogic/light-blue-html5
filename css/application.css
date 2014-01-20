@@ -11286,13 +11286,13 @@ Version: @@ver@@ Timestamp: @@timestamp@@
 
 /* line 247, D:/projects/admin/sass/lib/_select2.scss */
 .select2-search input.select2-active {
-  background: white url("select2-spinner.gif") no-repeat 100%;
-  background: url("select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
-  background: url("select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, -ms-linear-gradient(top, white 85%, #eeeeee 99%);
-  background: url("select2-spinner.gif") no-repeat 100%, linear-gradient(top, #ffffff 85%, #eeeeee 99%);
+  background: #fff no-repeat 100%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.85, white), color-stop(0.99, #eeeeee));
+  background: -webkit-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: -moz-linear-gradient(center bottom, white 85%, #eeeeee 99%);
+  background: -o-linear-gradient(bottom, white 85%, #eeeeee 99%);
+  background: -ms-linear-gradient(top, white 85%, #eeeeee 99%);
+  background: linear-gradient(top, #ffffff 85%, #eeeeee 99%);
 }
 
 /* line 258, D:/projects/admin/sass/lib/_select2.scss */
@@ -11457,7 +11457,7 @@ disabled look for disabled choices in the results dropdown
 
 /* line 393, D:/projects/admin/sass/lib/_select2.scss */
 .select2-more-results.select2-active {
-  background: #f4f4f4 url("select2-spinner.gif") no-repeat 100%;
+  background: #f4f4f4 no-repeat 100%;
 }
 
 /* line 397, D:/projects/admin/sass/lib/_select2.scss */
@@ -11553,7 +11553,7 @@ disabled look for disabled choices in the results dropdown
 
 /* line 485, D:/projects/admin/sass/lib/_select2.scss */
 .select2-container-multi .select2-choices .select2-search-field input.select2-active {
-  background: white url("select2-spinner.gif") no-repeat 100% !important;
+  background: #fff no-repeat 100% !important;
 }
 
 /* line 489, D:/projects/admin/sass/lib/_select2.scss */
@@ -12898,11 +12898,10 @@ table.fc-border-separate {
 
 /* line 38, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 .progress-animated .bar {
-  background: url(../img/progressbar.gif) !important;
   filter: none;
 }
 
-/* line 42, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+/* line 41, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 .fileupload-loading {
   position: absolute;
   left: 50%;
@@ -12911,46 +12910,46 @@ table.fc-border-separate {
   display: none;
 }
 
-/* line 51, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+/* line 50, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 .fileupload-processing .fileupload-loading {
   display: block;
 }
 
 /* Fix for IE 6: */
-/* line 56, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+/* line 55, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 * html .fileinput-button {
   line-height: 24px;
   margin: 1px -3px 0 0;
 }
 
 /* Fix for IE 7: */
-/* line 62, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+/* line 61, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
 * + html .fileinput-button {
   padding: 2px 15px;
   margin: 1px 0 0 0;
 }
 
 @media (max-width: 767px) {
-  /* line 70, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 69, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .fileupload-buttonbar .toggle,
   .files .toggle,
   .files .btn span {
     display: none;
   }
 
-  /* line 73, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 72, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .files .preview * {
     width: 40px;
   }
 
-  /* line 76, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 75, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .files .name * {
     width: 80px;
     display: inline-block;
     word-wrap: break-word;
   }
 
-  /* line 81, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
+  /* line 80, D:/projects/admin/sass/lib/_jquery.fileupload-ui.scss */
   .files .progress {
     width: 20px;
   }
@@ -22312,18 +22311,18 @@ table.table thead .sorting_desc_disabled {
     width: auto;
   }
 
-  /* line 166, D:/projects/admin/sass/_responsive.scss */
+  /* line 162, D:/projects/admin/sass/_responsive.scss */
   .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 171, D:/projects/admin/sass/_responsive.scss */
+  /* line 167, D:/projects/admin/sass/_responsive.scss */
   .nv-controlsWrap {
     display: none;
   }
 
-  /* line 180, D:/projects/admin/sass/_responsive.scss */
+  /* line 176, D:/projects/admin/sass/_responsive.scss */
   .logo,
   .sidebar-on-right .logo,
   .sidebar-hidden .logo,
@@ -22338,51 +22337,51 @@ table.table thead .sorting_desc_disabled {
     top: 4px;
   }
 
-  /* line 189, D:/projects/admin/sass/_responsive.scss */
+  /* line 185, D:/projects/admin/sass/_responsive.scss */
   .modal-body {
     max-height: 240px;
   }
 
-  /* line 193, D:/projects/admin/sass/_responsive.scss */
+  /* line 189, D:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 402px;
   }
 
-  /* line 197, D:/projects/admin/sass/_responsive.scss */
+  /* line 193, D:/projects/admin/sass/_responsive.scss */
   .widget-404 {
     padding: 0;
   }
-  /* line 199, D:/projects/admin/sass/_responsive.scss */
+  /* line 195, D:/projects/admin/sass/_responsive.scss */
   .widget-404 .body {
     margin-top: 0;
   }
 
-  /* line 204, D:/projects/admin/sass/_responsive.scss */
+  /* line 200, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 207, D:/projects/admin/sass/_responsive.scss */
+  /* line 203, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
     width: 285px;
   }
 
-  /* line 212, D:/projects/admin/sass/_responsive.scss */
+  /* line 208, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container.error-page {
     margin-top: -170px;
   }
 
-  /* line 217, D:/projects/admin/sass/_responsive.scss */
+  /* line 213, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages,
   .navbar .nav > li > .dropdown-menu.support {
     margin-right: -68px;
   }
-  /* line 220, D:/projects/admin/sass/_responsive.scss */
+  /* line 216, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages:after,
   .navbar .nav > li > .dropdown-menu.support:after {
     right: 85px;
   }
 
-  /* line 225, D:/projects/admin/sass/_responsive.scss */
+  /* line 221, D:/projects/admin/sass/_responsive.scss */
   .notifications {
     position: absolute;
     right: 0;
@@ -22394,26 +22393,26 @@ table.table thead .sorting_desc_disabled {
     transition: top 0.3s ease;
   }
 
-  /* line 235, D:/projects/admin/sass/_responsive.scss */
+  /* line 231, D:/projects/admin/sass/_responsive.scss */
   .nav-collapse,
   .nav-collapse.collapse {
     overflow: hidden;
     height: 0;
   }
 
-  /* line 241, D:/projects/admin/sass/_responsive.scss */
+  /* line 237, D:/projects/admin/sass/_responsive.scss */
   .mailbox .folder-title {
     float: none;
   }
-  /* line 244, D:/projects/admin/sass/_responsive.scss */
+  /* line 240, D:/projects/admin/sass/_responsive.scss */
   .mailbox .form-search {
     margin-top: 10px;
   }
-  /* line 246, D:/projects/admin/sass/_responsive.scss */
+  /* line 242, D:/projects/admin/sass/_responsive.scss */
   .mailbox .form-search label {
     display: block;
   }
-  /* line 250, D:/projects/admin/sass/_responsive.scss */
+  /* line 246, D:/projects/admin/sass/_responsive.scss */
   .mailbox .form-search .input-search {
     width: 100%;
     height: 30px;
@@ -22421,50 +22420,50 @@ table.table thead .sorting_desc_disabled {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 254, D:/projects/admin/sass/_responsive.scss */
+  /* line 250, D:/projects/admin/sass/_responsive.scss */
   .mailbox .form-search .input-search:hover {
     width: 100%;
   }
 
-  /* line 261, D:/projects/admin/sass/_responsive.scss */
+  /* line 257, D:/projects/admin/sass/_responsive.scss */
   .mailbox-content {
     margin-top: 0;
   }
 
-  /* line 265, D:/projects/admin/sass/_responsive.scss */
+  /* line 261, D:/projects/admin/sass/_responsive.scss */
   .client-details {
     text-align: left;
   }
 
-  /* line 270, D:/projects/admin/sass/_responsive.scss */
+  /* line 266, D:/projects/admin/sass/_responsive.scss */
   .landing .logo {
     width: auto;
   }
-  /* line 273, D:/projects/admin/sass/_responsive.scss */
+  /* line 269, D:/projects/admin/sass/_responsive.scss */
   .landing .logo small {
     display: none;
   }
-  /* line 279, D:/projects/admin/sass/_responsive.scss */
+  /* line 275, D:/projects/admin/sass/_responsive.scss */
   .landing .features + .features {
     margin-top: 0;
   }
-  /* line 284, D:/projects/admin/sass/_responsive.scss */
+  /* line 280, D:/projects/admin/sass/_responsive.scss */
   .landing .feature {
     margin-bottom: 20px;
   }
 
-  /* line 289, D:/projects/admin/sass/_responsive.scss */
+  /* line 285, D:/projects/admin/sass/_responsive.scss */
   .carousel-landing {
     height: 215px;
     margin-bottom: -24px;
   }
-  /* line 292, D:/projects/admin/sass/_responsive.scss */
+  /* line 288, D:/projects/admin/sass/_responsive.scss */
   .carousel-landing h1 {
     font-size: 20px;
   }
 }
 @media (max-width: 480px) {
-  /* line 303, D:/projects/admin/sass/_responsive.scss */
+  /* line 299, D:/projects/admin/sass/_responsive.scss */
   .sidebar,
   .sidebar-on-right .sidebar,
   .sidebar-on-right .sidebar.sidebar-icons,
@@ -22473,88 +22472,88 @@ table.table thead .sorting_desc_disabled {
     width: 94.8718%;
   }
 
-  /* line 308, D:/projects/admin/sass/_responsive.scss */
+  /* line 304, D:/projects/admin/sass/_responsive.scss */
   .form-condensed .controls {
     margin-left: 0;
   }
 
-  /* line 314, D:/projects/admin/sass/_responsive.scss */
+  /* line 310, D:/projects/admin/sass/_responsive.scss */
   .form-horizontal .control-label {
     float: none;
     width: auto;
     padding-top: 0;
     text-align: left;
   }
-  /* line 321, D:/projects/admin/sass/_responsive.scss */
+  /* line 317, D:/projects/admin/sass/_responsive.scss */
   .form-horizontal .controls {
     margin-left: 0;
   }
-  /* line 325, D:/projects/admin/sass/_responsive.scss */
+  /* line 321, D:/projects/admin/sass/_responsive.scss */
   .form-horizontal .control-list {
     padding-top: 0;
   }
-  /* line 329, D:/projects/admin/sass/_responsive.scss */
+  /* line 325, D:/projects/admin/sass/_responsive.scss */
   .form-horizontal .form-actions {
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  /* line 335, D:/projects/admin/sass/_responsive.scss */
+  /* line 331, D:/projects/admin/sass/_responsive.scss */
   body {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 340, D:/projects/admin/sass/_responsive.scss */
+  /* line 336, D:/projects/admin/sass/_responsive.scss */
   .login-widget, .registration-widget {
     width: 260px;
   }
 
-  /* line 344, D:/projects/admin/sass/_responsive.scss */
+  /* line 340, D:/projects/admin/sass/_responsive.scss */
   .widget-404-search, .widget-404 {
     width: 260px;
   }
 
-  /* line 349, D:/projects/admin/sass/_responsive.scss */
+  /* line 345, D:/projects/admin/sass/_responsive.scss */
   .widget-404 h1 {
     font-size: 80px;
     line-height: 80px;
   }
-  /* line 354, D:/projects/admin/sass/_responsive.scss */
+  /* line 350, D:/projects/admin/sass/_responsive.scss */
   .widget-404 h3 {
     font-size: 16.25px;
     line-height: 22px;
   }
 
-  /* line 360, D:/projects/admin/sass/_responsive.scss */
+  /* line 356, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search {
     margin-top: 0;
   }
-  /* line 363, D:/projects/admin/sass/_responsive.scss */
+  /* line 359, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container .widget-404-search .search-field {
     width: 143px;
   }
 
-  /* line 368, D:/projects/admin/sass/_responsive.scss */
+  /* line 364, D:/projects/admin/sass/_responsive.scss */
   .single-widget-container.error-page {
     margin-top: -129px;
   }
 
-  /* line 372, D:/projects/admin/sass/_responsive.scss */
+  /* line 368, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages {
     margin-right: -112px;
   }
-  /* line 375, D:/projects/admin/sass/_responsive.scss */
+  /* line 371, D:/projects/admin/sass/_responsive.scss */
   .navbar .nav > li > .dropdown-menu.messages:after {
     right: 129px;
   }
 
-  /* line 380, D:/projects/admin/sass/_responsive.scss */
+  /* line 376, D:/projects/admin/sass/_responsive.scss */
   .chat-footer .btn {
     padding: 4px 0;
   }
 
-  /* line 384, D:/projects/admin/sass/_responsive.scss */
+  /* line 380, D:/projects/admin/sass/_responsive.scss */
   .page-header .navbar-form {
     margin: 10px 0 0;
     width: 100%;
@@ -22566,7 +22565,7 @@ table.table thead .sorting_desc_disabled {
     transition: height 0.3s ease;
   }
 
-  /* line 392, D:/projects/admin/sass/_responsive.scss */
+  /* line 388, D:/projects/admin/sass/_responsive.scss */
   .page-header .search-query {
     display: block;
     width: 100%;
@@ -22575,17 +22574,17 @@ table.table thead .sorting_desc_disabled {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 394, D:/projects/admin/sass/_responsive.scss */
+  /* line 390, D:/projects/admin/sass/_responsive.scss */
   .page-header .search-query:focus {
     width: 100%;
   }
 
-  /* line 399, D:/projects/admin/sass/_responsive.scss */
+  /* line 395, D:/projects/admin/sass/_responsive.scss */
   .visible-phone-landscape {
     display: block !important;
   }
 
-  /* line 403, D:/projects/admin/sass/_responsive.scss */
+  /* line 399, D:/projects/admin/sass/_responsive.scss */
   .hidden-phone-landscape {
     display: none !important;
   }
