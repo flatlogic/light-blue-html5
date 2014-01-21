@@ -131,18 +131,44 @@ input.parsley-error{
     color: $text-color;
   }
 
-  .panel-collapse li a{
-    padding: 4px 10px;
+  .panel-collapse{ //second level menu
+    li a{
+      padding: 4px 10px;
 
-    padding-left: 40px;
+      padding-left: 40px;
 
-    &:hover, &:focus{
-      background: $sidebarActiveColor;
+      &:hover, &:focus{
+        background: $sidebarActiveColor;
+      }
+
+      i[class*="fa"]{
+        float: none;
+        font-size: inherit;
+      }
     }
 
-    i[class*="fa"]{
-      float: none;
-      font-size: inherit;
+    .panel-collapse{ //third level
+      .panel-collapse > li a{ //fourth level
+        padding-left: 60px;
+      }
+
+      > li a{
+        padding-left: 50px;
+      }
+    }
+
+    a[data-toggle="collapse"]{
+      &:before{
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f107";
+        float: right;
+        margin-right: 10px;
+        @include transition(transform .3s ease-in-out)
+      }
+      &.collapsed:before{
+        @include transform(rotate(-90deg));
+      }
     }
   }
 
@@ -235,6 +261,7 @@ input.parsley-error{
   padding: 25px 2.5641%;
   @include transition(margin-top .35s ease);
   max-width: none;
+  width: auto;
 }
 
 /***********************************/

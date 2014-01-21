@@ -188,12 +188,16 @@ $(function(){
 
     //need some class to present right after click for submenu
     var $subMenus = $sidebar.find('.panel-collapse');
-    $subMenus.on('show.bs.collapse', function(){
-        $(this).addClass('open');
+    $subMenus.on('show.bs.collapse', function(e){
+        if (e.target == this){
+            $(this).addClass('open');
+        }
     });
 
-    $subMenus.on('hide.bs.collapse', function(){
-        $(this).removeClass('open');
+    $subMenus.on('hide.bs.collapse', function(e){
+        if (e.target == this){
+            $(this).removeClass('open');
+        }
     });
 
 });

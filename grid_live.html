@@ -89,6 +89,31 @@
                 <li><a href="white/index.html">White <i class="fa fa-external-link-square"></i></a></li>
             </ul>
         </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-code-fork"></i> <span class="name">Menu Levels</span></a>
+            <ul id="menu-levels-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 1.1</a></li>
+                <li><a href="#">Item 1.2</a></li>
+                <li class="panel">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse"
+                       data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
+                    <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
+                        <li><a href="#">Item 2.1</a></li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li class="panel">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse"
+                               data-parent="#sub-menu-2-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
+                            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                                <li><a href="#">Item 3.1</a></li>
+                                <li><a href="#">Item 3.2</a></li>
+                                <li><a href="#">Item 3.3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
         <li class="visible-xs">
             <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
         </li>

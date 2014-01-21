@@ -149,7 +149,7 @@ $(function(){
     });
 
     /*   Move content down when second-level menu opened */
-    $("#side-nav").find("a.accordion-toggle").click(function(){
+    $("#side-nav").find("a.accordion-toggle").on('click',function(){
         if ($(window).width() < 768){
             var $this = $(this),
                 $sideNav = $('#side-nav'),
@@ -188,12 +188,16 @@ $(function(){
 
     //need some class to present right after click for submenu
     var $subMenus = $sidebar.find('.panel-collapse');
-    $subMenus.on('show.bs.collapse', function(){
-        $(this).addClass('open');
+    $subMenus.on('show.bs.collapse', function(e){
+        if (e.target == this){
+            $(this).addClass('open');
+        }
     });
 
-    $subMenus.on('hide.bs.collapse', function(){
-        $(this).removeClass('open');
+    $subMenus.on('hide.bs.collapse', function(e){
+        if (e.target == this){
+            $(this).removeClass('open');
+        }
     });
 
 });

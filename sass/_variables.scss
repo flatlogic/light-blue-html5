@@ -251,19 +251,54 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
     }
   }
 
-  .side-nav#{$class} li{
-    a{
-      padding: 8px 16px;
-      text-align: center;
+  .side-nav#{$class}{
 
-      i[class*=fa]{
-        margin-right: 0;
-        float: none;
+    li{
+      a{
+        padding: 8px 16px;
+        text-align: center;
+
+        i[class*=fa]{
+          margin-right: 0;
+          float: none;
+        }
+      }
+
+      .name{
+        display: none;
       }
     }
 
-    .name{
-      display: none;
+    .panel-collapse{
+      .panel-collapse{ //third level
+        .panel-collapse > li a{ //fourth level
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        > li a{
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+
+      a[data-toggle="collapse"]{
+        &:before{
+          display: none;
+        }
+        &:after{
+          font-family: FontAwesome;
+          content: "\f107";
+          display: block;
+          float: none;
+          margin-right: 0;
+          margin-left: 0;
+          @include transition(transform .3s ease-in-out)
+        }
+        &.collapsed:after{
+          @include transform(rotate(-90deg));
+        }
+      }
     }
   }
 
