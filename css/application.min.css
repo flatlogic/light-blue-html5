@@ -19278,62 +19278,66 @@ a {
   -o-transition: width 0.3s;
   transition: width 0.3s;
 }
-/* line 249, D:/projects/admin/sass/_variables.scss */
-.sidebar.sidebar-icons .panel-collapse.open li a {
-  width: 80px;
+@media (min-width: 768px) {
+  /* line 249, D:/projects/admin/sass/_variables.scss */
+  .sidebar.sidebar-icons .panel-collapse.open li a {
+    width: 80px;
+  }
 }
 
-/* line 257, D:/projects/admin/sass/_variables.scss */
+/* line 259, D:/projects/admin/sass/_variables.scss */
 .side-nav.sidebar-icons li a {
   padding: 8px 16px;
   text-align: center;
 }
-/* line 261, D:/projects/admin/sass/_variables.scss */
+/* line 263, D:/projects/admin/sass/_variables.scss */
 .side-nav.sidebar-icons li a i[class*=fa] {
   margin-right: 0;
   float: none;
 }
-/* line 267, D:/projects/admin/sass/_variables.scss */
+/* line 269, D:/projects/admin/sass/_variables.scss */
 .side-nav.sidebar-icons li .name {
   display: none;
 }
-/* line 274, D:/projects/admin/sass/_variables.scss */
-.side-nav.sidebar-icons .panel-collapse .panel-collapse .panel-collapse > li a {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-/* line 279, D:/projects/admin/sass/_variables.scss */
-.side-nav.sidebar-icons .panel-collapse .panel-collapse > li a {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-/* line 286, D:/projects/admin/sass/_variables.scss */
-.side-nav.sidebar-icons .panel-collapse a[data-toggle="collapse"]:before {
-  display: none;
-}
-/* line 289, D:/projects/admin/sass/_variables.scss */
-.side-nav.sidebar-icons .panel-collapse a[data-toggle="collapse"]:after {
-  font-family: FontAwesome;
-  content: "\f107";
-  display: block;
-  float: none;
-  margin-right: 0;
-  margin-left: 0;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  -moz-transition: -moz-transform 0.3s ease-in-out;
-  -o-transition: -o-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-}
-/* line 298, D:/projects/admin/sass/_variables.scss */
-.side-nav.sidebar-icons .panel-collapse a[data-toggle="collapse"].collapsed:after {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+@media (min-width: 768px) {
+  /* line 277, D:/projects/admin/sass/_variables.scss */
+  .side-nav.sidebar-icons .panel-collapse .panel-collapse .panel-collapse > li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 282, D:/projects/admin/sass/_variables.scss */
+  .side-nav.sidebar-icons .panel-collapse .panel-collapse > li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 289, D:/projects/admin/sass/_variables.scss */
+  .side-nav.sidebar-icons .panel-collapse a[data-toggle="collapse"]:before {
+    display: none;
+  }
+  /* line 292, D:/projects/admin/sass/_variables.scss */
+  .side-nav.sidebar-icons .panel-collapse a[data-toggle="collapse"]:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    display: block;
+    float: none;
+    margin-right: 0;
+    margin-left: 0;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  /* line 301, D:/projects/admin/sass/_variables.scss */
+  .side-nav.sidebar-icons .panel-collapse a[data-toggle="collapse"].collapsed:after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
 }
 
-/* line 306, D:/projects/admin/sass/_variables.scss */
+/* line 310, D:/projects/admin/sass/_variables.scss */
 .sidebar-on-right .side-nav.sidebar-icons > li.active > a,
 .side-nav.sidebar-icons > li.active > a {
   border-left: none;
@@ -19341,22 +19345,22 @@ a {
   padding-left: 16px;
 }
 
-/* line 312, D:/projects/admin/sass/_variables.scss */
+/* line 316, D:/projects/admin/sass/_variables.scss */
 .wrap.sidebar-icons {
   margin-left: 62px;
 }
 
-/* line 317, D:/projects/admin/sass/_variables.scss */
+/* line 321, D:/projects/admin/sass/_variables.scss */
 .sidebar-hidden .sidebar {
   display: none;
 }
-/* line 321, D:/projects/admin/sass/_variables.scss */
+/* line 325, D:/projects/admin/sass/_variables.scss */
 .sidebar-hidden .wrap {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 327, D:/projects/admin/sass/_variables.scss */
+/* line 331, D:/projects/admin/sass/_variables.scss */
 .logo.sidebar-icons {
   left: 1.6%;
   padding-left: 5px;
@@ -19526,7 +19530,7 @@ input.parsley-error {
 .sidebar .settings .btn-auto {
   display: none;
 }
-/* line 337, D:/projects/admin/sass/_variables.scss */
+/* line 341, D:/projects/admin/sass/_variables.scss */
 .sidebar.sidebar-icons .settings .btn-sm, .sidebar.sidebar-icons .settings .btn-group-sm > .btn {
   padding: 2px 8px;
 }
@@ -22317,62 +22321,21 @@ table.table thead .sorting_desc_disabled {
     -o-transition: width 0.3s;
     transition: width 0.3s;
   }
-  /* line 249, D:/projects/admin/sass/_variables.scss */
-  .sidebar .panel-collapse.open li a {
-    width: 80px;
-  }
-
-  /* line 257, D:/projects/admin/sass/_variables.scss */
+  /* line 259, D:/projects/admin/sass/_variables.scss */
   .side-nav li a {
     padding: 8px 16px;
     text-align: center;
   }
-  /* line 261, D:/projects/admin/sass/_variables.scss */
+  /* line 263, D:/projects/admin/sass/_variables.scss */
   .side-nav li a i[class*=fa] {
     margin-right: 0;
     float: none;
   }
-  /* line 267, D:/projects/admin/sass/_variables.scss */
+  /* line 269, D:/projects/admin/sass/_variables.scss */
   .side-nav li .name {
     display: none;
   }
-  /* line 274, D:/projects/admin/sass/_variables.scss */
-  .side-nav .panel-collapse .panel-collapse .panel-collapse > li a {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  /* line 279, D:/projects/admin/sass/_variables.scss */
-  .side-nav .panel-collapse .panel-collapse > li a {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  /* line 286, D:/projects/admin/sass/_variables.scss */
-  .side-nav .panel-collapse a[data-toggle="collapse"]:before {
-    display: none;
-  }
-  /* line 289, D:/projects/admin/sass/_variables.scss */
-  .side-nav .panel-collapse a[data-toggle="collapse"]:after {
-    font-family: FontAwesome;
-    content: "\f107";
-    display: block;
-    float: none;
-    margin-right: 0;
-    margin-left: 0;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    -moz-transition: -moz-transform 0.3s ease-in-out;
-    -o-transition: -o-transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-  }
-  /* line 298, D:/projects/admin/sass/_variables.scss */
-  .side-nav .panel-collapse a[data-toggle="collapse"].collapsed:after {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  /* line 306, D:/projects/admin/sass/_variables.scss */
+  /* line 310, D:/projects/admin/sass/_variables.scss */
   .sidebar-on-right .side-nav > li.active > a,
   .side-nav > li.active > a {
     border-left: none;
@@ -22380,22 +22343,22 @@ table.table thead .sorting_desc_disabled {
     padding-left: 16px;
   }
 
-  /* line 312, D:/projects/admin/sass/_variables.scss */
+  /* line 316, D:/projects/admin/sass/_variables.scss */
   .wrap {
     margin-left: 62px;
   }
 
-  /* line 317, D:/projects/admin/sass/_variables.scss */
+  /* line 321, D:/projects/admin/sass/_variables.scss */
   .sidebar-hidden .sidebar {
     display: none;
   }
-  /* line 321, D:/projects/admin/sass/_variables.scss */
+  /* line 325, D:/projects/admin/sass/_variables.scss */
   .sidebar-hidden .wrap {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 327, D:/projects/admin/sass/_variables.scss */
+  /* line 331, D:/projects/admin/sass/_variables.scss */
   .logo {
     left: 1.6%;
     padding-left: 5px;
@@ -22403,7 +22366,7 @@ table.table thead .sorting_desc_disabled {
     top: 13px;
   }
 
-  /* line 337, D:/projects/admin/sass/_variables.scss */
+  /* line 341, D:/projects/admin/sass/_variables.scss */
   .sidebar .settings .btn-sm, .sidebar .settings .btn-group-sm > .btn {
     padding: 2px 8px;
   }
@@ -22478,6 +22441,51 @@ table.table thead .sorting_desc_disabled {
     margin-top: 0;
   }
 }
+@media (max-width: 1048px) and (min-width: 768px) {
+  /* line 249, D:/projects/admin/sass/_variables.scss */
+  .sidebar .panel-collapse.open li a {
+    width: 80px;
+  }
+}
+
+@media (max-width: 1048px) and (min-width: 768px) {
+  /* line 277, D:/projects/admin/sass/_variables.scss */
+  .side-nav .panel-collapse .panel-collapse .panel-collapse > li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 282, D:/projects/admin/sass/_variables.scss */
+  .side-nav .panel-collapse .panel-collapse > li a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 289, D:/projects/admin/sass/_variables.scss */
+  .side-nav .panel-collapse a[data-toggle="collapse"]:before {
+    display: none;
+  }
+  /* line 292, D:/projects/admin/sass/_variables.scss */
+  .side-nav .panel-collapse a[data-toggle="collapse"]:after {
+    font-family: FontAwesome;
+    content: "\f107";
+    display: block;
+    float: none;
+    margin-right: 0;
+    margin-left: 0;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  /* line 301, D:/projects/admin/sass/_variables.scss */
+  .side-nav .panel-collapse a[data-toggle="collapse"].collapsed:after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+
 @media (max-width: 767px) {
   /* line 108, D:/projects/admin/sass/_responsive.scss */
   body {

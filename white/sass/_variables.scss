@@ -207,7 +207,9 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
     }
 
     .panel-collapse.open li a{
-      width: 80px;
+      @media (min-width: 768px) {
+        width: 80px;
+      }
     }
   }
 
@@ -229,34 +231,36 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
       }
     }
 
-    .panel-collapse{
-      .panel-collapse{ //third level
-        .panel-collapse > li a{ //fourth level
-          padding-left: 10px;
-          padding-right: 10px;
+    @media (min-width: 768px) {
+      .panel-collapse{
+        .panel-collapse{ //third level
+          .panel-collapse > li a{ //fourth level
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          > li a{
+            padding-left: 10px;
+            padding-right: 10px;
+          }
         }
 
-        > li a{
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-      }
-
-      a[data-toggle="collapse"]{
-        &:before{
-          display: none;
-        }
-        &:after{
-          font-family: FontAwesome;
-          content: "\f107";
-          display: block;
-          float: none;
-          margin-right: 0;
-          margin-left: 0;
-          @include transition(transform .3s ease-in-out)
-        }
-        &.collapsed:after{
-          @include transform(rotate(-90deg));
+        a[data-toggle="collapse"]{
+          &:before{
+            display: none;
+          }
+          &:after{
+            font-family: FontAwesome;
+            content: "\f107";
+            display: block;
+            float: none;
+            margin-right: 0;
+            margin-left: 0;
+            @include transition(transform .3s ease-in-out)
+          }
+          &.collapsed:after{
+            @include transform(rotate(-90deg));
+          }
         }
       }
     }
