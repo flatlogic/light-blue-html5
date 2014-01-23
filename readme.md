@@ -16,6 +16,7 @@ New Version 1.7 Released!
 
 - 4+ level menu.
 - Libs updates & fixes
+- Documentation update
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework and uses powerful Sass (CSS preprocessor) technology.
