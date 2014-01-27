@@ -21,6 +21,7 @@ hr {
 blockquote{
   border-left-color: $transparentBackground;
   padding: 0 0 0 15px;
+  font-size: $font-size-base;
   p{
     font-size: inherit;
     margin-bottom: $line-height-computed / 2;
@@ -576,11 +577,24 @@ textarea,
       border-color: transparent;
     }
   }
+
+  > .disabled > a{
+    &,
+    &:hover,
+    &:focus {
+      background-color: $pagination-active-bg;
+      border-color: transparent;
+    }
+  }
 }
 
 .pagination > li > a,
 .pagination > li > span{
   margin-left: 0;
+
+  &:hover{
+    border-color: transparent;
+  }
 }
 
 /***************************/
