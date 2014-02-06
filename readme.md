@@ -11,12 +11,11 @@ Light Blue is a **next generation** admin dashboard template based on the latest
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 1.7 Released!
+New Version 1.8 Released!
 -
 
-- 4+ level menu.
-- Libs updates & fixes
-- Documentation update
+- Bootstrap v3.1 update
+- Few bug fixes
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework and uses powerful Sass (CSS preprocessor) technology.
@@ -30,6 +29,12 @@ Email us at [contact@keeptwo.com](mailto:contact@keeptwo.com) or tweet to [okend
 
 Changelog
 -
+
+Version 1.7
+
+  - 4+ level menu.
+  - Libs updates & fixes
+  - Documentation update
 
 Version 1.6
 
