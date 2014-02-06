@@ -43,8 +43,20 @@
     src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url(font/open-sans-italic-light.woff) format("woff");
 }
 
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-/* line 22, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/* line 9, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* line 19, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+body {
+    margin: 0;
+}
+
+/* line 41, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 article,
 aside,
 details,
@@ -60,113 +72,72 @@ summary {
     display: block;
 }
 
-/* line 32, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 53, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 audio,
 canvas,
+progress,
 video {
     display: inline-block;
+    vertical-align: baseline;
 }
 
-/* line 41, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 63, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 audio:not([controls]) {
     display: none;
     height: 0;
 }
 
-/* line 52, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 74, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 [hidden],
 template {
     display: none;
 }
 
-/* line 66, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-/* line 76, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-body {
-    margin: 0;
-}
-
-/* line 88, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 85, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 a {
     background: transparent;
 }
 
-/* line 96, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-a:focus {
-    outline: thin dotted;
-}
-
-/* line 105, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 94, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 a:active,
 a:hover {
     outline: 0;
 }
 
-/* line 118, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
-/* line 127, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 105, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 abbr[title] {
     border-bottom: 1px dotted;
 }
 
-/* line 136, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 114, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 b,
 strong {
     font-weight: bold;
 }
 
-/* line 144, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 122, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 dfn {
     font-style: italic;
 }
 
-/* line 152, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+/* line 131, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
-/* line 162, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 140, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 mark {
     background: #ff0;
     color: #000;
 }
 
-/* line 174, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, serif;
-    font-size: 1em;
-}
-
-/* line 183, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-pre {
-    white-space: pre-wrap;
-}
-
-/* line 191, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-/* line 199, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 149, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 small {
     font-size: 80%;
 }
 
-/* line 208, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 158, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 sub,
 sup {
     font-size: 75%;
@@ -175,67 +146,75 @@ sup {
     vertical-align: baseline;
 }
 
-/* line 215, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 165, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 sup {
     top: -0.5em;
 }
 
-/* line 219, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 169, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 sub {
     bottom: -0.25em;
 }
 
-/* line 231, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 180, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 img {
     border: 0;
 }
 
-/* line 239, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 188, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 svg:not(:root) {
     overflow: hidden;
 }
 
-/* line 251, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 199, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 figure {
+    margin: 1em 40px;
+}
+
+/* line 207, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/* line 217, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+pre {
+    overflow: auto;
+}
+
+/* line 228, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/* line 252, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
     margin: 0;
 }
 
-/* line 263, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
+/* line 262, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+button {
+    overflow: visible;
 }
 
 /* line 274, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-legend {
-    border: 0;
-    padding: 0;
-}
-
-/* line 288, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-button,
-input,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0;
-}
-
-/* line 300, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-button,
-input {
-    line-height: normal;
-}
-
-/* line 312, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 button,
 select {
     text-transform: none;
 }
 
-/* line 327, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 289, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -244,20 +223,38 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-/* line 337, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 299, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 button[disabled],
 html input[disabled] {
     cursor: default;
 }
 
-/* line 347, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 308, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* line 318, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+input {
+    line-height: normal;
+}
+
+/* line 331, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box;
     padding: 0;
 }
 
-/* line 358, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 343, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/* line 353, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 input[type="search"] {
     -webkit-appearance: textfield;
     -moz-box-sizing: content-box;
@@ -265,29 +262,45 @@ input[type="search"] {
     box-sizing: content-box;
 }
 
-/* line 371, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 367, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
-/* line 380, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+/* line 375, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 386, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+legend {
     border: 0;
     padding: 0;
 }
 
-/* line 390, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 395, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 textarea {
     overflow: auto;
-    vertical-align: top;
 }
 
-/* line 403, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+/* line 404, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+optgroup {
+    font-weight: bold;
+}
+
+/* line 415, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+/* line 421, D:/projects/admin/white/sass/bootstrap-original/_normalize.scss */
+td,
+th {
+    padding: 0;
 }
 
 @media print {
@@ -344,11 +357,7 @@ table {
         max-width: 100% !important;
     }
 
-    @page {
-        margin: 2cm .5cm;
-    }
-
-    /* line 59, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 55, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     p,
     h2,
     h3 {
@@ -356,58 +365,58 @@ table {
         widows: 3;
     }
 
-    /* line 65, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 61, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     h2,
     h3 {
         page-break-after: avoid;
     }
 
-    /* line 71, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 67, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     select {
         background: #fff !important;
     }
 
-    /* line 76, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 72, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     .navbar {
         display: none;
     }
 
-    /* line 81, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 77, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     .table td,
     .table th {
         background-color: #fff !important;
     }
 
-    /* line 87, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 83, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     .btn > .caret,
     .dropup > .btn > .caret {
         border-top-color: #000 !important;
     }
 
-    /* line 91, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 87, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     .label {
         border: 1px solid #000;
     }
 
-    /* line 95, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 91, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     .table {
         border-collapse: collapse !important;
     }
 
-    /* line 100, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
+    /* line 96, D:/projects/admin/white/sass/bootstrap-original/_print.scss */
     .table-bordered th,
     .table-bordered td {
         border: 1px solid #ddd !important;
     }
 }
-/* line 8, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 11, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-/* line 12, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 15, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 *:before,
 *:after {
     -webkit-box-sizing: border-box;
@@ -415,13 +424,13 @@ table {
     box-sizing: border-box;
 }
 
-/* line 19, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 22, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 html {
     font-size: 62.5%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 24, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 27, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
@@ -430,7 +439,7 @@ body {
     background-color: white;
 }
 
-/* line 36, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 39, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 input,
 button,
 select,
@@ -440,41 +449,46 @@ textarea {
     line-height: inherit;
 }
 
-/* line 45, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 48, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 a {
     color: #618fb0;
     text-decoration: none;
 }
-/* line 50, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 53, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 a:hover, a:focus {
     color: #426883;
     text-decoration: underline;
 }
-/* line 55, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 58, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 a:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
 }
 
-/* line 63, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 69, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+figure {
+    margin: 0;
+}
+
+/* line 76, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 img {
     vertical-align: middle;
 }
 
-/* line 68, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 81, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 .img-responsive {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-/* line 73, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 86, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 .img-rounded {
     border-radius: 1px;
 }
 
-/* line 80, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 93, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 .img-thumbnail {
     padding: 4px;
     line-height: 20px;
@@ -488,12 +502,12 @@ img {
     height: auto;
 }
 
-/* line 93, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 106, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 .img-circle {
     border-radius: 50%;
 }
 
-/* line 100, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 113, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -501,7 +515,7 @@ hr {
     border-top: 1px solid #eeeeee;
 }
 
-/* line 112, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
+/* line 125, D:/projects/admin/white/sass/bootstrap-original/_scaffolding.scss */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -666,111 +680,125 @@ cite {
     color: #999999;
 }
 
-/* line 94, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 607, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .text-primary {
     color: #618fb0;
 }
-/* line 600, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.text-primary a:hover {
+
+/* line 610, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.text-primary:hover {
     color: #4a7594;
 }
 
-/* line 97, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 607, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .text-success {
     color: #666666;
 }
-/* line 600, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.text-success a:hover {
+
+/* line 610, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.text-success:hover {
     color: #4d4d4d;
 }
 
-/* line 100, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 607, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .text-info {
     color: #666666;
 }
-/* line 600, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.text-info a:hover {
+
+/* line 610, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.text-info:hover {
     color: #4d4d4d;
 }
 
-/* line 103, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 607, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .text-warning {
     color: #666666;
 }
-/* line 600, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.text-warning a:hover {
+
+/* line 610, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.text-warning:hover {
     color: #4d4d4d;
 }
 
-/* line 106, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 607, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .text-danger {
     color: #666666;
 }
-/* line 600, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.text-danger a:hover {
+
+/* line 610, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.text-danger:hover {
     color: #4d4d4d;
 }
 
-/* line 113, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 108, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .bg-primary {
     color: #fff;
+}
+
+/* line 595, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.bg-primary {
     background-color: #618fb0;
 }
-/* line 591, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.bg-primary a:hover {
+
+/* line 598, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.bg-primary:hover {
     background-color: #4a7594;
 }
 
-/* line 119, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 595, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .bg-success {
     background-color: #56bc76;
 }
-/* line 591, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.bg-success a:hover {
+
+/* line 598, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.bg-success:hover {
     background-color: #3fa05e;
 }
 
-/* line 122, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 595, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .bg-info {
     background-color: #618fb0;
 }
-/* line 591, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.bg-info a:hover {
+
+/* line 598, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.bg-info:hover {
     background-color: #4a7594;
 }
 
-/* line 125, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 595, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .bg-warning {
     background-color: #eac85e;
 }
-/* line 591, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.bg-warning a:hover {
+
+/* line 598, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.bg-warning:hover {
     background-color: #e4b931;
 }
 
-/* line 128, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 595, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .bg-danger {
     background-color: #e5603b;
 }
-/* line 591, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.bg-danger a:hover {
+
+/* line 598, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+a.bg-danger:hover {
     background-color: #d1431c;
 }
 
-/* line 136, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 127, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eeeeee;
 }
 
-/* line 148, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 139, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 ul,
 ol {
     margin-top: 0;
     margin-bottom: 10px;
 }
-/* line 152, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 143, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 ul ul,
 ul ol,
 ol ul,
@@ -778,47 +806,47 @@ ol ol {
     margin-bottom: 0;
 }
 
-/* line 160, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 151, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .list-unstyled, .list-inline {
     padding-left: 0;
     list-style: none;
 }
 
-/* line 169, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 160, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .list-inline > li {
     display: inline-block;
     padding-left: 5px;
     padding-right: 5px;
 }
-/* line 174, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 165, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .list-inline > li:first-child {
     padding-left: 0;
 }
 
-/* line 181, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 172, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 dl {
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-/* line 186, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 177, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 dt,
 dd {
     line-height: 20px;
 }
 
-/* line 189, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 180, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 dt {
     font-weight: bold;
 }
 
-/* line 192, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 183, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 dd {
     margin-left: 0;
 }
 
 @media (min-width: 768px) {
-    /* line 203, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+    /* line 194, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
     .dl-horizontal dt {
         float: left;
         width: 160px;
@@ -828,7 +856,7 @@ dd {
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-    /* line 210, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+    /* line 201, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
     .dl-horizontal dd {
         margin-left: 180px;
     }
@@ -842,33 +870,33 @@ dd {
         clear: both;
     }
 }
-/* line 223, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 214, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 abbr[title],
 abbr[data-original-title] {
     cursor: help;
     border-bottom: 1px dotted #999999;
 }
 
-/* line 227, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 218, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .initialism {
     font-size: 90%;
     text-transform: uppercase;
 }
 
-/* line 233, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 224, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
     font-size: 16.25px;
     border-left: 5px solid #eeeeee;
 }
-/* line 242, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 233, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 blockquote p:last-child,
 blockquote ul:last-child,
 blockquote ol:last-child {
     margin-bottom: 0;
 }
-/* line 251, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 242, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 blockquote footer,
 blockquote small,
 blockquote .small {
@@ -877,14 +905,14 @@ blockquote .small {
     line-height: 20px;
     color: #999999;
 }
-/* line 257, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 248, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 blockquote footer:before,
 blockquote small:before,
 blockquote .small:before {
     content: '\2014 \00A0';
 }
 
-/* line 267, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 258, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .blockquote-reverse,
 blockquote.pull-right {
     padding-right: 15px;
@@ -893,7 +921,7 @@ blockquote.pull-right {
     border-left: 0;
     text-align: right;
 }
-/* line 278, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 269, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .blockquote-reverse footer:before,
 .blockquote-reverse small:before,
 .blockquote-reverse .small:before,
@@ -902,7 +930,7 @@ blockquote.pull-right small:before,
 blockquote.pull-right .small:before {
     content: '';
 }
-/* line 279, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 270, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 .blockquote-reverse footer:after,
 .blockquote-reverse small:after,
 .blockquote-reverse .small:after,
@@ -912,13 +940,13 @@ blockquote.pull-right .small:after {
     content: '\00A0 \2014';
 }
 
-/* line 287, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 278, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 blockquote:before,
 blockquote:after {
     content: "";
 }
 
-/* line 292, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
+/* line 283, D:/projects/admin/white/sass/bootstrap-original/_type.scss */
 address {
     margin-bottom: 20px;
     font-style: normal;
@@ -1050,7 +1078,7 @@ pre code {
     clear: both;
 }
 
-/* line 789, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 800, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1 {
     position: relative;
     min-height: 1px;
@@ -1058,1045 +1086,1045 @@ pre code {
     padding-right: 15px;
 }
 
-/* line 808, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 819, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-12, .col-xs-11, .col-xs-10, .col-xs-9, .col-xs-8, .col-xs-7, .col-xs-6, .col-xs-5, .col-xs-4, .col-xs-3, .col-xs-2, .col-xs-1 {
     float: left;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-1 {
     width: 8.33333%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-2 {
     width: 16.66667%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-3 {
     width: 25%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-4 {
     width: 33.33333%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-5 {
     width: 41.66667%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-6 {
     width: 50%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-7 {
     width: 58.33333%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-8 {
     width: 66.66667%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-9 {
     width: 75%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-10 {
     width: 83.33333%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-11 {
     width: 91.66667%;
 }
 
-/* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-12 {
     width: 100%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-0 {
     right: 0%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-1 {
     right: 8.33333%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-2 {
     right: 16.66667%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-3 {
     right: 25%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-4 {
     right: 33.33333%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-5 {
     right: 41.66667%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-6 {
     right: 50%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-7 {
     right: 58.33333%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-8 {
     right: 66.66667%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-9 {
     right: 75%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-10 {
     right: 83.33333%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-11 {
     right: 91.66667%;
 }
 
-/* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-pull-12 {
     right: 100%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-0 {
     left: 0%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-1 {
     left: 8.33333%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-2 {
     left: 16.66667%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-3 {
     left: 25%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-4 {
     left: 33.33333%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-5 {
     left: 41.66667%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-6 {
     left: 50%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-7 {
     left: 58.33333%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-8 {
     left: 66.66667%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-9 {
     left: 75%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-10 {
     left: 83.33333%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-11 {
     left: 91.66667%;
 }
 
-/* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-push-12 {
     left: 100%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-0 {
     margin-left: 0%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-1 {
     margin-left: 8.33333%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-2 {
     margin-left: 16.66667%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-3 {
     margin-left: 25%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-4 {
     margin-left: 33.33333%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-5 {
     margin-left: 41.66667%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-6 {
     margin-left: 50%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-7 {
     margin-left: 58.33333%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-8 {
     margin-left: 66.66667%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-9 {
     margin-left: 75%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-10 {
     margin-left: 83.33333%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-11 {
     margin-left: 91.66667%;
 }
 
-/* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .col-xs-offset-12 {
     margin-left: 100%;
 }
 
 @media (min-width: 768px) {
-    /* line 808, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 819, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1 {
         float: left;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-1 {
         width: 8.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-2 {
         width: 16.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-3 {
         width: 25%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-4 {
         width: 33.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-5 {
         width: 41.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-6 {
         width: 50%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-7 {
         width: 58.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-8 {
         width: 66.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-9 {
         width: 75%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-10 {
         width: 83.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-11 {
         width: 91.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-12 {
         width: 100%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-0 {
         right: 0%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-1 {
         right: 8.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-2 {
         right: 16.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-3 {
         right: 25%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-4 {
         right: 33.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-5 {
         right: 41.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-6 {
         right: 50%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-7 {
         right: 58.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-8 {
         right: 66.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-9 {
         right: 75%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-10 {
         right: 83.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-11 {
         right: 91.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-pull-12 {
         right: 100%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-0 {
         left: 0%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-1 {
         left: 8.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-2 {
         left: 16.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-3 {
         left: 25%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-4 {
         left: 33.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-5 {
         left: 41.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-6 {
         left: 50%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-7 {
         left: 58.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-8 {
         left: 66.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-9 {
         left: 75%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-10 {
         left: 83.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-11 {
         left: 91.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-push-12 {
         left: 100%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-0 {
         margin-left: 0%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-1 {
         margin-left: 8.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-2 {
         margin-left: 16.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-3 {
         margin-left: 25%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-4 {
         margin-left: 33.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-5 {
         margin-left: 41.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-6 {
         margin-left: 50%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-7 {
         margin-left: 58.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-8 {
         margin-left: 66.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-9 {
         margin-left: 75%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-10 {
         margin-left: 83.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-11 {
         margin-left: 91.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-sm-offset-12 {
         margin-left: 100%;
     }
 }
 @media (min-width: 992px) {
-    /* line 808, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 819, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1 {
         float: left;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-1 {
         width: 8.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-2 {
         width: 16.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-3 {
         width: 25%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-4 {
         width: 33.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-5 {
         width: 41.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-6 {
         width: 50%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-7 {
         width: 58.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-8 {
         width: 66.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-9 {
         width: 75%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-10 {
         width: 83.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-11 {
         width: 91.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-12 {
         width: 100%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-0 {
         right: 0%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-1 {
         right: 8.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-2 {
         right: 16.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-3 {
         right: 25%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-4 {
         right: 33.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-5 {
         right: 41.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-6 {
         right: 50%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-7 {
         right: 58.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-8 {
         right: 66.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-9 {
         right: 75%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-10 {
         right: 83.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-11 {
         right: 91.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-pull-12 {
         right: 100%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-0 {
         left: 0%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-1 {
         left: 8.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-2 {
         left: 16.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-3 {
         left: 25%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-4 {
         left: 33.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-5 {
         left: 41.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-6 {
         left: 50%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-7 {
         left: 58.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-8 {
         left: 66.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-9 {
         left: 75%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-10 {
         left: 83.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-11 {
         left: 91.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-push-12 {
         left: 100%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-0 {
         margin-left: 0%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-1 {
         margin-left: 8.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-2 {
         margin-left: 16.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-3 {
         margin-left: 25%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-4 {
         margin-left: 33.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-5 {
         margin-left: 41.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-6 {
         margin-left: 50%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-7 {
         margin-left: 58.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-8 {
         margin-left: 66.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-9 {
         margin-left: 75%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-10 {
         margin-left: 83.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-11 {
         margin-left: 91.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-md-offset-12 {
         margin-left: 100%;
     }
 }
 @media (min-width: 1200px) {
-    /* line 808, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 819, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1 {
         float: left;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-1 {
         width: 8.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-2 {
         width: 16.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-3 {
         width: 25%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-4 {
         width: 33.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-5 {
         width: 41.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-6 {
         width: 50%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-7 {
         width: 58.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-8 {
         width: 66.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-9 {
         width: 75%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-10 {
         width: 83.33333%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-11 {
         width: 91.66667%;
     }
 
-    /* line 816, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 827, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-12 {
         width: 100%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-0 {
         right: 0%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-1 {
         right: 8.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-2 {
         right: 16.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-3 {
         right: 25%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-4 {
         right: 33.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-5 {
         right: 41.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-6 {
         right: 50%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-7 {
         right: 58.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-8 {
         right: 66.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-9 {
         right: 75%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-10 {
         right: 83.33333%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-11 {
         right: 91.66667%;
     }
 
-    /* line 826, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 837, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-pull-12 {
         right: 100%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-0 {
         left: 0%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-1 {
         left: 8.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-2 {
         left: 16.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-3 {
         left: 25%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-4 {
         left: 33.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-5 {
         left: 41.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-6 {
         left: 50%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-7 {
         left: 58.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-8 {
         left: 66.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-9 {
         left: 75%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-10 {
         left: 83.33333%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-11 {
         left: 91.66667%;
     }
 
-    /* line 821, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 832, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-push-12 {
         left: 100%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-0 {
         margin-left: 0%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-1 {
         margin-left: 8.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-2 {
         margin-left: 16.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-3 {
         margin-left: 25%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-4 {
         margin-left: 33.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-5 {
         margin-left: 41.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-6 {
         margin-left: 50%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-7 {
         margin-left: 58.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-8 {
         margin-left: 66.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-9 {
         margin-left: 75%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-10 {
         margin-left: 83.33333%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-11 {
         margin-left: 91.66667%;
     }
 
-    /* line 831, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 842, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .col-lg-offset-12 {
         margin-left: 100%;
     }
@@ -2208,7 +2236,7 @@ table th[class*="col-"] {
     display: table-cell;
 }
 
-/* line 447, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 451, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table > thead > tr > td.active,
 .table > thead > tr > th.active, .table > thead > tr.active > td, .table > thead > tr.active > th,
 .table > tbody > tr > td.active,
@@ -2222,13 +2250,13 @@ table th[class*="col-"] {
     background-color: whitesmoke;
 }
 
-/* line 458, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 462, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table-hover > tbody > tr > td.active:hover,
 .table-hover > tbody > tr > th.active:hover, .table-hover > tbody > tr.active:hover > td, .table-hover > tbody > tr.active:hover > th {
     background-color: #e8e8e8;
 }
 
-/* line 447, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 451, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table > thead > tr > td.success,
 .table > thead > tr > th.success, .table > thead > tr.success > td, .table > thead > tr.success > th,
 .table > tbody > tr > td.success,
@@ -2242,13 +2270,13 @@ table th[class*="col-"] {
     background-color: #56bc76;
 }
 
-/* line 458, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 462, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr.success:hover > th {
     background-color: #47b268;
 }
 
-/* line 447, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 451, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table > thead > tr > td.info,
 .table > thead > tr > th.info, .table > thead > tr.info > td, .table > thead > tr.info > th,
 .table > tbody > tr > td.info,
@@ -2262,13 +2290,13 @@ table th[class*="col-"] {
     background-color: #618fb0;
 }
 
-/* line 458, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 462, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover, .table-hover > tbody > tr.info:hover > td, .table-hover > tbody > tr.info:hover > th {
     background-color: #5383a5;
 }
 
-/* line 447, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 451, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table > thead > tr > td.warning,
 .table > thead > tr > th.warning, .table > thead > tr.warning > td, .table > thead > tr.warning > th,
 .table > tbody > tr > td.warning,
@@ -2282,13 +2310,13 @@ table th[class*="col-"] {
     background-color: #eac85e;
 }
 
-/* line 458, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 462, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover, .table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr.warning:hover > th {
     background-color: #e7c047;
 }
 
-/* line 447, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 451, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table > thead > tr > td.danger,
 .table > thead > tr > th.danger, .table > thead > tr.danger > td, .table > thead > tr.danger > th,
 .table > tbody > tr > td.danger,
@@ -2302,7 +2330,7 @@ table th[class*="col-"] {
     background-color: #e5603b;
 }
 
-/* line 458, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 462, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr.danger:hover > th {
     background-color: #e24e24;
@@ -2367,9 +2395,10 @@ fieldset {
     padding: 0;
     margin: 0;
     border: 0;
+    min-width: 0;
 }
 
-/* line 16, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 20, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 legend {
     display: block;
     width: 100%;
@@ -2382,21 +2411,21 @@ legend {
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 28, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 32, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 label {
     display: inline-block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-/* line 38, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 46, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 input[type="search"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-/* line 44, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 52, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 input[type="radio"],
 input[type="checkbox"] {
     margin: 4px 0 0;
@@ -2405,31 +2434,24 @@ input[type="checkbox"] {
     line-height: normal;
 }
 
-/* line 51, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 59, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 input[type="file"] {
     display: block;
 }
 
-/* line 56, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 64, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 input[type="range"] {
     display: block;
     width: 100%;
 }
 
-/* line 63, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 71, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 select[multiple],
 select[size] {
     height: auto;
 }
 
-/* line 68, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
-select optgroup {
-    font-size: inherit;
-    font-style: inherit;
-    font-family: inherit;
-}
-
-/* line 77, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 78, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
@@ -2438,12 +2460,7 @@ input[type="checkbox"]:focus {
     outline-offset: -2px;
 }
 
-/* line 86, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
-input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
-    height: auto;
-}
-
-/* line 92, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 83, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 output {
     display: block;
     padding-top: 5px;
@@ -2452,7 +2469,7 @@ output {
     color: #666666;
 }
 
-/* line 123, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 114, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-control {
     display: block;
     width: 100%;
@@ -2470,7 +2487,7 @@ output {
     -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-/* line 898, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 909, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .form-control:focus {
     border-color: #66afe9;
     outline: 0;
@@ -2494,7 +2511,7 @@ output {
 .form-control::-webkit-input-placeholder {
     color: #999999;
 }
-/* line 153, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 141, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-control[disabled], textarea[disabled],
 input[type="text"][disabled],
 input[type="password"][disabled],
@@ -2513,24 +2530,25 @@ input[type="color"][disabled],
 .uneditable-input[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
     background-color: #eeeeee;
+    opacity: 1;
 }
 
-/* line 162, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 151, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 textarea.form-control {
     height: auto;
 }
 
-/* line 170, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 159, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 input[type="date"] {
     line-height: 30px;
 }
 
-/* line 180, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 169, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-group {
     margin-bottom: 15px;
 }
 
-/* line 190, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 179, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .radio,
 .checkbox {
     display: block;
@@ -2539,7 +2557,7 @@ input[type="date"] {
     margin-bottom: 10px;
     padding-left: 20px;
 }
-/* line 196, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 185, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .radio label,
 .checkbox label {
     display: inline;
@@ -2547,7 +2565,7 @@ input[type="date"] {
     cursor: pointer;
 }
 
-/* line 205, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 194, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
@@ -2556,13 +2574,13 @@ input[type="date"] {
     margin-left: -20px;
 }
 
-/* line 210, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 199, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .radio + .radio,
 .checkbox + .checkbox {
     margin-top: -5px;
 }
 
-/* line 216, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 205, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .radio-inline,
 .checkbox-inline {
     display: inline-block;
@@ -2573,14 +2591,14 @@ input[type="date"] {
     cursor: pointer;
 }
 
-/* line 225, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 214, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .radio-inline + .radio-inline,
 .checkbox-inline + .checkbox-inline {
     margin-top: 0;
     margin-left: 10px;
 }
 
-/* line 240, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 229, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 input[type="radio"][disabled], fieldset[disabled] input[type="radio"],
 input[type="checkbox"][disabled], fieldset[disabled]
 input[type="checkbox"],
@@ -2595,7 +2613,7 @@ input[type="checkbox"],
     cursor: not-allowed;
 }
 
-/* line 913, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 924, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
@@ -2606,7 +2624,7 @@ input[type="checkbox"],
     border-radius: 0;
 }
 
-/* line 918, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 932, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn {
@@ -2614,14 +2632,18 @@ select.input-sm, .input-group-sm > select.form-control,
     line-height: 26px;
 }
 
-/* line 923, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 938, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-group-sm > textarea.input-group-addon,
-.input-group-sm > .input-group-btn > textarea.btn {
+.input-group-sm > .input-group-btn > textarea.btn,
+select[multiple].input-sm,
+.input-group-sm > select[multiple].form-control,
+.input-group-sm > select[multiple].input-group-addon,
+.input-group-sm > .input-group-btn > select[multiple].btn {
     height: auto;
 }
 
-/* line 913, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 924, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
@@ -2632,7 +2654,7 @@ textarea.input-sm, .input-group-sm > textarea.form-control,
     border-radius: 1px;
 }
 
-/* line 918, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 932, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn {
@@ -2640,22 +2662,26 @@ select.input-lg, .input-group-lg > select.form-control,
     line-height: 40px;
 }
 
-/* line 923, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 938, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 textarea.input-lg, .input-group-lg > textarea.form-control,
 .input-group-lg > textarea.input-group-addon,
-.input-group-lg > .input-group-btn > textarea.btn {
+.input-group-lg > .input-group-btn > textarea.btn,
+select[multiple].input-lg,
+.input-group-lg > select[multiple].form-control,
+.input-group-lg > select[multiple].input-group-addon,
+.input-group-lg > .input-group-btn > select[multiple].btn {
     height: auto;
 }
 
-/* line 260, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 249, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .has-feedback {
     position: relative;
 }
-/* line 265, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 254, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .has-feedback .form-control {
     padding-right: 37.5px;
 }
-/* line 270, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 259, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .has-feedback .form-control-feedback {
     position: absolute;
     top: 25px;
@@ -2667,7 +2693,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     text-align: center;
 }
 
-/* line 858, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 869, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-success .help-block,
 .has-success .control-label,
 .has-success .radio,
@@ -2676,30 +2702,30 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 .has-success .checkbox-inline {
     color: #666666;
 }
-/* line 862, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 873, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-success .form-control {
     border-color: #666666;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-/* line 865, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 876, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-success .form-control:focus {
     border-color: #4d4d4d;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #999999;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #999999;
 }
-/* line 872, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 883, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-success .input-group-addon {
     color: #666666;
     border-color: #666666;
     background-color: #56bc76;
 }
-/* line 878, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 889, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-success .form-control-feedback {
     color: #666666;
 }
 
-/* line 858, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 869, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-warning .help-block,
 .has-warning .control-label,
 .has-warning .radio,
@@ -2708,30 +2734,30 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 .has-warning .checkbox-inline {
     color: #666666;
 }
-/* line 862, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 873, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-warning .form-control {
     border-color: #666666;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-/* line 865, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 876, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-warning .form-control:focus {
     border-color: #4d4d4d;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #999999;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #999999;
 }
-/* line 872, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 883, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-warning .input-group-addon {
     color: #666666;
     border-color: #666666;
     background-color: #eac85e;
 }
-/* line 878, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 889, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-warning .form-control-feedback {
     color: #666666;
 }
 
-/* line 858, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 869, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-error .help-block,
 .has-error .control-label,
 .has-error .radio,
@@ -2740,35 +2766,35 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 .has-error .checkbox-inline {
     color: #666666;
 }
-/* line 862, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 873, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-error .form-control {
     border-color: #666666;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-/* line 865, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 876, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-error .form-control:focus {
     border-color: #4d4d4d;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #999999;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #999999;
 }
-/* line 872, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 883, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-error .input-group-addon {
     color: #666666;
     border-color: #666666;
     background-color: #e5603b;
 }
-/* line 878, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 889, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .has-error .form-control-feedback {
     color: #666666;
 }
 
-/* line 299, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 288, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-control-static {
     margin-bottom: 0;
 }
 
-/* line 309, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 298, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .help-block {
     display: block;
     margin-top: 5px;
@@ -2777,24 +2803,24 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 }
 
 @media (min-width: 768px) {
-    /* line 334, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+    /* line 323, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
     .form-inline .form-group, .navbar-form .form-group {
         display: inline-block;
         margin-bottom: 0;
         vertical-align: middle;
     }
-    /* line 341, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+    /* line 330, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
     .form-inline .form-control, .navbar-form .form-control {
         display: inline-block;
         width: auto;
         vertical-align: middle;
     }
-    /* line 347, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+    /* line 336, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
     .form-inline .control-label, .navbar-form .control-label {
         margin-bottom: 0;
         vertical-align: middle;
     }
-    /* line 356, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+    /* line 345, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
     .form-inline .radio, .navbar-form .radio,
     .form-inline .checkbox,
     .navbar-form .checkbox {
@@ -2804,20 +2830,20 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
         padding-left: 0;
         vertical-align: middle;
     }
-    /* line 364, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+    /* line 353, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
     .form-inline .radio input[type="radio"], .navbar-form .radio input[type="radio"],
     .form-inline .checkbox input[type="checkbox"],
     .navbar-form .checkbox input[type="checkbox"] {
         float: none;
         margin-left: 0;
     }
-    /* line 373, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+    /* line 362, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
     .form-inline .has-feedback .form-control-feedback, .navbar-form .has-feedback .form-control-feedback {
         top: 0;
     }
 }
 
-/* line 392, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 381, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-horizontal .control-label,
 .form-horizontal .radio,
 .form-horizontal .checkbox,
@@ -2827,12 +2853,12 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     margin-bottom: 0;
     padding-top: 5px;
 }
-/* line 400, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 389, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-horizontal .radio,
 .form-horizontal .checkbox {
     min-height: 25px;
 }
-/* line 405, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 394, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-horizontal .form-group {
     margin-left: -15px;
     margin-right: -15px;
@@ -2846,17 +2872,17 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
 .form-horizontal .form-group:after {
     clear: both;
 }
-/* line 409, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 398, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-horizontal .form-control-static {
     padding-top: 5px;
 }
 @media (min-width: 768px) {
-    /* line 415, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+    /* line 404, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
     .form-horizontal .control-label {
         text-align: right;
     }
 }
-/* line 424, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
+/* line 413, D:/projects/admin/white/sass/bootstrap-original/_forms.scss */
 .form-horizontal .has-feedback .form-control-feedback {
     top: 0;
     right: 15px;
@@ -2917,32 +2943,32 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     background-color: #666666;
     border-color: rgba(0, 0, 0, 0.15);
 }
-/* line 506, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
     color: white;
     background-color: #525252;
     border-color: rgba(0, 0, 0, 0.15);
 }
-/* line 511, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 515, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-default.dropdown-toggle {
     color: white;
     background-color: #525252;
     border-color: rgba(0, 0, 0, 0.15);
 }
-/* line 517, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-default:active, .btn-default.active {
     background-image: none;
 }
-/* line 520, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 524, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-default.dropdown-toggle {
     background-image: none;
 }
-/* line 530, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 534, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
     background-color: #666666;
     border-color: rgba(0, 0, 0, 0.15);
 }
-/* line 536, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 540, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-default .badge {
     color: #666666;
     background-color: white;
@@ -2954,32 +2980,32 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     background-color: #618fb0;
     border-color: #5383a5;
 }
-/* line 506, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
     color: white;
     background-color: #4d7a9b;
     border-color: #3e627c;
 }
-/* line 511, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 515, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-primary.dropdown-toggle {
     color: white;
     background-color: #4d7a9b;
     border-color: #3e627c;
 }
-/* line 517, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-primary:active, .btn-primary.active {
     background-image: none;
 }
-/* line 520, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 524, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-primary.dropdown-toggle {
     background-image: none;
 }
-/* line 530, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 534, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
     background-color: #618fb0;
     border-color: #5383a5;
 }
-/* line 536, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 540, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-primary .badge {
     color: #618fb0;
     background-color: white;
@@ -2991,32 +3017,32 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     background-color: #56bc76;
     border-color: #47b268;
 }
-/* line 506, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
     color: white;
     background-color: #42a762;
     border-color: #35864f;
 }
-/* line 511, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 515, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-success.dropdown-toggle {
     color: white;
     background-color: #42a762;
     border-color: #35864f;
 }
-/* line 517, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-success:active, .btn-success.active {
     background-image: none;
 }
-/* line 520, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 524, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-success.dropdown-toggle {
     background-image: none;
 }
-/* line 530, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 534, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
     background-color: #56bc76;
     border-color: #47b268;
 }
-/* line 536, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 540, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-success .badge {
     color: #56bc76;
     background-color: white;
@@ -3028,32 +3054,32 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     background-color: #4ab0ce;
     border-color: #36a7c8;
 }
-/* line 506, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active {
     color: white;
     background-color: #339dbc;
     border-color: #297f98;
 }
-/* line 511, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 515, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-info.dropdown-toggle {
     color: white;
     background-color: #339dbc;
     border-color: #297f98;
 }
-/* line 517, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-info:active, .btn-info.active {
     background-image: none;
 }
-/* line 520, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 524, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-info.dropdown-toggle {
     background-image: none;
 }
-/* line 530, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 534, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
     background-color: #4ab0ce;
     border-color: #36a7c8;
 }
-/* line 536, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 540, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-info .badge {
     color: #4ab0ce;
     background-color: white;
@@ -3065,32 +3091,32 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     background-color: #eac85e;
     border-color: #e7c047;
 }
-/* line 506, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active {
     color: white;
     background-color: #e5bc3a;
     border-color: #d5a81c;
 }
-/* line 511, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 515, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-warning.dropdown-toggle {
     color: white;
     background-color: #e5bc3a;
     border-color: #d5a81c;
 }
-/* line 517, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-warning:active, .btn-warning.active {
     background-image: none;
 }
-/* line 520, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 524, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-warning.dropdown-toggle {
     background-image: none;
 }
-/* line 530, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 534, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
     background-color: #eac85e;
     border-color: #e7c047;
 }
-/* line 536, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 540, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-warning .badge {
     color: #eac85e;
     background-color: white;
@@ -3102,32 +3128,32 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
     background-color: #e5603b;
     border-color: #e24e24;
 }
-/* line 506, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active {
     color: white;
     background-color: #da461d;
     border-color: #b23918;
 }
-/* line 511, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 515, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-danger.dropdown-toggle {
     color: white;
     background-color: #da461d;
     border-color: #b23918;
 }
-/* line 517, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-danger:active, .btn-danger.active {
     background-image: none;
 }
-/* line 520, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 524, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-danger.dropdown-toggle {
     background-image: none;
 }
-/* line 530, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 534, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
     background-color: #e5603b;
     border-color: #e24e24;
 }
-/* line 536, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 540, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-danger .badge {
     color: #e5603b;
     background-color: white;
@@ -5148,25 +5174,20 @@ input[type="button"].btn-block {
     padding: 15px 15px;
     font-size: 16.25px;
     line-height: 20px;
+    height: 50px;
 }
-/* line 160, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 161, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none;
 }
-/* line 165, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
-.navbar-brand > .glyphicon {
-    float: left;
-    margin-top: -2px;
-    margin-right: 5px;
-}
 @media (min-width: 768px) {
-    /* line 173, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 167, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
         margin-left: -15px;
     }
 }
 
-/* line 185, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 179, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-toggle {
     position: relative;
     float: right;
@@ -5179,40 +5200,40 @@ input[type="button"].btn-block {
     border: 1px solid transparent;
     border-radius: 1px;
 }
-/* line 198, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 192, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-toggle:focus {
     outline: none;
 }
-/* line 203, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 197, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-toggle .icon-bar {
     display: block;
     width: 22px;
     height: 2px;
     border-radius: 1px;
 }
-/* line 209, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 203, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px;
 }
 @media (min-width: 768px) {
-    /* line 185, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 179, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-toggle {
         display: none;
     }
 }
 
-/* line 224, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 218, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-nav {
     margin: 7.5px -15px;
 }
-/* line 227, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 221, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px;
 }
 @media (max-width: 767px) {
-    /* line 235, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 229, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav .open .dropdown-menu {
         position: static;
         float: none;
@@ -5222,53 +5243,53 @@ input[type="button"].btn-block {
         border: 0;
         box-shadow: none;
     }
-    /* line 244, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 238, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav .open .dropdown-menu > li > a,
     .navbar-nav .open .dropdown-menu .dropdown-header {
         padding: 5px 15px 5px 25px;
     }
-    /* line 247, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 241, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav .open .dropdown-menu > li > a {
         line-height: 20px;
     }
-    /* line 250, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 244, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
         background-image: none;
     }
 }
 @media (min-width: 768px) {
-    /* line 224, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 218, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav {
         float: left;
         margin: 0;
     }
-    /* line 262, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 256, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav > li {
         float: left;
     }
-    /* line 264, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 258, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav > li > a {
         padding-top: 15px;
         padding-bottom: 15px;
     }
-    /* line 270, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 264, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-nav.navbar-right:last-child {
         margin-right: -15px;
     }
 }
 
 @media (min-width: 768px) {
-    /* line 284, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 278, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-left {
         float: left !important;
     }
 
-    /* line 287, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 281, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-right {
         float: right !important;
     }
 }
-/* line 298, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 292, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-form {
     margin-left: -15px;
     margin-right: -15px;
@@ -5281,13 +5302,13 @@ input[type="button"].btn-block {
     margin-bottom: 10px;
 }
 @media (max-width: 767px) {
-    /* line 310, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 304, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-form .form-group {
         margin-bottom: 5px;
     }
 }
 @media (min-width: 768px) {
-    /* line 298, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 292, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-form {
         width: auto;
         border: 0;
@@ -5298,241 +5319,241 @@ input[type="button"].btn-block {
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    /* line 330, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 324, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-form.navbar-right:last-child {
         margin-right: -15px;
     }
 }
 
-/* line 340, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 334, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-nav > li > .dropdown-menu {
     margin-top: 0;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
 
-/* line 345, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 339, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-/* line 354, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 348, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-btn {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/* line 357, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 351, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
     margin-top: 12px;
     margin-bottom: 12px;
 }
-/* line 360, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 354, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
     margin-top: 14px;
     margin-bottom: 14px;
 }
 
-/* line 370, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 364, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-text {
     margin-top: 15px;
     margin-bottom: 15px;
 }
 @media (min-width: 768px) {
-    /* line 370, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 364, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-text {
         float: left;
         margin-left: 15px;
         margin-right: 15px;
     }
-    /* line 379, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 373, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-text.navbar-right:last-child {
         margin-right: 0;
     }
 }
 
-/* line 389, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 383, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
 }
-/* line 393, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 387, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-brand {
     color: #777777;
 }
-/* line 396, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 390, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
     color: #5e5e5e;
     background-color: transparent;
 }
-/* line 402, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 396, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-text {
     color: #777777;
 }
-/* line 407, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 401, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-nav > li > a {
     color: #777777;
 }
-/* line 411, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 405, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #333333;
     background-color: transparent;
 }
-/* line 419, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 413, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #555555;
     background-color: #e7e7e7;
 }
-/* line 427, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 421, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
     color: #cccccc;
     background-color: transparent;
 }
-/* line 434, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 428, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-toggle {
     border-color: #dddddd;
 }
-/* line 437, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 431, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: #dddddd;
 }
-/* line 440, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 434, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #888888;
 }
-/* line 446, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 440, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
     border-color: #e7e7e7;
 }
-/* line 456, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 450, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: #e7e7e7;
     color: #555555;
 }
 @media (max-width: 767px) {
-    /* line 465, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 459, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #777777;
     }
-    /* line 468, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 462, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #333333;
         background-color: transparent;
     }
-    /* line 476, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 470, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
         color: #555555;
         background-color: #e7e7e7;
     }
-    /* line 484, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 478, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
         color: #cccccc;
         background-color: transparent;
     }
 }
-/* line 498, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 492, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-link {
     color: #777777;
 }
-/* line 500, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 494, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-default .navbar-link:hover {
     color: #333333;
 }
 
-/* line 509, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 503, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse {
     background-color: #222222;
     border-color: #090909;
 }
-/* line 513, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 507, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-brand {
     color: #999999;
 }
-/* line 516, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
     color: white;
     background-color: transparent;
 }
-/* line 522, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 516, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-text {
     color: #999999;
 }
-/* line 527, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-nav > li > a {
     color: #999999;
 }
-/* line 531, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 525, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
     color: white;
     background-color: transparent;
 }
-/* line 539, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 533, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: white;
     background-color: #090909;
 }
-/* line 547, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 541, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > a:focus {
     color: #444444;
     background-color: transparent;
 }
-/* line 555, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 549, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-toggle {
     border-color: #333333;
 }
-/* line 558, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 552, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
     background-color: #333333;
 }
-/* line 561, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 555, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: white;
 }
-/* line 567, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 561, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
     border-color: #101010;
 }
-/* line 576, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 570, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     background-color: #090909;
     color: white;
 }
 @media (max-width: 767px) {
-    /* line 585, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 579, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
         border-color: #090909;
     }
-    /* line 588, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 582, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
         background-color: #090909;
     }
-    /* line 591, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 585, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
         color: #999999;
     }
-    /* line 594, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 588, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
         color: white;
         background-color: transparent;
     }
-    /* line 602, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 596, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
         color: white;
         background-color: #090909;
     }
-    /* line 610, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+    /* line 604, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
     .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
         color: #444444;
         background-color: transparent;
     }
 }
-/* line 619, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 613, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-link {
     color: #999999;
 }
-/* line 621, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
+/* line 615, D:/projects/admin/white/sass/bootstrap-original/_navbar.scss */
 .navbar-inverse .navbar-link:hover {
     color: white;
 }
@@ -5629,38 +5650,38 @@ input[type="button"].btn-block {
     cursor: not-allowed;
 }
 
-/* line 556, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 560, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .pagination-lg > li > a,
 .pagination-lg > li > span {
     padding: 8px 18px;
     font-size: 16.25px;
 }
-/* line 562, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 566, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
     border-bottom-left-radius: 1px;
     border-top-left-radius: 1px;
 }
-/* line 568, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 572, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
     border-bottom-right-radius: 1px;
     border-top-right-radius: 1px;
 }
 
-/* line 556, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 560, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .pagination-sm > li > a,
 .pagination-sm > li > span {
     padding: 2px 10px;
     font-size: 11.05px;
 }
-/* line 562, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 566, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
-/* line 568, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 572, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
     border-bottom-right-radius: 0;
@@ -5755,7 +5776,7 @@ input[type="button"].btn-block {
 .label-default, .label-inverse {
     background-color: #999999;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .label-default[href]:hover, [href].label-inverse:hover, .label-default[href]:focus, [href].label-inverse:focus {
     background-color: gray;
 }
@@ -5764,7 +5785,7 @@ input[type="button"].btn-block {
 .label-primary {
     background-color: #618fb0;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .label-primary[href]:hover, .label-primary[href]:focus {
     background-color: #4a7594;
 }
@@ -5773,7 +5794,7 @@ input[type="button"].btn-block {
 .label-success {
     background-color: #56bc76;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .label-success[href]:hover, .label-success[href]:focus {
     background-color: #3fa05e;
 }
@@ -5782,7 +5803,7 @@ input[type="button"].btn-block {
 .label-info {
     background-color: #4ab0ce;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .label-info[href]:hover, .label-info[href]:focus {
     background-color: #3196b4;
 }
@@ -5791,7 +5812,7 @@ input[type="button"].btn-block {
 .label-warning {
     background-color: #eac85e;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .label-warning[href]:hover, .label-warning[href]:focus {
     background-color: #e4b931;
 }
@@ -5800,7 +5821,7 @@ input[type="button"].btn-block {
 .label-danger, .label-important {
     background-color: #e5603b;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .label-danger[href]:hover, [href].label-important:hover, .label-danger[href]:focus, [href].label-important:focus {
     background-color: #d1431c;
 }
@@ -5919,15 +5940,15 @@ a.list-group-item.active > .badge,
     margin-left: auto;
     margin-right: auto;
 }
-/* line 30, D:/projects/admin/white/sass/bootstrap-original/_thumbnails.scss */
-.thumbnail a:hover,
-.thumbnail a:focus,
+/* line 27, D:/projects/admin/white/sass/bootstrap-original/_thumbnails.scss */
 .thumbnail .caption {
     padding: 9px;
     color: #666666;
 }
 
 /* line 36, D:/projects/admin/white/sass/bootstrap-original/_thumbnails.scss */
+a.thumbnail:hover,
+a.thumbnail:focus,
 a.thumbnail.active {
     border-color: #618fb0;
 }
@@ -5976,11 +5997,11 @@ a.thumbnail.active {
     border-color: #47b256;
     color: #666666;
 }
-/* line 428, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 432, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-success hr {
     border-top-color: #3fa04d;
 }
-/* line 431, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 435, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-success .alert-link {
     color: #4d4d4d;
 }
@@ -5991,11 +6012,11 @@ a.thumbnail.active {
     border-color: #4f8a9e;
     color: #666666;
 }
-/* line 428, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 432, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-info hr {
     border-top-color: #477b8d;
 }
-/* line 431, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 435, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-info .alert-link {
     color: #4d4d4d;
 }
@@ -6006,11 +6027,11 @@ a.thumbnail.active {
     border-color: #e7a647;
     color: #666666;
 }
-/* line 428, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 432, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-warning hr {
     border-top-color: #e49b31;
 }
-/* line 431, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 435, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-warning .alert-link {
     color: #4d4d4d;
 }
@@ -6021,11 +6042,11 @@ a.thumbnail.active {
     border-color: #e22e24;
     color: #666666;
 }
-/* line 428, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 432, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-danger hr {
     border-top-color: #d1251c;
 }
-/* line 431, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 435, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .alert-danger .alert-link {
     color: #4d4d4d;
 }
@@ -6098,7 +6119,7 @@ a.thumbnail.active {
 .progress-bar-success {
     background-color: #56bc76;
 }
-/* line 618, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .progress-striped .progress-bar-success {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6108,7 +6129,7 @@ a.thumbnail.active {
 .progress-bar-info {
     background-color: #4ab0ce;
 }
-/* line 618, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .progress-striped .progress-bar-info {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6118,7 +6139,7 @@ a.thumbnail.active {
 .progress-bar-warning {
     background-color: #eac85e;
 }
-/* line 618, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .progress-striped .progress-bar-warning {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6128,7 +6149,7 @@ a.thumbnail.active {
 .progress-bar-danger {
     background-color: #e5603b;
 }
-/* line 618, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .progress-striped .progress-bar-danger {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6241,104 +6262,104 @@ a.list-group-item.active .list-group-item-text, a.list-group-item.active:hover .
     color: #e9eff4;
 }
 
-/* line 467, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 471, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .list-group-item-success {
     color: #666666;
     background-color: #56bc76;
 }
 
-/* line 474, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 478, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-success {
     color: #666666;
 }
-/* line 477, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 481, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-success .list-group-item-heading {
     color: inherit;
 }
-/* line 480, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-success:hover, a.list-group-item-success:focus {
     color: #666666;
     background-color: #47b268;
 }
-/* line 486, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 490, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-success.active, a.list-group-item-success.active:hover, a.list-group-item-success.active:focus {
     color: #fff;
     background-color: #666666;
     border-color: #666666;
 }
 
-/* line 467, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 471, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .list-group-item-info {
     color: #666666;
     background-color: #618fb0;
 }
 
-/* line 474, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 478, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-info {
     color: #666666;
 }
-/* line 477, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 481, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-info .list-group-item-heading {
     color: inherit;
 }
-/* line 480, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-info:hover, a.list-group-item-info:focus {
     color: #666666;
     background-color: #5383a5;
 }
-/* line 486, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 490, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-info.active, a.list-group-item-info.active:hover, a.list-group-item-info.active:focus {
     color: #fff;
     background-color: #666666;
     border-color: #666666;
 }
 
-/* line 467, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 471, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .list-group-item-warning {
     color: #666666;
     background-color: #eac85e;
 }
 
-/* line 474, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 478, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-warning {
     color: #666666;
 }
-/* line 477, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 481, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-warning .list-group-item-heading {
     color: inherit;
 }
-/* line 480, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-warning:hover, a.list-group-item-warning:focus {
     color: #666666;
     background-color: #e7c047;
 }
-/* line 486, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 490, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-warning.active, a.list-group-item-warning.active:hover, a.list-group-item-warning.active:focus {
     color: #fff;
     background-color: #666666;
     border-color: #666666;
 }
 
-/* line 467, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 471, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .list-group-item-danger {
     color: #666666;
     background-color: #e5603b;
 }
 
-/* line 474, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 478, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-danger {
     color: #666666;
 }
-/* line 477, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 481, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-danger .list-group-item-heading {
     color: inherit;
 }
-/* line 480, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 484, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-danger:hover, a.list-group-item-danger:focus {
     color: #666666;
     background-color: #e24e24;
 }
-/* line 486, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 490, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
     color: #fff;
     background-color: #666666;
@@ -6469,8 +6490,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
     border-top: 1px solid #dddddd;
 }
 /* line 111, D:/projects/admin/white/sass/bootstrap-original/_panels.scss */
-.panel > .table > tbody:first-child th,
-.panel > .table > tbody:first-child td {
+.panel > .table > tbody:first-child > tr:first-child th,
+.panel > .table > tbody:first-child > tr:first-child td {
     border-top: 0;
 }
 /* line 115, D:/projects/admin/white/sass/bootstrap-original/_panels.scss */
@@ -6610,17 +6631,17 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-default {
     border-color: #dddddd;
 }
-/* line 405, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 409, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-default > .panel-heading {
     color: #555555;
     background-color: whitesmoke;
     border-color: #dddddd;
 }
-/* line 410, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 414, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-default > .panel-heading + .panel-collapse .panel-body {
     border-top-color: #dddddd;
 }
-/* line 415, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 419, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-default > .panel-footer + .panel-collapse .panel-body {
     border-bottom-color: #dddddd;
 }
@@ -6629,17 +6650,17 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-primary {
     border-color: #618fb0;
 }
-/* line 405, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 409, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-primary > .panel-heading {
     color: white;
     background-color: #618fb0;
     border-color: #618fb0;
 }
-/* line 410, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 414, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
     border-top-color: #618fb0;
 }
-/* line 415, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 419, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
     border-bottom-color: #618fb0;
 }
@@ -6648,17 +6669,17 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-success {
     border-color: #47b256;
 }
-/* line 405, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 409, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-success > .panel-heading {
     color: #666666;
     background-color: #56bc76;
     border-color: #47b256;
 }
-/* line 410, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 414, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-success > .panel-heading + .panel-collapse .panel-body {
     border-top-color: #47b256;
 }
-/* line 415, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 419, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-success > .panel-footer + .panel-collapse .panel-body {
     border-bottom-color: #47b256;
 }
@@ -6667,17 +6688,17 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-info {
     border-color: #4f8a9e;
 }
-/* line 405, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 409, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-info > .panel-heading {
     color: #666666;
     background-color: #618fb0;
     border-color: #4f8a9e;
 }
-/* line 410, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 414, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-info > .panel-heading + .panel-collapse .panel-body {
     border-top-color: #4f8a9e;
 }
-/* line 415, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 419, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-info > .panel-footer + .panel-collapse .panel-body {
     border-bottom-color: #4f8a9e;
 }
@@ -6686,17 +6707,17 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-warning {
     border-color: #e7a647;
 }
-/* line 405, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 409, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-warning > .panel-heading {
     color: #666666;
     background-color: #eac85e;
     border-color: #e7a647;
 }
-/* line 410, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 414, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-warning > .panel-heading + .panel-collapse .panel-body {
     border-top-color: #e7a647;
 }
-/* line 415, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 419, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-warning > .panel-footer + .panel-collapse .panel-body {
     border-bottom-color: #e7a647;
 }
@@ -6705,17 +6726,17 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-danger {
     border-color: #e22e24;
 }
-/* line 405, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 409, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-danger > .panel-heading {
     color: #666666;
     background-color: #e5603b;
     border-color: #e22e24;
 }
-/* line 410, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 414, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-danger > .panel-heading + .panel-collapse .panel-body {
     border-top-color: #e22e24;
 }
-/* line 415, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 419, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .panel-danger > .panel-footer + .panel-collapse .panel-body {
     border-bottom-color: #e22e24;
 }
@@ -6910,24 +6931,25 @@ button.close {
 }
 
 @media (min-width: 768px) {
-    /* line 126, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
+    /* line 125, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
     .modal-dialog {
         width: 600px;
         margin: 30px auto;
     }
 
-    /* line 130, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
+    /* line 129, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
     .modal-content {
         -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
 
-    /* line 135, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
+    /* line 134, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
     .modal-sm {
         width: 300px;
     }
-
-    /* line 136, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
+}
+@media (min-width: 992px) {
+    /* line 138, D:/projects/admin/white/sass/bootstrap-original/_modals.scss */
     .modal-lg {
         width: 900px;
     }
@@ -7104,7 +7126,7 @@ button.close {
 }
 
 /* line 53, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover .arrow, .popover .arrow:after {
+.popover > .arrow, .popover > .arrow:after {
     position: absolute;
     display: block;
     width: 0;
@@ -7114,18 +7136,18 @@ button.close {
 }
 
 /* line 62, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover .arrow {
+.popover > .arrow {
     border-width: 11px;
 }
 
 /* line 65, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover .arrow:after {
+.popover > .arrow:after {
     border-width: 10px;
     content: "";
 }
 
 /* line 71, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.top .arrow {
+.popover.top > .arrow {
     left: 50%;
     margin-left: -11px;
     border-bottom-width: 0;
@@ -7134,7 +7156,7 @@ button.close {
     bottom: -11px;
 }
 /* line 78, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.top .arrow:after {
+.popover.top > .arrow:after {
     content: " ";
     bottom: 1px;
     margin-left: -10px;
@@ -7142,7 +7164,7 @@ button.close {
     border-top-color: white;
 }
 /* line 86, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.right .arrow {
+.popover.right > .arrow {
     top: 50%;
     left: -11px;
     margin-top: -11px;
@@ -7151,7 +7173,7 @@ button.close {
     border-right-color: rgba(0, 0, 0, 0.25);
 }
 /* line 93, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.right .arrow:after {
+.popover.right > .arrow:after {
     content: " ";
     left: 1px;
     bottom: -10px;
@@ -7159,7 +7181,7 @@ button.close {
     border-right-color: white;
 }
 /* line 101, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.bottom .arrow {
+.popover.bottom > .arrow {
     left: 50%;
     margin-left: -11px;
     border-top-width: 0;
@@ -7168,7 +7190,7 @@ button.close {
     top: -11px;
 }
 /* line 108, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.bottom .arrow:after {
+.popover.bottom > .arrow:after {
     content: " ";
     top: 1px;
     margin-left: -10px;
@@ -7176,7 +7198,7 @@ button.close {
     border-bottom-color: white;
 }
 /* line 117, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.left .arrow {
+.popover.left > .arrow {
     top: 50%;
     right: -11px;
     margin-top: -11px;
@@ -7185,7 +7207,7 @@ button.close {
     border-left-color: rgba(0, 0, 0, 0.25);
 }
 /* line 124, D:/projects/admin/white/sass/bootstrap-original/_popovers.scss */
-.popover.left .arrow:after {
+.popover.left > .arrow:after {
     content: " ";
     right: 1px;
     border-right-width: 0;
@@ -7476,198 +7498,153 @@ button.close {
     width: device-width;
 }
 
-/* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.visible-xs,
-tr.visible-xs,
-th.visible-xs,
-td.visible-xs {
+/* line 649, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.visible-xs, .visible-sm, .visible-md, .visible-lg {
     display: none !important;
 }
 
 @media (max-width: 767px) {
-    /* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 638, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .visible-xs {
         display: block !important;
     }
 
-    /* line 629, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 641, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     table.visible-xs {
         display: table;
     }
 
-    /* line 630, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 642, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     tr.visible-xs {
         display: table-row !important;
     }
 
-    /* line 632, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 644, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     th.visible-xs,
     td.visible-xs {
         display: table-cell !important;
     }
 }
-/* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.visible-sm,
-tr.visible-sm,
-th.visible-sm,
-td.visible-sm {
-    display: none !important;
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
-    /* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 638, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .visible-sm {
         display: block !important;
     }
 
-    /* line 629, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 641, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     table.visible-sm {
         display: table;
     }
 
-    /* line 630, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 642, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     tr.visible-sm {
         display: table-row !important;
     }
 
-    /* line 632, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 644, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     th.visible-sm,
     td.visible-sm {
         display: table-cell !important;
     }
 }
-/* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.visible-md,
-tr.visible-md,
-th.visible-md,
-td.visible-md {
-    display: none !important;
-}
-
 @media (min-width: 992px) and (max-width: 1199px) {
-    /* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 638, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .visible-md {
         display: block !important;
     }
 
-    /* line 629, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 641, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     table.visible-md {
         display: table;
     }
 
-    /* line 630, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 642, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     tr.visible-md {
         display: table-row !important;
     }
 
-    /* line 632, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 644, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     th.visible-md,
     td.visible-md {
         display: table-cell !important;
     }
 }
-/* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.visible-lg,
-tr.visible-lg,
-th.visible-lg,
-td.visible-lg {
-    display: none !important;
-}
-
 @media (min-width: 1200px) {
-    /* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 638, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .visible-lg {
         display: block !important;
     }
 
-    /* line 629, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 641, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     table.visible-lg {
         display: table;
     }
 
-    /* line 630, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 642, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     tr.visible-lg {
         display: table-row !important;
     }
 
-    /* line 632, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 644, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     th.visible-lg,
     td.visible-lg {
         display: table-cell !important;
     }
 }
 @media (max-width: 767px) {
-    /* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-    .hidden-xs,
-    tr.hidden-xs,
-    th.hidden-xs,
-    td.hidden-xs {
+    /* line 649, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    .hidden-xs {
         display: none !important;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    /* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-    .hidden-sm,
-    tr.hidden-sm,
-    th.hidden-sm,
-    td.hidden-sm {
+    /* line 649, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    .hidden-sm {
         display: none !important;
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    /* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-    .hidden-md,
-    tr.hidden-md,
-    th.hidden-md,
-    td.hidden-md {
+    /* line 649, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    .hidden-md {
         display: none !important;
     }
 }
 @media (min-width: 1200px) {
-    /* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-    .hidden-lg,
-    tr.hidden-lg,
-    th.hidden-lg,
-    td.hidden-lg {
+    /* line 649, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    .hidden-lg {
         display: none !important;
     }
 }
-/* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-.visible-print,
-tr.visible-print,
-th.visible-print,
-td.visible-print {
+/* line 649, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+.visible-print {
     display: none !important;
 }
 
 @media print {
-    /* line 628, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 638, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     .visible-print {
         display: block !important;
     }
 
-    /* line 629, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 641, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     table.visible-print {
         display: table;
     }
 
-    /* line 630, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 642, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     tr.visible-print {
         display: table-row !important;
     }
 
-    /* line 632, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    /* line 644, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
     th.visible-print,
     td.visible-print {
         display: table-cell !important;
     }
 }
 @media print {
-    /* line 640, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
-    .hidden-print,
-    tr.hidden-print,
-    th.hidden-print,
-    td.hidden-print {
+    /* line 649, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+    .hidden-print {
         display: none !important;
     }
 }
@@ -8012,9 +7989,17 @@ textarea + .help-block,
 }
 
 /***************************/
-/*        Dropdowns        */
+/*      Input Groups       */
 /***************************/
 /* line 189, D:/projects/admin/white/sass/_bootstrap-override.scss */
+.input-group-addon {
+    color: gray;
+}
+
+/***************************/
+/*        Dropdowns        */
+/***************************/
+/* line 197, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .dropdown-menu {
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
@@ -8023,7 +8008,7 @@ textarea + .help-block,
     border-radius: 1px;
 }
 
-/* line 193, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 201, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .dropdown-menu > li > a {
     font-weight: normal;
 }
@@ -8031,47 +8016,47 @@ textarea + .help-block,
 /***************************/
 /*      Buttons            */
 /***************************/
-/* line 201, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 209, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn:focus {
     outline: none;
 }
 
-/* line 205, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 213, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-xs, .btn-group-xs > .btn {
     font-size: 9.75px;
     line-height: 20px;
     padding: 0 6px;
 }
 
-/* line 211, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 219, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn {
     color: white;
     text-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-/* line 218, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 226, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn:hover, .btn:focus {
     color: white;
     -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
     box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.08);
 }
-/* line 223, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 231, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn.active:hover {
     color: white;
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
-/* line 229, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 237, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn.disabled, .pager .disabled button, .btn[disabled] {
     color: white;
 }
-/* line 233, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 241, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn .caret {
     border-top-color: #fff;
 }
 
-/* line 243, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 251, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-primary.active,
 .btn-warning.active,
 .btn-danger.active,
@@ -8079,7 +8064,7 @@ textarea + .help-block,
 .btn-info.active {
     color: rgba(255, 255, 255, 0.9);
 }
-/* line 245, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 253, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-primary.active:hover,
 .btn-warning.active:hover,
 .btn-danger.active:hover,
@@ -8091,12 +8076,12 @@ textarea + .help-block,
 /***************************/
 /*      Button Groups      */
 /***************************/
-/* line 255, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 263, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-group > .btn + .btn {
     margin-left: 0;
 }
 
-/* line 262, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 270, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-group > .btn:hover,
 .btn-group > .btn:focus,
 .btn-group > .btn:active,
@@ -8104,19 +8089,19 @@ textarea + .help-block,
     z-index: auto;
 }
 
-/* line 266, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 274, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-group > .btn + .dropdown-toggle {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-/* line 270, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 278, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-toolbar {
     font-size: 0;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/* line 276, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 284, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .btn-toolbar > .btn + .btn,
 .btn-toolbar > .btn-group + .btn,
 .btn-toolbar > .btn + .btn-group {
@@ -8126,7 +8111,7 @@ textarea + .help-block,
 /***************************/
 /*          Navs           */
 /***************************/
-/* line 284, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 292, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .nav-tabs .dropdown-menu {
     -webkit-border-radius: 0 0 1px 1px;
     -moz-border-radius: 0 0 1px 1px;
@@ -8135,7 +8120,7 @@ textarea + .help-block,
     border-radius: 0 0 1px 1px;
 }
 
-/* line 287, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 295, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .nav-pills .dropdown-menu {
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
@@ -8144,7 +8129,7 @@ textarea + .help-block,
     border-radius: 1px;
 }
 
-/* line 291, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 299, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .nav-pills > li > a {
     padding-top: 4px;
     padding-bottom: 4px;
@@ -8158,13 +8143,13 @@ textarea + .help-block,
     background: #f5f5f5;
 }
 
-/* line 300, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 308, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .nav > li > a {
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
 }
 
-/* line 306, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 314, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
@@ -8172,32 +8157,32 @@ textarea + .help-block,
     color: #666666;
 }
 
-/* line 311, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 319, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .tabs-below .nav-tabs {
     border-bottom: none;
     border-top: 1px solid #ddd;
 }
-/* line 315, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 323, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .tabs-below .nav-tabs > li {
     margin-bottom: 0;
     margin-top: -1px;
 }
-/* line 319, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 327, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .tabs-below .nav-tabs > li.active > a {
     border-bottom-color: #dddddd;
     border-top-color: transparent;
 }
-/* line 323, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 331, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .tabs-below .nav-tabs > li.active > a:hover {
     border: 1px solid #dddddd;
     border-top-color: transparent;
 }
-/* line 329, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 337, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .tabs-below .nav-tabs > li > a:hover {
     border-color: #dddddd #eeeeee #eeeeee;
 }
 
-/* line 335, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 343, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .nav-justified > li, .nav-tabs.nav-justified > li {
     padding: 0 1.28%;
 }
@@ -8205,18 +8190,18 @@ textarea + .help-block,
 /***************************/
 /*         Navbars         */
 /***************************/
-/* line 343, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 351, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .navbar {
     margin: 0;
 }
-/* line 346, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 354, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .navbar .btn-navbar {
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-/* line 355, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 363, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
@@ -8225,18 +8210,18 @@ textarea + .help-block,
     box-shadow: none;
 }
 
-/* line 360, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 368, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .navbar-nav {
     margin: -7.5px;
 }
-/* line 363, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 371, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: 20px;
 }
 @media (max-width: 767px) {
-    /* line 371, D:/projects/admin/white/sass/_bootstrap-override.scss */
+    /* line 379, D:/projects/admin/white/sass/_bootstrap-override.scss */
     .navbar-nav .open .dropdown-menu {
         position: absolute;
         float: left;
@@ -8250,7 +8235,7 @@ textarea + .help-block,
 /***************************/
 /*        Pagination       */
 /***************************/
-/* line 391, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 399, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
 .pagination > .active > span,
 .pagination > .active > span:hover,
@@ -8258,7 +8243,7 @@ textarea + .help-block,
     border-color: transparent;
 }
 
-/* line 398, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 406, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .pagination > li > a,
 .pagination > li > span {
     margin-left: 0;
@@ -8267,14 +8252,14 @@ textarea + .help-block,
 /***************************/
 /*         Modals          */
 /***************************/
-/* line 407, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 415, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .modal-backdrop,
 .modal-backdrop.fade.in {
     opacity: 0.15;
     filter: alpha(opacity=15);
 }
 
-/* line 412, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 420, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .modal {
     color: #555555;
     -webkit-border-radius: 1px;
@@ -8283,12 +8268,12 @@ textarea + .help-block,
     -o-border-radius: 1px;
     border-radius: 1px;
 }
-/* line 416, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 424, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
     color: #555555;
 }
 
-/* line 421, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 429, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .modal-footer {
     background-color: #f5f5f5;
 }
@@ -8296,12 +8281,12 @@ textarea + .help-block,
 /***************************/
 /*        Tooltips         */
 /***************************/
-/* line 429, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 437, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .tooltip {
     font-size: 11.05px;
 }
 
-/* line 433, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 441, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .tooltip-inner {
     padding: 4px;
 }
@@ -8309,7 +8294,7 @@ textarea + .help-block,
 /***************************/
 /*        Popovers         */
 /***************************/
-/* line 441, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 449, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .popover {
     color: #666666;
     -webkit-border-radius: 1px;
@@ -8318,12 +8303,12 @@ textarea + .help-block,
     -o-border-radius: 1px;
     border-radius: 1px;
 }
-/* line 444, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 452, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .popover h1, .popover h2, .popover h3, .popover h4, .popover h5, .popover h6 {
     color: #666666;
 }
 
-/* line 449, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 457, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .popover-title {
     -webkit-border-radius: 1px 1px 0 0;
     -moz-border-radius: 1px 1px 0 0;
@@ -8335,7 +8320,7 @@ textarea + .help-block,
 /***************************/
 /*    Labels and badges    */
 /***************************/
-/* line 457, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 465, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .label,
 .badge {
     display: inline-block;
@@ -8349,61 +8334,61 @@ textarea + .help-block,
     font-size: 11.05px;
 }
 
-/* line 467, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 475, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge {
     padding: 2px 9px;
 }
 
-/* line 471, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 479, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge-default {
     background-color: #999999;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .badge-default[href]:hover, .badge-default[href]:focus {
     background-color: gray;
 }
 
-/* line 475, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 483, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge-primary {
     background-color: #618fb0;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .badge-primary[href]:hover, .badge-primary[href]:focus {
     background-color: #4a7594;
 }
 
-/* line 479, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 487, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge-success {
     background-color: #56bc76;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .badge-success[href]:hover, .badge-success[href]:focus {
     background-color: #3fa05e;
 }
 
-/* line 483, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 491, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge-info {
     background-color: #4ab0ce;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .badge-info[href]:hover, .badge-info[href]:focus {
     background-color: #3196b4;
 }
 
-/* line 487, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 495, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge-warning {
     background-color: #eac85e;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .badge-warning[href]:hover, .badge-warning[href]:focus {
     background-color: #e4b931;
 }
 
-/* line 491, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 499, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .badge-danger {
     background-color: #e5603b;
 }
-/* line 581, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 585, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .badge-danger[href]:hover, .badge-danger[href]:focus {
     background-color: #d1431c;
 }
@@ -8411,7 +8396,7 @@ textarea + .help-block,
 /***************************/
 /*        Jumbotron        */
 /***************************/
-/* line 508, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 516, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget > .jumbotron {
     margin: -10px -12px;
 }
@@ -8419,7 +8404,7 @@ textarea + .help-block,
 /***************************/
 /*          Alerts         */
 /***************************/
-/* line 517, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 525, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .alert {
     text-shadow: none;
     border: none;
@@ -8428,7 +8413,7 @@ textarea + .help-block,
     box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
 }
 
-/* line 524, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 532, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .close {
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
@@ -8438,47 +8423,47 @@ textarea + .help-block,
 /***************************/
 /*        List Groups      */
 /***************************/
-/* line 533, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 541, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .list-group {
     margin-bottom: 0;
 }
-/* line 535, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 543, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget > .list-group {
     margin: -10px -12px;
 }
-/* line 538, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 546, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget .body > .list-group {
     margin: 0 -12px -10px;
 }
-/* line 541, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 549, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget .body > .list-group .list-group-item:first-child {
     border-top: 1px solid whitesmoke;
 }
 
-/* line 547, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 555, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .list-group-item {
     border: none;
     -webkit-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
 }
-/* line 551, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 559, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget .list-group-item {
     background: none;
 }
-/* line 553, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 561, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget .list-group-item + .list-group-item {
     border-top: 1px solid whitesmoke;
 }
-/* line 558, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 566, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .list-group-outer .list-group-item {
     -webkit-box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
     box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
 }
-/* line 560, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 568, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .list-group-outer .list-group-item + .list-group-item {
     margin-top: 10px;
 }
-/* line 565, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 573, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .list-group-item > .fa-chevron-right {
     margin-top: 3px;
     margin-left: 6px;
@@ -8488,7 +8473,7 @@ textarea + .help-block,
 /***********************************/
 /**            Progress           **/
 /**********************************/
-/* line 576, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 584, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .progress {
     background: rgba(0, 0, 0, 0.15);
 }
@@ -8496,63 +8481,63 @@ textarea + .help-block,
 /***************************/
 /*          Panels         */
 /***************************/
-/* line 584, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 592, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel-heading {
     padding: 0;
 }
-/* line 587, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 595, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel-heading > .accordion-toggle {
     display: block;
     padding: 8px 15px;
 }
 
-/* line 593, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel {
     border: none;
     background-color: whitesmoke;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(1n) .panel-heading {
     border-left: 5px solid #e5603b;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(2n) .panel-heading {
     border-left: 5px solid #eac85e;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(3n) .panel-heading {
     border-left: 5px solid #8cbf26;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(4n) .panel-heading {
     border-left: 5px solid #56bc76;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(5n) .panel-heading {
     border-left: 5px solid #4ab0ce;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(6n) .panel-heading {
     border-left: 5px solid #618fb0;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(7n) .panel-heading {
     border-left: 5px solid #a05000;
 }
-/* line 601, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 609, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel:nth-child(8n) .panel-heading {
     border-left: 5px solid #d04f4f;
 }
-/* line 607, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 615, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel .panel-heading a {
     color: #666666;
     font-weight: normal;
     color: #666666;
 }
 
-/* line 613, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 621, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .panel-body {
     border-top-color: whitesmoke;
 }
@@ -8560,16 +8545,16 @@ textarea + .help-block,
 /***************************/
 /*       Breadcrumbs       */
 /***************************/
-/* line 622, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 630, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .breadcrumb a {
     color: #666666;
     text-decoration: none;
 }
-/* line 625, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 633, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .breadcrumb a:hover {
     color: #999999;
 }
-/* line 630, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 638, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget > .breadcrumb {
     margin: -10px -12px;
 }
@@ -8577,16 +8562,16 @@ textarea + .help-block,
 /***************************/
 /*        Carousel         */
 /***************************/
-/* line 640, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 648, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .widget > .carousel {
     margin: 0 -12px 5px;
 }
 
-/* line 646, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 654, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .carousel-control.left, .carousel-control.right {
     background: none;
 }
-/* line 649, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 657, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .carousel-control i {
     position: absolute;
     top: 50%;
@@ -8599,11 +8584,11 @@ textarea + .help-block,
     margin-top: -10px;
 }
 
-/* line 663, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 671, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .carousel-indicators.outer {
     bottom: -10px;
 }
-/* line 666, D:/projects/admin/white/sass/_bootstrap-override.scss */
+/* line 674, D:/projects/admin/white/sass/_bootstrap-override.scss */
 .carousel-indicators li {
     background-color: #eeeeee;
 }
@@ -20594,32 +20579,32 @@ input.parsley-error {
     background-color: #f8f8f8;
     border-color: #cccccc;
 }
-/* line 506, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 510, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active {
     color: #555555;
     background-color: #e4e4e4;
     border-color: #adadad;
 }
-/* line 511, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 515, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-inverse.dropdown-toggle {
     color: #555555;
     background-color: #e4e4e4;
     border-color: #adadad;
 }
-/* line 517, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 521, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-inverse:active, .btn-inverse.active {
     background-image: none;
 }
-/* line 520, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 524, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .open .btn-inverse.dropdown-toggle {
     background-image: none;
 }
-/* line 530, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 534, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-inverse.disabled, .btn-inverse.disabled:hover, .btn-inverse.disabled:focus, .btn-inverse.disabled:active, .btn-inverse.disabled.active, .btn-inverse[disabled], .btn-inverse[disabled]:hover, .btn-inverse[disabled]:focus, .btn-inverse[disabled]:active, .btn-inverse[disabled].active, fieldset[disabled] .btn-inverse, fieldset[disabled] .btn-inverse:hover, fieldset[disabled] .btn-inverse:focus, fieldset[disabled] .btn-inverse:active, fieldset[disabled] .btn-inverse.active {
     background-color: #f8f8f8;
     border-color: #cccccc;
 }
-/* line 536, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
+/* line 540, D:/projects/admin/white/sass/bootstrap-original/_mixins.scss */
 .btn-inverse .badge {
     color: #f8f8f8;
     background-color: #555555;
