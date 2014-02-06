@@ -189,6 +189,13 @@ textarea,
 }
 
 /***************************/
+/*      Input Groups       */
+/***************************/
+.input-group-addon {
+  color: $textLightGray;
+}
+
+/***************************/
 /*        Tables        */
 /***************************/
 
@@ -350,6 +357,10 @@ textarea,
       border-color: transparent;
     }
   }
+}
+
+.nav > li > a{
+  @include transition(background-color .2s);
 }
 
 .nav > li > a:hover,
