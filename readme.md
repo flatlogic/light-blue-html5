@@ -25,7 +25,7 @@ We plan to release continuous long term updates and dozens of new features will 
 Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
-Email us at [contact@keeptwo.com](mailto:contact@keeptwo.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
+Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
 
 Changelog
 -
