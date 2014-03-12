@@ -554,8 +554,8 @@ $(function(){
                 this.folders.fetch({success: function(){
                     Emails.fetch({success: function(){
                         view.render();
-                    }});
-                }});
+                    }, reset: true});
+                }, reset: true});
             },
 
             render: function(){
