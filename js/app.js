@@ -81,8 +81,8 @@ function initPjax(){
     var PjaxApp = function(){
         this.pjaxEnabled = window.PJAX_ENABLED;
         this.$sidebar = $('#sidebar');
-        this.$contentWrap = $('.content-wrap');
-        //this.loaderTemplate = _.template($('#loader-template').html());
+        this.$content = $('.content');
+        this.$loaderWrap = $('.loader-wrap');
         this.pageLoadCallbacks = {};
 
         this._resetResizeCallbacks();
@@ -96,9 +96,9 @@ function initPjax(){
             });
             $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
             $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
-//        $(document).on('pjax:send', $.proxy(this.showLoader, this));
-//        $(document).on('pjax:complete', $.proxy(this.hideLoader, this));
+            $(document).on('pjax:send', $.proxy(this.showLoader, this));
             $(document).on('pjax:success', $.proxy(this._loadScripts, this));
+            $(document).on('pjax:complete', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
         }
     };
@@ -133,19 +133,22 @@ function initPjax(){
     PjaxApp.prototype.showLoader = function(){
         var view = this;
         this.showLoaderTimeout = setTimeout(function(){
-            view.$contentWrap.append(view.loaderTemplate());
+            view.$content.addClass('hiding');
+            view.$loaderWrap.removeClass('hide');
             setTimeout(function(){
-                view.$contentWrap.find('.loader-wrap').removeClass('hiding');
+                view.$loaderWrap.removeClass('hiding');
             }, 0)
         }, 100);
     };
 
     PjaxApp.prototype.hideLoader = function(){
         clearTimeout(this.showLoaderTimeout);
-        var $loaderWrap = this.$contentWrap.find('.loader-wrap');
-        $loaderWrap.addClass('hiding');
-        $loaderWrap.one($.support.transition.end, function () {
-            $loaderWrap.remove();
+        this.$loaderWrap.addClass('hiding');
+        this.$content.removeClass('hiding');
+        var view = this;
+        this.$loaderWrap.one($.support.transition.end, function () {
+            view.$loaderWrap.addClass('hide');
+            view.$content.removeClass('hiding');
         }).emulateTransitionEnd(200)
     };
 
