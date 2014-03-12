@@ -84,7 +84,7 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template</h2>
+                    <h2>About Template (Light Blue 2.0)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
                     <p>It's base on super powerful <a href="http://getbootstrap.com/">Bootstrap</a> front-end framework which
@@ -132,6 +132,13 @@
                         <li><p><a href="../sass/_svg.scss">svg.scss</a> - svg-related styles. This one can be easily removed if you don't need nvd3 charts.</p></li>
                     </ul>
 
+                    <h2>Pjax</h2>
+                    <p>Light Blue uses <a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a> library that
+                        uses ajax and pushState which makes page loading super fast.</p>
+                    <p>In case you want to turn off ajax page loading you need to just set <code>window.PJAX_ENABLED</code>
+                    variable to <code>false</code> (js/app.js file):</p>
+                    <pre><code>window.PJAX_ENABLED = false;</code></pre>
+
                     <h2>Support</h2>
                     <p>If you have any questions or problems when installing template feel free to contact us via email -
                         <a href="mailto:contact@flatlogic.com">contact@flatlogic.com</a>. We will provide as much help as possible.</p>
@@ -159,6 +166,12 @@
 
                     <h3>Change Log</h3>
                     <hr/>
+                    <h4><strong>Version 2.0</strong></h4>
+                    <ul>
+                        <li>- Super fast Ajax page loading</li>
+                        <li>- Lib updates</li>
+                        <li>- Few bug fixes</li>
+                    </ul>
                     <h4><strong>Version 1.8</strong></h4>
                     <ul>
                         <li>- Bootstrap v3.1 update</li>

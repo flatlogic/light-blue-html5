@@ -1,4 +1,4 @@
-Light Blue v1.8 (February 6)
+Light Blue v2.0 (March 13)
 =========
 
 Now in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!

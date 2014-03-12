@@ -92,13 +92,14 @@ function initPjax(){
 
             $(document).pjax('#sidebar a:not([data-no-pjax])', '.content', {
                 fragment: '.content',
-                type: 'POST' //prevents caching
+                type: 'GET' //use POST to prevent caching when debugging
             });
             $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
             $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
             $(document).on('pjax:send', $.proxy(this.showLoader, this));
             $(document).on('pjax:success', $.proxy(this._loadScripts, this));
-            $(document).on('pjax:complete', $.proxy(this.hideLoader, this));
+            //custom event which fires when all scripts are actually loaded
+            $(document).on('pjax-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
         }
     };
@@ -133,13 +134,12 @@ function initPjax(){
     PjaxApp.prototype.showLoader = function(){
         var view = this;
         this.showLoaderTimeout = setTimeout(function(){
-            console.log('loader shown');
             view.$content.addClass('hiding');
             view.$loaderWrap.removeClass('hide');
             setTimeout(function(){
                 view.$loaderWrap.removeClass('hiding');
             }, 0)
-        }, 100);
+        }, 200);
     };
 
     PjaxApp.prototype.hideLoader = function(){
@@ -239,6 +239,10 @@ function initPjax(){
 
             $previous = $(script);
         });
+
+        $previous.load(function(){
+            $(document).trigger('pjax-app:loaded');
+        })
     };
 
     PjaxApp.prototype.extractPageName = function(url){
