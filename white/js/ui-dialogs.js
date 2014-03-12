@@ -1,4 +1,10 @@
 $(function(){
-    $(".popover-test").popover();
-    $(".tooltip-test").tooltip();
+    function pageLoad(){
+        $(".popover-test").popover();
+        $(".tooltip-test").tooltip();
+    }
+
+    pageLoad();
+
+    PjaxApp.onPageLoad(pageLoad);
 });

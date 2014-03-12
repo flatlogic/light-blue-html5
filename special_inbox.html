@@ -85,8 +85,8 @@
                 <li class="active"><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
-                <li><a href="landing.html">Landing</a></li>
-                <li><a href="white/index.html">White <i class="fa fa-external-link-square"></i></a></li>
+                <li><a href="landing.html" data-no-pjax>Landing</a></li>
+                <li><a href="white/index.html" data-no-pjax>White <i class="fa fa-external-link-square"></i></a></li>
             </ul>
         </li>
         <li class="panel">
@@ -391,6 +391,7 @@
 
 <!-- jquery and friends -->
 <script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
 
 
 <!-- jquery plugins -->
@@ -674,7 +675,7 @@
     </form>
 </script>
 
-<script id="template-upload" type="text/x-tmpl">
+<script id="template-upload" type="text/template">
     {% for (var i=0, file; file=o.files[i]; i++) { %}
     <tr class="template-upload fade">
         <td class="preview"><span class="fade"></span></td>
@@ -707,7 +708,7 @@
     {% } %}
 </script>
 <!-- The template to display files available for download -->
-<script id="template-download" type="text/x-tmpl">
+<script id="template-download" type="text/template">
     {% for (var i=0, file; file=o.files[i]; i++) { %}
     <tr class="template-download fade">
         {% if (file.error) { %}

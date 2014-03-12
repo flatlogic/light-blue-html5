@@ -1,3 +1,5 @@
+window.PJAX_ENABLED = true;
+
 //colors
 //same as in _variables.scss
 //keep it synchronized
@@ -23,13 +25,18 @@ if (chartsOff){
 
 COLOR_VALUES = [$red, $orange, $green, $blue, $teal, $redDark];
 
-var colors = function(){
+window.colors = function(){
     if (!window.d3) return false;
     return d3.scale.ordinal().range(COLOR_VALUES);
 }();
 
 function keyColor(d, i) {
-    return colors(d.key)
+    if (!window.colors){
+        window.colors = function(){
+            return d3.scale.ordinal().range(COLOR_VALUES);
+        }();
+    }
+    return window.colors(d.key)
 }
 
 function testData(stream_names, points_count) {
@@ -68,6 +75,175 @@ function resetContentMargin(){
     if ($(window).width() > 767){
         $(".content").css("margin-top", '');
     }
+}
+
+function initPjax(){
+    var PjaxApp = function(){
+        this.pjaxEnabled = window.PJAX_ENABLED;
+        this.$sidebar = $('#sidebar');
+        this.$contentWrap = $('.content-wrap');
+        //this.loaderTemplate = _.template($('#loader-template').html());
+        this.pageLoadCallbacks = {};
+
+        this._resetResizeCallbacks();
+        this._initOnResizeCallbacks();
+
+        if (this.pjaxEnabled){
+
+            $(document).pjax('#sidebar a:not([data-no-pjax])', '.content', {
+                fragment: '.content',
+                type: 'POST' //prevents caching
+            });
+            $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
+            $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
+//        $(document).on('pjax:send', $.proxy(this.showLoader, this));
+//        $(document).on('pjax:complete', $.proxy(this.hideLoader, this));
+            $(document).on('pjax:success', $.proxy(this._loadScripts, this));
+            $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
+        }
+    };
+
+    PjaxApp.prototype._initOnResizeCallbacks = function(){
+        var resizeTimeout,
+            view = this;
+
+        $(window).resize(function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function(){
+                view._runPageCallbacks(view.resizeCallbacks);
+            }, 100);
+        });
+    };
+
+    PjaxApp.prototype._resetResizeCallbacks = function(){
+        this.resizeCallbacks = {};
+    };
+
+    PjaxApp.prototype._changeActiveNavigationItem = function(event, xhr, options){
+        this.$sidebar.find('li.active').removeClass('active');
+
+        this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
+            if (this.href === options.url){
+                $(this).closest('li').addClass('active')
+                    .closest('.panel').addClass('active');
+            }
+        });
+    };
+
+    PjaxApp.prototype.showLoader = function(){
+        var view = this;
+        this.showLoaderTimeout = setTimeout(function(){
+            view.$contentWrap.append(view.loaderTemplate());
+            setTimeout(function(){
+                view.$contentWrap.find('.loader-wrap').removeClass('hiding');
+            }, 0)
+        }, 100);
+    };
+
+    PjaxApp.prototype.hideLoader = function(){
+        clearTimeout(this.showLoaderTimeout);
+        var $loaderWrap = this.$contentWrap.find('.loader-wrap');
+        $loaderWrap.addClass('hiding');
+        $loaderWrap.one($.support.transition.end, function () {
+            $loaderWrap.remove();
+        }).emulateTransitionEnd(200)
+    };
+
+    /**
+     * Specify a function to execute when window was resized.
+     * Runs maximum once in 100 milliseconds.
+     * @param fn A function to execute
+     */
+    PjaxApp.prototype.onResize = function(fn){
+        this._addPageCallback(this.resizeCallbacks, fn);
+    };
+
+    /**
+     * Specify a function to execute when page was reloaded with pjax.
+     * @param fn A function to execute
+     */
+    PjaxApp.prototype.onPageLoad = function(fn){
+        this._addPageCallback(this.pageLoadCallbacks, fn);
+    };
+
+    PjaxApp.prototype.pageLoaded = function(){
+        this._runPageCallbacks(this.pageLoadCallbacks);
+    };
+
+    PjaxApp.prototype._addPageCallback = function(callbacks, fn){
+        var pageName = this.extractPageName(location.href);
+        if (!callbacks[pageName]){
+            callbacks[pageName] = [];
+        }
+        callbacks[pageName].push(fn);
+    };
+
+    PjaxApp.prototype._runPageCallbacks = function(callbacks){
+        var pageName = this.extractPageName(location.href);
+        if (callbacks[pageName]){
+            _(callbacks[pageName]).each(function(fn){
+                fn();
+            })
+        }
+    };
+
+    PjaxApp.prototype._loadScripts = function(event, data, status, xhr, options){
+        var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
+            $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
+            $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
+            $existingScripts = $('script[src]'),
+            $existingTemplates = $('script[type="text/template"]');
+
+        //append templates first as they are used by scripts
+        $templates.each(function() {
+            var id = this.id;
+            var matchedTemplates = $existingTemplates.filter(function() {
+                //noinspection JSPotentiallyInvalidUsageOfThis
+                return this.id === id;
+            });
+            if (matchedTemplates.length) return;
+
+            var script = document.createElement('script');
+            script.id = $(this).attr('id');
+            script.type = $(this).attr('type');
+            script.innerHTML = this.innerHTML;
+            document.body.appendChild(script);
+        });
+
+
+
+        //ensure synchronous loading
+        var $previous = {
+            load: function(fn){
+                fn();
+            }
+        };
+
+        $scripts.each(function() {
+            var src = this.src;
+            var matchedScripts = $existingScripts.filter(function() {
+                //noinspection JSPotentiallyInvalidUsageOfThis
+                return this.src === src;
+            });
+            if (matchedScripts.length) return;
+
+            var script = document.createElement('script');
+            script.src = $(this).attr('src');
+            $previous.load(function(){
+                document.body.appendChild(script);
+            });
+
+            $previous = $(script);
+        });
+    };
+
+    PjaxApp.prototype.extractPageName = function(url){
+        //credit: http://stackoverflow.com/a/8497143/1298418
+        var pageName = url.split('#')[0].substring(url.lastIndexOf("/") + 1);
+        return pageName === '' ? 'index.html' : pageName;
+    };
+
+    window.PjaxApp = new PjaxApp();
 }
 
 $(function(){
@@ -192,5 +368,7 @@ $(function(){
             $(this).removeClass('open');
         }
     });
+
+    initPjax();
 
 });

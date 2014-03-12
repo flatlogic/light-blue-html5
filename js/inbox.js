@@ -1,8 +1,14 @@
 $(function(){
-    $("input").iCheck({
-        checkboxClass: 'icheckbox_square-grey',
-        radioClass: 'iradio_square-grey'
-    });
+    function pageLoad(){
+        $("input").iCheck({
+            checkboxClass: 'icheckbox_square-grey',
+            radioClass: 'iradio_square-grey'
+        });
+    }
+
+    pageLoad();
+
+    PjaxApp.onPageLoad(pageLoad);
 });
 
 var dummyBodies = ["<p>Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>",
@@ -11,9 +17,8 @@ var dummyBodies = ["<p>Why painful the sixteen how minuter looking nor. Subject 
 
 $(function(){
 
-    "use strict";
-
-    $(function(){
+    function pageLoad(){
+        "use strict";
 
         var STARRED_FOLDER_ID = 33;
 
@@ -235,9 +240,9 @@ $(function(){
 
             replyEmail: function(){
                 var body = "<br/><br/><br/>" +
-                    "<blockquote>" +
-                    this.model.get("body") +
-                    "</blockquote> <br/>",
+                        "<blockquote>" +
+                        this.model.get("body") +
+                        "</blockquote> <br/>",
                     newEmail = new Email({
                         body: body,
                         receiver: this.model.get("sender") ? this.model.get("sender") : this.model.get("senderMail"),
@@ -601,6 +606,9 @@ $(function(){
         });
 
         var App = new AppView;
+    }
 
-    });
+    pageLoad();
+
+    PjaxApp.onPageLoad(pageLoad);
 });

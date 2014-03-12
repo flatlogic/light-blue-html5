@@ -85,8 +85,8 @@
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
-                <li><a href="../landing.html">Landing</a></li>
-                <li><a href="../index.html">Transparent <i class="fa fa-external-link-square"></i></a></li>
+                <li><a href="../landing.html" data-no-pjax>Landing</a></li>
+                <li><a href="../index.html" data-no-pjax>Transparent <i class="fa fa-external-link-square"></i></a></li>
             </ul>
         </li>
         <li class="panel">
@@ -402,29 +402,29 @@
                 </section>
             </div>
         </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Preview image</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="img/5.jpg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger pull-left btn-sm"> <i class="fa fa-angle-left"></i> Previous</button>
+                        <button class="btn btn-danger btn-sm">&nbsp; Next <i class="fa fa-angle-right"></i>  &nbsp; </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </div>
 </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Preview image</h4>
-            </div>
-            <div class="modal-body">
-                <img src="img/5.jpg" alt="">
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger pull-left btn-sm"> <i class="fa fa-angle-left"></i> Previous</button>
-                <button class="btn btn-danger btn-sm">&nbsp; Next <i class="fa fa-angle-right"></i>  &nbsp; </button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
 <!-- jquery and friends -->
 <script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
 
 
 <!-- jquery plugins -->

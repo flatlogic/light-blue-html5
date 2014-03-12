@@ -1,4 +1,4 @@
-$(function(){
+function mapsPageLoad(){
     $("#basic").width("100%").height("100%").gmap3({
         map:{
             address:"Minsk, Belarus",
@@ -28,7 +28,6 @@ $(function(){
             }
         }
     });
-
     $('#address').keypress(function(e) {
         if(e.which == 13) {
             var addr = $(this).val();
@@ -117,4 +116,18 @@ $(function(){
     //selectpicker doesn't seem to be flexible enough (can't change template), so need to replace span.caret externally
     $('.selectpicker + .bootstrap-select span.caret').replaceWith("<i class='fa fa-caret-down'></i>");
     $('.selectpicker + .bootstrap-select span.pull-left').removeClass("pull-left");
+}
+
+$(function(){
+    function loadScript() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://maps.google.com/maps/api/js?sensor=false&language=en&' +
+            'callback=mapsPageLoad';
+        document.body.appendChild(script);
+    }
+
+    loadScript();
+
+    PjaxApp.onPageLoad(mapsPageLoad);
 });

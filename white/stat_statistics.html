@@ -4,12 +4,6 @@
     <title>Light Blue - Admin Template</title>
     <link href="css/application.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.png">
-    <script src="lib/jquery/jquery-2.0.3.min.js"> </script>
-
-    <script src="lib/icheck.js/jquery.icheck.js"></script>
-    <!--<script src="lib/zepto/zepto.min.js"> </script>-->
-    <script src="lib/bootstrap/tab.js"> </script>
-    <script src="lib/parsley/parsley.js"> </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -91,8 +85,8 @@
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
-                <li><a href="../landing.html">Landing</a></li>
-                <li><a href="../index.html">Transparent <i class="fa fa-external-link-square"></i></a></li>
+                <li><a href="../landing.html" data-no-pjax>Landing</a></li>
+                <li><a href="../index.html" data-no-pjax>Transparent <i class="fa fa-external-link-square"></i></a></li>
             </ul>
         </li>
         <li class="panel">
@@ -568,23 +562,9 @@
     </div>
 </div>
 
-<!-- d3, nvd3-->
-<script src="lib/nvd3/lib/d3.v2.js"></script>
-<script src="lib/nvd3/nv.d3.custom.js"></script>
-
-<!-- nvd3 models -->
-<script src="lib/nvd3/src/models/scatter.js"></script>
-<script src="lib/nvd3/src/models/axis.js"></script>
-<script src="lib/nvd3/src/models/legend.js"></script>
-<script src="lib/nvd3/src/models/stackedArea.js"></script>
-<script src="lib/nvd3/src/models/stackedAreaChart.js"></script>
-<script src="lib/nvd3/src/models/line.js"></script>
-<script src="lib/nvd3/src/models/pie.js"></script>
-<script src="lib/nvd3/src/models/pieChartTotal.js"></script>
-<script src="lib/nvd3/stream_layers.js"></script>
-<script src="lib/nvd3/src/models/lineChart.js"></script>
-<script src="lib/nvd3/src/models/multiBar.js"></script>
-<script src="lib/nvd3/src/models/multiBarChart.js"></script>
+<!-- jquery and friends -->
+<script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
 
 <!--backbone and friends -->
 <script src="lib/backbone/underscore-min.js"></script>
