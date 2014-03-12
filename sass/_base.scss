@@ -2464,6 +2464,22 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   color: white;
 }
 
+.loader{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  .spinner{
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    font-size: 20px;
+  }
+}
+
 
 
 /***********************/
