@@ -2228,9 +2228,38 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  top: 70px;
   bottom: 0;
   text-align: center;
+
+  @media (min-width: 1049px) {
+    margin-left: $wrapMargin;
+    .sidebar-on-right &{
+      margin-right: $wrapMargin;
+      margin-left: 0;
+    }
+
+    .sidebar-icons &{
+      margin-left: 62px;
+      .sidebar-on-right &{
+        margin-right: 62px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1048px){
+    margin-left: 62px;
+    .sidebar-on-right &{
+      margin-right: 62px;
+      margin-left: 0;
+    }
+  }
+
+  .sidebar-hidden &{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
   opacity: 1;
   @include transition(opacity .2s ease-out);
@@ -2242,9 +2271,10 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     position: absolute;
     top: 50%;
     line-height: 30px;
-    margin-top: -15px;
+    margin-top: -85px;
     font-size: 20px;
     vertical-align: middle;
+    color: #444;
   }
 }
 
