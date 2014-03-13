@@ -1,24 +1,28 @@
 Light Blue v2.0 (March 13)
 =========
 
-Now in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!
+Now with lightening fast **ajax** page loading!
 
-Light Blue is a **next generation** admin dashboard template based on the latest **Flat** design. There are few reasons why we have created it:.
+Available in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!
+
+Light Blue is a **next generation** dashboard template based on the latest **Flat** design. There are few reasons why we created it:.
 
   - We didn't like the darkness of most of admin templates, so we created this **light** one.
+  - We didn't like the slowness of most of admin template, so we created this **fast** one.
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 1.8 Released!
+New Version 2.0 Released!
 -
 
-- Bootstrap v3.1 update
+- Super fast Ajax page loading
+- Lib updates
 - Few bug fixes
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
-**Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework and uses powerful Sass (CSS preprocessor) technology.
+**Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
 
 We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
 
@@ -29,6 +33,12 @@ Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [o
 
 Changelog
 -
+
+
+Version 1.7
+
+  - Bootstrap v3.1 update
+  - Few bug fixes
 
 Version 1.7
 
