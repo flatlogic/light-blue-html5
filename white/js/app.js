@@ -1,4 +1,5 @@
 window.PJAX_ENABLED = true;
+window.DEBUG        = true;
 
 //colors
 //same as in _variables.scss
@@ -80,27 +81,34 @@ function resetContentMargin(){
 function initPjax(){
     var PjaxApp = function(){
         this.pjaxEnabled = window.PJAX_ENABLED;
+        this.debug = window.DEBUG;
         this.$sidebar = $('#sidebar');
         this.$content = $('.content');
         this.$loaderWrap = $('.loader-wrap');
         this.pageLoadCallbacks = {};
+        this.loading = false;
 
         this._resetResizeCallbacks();
         this._initOnResizeCallbacks();
 
         if (this.pjaxEnabled){
 
-            $(document).pjax('#sidebar a:not([data-no-pjax])', '.content', {
+            //prevent pjaxing if already loading
+            this.$sidebar.find('a:not(.accordion-toggle):not([data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
+            $(document).pjax('#sidebar a:not(.accordion-toggle):not([data-no-pjax])', '.content', {
                 fragment: '.content',
-                type: 'GET' //use POST to prevent caching when debugging
+                type: 'GET', //use POST to prevent caching when debugging,
+                timeout: 10000
             });
             $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
             $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
             $(document).on('pjax:send', $.proxy(this.showLoader, this));
             $(document).on('pjax:success', $.proxy(this._loadScripts, this));
             //custom event which fires when all scripts are actually loaded
+            $(document).on('pjax-app:loaded', $.proxy(this._loadingFinished, this));
             $(document).on('pjax-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
+            window.onerror = $.proxy(this._logErrors, this);
         }
     };
 
@@ -240,15 +248,49 @@ function initPjax(){
             $previous = $(script);
         });
 
+        var view = this;
         $previous.load(function(){
             $(document).trigger('pjax-app:loaded');
+            view.log('scripts loaded.');
         })
     };
 
     PjaxApp.prototype.extractPageName = function(url){
         //credit: http://stackoverflow.com/a/8497143/1298418
-        var pageName = url.split('#')[0].substring(url.lastIndexOf("/") + 1);
+        var pageName = url.split('#')[0].substring(url.lastIndexOf("/") + 1).split('?')[0];
         return pageName === '' ? 'index.html' : pageName;
+    };
+
+    PjaxApp.prototype._checkLoading = function(e){
+        var oldLoading = this.loading;
+        this.loading = true;
+        if (oldLoading){
+            this.log('attempt to load page while already loading; preventing.');
+            e.preventDefault();
+        } else {
+            this.log(e.currentTarget.href + ' loading started.');
+        }
+        //prevent default if already loading
+        return !oldLoading;
+    };
+
+    PjaxApp.prototype._loadingFinished = function(){
+        this.loading = false;
+    };
+
+    PjaxApp.prototype._logErrors = function(){
+        var errors = JSON.parse(localStorage.getItem('lb-errors')) || {};
+        errors[new Date().getTime()] = arguments;
+        localStorage.setItem('lb-errors', JSON.stringify(errors));
+    };
+
+    PjaxApp.prototype.log = function(message){
+        if (this.debug){
+            console.log(message
+                + " - " + arguments.callee.caller.toString().slice(0, 30).split('\n')[0]
+                + " - " + this.extractPageName(location.href)
+            );
+        }
     };
 
     window.PjaxApp = new PjaxApp();
