@@ -35,7 +35,7 @@ Changelog
 -
 
 
-Version 1.7
+Version 1.8
 
   - Bootstrap v3.1 update
   - Few bug fixes
