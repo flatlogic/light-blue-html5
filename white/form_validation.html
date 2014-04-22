@@ -321,8 +321,8 @@
                     </h4>
                 </header>
                 <div class="body">
-                    <form class="form-horizontal label-left" method="post"
-                          data-validate="parsley"
+                    <form id="validation-form" class="form-horizontal label-left" method="post"
+                          data-parsley-priority-enabled="false"
                           novalidate="novalidate">
                         <fieldset>
                             <legend class="section">
@@ -345,8 +345,8 @@
                                     </label>
                                     <div class="controls form-group">
                                         <input type="text" id="basic-change" name="basic-change" class="form-control"
-                                               data-trigger="change"
-                                               data-minlength="10"
+                                               data-parsley-trigger="change"
+                                               data-parsley-minlength="10"
                                                required="required">
                                     </div>
                                 </div>
@@ -366,8 +366,8 @@
                                     </label>
                                     <div class="controls form-group">
                                         <input type="email" id="email" name="email" class="form-control"
-                                               data-trigger="change"
-                                               data-validation-minlength="1"
+                                               data-parsley-trigger="change"
+                                               data-parsley-validation-threshold="1"
                                                required="required">
                                     <span class="help-block">
                                         This one is triggered even when 1 character has been input
@@ -379,7 +379,8 @@
                                         Number
                                     </label>
                                     <div class="controls form-group">
-                                        <input type="number" id="number" name="number" class="form-control"
+                                        <input type="text" id="number" name="number" class="form-control"
+                                               data-parsley-type="number"
                                                required="required">
                                     </div>
                                 </div>
@@ -388,10 +389,11 @@
                                         Range
                                     </label>
                                     <div class="controls form-group">
-                                        <input type="text" data-range="[10, 100]"  class="form-control"
+                                        <input type="text"  class="form-control"
                                                id="range" name="range"
-                                               data-trigger="change"
-                                               data-validation-minlength="1"
+                                               data-parsley-range="[10, 100]"
+                                               data-parsley-trigger="change"
+                                               data-parsley-validation-threshold="1"
                                                required="required">
                                     </div>
                                 </div>
@@ -408,15 +410,15 @@
                                     </label>
                                     <div class="controls form-group">
                                         <input type="password" id="password" name="password" class="form-control"
-                                               data-trigger="change"
-                                               data-minlength="6"
+                                               data-parsley-trigger="change"
+                                               data-parsley-minlength="6"
                                                required="required">
                                     </div>
                                     <div class="controls form-group">
                                         <input type="password" id="password-r" name="password-r" class="form-control"
-                                               data-trigger="change"
-                                               data-minlength="6"
-                                               data-equalto="#password"
+                                               data-parsley-trigger="change"
+                                               data-parsley-minlength="6"
+                                               data-parsley-equalto="#password"
                                                required="required">
                                     </div>
                                 </div>
@@ -426,8 +428,8 @@
                                     </label>
                                     <div class="controls form-group">
                                         <input type="text" id="website" name="website" class="form-control"
-                                               data-trigger="change"
-                                               data-type="url"
+                                               data-parsley-trigger="change"
+                                               data-parsley-type="url"
                                                required="required">
                                     </div>
                                 </div>

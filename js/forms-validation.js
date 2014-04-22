@@ -5,9 +5,7 @@
 $(function(){
     function pageLoaded(){
         //init parsley for pjax requests
-        $( '[data-validate="parsley"]' ).each( function () {
-            $( this ).parsley();
-        } );
+        $( '#validation-form' ).parsley();
     }
 
     pageLoaded();

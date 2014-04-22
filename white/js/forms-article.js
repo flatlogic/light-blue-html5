@@ -20,13 +20,7 @@ $(function(){
 
         //changing default parsley behaviour so it adds error messages to labels.
         //label - is a parent of element
-        $("#user-form").parsley({
-            errors: {
-                container: function ( elem, isRadioOrCheckbox ) {
-                    return elem.parents(".control-group").children("label");
-                }
-            }
-        });
+        $("#article-form").parsley();
 
         $("input:checkbox").iCheck({
             checkboxClass: 'icheckbox_square-grey',
