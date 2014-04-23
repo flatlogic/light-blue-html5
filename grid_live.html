@@ -312,11 +312,19 @@
         </div>
         <div class="row">
             <div class="col-md-6 widget-container">
-                <section class="widget">
+                <section class="widget" data-widgster-load="server/php/ajax_widget.php">
                     <header>
                         <h5>
                             News <span class="badge badge-success">17</span>
                         </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="load" title="Reload" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                            <a data-widgster="fullscreen" title="Full Screen" href="#"><i class="glyphicon glyphicon-resize-full"></i></a>
+                            <a data-widgster="restore" title="Restore" href="#"><i class="glyphicon glyphicon-resize-small"></i></a>
+                            <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
                     </header>
                     <div class="body">
                         <ul class="news-list stretchable">

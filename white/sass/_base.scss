@@ -390,6 +390,44 @@ input.parsley-error{
   }
 }
 
+.widget-controls{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  font-size: $font-size-small;
+  word-spacing: 1px;
+
+  &.left{
+    left: 0;
+    right: auto;
+  }
+
+  a{
+    padding: 1px 4px;
+    border-radius: 4px;
+    color: rgba(black, .43);
+    @include transition(color .15s ease-in-out);
+
+    &:hover{
+      color: rgba(black, .55);
+    }
+
+    > .fa{
+      vertical-align: middle;
+    }
+
+    > .glyphicon{
+      vertical-align: -1px;
+    }
+  }
+
+  .fa-refresh{
+    position: relative;
+    top: -1px;
+  }
+}
+
 /***********************************/
 /**          CHARTS               **/
 /**********************************/

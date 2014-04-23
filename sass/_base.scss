@@ -392,6 +392,44 @@ input.parsley-error{
   }
 }
 
+.widget-controls{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  font-size: $font-size-small;
+  word-spacing: 1px;
+
+  &.left{
+    left: 0;
+    right: auto;
+  }
+
+  a{
+    padding: 1px 4px;
+    border-radius: 4px;
+    color: rgba(white, .45);
+    @include transition(color .15s ease-in-out);
+
+    &:hover{
+      color: rgba(white, .6);
+    }
+
+    > .fa{
+      vertical-align: middle;
+    }
+
+    > .glyphicon{
+      vertical-align: -1px;
+    }
+  }
+
+  .fa-refresh{
+    position: relative;
+    top: -1px;
+  }
+}
+
 /***********************************/
 /**          CHARTS               **/
 /**********************************/
@@ -2470,13 +2508,14 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
 
   .spinner{
     position: absolute;
     top: 50%;
+    width: 100%; //ie fix
     margin-top: -10px;
     font-size: 20px;
+    text-align: center;
   }
 }
 
