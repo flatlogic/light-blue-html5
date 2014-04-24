@@ -464,6 +464,8 @@ $(function(){
         } else {
             this.$restore.hide();
         }
+
+        this.options.autoload && this.load();
     };
 
     Widgster.DEFAULTS = {
@@ -472,9 +474,10 @@ $(function(){
         transitionDuration: 150,
         bodySelector: '.body',
         showLoader: true,
+        autoload: false,
         loaderTemplate: '<div style="text-align: center; margin-top: 10px;">Loading...</div>',
         /**
-         * provide a way to insert a prompt before removing
+         * provide a way to insert a prompt before removing widget
          * @param callback
          */
         closePrompt: function(callback){

@@ -26,12 +26,12 @@ $(function(){
 
         $('#default-widget').widgster();
 
-        $('#news-widget').widgster({
-            showLoader: false
-        }).on("load.widgster", function(){
+        $('#news-widget').on("load.widgster", function(){
             $(this).find('[data-widgster="load"] > i').addClass('fa-spin')
         }).on("loaded.widgster", function(){
             $(this).find('[data-widgster="load"] > i').removeClass('fa-spin')
+        }).widgster({
+            showLoader: false
         });
 
         $('.widget-controls > a').tooltip({placement: 'bottom'});
