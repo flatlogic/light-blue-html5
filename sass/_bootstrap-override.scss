@@ -20,8 +20,11 @@ hr {
 
 blockquote{
   border-left-color: $transparentBackground;
-  padding: 0 0 0 15px;
-  font-size: $font-size-base;
+
+  &.blockquote-sm{
+    padding: 0 0 0 15px;
+    font-size: $font-size-base;
+  }
   p{
     font-size: inherit;
     margin-bottom: $line-height-computed / 2;

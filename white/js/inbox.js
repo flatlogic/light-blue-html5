@@ -239,7 +239,7 @@ $(function(){
 
             replyEmail: function(){
                 var body = "<br/><br/><br/>" +
-                        "<blockquote>" +
+                        "<blockquote class='blockquote-sm'>" +
                         this.model.get("body") +
                         "</blockquote> <br/>",
                     newEmail = new Email({
