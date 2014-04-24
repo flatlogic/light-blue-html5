@@ -497,6 +497,8 @@ $(function(){
 
         this.$collapse.hide();
         this.$expand.show();
+
+        return false;
     };
 
     Widgster.prototype.expand = function(animate){
@@ -514,6 +516,8 @@ $(function(){
 
         this.$collapse.show();
         this.$expand.hide();
+
+        return false;
     };
 
     Widgster.prototype.close = function(){
@@ -525,6 +529,8 @@ $(function(){
         if (e.isDefaultPrevented()) return;
 
         this.options.closePrompt && this.options.closePrompt($.proxy(this._doClose, this));
+
+        return false;
     };
 
     Widgster.prototype.load = function(){
@@ -545,6 +551,8 @@ $(function(){
             }))
         });
         this.options.showLoader && this._showLoader();
+
+        return false;
     };
 
     Widgster.prototype.fullscreen = function(){
@@ -573,7 +581,9 @@ $(function(){
 
         this.$collapse.hide(); this.$expand.hide();
 
-        this.$element.trigger($.Event('fullscreened.widgster'))
+        this.$element.trigger($.Event('fullscreened.widgster'));
+
+        return false;
     };
 
     Widgster.prototype.restore = function(){
@@ -605,7 +615,9 @@ $(function(){
 
         this.wasCollapsed && this.collapse(false);
 
-        this.$element.trigger($.Event('restored.widgster'))
+        this.$element.trigger($.Event('restored.widgster'));
+
+        return false;
     };
 
     Widgster.prototype._doClose = function(){

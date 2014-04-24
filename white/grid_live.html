@@ -327,10 +327,10 @@
                             <li><strong>Close</strong> - closable. Any widget may be removed by clicking the close btn;</li>
                             <li><strong>Full Screen</strong> - an option to make widget fill the whole window (just like OS);</li>
                             <li><strong>Ajax Load</strong> - the hottest option allowing to load/reload widget content asynchronously. You just
-                                need to provide an url to fetch data from. With loader delivered.</li>
+                                need to provide an url to fetch the data from. With loader delivered.</li>
                         </ul>
                         <p>After testing it a bit with LB
-                            we will release it with MIT license. Now it's available exclusively with Light Blue license.</p>
+                            we will release it with MIT license. Now it's available exclusively with Light Blue.</p>
                         <p>
                             Test it out!
                         </p>
@@ -340,7 +340,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 widget-container">
-                <section class="widget" data-widgster-load="../server/php/ajax_widget.php">
+                <section class="widget" data-widgster-load="../server/php/widgets/ajax_widget.php">
                     <header>
                         Default Widget
                         <div class="widget-controls">
@@ -353,10 +353,11 @@
                         </div>
                     </header>
                     <div class="body">
-                        Test
+                        A timestamp this widget was created: Apr 24, 19:07:07
+                        A timestamp this widget was updated: Apr 24, 19:07:07
                     </div>
                 </section>
-                <section class="widget" data-widgster-load="server/php/ajax_widget.php">
+                <section class="widget" data-widgster-load="../server/php/widgets/ajax_news.php">
                     <header>
                         <h5>
                             News <span class="badge badge-success">17</span>

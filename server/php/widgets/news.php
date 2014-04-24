@@ -1,4 +1,4 @@
-<!-- <?php sleep(1) //just some delay to simulate latency ?> -->
+<!-- <?php sleep(2) //just some delay to simulate latency ?> -->
 <ul class="news-list stretchable">
     <li class="animated fadeInDown">
         <span class="icon background-danger">

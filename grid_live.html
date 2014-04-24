@@ -327,10 +327,9 @@
                             <li><strong>Close</strong> - closable. Any widget may be removed by clicking the close btn;</li>
                             <li><strong>Full Screen</strong> - an option to make widget fill the whole window (just like OS);</li>
                             <li><strong>Ajax Load</strong> - the hottest option allowing to load/reload widget content asynchronously. You just
-                                need to provide an url to fetch data from. With loader delivered.</li>
+                                need to provide an url to fetch the data from. With loader delivered.</li>
                         </ul>
-                        <p>After testing it a bit with LB
-                            we will release it with MIT license. Now it's available exclusively with Light Blue license.</p>
+                        <p>In the future this plugin may be released under MIT license, but for now it's available exclusively with Light Blue.</p>
                         <p>
                             Test it out!
                         </p>
@@ -340,7 +339,7 @@
         </div>
         <div class="row">
             <div class="col-md-6 widget-container">
-                <section class="widget" data-widgster-load="server/php/ajax_widget.php">
+                <section class="widget" id="default-widget" data-widgster-load="server/php/widgets/default.php">
                     <header>
                         Default Widget
                         <div class="widget-controls">
@@ -353,16 +352,18 @@
                         </div>
                     </header>
                     <div class="body">
-                        Test
+                        <p>A timestamp this widget was created: Apr 24, 19:07:07</p>
+                        <p>A timestamp this widget was updated: Apr 24, 19:07:07</p>
                     </div>
                 </section>
-                <section class="widget" data-widgster-load="server/php/ajax_widget.php">
+                <section class="widget" id="news-widget" data-widgster-load="server/php/widgets/news.php">
                     <header>
                         <h5>
                             News <span class="badge badge-success">17</span>
                         </h5>
+                        <span class="text-muted">customizing widgster</span>
                         <div class="widget-controls">
-                            <a data-widgster="load" title="Reload" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
+                            <a data-widgster="load" title="I am spinning!" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
                             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
                             <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
                             <a data-widgster="fullscreen" title="Full Screen" href="#"><i class="glyphicon glyphicon-resize-full"></i></a>
@@ -419,7 +420,7 @@
                         <h5>Loader</h5>
                     </header>
                     <div class="body">
-                        <div class="loader animated fadeIn">
+                        <div class="loader animated fadeIn handle">
                         <span class="spinner">
                             <i class="fa fa-spinner fa-spin"></i>
                         </span>
@@ -465,7 +466,7 @@
                     </div>
                 </section>
                 <section class="widget">
-                    <div class="jumbotron">
+                    <div class="jumbotron handle">
                         <div class="container">
                             <h1>Draggable story!</h1>
                             <p class="lead">
