@@ -7650,7 +7650,7 @@ a:focus {
 /*          Type           */
 /***************************/
 /* line 13, ../sass/_bootstrap-override.scss */
-ul:not(.text-list), ol:not(.text-list) {
+ul, ol {
   margin: 0;
 }
 
@@ -19028,7 +19028,7 @@ ol ul {
 }
 
 /* line 87, ../sass/_general.scss */
-ul:not(.text-list), ol:not(.text-list) {
+ul, ol {
   list-style: none;
   padding: 0;
 }
@@ -21950,7 +21950,7 @@ table.table thead .sorting_desc_disabled {
   min-height: 30px;
 }
 /* line 2414, ../sass/_base.scss */
-.widget-container .widget header {
+.widget-container .widget:not(.fullscreened) > header {
   cursor: move;
 }
 
@@ -22151,6 +22151,27 @@ table.table thead .sorting_desc_disabled {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+/* line 2593, ../sass/_base.scss */
+.bg-addition {
+  background-color: rgba(51, 51, 51, 0.25) !important;
+}
+
+/* line 2597, ../sass/_base.scss */
+ul.text-list, ol.text-list {
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+/* line 2602, ../sass/_base.scss */
+ul.text-list {
+  list-style: disc;
+}
+
+/* line 2606, ../sass/_base.scss */
+ol.text-list {
+  list-style: decimal;
 }
 
 @media (max-width: 320px) {

@@ -7650,7 +7650,7 @@ a:focus {
 /*          Type           */
 /***************************/
 /* line 13, ../sass/_bootstrap-override.scss */
-ul:not(.text-list), ol:not(.text-list) {
+ul, ol {
   margin: 0;
 }
 
@@ -18812,7 +18812,7 @@ ol ul {
 }
 
 /* line 86, ../sass/_general.scss */
-ul:not(.text-list), ol:not(.text-list) {
+ul, ol {
   list-style: none;
   padding: 0;
 }
@@ -21489,8 +21489,12 @@ table.table thead .sorting_desc_disabled {
 .widget-container {
   min-height: 30px;
 }
+/* line 2146, ../sass/_base.scss */
+.widget-container .widget:not(.fullscreened) > header {
+  cursor: move;
+}
 
-/* line 2147, ../sass/_base.scss */
+/* line 2151, ../sass/_base.scss */
 .widget-placeholder {
   background: rgba(51, 51, 51, 0.2);
   -moz-box-shadow: none;
@@ -21500,7 +21504,7 @@ table.table thead .sorting_desc_disabled {
   margin: -1px -1px 29px -1px;
 }
 
-/* line 2154, ../sass/_base.scss */
+/* line 2158, ../sass/_base.scss */
 .list-group-item-placeholder {
   background: rgba(51, 51, 51, 0.2);
   -moz-box-shadow: none !important;
@@ -21513,7 +21517,7 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          SLIMSCROLL OVERRIDE  **/
 /**********************************/
-/* line 2165, ../sass/_base.scss */
+/* line 2169, ../sass/_base.scss */
 .slimScrollBar {
   -moz-border-radius: 1px !important;
   -webkit-border-radius: 1px;
@@ -21523,103 +21527,104 @@ table.table thead .sorting_desc_disabled {
 /***********************************/
 /**          UTILS                **/
 /**********************************/
-/* line 2173, ../sass/_base.scss */
+/* line 2177, ../sass/_base.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 2177, ../sass/_base.scss */
+/* line 2181, ../sass/_base.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 2181, ../sass/_base.scss */
+/* line 2185, ../sass/_base.scss */
 .well-white {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 2185, ../sass/_base.scss */
+/* line 2189, ../sass/_base.scss */
 .margin-top {
   margin-top: 10px;
 }
 
-/* line 2189, ../sass/_base.scss */
+/* line 2193, ../sass/_base.scss */
 .margin-bottom {
   margin-bottom: 10px;
 }
 
-/* line 2193, ../sass/_base.scss */
+/* line 2197, ../sass/_base.scss */
 .no-margin {
   margin: 0 !important;
 }
 
-/* line 2197, ../sass/_base.scss */
+/* line 2201, ../sass/_base.scss */
 .weight-normal {
   font-weight: normal;
 }
 
-/* line 2201, ../sass/_base.scss */
+/* line 2205, ../sass/_base.scss */
 .visible-phone-landscape {
   display: none !important;
 }
 
-/* line 2209, ../sass/_base.scss */
+/* line 2213, ../sass/_base.scss */
 .background-danger {
   background: #e5603b;
   color: white;
 }
 
-/* line 2214, ../sass/_base.scss */
+/* line 2218, ../sass/_base.scss */
 .background-warning {
   background: #eac85e;
   color: white;
 }
 
-/* line 2219, ../sass/_base.scss */
+/* line 2223, ../sass/_base.scss */
 .background-success {
   background: #56bc76;
   color: white;
 }
 
-/* line 2224, ../sass/_base.scss */
+/* line 2228, ../sass/_base.scss */
 .background-primary {
   background: #618fb0;
   color: white;
 }
 
-/* line 2229, ../sass/_base.scss */
+/* line 2233, ../sass/_base.scss */
 .background-info {
   background: #4ab0ce;
   color: white;
 }
 
-/* line 2234, ../sass/_base.scss */
+/* line 2238, ../sass/_base.scss */
 .background-lime {
   background: #8cbf26;
   color: white;
 }
 
-/* line 2239, ../sass/_base.scss */
+/* line 2243, ../sass/_base.scss */
 .loader {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
 }
-/* line 2247, ../sass/_base.scss */
+/* line 2250, ../sass/_base.scss */
 .loader .spinner {
   position: absolute;
   top: 50%;
+  width: 100%;
   margin-top: -10px;
   font-size: 20px;
+  text-align: center;
 }
 
 /***********************/
 /*        Loader       */
 /***********************/
-/* line 2261, ../sass/_base.scss */
+/* line 2266, ../sass/_base.scss */
 .loader-wrap {
   position: fixed;
   left: 0;
@@ -21634,46 +21639,46 @@ table.table thead .sorting_desc_disabled {
   transition: opacity 0.2s ease-out;
 }
 @media (min-width: 1049px) {
-  /* line 2261, ../sass/_base.scss */
+  /* line 2266, ../sass/_base.scss */
   .loader-wrap {
     margin-left: 185px;
   }
-  /* line 2271, ../sass/_base.scss */
+  /* line 2276, ../sass/_base.scss */
   .sidebar-on-right .loader-wrap {
     margin-right: 185px;
     margin-left: 0;
   }
-  /* line 2276, ../sass/_base.scss */
+  /* line 2281, ../sass/_base.scss */
   .sidebar-icons .loader-wrap {
     margin-left: 62px;
   }
-  /* line 2278, ../sass/_base.scss */
+  /* line 2283, ../sass/_base.scss */
   .sidebar-on-right .sidebar-icons .loader-wrap {
     margin-right: 62px;
     margin-left: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1048px) {
-  /* line 2261, ../sass/_base.scss */
+  /* line 2266, ../sass/_base.scss */
   .loader-wrap {
     margin-left: 62px;
   }
-  /* line 2287, ../sass/_base.scss */
+  /* line 2292, ../sass/_base.scss */
   .sidebar-on-right .loader-wrap {
     margin-right: 62px;
     margin-left: 0;
   }
 }
-/* line 2293, ../sass/_base.scss */
+/* line 2298, ../sass/_base.scss */
 .sidebar-hidden .loader-wrap {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-/* line 2300, ../sass/_base.scss */
+/* line 2305, ../sass/_base.scss */
 .loader-wrap.hiding {
   opacity: 0;
 }
-/* line 2304, ../sass/_base.scss */
+/* line 2309, ../sass/_base.scss */
 .loader-wrap .fa {
   position: absolute;
   top: 50%;
@@ -21684,7 +21689,7 @@ table.table thead .sorting_desc_disabled {
   color: #444;
 }
 
-/* line 2315, ../sass/_base.scss */
+/* line 2320, ../sass/_base.scss */
 .attention {
   display: inline-block;
   width: 8px;
@@ -21693,6 +21698,27 @@ table.table thead .sorting_desc_disabled {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+/* line 2328, ../sass/_base.scss */
+.bg-addition {
+  background-color: whitesmoke !important;
+}
+
+/* line 2332, ../sass/_base.scss */
+ul.text-list, ol.text-list {
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+/* line 2337, ../sass/_base.scss */
+ul.text-list {
+  list-style: disc;
+}
+
+/* line 2341, ../sass/_base.scss */
+ol.text-list {
+  list-style: decimal;
 }
 
 @media (max-width: 320px) {

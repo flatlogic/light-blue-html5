@@ -296,6 +296,13 @@ function initPjax(){
     window.PjaxApp = new PjaxApp();
 }
 
+
+function initDemoFunctions(){
+    $(document).one('pjax:end', function(){
+//        alert('The page was loaded with pjax!');
+    });
+}
+
 $(function(){
 
     var $sidebar = $('#sidebar');
@@ -420,6 +427,7 @@ $(function(){
     });
 
     initPjax();
+    initDemoFunctions();
 
 });
 
@@ -456,6 +464,8 @@ $(function(){
         } else {
             this.$restore.hide();
         }
+
+        this.options.autoload && this.load();
     };
 
     Widgster.DEFAULTS = {
@@ -464,9 +474,10 @@ $(function(){
         transitionDuration: 150,
         bodySelector: '.body',
         showLoader: true,
+        autoload: false,
         loaderTemplate: '<div style="text-align: center; margin-top: 10px;">Loading...</div>',
         /**
-         * provide a way to insert a prompt before removing
+         * provide a way to insert a prompt before removing widget
          * @param callback
          */
         closePrompt: function(callback){
@@ -483,12 +494,15 @@ $(function(){
         var widgster = this,
             duration = animate ? this.options.transitionDuration : 0;
         this.$element.find(this.options.bodySelector).slideUp(duration, function(){
+            widgster.$element.addClass('collapsed');
             widgster.$element.trigger($.Event('collapsed.widgster'));
             widgster.collapsed = true;
         });
 
         this.$collapse.hide();
         this.$expand.show();
+
+        return false;
     };
 
     Widgster.prototype.expand = function(animate){
@@ -500,12 +514,15 @@ $(function(){
         var widgster = this,
             duration = animate ? this.options.transitionDuration : 0;
         this.$element.find(this.options.bodySelector).slideDown(duration, function(){
+            widgster.$element.removeClass('collapsed');
             widgster.$element.trigger($.Event('expanded.widgster'));
             widgster.collapsed = false;
         });
 
         this.$collapse.show();
         this.$expand.hide();
+
+        return false;
     };
 
     Widgster.prototype.close = function(){
@@ -517,6 +534,8 @@ $(function(){
         if (e.isDefaultPrevented()) return;
 
         this.options.closePrompt && this.options.closePrompt($.proxy(this._doClose, this));
+
+        return false;
     };
 
     Widgster.prototype.load = function(){
@@ -537,6 +556,8 @@ $(function(){
             }))
         });
         this.options.showLoader && this._showLoader();
+
+        return false;
     };
 
     Widgster.prototype.fullscreen = function(){
@@ -565,7 +586,11 @@ $(function(){
 
         this.$collapse.hide(); this.$expand.hide();
 
-        this.$element.trigger($.Event('fullscreened.widgster'))
+        this.$element.addClass('fullscreened');
+
+        this.$element.trigger($.Event('fullscreened.widgster'));
+
+        return false;
     };
 
     Widgster.prototype.restore = function(){
@@ -597,7 +622,11 @@ $(function(){
 
         this.wasCollapsed && this.collapse(false);
 
-        this.$element.trigger($.Event('restored.widgster'))
+        this.$element.removeClass('fullscreened');
+
+        this.$element.trigger($.Event('restored.widgster'));
+
+        return false;
     };
 
     Widgster.prototype._doClose = function(){
@@ -651,13 +680,6 @@ $(function(){
 
     // NAMESPACED DATA ATTRIBUTES
     // =======================
-    jQuery.extend (String.prototype, {
-        camelize: function () {
-            return this.replace (/(?:^|[-_])(\w)/g, function (_, c) {
-                return c ? c.toUpperCase () : '';
-            })
-        }
-    });
 
     function getNamespacedData(namespace, data){
         var namespacedData = {};

@@ -494,6 +494,7 @@ $(function(){
         var widgster = this,
             duration = animate ? this.options.transitionDuration : 0;
         this.$element.find(this.options.bodySelector).slideUp(duration, function(){
+            widgster.$element.addClass('collapsed');
             widgster.$element.trigger($.Event('collapsed.widgster'));
             widgster.collapsed = true;
         });
@@ -513,6 +514,7 @@ $(function(){
         var widgster = this,
             duration = animate ? this.options.transitionDuration : 0;
         this.$element.find(this.options.bodySelector).slideDown(duration, function(){
+            widgster.$element.removeClass('collapsed');
             widgster.$element.trigger($.Event('expanded.widgster'));
             widgster.collapsed = false;
         });
@@ -584,6 +586,8 @@ $(function(){
 
         this.$collapse.hide(); this.$expand.hide();
 
+        this.$element.addClass('fullscreened');
+
         this.$element.trigger($.Event('fullscreened.widgster'));
 
         return false;
@@ -617,6 +621,8 @@ $(function(){
         }
 
         this.wasCollapsed && this.collapse(false);
+
+        this.$element.removeClass('fullscreened');
 
         this.$element.trigger($.Event('restored.widgster'));
 
@@ -674,13 +680,6 @@ $(function(){
 
     // NAMESPACED DATA ATTRIBUTES
     // =======================
-    jQuery.extend (String.prototype, {
-        camelize: function () {
-            return this.replace (/(?:^|[-_])(\w)/g, function (_, c) {
-                return c ? c.toUpperCase () : '';
-            })
-        }
-    });
 
     function getNamespacedData(namespace, data){
         var namespacedData = {};

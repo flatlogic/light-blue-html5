@@ -2142,6 +2142,10 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .widget-container{
   min-height: 30px;
+
+  .widget:not(.fullscreened) > header{
+    cursor: move;
+  }
 }
 
 .widget-placeholder{
@@ -2242,13 +2246,14 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center;
 
   .spinner{
     position: absolute;
     top: 50%;
+    width: 100%; //ie fix
     margin-top: -10px;
     font-size: 20px;
+    text-align: center;
   }
 }
 
@@ -2318,4 +2323,21 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   height: 8px;
   margin: 0 5px;
   @include border-radius(50%);
+}
+
+.bg-addition{
+  background-color: $background-addition !important;
+}
+
+ul.text-list, ol.text-list{
+  margin-bottom: $line-height-computed/2;
+  padding-left: 40px;
+}
+
+ul.text-list{
+  list-style: disc;
+}
+
+ol.text-list{
+  list-style: decimal;
 }
