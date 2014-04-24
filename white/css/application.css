@@ -8348,9 +8348,18 @@ textarea + .help-block,
 }
 
 /***************************/
+/*          Wells          */
+/***************************/
+/* line 511, ../sass/_bootstrap-override.scss */
+.well {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/***************************/
 /*        Pagination       */
 /***************************/
-/* line 514, ../sass/_bootstrap-override.scss */
+/* line 522, ../sass/_bootstrap-override.scss */
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
 .pagination > .active > span,
 .pagination > .active > span:hover,
@@ -8358,7 +8367,7 @@ textarea + .help-block,
   border-color: transparent;
 }
 
-/* line 522, ../sass/_bootstrap-override.scss */
+/* line 530, ../sass/_bootstrap-override.scss */
 .pagination > li > a,
 .pagination > li > span {
   margin-left: 0;
@@ -8367,26 +8376,26 @@ textarea + .help-block,
 /***************************/
 /*         Modals          */
 /***************************/
-/* line 531, ../sass/_bootstrap-override.scss */
+/* line 539, ../sass/_bootstrap-override.scss */
 .modal-backdrop,
 .modal-backdrop.fade.in {
   opacity: 0.15;
   filter: alpha(opacity=15);
 }
 
-/* line 537, ../sass/_bootstrap-override.scss */
+/* line 545, ../sass/_bootstrap-override.scss */
 .modal {
   color: #555555;
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 541, ../sass/_bootstrap-override.scss */
+/* line 549, ../sass/_bootstrap-override.scss */
 .modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
   color: #555555;
 }
 
-/* line 546, ../sass/_bootstrap-override.scss */
+/* line 554, ../sass/_bootstrap-override.scss */
 .modal-footer {
   background-color: #f5f5f5;
 }
@@ -8394,12 +8403,12 @@ textarea + .help-block,
 /***************************/
 /*        Tooltips         */
 /***************************/
-/* line 554, ../sass/_bootstrap-override.scss */
+/* line 562, ../sass/_bootstrap-override.scss */
 .tooltip {
   font-size: 11.05px;
 }
 
-/* line 558, ../sass/_bootstrap-override.scss */
+/* line 566, ../sass/_bootstrap-override.scss */
 .tooltip-inner {
   padding: 4px;
 }
@@ -8407,19 +8416,19 @@ textarea + .help-block,
 /***************************/
 /*        Popovers         */
 /***************************/
-/* line 566, ../sass/_bootstrap-override.scss */
+/* line 574, ../sass/_bootstrap-override.scss */
 .popover {
   color: #666666;
   -moz-border-radius: 1px;
   -webkit-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 569, ../sass/_bootstrap-override.scss */
+/* line 577, ../sass/_bootstrap-override.scss */
 .popover h1, .popover h2, .popover h3, .popover h4, .popover h5, .popover h6 {
   color: #666666;
 }
 
-/* line 574, ../sass/_bootstrap-override.scss */
+/* line 582, ../sass/_bootstrap-override.scss */
 .popover-title {
   -moz-border-radius: 1px 1px 0 0;
   -webkit-border-radius: 1px;
@@ -8429,7 +8438,7 @@ textarea + .help-block,
 /***************************/
 /*    Labels and badges    */
 /***************************/
-/* line 581, ../sass/_bootstrap-override.scss */
+/* line 589, ../sass/_bootstrap-override.scss */
 .label,
 .badge {
   display: inline-block;
@@ -8443,12 +8452,12 @@ textarea + .help-block,
   font-size: 11.05px;
 }
 
-/* line 592, ../sass/_bootstrap-override.scss */
+/* line 600, ../sass/_bootstrap-override.scss */
 .badge {
   padding: 2px 9px;
 }
 
-/* line 596, ../sass/_bootstrap-override.scss */
+/* line 604, ../sass/_bootstrap-override.scss */
 .badge-default {
   background-color: #999999;
 }
@@ -8457,7 +8466,7 @@ textarea + .help-block,
   background-color: gray;
 }
 
-/* line 600, ../sass/_bootstrap-override.scss */
+/* line 608, ../sass/_bootstrap-override.scss */
 .badge-primary {
   background-color: #618fb0;
 }
@@ -8466,7 +8475,7 @@ textarea + .help-block,
   background-color: #4a7594;
 }
 
-/* line 604, ../sass/_bootstrap-override.scss */
+/* line 612, ../sass/_bootstrap-override.scss */
 .badge-success {
   background-color: #56bc76;
 }
@@ -8475,7 +8484,7 @@ textarea + .help-block,
   background-color: #3fa05e;
 }
 
-/* line 608, ../sass/_bootstrap-override.scss */
+/* line 616, ../sass/_bootstrap-override.scss */
 .badge-info {
   background-color: #4ab0ce;
 }
@@ -8484,7 +8493,7 @@ textarea + .help-block,
   background-color: #3196b4;
 }
 
-/* line 612, ../sass/_bootstrap-override.scss */
+/* line 620, ../sass/_bootstrap-override.scss */
 .badge-warning {
   background-color: #eac85e;
 }
@@ -8493,7 +8502,7 @@ textarea + .help-block,
   background-color: #e4b931;
 }
 
-/* line 616, ../sass/_bootstrap-override.scss */
+/* line 624, ../sass/_bootstrap-override.scss */
 .badge-danger {
   background-color: #e5603b;
 }
@@ -8505,11 +8514,11 @@ textarea + .help-block,
 /***************************/
 /*        Jumbotron        */
 /***************************/
-/* line 633, ../sass/_bootstrap-override.scss */
+/* line 641, ../sass/_bootstrap-override.scss */
 .widget > .jumbotron {
   margin: -10px -12px;
 }
-/* line 637, ../sass/_bootstrap-override.scss */
+/* line 645, ../sass/_bootstrap-override.scss */
 .jumbotron h1, .jumbotron .h1 {
   line-height: 1;
 }
@@ -8517,7 +8526,7 @@ textarea + .help-block,
 /***************************/
 /*          Alerts         */
 /***************************/
-/* line 646, ../sass/_bootstrap-override.scss */
+/* line 654, ../sass/_bootstrap-override.scss */
 .alert {
   text-shadow: none;
   border: none;
@@ -8526,7 +8535,7 @@ textarea + .help-block,
   box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
 }
 
-/* line 653, ../sass/_bootstrap-override.scss */
+/* line 661, ../sass/_bootstrap-override.scss */
 .close {
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
@@ -8536,47 +8545,47 @@ textarea + .help-block,
 /***************************/
 /*        List Groups      */
 /***************************/
-/* line 662, ../sass/_bootstrap-override.scss */
+/* line 670, ../sass/_bootstrap-override.scss */
 .list-group {
   margin-bottom: 0;
 }
-/* line 664, ../sass/_bootstrap-override.scss */
+/* line 672, ../sass/_bootstrap-override.scss */
 .widget > .list-group {
   margin: -10px -12px;
 }
-/* line 667, ../sass/_bootstrap-override.scss */
+/* line 675, ../sass/_bootstrap-override.scss */
 .widget .body > .list-group {
   margin: 0 -12px -10px;
 }
-/* line 670, ../sass/_bootstrap-override.scss */
+/* line 678, ../sass/_bootstrap-override.scss */
 .widget .body > .list-group .list-group-item:first-child {
   border-top: 1px solid whitesmoke;
 }
 
-/* line 676, ../sass/_bootstrap-override.scss */
+/* line 684, ../sass/_bootstrap-override.scss */
 .list-group-item {
   border: none;
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
-/* line 680, ../sass/_bootstrap-override.scss */
+/* line 688, ../sass/_bootstrap-override.scss */
 .widget .list-group-item {
   background: none;
 }
-/* line 682, ../sass/_bootstrap-override.scss */
+/* line 690, ../sass/_bootstrap-override.scss */
 .widget .list-group-item + .list-group-item {
   border-top: 1px solid whitesmoke;
 }
-/* line 687, ../sass/_bootstrap-override.scss */
+/* line 695, ../sass/_bootstrap-override.scss */
 .list-group-outer .list-group-item {
   -webkit-box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
   box-shadow: 0 -1px 1px rgba(103, 103, 103, 0.4), 0 1px 1px rgba(103, 103, 103, 0.4);
 }
-/* line 689, ../sass/_bootstrap-override.scss */
+/* line 697, ../sass/_bootstrap-override.scss */
 .list-group-outer .list-group-item + .list-group-item {
   margin-top: 10px;
 }
-/* line 694, ../sass/_bootstrap-override.scss */
+/* line 702, ../sass/_bootstrap-override.scss */
 .list-group-item > .fa-chevron-right {
   margin-top: 3px;
   margin-left: 6px;
@@ -8586,7 +8595,7 @@ textarea + .help-block,
 /***********************************/
 /**            Progress           **/
 /**********************************/
-/* line 705, ../sass/_bootstrap-override.scss */
+/* line 713, ../sass/_bootstrap-override.scss */
 .progress {
   background: rgba(0, 0, 0, 0.15);
 }
@@ -8594,63 +8603,63 @@ textarea + .help-block,
 /***************************/
 /*          Panels         */
 /***************************/
-/* line 713, ../sass/_bootstrap-override.scss */
+/* line 721, ../sass/_bootstrap-override.scss */
 .panel-heading {
   padding: 0;
 }
-/* line 716, ../sass/_bootstrap-override.scss */
+/* line 724, ../sass/_bootstrap-override.scss */
 .panel-heading > .accordion-toggle {
   display: block;
   padding: 8px 15px;
 }
 
-/* line 722, ../sass/_bootstrap-override.scss */
+/* line 730, ../sass/_bootstrap-override.scss */
 .panel {
   border: none;
   background-color: whitesmoke;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(1n) .panel-heading {
   border-left: 5px solid #e5603b;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(2n) .panel-heading {
   border-left: 5px solid #eac85e;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(3n) .panel-heading {
   border-left: 5px solid #8cbf26;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(4n) .panel-heading {
   border-left: 5px solid #56bc76;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(5n) .panel-heading {
   border-left: 5px solid #4ab0ce;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(6n) .panel-heading {
   border-left: 5px solid #618fb0;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(7n) .panel-heading {
   border-left: 5px solid #a05000;
 }
-/* line 730, ../sass/_bootstrap-override.scss */
+/* line 738, ../sass/_bootstrap-override.scss */
 .panel:nth-child(8n) .panel-heading {
   border-left: 5px solid #d04f4f;
 }
-/* line 736, ../sass/_bootstrap-override.scss */
+/* line 744, ../sass/_bootstrap-override.scss */
 .panel .panel-heading a {
   color: #666666;
   font-weight: normal;
   color: #666666;
 }
 
-/* line 742, ../sass/_bootstrap-override.scss */
+/* line 750, ../sass/_bootstrap-override.scss */
 .panel-body {
   border-top-color: whitesmoke;
 }
@@ -8658,16 +8667,16 @@ textarea + .help-block,
 /***************************/
 /*       Breadcrumbs       */
 /***************************/
-/* line 751, ../sass/_bootstrap-override.scss */
+/* line 759, ../sass/_bootstrap-override.scss */
 .breadcrumb a {
   color: #666666;
   text-decoration: none;
 }
-/* line 754, ../sass/_bootstrap-override.scss */
+/* line 762, ../sass/_bootstrap-override.scss */
 .breadcrumb a:hover {
   color: #999999;
 }
-/* line 759, ../sass/_bootstrap-override.scss */
+/* line 767, ../sass/_bootstrap-override.scss */
 .widget > .breadcrumb {
   margin: -10px -12px;
 }
@@ -8675,16 +8684,16 @@ textarea + .help-block,
 /***************************/
 /*        Carousel         */
 /***************************/
-/* line 769, ../sass/_bootstrap-override.scss */
+/* line 777, ../sass/_bootstrap-override.scss */
 .widget > .carousel {
   margin: 0 -12px 5px;
 }
 
-/* line 775, ../sass/_bootstrap-override.scss */
+/* line 783, ../sass/_bootstrap-override.scss */
 .carousel-control.left, .carousel-control.right {
   background: none;
 }
-/* line 778, ../sass/_bootstrap-override.scss */
+/* line 786, ../sass/_bootstrap-override.scss */
 .carousel-control i {
   position: absolute;
   top: 50%;
@@ -8697,11 +8706,11 @@ textarea + .help-block,
   margin-top: -10px;
 }
 
-/* line 792, ../sass/_bootstrap-override.scss */
+/* line 800, ../sass/_bootstrap-override.scss */
 .carousel-indicators.outer {
   bottom: -10px;
 }
-/* line 795, ../sass/_bootstrap-override.scss */
+/* line 803, ../sass/_bootstrap-override.scss */
 .carousel-indicators li {
   background-color: #eeeeee;
 }
