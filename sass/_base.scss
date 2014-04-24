@@ -405,15 +405,11 @@ input.parsley-error{
     right: auto;
   }
 
-  a{
+  > a, > span{
     padding: 1px 4px;
     border-radius: 4px;
     color: rgba(white, .45);
     @include transition(color .15s ease-in-out);
-
-    &:hover{
-      color: rgba(white, .6);
-    }
 
     > .fa{
       vertical-align: middle;
@@ -422,6 +418,10 @@ input.parsley-error{
     > .glyphicon{
       vertical-align: -1px;
     }
+  }
+
+  > a:hover{
+    color: rgba(white, .6);
   }
 
   .fa-refresh{

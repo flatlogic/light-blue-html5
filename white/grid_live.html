@@ -396,6 +396,69 @@
                         </div>
                     </div>
                 </section>
+                <section class="widget" id="autoload-widget"
+                         data-widgster-load="../server/php/widgets/autoload-white.php"
+                         data-widgster-autoload="true"
+                         data-widgster-show-loader="false">
+                    <header>
+                        <h5>Autoload widget</h5>
+                        <div class="widget-controls dropdown">
+                            <span>
+                                <i class="fa fa-spinner fa-lg fade"></i>
+                            </span>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <a data-widgster="load" title="Reload" href="#">Reload
+                                        &nbsp;&nbsp;<span class="badge background-success animated bounceIn"><strong>9</strong></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-widgster="fullscreen" title="Full Screen" href="#">Fullscreen</a>
+                                    <a data-widgster="restore" title="Restore" href="#">Restore</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a data-widgster="close" title="Close" href="#">Close</a></li>
+                            </ul>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <h3 class="text-align-center no-margin">Sign up, it's <strong>free</strong></h3>
+                        <p class="lead text-muted text-align-center">
+                            Faith makes it possible to achieve that which man's mind can conceive and believe.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <form>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><i class="fa fa-circle text-warning"></i> &nbsp; Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                               placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1"><i class="fa fa-circle text-danger"></i> &nbsp; Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                               placeholder="Min 8 characters">
+                                        <span></span>
+                                    </div>
+                                    <p>
+                                        To make a widget automatically load it's content you just need to set
+                                        <strong>data-widgster-autoload</strong> attribute and provide an url.
+                                    </p>
+                                    <pre><code>data-widgster-load="server/ajax_widget.php"
+data-widgster-autoload="true"</code></pre>
+                                    <div class="btn-toolbar pull-right">
+                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-primary">&nbsp;Submit&nbsp;</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="widget" style="min-height: 200px">
                     <header>
                         <h5>Custom Loader</h5>
@@ -420,6 +483,7 @@
                             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
                             <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
                             <a data-widgster="load" title="I am spinning!" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
+                            <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
                     <div class="body">
@@ -501,6 +565,7 @@
                                 Bruce Lee
                             </footer>
                         </blockquote>
+                        <p>To make a widget initially collapsed just add <code>data-widgster-collapsed="true"</code> attribute to <code>.widget</code>.</p>
                     </div>
                 </section>
                 <section class="widget">

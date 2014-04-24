@@ -2,10 +2,10 @@ $(function(){
     function pageLoad(){
         $(".widget-container").sortable({
             connectWith: '.widget-container',
-            handle: '.widget:not(.fullscreened) > header, .widget:not(.fullscreened) .handle',
+            handle: 'header, .handle',
             cursor: 'move',
             iframeFix: false,
-            items: '.widget:not(.locked)',
+            items: '.widget:not(.locked):not(.fullscreened)',
             opacity: 0.8,
             helper: 'original',
             revert: true,
@@ -15,17 +15,10 @@ $(function(){
             tolerance: 'pointer'
         });
 
-        /**
-         * fade out background when widget fullscreened
-         */
         var $widgets = $('.widget'),
             $newsWidget = $('#news-widget'),
-            $sharesWidget = $('#shares-widget');
-        $widgets.on("fullscreen.widgster", function(){
-            $('.widget, .sidebar, .logo, .page-header, .page-title').not($(this)).fadeTo(150, 0);
-        }).on("restore.widgster", function(){
-            $('.widget, .sidebar, .logo, .page-header, .page-title').not($(this)).fadeTo(150, 1);
-        });
+            $sharesWidget = $('#shares-widget'),
+            $autoloadWidget = $('#autoload-widget');
 
         /**
          * Make refresh button spin when loading
@@ -49,10 +42,24 @@ $(function(){
             }
         });
 
+        /**
+         * Use custom loader template
+         */
         $sharesWidget.widgster({
             loaderTemplate: '<div class="loader animated fadeIn">' +
                 '   <span class="spinner"><i class="fa fa-spinner fa-spin"></i></span>' +
                 '</div>'
+        });
+
+        /**
+         * Make hidden spinner appear & spin when loading
+         */
+        $autoloadWidget.on("load.widgster", function(){
+            $(this).find('.fa-spinner').addClass('fa-spin in');
+        }).on("loaded.widgster", function(){
+            $(this).find('.fa-spinner').removeClass('fa-spin in')
+        }).on('load.widgster fullscreen.widgster restore.widgster', function(){
+            $(this).find('.dropdown.open > .dropdown-toggle').dropdown('toggle');
         });
 
         /**
