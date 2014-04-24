@@ -19,6 +19,10 @@ $(function(){
             $('[data-widgster="load"] > i').addClass('fa-spin')
         }).on("loaded.widgster", function(){
             $('[data-widgster="load"] > i').removeClass('fa-spin')
+        }).on("fullscreen.widgster", function(){
+            $('.widget, .sidebar, .logo, .page-header, .page-title').not($(this)).fadeTo(150, 0);
+        }).on("restore.widgster", function(){
+            $('.widget, .sidebar, .logo, .page-header, .page-title').not($(this)).fadeTo(150, 1);
         });
 
         $('.widget-controls > a').tooltip({placement: 'bottom'});
