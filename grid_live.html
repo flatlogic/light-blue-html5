@@ -70,10 +70,10 @@
         </li>
         <li class="panel active">
             <a class="accordion-toggle" data-toggle="collapse"
-               data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-bars"></i> <span class="name">Grid</span></a>
+               data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-bars"></i> <span class="name">Widgets &nbsp; <span class="label label-info">new</span></span></a>
             <ul id="grid-collapse" class="panel-collapse in">
                 <li><a href="grid.html">Basic</a></li>
-                <li class="active"><a href="grid_live.html">Live &nbsp; <span class="label label-important">new</span></a></li>
+                <li class="active"><a href="grid_live.html">Live &nbsp; <span class="label label-important">hot</span></a></li>
             </ul>
         </li>
         <li class="panel">
@@ -311,7 +311,51 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-7 col-lg-offset-1">
+                <section class="widget">
+                    <header>
+                        <h4>New Widgets &nbsp;<span class="label label-danger">since 2.1</span></h4>
+                    </header>
+                    <div class="body">
+                        <p>
+                            Specially for Light Blue 2.1 we have developed a plugin that allows to easily implement basic widget functions that
+                            lots of our customers have requested. The plugin is called <strong>Widgster</strong>. For now it has the following essential
+                            widget features:
+                        </p>
+                        <ul class="text-list">
+                            <li><strong>Collapse/Expand</strong> - all widgets can be collapsed to fill only header's vertical space;</li>
+                            <li><strong>Close</strong> - closable. Any widget may be removed by clicking the close btn;</li>
+                            <li><strong>Full Screen</strong> - an option to make widget fill the whole window (just like OS);</li>
+                            <li><strong>Ajax Load</strong> - the hottest option allowing to load/reload widget content asynchronously. You just
+                                need to provide an url to fetch data from. With loader delivered.</li>
+                        </ul>
+                        <p>After testing it a bit with LB
+                            we will release it with MIT license. Now it's available exclusively with Light Blue license.</p>
+                        <p>
+                            Test it out!
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6 widget-container">
+                <section class="widget" data-widgster-load="server/php/ajax_widget.php">
+                    <header>
+                        Default Widget
+                        <div class="widget-controls">
+                            <a data-widgster="load" title="Reload" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-plus"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-minus"></i></a>
+                            <a data-widgster="fullscreen" title="Full Screen" href="#"><i class="glyphicon glyphicon-resize-full"></i></a>
+                            <a data-widgster="restore" title="Restore" href="#"><i class="glyphicon glyphicon-resize-small"></i></a>
+                            <a data-widgster="close" title="Close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="body">
+                        Test
+                    </div>
+                </section>
                 <section class="widget" data-widgster-load="server/php/ajax_widget.php">
                     <header>
                         <h5>

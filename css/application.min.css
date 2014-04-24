@@ -7650,7 +7650,7 @@ a:focus {
 /*          Type           */
 /***************************/
 /* line 13, ../sass/_bootstrap-override.scss */
-ul, ol {
+ul:not(.text-list), ol:not(.text-list) {
   margin: 0;
 }
 
@@ -19028,7 +19028,7 @@ ol ul {
 }
 
 /* line 87, ../sass/_general.scss */
-ul, ol {
+ul:not(.text-list), ol:not(.text-list) {
   list-style: none;
   padding: 0;
 }

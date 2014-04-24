@@ -296,6 +296,13 @@ function initPjax(){
     window.PjaxApp = new PjaxApp();
 }
 
+
+function initDemoFunctions(){
+    $(document).one('pjax:end', function(){
+//        alert('The page was loaded with pjax!');
+    });
+}
+
 $(function(){
 
     var $sidebar = $('#sidebar');
@@ -420,6 +427,7 @@ $(function(){
     });
 
     initPjax();
+    initDemoFunctions();
 
 });
 
