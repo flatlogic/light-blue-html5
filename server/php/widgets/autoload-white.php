@@ -24,6 +24,10 @@
             </p>
             <pre><code>data-widgster-load="server/ajax_widget.php"
 data-widgster-autoload="true"</code></pre>
+            <p>
+                <strong>data-widgster-autoload</strong> may be set to an integer value. If set, for example, to
+            2000 will refresh widget every 2 seconds.
+            </p>
             <div class="btn-toolbar pull-right">
                 <button type="submit" class="btn btn-default">Cancel</button>
                 <button type="submit" class="btn btn-primary animated wobble">&nbsp;Submit&nbsp;</button>

@@ -466,6 +466,13 @@ $(function(){
         }
 
         this.options.autoload && this.load();
+        var interval = parseInt(this.options.autoload);
+        if (!isNaN(interval)){
+            var widgster = this;
+            this._autoloadInterval = setInterval(function(){
+                widgster.load();
+            }, interval)
+        }
     };
 
     Widgster.DEFAULTS = {
