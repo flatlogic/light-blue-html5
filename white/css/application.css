@@ -22232,6 +22232,69 @@ ol.text-list {
   list-style: decimal;
 }
 
+/***********************/
+/*    Notifications    */
+/***********************/
+/* line 2349, ../sass/_base.scss */
+.location-selector {
+  width: 100%;
+  height: 220px;
+  border: 1px dashed #bbb;
+  background-color: white;
+  position: relative;
+}
+
+/* line 2355, ../sass/_base.scss */
+.location-selector .bit {
+  background-color: #e8e8e8;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+}
+
+/* line 2360, ../sass/_base.scss */
+.location-selector .bit:hover {
+  background-color: gainsboro;
+}
+
+/* line 2362, ../sass/_base.scss */
+.location-selector .bit.top, .location-selector .bit.bottom {
+  height: 25%;
+  width: 40%;
+  margin: 0 30%;
+}
+
+/* line 2366, ../sass/_base.scss */
+.location-selector .bit.top {
+  top: 0;
+}
+
+/* line 2368, ../sass/_base.scss */
+.location-selector .bit.bottom {
+  bottom: 0;
+}
+
+/* line 2370, ../sass/_base.scss */
+.location-selector .bit.right, .location-selector .bit.left {
+  height: 20%;
+  width: 20%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 2375, ../sass/_base.scss */
+.location-selector .bit.right {
+  right: 0;
+}
+
+/* line 2377, ../sass/_base.scss */
+.location-selector .bit.left {
+  left: 0;
+}
+
 @media (max-width: 320px) {
   /* line 2, ../sass/_responsive.scss */
   .hidden-xs-portrait {
