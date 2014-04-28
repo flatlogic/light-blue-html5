@@ -1,37 +1,33 @@
 @import "compass/utilities/general/clearfix"
 @import "compass/css3"
 
-@import url("//fonts.googleapis.com/css?family=Raleway:400")
-
-@import "messenger-spinner"
-
 @mixin unselectable
   -moz-user-select: none
   -webkit-user-select: none
   -o-user-select: none
   user-select: none
 
-$spinnerSize: 24px
+$spinnerSize: 19px
 
 ul.messenger-theme-air
   +unselectable
-  font-family: "Raleway", sans-serif
+  font-family: $font-family-base
 
   .messenger-message
     +transition(background-color 0.4s)
     +border-radius(5px)
-    +box-shadow(inset 0 0 0 1px #fff, inset 0 2px #fff, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2))
+    +box-shadow($widget-shadow)
     border: 0px
-    background-color: rgba(255, 255, 255, 0.8)
+    background-color: rgba($backgroundGray, .6)
     position: relative
     margin-bottom: 1em
     font-size: 13px
-    color: #666
+    color: $text-color
     font-weight: 500
     padding: 10px 30px 11px 46px
 
     &:hover
-      background-color: rgba(255, 255, 255, 1)
+      background-color: rgba($backgroundGray, .7)
 
     .messenger-close
       position: absolute
@@ -64,20 +60,19 @@ ul.messenger-theme-air
         +border-radius(4px)
         text-decoration: none
         display: inline-block
-        padding: 10px
-        color: #888
+        color: $text-color
         margin-right: 10px
         padding: 3px 10px 5px
         text-transform: capitalize
 
         &:hover
           +box-shadow(0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15))
-          color: #444
+          color: $text-color
 
         &:active
           +box-shadow(0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05))
           background: rgba(0, 0, 0, 0.04)
-          color: #444
+          color: $text-color
 
       .messenger-phrase
         display: none
@@ -101,22 +96,22 @@ ul.messenger-theme-air
 
     &.alert-error
       &.messenger-retry-soon
-        +ui-spinner(#fff, $spinnerSize, transparent, rgb(221, 106, 69), 1, 10s)
+        +ui-spinner(transparent, $spinnerSize, transparent, #fff, 1, 10s)
 
       &.messenger-retry-later
-        +ui-spinner(#fff, $spinnerSize, transparent, rgb(221, 106, 69), 1, 300s)
+        +ui-spinner(transparent, $spinnerSize, transparent, #fff, 1, 300s)
 
       .messenger-message-inner:before
-        background-color: rgb(221, 106, 69)
+        background-color: $brand-danger
 
     &.alert-info
       .messenger-message-inner:before
-        background-color: rgb(97, 196, 184)
+        background-color: $brand-info
 
   .messenger-spinner
     display: block
     position: absolute
-    left: 12px
+    left: 13px
     top: 50%
     margin-top: -1 * (($spinnerSize / 2) + 1px)
     z-index: 999

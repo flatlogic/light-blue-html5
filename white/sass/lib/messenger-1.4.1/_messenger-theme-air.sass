@@ -1,29 +1,30 @@
 @import "compass/utilities/general/clearfix"
 @import "compass/css3"
 
-@import url("//fonts.googleapis.com/css?family=Raleway:400")
-
 @mixin unselectable
   -moz-user-select: none
   -webkit-user-select: none
   -o-user-select: none
   user-select: none
 
-ul.messenger-theme-ice
+$spinnerSize: 24px
+
+ul.messenger-theme-air
   +unselectable
-  font-family: "Raleway", sans-serif
+  font-family: $font-family-base
 
   .messenger-message
+    +transition(background-color 0.4s)
     +border-radius(5px)
-    +box-shadow(0 0 0 1px rgba(0, 0, 0, 0.14), 0 4px #aaa, 0 5px rgba(0, 0, 0, 0.05))
+    +box-shadow(inset 0 0 0 1px #fff, inset 0 2px #fff, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2))
     border: 0px
-    background-color: #f6f6f6
+    background-color: #fff
     position: relative
-    margin-bottom: 1.5em
+    margin-bottom: 1em
     font-size: 13px
     color: #666
     font-weight: 500
-    padding: 12px 22px
+    padding: 10px 30px 11px 46px
 
     .messenger-close
       position: absolute
@@ -54,7 +55,6 @@ ul.messenger-theme-ice
       a
         +box-shadow(0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.05))
         +border-radius(4px)
-        position: relative
         text-decoration: none
         display: inline-block
         padding: 10px
@@ -63,31 +63,56 @@ ul.messenger-theme-ice
         padding: 3px 10px 5px
         text-transform: capitalize
 
-        &:hover, &:active
-          +box-shadow(0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15), 0 2px #aaa)
+        &:hover
+          +box-shadow(0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15))
           color: #444
 
         &:active
-          +box-shadow(0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15), 0 1px #aaa)
-          top: 1px
+          +box-shadow(0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05))
+          background: rgba(0, 0, 0, 0.04)
+          color: #444
 
       .messenger-phrase
         display: none
 
     .messenger-message-inner:before
+      +box-shadow(inset 0px 1px 3px rgba(0, 0, 0, 0.3))
+      +border-radius(50%)
+      position: absolute
+      left: 17px
       display: block
+      content: " "
+      top: 50%
+      margin-top: -8px
+      height: 13px
+      width: 13px
       z-index: 20
-      font-weight: bold
-      margin-bottom: 2px
 
     &.alert-success
       .messenger-message-inner:before
-        content: "Success"
+        background-color: rgb(95, 202, 74)
 
     &.alert-error
+      &.messenger-retry-soon
+        +ui-spinner(#fff, $spinnerSize, transparent, rgb(221, 106, 69), 1, 10s)
+
+      &.messenger-retry-later
+        +ui-spinner(#fff, $spinnerSize, transparent, rgb(221, 106, 69), 1, 300s)
+
       .messenger-message-inner:before
-        content: "Error"
+        background-color: rgb(221, 106, 69)
 
     &.alert-info
       .messenger-message-inner:before
-        content: "Information"
+        background-color: rgb(97, 196, 184)
+
+  .messenger-spinner
+    display: block
+    position: absolute
+    left: 12px
+    top: 50%
+    margin-top: -1 * (($spinnerSize / 2) + 1px)
+    z-index: 999
+    height: $spinnerSize
+    width: $spinnerSize
+    z-index: 10
