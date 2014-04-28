@@ -1,25 +1,27 @@
-Light Blue v2.0 (March 13)
+Light Blue v2.1 (April 29)
 =========
 
-Now with lightening fast **ajax** page loading!
+Now with lightening fast **ajax + pushState** page loading!
 
 Available in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!
 
 Light Blue is a **next generation** dashboard template based on the latest **Flat** design. There are few reasons why we created it:.
 
   - We didn't like the darkness of most of admin templates, so we created this **light** one.
-  - We didn't like the slowness of most of admin template, so we created this **fast** one.
+  - We didn't like the slowness of most of admin templates, so we created this **fast** one.
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 2.0 Released!
+New Version 2.1 Released!
 -
 
-- Super fast Ajax page loading
-- Lib updates
-- Few bug fixes
+- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
+- Messenger notifications
+- Input Sliders
+- Parsley 2.0.0
+- White version bug fixes
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
@@ -34,6 +36,11 @@ Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [o
 Changelog
 -
 
+Version 2.0
+
+- Super fast Ajax + pushState page loading
+- Lib updates
+- Few bug fixes
 
 Version 1.8
 
@@ -88,8 +95,8 @@ Version 1.1
 Next Release Plan
 -
 
-  - Hover Menu
   - UI improvements
+  - Your suggestions!
 
 Full feature list
 -
