@@ -5,7 +5,7 @@ $(function(){
             handle: 'header, .handle',
             cursor: 'move',
             iframeFix: false,
-            items: '.widget:not(.locked):not(.fullscreened)',
+            items: '.widget:not(.locked)',
             opacity: 0.8,
             helper: 'original',
             revert: true,
@@ -19,6 +19,21 @@ $(function(){
             $newsWidget = $('#news-widget'),
             $sharesWidget = $('#shares-widget'),
             $autoloadWidget = $('#autoload-widget');
+
+        /**
+         * fade out background when widget fullscreened
+         */
+        $widgets.on("fullscreen.widgster", function(){
+            $('.widget, .sidebar, .logo, .page-header, .page-title').not($(this)).fadeTo(150, 0);
+
+            //prevent widget from dragging when fullscreened
+            $(".widget-container").sortable( "option", "disabled", true );
+        }).on("restore.widgster closed.widgster", function(){
+            $('.widget, .sidebar, .logo, .page-header, .page-title').not($(this)).fadeTo(150, 1);
+
+            //allow dragging back
+            $(".widget-container").sortable( "option", "disabled", false );
+        });
 
         /**
          * Make refresh button spin when loading
