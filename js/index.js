@@ -109,6 +109,8 @@ $(function(){
             alwaysVisible: true,
             railVisible: true
         });
+
+        $('.widget').widgster();
     }
 
     pageLoad();
