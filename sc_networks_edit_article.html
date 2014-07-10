@@ -61,6 +61,37 @@
             background-color: rgba(74, 176, 206, 0.29);
             border-radius: 3px;
         }
+
+        .widget{
+            -webkit-transition: background-color .3s ease;
+                    transition: background-color .3s ease;
+            margin-bottom: 20px;
+        }
+
+        .widget-fixed-bottom{
+            position: fixed;
+            bottom: 0;
+            right: 30px;
+            left: 215px;
+        }
+
+        .widget-overlaping{
+            background-color: rgba(51,51,51,.9);
+        }
+
+        .breadcrumb-article-wizard > li > a{
+            color: #eee;
+        }
+
+        .breadcrumb-article-wizard > li.active > a,
+        .breadcrumb-article-wizard > li.active{
+            color: white;
+            font-weight: 600;
+        }
+
+        .breadcrumb-article-wizard>li+li:before{
+            content: "";
+        }
     </style>
 </head>
 <body class="background-dark">
@@ -380,7 +411,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row animated fadeIn" id="article-content">
             <div class="col-md-8">
                 <section class="widget widget-tabs">
                     <header>
@@ -513,7 +544,7 @@
                         </table>
                     </div>
                 </section>
-                <section class="widget" data-widgster-collapsed="true" style="margin-top: 35px">
+                <section class="widget" data-widgster-collapsed="true">
                     <header>
                         <h5>Customization</h5>
                         <div class="widget-controls">
@@ -544,6 +575,16 @@
                 </section>
             </div>
         </div>
+        <section class="widget widget-fixed-bottom text-align-center" id="article-wizard">
+            <a href="#" class="btn btn-danger pull-right" style="padding: 4px 16px; font-size: 14px"><span style="font-weight: 600">&nbsp;Save&nbsp;</span></a>
+            <ol class="breadcrumb breadcrumb-article-wizard" style="margin-top:-6px; margin-bottom: 0; font-size: 18px">
+                <li class="active">Edit</li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li><a href="#">Check</a></li>
+                <li><i class="fa fa-angle-right"></i></li>
+                <li><a href="#">Statistics</a></li>
+            </ol>
+        </section>
     </div>
     <div class="loader-wrap hiding hide">
         <i class="fa fa-spinner fa-spin"></i>
