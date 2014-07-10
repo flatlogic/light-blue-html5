@@ -83,6 +83,10 @@
             color: #eee;
         }
 
+        .breadcrumb-article-wizard > li > a:hover{
+            color: white;
+        }
+
         .breadcrumb-article-wizard > li.active > a,
         .breadcrumb-article-wizard > li.active{
             color: white;
@@ -91,6 +95,21 @@
 
         .breadcrumb-article-wizard>li+li:before{
             content: "";
+        }
+
+        .page-toolbar{
+            margin-top: 11px;
+        }
+
+        .page-toolbar > a{
+            display: inline-block;
+            margin: 0 6px;
+            color: rgba(255,255,255,.8);
+            font-size: 16px;
+        }
+
+        .page-toolbar > a:hover{
+            color: white;
         }
     </style>
 </head>
@@ -408,6 +427,13 @@
                 </ol>
                 <div class="clearfix">
                     <h2 id="page-title" class="page-title pull-left">Brand new article <small>Built-in components</small></h2>
+                    <div class="pull-right page-toolbar">
+                        <a href="#"><i class="fa fa-star"></i></a>
+                        <a href="#"><i class="fa fa-calendar"></i></a>
+                        <a href="#"><i class="fa fa-lock"></i></a>
+                        <a href="#"><i class="fa fa-globe"></i></a>
+                        <a href="#"><i class="fa fa-cog"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -419,15 +445,23 @@
                             <li class="active">
                                 <a href="#stats" data-toggle="tab">Basis Data</a>
                             </li>
+                            <li>
+                                <a href="#mobile" data-toggle="tab">
+                                    Mobile
+                                    &nbsp;
+                                    <i class="fa fa-times" style="font-size: 11px; position: relative; top: -1px; right: -3px; opacity: .5"></i>
+                                </a>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-plus"></i>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#dropdown1" data-toggle="tab">Mobile</a></li>
                                     <li><a href="#dropdown2" data-toggle="tab">Social</a></li>
                                     <li><a href="#dropdown2" data-toggle="tab">Print</a></li>
                                     <li><a href="#dropdown2" data-toggle="tab">Feed</a></li>
+                                    <li><a href="#dropdown2" data-toggle="tab">Voice</a></li>
+                                    <li><a href="#dropdown2" data-toggle="tab">Website</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -463,6 +497,30 @@
                                     they can’t disappear immediately.</p>
                                 <p>The same thing is for startups and ideas. If you have an idea right away after it appears in
                                     your mind you should go and make a first step to implement it. </p>
+                            </div>
+                        </div>
+                        <div id="mobile" class="tab-pane clearfix">
+                            <div class="email-content-changeable">
+                                <div class="buttons">
+                                    <a href="#"><i class="fa fa-arrows"></i></a>
+                                    <a class="pull-right" href="#"><i class="fa fa-trash-o"></i></a>
+                                    <a class="pull-right" href="#"><i class="fa fa-edit"></i></a>
+                                </div>
+                                <div class="text-align-center well">
+                                    <i class="fa fa-picture-o fa-4x" style="opacity: .7"></i>
+                                    <p style="margin-bottom: 5px">Drop an image here</p>
+                                    <p style="margin-bottom: 5px">or</p>
+                                    <p><a class="btn btn-transparent" href="#">Browse</a></p>
+                                </div>
+                            </div>
+                            <div class="email-content-changeable">
+                                <div class="buttons">
+                                    <a href="#"><i class="fa fa-arrows"></i></a>
+                                    <a class="pull-right" href="#"><i class="fa fa-trash-o"></i></a>
+                                    <a class="pull-right" href="#"><i class="fa fa-edit"></i></a>
+                                </div>
+                                <h2>Mobile Version</h2>
+                                <p>Here goes mobile text</p>
                             </div>
                         </div>
                     </div>
@@ -575,9 +633,10 @@
                 </section>
             </div>
         </div>
+        <div class="widget widget-fixed-bottom" id="article-wizard-track" style="height: 32px; z-index: -1; opacity: 0"></div>
         <section class="widget widget-fixed-bottom text-align-center" id="article-wizard">
-            <a href="#" class="btn btn-danger pull-right" style="padding: 4px 16px; font-size: 14px"><span style="font-weight: 600">&nbsp;Save&nbsp;</span></a>
-            <ol class="breadcrumb breadcrumb-article-wizard" style="margin-top:-6px; margin-bottom: 0; font-size: 18px">
+            <a href="#" class="btn btn-danger pull-right" style="padding: 5px 19px; font-size: 14px"><span style="font-weight: 600">&nbsp;Save&nbsp;</span></a>
+            <ol class="breadcrumb breadcrumb-article-wizard" style="margin-top: -4px; margin-bottom: 0; font-size: 18px">
                 <li class="active">Edit</li>
                 <li><i class="fa fa-angle-right"></i></li>
                 <li><a href="#">Check</a></li>
@@ -614,6 +673,7 @@
 <script src="lib/bootstrap/button.js"></script>
 <script src="lib/bootstrap/dropdown.js"></script>
 <script src="lib/bootstrap/carousel.js"></script>
+<script src="lib/bootstrap/tab.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>

@@ -13,16 +13,23 @@ $(function(){
 
     function checkOverlap(){
         var $wizard = $('#article-wizard'),
+            $wizardTrack = $('#article-wizard-track'),
             $content = $('#article-content'),
-            rect1 = $wizard[0].getBoundingClientRect(),
+            rect1 = $wizardTrack[0].getBoundingClientRect(),
             rect2 = $content[0].getBoundingClientRect(),
         //credit http://stackoverflow.com/questions/12066870/how-to-check-if-an-element-is-overlapping-other-elements
             overlap = !(rect1.right < rect2.left ||
                 rect1.left > rect2.right ||
                 rect1.bottom < rect2.top ||
                 rect1.top > rect2.bottom);
-        $wizard[overlap ? 'addClass' : 'removeClass']('widget-overlaping');
+        if (overlap){
+            $wizard.addClass('widget-overlaping');
+            $wizard.css('position', 'fixed');
+        } else {
+            $wizard.removeClass('widget-overlaping');
+            $wizard.css('position', 'static');
+        }
     }
-    checkOverlap();
-    $(window).scroll(checkOverlap);
+    setTimeout(checkOverlap, 0);
+    $(window).on('scroll resize', checkOverlap);
 });
