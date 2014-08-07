@@ -1,0 +1,812 @@
+/***************************/
+/*         Reset           */
+/***************************/
+
+a:focus{
+  outline: none;
+}
+
+/***************************/
+/*          Type           */
+/***************************/
+
+ul, ol {
+  margin: 0;
+}
+
+hr {
+  border-top: none;
+}
+
+blockquote{
+  &.blockquote-sm{
+    padding: 0 0 0 15px;
+    font-size: $font-size-base;
+  }
+  p{
+    font-size: inherit;
+    margin-bottom: $line-height-computed / 2;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: ($line-height-base / 2) 0;
+  line-height: $line-height-base;
+}
+
+h1,
+h2,
+h3 { line-height: $line-height-base * 2; }
+
+h1 { font-size: $font-size-base * 2.75; } // ~38px
+h2 { font-size: $font-size-base * 2.25; } // ~32px
+h3 { font-size: $font-size-base * 1.75; } // ~24px
+h4 { font-size: $font-size-base * 1.25; } // ~18px
+h5 { font-size: $font-size-base; }
+h6 { font-size: $font-size-base * 0.85; } // ~12px
+
+h1 small { font-size: $font-size-base * 1.75; } // ~24px
+h2 small { font-size: $font-size-base * 1.25; } // ~18px
+h3 small { font-size: $font-size-base; }
+h4 small { font-size: $font-size-base; }
+
+.text-muted          { color: $textLightGray; }
+.text-primary        { color: $brand-primary; }
+.text-warning        { color: $brand-warning; }
+.text-danger         { color: $brand-danger; }
+.text-success        { color: $brand-success; }
+.text-info           { color: $brand-info; }
+
+@media (min-width: 768px) {
+  .lead {
+    font-size: 16px;
+  }
+}
+
+/***************************/
+/*         Code            */
+/***************************/
+
+code,
+pre {
+  @include border-radius($border-radius-base);
+}
+
+/***************************/
+/*         Forms           */
+/***************************/
+
+label,
+input,
+button,
+select,
+textarea {
+  font-weight: $font-weight-base;
+}
+
+legend{
+  line-height: $line-height-base * 2;
+}
+
+legend small{
+  color: $smallsColor;
+  font-size: $font-size-larger;
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  color: $gray-dark;
+  min-height: 30px;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  background-color: $input-bg;
+  border: 1px solid $input-border;
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+  @include transition(border linear .2s, box-shadow linear .2s);
+  &:focus {
+    @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
+    border-color: $blue;
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+  }
+
+  &.form-control, &[class*="col-"]{
+
+    &[type=search], &.search{
+      padding-left: 26px;
+    }
+  }
+
+  &[disabled]{
+    @extend .form-control[disabled];
+  }
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: $gray-dark;
+  border-color: $input-border;
+  &:focus {
+    border-color: $blue;
+    @include box-shadow(none);
+  }
+}
+
+/*adding .btn-group here because selectpicker's select become .btn-group
+  need some more vertical space*/
+.btn-group,
+input,
+select,
+textarea,
+.uneditable-input,
+.input-prepend,
+.input-append {
+  + .help-block {
+    margin-top: $line-height-computed / 4;
+  }
+}
+
+.search-query, .navbar-form .search-query{
+  @include border-radius($border-radius-base);
+  line-height: $line-height-computed;
+}
+
+.form-horizontal{
+  input,
+  select,
+  textarea,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    + .help-block {
+      margin-top: $line-height-computed / 4;
+    }
+  }
+}
+
+.form-group{
+  margin-bottom: $line-height-base;
+}
+
+
+/***************************/
+/*      Input Groups       */
+/***************************/
+.input-group-addon {
+  color: $textLightGray;
+}
+
+/***************************/
+/*        Dropdowns        */
+/***************************/
+
+.dropdown-menu{
+  @include border-radius($border-radius-large);
+}
+
+.dropdown-menu > li > a {
+  font-weight: $font-weight-base;
+}
+
+/***************************/
+/*      Buttons            */
+/***************************/
+
+.btn:focus {
+  outline: none;
+}
+
+.btn-xs{
+  font-size: $font-size-mini;
+  line-height: $line-height-base;
+  padding: 0 6px;
+}
+
+.btn{
+  color: $white;
+  text-shadow: none;
+
+  @include box-shadow(none);
+
+  &:hover,
+  &:focus {
+    color: $white;
+    @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
+  }
+
+  &.active:hover{
+    color: $white;
+    @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+  }
+
+  &.disabled,
+  &[disabled] {
+    color: $white;
+  }
+
+  .caret{
+    border-top-color: #fff;
+  }
+}
+
+.btn-primary,
+.btn-warning,
+.btn-danger,
+.btn-success,
+.btn-info{
+  &.active{
+    color: rgba(white, .9);
+    &:hover{
+      color: rgba(white, .9);
+    }
+  }
+}
+
+/***************************/
+/*      Button Groups      */
+/***************************/
+
+.btn-group > .btn + .btn {
+  margin-left: 0;
+}
+
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: auto;
+}
+
+.btn-group > .btn + .dropdown-toggle {
+  @include box-shadow(none);
+}
+
+.btn-toolbar {
+  font-size: 0; // Hack to remove whitespace that results from using inline-block
+  margin-top: $line-height-base / 2;
+  margin-bottom: $line-height-base / 2;
+  > .btn + .btn,
+  > .btn-group + .btn,
+  > .btn + .btn-group {
+    margin-left: 5px;
+  }
+}
+
+/***************************/
+/*        TABBABLE         */
+/***************************/
+// copied from bs2
+
+
+// COMMON STYLES
+// -------------
+
+// Clear any floats
+.tabbable {
+  @include clearfix();
+}
+.tab-content {
+  overflow: auto; // prevent content from running below tabs
+}
+
+// Remove border on bottom, left, right
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+// Show/hide tabbable areas
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+
+// BOTTOM
+// ------
+
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+.tabs-below > .nav-tabs > li > a {
+  @include border-radius(0 0 $border-radius-base $border-radius-base);
+  &:hover,
+  &:focus {
+    border-bottom-color: transparent;
+    border-top-color: #ddd;
+  }
+}
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #ddd #ddd #ddd;
+}
+
+// LEFT & RIGHT
+// ------------
+
+// Common styles
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+// Tabs on the left
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  @include border-radius($border-radius-base 0 0 $border-radius-base);
+}
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: $gray-lighter #ddd $gray-lighter $gray-lighter;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+}
+
+// Tabs on the right
+.tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  @include border-radius(0 $border-radius-base $border-radius-base 0);
+}
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: $gray-lighter $gray-lighter $gray-lighter #ddd;
+}
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+}
+
+/***************************/
+/*          Navs           */
+/***************************/
+
+.nav-tabs .dropdown-menu {
+  @include border-radius(0 0 $border-radius-base $border-radius-base); // remove the top rounded corners here since there is a hard edge above the menu
+}
+.nav-pills .dropdown-menu {
+  @include border-radius($border-radius-base); // make rounded corners match the pills
+}
+
+.nav-pills > li > a{
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  @include border-radius($border-radius-base); // make rounded corners match the pills
+  background: #f5f5f5;
+}
+
+.nav > li > a{
+  @include transition(background-color .2s);
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus{
+  background: transparent;
+  color: $text-color;
+}
+
+.tabs-below .nav-tabs{
+  border-bottom: none;
+  border-top: 1px solid #ddd;
+
+  > li{
+    margin-bottom: 0;
+    margin-top: -1px;
+
+    &.active > a{
+      border-bottom-color: $nav-tabs-border-color;
+      border-top-color: transparent;
+
+      &:hover{
+        border: 1px solid $nav-tabs-active-link-hover-border-color;
+        border-top-color: transparent;
+      }
+    }
+
+    > a:hover{
+      border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+    }
+  }
+}
+
+.nav-justified > li {
+  padding: 0 1.28%;
+}
+
+/***************************/
+/*         Navbars         */
+/***************************/
+
+.navbar{
+  margin: 0;
+
+  .btn-navbar {
+    border: none;
+    @include box-shadow(none);
+  }
+}
+
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background: none;
+  @include box-shadow(none);
+}
+
+.navbar-nav {
+  margin: ($navbar-padding-vertical / 2) -$navbar-padding-horizontal;
+
+  > li > a {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: $line-height-computed;
+  }
+
+  @media (max-width: $screen-xs-max) {
+  // Dropdowns get custom display when collapsed
+    .open .dropdown-menu {
+      position: absolute;
+      float: left;
+      margin: 2px 0 0;
+      background-color: $popover-bg;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+/***************************/
+/*          Wells          */
+/***************************/
+
+.well{
+  @include box-shadow(none)
+}
+
+/***************************/
+/*        Pagination       */
+/***************************/
+
+.pagination {
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+
+.pagination > li > a,
+.pagination > li > span{
+  margin-left: 0;
+}
+
+/***************************/
+/*         Modals          */
+/***************************/
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  //okendoken. 15% opacity is just enough
+  @include opacity(0.15);
+}
+
+.modal {
+  color: $gray-dark;
+  @include border-radius($border-radius-base);
+
+  #{headings()}{
+    color: $gray-dark;
+  }
+}
+
+.modal-footer{
+  background-color: #f5f5f5;
+}
+
+/***************************/
+/*        Tooltips         */
+/***************************/
+
+.tooltip {
+  font-size: $font-size-small;
+}
+
+.tooltip-inner {
+  padding: 4px;
+}
+
+/***************************/
+/*        Popovers         */
+/***************************/
+
+.popover {
+  color: $text-color;
+  @include border-radius($border-radius-base);
+  #{headings()}{
+    color: $text-color;
+  }
+}
+
+.popover-title {
+  @include border-radius($border-radius-base $border-radius-base 0 0);
+}
+/***************************/
+/*    Labels and badges    */
+/***************************/
+
+.label,
+.badge {
+  display: inline-block;
+  @include box-sizing(content-box);
+  padding: 2px 4px;
+  line-height: 14px; // ensure proper line-height if floated
+  text-shadow: none;
+  font-weight: $font-weight-base;
+  font-size: $font-size-small;
+}
+
+.badge{
+  padding: 2px 9px;
+}
+
+.badge-default {
+  @include label-variant($label-default-bg);
+}
+
+.badge-primary {
+  @include label-variant($label-primary-bg);
+}
+
+.badge-success {
+  @include label-variant($label-success-bg);
+}
+
+.badge-info {
+  @include label-variant($label-info-bg);
+}
+
+.badge-warning {
+  @include label-variant($label-warning-bg);
+}
+
+.badge-danger {
+  @include label-variant($label-danger-bg);
+}
+
+.label-important{
+  @extend .label-danger;
+}
+
+.label-inverse{
+  @extend .label-default;
+}
+
+/***************************/
+/*        Jumbotron        */
+/***************************/
+
+.jumbotron{
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  }
+
+  h1, .h1{
+    line-height: 1;
+  }
+}
+
+/***************************/
+/*          Alerts         */
+/***************************/
+
+.alert {
+  text-shadow: none;
+  border: none;
+  color: white;
+  @include box-shadow($widget-shadow);
+}
+
+.close{
+  @include transition(opacity .2s ease-out);
+  text-shadow: none;
+}
+
+/***************************/
+/*        List Groups      */
+/***************************/
+
+.list-group{
+  margin-bottom: 0;
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  }
+  .widget .body > &{
+    margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+
+    .list-group-item:first-child{
+      border-top: 1px solid $background-addition;
+    }
+  }
+}
+
+.list-group-item{
+  border: none;
+  @include transition(background-color .2s ease-out);
+
+  .widget &{
+    background: none;
+    + .list-group-item{
+      border-top: 1px solid $background-addition;
+    }
+  }
+
+  .list-group-outer &{
+    @include box-shadow($widget-shadow);
+    + .list-group-item{
+      margin-top: 10px;
+    }
+  }
+
+  > .fa-chevron-right{
+    margin-top: 3px;
+    margin-left: 6px;
+    color: darken($text-color, 5%);
+  }
+}
+
+/***********************************/
+/**            Progress           **/
+/**********************************/
+
+.progress{
+  background: rgba(black, .15);
+}
+
+/***************************/
+/*          Panels         */
+/***************************/
+
+.panel-heading {
+  padding: 0;
+
+  > .accordion-toggle{
+    display: block;
+    padding: 8px 15px;
+  }
+}
+
+.panel{
+  border: none;
+  background-color: $background-addition;
+  @include box-shadow(none);
+
+  $i: 1;
+  @each $color in $colors{
+
+    &:nth-child(#{$i}n) .panel-heading{
+      border-left: 5px solid #{$color};
+    }
+    $i: $i + 1;
+  }
+
+  .panel-heading a{
+    color: $text-color;
+    @include bold-font;
+  }
+}
+
+.panel-body{
+  border-top-color: $background-addition;
+}
+
+/***************************/
+/*       Breadcrumbs       */
+/***************************/
+
+.breadcrumb{
+  a{
+    color: $breadcrumb-color;
+    text-decoration: none;
+    &:hover{
+      color: $breadcrumb-active-color;
+    }
+  }
+
+  .widget > &{
+    margin: -($widget-padding-vertical) (-($widget-padding-horizontal));
+  }
+}
+
+/***************************/
+/*        Carousel         */
+/***************************/
+
+.carousel{
+  .widget > &{
+    margin: 0 (-($widget-padding-horizontal)) 5px;
+  }
+}
+
+.carousel-control {
+  &.left, &.right{
+    background: none;
+  }
+  i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+}
+
+.carousel-indicators{
+  &.outer{
+    bottom: -10px;
+  }
+  li{
+    background-color: $gray-lighter;
+  }
+}

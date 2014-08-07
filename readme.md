@@ -1,30 +1,77 @@
-Light Blue v1.4
+Light Blue v2.1 (April 29)
 =========
 
-Light Blue is a **next generation** admin dashboard template based on the latest **Flat** design. There are few reasons why we have created it:.
+Now with lightening fast **ajax + pushState** page loading!
+
+Available in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!
+
+Light Blue is a **next generation** dashboard template based on the latest **Flat** design. There are few reasons why we created it:.
 
   - We didn't like the darkness of most of admin templates, so we created this **light** one.
+  - We didn't like the slowness of most of admin templates, so we created this **fast** one.
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 1.4 Released!
+New Version 2.1 Released!
 -
 
-  - Bootstrap 3 support
-  - Ready-to-use Inbox App
+- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
+- Messenger notifications
+- Input Sliders
+- Parsley 2.0.0
+- White version bug fixes
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
-**Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework and uses powerful Sass (CSS preprocessor) technology.
+**Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
+
+We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
 
 Feedback
 -
-Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let me know!
-Email me at [philip.daineka@gmail.com](mailto:philip.daineka@gmail.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). I will do my best to help you.
+Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
+Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
 
 Changelog
 -
+
+Version 2.0
+
+- Super fast Ajax + pushState page loading
+- Lib updates
+- Few bug fixes
+
+Version 1.8
+
+  - Bootstrap v3.1 update
+  - Few bug fixes
+
+Version 1.7
+
+  - 4+ level menu.
+  - Libs updates & fixes
+  - Documentation update
+
+Version 1.6
+
+  - Bootstrap components page
+  - Draggable Grid
+  - List Groups
+  - Jquery 2.0, lib updates
+  - Font Awesome 4.0.3
+
+Version 1.5
+
+  - White version. *Thanks to Quang Pham for convincing me :)*
+  - Landing page
+  - Css & Structure refactoring
+  - Drop Bootstrap 2 version from package
+
+Version 1.4
+
+  - Bootstrap 3 support
+  - Ready-to-use Inbox App
 
 Version 1.3
 
@@ -48,8 +95,8 @@ Version 1.1
 Next Release Plan
 -
 
-  - Hover Menu
   - UI improvements
+  - Your suggestions!
 
 Full feature list
 -
@@ -58,6 +105,7 @@ Full feature list
     *   Html5 Gradient Background
     *   Unobtrusive colors and widgets
     *   Option to select between two perfectly chosen background gradients
+  - White & Transparent Versions
   - Fully Responsive Layout: from small mobile to large desktop devices.
   - Print Optimized
   - 3 Sidebar Options
@@ -128,5 +176,6 @@ Full feature list
     *   Login Page
     *   Invoice Page
     *   Inbox Page
+    *   Landing Page
 
 Please note that support is provided via email as mentioned in the documentation page.

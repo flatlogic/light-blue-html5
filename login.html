@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="utf-8">
-    <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+    <script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
     <script src="lib/backbone/underscore-min.js"></script>
     <script src="js/settings.js"> </script>
 </head>
@@ -22,35 +23,35 @@
             <form class="no-margin"
                   action="index.html" method="get">
                 <fieldset>
-                    <div class="control-group no-margin">
-                        <label class="control-label" for="email" >Email</label>
-                        <div class="control">
-                            <div class="input-prepend input-padding-increased">
-                                <span class="add-on">
-                                    <i class="eicon-user icon-large"></i>
+                    <div class="form-group no-margin">
+                        <label for="email" >Email</label>
+
+                        <div class="input-group input-group-lg">
+                                <span class="input-group-addon">
+                                    <i class="eicon-user"></i>
                                 </span>
-                                <input id="email" type="email"
-                                       placeholder="Your Email">
-                            </div>
+                            <input id="email" type="email" class="form-control input-lg"
+                                   placeholder="Your Email">
                         </div>
+
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="password" >Password</label>
-                        <div class="control">
-                            <div class="input-prepend input-padding-increased">
-                                <span class="add-on">
-                                    <i class="icon-lock icon-large"></i>
+                    <div class="form-group">
+                        <label for="password" >Password</label>
+
+                        <div class="input-group input-group-lg">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-lock"></i>
                                 </span>
-                                <input id="password" type="password"
-                                       placeholder="Your Password">
-                            </div>
+                            <input id="password" type="password" class="form-control input-lg"
+                                   placeholder="Your Password">
                         </div>
+
                     </div>
                 </fieldset>
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-block btn-large btn-danger">
-                        <span class="small-circle"><i class="icon-caret-right"></i></span>
+                    <button type="submit" class="btn btn-block btn-lg btn-danger">
+                        <span class="small-circle"><i class="fa fa-caret-right"></i></span>
                         <small>Sign In</small>
                     </button>
                     <div class="forgot"><a class="forgot" href="#">Forgot Username or Password?</a></div>
@@ -59,7 +60,7 @@
         </div>
         <footer>
             <div class="facebook-login">
-                <a href="index.html"><span><i class="icon-facebook-sign icon-large"></i> LogIn with Facebook</span></a>
+                <a href="index.html"><span><i class="fa fa-facebook-square fa-lg"></i> LogIn with Facebook</span></a>
             </div>
         </footer>
     </section>

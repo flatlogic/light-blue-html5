@@ -16,12 +16,12 @@
 <nav id="sidebar" class="sidebar nav-collapse collapse">
     <ul id="side-nav" class="side-nav">
         <li >
-            <a href="index.html"><i class="icon-home"></i> <span class="name">Dashboard</span></a>
+            <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="active accordion-group">
+        <li class="active panel">
             <a class="accordion-toggle" data-toggle="collapse"
-               data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
-            <ul id="forms-collapse" class="accordion-body collapse in">
+               data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-edit"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="panel-collapse in">
                 <li><a href="form_account.html">Account</a></li>
                 <li><a href="form_article.html">Article</a></li>
                 <li class="active"><a href="form_elements.html">Elements</a></li>
@@ -29,80 +29,119 @@
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-bar-chart-o"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="panel-collapse collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
+            <ul id="ui-collapse" class="panel-collapse collapse">
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_notifications.html">Notifications &nbsp;<span class="label label-danger">new</span></a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
                 <li><a href="ui_tabs.html">Tabs</a></li>
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#components-collapse"><i class="fa fa-bookmark-o"></i> <span class="name">Components</span></a>
+            <ul id="components-collapse" class="panel-collapse collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
-                <li><a href="component_maps.html">Maps</a></li>
+                <li><a href="component_maps.html" data-no-pjax>Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
+                <li><a href="component_bootstrap.html">Bootstrap &nbsp; <span class="label label-important">new</span></a></li>
+                <li><a href="component_list_groups.html">List Groups &nbsp; <span class="label label-important">new</span></a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#tables-collapse"><i class="icon-table"></i> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-table"></i> <span class="name">Tables</span></a>
+            <ul id="tables-collapse" class="panel-collapse collapse">
                 <li><a href="tables_static.html">Static</a></li>
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
         </li>
-        <li >
-            <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
-        </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-bars"></i> <span class="name">Widgets &nbsp; <span class="label label-info">new</span></span></a>
+            <ul id="grid-collapse" class="panel-collapse collapse">
+                <li><a href="grid.html">Basic</a></li>
+                <li><a href="grid_live.html">Live &nbsp; <span class="label label-important">hot</span></a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#special-collapse"><i class="fa fa-asterisk"></i> <span class="name">Special</span></a>
+            <ul id="special-collapse" class="panel-collapse collapse">
                 <li><a href="special_search.html">Search</a></li>
                 <li><a href="special_invoice.html">Invoice</a></li>
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
+                <li><a href="landing.html" data-no-pjax>Landing</a></li>
+                <li><a href="white/index.html" data-no-pjax>White <i class="fa fa-external-link-square"></i></a></li>
             </ul>
         </li>
-        <li class="visible-phone">
-            <a href="login.html"><i class="icon-signout"></i> <span class="name">Sign Out</span></a>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-code-fork"></i> <span class="name">Menu Levels</span></a>
+            <ul id="menu-levels-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 1.1</a></li>
+                <li><a href="#">Item 1.2</a></li>
+                <li class="panel">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse"
+                       data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
+                    <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
+                        <li><a href="#">Item 2.1</a></li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li class="panel">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse"
+                               data-parent="#sub-menu-2-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
+                            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                                <li><a href="#">Item 3.1</a></li>
+                                <li><a href="#">Item 3.2</a></li>
+                                <li><a href="#">Item 3.3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="visible-xs">
+            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
         </li>
     </ul>
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-transparent btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-transparent btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
 <header class="page-header">
     <div class="navbar">
-        <div class="navbar-inner">
-            <ul class="nav pull-right">
-                <li class="dropdown">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="visible-phone-landscape">
+                        <a href="#" id="search-toggle">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
                         <a href="#" title="Messages" id="messages"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="icon-comments"></i>
+                            <i class="fa fa-comments"></i>
                         </a>
                         <ul id="messages-menu" class="dropdown-menu messages" role="menu">
                             <li role="presentation">
@@ -140,23 +179,23 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="text-align-center see-all">
-                                    See all messages <i class="icon-arrow-right"></i>
+                                    See all messages <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                <li class="dropdown">
+                    <li class="dropdown">
                         <a href="#" title="8 support tickets"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="icon-group"></i>
+                            <i class="fa fa-group"></i>
                             <span class="count">8</span>
                         </a>
                         <ul id="support-menu" class="dropdown-menu support" role="menu">
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
-                                        <span class="label label-important"><i class="icon-bell-alt"></i></span>
+                                        <span class="label label-important"><i class="fa fa-bell-o"></i></span>
                                     </div>
                                     <div class="details">
                                         Check out this awesome ticket
@@ -166,7 +205,7 @@
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
-                                        <span class="label label-warning"><i class="icon-question-sign"></i></span>
+                                        <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
                                     </div>
                                     <div class="details">
                                         "What is the best way to get ...
@@ -176,7 +215,7 @@
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
-                                        <span class="label label-success"><i class="icon-tag"></i></span>
+                                        <span class="label label-success"><i class="fa fa-tag"></i></span>
                                     </div>
                                     <div class="details">
                                         This is just a simple notification
@@ -186,7 +225,7 @@
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
-                                        <span class="label label-info"><i class="icon-info-sign"></i></span>
+                                        <span class="label label-info"><i class="fa fa-info-circle"></i></span>
                                     </div>
                                     <div class="details">
                                         12 new orders has arrived today
@@ -196,7 +235,7 @@
                             <li role="presentation">
                                 <a href="#" class="support-ticket">
                                     <div class="picture">
-                                        <span class="label label-important"><i class="icon-plus"></i></span>
+                                        <span class="label label-important"><i class="fa fa-plus"></i></span>
                                     </div>
                                     <div class="details">
                                         One more thing that just happened
@@ -205,25 +244,25 @@
                             </li>
                             <li role="presentation">
                                 <a href="#" class="text-align-center see-all">
-                                    See all tickets <i class="icon-arrow-right"></i>
+                                    See all tickets <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                <li class="divider"></li>
-                <li class="hidden-phone">
-                    <a href="#" id="settings"
-                       data-toggle="popover"
-                       data-placement="bottom"
-                       title="">
-                        <i class="icon-cog"></i>
-                    </a>
-                </li>
-                <li class="hidden-phone dropdown">
+                    <li class="divider"></li>
+                    <li class="hidden-xs">
+                        <a href="#" id="settings"
+                           title="Settings"
+                           data-toggle="popover"
+                           data-placement="bottom">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs dropdown">
                         <a href="#" title="Account" id="account"
                            class="dropdown-toggle"
                            data-toggle="dropdown">
-                            <i class="icon-user"></i>
+                            <i class="fa fa-user"></i>
                         </a>
                         <ul id="account-menu" class="dropdown-menu account" role="menu">
                             <li role="presentation" class="account-picture">
@@ -232,53 +271,52 @@
                             </li>
                             <li role="presentation">
                                 <a href="form_account.html" class="link">
-                                    <i class="icon-user"></i>
+                                    <i class="fa fa-user"></i>
                                     Profile
                                 </a>
                             </li>
                             <li role="presentation">
                                 <a href="component_calendar.html" class="link">
-                                    <i class="icon-calendar"></i>
+                                    <i class="fa fa-calendar"></i>
                                     Calendar
                                 </a>
                             </li>
                             <li role="presentation">
                                 <a href="#" class="link">
-                                    <i class="icon-inbox"></i>
+                                    <i class="fa fa-inbox"></i>
                                     Inbox
                                 </a>
                             </li>
                         </ul>
                     </li>
-                <li class="visible-phone">
-                    <a href="#"
-                       class="btn-navbar"
-                       data-toggle="collapse"
-                       data-target=".sidebar"
-                       title="">
-                        <i class="icon-reorder"></i>
-                    </a>
-                </li>
-                <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
-            </ul>
-            <form class="navbar-search pull-right">
-                <input type="search" class="search-query" placeholder="Search...">
-            </form>
+                    <li class="visible-xs">
+                        <a href="#"
+                           class="btn-navbar"
+                           data-toggle="collapse"
+                           data-target=".sidebar"
+                           title="">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+                <form id="search-form" class="navbar-form pull-right" role="search">
+                    <input type="search" class="search-query" placeholder="Search...">
+                </form>
         </div>
-    </div>
 </header>
-<div class="content container-fluid">
-    <div class="row-fluid">
-        <div class="span12">
+<div class="content container">
+    <div class="row">
+        <div class="col-md-12">
             <h2 class="page-title">Form Elements <small>Inputs, controls and more</small></h2>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span6">
+    <div class="row">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-align-left"></i>
+                        <i class="fa fa-align-left"></i>
                         Inputs
                     </h4>
                 </header>
@@ -286,96 +324,106 @@
                     <form class="form-horizontal" method="post">
                         <fieldset>
                             <legend class="section">Horizontal form</legend>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="normal-field">Normal field</label>
-                            <div class="controls">
-                                <input type="text" id="normal-field" class="span8" placeholder="May have placeholder">
+                            <div class="controls form-group">
+                                <div class="col-sm-8">
+                                    <input type="text" id="normal-field" class="form-control" placeholder="May have placeholder">
+                                </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                            <div class="control-group">
+                                <label class="control-label" for="normal-field">Transparent input</label>
+                                <div class="controls form-group">
+                                    <div class="col-sm-8">
+                                        <input type="text" id="transparent-field" class="form-control input-transparent" placeholder="Stylish, huh??">
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="control-group">
                             <label class="control-label" for="hint-field">
                                 Label hint
                                 <span class="help-block">Some help text</span>
                             </label>
-                            <div class="controls">
-                                <input type="text" id="hint-field" class="span8">
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="hint-field" class="form-control"></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label " for="tooltip-enabled">Tooltip enabled</label>
-                            <div class="controls">
-                                <input type="text" id="tooltip-enabled" class="span8"
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="tooltip-enabled" class="form-control"
                                        data-placement="top" data-original-title="Some explanation text here"
-                                       placeholder="Hover over me..">
+                                       placeholder="Hover over me.."></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label " for="disabled-input">Disabled input</label>
-                            <div class="controls">
-                                <input type="text" id="disabled-input"  class="span8"
-                                       disabled="disabled" value="Default value" >
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="disabled-input" class="form-control"
+                                       disabled="disabled" value="Default value" ></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label " for="max-length">Max length</label>
-                            <div class="controls">
-                                <input type="text" id="max-length" maxlength="3"
-                                       class="span8"
+                            <div class="controls form-group">
+                                <div class="col-sm-8"><input type="text" id="max-length" maxlength="3"
+                                       class="form-control"
                                        placeholder="Max length 3 characters"
-                                       data-placement="top" data-original-title="You cannot write more than 3 characters.">
+                                       data-placement="top" data-original-title="You cannot write more than 3 characters."></div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="prepended-input">Prepended input</label>
-                            <div class="controls">
-                                <div class="input-prepend span10">
-                                    <span class="add-on pull-left"><i class="icon-user"></i></span>
-                                    <input id="prepended-input" class="span8" size="16" type="text" placeholder="Username">
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input id="prepended-input" class="form-control" size="16" type="text" placeholder="Username">
                                 </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="password-field">Password</label>
-                            <div class="controls">
-                                <div class="input-prepend span10">
-                                    <span class="add-on pull-left"><i class="icon-lock"></i></span>
-                                    <input type="password" class="span8" id="password-field">
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <input type="password" class="form-control" id="password-field" placeholder="Password">
                                 </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="appended-input">Appended input</label>
-                            <div class="controls">
-                                <div class="input-append span10">
-                                    <input id="appended-input" class="span8" size="16" type="text">
-                                    <span class="add-on pull-left">.00</span> </div>
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <input id="appended-input" class="form-control" size="16" type="text">
+                                    <span class="input-group-addon">.00</span> </div>
                             </div>
                         </div>
-                        <div class="control-group controls-row">
+                        <div class="control-group">
                             <label class="control-label" for="combined-input">Combined</label>
-                            <div class="controls">
-                                <div class="input-prepend input-append span10">
-                                    <span class="add-on pull-left">$</span>
-                                    <input id="combined-input" class="span8" size="16" type="text">
-                                    <span class="add-on pull-left">.00</span> </div>
+                            <div class="controls form-group">
+                                <div class="input-group col-sm-8">
+                                    <span class="input-group-addon">$</span>
+                                    <input id="combined-input" class="form-control" size="16" type="text">
+                                    <span class="input-group-addon">.00</span> </div>
                             </div>
                         </div>
                         </fieldset>
-                        <div class="form-actions ">
+                        <div class="form-actions">
                             <div>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
-                                <button type="button" class="btn">Cancel</button>
+                                <button type="button" class="btn btn-default">Cancel</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </section>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-align-right"></i>
+                        <i class="fa fa-align-right"></i>
                         Prepended and appended inputs
                     </h4>
                 </header>
@@ -383,89 +431,98 @@
                     <form method="post">
                         <fieldset>
                             <legend class="section">Default form</legend>
-                            <div class="control-group">
-                                <label class="control-label" for="search-input">Search type input</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="search" id="search-input">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="form-group">
+
+                                        <label for="search-input">Search type input</label>
+
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" id="search-input">
+                                    <span class="input-group-btn">
                                         <button type="button" class="btn btn-transparent">Search</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="bar">Whole bar appended</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="text" id="bar">
-                                        <button type="button" class="btn btn-danger"><i class="icon-pencil"></i></button>
-                                        <button type="button" class="btn btn-warning"><i class="icon-plus"></i></button>
-                                        <button type="button" class="btn btn-success"><i class="icon-refresh"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="dropdown-appended">Actions dropdown</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="text" id="dropdown-appended">
-                                        <div class="btn-group">
-                                            <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                                Action
-                                                <i class="icon-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Action</a></li>
-                                                <li><a href="#">Another action</a></li>
-                                                <li><a href="#">Something else here</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link</a></li>
-                                            </ul>
+                                    </span>
                                         </div>
+
                                     </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="type-dropdown-appended">Types dropdown</label>
-                                <div class="controls">
-                                    <div class="input-append">
-                                        <input type="text" id="type-dropdown-appended">
-                                        <select id="phone-type" class="selectpicker"
-                                                data-style="btn-primary">
-                                            <option>Type one</option>
-                                            <option>Some another type</option>
-                                            <option>Even more types</option>
-                                        </select>
-                                        <span class="help-block">You can select some type of a field just right in the place.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="segmented-dropdown">Segmented dropdown</label>
-                                <div class="controls">
-                                    <div class="input-prepend">
-                                        <div class="btn-group">
-                                            <button class="btn btn-warning" tabindex="-1">Action</button>
-                                            <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                                                <i class="icon-caret-down"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Action</a></li>
-                                                <li><a href="#">Another action</a></li>
-                                                <li><a href="#">Something else here</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link</a></li>
-                                            </ul>
+                                    <div class="form-group">
+                                        <label for="bar">Whole bar appended</label>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="bar">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-danger"><i class="fa fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i></button>
+                                                <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i></button>
+                                            </div>
                                         </div>
-                                        <input id="segmented-dropdown" type="text">
-                                        <span class="help-block">Everything can be appended to the left</span>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dropdown-appended">Actions dropdown</label>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="dropdown-appended">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                                    Action
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="type-dropdown-appended">Types dropdown</label>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="type-dropdown-appended">
+                                            <div class="input-group-btn">
+                                                <select id="phone-type" class="selectpicker"
+                                                    data-style="btn-primary">
+                                                <option>Type one</option>
+                                                <option>Some another type</option>
+                                                <option>Even more types</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p class="help-block">You can select some type of a field just right in the place.</p>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="segmented-dropdown">Segmented dropdown</label>
+
+                                        <div class="input-group">
+                                            <input id="segmented-dropdown" class="form-control" type="text">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-warning" tabindex="-1">Action</button>
+                                                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="help-block">Everything can be appended to the right</span>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
                         <div class="form-actions ">
-                            <div class=" visible-desktop"></div>
                             <div class=" ">
-                                <button type="submit" class="btn">Save Changes</button>
+                                <button type="submit" class="btn btn-default">Save Changes</button>
                                 <button type="button" class="btn btn-inverse">Cancel</button>
                             </div>
                         </div>
@@ -474,12 +531,12 @@
             </section>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span6">
+    <div class="row">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-font"></i>
+                        <i class="fa fa-font"></i>
                         Textareas
                     </h4>
                 </header>
@@ -489,16 +546,16 @@
                             <legend class="section">Condensed form</legend>
                             <div class="control-group">
                                 <label class="control-label" for="default-textarea">Default textarea</label>
-                                <div class="controls">
-                                    <textarea rows="4" class="input-block-level" id="default-textarea"></textarea>
+                                <div class="controls form-group">
+                                    <textarea rows="4" class="form-control" id="default-textarea"></textarea>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="elastic-textarea">
                                     Auto-growing textarea
                                 </label>
-                                <div class="controls">
-                                    <textarea rows="3" class="autogrow input-block-level" id="elastic-textarea"
+                                <div class="controls form-group">
+                                    <textarea rows="3" class="autogrow form-control" id="elastic-textarea"
                                               placeholder="Try to add few new lines.."></textarea>
                                 </div>
                             </div>
@@ -509,11 +566,11 @@
                                         With bottom toolbar appended
                                     </span>
                                 </label>
-                                <div class="controls">
-                                    <textarea rows="4" class="input-block-level" id="wysiwyg"></textarea>
+                                <div class="controls form-group">
+                                    <textarea rows="4" class="form-control" id="wysiwyg"></textarea>
                                     <div class="btn-toolbar pull-right">
-                                        <button type="button" class="btn btn-small btn-danger">Save</button>
-                                        <button type="button" class="btn btn-small">Clear</button>
+                                        <button type="button" class="btn btn-sm btn-danger">Save</button>
+                                        <button type="button" class="btn btn-sm btn-default">Clear</button>
                                     </div>
                                 </div>
                             </div>
@@ -522,11 +579,11 @@
                 </div>
             </section>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-list-alt"></i>
+                        <i class="fa fa-list-alt"></i>
                         Selects
                     </h4>
                 </header>
@@ -536,7 +593,7 @@
                             <legend class="section">Default form with labels on left</legend>
                             <div class="control-group">
                                 <label class="control-label" for="default-select">Default select</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select data-placeholder="Which galaxy is closest to Milky Way?"
                                             data-width="off"
                                             data-minimum-results-for-search="10"
@@ -556,7 +613,7 @@
                                 <label for="country" class="control-label">
                                     Select with search
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select id="country" required="required"
                                             data-placeholder="Select country" class="select-block-level chzn-select"
                                             tabindex="-1"
@@ -811,7 +868,7 @@
                                     Multiple select
                                     <span class="help-block">With search too</span>
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select data-placeholder="Multiple countries this time"
                                         class="chzn-select select-block-level" tabindex="-1"
                                         multiple="multiple"
@@ -1064,7 +1121,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="grouped">Select with groups</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select data-placeholder="Your Favorite Football Team"
                                             class="chzn-select select-block-level"
                                             multiple="multiple"
@@ -1126,8 +1183,8 @@
                             <legend class="section">Dropdown based colored selects</legend>
                             <div class="control-group">
                                 <label class="control-label" for="simple-colored">Simple select</label>
-                                <div class="controls">
-                                    <select class="selectpicker"
+                                <div class="controls form-group">
+                                    <select class="selectpicker" data-style="btn-default"
                                             tabindex="-1" id="simple-colored">
                                         <option value="0">Option One</option>
                                         <option value="1">Option Two</option>
@@ -1143,7 +1200,7 @@
                                         A bit of Japanese
                                     </span>
                                 </label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <select class="selectpicker"
                                             data-style="btn-danger"
                                             tabindex="-1" id="simple-red">
@@ -1170,16 +1227,16 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="simple-big">Big one</label>
-                                <div class="controls controls-row">
-                                    <select class="selectpicker span8"
-                                            data-style="btn-primary"
+                                <div class="controls form-group">
+                                    <select class="selectpicker"
+                                            data-style="btn-primary btn-lg"
                                             tabindex="-1" id="simple-big">
                                         <option value="0">Fourth Item</option>
                                         <option value="1">Fifth Item</option>
                                         <option value="2">Sixth item</option>
                                     </select>
                                     <span class="help-block">
-                                        Size can be controlled via <code>.span*</code>
+                                        Size can be controlled via <code>.btn-*</code>
                                     </span>
                                 </div>
                             </div>
@@ -1189,12 +1246,12 @@
             </section>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span7">
+    <div class="row">
+        <div class="col-md-7">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-check"></i>
+                        <i class="fa fa-check"></i>
                         Checkboxes and Radio
                     </h4>
                 </header>
@@ -1203,7 +1260,7 @@
                         <fieldset>
                             <div class="control-group">
                                 <label class="control-label">Checkboxes</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="checkbox">
                                         <input type="checkbox" id="checkbox-1" checked="checked" class="iCheck">
                                         Not so much needs to be done </label>
@@ -1217,7 +1274,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Inline ones</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="checkbox inline">
                                         <input type="checkbox" id="checkbox-4" class="iCheck" value="true" checked="checked">
                                         True </label>
@@ -1233,30 +1290,33 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">As button groups</label>
-                                <div class="controls controls-row">
-                                    <input id="btn-group-checkbox-1-input" type="hidden" name="bg" value="female">
-                                    <div id="btn-group-checkbox-1" class="btn-group" data-toggle="buttons-checkbox" data-target="btn-group-checkbox-1-input">
-                                        <button type="button" class="btn btn-small btn-inverse" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
-                                                value="test4">One</button>
-                                        <button type="button" class="btn btn-small btn-success active" data-toggle-class="btn-success" data-toggle-passive-class="btn-inverse"
-                                                value="test3">Two</button>
+                                <div class="controls form-group">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-default" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> One
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-default" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Two
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="controls controls-row">
-                                    <input id="btn-group-checkbox-2-input" type="hidden" name="gender" value="female">
-                                    <div id="btn-group-checkbox-2" class="btn-group" data-toggle="buttons-checkbox" data-target="btn-group-checkbox-2-input">
-                                        <button type="button" class="btn btn-small btn-primary active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse"
-                                                value="test1">Left</button>
-                                        <button type="button" class="btn btn-small btn-inverse" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Straight</button>
-                                        <button type="button" class="btn btn-small btn-inverse" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Right</button>
+                                <div class="controls form-group">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary btn-sm active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Left
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Straight
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="checkbox"> Right
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Radio Buttons</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="radio">
                                         <input type="radio" id="radio-4" class="iCheck" name="can" checked="checked">
                                         We can sing</label>
@@ -1270,7 +1330,7 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Same Inline</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="radio inline">
                                         <input type="radio" id="radio-1" class="iCheck" name="cani" checked="checked">
                                         Sing</label>
@@ -1284,28 +1344,33 @@
                             </div>
                             <div class="control-group">
                                 <label class="control-label">As button groups</label>
-                                <div class="controls controls-row">
-                                    <input id="button-group-1-input" type="hidden" name="bg" value="female">
-                                    <div id="button-group-1" class="btn-group" data-toggle="buttons-radio" data-target="button-group-1-input">
-                                        <button type="button" class="btn btn-small" data-toggle-class="btn-success" value="test4">Windows</button>
-                                        <button type="button" class="btn btn-small btn-success active" data-toggle-class="btn-success" value="test3">&nbsp; Doors &nbsp;</button>
+                                <div class="controls form-group">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-transparent btn-sm">
+                                            <input type="radio"> One
+                                        </label>
+                                        <label class="btn btn-transparent btn-sm">
+                                            <input type="radio"> Two
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="controls controls-row">
-                                    <input id="button-group-2-input" type="hidden" name="gender" value="female">
-                                    <div id="button-group-2" class="btn-group" data-toggle="buttons-radio" data-target="button-group-2-input">
-                                        <button type="button" class="btn btn-small btn-danger active" data-toggle-class="btn-danger" data-toggle-passive-class="btn-inverse"
-                                                value="test1">Left</button>
-                                        <button type="button" class="btn btn-small btn-inverse" data-toggle-class="btn-danger" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Straight</button>
-                                        <button type="button" class="btn btn-small btn-inverse" data-toggle-class="btn-danger" data-toggle-passive-class="btn-inverse"
-                                                value="test2">Right</button>
+                                <div class="controls form-group">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-primary btn-sm active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="radio"> Left
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="radio"> Straight
+                                        </label>
+                                        <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
+                                            <input type="radio"> Right
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label for="simple-switch" class="control-label">Switches</label>
-                                <div class="controls">
+                                <div class="controls form-group">
                                     <label class="checkbox inline">
                                         <span class="switch switch-small" data-on="primary" data-off="danger">
                                             <input id="simple-switch" type="checkbox" checked="checked">
@@ -1323,11 +1388,11 @@
                 </div>
             </section>
         </div>
-        <div class="span5">
+        <div class="col-md-5">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-magic"></i>
+                        <i class="fa fa-magic"></i>
                         Pickers
                     </h4>
                 </header>
@@ -1335,110 +1400,206 @@
                     <form method="post" >
                         <fieldset>
                             <legend class="section">Dates</legend>
-                            <div class="control-group">
-                                <label for="in-place-date" class="control-label">In place</label>
-                                <div class="controls controls-row">
-                                    <input id="in-place-date" class="span6 date-picker" type="text" name="in-place-date" value="">
+                            <div class="row"><div class="col-sm-8">
+                                <div class="control-group">
+                                    <label for="in-place-date" class="control-label">In place</label>
+
+                                    <input id="in-place-date" class="form-control date-picker" type="text" name="in-place-date" value="">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label for="btn-enabled-date" class="control-label">Button-enabled</label>
-                                <div class="controls controls-row">
-                                    <div class="input-append span6">
-                                        <input id="btn-enabled-date" class="span11" type="text" name="btn-enabled-date" value="">
-                                        <a href="#" id="btn-select-calendar" class="btn btn-danger"
-                                                data-date-format="yyyy/mm/dd" data-date="2013/02/25">
-                                            <i class="icon-calendar"></i>
-                                        </a>
+                                <div class="control-group">
+                                    <label for="btn-enabled-date" class="control-label">Button-enabled</label>
+
+                                    <div class="input-group">
+                                        <input id="btn-enabled-date" class="form-control" type="text" name="btn-enabled-date" value="">
+
+                                    <span class="input-group-btn"><a href="#" id="btn-select-calendar" class="btn btn-danger"
+                                                                     data-date-format="yyyy/mm/dd" data-date="2013/02/25">
+                                        <i class="fa fa-calendar"></i>
+                                    </a></span>
                                     </div>
+
                                 </div>
-                            </div>
+                            </div></div>
                         </fieldset>
                         <fieldset>
                             <legend class="section">Colors</legend>
-                            <div class="control-group">
-                                <label for="color" class="control-label">Simple Select</label>
-                                <div class="controls controls-row">
-                                    <div class="input-append">
-                                    <input id="color" class=" colorpicker" type="text" name="color"
-                                           value="#eac85e">
-                                        <span id="color-holder" class="add-on" style="background-color: #eac85e;">&nbsp;&nbsp;&nbsp;</span>
+                            <div class="row"><div class="col-sm-8">
+                                <div class="control-group">
+                                    <label for="color" class="control-label">Simple Select</label>
+                                    <div class="input-group">
+                                        <input id="color" class="form-control colorpicker" type="text" name="color"
+                                               value="#eac85e">
+                                        <span id="color-holder" class="input-group-addon" style="background-color: #eac85e;">&nbsp;&nbsp;&nbsp;</span>
                                     </div>
+
                                 </div>
-                            </div>
+                            </div></div>
                         </fieldset>
                     </form>
                 </div>
             </section>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span6">
+    <div class="row">
+        <div class="col-md-12">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-align-left"></i>
+                        Sliders <span class="label label-danger">new</span>
+                    </h4>
+                </header>
+                <div class="body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4>Color Options</h4>
+                            <p>Light Blue extends Bootstrap Slider and provides different color options:</p>
+                            <form>
+                                <div class="">
+                                    <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                                </div>
+                                <div class="slider-danger">
+                                    <input class="js-slider" id="slider-ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
+                                </div>
+                                <div class="slider-warning">
+                                    <input class="js-slider" id="slider-ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
+                                </div>
+                                <div class="slider-success">
+                                    <input class="js-slider" id="slider-ex4" data-slider-id='ex4Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
+                                </div>
+                                <div class="slider-inverse">
+                                    <input class="js-slider" id="slider-ex5" data-slider-id='ex5Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Slider Orientation</h4>
+                            <p>Vertical orientation is also possible. Simply changing <strong>data-slider-orientation</strong>
+                            attribute does the thing.</p>
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6 col-sm-offset-3">
+                                        <span class="">
+                                    <input class="js-slider" id="slider-ex6" data-slider-orientation="vertical" data-slider-id='ex6Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                                </span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="slider-inverse">
+                                    <input class="js-slider" id="slider-ex7" data-slider-orientation="vertical" data-slider-id='ex7Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
+                                </span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="">
+                                    <input class="js-slider" id="slider-ex8" data-slider-orientation="vertical" data-slider-id='ex8Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
+                                </span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="slider-inverse">
+                                    <input class="js-slider" id="slider-ex9" data-slider-orientation="vertical" data-slider-id='ex9Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
+                                </span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="">
+                                    <input class="js-slider" id="slider-ex10" data-slider-orientation="vertical" data-slider-id='ex10Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
+                                </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Range Selector</h4>
+                            <p>Range selector, options specified via <strong>data-slider-value</strong> attribute as
+                                an array. Price range selector:</p>
+                            <form>
+                                <span class="slider-warning">
+                                    <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider'
+                                           type="text" data-slider-min="0" data-slider-max="2000"
+                                           data-slider-step="1" data-slider-value="[200,1547]"/>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <section class="widget">
+                <header>
+                    <h4>
+                        <i class="fa fa-align-left"></i>
                         Input Sizing
-                        <small>From <code>.span1</code> to <code>.span12</code></small>
+                        <small>From <code>.col-*-1</code> to <code>.col-*-12</code></small>
                     </h4>
                 </header>
                 <div class="body">
                     <form method="post">
                         <fieldset>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span6</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span6">
+                            <div class="row"><div class="col-sm-6">
+                                <div class="form-group">
+                                    <label><code>.col-sm-6</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span4</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span4">
+                            </div></div>
+                            <div class="row"><div class="col-sm-4">
+                                <div class="form-group">
+                                    <label><code>.col-sm-4</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span2</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span2">
+                            </div></div>
+                            <div class="row"><div class="col-sm-2">
+                                <div class="form-group">
+                                    <label><code>.col-sm-2</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span12</code>
-                                    or
-                                    <code>.input-block-level</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span12">
+                            </div></div>
+
+                            <div class="row"><div class="col-sm-12">
+                                <div class="form-group">
+                                    <label><code>.col-sm-12</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span11</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span11">
+                            </div></div>
+                            <div class="row"><div class="col-sm-11">
+                                <div class="form-group">
+                                    <label><code>.col-sm-11</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span9</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span9">
+                            </div></div>
+
+                            <div class="row"><div class="col-sm-9">
+                                <div class="form-group">
+                                    <label><code>.col-sm-9</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label"><code>.span7</code></label>
-                                <div class="controls controls-row">
-                                    <input type="text" class="span7">
+                            </div></div>
+                            <div class="row"><div class="col-sm-7">
+                                <div class="form-group">
+                                    <label><code>.col-sm-7</code></label>
+
+                                    <input type="text" class="form-control">
+
                                 </div>
-                            </div>
+                            </div></div>
                         </fieldset>
                     </form>
                 </div>
             </section>
         </div>
-        <div class="span6">
+        <div class="col-md-6">
             <section class="widget">
                 <header>
                     <h4>
-                        <i class="icon-pencil"></i>
+                        <i class="fa fa-pencil"></i>
                         Masked Inputs
                     </h4>
                 </header>
@@ -1450,8 +1611,8 @@
                                     Phone
                                     <span class="help-block">(123) 456-7890</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-phone" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-phone" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1459,8 +1620,8 @@
                                     International Phone
                                     <span class="help-block">+375 123 456 789</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-int-phone" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-int-phone" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1468,8 +1629,8 @@
                                     Date Format
                                     <span class="help-block">07-03-2013</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-date" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-date" type="text" class="form-control">
                                 </div>
                             </div>
                             <div class="control-group">
@@ -1477,8 +1638,8 @@
                                     Time
                                     <span class="help-block">13:43</span>
                                 </label>
-                                <div class="controls">
-                                    <input id="mask-time" type="text" class="span7">
+                                <div class="controls form-group">
+                                    <input id="mask-time" type="text" class="form-control">
                                 </div>
                             </div>
                         </fieldset>
@@ -1488,11 +1649,15 @@
         </div>
     </div>
 </div>
+    <div class="loader-wrap hiding hide">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
 </div>
 
 <!-- jquery and friends -->
-<script src="lib/jquery/jquery.1.9.0.min.js"> </script>
-<script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
+<script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
+
 
 <!-- jquery plugins -->
 <script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>
@@ -1506,14 +1671,14 @@
 <script src="lib/backbone/underscore-min.js"></script>
 
 <!-- bootstrap default plugins -->
-<script src="js/bootstrap/bootstrap-transition.js"></script>
-<script src="js/bootstrap/bootstrap-collapse.js"></script>
-<script src="js/bootstrap/bootstrap-alert.js"></script>
-<script src="js/bootstrap/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap/bootstrap-popover.js"></script>
-<script src="js/bootstrap/bootstrap-button.js"></script>
-<script src="js/bootstrap/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap/bootstrap-modal.js"></script>
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/collapse.js"></script>
+<script src="lib/bootstrap/alert.js"></script>
+<script src="lib/bootstrap/tooltip.js"></script>
+<script src="lib/bootstrap/popover.js"></script>
+<script src="lib/bootstrap/button.js"></script>
+<script src="lib/bootstrap/dropdown.js"></script>
+<script src="lib/bootstrap/modal.js"></script>
 
 <!-- bootstrap custom plugins -->
 <script src="lib/bootstrap-datepicker.js"></script>
@@ -1522,6 +1687,7 @@
 <script src="lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
 <script src="lib/bootstrap-switch.js"></script>
 <script src="lib/bootstrap-colorpicker.js"></script>
+<script src="lib/bootstrap-slider-3.0.1/bootstrap-slider.min.js"></script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
@@ -1535,24 +1701,30 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>White Version</div>
+        <div>
+            <a href="white/" class="btn btn-sm btn-transparent">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </script>
@@ -1562,14 +1734,14 @@
         <% if (auto) {%>
             <button type="button"
                     data-value="icons"
-                    class="btn-icons btn btn-transparent btn-small">Icons</button>
+                    class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-transparent btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
         <%} else {%>
             <button type="button"
                     data-value="auto"
-                    class="btn btn-transparent btn-small">Auto</button>
+                    class="btn btn-transparent btn-sm">Auto</button>
         <% } %>
 </script>
 

@@ -39,6 +39,7 @@
             <ul id="ui-collapse" class="accordion-body collapse">
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_notifications.html">Notifications</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
                 <li><a href="ui_tabs.html">Tabs</a></li>
                 <li><a href="ui_accordion.html">Accordion</a></li>
@@ -63,7 +64,7 @@
             </ul>
         </li>
         <li class="orange">
-            <a href="grid.html"><i class=" icon-columns"></i><span class="name">Grid</span></a>
+            <a href="grid.html"><i class=" icon-columns"></i><span class="name">Widgets &nbsp; <span class="label label-info">new</span></span></a>
         </li>
         <li class="lime accordion-group">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
@@ -84,31 +85,64 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template</h2>
+                    <h2>About Template (Light Blue 2.1)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
-                    <p>It's base on super powerful <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> front-end framework which
+                    <p>It's base on super powerful <a href="http://getbootstrap.com/">Bootstrap</a> front-end framework which
                         uses <strong>12-column responsive grid</strong> layout.</p>
+
+                    <h2>Structure</h2>
+                    <p>Light Blue package goes with following folders:</p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><strong>*root*</strong> - html templates;</li>
+                        <li><strong>css</strong> - compiled css stylesheets;</li>
+                        <li><strong>img</strong> - images;</li>
+                        <li><strong>js</strong> - custom javascript written for Light Blue;</li>
+                        <li><strong>lib</strong> - various JS libraries used in Light Blue. You can remove them depending on what you need;</li>
+                    </ul>
+                    <p></p>
+                    <p><em>Next folders are not essential and can be removed from package:</em></p>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li>documentation - you're actually reading it now;</li>
+                        <li>sass - scss stylesheets that compiled into css;</li>
+                        <li>server - few php files used for fileupload & ajax widgets demo;</li>
+                        <li>white - white version of Light Blue. It has the same/copied file structure so you can just
+                        choose one between White and Transparent and remove another.</li>
+                    </ul>
 
                     <h2>Scss</h2>
                     <p>Light Blue uses <a href="http://sass-lang.com/">scss</a> to generate css. This choice has been made because of significant boost
-                    scss gives when developing front-end apps like this one. I used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
+                    scss gives when developing front-end apps like this one. We used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
                         is absolutely up to your choice. Anyway editing css is a good old way, right? :)</p>
                     <p>The main scss file is <a href="../sass/application.scss">application.scss</a>. It includes all libraries and partial files.</p>
-                    <ul>
-                        <li><a href="../sass/_general.scss">general.scss</a> - all application styles. Only element styles
-                            (<code>body</code>, <code>a</code>, <code>h2</code>, etc).</li>
-                        <li><a href="../sass/_base.scss">base.scss</a> - all application styles. Everything except elements.
-                            Every class used in Light Blue is defined here.</li>
-                        <li><a href="../sass/_font.scss">font.scss</a> - downloaded version of Open Sans font.</li>
-                        <li><a href="../sass/_responsive.scss">responsive.scss</a> - responsive styles.</li>
-                        <li><a href="../sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes, etc.</li>
-                        <li><a href="../sass/_svg.scss">svg.scss</a> - svg-related styles.</li>
+                    <ul style="list-style: disc; padding-left: 40px;">
+                        <li><p><a href="../sass/_general.scss">general.scss</a> - all application styles. Only element styles
+                            (<code>body</code>, <code>a</code>, <code>h2</code>, etc).</p></li>
+                        <li><p><a href="../sass/_base.scss">base.scss</a> - all application styles. Everything except elements.
+                            Every class used in Light Blue is defined here.</p>
+                        <p>There are lots of sections like:</p>
+                        <pre><code>/***********************************/
+/**          LOGO                **/
+/**********************************/</code></pre>
+                        <p>in this file. You can simply remove sections you don't need and recompile stylesheets. The essential sections are:</p>
+                        <p><small>LOGO, SIDEBAR, CONTENT, WIDGET, HEADER, MESSAGES, SUPPORT, SETTINGS, ACCOUNT, BUTTONS,
+                            FORMS, TABLES, UTILS.</small> All other sections can be removed.</p></li>
+                        <li><p><a href="../sass/_font.scss">font.scss</a> - downloaded version of Open Sans font.</p></li>
+                        <li><p><a href="../sass/_responsive.scss">responsive.scss</a> - responsive styles.</p></li>
+                        <li><p><a href="../sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes, etc.</p></li>
+                        <li><p><a href="../sass/_svg.scss">svg.scss</a> - svg-related styles. This one can be easily removed if you don't need nvd3 charts.</p></li>
                     </ul>
 
+                    <h2>Pjax</h2>
+                    <p>Light Blue uses <a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a> library that
+                        uses ajax and pushState which makes page loading super fast.</p>
+                    <p>In case you want to turn off ajax page loading you need to just set <code>window.PJAX_ENABLED</code>
+                    variable to <code>false</code> (js/app.js file):</p>
+                    <pre><code>window.PJAX_ENABLED = false;</code></pre>
+
                     <h2>Support</h2>
-                    <p>If you have any questions or problems when installing template feel free to contact me via email -
-                        <a href="mailto:philip.daineka@gmail.com">philip.daineka@gmail.com</a>. I will provide as much help as possible.</p>
+                    <p>If you have any questions or problems when installing template feel free to contact us via email -
+                        <a href="mailto:contact@flatlogic.com">contact@flatlogic.com</a>. We will provide as much help as possible.</p>
 
                     <h3>Statistics Boxes</h3>
                     <hr/>
@@ -117,15 +151,18 @@
                     <h3>Left Sidebar</h3>
                     <hr/>
                     <p>Left sidebar is based on
-                        <a href="http://twitter.github.com/bootstrap/javascript.html#collapse">Bootstrap's collapse component</a>.
+                        <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap's collapse component</a>.
                         <a href="../js/settings.js">Settings.js</a> holds additional javascript code which is used to
                         change sidebar state and sidebar position depending on chosen option (icons, auto) and (left, right).</p>
 
                     <h3>Top Navigation</h3>
                     <hr/>
-                    <p>Is simple <a href="http://twitter.github.com/bootstrap/components.html#navbar">Bootstrap's Navbar</a>.
-                        User profile and settings popovers are implemented via <a href="http://twitter.github.com/bootstrap/javascript.html#popovers">Bootstrap's popover</a></p>
+                    <p>Is simple <a href="http://getbootstrap.com/components/#navbar">Bootstrap's Navbar</a>.
+                        User profile and settings popovers are implemented via <a href="http://getbootstrap.com/javascript/#popovers">Bootstrap's popover</a></p>
 
+                    <h3>Widget Controls</h3>
+                    <hr>
+                    <p>Each widget may have widget controls. See <a href="grid.html">Widgets</a>.</p>
                     <h3>Charts</h3>
                     <hr/>
                     <p>Charts are built with <a href="http://d3js.org/">D3.js</a>-based <a href="http://nvd3.org/">nvd3 library</a>. Read more in
@@ -133,6 +170,67 @@
 
                     <h3>Change Log</h3>
                     <hr/>
+                    <h4><strong>Version 2.1</strong></h4>
+                    <ul>
+                        <li>- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)</li>
+                        <li>- Messenger notifications</li>
+                        <li>- Input Sliders</li>
+                        <li>- Parsley 2.0.0</li>
+                        <li>- White version bug fixes</li>
+                    </ul>
+                    <h4><strong>Version 2.0</strong></h4>
+                    <ul>
+                        <li>- Super fast Ajax page loading</li>
+                        <li>- Lib updates</li>
+                        <li>- Few bug fixes</li>
+                    </ul>
+                    <h4><strong>Version 1.8</strong></h4>
+                    <ul>
+                        <li>- Bootstrap v3.1 update</li>
+                        <li>- Few bug fixes</li>
+                    </ul>
+                    <h4><strong>Version 1.7.1</strong></h4>
+                    <ul>
+                        <li>- Bootstrap 3.0.3 upgrade fix</li>
+                    </ul>
+                    <h4><strong>Version 1.7</strong></h4>
+                    <ul>
+                        <li>- 4+ level menu</li>
+                        <li>- Libs updates & fixes</li>
+                        <li>- Documentation update</li>
+                    </ul>
+                    <h4><strong>Version 1.6</strong></h4>
+                    <ul>
+                        <li>- Bootstrap components page</li>
+                        <li>- Draggable Grid</li>
+                        <li>- List Groups</li>
+                        <li>- Jquery 2.0, lib updates</li>
+                        <li>- Font Awesome 4.0.3</li>
+                    </ul>
+                    <h4><strong>Version 1.5</strong></h4>
+                    <ul>
+                        <li>- White version (<a href="../white/index.html">white/</a>) <small><em>Thanks to Quang Pham for convincing me :)</em></small></li>
+                        <li>- Landing page (<a href="../landing.html">landing.html</a>)</li>
+                        <li>- Css & Structure refactoring</li>
+                        <li>- Drop Bootstrap 2 version from package</li>
+                    </ul>
+                    <h4><strong>Version 1.4</strong></h4>
+                    <ul>
+                        <li>- Bootstrap 3 support</li>
+                        <li>- Ready-to-use Inbox App (<a href="../special_inbox.html">special_inbox.html</a>)</li>
+                    </ul>
+                    <h4><strong>Version 1.3</strong></h4>
+                    <ul>
+                        <li>- Overall UI improvements</li>
+                        <li>- New iCheck library instead of out-of-date uniform</li>
+                        <li>- Print Optimized</li>
+                        <li>- Invoice Page (<a href="../special_invoice.html">special_invoice.html</a>)</li>
+                    </ul>
+                    <h4><strong>Version 1.2</strong></h4>
+                    <ul>
+                        <li>- Fileupload fix</li>
+                        <li>- Second level menu overlap fix</li>
+                    </ul>
                     <h4><strong>Version 1.1</strong></h4>
                     <ul>
                         <li>- Generic Search Field</li>
@@ -148,7 +246,7 @@
 
 <!-- jquery and friends -->
 <script src="js/jquery.1.9.0.min.js"> </script>
-<script src="js/jquery-migrate-1.1.0.min.js"> </script>
+
 <script src="js/bootstrap-transition.js"></script>
 <script src="js/bootstrap-collapse.js"></script>
 

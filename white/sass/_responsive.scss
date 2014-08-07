@@ -1,0 +1,343 @@
+@media (max-width: 320px) {
+  .hidden-xs-portrait{
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+    display: block;
+  }
+
+  .sidebar-hidden .sidebar{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+
+  .page-header{
+    margin: 22px 2.3% 0;
+  }
+}
+
+@media (max-width: 1048px) {
+
+  @include sidebar-icons("");
+
+  .sidebar{
+    @include sidebar-settings;
+
+    .settings{
+      display: none;
+    }
+  }
+
+  .sidebar-on-right{
+    .sidebar{
+      right: 0;
+      margin: $sidebarTopMargin 1.6% 0 0;
+    }
+
+    .wrap{
+      margin-left: 0;
+      margin-right: 62px;
+    }
+
+    .logo{
+      left: auto;
+      right: 1.6%;
+      padding-right: 2px;
+      width: 40px;
+      top: 13px;
+    }
+  }
+  .sidebar-hidden{
+    .sidebar{
+      display: none;
+    }
+
+    .wrap{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .wrap{
+    overflow: hidden;
+  }
+}
+
+//this media quiery is out of order because Chrome thinks
+//max-width: 1048px is more important than max-width: 767px
+@media (max-width: 767px){
+
+  body{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page-title{
+    margin-top: 6px;
+  }
+
+  .sidebar,
+  .sidebar-on-right .sidebar,
+  .sidebar-on-right .sidebar.sidebar-icons,
+  .sidebar.sidebar-icons{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 90px 5%;
+    width: 90%;
+    padding: 0;
+
+    .side-nav{
+      margin: 10px 0;
+    }
+
+    .side-nav li{
+      a{
+        padding: 8px 25px;
+        text-align: left;
+        width: auto;
+        @include transition(width 0);
+
+        i[class*=fa]{
+          padding-top: 1px;
+        }
+      }
+
+      .name{
+        margin-left: 10px;
+        display: inline-block;
+      }
+
+    }
+
+    .side-nav > li.active > a{
+      border-right: 5px solid $white;
+      padding-right: 20px;
+    }
+
+    .panel-collapse.in li a{
+      width: auto;
+    }
+  }
+
+  .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nv-controlsWrap{
+    display: none;
+  }
+
+  .logo,
+  .sidebar-on-right .logo,
+  .sidebar-hidden .logo,
+  .logo.sidebar-icons,
+  .sidebar-on-right .logo.sidebar-icons,
+  .sidebar-hidden .logo.sidebar-icons,{
+    display: block;
+    left: 1.6%;
+    right: auto;
+    padding-right: 5px;
+    width: 40px;
+    top: 4px;
+  }
+
+  .modal-body{
+    max-height: 240px;
+  }
+
+  .widget-404-search, .widget-404{
+    width: 402px;
+  }
+
+  .widget-404{
+    padding: 0;
+    .body{
+      margin-top: 0;
+    }
+  }
+
+  .single-widget-container .widget-404-search{
+    margin-top: 0;
+
+    .search-field{
+      width: 285px;
+    }
+  }
+
+  .single-widget-container.error-page{
+    margin-top: -170px;
+  }
+
+  .navbar .nav > li > .dropdown-menu.messages,
+  .navbar .nav > li > .dropdown-menu.support{
+    margin-right: -68px;
+
+    &:after{
+      right: 85px;
+    }
+  }
+
+  .notifications{
+    position: absolute;
+    right: 0;
+    top: 46px;
+    margin: 0;
+
+    @include transition(top .3s ease);
+  }
+
+  .nav-collapse,
+  .nav-collapse.collapse {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .mailbox{
+    .folder-title{
+      float: none;
+    }
+    .form-search{
+      margin-top: $line-height-computed / 2;
+      label{
+        display: block;
+      }
+
+      .input-search{
+        width: 100%;
+        height: 30px;
+        @include box-sizing(border-box);
+        &:hover{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mailbox-content{
+    margin-top: 0;
+  }
+
+  .client-details{
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px){
+
+  .sidebar,
+  .sidebar-on-right .sidebar,
+  .sidebar-on-right .sidebar.sidebar-icons,
+  .sidebar.sidebar-icons{
+    margin: 90px 2.5641%;
+    width: 94.8718%;
+  }
+
+  .form-condensed .controls{
+    margin-left: 0;
+  }
+
+// Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .login-widget, .registration-widget{
+    width: 260px;
+  }
+
+  .widget-404-search, .widget-404{
+    width: 260px;
+  }
+
+  .widget-404{
+    h1{
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    h3{
+      font-size: $font-size-large;
+      line-height: $line-height-computed + 2;
+    }
+  }
+
+  .single-widget-container .widget-404-search{
+    margin-top: 0;
+
+    .search-field{
+      width: 143px;
+    }
+  }
+
+  .single-widget-container.error-page{
+    margin-top: -129px;
+  }
+
+  .navbar .nav > li > .dropdown-menu.messages{
+    margin-right: -112px;
+
+    &:after{
+      right: 129px;
+    }
+  }
+
+  .chat-footer .btn{
+    padding: 4px 0;
+  }
+
+  .page-header .navbar-form{
+    margin: 10px 0 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    @include transition(height .3s ease);
+  }
+
+  .page-header .search-query{
+    @include input-block-level();
+    &:focus{
+      width: 100%;
+    }
+  }
+
+  .visible-phone-landscape{
+    display: block !important;
+  }
+
+  .hidden-phone-landscape{
+    display: none !important;
+  }
+}

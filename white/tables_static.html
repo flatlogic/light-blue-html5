@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light Blue - Admin Template</title>
+    <link href="css/application.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-dark">
+<div class="logo">
+    <h4><a href="index.html">Light <strong>Blue</strong></a></h4>
+</div>
+<nav id="sidebar" class="sidebar nav-collapse collapse">
+    <ul id="side-nav" class="side-nav">
+        <li >
+            <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-edit"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="panel-collapse collapse">
+                <li><a href="form_account.html">Account</a></li>
+                <li><a href="form_article.html">Article</a></li>
+                <li><a href="form_elements.html">Elements</a></li>
+                <li><a href="form_validation.html">Validation</a></li>
+                <li><a href="form_wizard.html">Wizard</a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-bar-chart-o"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="panel-collapse collapse">
+                <li><a href="stat_statistics.html">Stats</a></li>
+                <li><a href="stat_charts.html">Charts</a></li>
+                <li><a href="stat_realtime.html">Realtime</a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
+            <ul id="ui-collapse" class="panel-collapse collapse">
+                <li><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_notifications.html">Notifications &nbsp;<span class="label label-danger">new</span></a></li>
+                <li><a href="ui_icons.html">Icons</a></li>
+                <li><a href="ui_tabs.html">Tabs</a></li>
+                <li><a href="ui_accordion.html">Accordion</a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#components-collapse"><i class="fa fa-bookmark-o"></i> <span class="name">Components</span></a>
+            <ul id="components-collapse" class="panel-collapse collapse">
+                <li><a href="component_calendar.html">Calendar</a></li>
+                <li><a href="component_maps.html" data-no-pjax>Maps</a></li>
+                <li><a href="component_gallery.html">Gallery</a></li>
+                <li><a href="component_fileupload.html">Fileupload</a></li>
+                <li><a href="component_bootstrap.html">Bootstrap &nbsp; <span class="label label-important">new</span></a></li>
+                <li><a href="component_list_groups.html">List Groups &nbsp; <span class="label label-important">new</span></a></li>
+            </ul>
+        </li>
+        <li class="active panel">
+            <a class="accordion-toggle" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-table"></i> <span class="name">Tables</span></a>
+            <ul id="tables-collapse" class="panel-collapse in">
+                <li class="active"><a href="tables_static.html">Static</a></li>
+                <li><a href="tables_dynamic.html">Dynamic</a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-bars"></i> <span class="name">Widgets &nbsp; <span class="label label-primary">new</span></span></a>
+            <ul id="grid-collapse" class="panel-collapse collapse">
+                <li><a href="grid.html">Basic</a></li>
+                <li><a href="grid_live.html">Live &nbsp; <span class="label label-important">hot</span></a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#special-collapse"><i class="fa fa-asterisk"></i> <span class="name">Special</span></a>
+            <ul id="special-collapse" class="panel-collapse collapse">
+                <li><a href="special_search.html">Search</a></li>
+                <li><a href="special_invoice.html">Invoice</a></li>
+                <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="special_404.html">404</a></li>
+                <li><a href="../landing.html" data-no-pjax>Landing</a></li>
+                <li><a href="../index.html" data-no-pjax>Transparent <i class="fa fa-external-link-square"></i></a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-code-fork"></i> <span class="name">Menu Levels</span></a>
+            <ul id="menu-levels-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 1.1</a></li>
+                <li><a href="#">Item 1.2</a></li>
+                <li class="panel">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse"
+                       data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
+                    <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
+                        <li><a href="#">Item 2.1</a></li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li class="panel">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse"
+                               data-parent="#sub-menu-2-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
+                            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                                <li><a href="#">Item 3.1</a></li>
+                                <li><a href="#">Item 3.2</a></li>
+                                <li><a href="#">Item 3.3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="visible-xs">
+            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
+        </li>
+    </ul>
+    <div id="sidebar-settings" class="settings">
+        <button type="button"
+                data-value="icons"
+                class="btn-icons btn btn-inverse btn-sm">Icons</button>
+        <button type="button"
+                data-value="auto"
+                class="btn-auto btn btn-inverse btn-sm">Auto</button>
+    </div>
+</nav>
+<div class="wrap">
+    <header class="page-header">
+        <div class="navbar">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="visible-phone-landscape">
+                        <a href="#" id="search-toggle">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" title="Messages" id="messages"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            <i class="fa fa-comments"></i>
+                        </a>
+                        <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                            <li role="presentation">
+                                <a href="#" class="message">
+                                    <img src="img/1.jpg" alt="">
+                                    <div class="details">
+                                        <div class="sender">Jane Hew</div>
+                                        <div class="text">
+                                            Hey, John! How is it going? ...
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="message">
+                                    <img src="img/2.jpg" alt="">
+                                    <div class="details">
+                                        <div class="sender">Alies Rumiancaŭ</div>
+                                        <div class="text">
+                                            I'll definitely buy this template
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="message">
+                                    <img src="img/3.jpg" alt="">
+                                    <div class="details">
+                                        <div class="sender">Michał Rumiancaŭ</div>
+                                        <div class="text">
+                                            Is it really Lore ipsum? Lore ...
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="text-align-center see-all">
+                                    See all messages <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" title="8 support tickets"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            <i class="fa fa-group"></i>
+                            <span class="count">8</span>
+                        </a>
+                        <ul id="support-menu" class="dropdown-menu support" role="menu">
+                            <li role="presentation">
+                                <a href="#" class="support-ticket">
+                                    <div class="picture">
+                                        <span class="label label-important"><i class="fa fa-bell-o"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        Check out this awesome ticket
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="support-ticket">
+                                    <div class="picture">
+                                        <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        "What is the best way to get ...
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="support-ticket">
+                                    <div class="picture">
+                                        <span class="label label-success"><i class="fa fa-tag"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        This is just a simple notification
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="support-ticket">
+                                    <div class="picture">
+                                        <span class="label label-info"><i class="fa fa-info-circle"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        12 new orders has arrived today
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="support-ticket">
+                                    <div class="picture">
+                                        <span class="label label-important"><i class="fa fa-plus"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        One more thing that just happened
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="text-align-center see-all">
+                                    See all tickets <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="hidden-xs">
+                        <a href="#" id="settings"
+                           title="Settings"
+                           data-toggle="popover"
+                           data-placement="bottom">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs dropdown">
+                        <a href="#" title="Account" id="account"
+                           class="dropdown-toggle"
+                           data-toggle="dropdown">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <ul id="account-menu" class="dropdown-menu account" role="menu">
+                            <li role="presentation" class="account-picture">
+                                <img src="img/2.jpg" alt="">
+                                Philip Daineka
+                            </li>
+                            <li role="presentation">
+                                <a href="form_account.html" class="link">
+                                    <i class="fa fa-user"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="component_calendar.html" class="link">
+                                    <i class="fa fa-calendar"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#" class="link">
+                                    <i class="fa fa-inbox"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="#"
+                           class="btn-navbar"
+                           data-toggle="collapse"
+                           data-target=".sidebar"
+                           title="">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+                <form id="search-form" class="navbar-form pull-right" role="search">
+                    <input type="search" class="search-query" placeholder="Search...">
+                </form>
+        </div>
+    </header>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="page-title">Static Tables <small>Different variations </small></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-list-ol"></i>
+                            Varius content
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table table-striped table-images">
+                            <thead>
+                            <tr>
+                                <th class="hidden-xs-portrait">#</th>
+                                <th>Picture</th>
+                                <th>Description</th>
+                                <th class="hidden-xs-portrait">Info</th>
+                                <th class="hidden-xs">Date</th>
+                                <th class="hidden-xs">Size</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="hidden-xs-portrait">1</td>
+                                <td>
+                                    <img src="img/jpeg/1.jpg" alt="">
+                                </td>
+                                <td>
+                                    Palo Alto
+                                </td>
+                                <td class="hidden-xs-portrait">
+                                    <p>
+                                        <small>
+                                            <strong>Type:</strong>
+                                            &nbsp; JPEG
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small>
+                                            <strong>Dimensions:</strong>
+                                            &nbsp; 200x150
+                                        </small>
+                                    </p>
+                                </td>
+                                <td class="hidden-xs">
+                                    September 14, 2012
+                                </td>
+                                <td class="hidden-xs">
+                                   45.6 KB
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        Show
+                                    </button>
+                                    <button class="btn btn-sm btn-warning" data-toggle="button">
+                                        Mark
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs-portrait">2</td>
+                                <td>
+                                    <img src="img/jpeg/2.jpg" alt="">
+                                </td>
+                                <td>
+                                    The Sky
+                                </td>
+                                <td class="hidden-xs-portrait">
+                                    <p>
+                                        <small>
+                                            <strong>Type:</strong>
+                                            &nbsp; PSD
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small>
+                                            <strong>Dimensions:</strong>
+                                            &nbsp; 2400x1455
+                                        </small>
+                                    </p>
+                                </td>
+                                <td class="hidden-xs">
+                                    November 14, 2012
+                                </td>
+                                <td class="hidden-xs">
+                                    15.3 MB
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        Show
+                                    </button>
+                                    <button class="btn btn-sm btn-warning" data-toggle="button">
+                                        Mark
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs-portrait">3</td>
+                                <td>
+                                    <img src="img/jpeg/3.jpg" alt="">
+                                </td>
+                                <td>
+                                    Down the road
+                                </td>
+                                <td class="hidden-xs-portrait">
+                                    <p>
+                                        <small>
+                                            <strong>Type:</strong>
+                                            &nbsp; JPEG
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small>
+                                            <strong>Dimensions:</strong>
+                                            &nbsp; 200x150
+                                        </small>
+                                    </p>
+                                </td>
+                                <td class="hidden-xs">
+                                    September 14, 2012
+                                </td>
+                                <td class="hidden-xs">
+                                    49.0 KB
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        Show
+                                    </button>
+                                    <button class="btn btn-sm btn-warning" data-toggle="button">
+                                        Mark
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs-portrait">4</td>
+                                <td>
+                                    <img src="img/jpeg/4.jpg" alt="">
+                                </td>
+                                <td>
+                                    The Edge
+                                </td>
+                                <td class="hidden-xs-portrait">
+                                    <p>
+                                        <small>
+                                            <strong>Type:</strong>
+                                            &nbsp; PNG
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small>
+                                            <strong>Dimensions:</strong>
+                                            &nbsp; 210x160
+                                        </small>
+                                    </p>
+                                </td>
+                                <td class="hidden-xs">
+                                    September 15, 2012
+                                </td>
+                                <td class="hidden-xs">
+                                    69.1 KB
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        Show
+                                    </button>
+                                    <button class="btn btn-sm btn-warning" data-toggle="button">
+                                        Mark
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs-portrait">5</td>
+                                <td>
+                                    <img src="img/jpeg/11.jpg" alt="">
+                                </td>
+                                <td>
+                                    Fortress
+                                </td>
+                                <td class="hidden-xs-portrait">
+                                    <p>
+                                        <small>
+                                            <strong>Type:</strong>
+                                            &nbsp; JPEG
+                                        </small>
+                                    </p>
+                                    <p>
+                                        <small>
+                                            <strong>Dimensions:</strong>
+                                            &nbsp; 1452x1320
+                                        </small>
+                                    </p>
+                                </td>
+                                <td class="hidden-xs">
+                                    October 1, 2012
+                                </td>
+                                <td class="hidden-xs">
+                                    2.3 MB
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        Show
+                                    </button>
+                                    <button class="btn btn-sm btn-warning" data-toggle="button">
+                                        Mark
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    <div class="clearfix">
+                        <div class="pull-right">
+                            <button class="btn btn-default btn-sm">
+                                Send to ...
+                            </button>
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-inverse dropdown-toggle" data-toggle="dropdown">
+                                    &nbsp; Clear &nbsp;
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Clear</a></li>
+                                    <li><a href="#">Move ...</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                            <ul class="pagination no-margin">
+                                <li class="disabled"><a href="#">Prev</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">Next</a></li>
+                            </ul>
+
+                    </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-table"></i>
+                            Simple table
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th class="hidden-xs-portrait">Last Name</th>
+                                <th>Email</th>
+                                <th class="hidden-xs-portrait">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td class="hidden-xs-portrait">Otto</td>
+                                <td><a href="#">ottoto@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td class="hidden-xs-portrait">Thornton</td>
+                                <td><a href="#">fat.thor@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-warning">Unconfirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td class="hidden-xs-portrait">the Bird</td>
+                                <td><a href="#">larry@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-important">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Peter</td>
+                                <td class="hidden-xs-portrait">Horadnia</td>
+                                <td><a href="#">peter@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-info">Active</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <blockquote class="blockquote-sm">
+                            No distraction. Perfect. Just add <code>.table</code> class.
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-list-alt"></i>
+                            Stripped one
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th class="hidden-xs-portrait">Last Name</th>
+                                <th>Email</th>
+                                <th class="hidden-xs-portrait">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td class="hidden-xs-portrait">Otto</td>
+                                <td><a href="#">ottoto@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td class="hidden-xs-portrait">Thornton</td>
+                                <td><a href="#">fat.thor@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-important">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td class="hidden-xs-portrait">the Bird</td>
+                                <td><a href="#">larry@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-warning">Unconfirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Peter</td>
+                                <td class="hidden-xs-portrait">Horadnia</td>
+                                <td><a href="#">peter@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <blockquote class="blockquote-sm">
+                            Each row highlighted. You'll never lost. <code>.table-srtiped</code> it.
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-check"></i>
+                            Color the table
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table table-colored table-condensed">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th class="hidden-xs-portrait">Last Name</th>
+                                <th>Email</th>
+                                <th class="hidden-xs-portrait">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td class="hidden-xs-portrait">Otto</td>
+                                <td>ottoto@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-info">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td class="hidden-xs-portrait">Thornton</td>
+                                <td>fat.thor@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-warning">Unconfirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td class="hidden-xs-portrait">the Bird</td>
+                                <td>larry@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Peter</td>
+                                <td class="hidden-xs-portrait">Horadnia</td>
+                                <td>peter@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-important">Pending</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <blockquote class="blockquote-sm">
+                            Each row is unique. <code>.table-colored</code> is specially for it.
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-list-alt"></i>
+                            Condensed table
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table table-condensed ">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th class="hidden-xs-portrait">Last Name</th>
+                                <th>Email</th>
+                                <th class="hidden-xs-portrait">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td class="hidden-xs-portrait">Otto</td>
+                                <td><a href="#">ottoto@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td class="hidden-xs-portrait">Thornton</td>
+                                <td><a href="#">fat.thor@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-info">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td class="hidden-xs-portrait">the Bird</td>
+                                <td><a href="#">larry@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Peter</td>
+                                <td class="hidden-xs-portrait">Horadnia</td>
+                                <td><a href="#">peter@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-warning">Unconfirmed</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <blockquote class="blockquote-sm">
+                            Fits to any size. <code>.table-condensed</code> to decrease padding.
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-columns"></i>
+                            Bordered table
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th class="hidden-xs-portrait">Last Name</th>
+                                <th>Email</th>
+                                <th class="hidden-xs-portrait">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td rowspan="2">1</td>
+                                <td rowspan="2">Mark</td>
+                                <td rowspan="2" class="hidden-xs-portrait">Otto</td>
+                                <td>test@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-warning">Unconfirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>ototo@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-info">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td class="hidden-xs-portrait">Thornton</td>
+                                <td>jacob@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td colspan="2">Larry the Bird</td>
+                                <td class="hidden-xs-portrait">larry@example.com</td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-important">Pending</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <blockquote class="blockquote-sm">
+                            Merge similar. Just ad <code>.table-bordered</code> class.
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            <i class="fa fa-hand-o-up"></i>
+                            On hover
+                        </h4>
+                    </header>
+                    <div class="body">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th class="hidden-xs-portrait">Last Name</th>
+                                <th>Email</th>
+                                <th class="hidden-xs-portrait">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td class="hidden-xs-portrait">Otto</td>
+                                <td><a href="#">ottoto@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-important">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td class="hidden-xs-portrait">Thornton</td>
+                                <td><a href="#">fat.thor@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-warning">Unconfirmed</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td class="hidden-xs-portrait">the Bird</td>
+                                <td><a href="#">larry@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-success">New</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Peter</td>
+                                <td class="hidden-xs-portrait">Horadnia</td>
+                                <td><a href="#">peter@example.com</a></td>
+                                <td class="hidden-xs-portrait"><span class="badge badge-info">Active</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <blockquote class="blockquote-sm">
+                            Trace only what's really important. <code>.table-hover</code> is made for it.
+                        </blockquote>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="loader-wrap hiding hide">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
+
+
+<!-- jquery plugins -->
+<script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>
+<script src="lib/parsley/parsley.js"> </script>
+<script src="lib/icheck.js/jquery.icheck.js"></script>
+<script src="lib/select2.js"></script>
+
+<!--backbone and friends -->
+<script src="lib/backbone/underscore-min.js"></script>
+
+<!-- bootstrap default plugins -->
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/collapse.js"></script>
+<script src="lib/bootstrap/alert.js"></script>
+<script src="lib/bootstrap/tooltip.js"></script>
+<script src="lib/bootstrap/popover.js"></script>
+<script src="lib/bootstrap/button.js"></script>
+<script src="lib/bootstrap/dropdown.js"></script>
+<script src="lib/bootstrap/modal.js"></script>
+<script src="lib/bootstrap/tab.js"> </script>
+
+<!-- basic application js-->
+<script src="js/app.js"></script>
+<script src="js/settings.js"></script>
+
+
+<script type="text/template" id="settings-template">
+    <div class="setting clearfix">
+        <div>Background</div>
+        <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% dark = background == 'dark'; light = background == 'light';%>
+            <button type="button" data-value="dark" class="btn btn-sm btn-inverse <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-inverse <%= light? 'active' : '' %>">Light</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Sidebar on the</div>
+        <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% onRight = sidebar == 'right'%>
+            <button type="button" data-value="left" class="btn btn-sm btn-inverse <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-inverse <%= onRight? 'active' : '' %>">Right</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Sidebar</div>
+        <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+            <% display = displaySidebar%>
+            <button type="button" data-value="true" class="btn btn-sm btn-inverse <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-inverse <%= display? '' : 'active' %>">Hide</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>Transparent</div>
+        <div>
+            <a href="../" class="btn btn-sm btn-inverse">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="sidebar-settings-template">
+        <% auto = sidebarState == 'auto'%>
+        <% if (auto) {%>
+            <button type="button"
+                    data-value="icons"
+                    class="btn-icons btn btn-inverse btn-sm">Icons</button>
+    <button type="button"
+            data-value="auto"
+            class="btn-auto btn btn-inverse btn-sm">Auto</button>
+        <%} else {%>
+            <button type="button"
+                    data-value="auto"
+                    class="btn btn-inverse btn-sm">Auto</button>
+        <% } %>
+</script>
+
+
+
+</body>

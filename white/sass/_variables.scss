@@ -1,0 +1,320 @@
+//Define Theme colors first
+
+$lime:                  #8CBF26 !default;
+$red:                   #e5603b !default;
+$redDark:               #d04f4f !default;
+$blue:                  #618fb0 !default;
+$green:                 #56bc76 !default;
+$orange:                #eac85e !default;
+$pink:                  #E671B8 !default;
+$purple:                #A700AE !default;
+$brown:                 #A05000 !default;
+$teal:                  #4ab0ce !default;
+$gray:                  #666 !default;
+$gray-dark:              #555 !default;
+$gray-light:             lighten(#000, 60%) !default;   // #999
+$backgroundGray:        #333 !default;
+$lightGray:             #f8f8f8 !default;
+$shadowGray:            rgba(#676767, .4) !default;
+$white:                 #ffffff !default;
+
+// Scaffolding
+// -------------------------
+
+$text-color:            $gray !default;
+
+//$colors: $lime, $red, $redDark, $blue, $green, $orange, $brown, $teal;
+$colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $redDark;
+//$color_names: lime, red, dark-red, blue, green, orange, brown, teal;
+$color_names: red, orange, lime, green, teal, blue, brown, dark-red;
+
+$widget-shadow: 0 -1px 1px $shadowGray, 0 1px 1px $shadowGray;
+$widget-border-radius: 1px;
+$widget-background: white;
+$box-margin-bottom: 30px;
+$wrapMargin: 185px;
+$sidebarTopMargin: 80px;
+$widget-padding-vertical: 10px;
+$widget-padding-horizontal: 12px;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
+
+$boldTextColor: $text-color;
+$textLightGray: lighten($text-color, 10%) !default;
+$smallsColor: $textLightGray;
+$dropzoneColor: #eee;
+$transparentTextColor: rgba(white, .8);
+$background-addition: whitesmoke;
+$sidebarActiveColor: $background-addition;
+$sidebarSubMenuActiveColor: darken($sidebarActiveColor, 10%);
+$transparentBackground: rgba(white, .4);
+
+$box-shadow-header: 0 0 2px rgba(0,0,0,.3);
+$text-shadow-header: 0 0 3px rgba(0,0,0,.3);
+
+/////////////////////////////////////////////////
+//              Font Awesome vars              //
+/////////////////////////////////////////////////
+
+$fa-font-path: "./fonts/font-awesome";
+
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px !default;
+
+/////////////////////////////////////////////////
+//           Override bootstrap vars           //
+/////////////////////////////////////////////////
+
+$bootstrap-sass-asset-helper: false;
+
+$icon-font-path: "fonts/glyphicons/" !default;
+
+
+// Brand colors
+// -------------------------
+
+$brand-primary:         $blue !default;
+$brand-success:         $green !default;
+$brand-warning:         $orange !default;
+$brand-danger:          $red !default;
+$brand-info:            $teal !default;
+
+
+// Typography
+// -------------------------
+
+$font-family-sans-serif:  "Open Sans", sans-serif !default;
+
+$font-size-base:          13px !default;
+$font-size-large:         $font-size-base * 1.25 !default; // 16px
+$font-size-larger:        $font-size-base + 1;    // 14px
+$font-size-small:         $font-size-base * 0.85 !default; // 12px
+$font-size-mini:          $font-size-base * 0.75 !default; // 11px
+$font-size-index:         $font-size-base * 0.7 !default; //10px
+
+$line-height-base:        20px !default;
+$line-height-computed:    $line-height-base !default; // ~20px
+
+$font-weight-base:        normal;
+
+// Components
+// -------------------------
+
+$padding-base-vertical:          4px !default;
+$padding-base-horizontal:        12px !default;
+
+$padding-large-vertical:         8px !default;
+$padding-large-horizontal:       18px !default;
+
+$padding-small-vertical:         2px !default;
+$padding-small-horizontal:       10px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.9 !default;
+
+$border-radius-base:             $widget-border-radius !default;
+$border-radius-large:            $border-radius-base !default;
+$border-radius-small:            0 !default;
+
+// Buttons
+// -------------------------
+
+$btn-font-weight:                $font-weight-base !default;
+
+$btn-default-color:              $white !default;
+$btn-default-bg:                 $gray !default;
+$btn-default-border:             rgba(0, 0, 0, 0.15) !default;
+
+$btn-inverse-color:              $gray-dark !default;
+$btn-inverse-bg:                 $lightGray !default;
+
+// Form states and alerts
+// -------------------------
+
+$state-warning-text:             $text-color !default;
+$state-warning-bg:               $orange !default;
+
+$state-danger-text:              $text-color !default;
+$state-danger-bg:                $red !default;
+
+$state-success-text:             $text-color !default;
+$state-success-bg:               $green !default;
+
+$state-info-text:                $text-color !default;
+$state-info-bg:                  $blue !default;
+
+// List group
+// -------------------------
+$list-group-bg:               $widget-background !default;
+$list-group-border:           transparent !default;
+$list-group-link-color:       $text-color;
+$list-group-hover-bg:         $background-addition;
+
+// Breadcrumbs
+// -------------------------
+$breadcrumb-bg:               transparent !default;
+$breadcrumb-color:            $text-color !default;
+
+// Jumbotron
+// -------------------------
+
+$jumbotron-color:                inherit !default;
+$jumbotron-bg:                   transparent !default;
+
+$jumbotron-heading-color:        inherit !default;
+
+// Carousel
+// ------------------------
+
+$carousel-text-shadow:                        none !default;
+
+$carousel-control-color:                      $gray-light !default;
+$carousel-control-width:                      6% !default;
+
+$carousel-indicator-active-bg:                $red !default;
+$carousel-indicator-border-color:             transparent !default;
+
+// Code (inline and block)
+// --------------------------------------------------
+
+$pre-bg:                      $background-addition !default;
+$pre-color:                   $text-color !default;
+$pre-border-color:            #eee !default;
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:          "../img/glyphicons-halflings.png" !default;
+$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
+
+@mixin bold-font{
+  //not actually bold since 1.3
+  //font-weight: bold;
+  font-weight: $font-weight-base;
+  color: $boldTextColor;
+}
+
+@mixin invalid-border {
+  border-color: $orange;
+  @include box-shadow(inset 0 1px 1px rgba($red,.075));
+}
+
+@mixin sidebar-icons($class){
+  .sidebar#{$class}{
+    width: auto;
+    margin: $sidebarTopMargin 0 0 1.6%;
+
+    h2{
+      display: none;
+    }
+
+    .panel-collapse li a{
+      width: 1px;
+      padding-left: 10px;
+      @include transition(width .3s);
+    }
+
+    .panel-collapse.open li a{
+      @media (min-width: 768px) {
+        width: 80px;
+      }
+    }
+  }
+
+  .side-nav#{$class}{
+
+    li{
+      a{
+        padding: 8px 16px;
+        text-align: center;
+
+        i[class*=fa]{
+          margin-right: 0;
+          float: none;
+        }
+      }
+
+      .name{
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .panel-collapse{
+        .panel-collapse{ //third level
+          .panel-collapse > li a{ //fourth level
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          > li a{
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+
+        a[data-toggle="collapse"]{
+          &:before{
+            display: none;
+          }
+          &:after{
+            font-family: FontAwesome;
+            content: "\f107";
+            display: block;
+            float: none;
+            margin-right: 0;
+            margin-left: 0;
+            @include transition(transform .3s ease-in-out)
+          }
+          &.collapsed:after{
+            @include transform(rotate(-90deg));
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-on-right .side-nav#{$class} > li.active > a,
+  .side-nav#{$class} > li.active > a{
+    border-left: none;
+    border-right: none;
+    padding-left: 16px;
+  }
+
+  .wrap#{$class}{
+    margin-left: 62px;
+  }
+
+  .sidebar-hidden{
+    .sidebar{
+      display: none;
+    }
+
+    .wrap{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .logo#{$class}{
+    left: 1.6%;
+    padding-left: 5px;
+    width: 40px;
+    top: 13px;
+  }
+}
+
+@mixin sidebar-settings{
+  .settings{
+    .btn-sm{
+      padding: 2px 8px;
+    }
+  }
+}
+
+// Block level inputs
+@mixin input-block-level {
+  display: block;
+  width: 100%;
+  min-height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
+}

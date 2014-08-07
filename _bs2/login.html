@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Light Blue - Admin Template</title>
+    <link href="css/application.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+    <script src="lib/jquery/jquery.1.9.0.min.js"> </script>
+    <script src="lib/backbone/underscore-min.js"></script>
+    <script src="js/settings.js"> </script>
+</head>
+<body>
+<div class="single-widget-container">
+    <section class="widget login-widget">
+        <header class="text-align-center">
+            <h4>Login to your account</h4>
+        </header>
+        <div class="body">
+            <form class="no-margin"
+                  action="index.html" method="get">
+                <fieldset>
+                    <div class="control-group no-margin">
+                        <label class="control-label" for="email" >Email</label>
+                        <div class="control">
+                            <div class="input-prepend input-padding-increased">
+                                <span class="add-on">
+                                    <i class="eicon-user icon-large"></i>
+                                </span>
+                                <input id="email" type="email"
+                                       placeholder="Your Email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="password" >Password</label>
+                        <div class="control">
+                            <div class="input-prepend input-padding-increased">
+                                <span class="add-on">
+                                    <i class="icon-lock icon-large"></i>
+                                </span>
+                                <input id="password" type="password"
+                                       placeholder="Your Password">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-block btn-large btn-danger">
+                        <span class="small-circle"><i class="icon-caret-right"></i></span>
+                        <small>Sign In</small>
+                    </button>
+                    <div class="forgot"><a class="forgot" href="#">Forgot Username or Password?</a></div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div class="facebook-login">
+                <a href="index.html"><span><i class="icon-facebook-sign icon-large"></i> LogIn with Facebook</span></a>
+            </div>
+        </footer>
+    </section>
+</div>
+</body>
+</html>

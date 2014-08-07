@@ -16,12 +16,12 @@
 <nav id="sidebar" class="sidebar nav-collapse collapse">
     <ul id="side-nav" class="side-nav">
         <li >
-            <a href="index.html"><i class="icon-home"></i> <span class="name">Dashboard</span></a>
+            <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#forms-collapse"><i class="icon-edit"></i> <span class="name">Forms</span></a>
-            <ul id="forms-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-edit"></i> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="panel-collapse collapse">
                 <li><a href="form_account.html">Account</a></li>
                 <li><a href="form_article.html">Article</a></li>
                 <li><a href="form_elements.html">Elements</a></li>
@@ -29,259 +29,297 @@
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="icon-bar-chart"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-bar-chart-o"></i> <span class="name">Statistics</span></a>
+            <ul id="stats-collapse" class="panel-collapse collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#ui-collapse"><i class="icon-magic"></i> <span class="name">User Interface</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
+            <ul id="ui-collapse" class="panel-collapse collapse">
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_notifications.html">Notifications &nbsp;<span class="label label-danger">new</span></a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
                 <li><a href="ui_tabs.html">Tabs</a></li>
                 <li><a href="ui_accordion.html">Accordion</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#components-collapse"><i class="icon-bookmark-empty"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#components-collapse"><i class="fa fa-bookmark-o"></i> <span class="name">Components</span></a>
+            <ul id="components-collapse" class="panel-collapse collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
-                <li><a href="component_maps.html">Maps</a></li>
+                <li><a href="component_maps.html" data-no-pjax>Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
                 <li><a href="component_fileupload.html">Fileupload</a></li>
+                <li><a href="component_bootstrap.html">Bootstrap &nbsp; <span class="label label-important">new</span></a></li>
+                <li><a href="component_list_groups.html">List Groups &nbsp; <span class="label label-important">new</span></a></li>
             </ul>
         </li>
-        <li class="accordion-group">
+        <li class="panel">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#tables-collapse"><i class="icon-table"></i> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
+               data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-table"></i> <span class="name">Tables</span></a>
+            <ul id="tables-collapse" class="panel-collapse collapse">
                 <li><a href="tables_static.html">Static</a></li>
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
         </li>
-        <li >
-            <a href="grid.html"><i class="icon-reorder"></i> <span class="name">Grid</span></a>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-bars"></i> <span class="name">Widgets &nbsp; <span class="label label-info">new</span></span></a>
+            <ul id="grid-collapse" class="panel-collapse collapse">
+                <li><a href="grid.html">Basic</a></li>
+                <li><a href="grid_live.html">Live &nbsp; <span class="label label-important">hot</span></a></li>
+            </ul>
         </li>
-        <li class="active accordion-group">
+        <li class="active panel">
             <a class="accordion-toggle" data-toggle="collapse"
-               data-parent="#side-nav" href="#special-collapse"><i class="icon-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse in">
+               data-parent="#side-nav" href="#special-collapse"><i class="fa fa-asterisk"></i> <span class="name">Special</span></a>
+            <ul id="special-collapse" class="panel-collapse in">
                 <li><a href="special_search.html">Search</a></li>
                 <li class="active"><a href="special_invoice.html">Invoice</a></li>
                 <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="special_404.html">404</a></li>
+                <li><a href="landing.html" data-no-pjax>Landing</a></li>
+                <li><a href="white/index.html" data-no-pjax>White <i class="fa fa-external-link-square"></i></a></li>
             </ul>
         </li>
-        <li class="visible-phone">
-            <a href="login.html"><i class="icon-signout"></i> <span class="name">Sign Out</span></a>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-code-fork"></i> <span class="name">Menu Levels</span></a>
+            <ul id="menu-levels-collapse" class="panel-collapse collapse">
+                <li><a href="#">Item 1.1</a></li>
+                <li><a href="#">Item 1.2</a></li>
+                <li class="panel">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse"
+                       data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
+                    <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
+                        <li><a href="#">Item 2.1</a></li>
+                        <li><a href="#">Item 2.2</a></li>
+                        <li class="panel">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse"
+                               data-parent="#sub-menu-2-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
+                            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
+                                <li><a href="#">Item 3.1</a></li>
+                                <li><a href="#">Item 3.2</a></li>
+                                <li><a href="#">Item 3.3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="visible-xs">
+            <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
         </li>
     </ul>
     <div id="sidebar-settings" class="settings">
         <button type="button"
                 data-value="icons"
-                class="btn-icons btn btn-transparent btn-small">Icons</button>
+                class="btn-icons btn btn-transparent btn-sm">Icons</button>
         <button type="button"
                 data-value="auto"
-                class="btn-auto btn btn-transparent btn-small">Auto</button>
+                class="btn-auto btn btn-transparent btn-sm">Auto</button>
     </div>
 </nav>
 <div class="wrap">
 <header class="page-header">
     <div class="navbar">
-        <div class="navbar-inner">
-            <ul class="nav pull-right">
-                <li class="dropdown">
-                    <a href="#" title="Messages" id="messages"
-                       class="dropdown-toggle"
-                       data-toggle="dropdown">
-                        <i class="icon-comments"></i>
-                    </a>
-                    <ul id="messages-menu" class="dropdown-menu messages" role="menu">
-                        <li role="presentation">
-                            <a href="#" class="message">
-                                <img src="img/1.jpg" alt="">
-                                <div class="details">
-                                    <div class="sender">Jane Hew</div>
-                                    <div class="text">
-                                        Hey, John! How is it going? ...
-                                    </div>
+        <ul class="nav navbar-nav navbar-right pull-right">
+            <li class="visible-phone-landscape">
+                <a href="#" id="search-toggle">
+                    <i class="fa fa-search"></i>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" title="Messages" id="messages"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                    <i class="fa fa-comments"></i>
+                </a>
+                <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                    <li role="presentation">
+                        <a href="#" class="message">
+                            <img src="img/1.jpg" alt="">
+                            <div class="details">
+                                <div class="sender">Jane Hew</div>
+                                <div class="text">
+                                    Hey, John! How is it going? ...
                                 </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="message">
-                                <img src="img/2.jpg" alt="">
-                                <div class="details">
-                                    <div class="sender">Alies Rumiancaŭ</div>
-                                    <div class="text">
-                                        I'll definitely buy this template
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="message">
-                                <img src="img/3.jpg" alt="">
-                                <div class="details">
-                                    <div class="sender">Michał Rumiancaŭ</div>
-                                    <div class="text">
-                                        Is it really Lore ipsum? Lore ...
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="text-align-center see-all">
-                                See all messages <i class="icon-arrow-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" title="8 support tickets"
-                       class="dropdown-toggle"
-                       data-toggle="dropdown">
-                        <i class="icon-group"></i>
-                        <span class="count">8</span>
-                    </a>
-                    <ul id="support-menu" class="dropdown-menu support" role="menu">
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-important"><i class="icon-bell-alt"></i></span>
-                                </div>
-                                <div class="details">
-                                    Check out this awesome ticket
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-warning"><i class="icon-question-sign"></i></span>
-                                </div>
-                                <div class="details">
-                                    "What is the best way to get ...
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-success"><i class="icon-tag"></i></span>
-                                </div>
-                                <div class="details">
-                                    This is just a simple notification
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-info"><i class="icon-info-sign"></i></span>
-                                </div>
-                                <div class="details">
-                                    12 new orders has arrived today
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="support-ticket">
-                                <div class="picture">
-                                    <span class="label label-important"><i class="icon-plus"></i></span>
-                                </div>
-                                <div class="details">
-                                    One more thing that just happened
-                                </div>
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="text-align-center see-all">
-                                See all tickets <i class="icon-arrow-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="divider"></li>
-                <li class="hidden-phone">
-                    <a href="#" id="settings"
-                       data-toggle="popover"
-                       data-placement="bottom"
-                       title="">
-                        <i class="icon-cog"></i>
-                    </a>
-                </li>
-                <li class="hidden-phone dropdown">
-                    <a href="#" title="Account" id="account"
-                       class="dropdown-toggle"
-                       data-toggle="dropdown">
-                        <i class="icon-user"></i>
-                    </a>
-                    <ul id="account-menu" class="dropdown-menu account" role="menu">
-                        <li role="presentation" class="account-picture">
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="message">
                             <img src="img/2.jpg" alt="">
-                            Philip Daineka
-                        </li>
-                        <li role="presentation">
-                            <a href="form_account.html" class="link">
-                                <i class="icon-user"></i>
-                                Profile
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="component_calendar.html" class="link">
-                                <i class="icon-calendar"></i>
-                                Calendar
-                            </a>
-                        </li>
-                        <li role="presentation">
-                            <a href="#" class="link">
-                                <i class="icon-inbox"></i>
-                                Inbox
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="visible-phone">
-                    <a href="#"
-                       class="btn-navbar"
-                       data-toggle="collapse"
-                       data-target=".sidebar"
-                       title="">
-                        <i class="icon-reorder"></i>
-                    </a>
-                </li>
-                <li class="hidden-phone"><a href="login.html"><i class="icon-signout"></i></a></li>
-            </ul>
-            <form class="navbar-search pull-right">
-                <input type="search" class="search-query" placeholder="Search...">
-            </form>
-        </div>
+                            <div class="details">
+                                <div class="sender">Alies Rumiancaŭ</div>
+                                <div class="text">
+                                    I'll definitely buy this template
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="message">
+                            <img src="img/3.jpg" alt="">
+                            <div class="details">
+                                <div class="sender">Michał Rumiancaŭ</div>
+                                <div class="text">
+                                    Is it really Lore ipsum? Lore ...
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="text-align-center see-all">
+                            See all messages <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" title="8 support tickets"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                    <i class="fa fa-group"></i>
+                    <span class="count">8</span>
+                </a>
+                <ul id="support-menu" class="dropdown-menu support" role="menu">
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="fa fa-bell-o"></i></span>
+                            </div>
+                            <div class="details">
+                                Check out this awesome ticket
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
+                            </div>
+                            <div class="details">
+                                "What is the best way to get ...
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-success"><i class="fa fa-tag"></i></span>
+                            </div>
+                            <div class="details">
+                                This is just a simple notification
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-info"><i class="fa fa-info-circle"></i></span>
+                            </div>
+                            <div class="details">
+                                12 new orders has arrived today
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="support-ticket">
+                            <div class="picture">
+                                <span class="label label-important"><i class="fa fa-plus"></i></span>
+                            </div>
+                            <div class="details">
+                                One more thing that just happened
+                            </div>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="text-align-center see-all">
+                            See all tickets <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="divider"></li>
+            <li class="hidden-xs">
+                <a href="#" id="settings"
+                   title="Settings"
+                   data-toggle="popover"
+                   data-placement="bottom">
+                    <i class="fa fa-cog"></i>
+                </a>
+            </li>
+            <li class="hidden-xs dropdown">
+                <a href="#" title="Account" id="account"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown">
+                    <i class="fa fa-user"></i>
+                </a>
+                <ul id="account-menu" class="dropdown-menu account" role="menu">
+                    <li role="presentation" class="account-picture">
+                        <img src="img/2.jpg" alt="">
+                        Philip Daineka
+                    </li>
+                    <li role="presentation">
+                        <a href="form_account.html" class="link">
+                            <i class="fa fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="component_calendar.html" class="link">
+                            <i class="fa fa-calendar"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#" class="link">
+                            <i class="fa fa-inbox"></i>
+                            Inbox
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="visible-xs">
+                <a href="#"
+                   class="btn-navbar"
+                   data-toggle="collapse"
+                   data-target=".sidebar"
+                   title="">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </li>
+            <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+        </ul>
+        <form id="search-form" class="navbar-form pull-right" role="search">
+            <input type="search" class="search-query" placeholder="Search...">
+        </form>
     </div>
 </header>
-<div class="content container-fluid">
-    <div class="row-fluid hidden-print">
-        <div class="span12">
+<div class="content container">
+    <div class="row hidden-print">
+        <div class="col-md-12">
             <h2 class="page-title">Invoice <small>Print optimized page</small></h2>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span12">
+    <div class="row">
+        <div class="col-md-12">
             <section class="widget">
                 <div class="body no-margin">
-                    <div class="row-fluid print-non-responsive">
-                        <div class="span6">
+                    <div class="row">
+                        <div class="col-sm-6 col-print-6">
                             <img src="img/logo.png" alt="Logo" class="invoice-logo"/>
                         </div>
-                        <div class="span6">
+                        <div class="col-sm-6 col-print-6">
                             <div class="invoice-number text-align-right">
                                 #4346345 / 14 Aug 2013
                             </div>
@@ -292,8 +330,8 @@
                     </div>
                     <hr>
                     <section class="invoice-info well">
-                        <div class="row-fluid print-non-responsive">
-                            <div class="span6">
+                        <div class="row">
+                            <div class="col-sm-6 col-print-6">
                                 <h4 class="details-title">Company Information</h4>
                                 <h3 class="company-name">
                                     Wrapbootstrap LLC
@@ -307,7 +345,7 @@
                                     <abbr title="Work Fax">fax:</abbr> (012) 678-132-901
                                 </address>
                             </div>
-                            <div class="span6 text-align-right">
+                            <div class="col-sm-6 col-print-6 client-details">
                                 <h4 class="details-title">Client Information</h4>
                                 <h3 class="client-name">
                                     Veronica Niasvizhskaja
@@ -330,9 +368,9 @@
                         <tr>
                             <th>#</th>
                             <th>Item</th>
-                            <th class="hidden-phone">Description</th>
+                            <th class="hidden-xs">Description</th>
                             <th>Quantity</th>
-                            <th class="hidden-phone">Price per Unit</th>
+                            <th class="hidden-xs">Price per Unit</th>
                             <th>Total</th>
                         </tr>
                         </thead>
@@ -340,51 +378,52 @@
                         <tr>
                             <td>1</td>
                             <td>Brand-new 27' monitor</td>
-                            <td class="hidden-phone">2,560x1,440-pixel (WQHD) resolution supported!</td>
+                            <td class="hidden-xs">2,560x1,440-pixel (WQHD) resolution supported!</td>
                             <td>2</td>
-                            <td class="hidden-phone">700</td>
+                            <td class="hidden-xs">700</td>
                             <td>1,400.00</td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Domain: okendoken.com</td>
-                            <td class="hidden-phone">6-month registration</td>
+                            <td class="hidden-xs">6-month registration</td>
                             <td>1</td>
-                            <td class="hidden-phone">10.99</td>
+                            <td class="hidden-xs">10.99</td>
                             <td>21.88</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Atlas Shrugged</td>
-                            <td class="hidden-phone">Novel by Ayn Rand, first published in 1957 in the United States</td>
+                            <td class="hidden-xs">Novel by Ayn Rand, first published in 1957 in the United States</td>
                             <td>5</td>
-                            <td class="hidden-phone">35</td>
+                            <td class="hidden-xs">35</td>
                             <td>175.00</td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>New Song by Dr. Pre</td>
-                            <td class="hidden-phone">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
+                            <td class="hidden-xs">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
                             <td>1</td>
-                            <td class="hidden-phone">2</td>
+                            <td class="hidden-xs">2</td>
                             <td>2.00</td>
                         </tr>
                         </tbody>
                     </table>
-                    <div class="row-fluid print-non-responsive">
-                        <div class="span6">
-                            <blockquote>
+                    <div class="row">
+                        <div class="col-sm-6 col-print-6">
+                            <blockquote class="blockquote-sm">
                                 <strong>Note:</strong> Keep in mind, sometimes bad things happen. But it's just sometimes.
                             </blockquote>
                         </div>
-                        <div class="span6">
-                            <div class="row-fluid non-responsive text-align-right">
-                                <div class="span3 offset6">
+                        <div class="col-sm-6 col-print-6">
+                            <div class="row text-align-right">
+                                <div class="col-xs-6"></div> <!-- instead of offset -->
+                                <div class="col-xs-3">
                                     <p>Subtotal</p>
                                     <p>Tax(10%)</p>
                                     <p class="no-margin"><strong>Total</strong></p>
                                 </div>
-                                <div class="span3">
+                                <div class="col-xs-3">
                                     <p>1,598.88</p>
                                     <p>159.89</p>
                                     <p class="no-margin"><strong>1,758.77</strong></p>
@@ -394,12 +433,12 @@
                     </div>
                     <div class="invoice-actions text-align-right hidden-print">
                         <button id="print" class="btn btn-inverse">
-                            <i class="icon-print"></i>
+                            <i class="fa fa-print"></i>
                             &nbsp;&nbsp;
                             Print
                         </button>
                         <button class="btn btn-danger">
-                            <i class="icon-arrow-right"></i>
+                            <i class="fa fa-arrow-right"></i>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             Proceed with Payment
                         </button>
@@ -409,11 +448,15 @@
         </div>
     </div>
 </div>
+    <div class="loader-wrap hiding hide">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
 </div>
 
 <!-- jquery and friends -->
-<script src="lib/jquery/jquery.1.9.0.min.js"> </script>
-<script src="lib/jquery/jquery-migrate-1.1.0.min.js"> </script>
+<script src="lib/jquery/jquery-2.0.3.min.js"> </script>
+<script src="lib/jquery-pjax/jquery.pjax.js"></script>
+
 
 <!-- jquery plugins -->
 <script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>
@@ -425,15 +468,15 @@
 <script src="lib/backbone/underscore-min.js"></script>
 
 <!-- bootstrap default plugins -->
-<script src="js/bootstrap/bootstrap-transition.js"></script>
-<script src="js/bootstrap/bootstrap-collapse.js"></script>
-<script src="js/bootstrap/bootstrap-alert.js"></script>
-<script src="js/bootstrap/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap/bootstrap-popover.js"></script>
-<script src="js/bootstrap/bootstrap-button.js"></script>
-<script src="js/bootstrap/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap/bootstrap-modal.js"></script>
-<script src="js/bootstrap/bootstrap-tab.js"> </script>
+<script src="lib/bootstrap/transition.js"></script>
+<script src="lib/bootstrap/collapse.js"></script>
+<script src="lib/bootstrap/alert.js"></script>
+<script src="lib/bootstrap/tooltip.js"></script>
+<script src="lib/bootstrap/popover.js"></script>
+<script src="lib/bootstrap/button.js"></script>
+<script src="lib/bootstrap/dropdown.js"></script>
+<script src="lib/bootstrap/modal.js"></script>
+<script src="lib/bootstrap/tab.js"> </script>
 
 <!-- basic application js-->
 <script src="js/app.js"></script>
@@ -448,24 +491,30 @@
         <div>Background</div>
         <div id="background-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% dark = background == 'dark'; light = background == 'light';%>
-            <button type="button" data-value="dark" class="btn btn-small btn-transparent <%= dark? 'active' : '' %>">Dark</button>
-            <button type="button" data-value="light" class="btn btn-small btn-transparent <%= light? 'active' : '' %>">Light</button>
+            <button type="button" data-value="dark" class="btn btn-sm btn-transparent <%= dark? 'active' : '' %>">Dark</button>
+            <button type="button" data-value="light" class="btn btn-sm btn-transparent <%= light? 'active' : '' %>">Light</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar on the</div>
         <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% onRight = sidebar == 'right'%>
-            <button type="button" data-value="left" class="btn btn-small btn-transparent <%= onRight? '' : 'active' %>">Left</button>
-            <button type="button" data-value="right" class="btn btn-small btn-transparent <%= onRight? 'active' : '' %>">Right</button>
+            <button type="button" data-value="left" class="btn btn-sm btn-transparent <%= onRight? '' : 'active' %>">Left</button>
+            <button type="button" data-value="right" class="btn btn-sm btn-transparent <%= onRight? 'active' : '' %>">Right</button>
         </div>
     </div>
     <div class="setting clearfix">
         <div>Sidebar</div>
         <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
             <% display = displaySidebar%>
-            <button type="button" data-value="true" class="btn btn-small btn-transparent <%= display? 'active' : '' %>">Show</button>
-            <button type="button" data-value="false" class="btn btn-small btn-transparent <%= display? '' : 'active' %>">Hide</button>
+            <button type="button" data-value="true" class="btn btn-sm btn-transparent <%= display? 'active' : '' %>">Show</button>
+            <button type="button" data-value="false" class="btn btn-sm btn-transparent <%= display? '' : 'active' %>">Hide</button>
+        </div>
+    </div>
+    <div class="setting clearfix">
+        <div>White Version</div>
+        <div>
+            <a href="white/" class="btn btn-sm btn-transparent">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </script>
@@ -475,14 +524,14 @@
     <% if (auto) {%>
     <button type="button"
             data-value="icons"
-            class="btn-icons btn btn-transparent btn-small">Icons</button>
+            class="btn-icons btn btn-transparent btn-sm">Icons</button>
     <button type="button"
             data-value="auto"
-            class="btn-auto btn btn-transparent btn-small">Auto</button>
+            class="btn-auto btn btn-transparent btn-sm">Auto</button>
     <%} else {%>
     <button type="button"
             data-value="auto"
-            class="btn btn-transparent btn-small">Auto</button>
+            class="btn btn-transparent btn-sm">Auto</button>
     <% } %>
 </script>
 

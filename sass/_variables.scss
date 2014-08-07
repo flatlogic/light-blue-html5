@@ -1,5 +1,4 @@
-//Define our own and
-//override default bootstrap properties
+//Define Theme colors first
 
 $lime:                  #8CBF26 !default;
 $red:                   #e5603b !default;
@@ -12,139 +11,215 @@ $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
 $teal:                  #4ab0ce !default;
 $gray:                  #666 !default;
-$grayDark:              #555 !default;
+$gray-dark:              #555 !default;
+$gray-light:             lighten(#000, 60%) !default;   // #999
 $backgroundGray:        #333 !default;
 $lightGray:             #f8f8f8 !default;
 $shadowGray:            rgba(#676767, .4) !default;
-$linkRed:               #da3712 !default;
 $white:                 #ffffff !default;
-$lightBlue:             #eff5ef !default;
-$lightBrown:            #f5f2ee !default;
-$lightRed:              #f8f3f0 !default;
-$lightGreen:            #efffee !default;
-$lightOrange:           #fff8e4 !default;
+
+// Scaffolding
+// -------------------------
+
+$text-color:            $lightGray !default;
 
 //$colors: $lime, $red, $redDark, $blue, $green, $orange, $brown, $teal;
 $colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $redDark;
 //$color_names: lime, red, dark-red, blue, green, orange, brown, teal;
 $color_names: red, orange, lime, green, teal, blue, brown, dark-red;
 
-$light_colors: $lightBlue,$lightBrown, $lightGray;
-$light_color_names: blue, brown, gray;
-
-$baseFontSize:          13px !default;
-$baseFontWeight:        300;
-
-$fontSizeLarge:         $baseFontSize * 1.25; // ~16px
-$fontSizeLarger:        $baseFontSize + 1;    // 14px
-$fontSizeSmall:         $baseFontSize * 0.85; // ~11px
-$fontSizeMini:          $baseFontSize * 0.75; // ~11px
-$fontSizeIndex:         $baseFontSize * 0.7;
-
 $widget-shadow: 0 -1px 1px $shadowGray, 0 1px 1px $shadowGray;
 $widget-border-radius: 1px;
-$button-border-radius: 1px;
 $box-margin-bottom: 30px;
 $wrapMargin: 185px;
 $sidebarTopMargin: 80px;
-$widget-padding: 10px 12px;
+$widget-padding-vertical: 10px;
+$widget-padding-horizontal: 12px;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
-
-$textColor: $lightGray !default;
-$linkColor: saturate(lighten($blue, 25%), 50%);
-$boldTextColor: lighten($textColor, 3%);
-$textLightGray: darken($textColor, 15%) !default;
-$placeholderColor: #bbb;
-$smallsColor: darken($textColor, 16%);
+$boldTextColor: lighten($text-color, 3%);
+$textLightGray: darken($text-color, 15%) !default;
+$smallsColor: darken($text-color, 16%);
 $dropzoneColor: #eee;
-$popoverBackground: rgba($backgroundGray, .85);
-$popoverArrowColor: $popoverBackground;
 $transparentTextColor: rgba($backgroundGray, .5);
 $backgroundAddition: rgba($backgroundGray, .25);
 $sidebarActiveColor: $backgroundAddition;
 $sidebarSubMenuActiveColor: darken($sidebarActiveColor, 15%);
 $transparentBackground: rgba($backgroundGray, .4);
-$inputBackgroundColor: #fff;
-$paginationBackground: transparent;
-$paginationBorder: transparent;
-$paginationActiveBackground: $backgroundAddition;
 
-$sansFontFamily: "Open Sans", sans-serif;
+/////////////////////////////////////////////////
+//              Font Awesome vars              //
+/////////////////////////////////////////////////
 
-$btnBorder: #bbb !default;
-$inputBorder: #888;
+$fa-font-path: "./fonts/font-awesome";
 
-//bootstrap override
-//responsive
-$navbarCollapseWidth: 767px !default;
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px !default;
 
-//buttons
+/////////////////////////////////////////////////
+//           Override bootstrap vars           //
+/////////////////////////////////////////////////
 
-$baseBorderRadius:      $widget-border-radius !default;
-$borderRadiusLarge:     $widget-border-radius !default;
-$borderRadiusSmall:     0px !default;
+$bootstrap-sass-asset-helper: false;
+
+$icon-font-path: "fonts/glyphicons/" !default;
+
+
+// Brand colors
+// -------------------------
+
+$brand-primary:         $blue !default;
+$brand-success:         $green !default;
+$brand-warning:         $orange !default;
+$brand-danger:          $red !default;
+$brand-info:            $teal !default;
+
+// Links
+// -------------------------
+
+$link-color:            saturate(lighten($blue, 25%), 50%);
+
+// Typography
+// -------------------------
+
+$font-family-sans-serif:  "Open Sans", sans-serif !default;
+
+$font-size-base:          13px !default;
+$font-size-large:         $font-size-base * 1.25 !default; // 16px
+$font-size-larger:        $font-size-base + 1;    // 14px
+$font-size-small:         $font-size-base * 0.85 !default; // 12px
+$font-size-mini:          $font-size-base * 0.75 !default; // 11px
+$font-size-index:         $font-size-base * 0.7 !default; //10px
+
+$line-height-base:        20px !default;
+$line-height-computed:    $line-height-base !default; // ~20px
+
+$font-weight-base:        300;
+
+// Components
+// -------------------------
+
+$padding-base-vertical:          4px !default;
+$padding-base-horizontal:        12px !default;
+
+$padding-large-vertical:         8px !default;
+$padding-large-horizontal:       18px !default;
+
+$padding-small-vertical:         2px !default;
+$padding-small-horizontal:       10px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.9 !default;
+
+$border-radius-base:             $widget-border-radius !default;
+$border-radius-large:            $border-radius-base !default;
+$border-radius-small:            0 !default;
+
 // Buttons
 // -------------------------
-$btnBackground:                     $gray !default;
-$btnBackgroundHighlight:            $gray !default;
 
-$btnPrimaryBackground:              $blue !default;
-$btnPrimaryBackgroundHighlight:     $blue !default;
+$btn-font-weight:                $font-weight-base !default;
 
-$btnInfoBackground:                 $teal !default;
-$btnInfoBackgroundHighlight:        $teal !default;
+$btn-default-color:              $white !default;
+$btn-default-bg:                 $gray !default;
+$btn-default-border:             rgba(0, 0, 0, 0.15) !default;
 
-$btnSuccessBackground:              $green !default;
-$btnSuccessBackgroundHighlight:     $green !default;
+$btn-inverse-color:              $gray-dark !default;
+$btn-inverse-bg:                 $lightGray !default;
 
-$btnWarningBackground:              $orange !default;
-$btnWarningBackgroundHighlight:     $orange !default;
+// Forms
+// -------------------------
 
-$btnDangerBackground:               $red !default;
-$btnDangerBackgroundHighlight:      $red !default;
+$input-border: #888;
 
-$btnInverseBackground:              darken($lightGray, 2%) !default;
-$btnInverseBackgroundHighlight:     darken($lightGray, 2%) !default;
+$legend-color:                   $white !default;
 
 // Dropdowns
 // -------------------------
-$dropdownBackground:            $white !default;
-$dropdownBorder:                rgba(0,0,0,.2) !default;
-$dropdownDividerTop:            #e5e5e5 !default;
-$dropdownDividerBottom:         $white !default;
 
-$dropdownLinkColor:             $gray !default;
-$dropdownLinkColorHover:        $white !default;
-$dropdownLinkColorActive:       $dropdownLinkColor !default;
+$dropdown-bg:                    $white !default;
+$dropdown-border:                rgba(0,0,0,.2) !default;
 
-$dropdownLinkBackgroundActive:  $blue !default;
-$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
+$dropdown-link-active-color:     #fff !default;
+$dropdown-link-active-bg:        $blue !default;
+
+$dropdown-link-color:            $gray !default;
+$dropdown-link-hover-color:      $white !default;
+$dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
 
 // Form states and alerts
 // -------------------------
-$warningText:             $textColor !default;
-$warningBackground:       $orange !default;
-$warningBorder:           darken(adjust-hue($warningBackground, -10), 3%) !default;
 
-$errorText:               $textColor !default;
-$errorBackground:         $red !default;
-$errorBorder:             darken(adjust-hue($errorBackground, -10), 3%) !default;
+$state-warning-text:             $text-color !default;
+$state-warning-bg:               $orange !default;
 
-$successText:             $textColor !default;
-$successBackground:       $green !default;
-$successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
+$state-danger-text:              $text-color !default;
+$state-danger-bg:                $red !default;
 
-$infoText:                $textColor !default;
-$infoBackground:          $blue !default;
-$infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
+$state-success-text:             $text-color !default;
+$state-success-bg:               $green !default;
+
+$state-info-text:                $text-color !default;
+$state-info-bg:                  $blue !default;
+
+// List group
+// -------------------------
+$list-group-bg:               $transparentBackground !default;
+$list-group-border:           transparent !default;
+$list-group-link-color:       $text-color;
+$list-group-hover-bg:         $backgroundAddition;
+// Jumbotron
+// -------------------------
+
+$jumbotron-color:                inherit !default;
+$jumbotron-bg:                   transparent !default;
+
+$jumbotron-heading-color:        inherit !default;
 
 //table colors
 
-$tableBorder:                       rgba($backgroundGray, .35) !default; // table and cell border
+$table-border-color:                       rgba($backgroundGray, .35) !default; // table and cell border
 
-// Component sizing
+// Popovers
+// -------------------------
+$popover-bg:                          rgba($backgroundGray, .85) !default;
+$popover-arrow-color:                 $popover-bg !default;
 
-$paddingLarge:          8px 18px !default; // 44px
+// Pagination
+// -------------------------
+
+$pagination-bg:                        transparent !default;
+$pagination-border:                    transparent !default;
+
+$pagination-hover-bg:                  $backgroundAddition !default;
+
+$pagination-active-bg:                 $backgroundAddition !default;
+$pagination-active-color:              $gray-light !default;
+
+// Breadcrumbs
+// -------------------------
+$breadcrumb-bg:               transparent !default;
+$breadcrumb-color:            $text-color !default;
+$breadcrumb-active-color:     darken($breadcrumb-color, 25%) !default;
+
+// Carousel
+// ------------------------
+
+$carousel-text-shadow:                        none !default;
+
+$carousel-control-width:                      6% !default;
+$carousel-control-opacity:                    1 !default;
+
+$carousel-indicator-active-bg:                $red !default;
+$carousel-indicator-border-color:             transparent !default;
+
+// Code (inline and block)
+// --------------------------------------------------
+
+$pre-bg:                      $backgroundAddition !default;
+$pre-color:                   $text-color !default;
+$pre-border-color:            $transparentBackground !default;
 
 // Sprite icons path
 // -------------------------
@@ -154,7 +229,7 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
 @mixin bold-font{
   //not actually bold since 1.3
   //font-weight: bold;
-  font-weight: $baseFontWeight;
+  font-weight: $font-weight-base;
   color: $boldTextColor;
 }
 
@@ -172,30 +247,69 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
       display: none;
     }
 
-    .accordion-body li a{
+    .panel-collapse li a{
       width: 1px;
       padding-left: 10px;
       @include transition(width .3s);
     }
 
-    .accordion-body.in li a{
-      width: 80px;
+    .panel-collapse.open li a{
+      @media (min-width: 768px) {
+        width: 80px;
+      }
     }
   }
 
-  .side-nav#{$class} li{
-    a{
-      padding: 8px 16px;
-      text-align: center;
+  .side-nav#{$class}{
 
-      i[class*=icon]{
-        margin-right: 0;
-        float: none;
+    li{
+      a{
+        padding: 8px 16px;
+        text-align: center;
+
+        i[class*=fa]{
+          margin-right: 0;
+          float: none;
+        }
+      }
+
+      .name{
+        display: none;
       }
     }
 
-    .name{
-      display: none;
+    @media (min-width: 768px) {
+      .panel-collapse{
+        .panel-collapse{ //third level
+          .panel-collapse > li a{ //fourth level
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+
+          > li a{
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+
+        a[data-toggle="collapse"]{
+          &:before{
+            display: none;
+          }
+          &:after{
+            font-family: FontAwesome;
+            content: "\f107";
+            display: block;
+            float: none;
+            margin-right: 0;
+            margin-left: 0;
+            @include transition(transform .3s ease-in-out)
+          }
+          &.collapsed:after{
+            @include transform(rotate(-90deg));
+          }
+        }
+      }
     }
   }
 
@@ -231,8 +345,16 @@ $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
 
 @mixin sidebar-settings{
   .settings{
-    .btn-small{
+    .btn-sm{
       padding: 2px 8px;
     }
   }
+}
+
+// Block level inputs
+@mixin input-block-level {
+  display: block;
+  width: 100%;
+  min-height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
 }
