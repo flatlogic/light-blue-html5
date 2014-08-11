@@ -610,51 +610,21 @@
     {{> loader }}
 </div>
 
-<!-- jquery and friends -->
-<script src="lib/jquery/jquery-2.0.3.min.js"> </script>
-<script src="lib/jquery-pjax/jquery.pjax.js"></script>
+{{> common_libs }}
 
+{{> common_js }}
 
-<!-- jquery plugins -->
-<script src="lib/icheck.js/jquery.icheck.js"></script>
-<script src="lib/sparkline/jquery.sparkline.js"></script>
-<script src="lib/jquery-ui-1.10.3.custom.js"></script>
-<script src="lib/jquery.slimscroll.js"></script>
+<!-- page specific libs -->
+<script src="lib/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+<script src="lib/jquery.sparkline/index.js"></script>
+<script src="lib/jquery-ui/ui/minified/f.js"></script>
+<script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="lib/d3/d3.min.js"></script>
+<script src="lib/nvd3/nv.d3.min.js"></script>
+<script src="lib/backbone/backbone.js"></script>
+<script src="lib/backbone.localStorage/backbone.localStorage-min.js"></script>
 
-<!-- d3, nvd3-->
-<script src="lib/nvd3/lib/d3.v2.js"></script>
-<script src="lib/nvd3/nv.d3.custom.js"></script>
-
-<!-- nvd3 models -->
-<script src="lib/nvd3/src/models/scatter.js"></script>
-<script src="lib/nvd3/src/models/axis.js"></script>
-<script src="lib/nvd3/src/models/legend.js"></script>
-<script src="lib/nvd3/src/models/multiBar.js"></script>
-<script src="lib/nvd3/src/models/multiBarChart.js"></script>
-<script src="lib/nvd3/src/models/line.js"></script>
-<script src="lib/nvd3/src/models/lineChart.js"></script>
-<script src="lib/nvd3/stream_layers.js"></script>
-
-<!--backbone and friends -->
-<script src="lib/backbone/underscore-min.js"></script>
-<script src="lib/backbone/backbone-min.js"></script>
-<script src="lib/backbone/backbone.localStorage-min.js"></script>
-
-<!-- bootstrap default plugins -->
-<script src="lib/bootstrap/transition.js"></script>
-<script src="lib/bootstrap/collapse.js"></script>
-<script src="lib/bootstrap/alert.js"></script>
-<script src="lib/bootstrap/tooltip.js"></script>
-<script src="lib/bootstrap/popover.js"></script>
-<script src="lib/bootstrap/button.js"></script>
-<script src="lib/bootstrap/tab.js"> </script>
-<script src="lib/bootstrap/dropdown.js"></script>
-
-<!-- basic application js-->
-<script src="js/app.js"></script>
-<script src="js/settings.js"></script>
-
-<!-- page specific -->
+<!-- page specific js -->
 <script src="js/index.js"></script>
 <script src="js/chat.js"></script>
 

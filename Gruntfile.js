@@ -15,6 +15,8 @@ module.exports = function(grunt) {
         //compiles handlebars template to html
         'compile-handlebars': {
             dynamicTemplateData: {
+                preHTML: '<!-- <%= pkg.name %> - v<%= pkg.version %> - ' +
+                    '<%= grunt.template.today("yyyy-mm-dd") %> -->\n',
                 template: '<%= config.srcFolder %>/*.hbs',
                 partials: '<%= config.srcFolder %>/partials/*.hbs',
                 templateData: {
@@ -50,6 +52,8 @@ module.exports = function(grunt) {
         clean: {
             images: ['<%= config.distFolder %>/img'],
             scripts: ['<%= config.distFolder %>/js'],
+            server: ['<%= config.distFolder %>/server'],
+            libs: ['<%= config.distFolder %>/lib'],
             all: ['<%= config.distFolder %>']
         },
 
@@ -72,12 +76,30 @@ module.exports = function(grunt) {
                 cwd: '<%= config.srcFolder %>/',
                 src: 'js/*.json',
                 dest: '<%= config.distFolder %>/'
+            },
+            server: {
+                expand: true,
+                cwd: '<%= config.srcFolder %>/',
+                src: 'server/**',
+                dest: '<%= config.distFolder %>/'
+            },
+            libs: {
+                expand: true,
+                cwd: 'bower_components',
+                src: '**/*.js',
+                dest: '<%= config.distFolder %>/lib/',
+
+                //copy js files from bower_packages only if they are not sources
+                filter: function(filepath){
+                    return filepath.indexOf('src') == -1;
+                }
             }
         },
 
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+                    '<%= grunt.template.today("yyyy-mm-dd") %> */'
             },
             build: {
                 files: [{
@@ -105,6 +127,14 @@ module.exports = function(grunt) {
             images: {
                 files: ['<%= config.srcFolder %>/img/**'],
                 tasks: ['clean:images', 'copy:images']
+            },
+            server: {
+                files: ['<%= config.srcFolder %>/server/**'],
+                tasks: ['clean:server', 'copy:server']
+            },
+            libs: {
+                files: ['bower_components/**'],
+                tasks: ['dist-libs']
             }
         }
     });
@@ -117,17 +147,24 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    //minify scripts for production environment
+    //minify scripts for production environment or just copy for development
     grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
 
     //assembles minified version first, renames it to application.min.css, assembles normal version
     grunt.registerTask('dist-compass', ['compass:dist', 'rename:css', 'compass:dev']);
 
-    //assemble html files and copy images
-    grunt.registerTask('dist-templates', ['compile-handlebars', 'clean:images', 'copy:images']);
+    //assemble html files
+    grunt.registerTask('dist-templates', ['compile-handlebars']);
+
+    //copy images & server blocks
+    grunt.registerTask('dist-misc', ['clean:images', 'copy:images', 'clean:server', 'copy:server']);
+
+    //copy libs
+    grunt.registerTask('dist-libs', ['clean:libs', 'copy:libs']);
+
     grunt.registerTask('dist-watch', ['watch']);
 
     // Default task(s)
-    grunt.registerTask('default', ['dist-templates', 'dist-compass', 'dist-scripts']);
+    grunt.registerTask('default', ['dist-templates', 'dist-compass', 'dist-scripts', 'dist-libs', 'dist-misc']);
 
 };
