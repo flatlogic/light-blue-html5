@@ -1,31 +1,133 @@
 module.exports = function(grunt) {
+    "use strict";
+    var ENV = grunt.option('env') || 'development'; // pass --env=production to compile minified css
 
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        config: {
+            target: grunt.option('target') || 'html-transparent', // pass --target=html-transparent. possible targets: html-transparent, html-white
+            srcFolder: '<%= config.target %>/src',
+            distFolder: '<%= config.target %>/dist'
+        },
+
+
+        //compiles handlebars template to html
         'compile-handlebars': {
             dynamicTemplateData: {
-                template: 'source.hbs',
+                template: '<%= config.srcFolder %>/*.hbs',
+                partials: '<%= config.srcFolder %>/partials/*.hbs',
                 templateData: {
-                    "salutation": "Hallo",
-                    "punctuation": ",",
-                    "location": "Welt"
                 },
-                output: 'result.html'
+                output: '<%= config.distFolder %>/*.html'
+            }
+        },
+
+        compass: {
+            dist: {
+                options: {
+                    sassDir: '<%= config.srcFolder %>/sass',
+                    cssDir: '<%= config.distFolder %>/css',
+                    environment: ENV
+                }
+            },
+            dev: {
+                options: {
+                    sassDir: '<%= config.srcFolder %>/sass',
+                    cssDir: '<%= config.distFolder %>/css'
+                }
+            }
+        },
+
+        //rename minified scss files
+        rename: {
+            css: {
+                src: '<%= config.distFolder %>/css/application.css',
+                dest: '<%= config.distFolder %>/css/application.min.css'
+            }
+        },
+
+        clean: {
+            images: ['<%= config.distFolder %>/img'],
+            scripts: ['<%= config.distFolder %>/js'],
+            all: ['<%= config.distFolder %>']
+        },
+
+        //copy images & other static assets
+        copy: {
+            images: {
+                expand: true,
+                cwd: '<%= config.srcFolder %>/',
+                src: 'img/**',
+                dest: '<%= config.distFolder %>/'
+            },
+            scripts: {
+                expand: true,
+                cwd: '<%= config.srcFolder %>/',
+                src: 'js/**',
+                dest: '<%= config.distFolder %>/'
+            },
+            json: {
+                expand: true,
+                cwd: '<%= config.srcFolder %>/',
+                src: 'js/*.json',
+                dest: '<%= config.distFolder %>/'
+            }
+        },
+
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.srcFolder %>',
+                    src: 'js/**/*.js',
+                    dest: '<%= config.distFolder %>/'
+                }]
             }
         },
 
         watch: {
-            files: ['source.hbs'],
-            tasks: ['compile-handlebars']
+            templates: {
+                files: ['<%= config.srcFolder %>/*.hbs', '<%= config.srcFolder %>/partials/*.hbs'],
+                tasks: ['compile-handlebars']
+            },
+            sass: {
+                files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
+                tasks: ['dist-compass']
+            },
+            scripts: {
+                files: ['<%= config.srcFolder %>/js/**.js', '<%= config.srcFolder %>/js/**.json'],
+                tasks: ['dist-scripts']
+            },
+            images: {
+                files: ['<%= config.srcFolder %>/img/**'],
+                tasks: ['clean:images', 'copy:images']
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-compile-handlebars');
+    grunt.loadNpmTasks('grunt-contrib-rename');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    // Default task(s).
-    grunt.registerTask('default', ['compile-handlebars']);
+    //minify scripts for production environment
+    grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
+
+    //assembles minified version first, renames it to application.min.css, assembles normal version
+    grunt.registerTask('dist-compass', ['compass:dist', 'rename:css', 'compass:dev']);
+
+    //assemble html files and copy images
+    grunt.registerTask('dist-templates', ['compile-handlebars', 'clean:images', 'copy:images']);
     grunt.registerTask('dist-watch', ['watch']);
+
+    // Default task(s)
+    grunt.registerTask('default', ['dist-templates', 'dist-compass', 'dist-scripts']);
 
 };
