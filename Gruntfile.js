@@ -28,6 +28,7 @@ module.exports = function(grunt) {
         compass: {
             dist: {
                 options: {
+                    config: '<%= config.target %>/config.rb',
                     sassDir: '<%= config.srcFolder %>/sass',
                     cssDir: '<%= config.distFolder %>/css',
                     environment: ENV
@@ -35,6 +36,7 @@ module.exports = function(grunt) {
             },
             dev: {
                 options: {
+                    config: '<%= config.target %>/config.rb',
                     sassDir: '<%= config.srcFolder %>/sass',
                     cssDir: '<%= config.distFolder %>/css'
                 }
@@ -93,6 +95,24 @@ module.exports = function(grunt) {
                 filter: function(filepath){
                     return filepath.indexOf('src') == -1;
                 }
+            },
+            fontGoogle: {
+                expand: true,
+                cwd: '<%= config.srcFolder %>/sass/',
+                src: 'fonts/**',
+                dest: '<%= config.distFolder %>/css/'
+            },
+            fontBootstrap: {
+                expand: true,
+                cwd: 'bower_components/bootstrap-sass-official/assets',
+                src: 'fonts/**',
+                dest: '<%= config.distFolder %>/css/'
+            },
+            fontAwesome: {
+                expand: true,
+                cwd: 'bower_components/font-awesome/fonts',
+                src: '**/*.*',
+                dest: '<%= config.distFolder %>/css/fonts/font-awesome'
             }
         },
 
@@ -151,7 +171,8 @@ module.exports = function(grunt) {
     grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
 
     //assembles minified version first, renames it to application.min.css, assembles normal version
-    grunt.registerTask('dist-compass', ['compass:dist', 'rename:css', 'compass:dev']);
+    grunt.registerTask('dist-compass', ['compass:dist', 'rename:css', 'compass:dev', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap']);
+    grunt.registerTask('dist-compass1', ['copy:fontBootstrap']);
 
     //assemble html files
     grunt.registerTask('dist-templates', ['compile-handlebars']);
@@ -165,6 +186,6 @@ module.exports = function(grunt) {
     grunt.registerTask('dist-watch', ['watch']);
 
     // Default task(s)
-    grunt.registerTask('default', ['dist-templates', 'dist-compass', 'dist-scripts', 'dist-libs', 'dist-misc']);
+    grunt.registerTask('default', ['clean:all', 'dist-templates', 'dist-compass', 'dist-scripts', 'dist-libs', 'dist-misc']);
 
 };

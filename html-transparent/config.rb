@@ -1,4 +1,10 @@
 # Require any additional compass plugins here.
+#button line-height fix
+#https://github.com/twbs/bootstrap-sass/issues/409
+Sass::Script::Number.precision = 10
+
+#allows to include(embed) css as if it was scss
+require 'sass-css-importer'
 
 # Set this to the root of your project when deployed:
 http_path = ""

@@ -1,16 +1,27 @@
-@import url(../lib/nvd3/src/nv.d3.css);
-@import url(./fontello/css/fontello.css);
-
-
 @import "font";
 
 @import "variables";
+@import "mixins";
 
 @import "compass";
-@import "bootstrap-original/bootstrap";
-@import "bootstrap-original/_mixins";
+
+
+// essential libs
+//
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../../../bower_components/font-awesome/scss/font-awesome";
+
+
 @import "bootstrap-override";
-@import "lib/font-awesome/font-awesome";
+
+//
+// END essential libs
+
+
+// custom libs. can be removed
+//
+
+@import "CSS:../../../bower_components/nvd3/nv.d3";
 @import "lib/_icheckbox";
 @import "lib/_datepicker";
 @import "lib/_select2";
@@ -29,6 +40,10 @@
 @import "lib/messenger-1.4.1/messenger-spinner";
 @import "lib/messenger-1.4.1/messenger-theme-air";
 @import "lib/bootstrap-slider";
+
+//
+// END custom libs
+
 
 @import "svg";
 
