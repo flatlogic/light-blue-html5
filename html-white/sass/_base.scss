@@ -3,7 +3,7 @@
 $i: 1;
 @each $color in $colors{
 
-  .#{nth($color_names, $i)}{
+  .#{nth($color-names, $i)}{
     background: #{$color} !important;
     color:  $white !important;
   }
@@ -13,7 +13,7 @@ $i: 1;
 $i: 1;
 @each $color in $colors{
 
-  .color-#{nth($color_names, $i)}{
+  .color-#{nth($color-names, $i)}{
     color: #{$color} !important;
   }
   $i: $i + 1;
@@ -61,7 +61,7 @@ input.parsley-error{
 .sidebar{
   @include border-radius($widget-border-radius);
 
-  background: $widget-background;
+  background: $widget-bg;
   position: absolute;
   width: 160px;
   padding: 10px 0;
@@ -69,7 +69,7 @@ input.parsley-error{
   color: $textLightGray;
   font-size: $font-size-base - 1;
   z-index: 1;
-  margin: $sidebarTopMargin 0 0 25px;
+  margin: $sidebar-mt 0 0 25px;
 
   @include box-shadow($widget-shadow);
 
@@ -193,7 +193,7 @@ input.parsley-error{
 .sidebar-on-right{
   .sidebar{
     right: 0;
-    margin: $sidebarTopMargin 25px 0 0;
+    margin: $sidebar-mt 25px 0 0;
 
     &.sidebar-icons{
       margin-right: 1.6%;
@@ -210,7 +210,7 @@ input.parsley-error{
 
   .wrap{
     margin-left: 0;
-    margin-right: $wrapMargin;
+    margin-right: $wrap-margin;
 
     &.sidebar-icons{
       margin-right: 62px;
@@ -253,7 +253,7 @@ input.parsley-error{
 
 /*main content*/
 .wrap{
-  margin-left: $wrapMargin;
+  margin-left: $wrap-margin;
 }
 
 /*content except of header*/
@@ -282,8 +282,8 @@ input.parsley-error{
   padding: 5px;
   text-align: center;
   @include box-shadow($widget-shadow);
-  margin-bottom: $box-margin-bottom;
-  background: $widget-background;
+  margin-bottom: $widget-mb;
+  background: $widget-bg;
 
   .description{
     font-weight: normal;
@@ -311,8 +311,8 @@ input.parsley-error{
   @include box-shadow($widget-shadow);
   padding: $widget-padding;
   color: $text-color;
-  background: $widget-background;
-  margin-bottom: $box-margin-bottom;
+  background: $widget-bg;
+  margin-bottom: $widget-mb;
   position: relative;
 
 
@@ -709,7 +709,7 @@ input.parsley-error{
       right: 2px;
       font-size: $font-size-index;
       font-weight: normal;
-      background:  rgba($backgroundGray, .55);
+      background:  rgba($widget-bg, .55);
       color: rgba(white, 0.9);
       line-height: 1em;
       padding: 2px 4px;
@@ -1229,9 +1229,9 @@ input.parsley-error{
 
   &.active{
     color: $white;
-    background: rgba($backgroundGray, .55);
+    background: rgba($widget-bg, .55);
     &:hover{
-      background: rgba($backgroundGray, .55);
+      background: rgba($widget-bg, .55);
     }
   }
 
@@ -1451,7 +1451,7 @@ input, textarea{
   padding: 0;
 
   .body{
-    background: $widget-background;
+    background: $widget-bg;
     margin-top: 0;
     padding: $widget-padding;
     @include border-radius(0 0 $border-radius-base $border-radius-base);
@@ -1473,7 +1473,7 @@ input, textarea{
     margin-bottom: 0;
     & > a{
       border-color: transparent;
-      background: $widget-background;
+      background: $widget-bg;
       &:hover{
         color: $text-color;
       }
@@ -1481,10 +1481,10 @@ input, textarea{
   }
 
   .nav > li:not(.active) > a{
-    background: $widget-background;
+    background: $widget-bg;
     border-bottom: none;
     &:hover{
-      background: darken($widget-background, 10%);
+      background: darken($widget-bg, 10%);
       border-color: transparent;
     }
   }
@@ -1875,7 +1875,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     cursor: pointer;
     padding-left: 10px;
 
-    border-left-color: $lightGray;
+    border-left-color: $white-dark;
     @include transition(border-left-color .2s);
   }
 
@@ -2149,14 +2149,14 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .widget-placeholder{
-  background:  rgba($backgroundGray, .2);
+  background:  rgba($widget-bg, .2);
   @include box-shadow(none);
   border: 1px dashed rgba(white, .7);
-  margin: -1px -1px ($box-margin-bottom - 1px) -1px;
+  margin: -1px -1px ($widget-mb - 1px) -1px;
 }
 
 .list-group-item-placeholder{
-  background:  rgba($backgroundGray, .2);
+  background:  rgba($widget-bg, .2);
   @include box-shadow(none !important);
   border: 1px dashed rgba(white, .7);
   margin: -1px;
@@ -2272,9 +2272,9 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   text-align: center;
 
   @media (min-width: 1049px) {
-    margin-left: $wrapMargin;
+    margin-left: $wrap-margin;
     .sidebar-on-right &{
-      margin-right: $wrapMargin;
+      margin-right: $wrap-margin;
       margin-left: 0;
     }
 

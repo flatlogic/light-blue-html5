@@ -3,7 +3,7 @@
 $i: 1;
 @each $color in $colors{
 
-  .#{nth($color_names, $i)}{
+  .#{nth($color-names, $i)}{
     background: #{$color} !important;
     color:  $white !important;
   }
@@ -22,7 +22,7 @@ $i: 1;
 $i: 1;
 @each $color in $colors{
 
-  .color-#{nth($color_names, $i)}{
+  .color-#{nth($color-names, $i)}{
     color: #{$color} !important;
   }
   $i: $i + 1;
@@ -81,7 +81,7 @@ input.parsley-error{
   color: $textLightGray;
   font-size: $baseFontSize - 1;
   z-index: 1;
-  margin: $sidebarTopMargin 0 0 25px;
+  margin: $sidebar-mt 0 0 25px;
 
   .settings{
     margin-top: 10px;
@@ -161,7 +161,7 @@ input.parsley-error{
 .sidebar-on-right{
   .sidebar{
     right: 0;
-    margin: $sidebarTopMargin 25px 0 0;
+    margin: $sidebar-mt 25px 0 0;
 
     &.sidebar-icons{
       margin-right: 1.6%;
@@ -178,7 +178,7 @@ input.parsley-error{
 
   .wrap{
     margin-left: 0;
-    margin-right: $wrapMargin;
+    margin-right: $wrap-margin;
 
     &.sidebar-icons{
       margin-right: 62px;
@@ -221,7 +221,7 @@ input.parsley-error{
 
 /*main content*/
 .wrap{
-  margin-left: $wrapMargin;
+  margin-left: $wrap-margin;
 }
 
 /*content except for header*/
@@ -242,7 +242,7 @@ input.parsley-error{
   padding: 5px;
   text-align: center;
   @include box-shadow($widget-shadow);
-  margin-bottom: $box-margin-bottom;
+  margin-bottom: $widget-mb;
   background: $transparentBackground;
 
   .description{
@@ -275,7 +275,7 @@ input.parsley-error{
   padding: $widget-padding;
   color: $textColor;
   background: $transparentBackground;
-  margin-bottom: $box-margin-bottom;
+  margin-bottom: $widget-mb;
   position: relative;
 
   &.normal{
@@ -580,7 +580,7 @@ input.parsley-error{
       right: 2px;
       font-size: $fontSizeIndex;
       font-weight: normal;
-      background:  rgba($backgroundGray, .55);
+      background:  rgba($widget-bg, .55);
       color: rgba(white, 0.9);
       line-height: 1em;
       padding: 2px 4px;
@@ -1118,7 +1118,7 @@ input.parsley-error{
 
   &.active{
     color: $white;
-    background: rgba($backgroundGray, .75);
+    background: rgba($widget-bg, .75);
   }
 
   .caret{
@@ -1345,7 +1345,7 @@ input.input-padding-increased{
     background: $transparentBackground;
     border-bottom: none;
     &:hover{
-      background: rgba(darken($backgroundGray, 10%), .4);
+      background: rgba(darken($widget-bg, 10%), .4);
       border-color: transparent;
     }
   }
@@ -1443,10 +1443,10 @@ input.input-padding-increased{
 // Inverse
 .progress-inverse .bar, .progress .bar-inverse {
   color: $grayDark;
-  @include gradient-vertical($lightGray, $lightGray);
+  @include gradient-vertical($white-dark, $white-dark);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .bar-warning {
-  @include gradient-striped($lightGray);
+  @include gradient-striped($white-dark);
 }
 
 /***********************************/
@@ -1781,7 +1781,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     cursor: pointer;
     padding-left: 10px;
 
-    border-left-color: $lightGray;
+    border-left-color: $white-dark;
     @include transition(border-left-color .2s);
   }
 

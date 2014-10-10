@@ -1,0 +1,52 @@
+/**
+ * override custom libs styles. This files is not required for core sing functionality and may be removed
+ */
+
+
+
+/**
+ * nvd3
+ */
+.nvtooltip {
+  padding: $padding-small-vertical $padding-small-horizontal;
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+  text-align: center;
+
+  p{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+svg text {
+  font: $font-weight-base $font-size-small $font-family-base;
+  fill: $text-color;
+}
+
+svg .title {
+  font: $font-weight-bold $font-size-base $font-family-base;
+}
+
+.nvd3.nv-noData {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
+.nvd3 .nv-axis path.domain {
+  stroke-opacity: 0;
+}
+
+.nv-controlsWrap{
+  @include translate(-40px, -50px);
+
+  .nv-legend-symbol{
+    fill: #666 !important;
+    stroke: #666 !important;
+  }
+}
+
+.nvd3 .nv-axis line{
+  stroke: #000;
+  stroke-opacity: .1;
+}

@@ -4,11 +4,12 @@
 
 $libs-folder: '../../../bower_components' !default;
 
-//Define Theme colors first
+// Colors
+// ------------------------
 
 $lime:                  #8CBF26 !default;
 $red:                   #e5603b !default;
-$redDark:               #d04f4f !default;
+$red-dark:              #d04f4f !default;
 $blue:                  #618fb0 !default;
 $green:                 #56bc76 !default;
 $orange:                #eac85e !default;
@@ -16,29 +17,65 @@ $pink:                  #E671B8 !default;
 $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
 $teal:                  #4ab0ce !default;
-$gray:                  #666 !default;
-$gray-dark:              #555 !default;
-$gray-light:             lighten(#000, 60%) !default;   // #999
-$backgroundGray:        #333 !default;
-$lightGray:             #f8f8f8 !default;
-$shadowGray:            rgba(#676767, .4) !default;
 $white:                 #ffffff !default;
+
+$colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $red-dark;
+$color-names: red, orange, lime, green, teal, blue, brown, red-dark;
+
+$white-dark:            #f8f8f8 !default;
+$shadowGray:            rgba(#676767, .4) !default;
+
+//copy from BS
+$gray-darker:           lighten(#000, 13.5%) !default; // #222
+$gray-dark:             #555 !default;
+$gray:                  #666;
+$gray-light:            lighten(#000, 60%) !default;   // #999
+$gray-lighter:          lighten(#000, 93.5%) !default; // #eee
+$gray-semi-light:       #777;
+$gray-semi-lighter:     #ddd;
+
+$brand-primary:         $blue !default;
+$brand-success:         $green !default;
+$brand-warning:         $orange !default;
+$brand-danger:          $red !default;
+$brand-info:            $teal !default;
+
+// Typography
+// -------------------------
+$text-color: $white-dark !default;
+
+$font-family-sans-serif:  "Open Sans", sans-serif !default;
+
+$font-size-base:          13px !default;
+$font-size-large:         $font-size-base * 1.25 !default;
+$font-size-larger:        $font-size-base + 1;
+$font-size-small:         12px !default;
+$font-size-mini:          $font-size-base * 0.75 !default;
+$font-size-index:         $font-size-base * 0.7 !default;
+
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-thin: 300 !default;
+$font-weight-base: $font-weight-thin !default;
+
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    20px;
+
+// Layout
+// -------------------------
+
+$wrap-margin: 185px;
+$sidebar-mt: 80px;
+
 
 // Scaffolding
 // -------------------------
 
-$text-color:            $lightGray !default;
+$widget-shadow:    0 -1px 1px $shadowGray, 0 1px 1px $shadowGray;
+$widget-bg:        #333 !default;
+$widget-mb:        30px;
 
-//$colors: $lime, $red, $redDark, $blue, $green, $orange, $brown, $teal;
-$colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $redDark;
-//$color_names: lime, red, dark-red, blue, green, orange, brown, teal;
-$color_names: red, orange, lime, green, teal, blue, brown, dark-red;
-
-$widget-shadow: 0 -1px 1px $shadowGray, 0 1px 1px $shadowGray;
-$widget-border-radius: 1px;
-$box-margin-bottom: 30px;
-$wrapMargin: 185px;
-$sidebarTopMargin: 80px;
 $widget-padding-vertical: 10px;
 $widget-padding-horizontal: 12px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
@@ -47,21 +84,17 @@ $boldTextColor: lighten($text-color, 3%);
 $textLightGray: darken($text-color, 15%) !default;
 $smallsColor: darken($text-color, 16%);
 $dropzoneColor: #eee;
-$transparentTextColor: rgba($backgroundGray, .5);
-$backgroundAddition: rgba($backgroundGray, .25);
+$transparentTextColor: rgba($widget-bg, .5);
+$backgroundAddition: rgba($widget-bg, .25);
 $sidebarActiveColor: $backgroundAddition;
 $sidebarSubMenuActiveColor: darken($sidebarActiveColor, 15%);
-$transparentBackground: rgba($backgroundGray, .4);
+$transparentBackground: rgba($widget-bg, .4);
 
 /////////////////////////////////////////////////
 //              Font Awesome vars              //
 /////////////////////////////////////////////////
 
 $fa-font-path: "./fonts/font-awesome";
-
-// Horizontal forms & lists
-// -------------------------
-$horizontalComponentOffset:       180px !default;
 
 /////////////////////////////////////////////////
 //           Override bootstrap vars           //
@@ -71,37 +104,10 @@ $bootstrap-sass-asset-helper: false;
 
 $icon-font-path: "fonts/bootstrap/" !default;
 
-
-// Brand colors
-// -------------------------
-
-$brand-primary:         $blue !default;
-$brand-success:         $green !default;
-$brand-warning:         $orange !default;
-$brand-danger:          $red !default;
-$brand-info:            $teal !default;
-
 // Links
 // -------------------------
 
 $link-color:            saturate(lighten($blue, 25%), 50%);
-
-// Typography
-// -------------------------
-
-$font-family-sans-serif:  "Open Sans", sans-serif !default;
-
-$font-size-base:          13px !default;
-$font-size-large:         $font-size-base * 1.25 !default; // 16px
-$font-size-larger:        $font-size-base + 1;    // 14px
-$font-size-small:         $font-size-base * 0.85 !default; // 12px
-$font-size-mini:          $font-size-base * 0.75 !default; // 11px
-$font-size-index:         $font-size-base * 0.7 !default; //10px
-
-$line-height-base:        20px !default;
-$line-height-computed:    $line-height-base !default; // ~20px
-
-$font-weight-base:        300;
 
 // Components
 // -------------------------
@@ -118,8 +124,8 @@ $padding-small-horizontal:       10px !default;
 $line-height-large:              1.33 !default;
 $line-height-small:              1.9 !default;
 
-$border-radius-base:             $widget-border-radius !default;
-$border-radius-large:            $border-radius-base !default;
+$border-radius-base:             1px !default;
+$border-radius-large:            1px !default;
 $border-radius-small:            0 !default;
 
 // Buttons
@@ -132,7 +138,7 @@ $btn-default-bg:                 $gray !default;
 $btn-default-border:             rgba(0, 0, 0, 0.15) !default;
 
 $btn-inverse-color:              $gray-dark !default;
-$btn-inverse-bg:                 $lightGray !default;
+$btn-inverse-bg: $white-dark !default;
 
 // Forms
 // -------------------------
@@ -185,11 +191,11 @@ $jumbotron-heading-color:        inherit !default;
 
 //table colors
 
-$table-border-color:                       rgba($backgroundGray, .35) !default; // table and cell border
+$table-border-color:                       rgba($widget-bg, .35) !default; // table and cell border
 
 // Popovers
 // -------------------------
-$popover-bg:                          rgba($backgroundGray, .85) !default;
+$popover-bg:                          rgba($widget-bg, .85) !default;
 $popover-arrow-color:                 $popover-bg !default;
 
 // Pagination

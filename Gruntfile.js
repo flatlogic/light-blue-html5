@@ -12,19 +12,27 @@ module.exports = function(grunt) {
         },
 
 
-        //compiles handlebars template to html
-        'compile-handlebars': {
-            dynamicTemplateData: {
-                preHTML: '<!-- <%= pkg.name %> - v<%= pkg.version %> - ' +
-                    '<%= grunt.template.today("yyyy-mm-dd") %> -->\n',
-                template: '<%= config.srcFolder %>/*.hbs',
-                partials: '<%= config.srcFolder %>/partials/*.hbs',
-                templateData: {
+        // compiles handlebars template to html
+        'handlebarslayouts': {
+            templates: {
+                files: {
+                    '<%= config.distFolder %>/*.html': '<%= config.srcFolder %>/*.hbs'
                 },
-                output: '<%= config.distFolder %>/*.html'
+                options: {
+                    partials: [
+                        '<%= config.srcFolder %>/partials/*.hbs'
+                    ],
+                    context: {
+                        productionEnv: ENV == 'production',
+                        title: '<%= pkg.description %>',
+                        preHtml: '<!-- <%= pkg.name %> - v<%= pkg.version %> - ' +
+                            '<%= grunt.template.today("yyyy-mm-dd") %> -->\n'
+                    }
+                }
             }
         },
 
+        // compile sass to css
         compass: {
             dist: {
                 options: {
@@ -33,17 +41,10 @@ module.exports = function(grunt) {
                     cssDir: '<%= config.distFolder %>/css',
                     environment: ENV
                 }
-            },
-            dev: {
-                options: {
-                    config: '<%= config.target %>/config.rb',
-                    sassDir: '<%= config.srcFolder %>/sass',
-                    cssDir: '<%= config.distFolder %>/css'
-                }
             }
         },
 
-        //rename minified scss files
+        // rename minified scss files
         rename: {
             css: {
                 src: '<%= config.distFolder %>/css/application.css',
@@ -59,7 +60,7 @@ module.exports = function(grunt) {
             all: ['<%= config.distFolder %>']
         },
 
-        //copy images & other static assets
+        // copy images & other static assets
         copy: {
             images: {
                 expand: true,
@@ -134,7 +135,7 @@ module.exports = function(grunt) {
         watch: {
             templates: {
                 files: ['<%= config.srcFolder %>/*.hbs', '<%= config.srcFolder %>/partials/*.hbs'],
-                tasks: ['compile-handlebars']
+                tasks: ['handlebarslayouts']
             },
             sass: {
                 files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
@@ -162,30 +163,33 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-compile-handlebars');
     grunt.loadNpmTasks('grunt-contrib-rename');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks("grunt-handlebars-layouts");
 
-    //minify scripts for production environment or just copy for development
+    // minify scripts for production environment or just copy for development
     grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
 
-    //assembles minified version first, renames it to application.min.css, assembles normal version
-    grunt.registerTask('dist-compass', ['compass:dist', 'rename:css', 'compass:dev', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap']);
-    grunt.registerTask('dist-compass1', ['copy:fontBootstrap']);
 
-    //assemble html files
-    grunt.registerTask('dist-templates', ['compile-handlebars']);
+    var distCompass = ['compass:dist', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
+    if (ENV == 'production') {
+        distCompass.push('rename:css');  //rename to application.min if env is production
+    }
+    grunt.registerTask('dist-compass', distCompass);
 
-    //copy images & server blocks
+    // assemble html files
+    grunt.registerTask('dist-templates', ['handlebarslayouts']);
+
+    // copy images & server blocks
     grunt.registerTask('dist-misc', ['clean:images', 'copy:images', 'clean:server', 'copy:server']);
 
-    //copy libs
+    // copy libs
     grunt.registerTask('dist-libs', ['clean:libs', 'copy:libs']);
 
     grunt.registerTask('dist-watch', ['watch']);
 
     // Default task(s)
-    grunt.registerTask('default', ['clean:all', 'dist-templates', 'dist-compass', 'dist-scripts', 'dist-libs', 'dist-misc']);
+    grunt.registerTask('default', ['clean:all', 'dist-compass', 'dist-templates', 'dist-scripts', 'dist-libs', 'dist-misc']);
 
 };

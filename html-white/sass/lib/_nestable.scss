@@ -48,7 +48,7 @@
   padding: 5px 10px;
   color: $text-color;
   text-decoration: none;
-  background: $widget-background;
+  background: $widget-bg;
   @include box-shadow($widget-shadow);
 
   @include box-sizing(border-box);
@@ -93,7 +93,7 @@
   margin: 5px 0;
   padding: 0;
   min-height: 30px;
-  background: rgba($backgroundGray, .2);
+  background: rgba($widget-bg, .2);
   border: 1px dashed rgba(white, .7);
   box-sizing: border-box;
   -moz-box-sizing: border-box;

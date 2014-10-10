@@ -3,7 +3,7 @@
 $i: 1;
 @each $color in $colors{
 
-  .#{nth($color_names, $i)}{
+  .#{nth($color-names, $i)}{
     background: #{$color} !important;
     color:  $white !important;
   }
@@ -13,7 +13,7 @@ $i: 1;
 $i: 1;
 @each $color in $colors{
 
-  .color-#{nth($color_names, $i)}{
+  .color-#{nth($color-names, $i)}{
     color: #{$color} !important;
   }
   $i: $i + 1;
@@ -73,7 +73,7 @@ input.parsley-error{
   color: $textLightGray;
   font-size: $font-size-base - 1;
   z-index: 1;
-  margin: $sidebarTopMargin 0 0 25px;
+  margin: $sidebar-mt 0 0 25px;
 
   .settings{
     margin-top: 10px;
@@ -192,7 +192,7 @@ input.parsley-error{
 .sidebar-on-right{
   .sidebar{
     right: 0;
-    margin: $sidebarTopMargin 25px 0 0;
+    margin: $sidebar-mt 25px 0 0;
 
     &.sidebar-icons{
       margin-right: 1.6%;
@@ -209,7 +209,7 @@ input.parsley-error{
 
   .wrap{
     margin-left: 0;
-    margin-right: $wrapMargin;
+    margin-right: $wrap-margin;
 
     &.sidebar-icons{
       margin-right: 62px;
@@ -252,7 +252,7 @@ input.parsley-error{
 
 /*main content*/
 .wrap{
-  margin-left: $wrapMargin;
+  margin-left: $wrap-margin;
 }
 
 /*content except of header*/
@@ -280,7 +280,7 @@ input.parsley-error{
   padding: 5px;
   text-align: center;
   @include box-shadow($widget-shadow);
-  margin-bottom: $box-margin-bottom;
+  margin-bottom: $widget-mb;
   background: $transparentBackground;
 
   .description{
@@ -314,7 +314,7 @@ input.parsley-error{
   padding: $widget-padding;
   color: $text-color;
   background: $transparentBackground;
-  margin-bottom: $box-margin-bottom;
+  margin-bottom: $widget-mb;
   position: relative;
 
 
@@ -710,7 +710,7 @@ input.parsley-error{
       right: 2px;
       font-size: $font-size-index;
       font-weight: normal;
-      background:  rgba($backgroundGray, .55);
+      background:  rgba($widget-bg, .55);
       color: rgba(white, 0.9);
       line-height: 1em;
       padding: 2px 4px;
@@ -1252,9 +1252,9 @@ input.parsley-error{
 
   &.active{
     color: $white;
-    background: rgba($backgroundGray, .55);
+    background: rgba($widget-bg, .55);
     &:hover{
-      background: rgba($backgroundGray, .55);
+      background: rgba($widget-bg, .55);
     }
   }
 
@@ -1522,7 +1522,7 @@ input, textarea{
     background: $transparentBackground;
     border-bottom: none;
     &:hover{
-      background: rgba(darken($backgroundGray, 10%), .4);
+      background: rgba(darken($widget-bg, 10%), .4);
       border-color: transparent;
     }
   }
@@ -1584,11 +1584,11 @@ input, textarea{
 // Inverse
 .progress-inverse .bar, .progress .progress-bar-inverse {
   color: $gray-dark;
-  background-color: $lightGray;
-  @include gradient-vertical($lightGray, $lightGray);
+  background-color: $white-dark;
+  @include gradient-vertical($white-dark, $white-dark);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .progress-bar-inverse {
-  @include gradient-striped($lightGray);
+  @include gradient-striped($white-dark);
 }
 
 /***********************************/
@@ -1941,7 +1941,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     cursor: pointer;
     padding-left: 10px;
 
-    border-left-color: $lightGray;
+    border-left-color: $white-dark;
     @include transition(border-left-color .2s);
   }
 
@@ -2417,13 +2417,13 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .widget-placeholder{
-  background:  rgba($backgroundGray, .2);
+  background:  rgba($widget-bg, .2);
   border: 1px dashed rgba(white, .6);
-  margin: -1px -1px ($box-margin-bottom - 1px) -1px;
+  margin: -1px -1px ($widget-mb - 1px) -1px;
 }
 
 .list-group-item-placeholder{
-  background:  rgba($backgroundGray, .2);
+  background:  rgba($widget-bg, .2);
   border: 1px dashed rgba(white, .6);
   margin: -1px;
 }
@@ -2538,9 +2538,9 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   text-align: center;
 
   @media (min-width: 1049px) {
-    margin-left: $wrapMargin;
+    margin-left: $wrap-margin;
     .sidebar-on-right &{
-      margin-right: $wrapMargin;
+      margin-right: $wrap-margin;
       margin-left: 0;
     }
 
@@ -2618,12 +2618,12 @@ ol.text-list{
   background-color: $backgroundAddition;
   position: relative; }
 .location-selector .bit {
-  background-color: rgba($backgroundGray, .4);
+  background-color: rgba($widget-bg, .4);
   @include transition(background-color .15s ease-in-out);
   cursor: pointer;
   position: absolute; }
 .location-selector .bit:hover {
-  background-color: rgba($backgroundGray, .6); }
+  background-color: rgba($widget-bg, .6); }
 .location-selector .bit.top, .location-selector .bit.bottom {
   height: 25%;
   width: 40%;
