@@ -26,7 +26,10 @@ module.exports = function(grunt) {
                         productionEnv: ENV == 'production',
                         title: '<%= pkg.description %>',
                         preHtml: '<!-- <%= pkg.name %> - v<%= pkg.version %> - ' +
-                            '<%= grunt.template.today("yyyy-mm-dd") %> -->\n'
+                            '<%= grunt.template.today("yyyy-mm-dd") %> -->\n',
+                        activeClass: function(val1, val2){
+                            return val1 == val2 ? 'active' : '';
+                        }
                     }
                 }
             }

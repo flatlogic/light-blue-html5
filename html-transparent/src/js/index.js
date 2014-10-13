@@ -2,6 +2,7 @@ $(function(){
     function pageLoad(){
         nv.addGraph(function() {
             var chart = nv.models.lineChart()
+                .useInteractiveGuideline(true)
                 .margin({top: 0, bottom: 25, left: 25, right: 0})
                 //.showLegend(false)
                 .color([

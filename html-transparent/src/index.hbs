@@ -1,5 +1,9 @@
 {{#extend "layout"}}
 
+    {{#replace "sidebar"}}
+        {{> sidebar this activeClass=activeClass active="index"}}
+    {{/replace}}
+
     {{#replace "content"}}
         <div class="row">
             <div class="col-md-12">
