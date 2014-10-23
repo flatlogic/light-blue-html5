@@ -27,8 +27,8 @@ module.exports = function(grunt) {
                         title: '<%= pkg.description %>',
                         preHtml: '<!-- <%= pkg.name %> - v<%= pkg.version %> - ' +
                             '<%= grunt.template.today("yyyy-mm-dd") %> -->\n',
-                        activeClass: function(val1, val2){
-                            return val1 == val2 ? 'active' : '';
+                        conditionClass: function(clazz, val1, val2){
+                            return val2.split(' ').indexOf(val1) == -1 ? '' : clazz;
                         }
                     }
                 }

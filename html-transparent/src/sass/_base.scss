@@ -1263,36 +1263,14 @@ input.parsley-error{
   }
 }
 
-.btn-inverse{
-  color: $btn-inverse-color;
-  border-bottom-color: rgba(0, 0, 0, .2);
-  background: $btn-inverse-bg;
-
-  &:hover,
-  &:focus{
-    color: $btn-inverse-color;
-    @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
-  }
-
-  &.active,
-  &.active:hover,
-  &.active:focus{
-    @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.08));
-    color: $btn-inverse-color;
-  }
-
-  &.disabled,
-  &[disabled] {
-    color: $btn-inverse-color;
-  }
-
+.btn-inverse {
+  @include button-variant($btn-inverse-color, $btn-inverse-bg, rgba(0, 0, 0, .2));
 }
 
 /* since 1.5 */
 .btn-white{
   background: none;
   border: 2px solid #ffffff;
-  border-radius: 2px;
 }
 
 /***********************************/
@@ -1339,7 +1317,7 @@ legend + .control-group {
 }
 
 
-input, textarea{
+.form-control{
  &.input-transparent{
    border: none;
    color: $text-color;
@@ -1348,6 +1326,12 @@ input, textarea{
 
    &:focus{
      color: $text-color;
+   }
+
+   &[disabled],
+   &[readonly],
+   fieldset[disabled] & {
+     background-color: lighten($transparentBackground, 10%);
    }
  }
 }
@@ -1376,14 +1360,10 @@ input, textarea{
 // ------------
 
 .form-actions {
-  padding: ($line-height-base - 1) 20px $line-height-base;
-  margin-top: $line-height-base;
+  padding: ($line-height-computed - 1) 20px $line-height-computed;
+  margin-top: $line-height-computed;
   background-color: $backgroundAddition;
   @include clearfix(); // Adding clearfix to allow for .pull-right button containers
-}
-
-.form-group [class*="col-"]{
-  padding: 0;
 }
 
 .form-wizard{

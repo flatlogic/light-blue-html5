@@ -86,55 +86,21 @@ textarea {
   font-weight: $font-weight-base;
 }
 
-legend{
-  line-height: $line-height-base * 2;
-}
-
 legend small{
   color: $smallsColor;
   font-size: $font-size-larger;
 }
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-  color: $gray-dark;
-  min-height: 30px;
-  padding-left: 6px;
-  padding-right: 6px;
 
-  background-color: $input-bg;
-  border: 1px solid $input-border;
-  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+.form-control{
+  border: none;
   @include transition(border linear .2s, box-shadow linear .2s);
   &:focus {
-    @include box-shadow(inset 0 1px 1px rgba($blue, 0.075));
-    border-color: $blue;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
     outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
   }
 
-  &.form-control, &[class*="col-"]{
-
-    &[type=search], &.search{
-      padding-left: 26px;
-    }
-  }
-
-  &[disabled]{
-    @extend .form-control[disabled];
+  &[type=search], &.search{
+    padding-left: 26px;
   }
 }
 
@@ -175,6 +141,10 @@ textarea,
   }
 }
 
+.help-block {
+  margin-top: 0;
+}
+
 .search-query, .navbar-form .search-query{
   @include border-radius($border-radius-base);
   line-height: $line-height-computed;
@@ -194,7 +164,7 @@ textarea,
 }
 
 .form-group{
-  margin-bottom: $line-height-base;
+  margin-bottom: $line-height-computed;
 }
 
 /***************************/
@@ -270,20 +240,28 @@ textarea,
   outline: none;
 }
 
-.btn {
-  border-color: #c5c5c5;
-  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
-}
-
 .btn-xs{
   font-size: $font-size-mini;
   line-height: $line-height-base;
   padding: 0 6px;
 }
 
+.btn-lg {
+  padding: ($padding-large-vertical + 1) ($padding-large-horizontal + 1);
+}
+
+.btn-sm {
+  padding: ($padding-small-vertical + 1) ($padding-small-horizontal + 1);
+}
+.btn-xs {
+  padding: ($padding-xs-vertical + 1) ($padding-xs-horizontal + 1);
+}
+
 .btn{
+  border: none;
   color: $white;
   text-shadow: none;
+  padding: ($padding-base-vertical + 1) ($padding-base-horizontal + 1);
 
   @include box-shadow(none);
 
@@ -305,19 +283,6 @@ textarea,
 
   .caret{
     border-top-color: #fff;
-  }
-}
-
-.btn-primary,
-.btn-warning,
-.btn-danger,
-.btn-success,
-.btn-info{
-  &.active{
-    color: rgba(white, .9);
-    &:hover{
-      color: rgba(white, .9);
-    }
   }
 }
 

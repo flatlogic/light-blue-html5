@@ -60,7 +60,7 @@ $font-weight-thin: 300 !default;
 $font-weight-base: $font-weight-thin !default;
 
 $line-height-base:        1.428571429 !default; // 20/14
-$line-height-computed:    20px;
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 // Layout
 // -------------------------
@@ -76,8 +76,8 @@ $widget-shadow:    0 -1px 1px $shadowGray, 0 1px 1px $shadowGray;
 $widget-bg:        #333 !default;
 $widget-mb:        30px;
 
-$widget-padding-vertical: 10px;
-$widget-padding-horizontal: 12px;
+$widget-padding-vertical: 12px;
+$widget-padding-horizontal: 17px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 $boldTextColor: lighten($text-color, 3%);
@@ -112,21 +112,19 @@ $link-color:            saturate(lighten($blue, 25%), 50%);
 // Components
 // -------------------------
 
-$padding-base-vertical:          4px !default;
+$padding-base-vertical:          5px !default;
 $padding-base-horizontal:        12px !default;
 
-$padding-large-vertical:         8px !default;
-$padding-large-horizontal:       18px !default;
+$padding-large-vertical:         9px !default;
+$padding-large-horizontal:       17px !default;
 
-$padding-small-vertical:         2px !default;
+$padding-small-vertical:         4px !default;
 $padding-small-horizontal:       10px !default;
 
 $line-height-large:              1.33 !default;
 $line-height-small:              1.9 !default;
 
-$border-radius-base:             1px !default;
-$border-radius-large:            1px !default;
-$border-radius-small:            0 !default;
+$border-radius-base:        3px !default;
 
 // Buttons
 // -------------------------
@@ -143,7 +141,14 @@ $btn-inverse-bg: $white-dark !default;
 // Forms
 // -------------------------
 
+$input-color: $gray-dark;
 $input-border: #888;
+
+// recalculate input heights
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
 
 $legend-color:                   $white !default;
 
