@@ -58,7 +58,7 @@ body{
   @include bold-font;
 
   small{
-    color: $smallsColor;
+    color: $text-muted;
     font-weight: $font-weight-base;
   }
 }
@@ -66,12 +66,12 @@ body{
 input[type=search], input.search {
   padding-left: 26px;
   background-color: $input-bg;
-  background:url(../img/search.png) 5px 5px no-repeat $input-bg;
+  background:url(../img/search.png) 5px 6px no-repeat $input-bg;
 
   &.input-transparent{
     border: none;
     color: $text-color;
-    background: url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
+    background: url(../img/search-white.png) 5px 5px no-repeat $bg-transparent;
     @include placeholder(rgba(#eee, .76));
   }
 }

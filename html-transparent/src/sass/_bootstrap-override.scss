@@ -19,7 +19,7 @@ hr {
 }
 
 blockquote{
-  border-left-color: $transparentBackground;
+  border-left-color: $bg-transparent;
 
   &.blockquote-sm{
     padding: 0 0 0 15px;
@@ -52,7 +52,6 @@ h2 small { font-size: $font-size-base * 1.25; } // ~18px
 h3 small { font-size: $font-size-base; }
 h4 small { font-size: $font-size-base; }
 
-.text-muted          { color: $textLightGray; }
 .text-primary        { color: $brand-primary; }
 .text-warning        { color: $brand-warning; }
 .text-danger         { color: $brand-danger; }
@@ -87,7 +86,7 @@ textarea {
 }
 
 legend small{
-  color: $smallsColor;
+  color: $text-muted;
   font-size: $font-size-larger;
 }
 
@@ -122,8 +121,12 @@ select:focus:invalid {
   }
 }
 
+.input-group-btn > .btn{
+  z-index: 2;
+}
+
 .input-group-addon {
-    background-color: $backgroundAddition;
+    background-color: $bg-addition;
     border: 1px solid transparent;
 }
 
@@ -171,7 +174,7 @@ textarea,
 /*      Input Groups       */
 /***************************/
 .input-group-addon {
-  color: $textLightGray;
+  color: $text-muted;
 }
 
 /***************************/
@@ -179,7 +182,7 @@ textarea,
 /***************************/
 
 .table .table{
-  background-color: $backgroundAddition;
+  background-color: $bg-addition;
 }
 
 .table-hover {
@@ -189,7 +192,7 @@ textarea,
     }
     tr:hover > td,
     tr:hover > th {
-      background-color: $backgroundAddition;
+      background-color: $bg-addition;
     }
   }
 }
@@ -198,7 +201,7 @@ textarea,
   tbody {
     > tr:nth-child(odd) > td,
     > tr:nth-child(odd) > th {
-      background-color: $backgroundAddition;
+      background-color: $bg-addition;
     }
   }
 }
@@ -228,7 +231,7 @@ textarea,
 /***************************/
 
 .well{
-  background-color: $backgroundAddition;
+  background-color: $bg-addition;
   border: none;
 }
 
@@ -240,28 +243,9 @@ textarea,
   outline: none;
 }
 
-.btn-xs{
-  font-size: $font-size-mini;
-  line-height: $line-height-base;
-  padding: 0 6px;
-}
-
-.btn-lg {
-  padding: ($padding-large-vertical + 1) ($padding-large-horizontal + 1);
-}
-
-.btn-sm {
-  padding: ($padding-small-vertical + 1) ($padding-small-horizontal + 1);
-}
-.btn-xs {
-  padding: ($padding-xs-vertical + 1) ($padding-xs-horizontal + 1);
-}
-
 .btn{
-  border: none;
   color: $white;
   text-shadow: none;
-  padding: ($padding-base-vertical + 1) ($padding-base-horizontal + 1);
 
   @include box-shadow(none);
 
@@ -457,7 +441,7 @@ textarea,
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus{
-  background-color: $backgroundAddition;
+  background-color: $bg-addition;
 }
 
 .nav-tabs > li > a {
@@ -503,7 +487,7 @@ textarea,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: $text-color;
-  background-color: $backgroundAddition;
+  background-color: $bg-addition;
   border-color: transparent;
 }
 
@@ -588,7 +572,7 @@ textarea,
   margin-top: 2px;
   margin-bottom: 2px;
   @include border-radius($border-radius-base);
-  background: $backgroundAddition;
+  background: $bg-addition;
 }
 
 // Active state
@@ -755,7 +739,7 @@ textarea,
 .thumbnail {
   border: none;
   @include box-shadow(none);
-  background: $backgroundAddition;
+  background: $bg-addition;
 }
 
 a.thumbnail:hover,
@@ -859,7 +843,7 @@ a.thumbnail:focus {
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
 
     .list-group-item:first-child{
-      border-top: 1px solid $backgroundAddition;
+      border-top: 1px solid $bg-addition;
     }
   }
 }
@@ -871,7 +855,7 @@ a.thumbnail:focus {
   .widget &{
     background: none;
     + .list-group-item{
-      border-top: 1px solid $backgroundAddition;
+      border-top: 1px solid $bg-addition;
     }
   }
 
@@ -913,19 +897,19 @@ a.thumbnail:focus {
 .panel-group {
   .panel-heading {
     + .panel-collapse .panel-body {
-      border-top: 1px solid $backgroundAddition;
+      border-top: 1px solid $bg-addition;
     }
   }
   .panel-footer {
     + .panel-collapse .panel-body {
-      border-bottom: 1px solid $backgroundAddition;
+      border-bottom: 1px solid $bg-addition;
     }
   }
 }
 
 .panel{
   border: none;
-  background-color: $backgroundAddition;
+  background-color: $bg-addition;
   @include box-shadow(none);
 
   $i: 1;
@@ -944,7 +928,7 @@ a.thumbnail:focus {
 }
 
 .panel-body{
-  border-top-color: $backgroundAddition;
+  border-top-color: $bg-addition;
 }
 
 /***************************/
@@ -979,6 +963,6 @@ a.thumbnail:focus {
     bottom: -10px;
   }
   li{
-    background-color: $transparentBackground;
+    background-color: $bg-transparent;
   }
 }

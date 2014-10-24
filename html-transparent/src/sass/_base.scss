@@ -65,12 +65,12 @@ input.parsley-error{
 .sidebar{
   @include border-radius($border-radius-base);
 
-  background: $transparentBackground;
+  background: $bg-transparent;
   position: absolute;
   width: 160px;
   padding: 10px 0;
   top: 0;
-  color: $textLightGray;
+  color: $text-muted;
   font-size: $font-size-small;
   z-index: 1;
   margin: $sidebar-mt 0 0 25px;
@@ -102,7 +102,7 @@ input.parsley-error{
     }
 
     a:hover, a:focus{
-      background: $sidebarActiveColor;
+      background: $sidebar-item-active-bg;
     }
 
     a{
@@ -114,18 +114,18 @@ input.parsley-error{
     }
 
     a.accordion-toggle:not(.collapsed) + .panel-collapse li.active a{
-      background: $sidebarSubMenuActiveColor;
+      background: $sidebar-item-sub-active-bg;
     }
 
     a.accordion-toggle:not(.collapsed) + .panel-collapse li a:hover{
-      background: $sidebarSubMenuActiveColor;
+      background: $sidebar-item-sub-active-bg;
     }
   }
 
   & > li.active > a{
     border-left: 4px solid $white;
     padding-left: 16px;
-    background: $sidebarActiveColor;
+    background: $sidebar-item-active-bg;
     color: $text-color;
   }
 
@@ -136,7 +136,7 @@ input.parsley-error{
       padding-left: 40px;
 
       &:hover, &:focus{
-        background: $sidebarActiveColor;
+        background: $sidebar-item-active-bg;
       }
 
       i[class*="fa"]{
@@ -204,7 +204,7 @@ input.parsley-error{
     border-right: 4px solid $white;
     padding-left: 20px;
     padding-right: 16px;
-    background: $sidebarActiveColor;
+    background: $sidebar-item-active-bg;
   }
 
   .wrap{
@@ -281,7 +281,7 @@ input.parsley-error{
   text-align: center;
   @include box-shadow($widget-shadow);
   margin-bottom: $widget-mb;
-  background: $transparentBackground;
+  background: $bg-transparent;
 
   .description{
     font-weight: normal;
@@ -313,7 +313,7 @@ input.parsley-error{
   //@include box-shadow($widget-shadow);
   padding: $widget-padding;
   color: $text-color;
-  background: $transparentBackground;
+  background: $bg-transparent;
   margin-bottom: $widget-mb;
   position: relative;
 
@@ -468,11 +468,11 @@ input.parsley-error{
 
   .control{
     @include box-sizing(content-box);
-    background: $backgroundAddition;
+    background: $bg-addition;
     text-align: center;
     font-weight: normal;
     padding: 3px 2%;
-    color: $boldTextColor;
+    color: $text-bold;
     width: 20.625%;
     cursor: pointer;
     @include user-select(none);
@@ -556,7 +556,7 @@ input.parsley-error{
 
   li{
     @include box-sizing(content-box);
-    border-top: 1px solid $backgroundAddition;
+    border-top: 1px solid $bg-addition;
     padding: 12px;
     margin: 0 -12px;
     cursor: pointer;
@@ -564,7 +564,7 @@ input.parsley-error{
     @include transition(background-color .2s ease-out);
 
     &:hover{
-      background: $backgroundAddition;
+      background: $bg-addition;
     }
 
     &:last-child{
@@ -618,7 +618,7 @@ input.parsley-error{
 
   .time{
     font-size: $font-size-small;
-    color: $textLightGray;
+    color: $text-muted;
   }
 
   .options{
@@ -668,7 +668,7 @@ input.parsley-error{
   .navbar .nav li.dropdown.active > .dropdown-toggle,
   .navbar .nav li.dropdown.open.active > .dropdown-toggle {
     background-color: transparent;
-    color: $transparentTextColor;
+    color: $text-transparent;
     &:hover, &:focus{
       color: $white;
     }
@@ -688,7 +688,7 @@ input.parsley-error{
     float: left;
 
     & > a{
-      color: $transparentTextColor;
+      color: $text-transparent;
       width: 40px;
       padding: 0;
       font-size: $font-size-base * 1.5;
@@ -723,7 +723,7 @@ input.parsley-error{
       width: 1px;
       margin: 0 20px;
       $experimental-support-for-svg: true;
-      @include background(linear-gradient(rgba($transparentTextColor, 0), $transparentTextColor, rgba($gray, 0)));
+      @include background(linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0)));
       $experimental-support-for-svg: false;
     }
   }
@@ -734,7 +734,7 @@ input.parsley-error{
     padding: 4px 14px;
     color: $text-color;
     border: none;
-    background:url(../img/search-white.png) 5px 5px no-repeat $transparentBackground;
+    background:url(../img/search-white.png) 5px 5px no-repeat $bg-transparent;
     padding-left: 26px;
     @include placeholder(rgba(#eee, .76));
     @include transition(width .2s);
@@ -800,7 +800,7 @@ input.parsley-error{
   margin: 11px 0 15px;
 
   small{
-    color: $textLightGray;
+    color: $text-muted;
   }
 }
 
@@ -809,7 +809,7 @@ input.parsley-error{
   @include transition(margin-top .2s ease);
 
   .alert{
-    background: $transparentBackground;
+    background: $bg-transparent;
     border: none;
     font-size: $font-size-small;
     margin-bottom: 0;
@@ -1144,7 +1144,7 @@ input.parsley-error{
     font-size: $font-size-small;
     line-height: 1.5em;
     text-align: center;
-    color: $textLightGray;
+    color: $text-muted;
   }
 }
 
@@ -1155,9 +1155,9 @@ input.parsley-error{
 .chat-message-body{
   margin-left: 63px;
   padding: 8px 10px;
-  background: $backgroundAddition;
+  background: $bg-addition;
   position: relative;
-  border-left: 2px solid $textLightGray;
+  border-left: 2px solid $text-muted;
 
   @include border-radius($border-radius-base);
 
@@ -1165,14 +1165,14 @@ input.parsley-error{
     margin-left: 0;
     margin-right: 63px;
     border-left: none;
-    border-right: 2px solid $boldTextColor;
+    border-right: 2px solid $text-bold;
 
     .arrow{
       left: auto;
       right: -7px;
 
       border-right: none;
-      border-left: 5px solid $boldTextColor;
+      border-left: 5px solid $text-bold;
     }
 
     .sender, .text{
@@ -1190,7 +1190,7 @@ input.parsley-error{
 
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid $boldTextColor;
+    border-right: 5px solid $text-bold;
   }
 }
 
@@ -1240,13 +1240,13 @@ input.parsley-error{
 /* Custom behavior. For overridden bootstrap btns see bootstrap-override */
 
 .btn-transparent{
-  background: $transparentBackground;
+  background: $bg-transparent;
   color: $white;
   text-shadow: none;
   @include box-shadow(none);
 
   &:hover{
-    background: $transparentTextColor;
+    background: $text-transparent;
     color: $white;
   }
 
@@ -1296,14 +1296,14 @@ legend + .control-group {
 
 .section{
   font-size: $font-size-larger;
-  color: $textLightGray;
+  color: $text-muted;
   vertical-align: middle;
   line-height: 30px;
   padding: 10px 0 0;
 
   small{
     font-size: $font-size-small;
-    color: $smallsColor;
+    color: $text-muted;
     font-weight: bold;
   }
 }
@@ -1321,7 +1321,7 @@ legend + .control-group {
  &.input-transparent{
    border: none;
    color: $text-color;
-   background-color: $transparentBackground;
+   background-color: $bg-transparent;
    @include placeholder(rgba(#eee, .76));
 
    &:focus{
@@ -1331,7 +1331,7 @@ legend + .control-group {
    &[disabled],
    &[readonly],
    fieldset[disabled] & {
-     background-color: lighten($transparentBackground, 10%);
+     background-color: lighten($bg-transparent, 10%);
    }
  }
 }
@@ -1362,7 +1362,7 @@ legend + .control-group {
 .form-actions {
   padding: ($line-height-computed - 1) 20px $line-height-computed;
   margin-top: $line-height-computed;
-  background-color: $backgroundAddition;
+  background-color: $bg-addition;
   @include clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
@@ -1422,7 +1422,7 @@ legend + .control-group {
   padding: 0;
 
   .body{
-    background: $transparentBackground;
+    background: $bg-transparent;
     margin-top: 0;
     padding: $widget-padding;
     @include border-radius(0 0 $border-radius-base $border-radius-base);
@@ -1443,7 +1443,7 @@ legend + .control-group {
     margin-bottom: 0;
     & > a{
       border-color: transparent;
-      background: $transparentBackground;
+      background: $bg-transparent;
       &:hover{
         color: $text-color;
       }
@@ -1451,7 +1451,7 @@ legend + .control-group {
   }
 
   .nav > li:not(.active) > a{
-    background: $transparentBackground;
+    background: $bg-transparent;
     border-bottom: none;
     &:hover{
       background: rgba(darken($widget-bg, 10%), .4);
@@ -1467,7 +1467,7 @@ legend + .control-group {
 //base look for inner tabs
 .widget:not(.widget-tabs){
   .tab-content{
-    background: $backgroundAddition;
+    background: $bg-addition;
     padding: 10px;
     border: none;
     border-top: none;
@@ -1582,10 +1582,10 @@ legend + .control-group {
 /**********************************/
 
 .dropzone{
-  border: 3px dashed $dropzoneColor;
+  border: 3px dashed #eee;
   margin-top: 10px;
   font-size: 40px;
-  color: $dropzoneColor;
+  color: #eee;
   line-height: 100px;
   padding-left: 5%;
   vertical-align: middle;
@@ -1626,7 +1626,7 @@ legend + .control-group {
   .icon{
     position: relative;
     z-index: 1;
-    background: $transparentBackground;
+    background: $bg-transparent;
     text-align: center;
     color: $white;
     width: 28px;
@@ -1657,7 +1657,7 @@ legend + .control-group {
   .time{
     font-size: $font-size-small;
     line-height: 1.5em;
-    color: $textLightGray;
+    color: $text-muted;
   }
 }
 
@@ -1857,7 +1857,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   }
 
   &:nth-child(even){
-    background: $backgroundAddition;
+    background: $bg-addition;
   }
 
   $i: 1;
@@ -1944,13 +1944,13 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .invoice-number-info{
-  color: $textLightGray;
+  color: $text-muted;
   font-size: $font-size-larger;
 }
 
 .invoice-info{
   .details-title{
-    color: $textLightGray;
+    color: $text-muted;
     margin: 0;
   }
 }
@@ -1973,7 +1973,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   li a{
     display: block;
     padding: 6px 15px;
-    color: $textLightGray;
+    color: $text-muted;
     text-decoration: none;
     @include transition(color .2s);
     &:hover{
@@ -2010,7 +2010,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   .folder-view{
 
     tbody{
-      color: $textLightGray;
+      color: $text-muted;
     }
     .icheckbox_square-grey{
       @include transform(scale(0.72));
@@ -2043,7 +2043,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     }
 
     .starred{
-      color: $textLightGray;
+      color: $text-muted;
       cursor: pointer;
       @include transition(color .2s);
       &:hover{
@@ -2060,7 +2060,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
     .print{
       margin-right: 6px;
-      color: $textLightGray;
+      color: $text-muted;
       text-decoration: none;
       @include transition(color .2s);
       &:hover{
@@ -2084,13 +2084,13 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     padding: 0 5px;
 
     .email{
-      color: $textLightGray;
+      color: $text-muted;
       font-size: $font-size-small;
     }
 
     .receiver{
       display: block;
-      color: $textLightGray;
+      color: $text-muted;
       margin-top: -6px;
     }
 
@@ -2243,7 +2243,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 .widget-white{
   background: $white;
   color: $gray;
-  @include box-shadow(0 -1px 1px $shadowGray, 0 1px 1px $shadowGray);
+  @include box-shadow(0 -1px 1px $shadow-color, 0 1px 1px $shadow-color);
 
   *{
     color: $gray;
@@ -2523,7 +2523,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .bg-addition{
-  background-color: $backgroundAddition !important;
+  background-color: $bg-addition !important;
 }
 
 ul.text-list, ol.text-list{
@@ -2547,7 +2547,7 @@ ol.text-list{
   width: 100%;
   height: 220px;
   border: 1px dashed #eee;
-  background-color: $backgroundAddition;
+  background-color: $bg-addition;
   position: relative; }
 .location-selector .bit {
   background-color: rgba($widget-bg, .4);

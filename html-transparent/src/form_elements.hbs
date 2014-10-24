@@ -247,45 +247,136 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-8">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Form <span class="fw-semi-bold">Options</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <form role="form">
+                            <fieldset>
+                                <legend>
+                                    Control sizing
+                                </legend>
+                                <p>
+                                    Set input heights using classes like <code>.input-lg</code> and <code>.input-sm</code>.
+                                    Also works with <code>type="search"</code> inputs and selects. For input groups use
+                                    <code>.input-group-lg</code> & <code>.input-group-sm</code>.
+                                </p>
+                                <br/>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder=".input-lg">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="default input">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".input-sm">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Form <span class="fw-semi-bold">Options</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <form role="form">
+                            <fieldset>
+                                <legend>
+                                    Input Groups
+                                </legend>
+                                <p>
+                                    Different colors & sizes for any elements including input groups. Elements may be
+                                    easily styled with classes like <code>.bg-primary</code> or <code>.bg-gray-lighter</code>
+                                </p>
+                                <br/>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon bg-gray-lighter text-gray-dark"><i class="fa fa-github-alt"></i></span>
+                                        <input class="form-control" size="16" type="text" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon"><i class="fa fa-bars"></i></span>
+                                        <input class="form-control input-transparent" size="16" type="text" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-sm">
+                                        <input class="form-control" size="16" type="text" placeholder="City">
+                                        <span class="input-group-addon bg-danger text-white"><i class="fa fa-code-fork"></i></span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             <i class="fa fa-font"></i>
                             Textareas
-                        </h4>
+                        </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
                     </header>
-                    <div class="body">
-                        <form class="form-horizontal form-condensed" action="#">
+                    <div class="widget-body">
+                        <form class="form-horizontal" role="form">
                             <fieldset>
                                 <legend class="section">Condensed form</legend>
-                                <div class="control-group">
-                                    <label class="control-label" for="default-textarea">Default textarea</label>
-                                    <div class="controls form-group">
-                                        <textarea rows="4" class="form-control" id="default-textarea"></textarea>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="default-textarea">Default textarea</label>
+                                    <div class="col-sm-9">
+                                        <textarea rows="4" class="form-control input-transparent" id="default-textarea"></textarea>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="elastic-textarea">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="elastic-textarea">
                                         Auto-growing textarea
                                     </label>
-                                    <div class="controls form-group">
-                                        <textarea rows="3" class="autogrow form-control" id="elastic-textarea"
+                                    <div class="col-sm-9">
+                                        <textarea rows="3" class="autogrow form-control transition-height input-transparent" id="elastic-textarea"
                                                   placeholder="Try to add few new lines.."></textarea>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="wysiwyg">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="wysiwyg">
                                         Wysiwyg
-                                    <span class="help-block">
-                                        With bottom toolbar appended
-                                    </span>
+                                        <span class="help-block">
+                                            With bottom toolbar appended
+                                        </span>
                                     </label>
-                                    <div class="controls form-group">
+                                    <div class="col-sm-9">
                                         <textarea rows="4" class="form-control" id="wysiwyg"></textarea>
-                                        <div class="btn-toolbar pull-right">
-                                            <button type="button" class="btn btn-sm btn-danger">Save</button>
-                                            <button type="button" class="btn btn-sm btn-default">Clear</button>
+                                        <div class="btn-toolbar mt-sm">
+                                            <button type="button" class="btn btn-sm btn-default pull-right">Clear</button>
+                                            <button type="button" class="btn btn-sm btn-danger pull-right">Save</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1368,42 +1459,44 @@
     {{#append "scripts"}}
         <!-- page libs -->
         <script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="lib/jquery-autosize/jquery.autosize.min.js"></script>
+        <script src="lib/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
 
         <!-- page application js -->
-        <script src="js/forms-elemets.js"></script>
+        <script src="js/forms-elements.js"></script>
     {{/append}}
 {{/extend}}
 
 
 <!-- jquery plugins -->
-<script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>
-<script src="lib/parsley/parsley.js"> </script>
-<script src="lib/icheck.js/jquery.icheck.js"></script>
-<script src="lib/select2.js"></script>
-<script src="lib/jquery.autogrow-textarea.js"></script>
+<!--<script src="lib/jquery-maskedinput/jquery.maskedinput.js"></script>-->
+<!--<script src="lib/parsley/parsley.js"> </script>-->
+<!--<script src="lib/icheck.js/jquery.icheck.js"></script>-->
+<!--<script src="lib/select2.js"></script>-->
+<!--<script src="lib/jquery.autogrow-textarea.js"></script>-->
 
 
-<!--backbone and friends -->
-<script src="lib/backbone/underscore-min.js"></script>
+<!--&lt;!&ndash;backbone and friends &ndash;&gt;-->
+<!--<script src="lib/backbone/underscore-min.js"></script>-->
 
-<!-- bootstrap default plugins -->
-<script src="lib/bootstrap/transition.js"></script>
-<script src="lib/bootstrap/collapse.js"></script>
-<script src="lib/bootstrap/alert.js"></script>
-<script src="lib/bootstrap/tooltip.js"></script>
-<script src="lib/bootstrap/popover.js"></script>
-<script src="lib/bootstrap/button.js"></script>
-<script src="lib/bootstrap/dropdown.js"></script>
-<script src="lib/bootstrap/modal.js"></script>
+<!--&lt;!&ndash; bootstrap default plugins &ndash;&gt;-->
+<!--<script src="lib/bootstrap/transition.js"></script>-->
+<!--<script src="lib/bootstrap/collapse.js"></script>-->
+<!--<script src="lib/bootstrap/alert.js"></script>-->
+<!--<script src="lib/bootstrap/tooltip.js"></script>-->
+<!--<script src="lib/bootstrap/popover.js"></script>-->
+<!--<script src="lib/bootstrap/button.js"></script>-->
+<!--<script src="lib/bootstrap/dropdown.js"></script>-->
+<!--<script src="lib/bootstrap/modal.js"></script>-->
 
-<!-- bootstrap custom plugins -->
-<script src="lib/bootstrap-datepicker.js"></script>
-<script src="lib/wysihtml5/wysihtml5-0.3.0_rc2.js"></script>
-<script src="lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
-<script src="lib/bootstrap-switch.js"></script>
-<script src="lib/bootstrap-colorpicker.js"></script>
-<script src="lib/bootstrap-slider-3.0.1/bootstrap-slider.min.js"></script>
+<!--&lt;!&ndash; bootstrap custom plugins &ndash;&gt;-->
+<!--<script src="lib/bootstrap-datepicker.js"></script>-->
+<!--<script src="lib/wysihtml5/wysihtml5-0.3.0_rc2.js"></script>-->
+<!--<script src="lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>-->
+<!--<script src="lib/bootstrap-switch.js"></script>-->
+<!--<script src="lib/bootstrap-colorpicker.js"></script>-->
+<!--<script src="lib/bootstrap-slider-3.0.1/bootstrap-slider.min.js"></script>-->
 
-<!-- basic application js-->
-<script src="js/app.js"></script>
-<script src="js/settings.js"></script>
+<!--&lt;!&ndash; basic application js&ndash;&gt;-->
+<!--<script src="js/app.js"></script>-->
+<!--<script src="js/settings.js"></script>-->
