@@ -65,11 +65,11 @@ $(function(){
             }
         });
 
-        return;
-
-        $(".chzn-select").each(function(){
+        $(".select2").each(function(){
             $(this).select2($(this).data());
         });
+
+        return;
 
         $('.date-picker').datepicker({
             autoclose: true

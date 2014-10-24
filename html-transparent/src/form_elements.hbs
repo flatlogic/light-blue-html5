@@ -8,6 +8,7 @@
                 <h2 class="page-title">Form Elements <small>Inputs, controls and more</small></h2>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-6">
                 <section class="widget">
@@ -388,40 +389,41 @@
             <div class="col-md-6">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             <i class="fa fa-list-alt"></i>
                             Selects
-                        </h4>
+                        </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
                     </header>
                     <div class="body">
-                        <form class="form-horizontal label-left" action="#">
+                        <form class="form-horizontal form-label-left" role="form">
                             <fieldset>
                                 <legend class="section">Default form with labels on left</legend>
-                                <div class="control-group">
-                                    <label class="control-label" for="default-select">Default select</label>
-                                    <div class="controls form-group">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="default-select">Default select</label>
+                                    <div class="col-sm-8">
                                         <select data-placeholder="Which galaxy is closest to Milky Way?"
-                                                data-width="off"
+                                                data-width="auto"
                                                 data-minimum-results-for-search="10"
                                                 tabindex="-1"
-                                                class="chzn-select select-block-level" id="default-select">
+                                                class="select2 form-control" id="default-select">
                                             <option value=""></option>
                                             <option value="Magellanic">Large Magellanic Cloud</option>
                                             <option value="Andromeda">Andromeda Galaxy</option>
                                             <option value="Sextans">Sextans A</option>
                                         </select>
-                                    <span class="help-block">
-                                        <code>.select-block-level</code> it to make 100% width
-                                    </span>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label for="country" class="control-label">
-                                        Select with search
-                                    </label>
-                                    <div class="controls form-group">
-                                        <select id="country" required="required"
-                                                data-placeholder="Select country" class="select-block-level chzn-select"
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="country-select">Select with search</label>
+                                    <div class="col-sm-8">
+                                        <select id="country-select"
+                                                data-placeholder="Select country"
+                                                class="select2 form-control"
                                                 tabindex="-1"
                                                 name="country">
                                             <option value=""></option>
@@ -618,7 +620,7 @@
                                             <option value="Serbia and Montenegro">Serbia and Montenegro</option>
                                             <option value="Seychelles">Seychelles</option>
                                             <option value="Sierra Leone">Sierra Leone</option>
-                                            <option value="Singapore">Singapore</option>
+                                            <option value="LetItapore">LetItapore</option>
                                             <option value="Slovakia">Slovakia</option>
                                             <option value="Slovenia">Slovenia</option>
                                             <option value="Solomon Islands">Solomon Islands</option>
@@ -669,16 +671,17 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="multiple">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="multiple-select">
                                         Multiple select
-                                        <span class="help-block">With search too</span>
+                                        <span class="help-block">Search enabled</span>
                                     </label>
-                                    <div class="controls form-group">
-                                        <select data-placeholder="Multiple countries this time"
-                                                class="chzn-select select-block-level" tabindex="-1"
-                                                multiple="multiple"
-                                                id="multiple">
+                                    <div class="col-sm-8">
+                                        <select multiple
+                                                data-placeholder="Multiple countries this time"
+                                                data-minimum-results-for-search="10"
+                                                tabindex="-1"
+                                                class="select2 form-control" id="multiple-select">
                                             <option value="United States">United States</option>
                                             <option value="United Kingdom">United Kingdom</option>
                                             <option value="Afghanistan">Afghanistan</option>
@@ -873,7 +876,7 @@
                                             <option value="Serbia">Serbia</option>
                                             <option value="Seychelles">Seychelles</option>
                                             <option value="Sierra Leone">Sierra Leone</option>
-                                            <option value="Singapore">Singapore</option>
+                                            <option value="LetItapore">LetItapore</option>
                                             <option value="Slovakia">Slovakia</option>
                                             <option value="Slovenia">Slovenia</option>
                                             <option value="Solomon Islands">Solomon Islands</option>
@@ -925,13 +928,14 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="grouped">Select with groups</label>
-                                    <div class="controls form-group">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="grouped-select">Select with groups</label>
+                                    <div class="col-sm-8">
                                         <select data-placeholder="Your Favorite Football Team"
-                                                class="chzn-select select-block-level"
-                                                multiple="multiple"
-                                                tabindex="-1" id="grouped">
+                                                multiple
+                                                tabindex="-1"
+                                                data-minimum-results-for-search="10"
+                                                class="select2 form-control" id="grouped-select">
                                             <option value=""></option>
                                             <optgroup label="NFC EAST">
                                                 <option>Dallas Cowboys</option>
@@ -987,11 +991,12 @@
                             </fieldset>
                             <fieldset>
                                 <legend class="section">Dropdown based colored selects</legend>
-                                <div class="control-group">
-                                    <label class="control-label" for="simple-colored">Simple select</label>
-                                    <div class="controls form-group">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="simple-select">Simple select</label>
+                                    <div class="col-sm-8">
                                         <select class="selectpicker" data-style="btn-default"
-                                                tabindex="-1" id="simple-colored">
+                                                data-width="auto"
+                                                tabindex="-1" id="simple-select">
                                             <option value="0">Option One</option>
                                             <option value="1">Option Two</option>
                                             <option value="2">Option Three</option>
@@ -999,31 +1004,34 @@
                                         <span class="help-block">Auto size</span>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="simple-red">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="simple-red-select">
                                         Colored ones
-                                    <span class="help-block">
-                                        A bit of Japanese
-                                    </span>
+                                        <span class="help-block">
+                                            A bit of Japanese
+                                        </span>
                                     </label>
-                                    <div class="controls form-group">
+                                    <div class="col-sm-8">
                                         <select class="selectpicker"
-                                                data-style="btn-danger"
-                                                tabindex="-1" id="simple-red">
+                                                data-style="btn-danger btn-sm"
+                                                data-width="auto"
+                                                tabindex="-1" id="simple-red-select">
                                             <option value="0">Ichi</option>
                                             <option value="1">Ni</option>
                                             <option value="2">San</option>
                                         </select>
                                         <select class="selectpicker"
-                                                data-style="btn-warning"
-                                                tabindex="-1" id="simple-orange">
+                                                data-style="btn-warning btn-sm"
+                                                data-width="auto"
+                                                tabindex="-1" id="simple-orange-select">
                                             <option value="0">Shi</option>
                                             <option value="1">Go</option>
                                             <option value="2">Roku</option>
                                         </select>
                                         <select class="selectpicker"
-                                                data-style="btn-success"
-                                                tabindex="-1" id="simple-green">
+                                                data-style="btn-success btn-sm"
+                                                data-width="auto"
+                                                tabindex="-1" id="simple-green-select">
                                             <option value="0">Hichi</option>
                                             <option value="1">Hachi</option>
                                             <option value="2">Ku</option>
@@ -1031,421 +1039,21 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="simple-big">Big one</label>
-                                    <div class="controls form-group">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label" for="simple-big-select">
+                                        Big One
+                                        <span class="help-block">
+                                            Size can be controlled with <code>.btn-lg</code> & <code>.btn-sm</code>
+                                        </span>
+                                    </label>
+                                    <div class="col-sm-8">
                                         <select class="selectpicker"
-                                                data-style="btn-primary btn-lg"
-                                                tabindex="-1" id="simple-big">
+                                                data-style="btn-default btn-lg"
+                                                tabindex="-1" id="simple-big-select">
                                             <option value="0">Fourth Item</option>
                                             <option value="1">Fifth Item</option>
                                             <option value="2">Sixth item</option>
                                         </select>
-                                    <span class="help-block">
-                                        Size can be controlled via <code>.btn-*</code>
-                                    </span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-7">
-                <section class="widget">
-                    <header>
-                        <h4>
-                            <i class="fa fa-check"></i>
-                            Checkboxes and Radio
-                        </h4>
-                    </header>
-                    <div class="body">
-                        <form class="form-horizontal" method="post">
-                            <fieldset>
-                                <div class="control-group">
-                                    <label class="control-label">Checkboxes</label>
-                                    <div class="controls form-group">
-                                        <label class="checkbox">
-                                            <input type="checkbox" id="checkbox-1" checked="checked" class="iCheck">
-                                            Not so much needs to be done </label>
-                                        <label class="checkbox">
-                                            <input type="checkbox" id="checkbox-2" class="iCheck">
-                                            It's really hard to generate random text </label>
-                                        <label class="checkbox">
-                                            <input type="checkbox" id="checkbox-3" class="iCheck">
-                                            We're trying our best! </label>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">Inline ones</label>
-                                    <div class="controls form-group">
-                                        <label class="checkbox inline">
-                                            <input type="checkbox" id="checkbox-4" class="iCheck" value="true" checked="checked">
-                                            True </label>
-                                        <label class="checkbox inline">
-                                            <input type="checkbox" value="false" class="iCheck" id="checkbox-5">
-                                            False </label>
-                                        <label class="checkbox inline">
-                                            <input type="checkbox" value="disabled" class="iCheck" id="checkbox-6"
-                                                   checked="checked"
-                                                   disabled="disabled">
-                                            Disabled </label>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">As button groups</label>
-                                    <div class="controls form-group">
-                                        <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn btn-inverse btn-sm" data-toggle-class="btn-default" data-toggle-passive-class="btn-inverse">
-                                                <input type="checkbox"> One
-                                            </label>
-                                            <label class="btn btn-inverse btn-sm" data-toggle-class="btn-default" data-toggle-passive-class="btn-inverse">
-                                                <input type="checkbox"> Two
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="controls form-group">
-                                        <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn btn-primary btn-sm active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
-                                                <input type="checkbox"> Left
-                                            </label>
-                                            <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
-                                                <input type="checkbox"> Straight
-                                            </label>
-                                            <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
-                                                <input type="checkbox"> Right
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">Radio Buttons</label>
-                                    <div class="controls form-group">
-                                        <label class="radio">
-                                            <input type="radio" id="radio-4" class="iCheck" name="can" checked="checked">
-                                            We can sing</label>
-                                        <label class="radio">
-                                            <input type="radio" name="can" class="iCheck" id="radio-5">
-                                            We can dance </label>
-                                        <label class="radio">
-                                            <input type="radio" name="can" class="iCheck" id="radio-6">
-                                            We are trying our best! </label>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">Same Inline</label>
-                                    <div class="controls form-group">
-                                        <label class="radio inline">
-                                            <input type="radio" id="radio-1" class="iCheck" name="cani" checked="checked">
-                                            Sing</label>
-                                        <label class="radio inline">
-                                            <input type="radio" name="cani" class="iCheck" id="radio-2">
-                                            Dance </label>
-                                        <label class="radio inline">
-                                            <input type="radio" name="cani" class="iCheck" id="radio-3">
-                                            Best </label>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label">As button groups</label>
-                                    <div class="controls form-group">
-                                        <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn btn-transparent btn-sm">
-                                                <input type="radio"> One
-                                            </label>
-                                            <label class="btn btn-transparent btn-sm">
-                                                <input type="radio"> Two
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="controls form-group">
-                                        <div class="btn-group" data-toggle="buttons">
-                                            <label class="btn btn-primary btn-sm active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
-                                                <input type="radio"> Left
-                                            </label>
-                                            <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
-                                                <input type="radio"> Straight
-                                            </label>
-                                            <label class="btn btn-inverse btn-sm" data-toggle-class="btn-primary" data-toggle-passive-class="btn-inverse">
-                                                <input type="radio"> Right
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label for="simple-switch" class="control-label">Switches</label>
-                                    <div class="controls form-group">
-                                        <label class="checkbox inline">
-                                        <span class="switch switch-small" data-on="primary" data-off="danger">
-                                            <input id="simple-switch" type="checkbox" checked="checked">
-                                        </span>
-                                        </label>
-                                        <label class="checkbox inline">
-                                        <span class="switch switch-small" data-on="success" data-off="warning">
-                                            <input id="simple-switch-2" type="checkbox">
-                                        </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-5">
-                <section class="widget">
-                    <header>
-                        <h4>
-                            <i class="fa fa-magic"></i>
-                            Pickers
-                        </h4>
-                    </header>
-                    <div class="body">
-                        <form method="post" >
-                            <fieldset>
-                                <legend class="section">Dates</legend>
-                                <div class="row"><div class="col-sm-8">
-                                    <div class="control-group">
-                                        <label for="in-place-date" class="control-label">In place</label>
-
-                                        <input id="in-place-date" class="form-control date-picker" type="text" name="in-place-date" value="">
-
-                                    </div>
-                                    <div class="control-group">
-                                        <label for="btn-enabled-date" class="control-label">Button-enabled</label>
-
-                                        <div class="input-group">
-                                            <input id="btn-enabled-date" class="form-control" type="text" name="btn-enabled-date" value="">
-
-                                    <span class="input-group-btn"><a href="#" id="btn-select-calendar" class="btn btn-danger"
-                                                                     data-date-format="yyyy/mm/dd" data-date="2013/02/25">
-                                        <i class="fa fa-calendar"></i>
-                                    </a></span>
-                                        </div>
-
-                                    </div>
-                                </div></div>
-                            </fieldset>
-                            <fieldset>
-                                <legend class="section">Colors</legend>
-                                <div class="row"><div class="col-sm-8">
-                                    <div class="control-group">
-                                        <label for="color" class="control-label">Simple Select</label>
-                                        <div class="input-group">
-                                            <input id="color" class="form-control colorpicker" type="text" name="color"
-                                                   value="#eac85e">
-                                            <span id="color-holder" class="input-group-addon" style="background-color: #eac85e;">&nbsp;&nbsp;&nbsp;</span>
-                                        </div>
-
-                                    </div>
-                                </div></div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <section class="widget">
-                    <header>
-                        <h4>
-                            Sliders <span class="label label-danger">new</span>
-                        </h4>
-                    </header>
-                    <div class="body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h4>Color Options</h4>
-                                <p>Light Blue extends Bootstrap Slider and provides different color options:</p>
-                                <form>
-                                    <div class="">
-                                        <input class="js-slider" id="slider-ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-                                    </div>
-                                    <div class="slider-danger">
-                                        <input class="js-slider" id="slider-ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
-                                    </div>
-                                    <div class="slider-warning">
-                                        <input class="js-slider" id="slider-ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
-                                    </div>
-                                    <div class="slider-success">
-                                        <input class="js-slider" id="slider-ex4" data-slider-id='ex4Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
-                                    </div>
-                                    <div class="slider-inverse">
-                                        <input class="js-slider" id="slider-ex5" data-slider-id='ex5Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Slider Orientation</h4>
-                                <p>Vertical orientation is also possible. Simply changing <strong>data-slider-orientation</strong>
-                                    attribute does the thing.</p>
-                                <form>
-                                    <div class="row">
-                                        <div class="col-sm-6 col-sm-offset-3">
-                                        <span class="">
-                                    <input class="js-slider" id="slider-ex6" data-slider-orientation="vertical" data-slider-id='ex6Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-                                </span>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="slider-inverse">
-                                    <input class="js-slider" id="slider-ex7" data-slider-orientation="vertical" data-slider-id='ex7Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="18"/>
-                                </span>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="">
-                                    <input class="js-slider" id="slider-ex8" data-slider-orientation="vertical" data-slider-id='ex8Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="7"/>
-                                </span>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="slider-inverse">
-                                    <input class="js-slider" id="slider-ex9" data-slider-orientation="vertical" data-slider-id='ex9Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="11"/>
-                                </span>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="">
-                                    <input class="js-slider" id="slider-ex10" data-slider-orientation="vertical" data-slider-id='ex10Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="4"/>
-                                </span>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Range Selector</h4>
-                                <p>Range selector, options specified via <strong>data-slider-value</strong> attribute as
-                                    an array. Price range selector:</p>
-                                <form>
-                                <span class="slider-warning">
-                                    <input class="js-slider" id="slider-ex11" data-slider-id='ex11Slider'
-                                           type="text" data-slider-min="0" data-slider-max="2000"
-                                           data-slider-step="1" data-slider-value="[200,1547]"/>
-                                </span>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <section class="widget">
-                    <header>
-                        <h4>
-                            <i class="fa fa-align-left"></i>
-                            Input Sizing
-                            <small>From <code>.col-*-1</code> to <code>.col-*-12</code></small>
-                        </h4>
-                    </header>
-                    <div class="body">
-                        <form method="post">
-                            <fieldset>
-                                <div class="row"><div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label><code>.col-sm-6</code></label>
-
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div></div>
-                                <div class="row"><div class="col-sm-4">
-                                    <div class="form-group">
-                                        <label><code>.col-sm-4</code></label>
-
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div></div>
-                                <div class="row"><div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label><code>.col-sm-2</code></label>
-
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div></div>
-
-                                <div class="row"><div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label><code>.col-sm-12</code></label>
-
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div></div>
-                                <div class="row"><div class="col-sm-11">
-                                    <div class="form-group">
-                                        <label><code>.col-sm-11</code></label>
-
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div></div>
-
-                                <div class="row"><div class="col-sm-9">
-                                    <div class="form-group">
-                                        <label><code>.col-sm-9</code></label>
-
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div></div>
-                                <div class="row"><div class="col-sm-7">
-                                    <div class="form-group">
-                                        <label><code>.col-sm-7</code></label>
-
-                                        <input type="text" class="form-control">
-
-                                    </div>
-                                </div></div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-6">
-                <section class="widget">
-                    <header>
-                        <h4>
-                            <i class="fa fa-pencil"></i>
-                            Masked Inputs
-                        </h4>
-                    </header>
-                    <div class="body">
-                        <form method="post" class="form-horizontal label-left">
-                            <fieldset>
-                                <div class="control-group">
-                                    <label class="control-label" for="mask-phone">
-                                        Phone
-                                        <span class="help-block">(123) 456-7890</span>
-                                    </label>
-                                    <div class="controls form-group">
-                                        <input id="mask-phone" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="mask-int-phone">
-                                        International Phone
-                                        <span class="help-block">+375 123 456 789</span>
-                                    </label>
-                                    <div class="controls form-group">
-                                        <input id="mask-int-phone" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="mask-date">
-                                        Date Format
-                                        <span class="help-block">07-03-2013</span>
-                                    </label>
-                                    <div class="controls form-group">
-                                        <input id="mask-date" type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="mask-time">
-                                        Time
-                                        <span class="help-block">13:43</span>
-                                    </label>
-                                    <div class="controls form-group">
-                                        <input id="mask-time" type="text" class="form-control">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1461,6 +1069,7 @@
         <script src="lib/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
         <script src="lib/jquery-autosize/jquery.autosize.min.js"></script>
         <script src="lib/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
+        <script src="lib/select2/select2.min.js"></script>
 
         <!-- page application js -->
         <script src="js/forms-elements.js"></script>

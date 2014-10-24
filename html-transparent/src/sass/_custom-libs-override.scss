@@ -57,3 +57,47 @@ svg .title {
 .bootstrap-select .btn:focus{
   outline: 0 !important;
 }
+
+/**
+ * Select2 Bootstrap CSS
+ */
+/*
+ * override .form-control:focus shadow
+ */
+.select2-container-active .select2-choice,
+.select2-container-multi.select2-container-active .select2-choices{
+  @include box-shadow(none);
+}
+
+.select2-container-multi .select2-choices .select2-search-choice{
+  @include border-radius($input-border-radius);
+}
+
+/**
+ * setting correct urls
+ */
+.select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice .select2-arrow b{
+  background-image: url("#{$libs-compiled-folder}/select2/select2.png");
+  @include retina(){
+    background-image: url("#{$libs-compiled-folder}/select2/select2x2.png") !important;
+  }
+}
+
+.select2-search input.select2-active,
+.select2-more-results.select2-active,
+.select2-container-multi .select2-choices .select2-search-field input.select2-active{
+  background-image: url("#{$libs-compiled-folder}/select2/select2-spinner.gif");
+}
+
+.select2-container .select2-choice .select2-arrow,
+.select2-container .select2-choice div {
+  border-left: none;
+}
+
+/**
+ * Make Multi Select2's choices match Bootstrap 3's default button styles.
+ */
+
+.select2-container-multi .select2-choices .select2-search-choice {
+  background: $btn-inverse-bg;
+}
