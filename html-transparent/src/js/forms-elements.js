@@ -72,27 +72,20 @@ $(function(){
         new Switchery(document.getElementById('checkbox-ios1'));
         new Switchery(document.getElementById('checkbox-ios2'),{color: $blue});
 
-        return;
-
-        $('.date-picker').datepicker({
-            autoclose: true
+        $('#datetimepicker1').datetimepicker({
+            pickTime: false
         });
-        var $btnCalendar = $('#btn-select-calendar');
-        $btnCalendar.datepicker({
-            autoclose: true
-        }).on('changeDate', function(ev){
-                $('#btn-enabled-date').val($btnCalendar.data('date'));
-                $btnCalendar.datepicker('hide');
-            });
-
-        $('#color').colorpicker().on('changeColor', function(ev){
-            $("#color-holder").css("backgroundColor", ev.color.toHex());
+        $('#datetimepicker2').datetimepicker({
         });
+
+        $('#colorpicker').colorpicker({color: '#999'});
 
         $("#mask-phone").mask("(999) 999-9999");
         $("#mask-date").mask("99-99-9999");
         $("#mask-int-phone").mask("+999 999 999 999");
         $("#mask-time").mask("99:99");
+
+        return;
 
         $('.js-slider').slider();
     }

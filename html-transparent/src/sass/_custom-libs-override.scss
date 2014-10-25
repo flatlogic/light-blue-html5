@@ -101,3 +101,135 @@ svg .title {
 .select2-container-multi .select2-choices .select2-search-choice {
   background: $btn-inverse-bg;
 }
+
+/**
+ * Switchery
+ */
+
+.switchery{
+  background-color: transparent !important;
+}
+
+/**
+ * Datetimepicker for Bootstrap v3
+ */
+.bootstrap-datetimepicker-widget
+{
+  border-radius: $border-radius-base;
+  color: $gray;
+  td,
+  th
+  {
+    border-radius: $border-radius-base;
+  }
+
+  td
+  {
+    &.day:hover,
+    &.hour:hover,
+    &.minute:hover,
+    &.second:hover
+    {
+      background: $gray-lighter;
+    }
+
+    &.old,
+    &.new
+    {
+      color: $gray-light;
+    }
+
+    &.active,
+    &.active:hover
+    {
+      background-color: $btn-primary-bg;
+      text-shadow: none;
+    }
+
+    &.disabled,
+    &.disabled:hover
+    {
+      color: $gray-light;
+    }
+
+    span
+    {
+      border-radius: $border-radius-base;
+
+      &:hover
+      {
+        background: $gray-lighter;
+      }
+
+      &.active
+      {
+        background-color: $btn-primary-bg;
+      }
+
+      &.old
+      {
+        color: $gray-light;
+      }
+
+      &.disabled,
+      &.disabled:hover
+      {
+        color: $gray-light;
+      }
+    }
+  }
+  th
+  {
+    &.next,
+    &.prev
+    {
+      font-size: $font-size-base * 1.5;
+    }
+    &.disabled,
+    &.disabled:hover
+    {
+      color: $gray-light;
+    }
+  }
+  thead tr:first-child th
+  {
+    &:hover
+    {
+      background: $gray-lighter;
+    }
+  }
+
+  .btn:not(.btn-primary){
+    color: darken($link-color, 20%);
+
+    &:hover{
+      @include box-shadow(none);
+    }
+  }
+}
+
+/**
+ * Bootstrap Colorpicker
+ * setting correct urls
+ */
+
+.colorpicker-saturation {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/saturation.png");;
+}
+
+.colorpicker-hue {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue.png");
+}
+
+.colorpicker-alpha,
+.colorpicker-color {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-hue {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue-horizontal.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-alpha {
+  background-image: url("#{$libs-compiled-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha-horizontal.png");
+}

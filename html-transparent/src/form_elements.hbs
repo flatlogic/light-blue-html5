@@ -1290,6 +1290,127 @@
                 </section>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Pickers
+                        </h5>
+                        <div class="widget-controls">
+                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <form role="form">
+                            <fieldset>
+                                <legend class="section">
+                                    Date & Time
+                                </legend>
+                                <div class="form-group">
+                                    <label for="datetimepicker1">In place</label>
+                                    <input id="datetimepicker1" type="text" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="datepicker2i">
+                                        Time-enabled
+                                        <span class="help-block">
+                                            Can be customized for both 24 hour and 12 hour clocks.
+                                        </span>
+                                    </label>
+                                    <div id="datetimepicker2" class="input-group">
+                                        <input id="datepicker2i" type="text" class="form-control" />
+                                        <span class="input-group-btn">
+                                            <a href="#" class="btn btn-success">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend class="section">
+                                    Colors
+                                </legend>
+                                <div class="form-group">
+                                    <label for="colorpickeri">
+                                        Simple select
+                                        <span class="help-block">
+                                            Colorpicker plugin for Twitter Bootstrap, originally written by Stefan Petre
+                                        </span>
+                                    </label>
+                                    <div id="colorpicker" class="input-group">
+                                        <input type="text" value="" class="form-control" id="colorpickeri"/>
+                                        <span class="input-group-addon"><i></i></span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Input <strong>Masks</strong>
+                        </h5>
+                        <div class="widget-controls">
+                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <form role="form" class="form-horizontal form-label-left">
+                            <fieldset>
+                                <legend class="section">
+                                    Masked inputs
+                                </legend>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="mask-phone">
+                                        Phone
+                                        <span class="help-block">(123) 456-7890</span>
+                                    </label>
+                                    <div class="col-sm-7">
+                                        <input id="mask-phone" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="mask-int-phone">
+                                        International Phone
+                                        <span class="help-block">+375 123 456 789</span>
+                                    </label>
+                                    <div class="col-sm-7">
+                                        <input id="mask-int-phone" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="mask-date">
+                                        Date Format
+                                        <span class="help-block">07-03-2013</span>
+                                    </label>
+                                    <div class="col-sm-7">
+                                        <input id="mask-date" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="mask-time">
+                                        Time
+                                        <span class="help-block">13:43</span>
+                                    </label>
+                                    <div class="col-sm-7">
+                                        <input id="mask-time" type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
     {{/replace}}
 
     {{#append "scripts"}}
@@ -1299,6 +1420,10 @@
         <script src="lib/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
         <script src="lib/select2/select2.min.js"></script>
         <script src="lib/switchery/dist/switchery.min.js"></script>
+        <script src="lib/moment/moment.js"></script>
+        <script src="lib/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="lib/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+        <script src="lib/jquery.maskedinput/jquery.maskedinput.min.js"></script>
 
         <!-- page application js -->
         <script src="js/forms-elements.js"></script>
