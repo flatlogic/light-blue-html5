@@ -69,6 +69,9 @@ $(function(){
             $(this).select2($(this).data());
         });
 
+        new Switchery(document.getElementById('checkbox-ios1'));
+        new Switchery(document.getElementById('checkbox-ios2'),{color: $blue});
+
         return;
 
         $('.date-picker').datepicker({

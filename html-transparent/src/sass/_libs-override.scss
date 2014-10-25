@@ -1,0 +1,23 @@
+/* Awesome Bootstrap Checkbox override */
+.checkbox label{
+  &::before {
+    background: none;
+    border-color: #aaa;
+  }&::after{
+     color: $white;
+   }
+}
+
+.radio {
+  label {
+
+    &::before {
+      background: none;
+      border-color: #aaa;
+    }
+
+    &::after {
+      background-color: $white;
+    }
+  }
+}
