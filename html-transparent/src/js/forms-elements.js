@@ -85,8 +85,6 @@ $(function(){
         $("#mask-int-phone").mask("+999 999 999 999");
         $("#mask-time").mask("99:99");
 
-        return;
-
         $('.js-slider').slider();
     }
 
