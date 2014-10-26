@@ -110,17 +110,6 @@ input[type="checkbox"]:focus {
   outline: none;
 }
 
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid {
-  color: $gray-dark;
-  border-color: $input-border;
-  &:focus {
-    border-color: $blue;
-    @include box-shadow(none);
-  }
-}
-
 .input-group-btn > .btn{
   z-index: 2;
 }

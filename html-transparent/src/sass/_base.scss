@@ -24,8 +24,10 @@ $i: 1;
 /**********************************/
 
 
-input.parsley-error{
-  @include invalid-border;
+.form-control.parsley-error{
+  &, &:focus{
+    box-shadow: inset 0 0 3px $brand-warning;
+  }
 }
 
 .parsley-errors-list{
