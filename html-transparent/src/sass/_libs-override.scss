@@ -21,3 +21,9 @@
     }
   }
 }
+
+.checkbox-dark input[type="checkbox"]:checked + label{
+  &::after{
+    color: $gray;
+  }
+}
