@@ -560,7 +560,7 @@ $i: 1;
     @include box-sizing(content-box);
     border-top: 1px solid $bg-addition;
     padding: 12px;
-    margin: 0 -12px;
+    margin: 0 -$widget-padding-horizontal;
     cursor: pointer;
     height: 50px;
     @include transition(background-color .2s ease-out);
