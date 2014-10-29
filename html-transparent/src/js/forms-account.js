@@ -16,6 +16,8 @@ $(function(){
                 return parsleyField.$element.parents(".form-group").children("label");
             }
         });
+
+        $('.widget').widgster();
     }
 
     pageLoad();

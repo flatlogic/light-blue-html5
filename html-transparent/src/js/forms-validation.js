@@ -6,6 +6,8 @@ $(function(){
     function pageLoaded(){
         //init parsley for pjax requests
         $( '#validation-form' ).parsley();
+
+        $('.widget').widgster();
     }
 
     pageLoaded();

@@ -109,6 +109,8 @@ $(function(){
         });
 
         $("#article-form").parsley();
+
+        $('.widget').widgster();
     }
 
     pageLoad();

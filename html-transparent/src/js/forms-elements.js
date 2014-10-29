@@ -118,6 +118,8 @@ $(function(){
         $("#mask-time").mask("99:99");
 
         $('.js-slider').slider();
+
+        $('.widget').widgster();
     }
 
     pageLoad();
