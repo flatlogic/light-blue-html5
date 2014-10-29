@@ -848,7 +848,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     @include box-sizing(content-box);
     border-top: 1px solid $bg-addition;
     padding: 12px;
-    margin: 0 -$widget-padding-horizontal;
+    margin: 0 (-$widget-padding-horizontal);
     cursor: pointer;
     height: 50px;
     @include transition(background-color .2s ease-out);
@@ -858,7 +858,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     }
 
     &:last-child{
-      margin-bottom: -10px;
+      margin-bottom: -$widget-padding-vertical;
     }
   }
 
