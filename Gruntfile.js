@@ -27,8 +27,14 @@ module.exports = function(grunt) {
                         title: '<%= pkg.description %>',
                         preHtml: '<!-- <%= pkg.name %> - v<%= pkg.version %> - ' +
                             '<%= grunt.template.today("yyyy-mm-dd") %> -->\n',
-                        conditionClass: function(clazz, val1, val2){
-                            return val2.split(' ').indexOf(val1) == -1 ? '' : clazz;
+                        /**
+                         * Returns {clazz} if {val2} is present inside {val1} and if inverse is false or unset
+                         * Returns {clazz} if {val2} is NOT present inside {val1} and if inverse is true
+                         */
+                        conditionClass: function(clazz, val1, val2, inverse){
+                            // whether to inverse operation. returns 'class' if there is no val1 inside val2
+                            inverse = typeof inverse == "undefined" ? false : inverse;
+                            return val2.split(' ').indexOf(val1) == -1 ^ inverse ? '' : clazz;
                         }
                     }
                 }

@@ -46,6 +46,9 @@ $i: 1;
 .logo{
   @include box-sizing(content-box);
   position: absolute;
+  @media (min-height: 940px) {
+    position: fixed;
+  }
   left: 65px;
   top: 13px;
   z-index: 1;
@@ -65,17 +68,18 @@ $i: 1;
 /**********************************/
 
 .sidebar{
-  @include border-radius($border-radius-base);
-
-  background: $bg-transparent;
   position: absolute;
+  @media (min-height: 940px) {
+    position: fixed;
+  }
   width: 160px;
   padding: 10px 0;
   top: 0;
-  color: $text-muted;
-  font-size: $font-size-small;
+  color: $white;
   z-index: 1;
   margin: $sidebar-mt 0 0 25px;
+  font-weight: 300;
+  @include box-shadow(none);
 
   .settings{
     margin-top: 10px;
@@ -89,6 +93,10 @@ $i: 1;
   &.sidebar-icons{
     @include sidebar-settings;
   }
+
+  .panel{
+    background: none;
+  }
 }
 
 .side-nav{
@@ -98,9 +106,13 @@ $i: 1;
     list-style: none;
 
     i[class*=fa]{
+      width: 16px;
+      margin-right: 8px;
+      float: left;
       line-height: 20px;
-      float: right;
-      font-size: $font-size-large;
+      font-size: 14px;
+      opacity: .4;
+      text-align: right;
     }
 
     a:hover, a:focus{
@@ -112,31 +124,33 @@ $i: 1;
       @include transition(background-color .2s);
       text-decoration: none;
       display: block;
-      padding: 8px 20px;
+      padding: 10px 20px;
+      @include border-radius($border-radius-large);
+
+      .fa-angle-down{
+        width: auto;
+        float: right;
+        margin-right: -8px;
+        opacity: 1;
+        @include transition-transform(.3s ease-in-out);
+      }
+
+      &.collapsed .fa-angle-down{
+        @include rotate(90deg);
+      }
     }
 
-    a.accordion-toggle:not(.collapsed) + .panel-collapse li.active a{
-      background: $sidebar-item-sub-active-bg;
-    }
-
-    a.accordion-toggle:not(.collapsed) + .panel-collapse li a:hover{
-      background: $sidebar-item-sub-active-bg;
-    }
   }
 
-  & > li.active > a{
-    border-left: 4px solid $white;
-    padding-left: 16px;
-    background: $sidebar-item-active-bg;
-    color: $text-color;
+  & li.active > a{
+    font-weight: 700;
   }
 
   .panel-collapse{ //second level menu
-    background-color: rgba($widget-bg, .17);
     li a{
       padding: 4px 10px;
 
-      padding-left: 40px;
+      padding-left: 50px;
 
       &:hover, &:focus{
         background: $sidebar-item-active-bg;
@@ -150,11 +164,11 @@ $i: 1;
 
     .panel-collapse{ //third level
       .panel-collapse > li a{ //fourth level
-        padding-left: 60px;
+        padding-left: 70px;
       }
 
       > li a{
-        padding-left: 50px;
+        padding-left: 60px;
       }
     }
 
@@ -177,7 +191,6 @@ $i: 1;
     margin: 0;
     border: none;
     @include border-radius(0);
-    background: none;
   }
 
   .panel-collapse.collapse {
@@ -188,6 +201,77 @@ $i: 1;
     @include transition(height .35s ease);
     &.in {
       height: auto;
+    }
+  }
+}
+
+.sidebar-labels{
+  list-style: none;
+  padding: 10px 20px;
+  > li{
+    > a{
+      color: $gray-lighter;
+      text-decoration: none;
+      font-weight: normal;
+
+      &:hover{
+        color: $white;
+      }
+
+      .circle,
+      .circle-o{
+        position: relative;
+        top: -2px;
+        font-size: 9px;
+        height: 12px;
+        width: 12px;
+        line-height: 12px;
+      }
+
+      .fa-circle{
+        font-size: 11px;
+        vertical-align: 1px;
+        margin-left: 4px;
+        margin-right: 8px;
+      }
+
+      .circle-o{
+        top: 1px;
+        left: 1px
+      }
+    }
+
+    + li {
+      margin-top: $line-height-computed/2;
+    }
+  }
+}
+
+.sidebar-alerts{
+  .alert{
+    margin-bottom: 0;
+    padding: $line-height-computed/2 12px $line-height-computed/2 20px;
+
+    .close{
+      font-size: 16px;
+      text-shadow: none;
+      opacity: 1;
+      color: rgba($white, .9);
+    }
+  }
+}
+
+.sidebar-nav-title{
+  margin: 35px 0 5px 20px;
+
+  .action-link{
+    color: $white;
+    float: right;
+    margin-right: 12px;
+    margin-top: -1px;
+
+    .fa, .glyphicon{
+      font-size: 9px;
     }
   }
 }
