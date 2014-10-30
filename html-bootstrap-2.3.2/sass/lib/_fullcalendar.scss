@@ -128,7 +128,7 @@ html .fc,
 	}
 
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	background: $bg-addition;
+	background: $backgroundAddition;
 	}
 
 .fc-cell-overlay { /* semi-transparent rectangle while dragging */
@@ -222,7 +222,7 @@ html .fc,
 .fc-state-default .fc-button-inner {
   border-style: solid;
   //okendoken. change to default color
-  background: $bg-transparent;
+  background: $transparentBackground;
   border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
   border-width: 1px;
   color: $white;
