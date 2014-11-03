@@ -79,7 +79,6 @@ $i: 1;
   z-index: 1;
   margin: $sidebar-mt 0 0 25px;
   font-weight: 300;
-  @include box-shadow(none);
 
   .settings{
     margin-top: 10px;
@@ -88,10 +87,6 @@ $i: 1;
     .btn-auto{
       display: none;
     }
-  }
-
-  &.sidebar-icons{
-    @include sidebar-settings;
   }
 
   .panel{
@@ -138,6 +133,22 @@ $i: 1;
       &.collapsed .fa-angle-down{
         @include rotate(90deg);
       }
+
+      &[data-toggle="collapse"]{
+        &:before{
+          display: inline-block;
+          font-family: FontAwesome;
+          content: "\f107";
+          float: right;
+          margin-right: -8px;
+          position: relative;
+          top: 1px;
+          @include transition(transform .3s ease-in-out)
+        }
+        &.collapsed:before{
+          @include transform(rotate(90deg));
+        }
+      }
     }
 
   }
@@ -148,7 +159,7 @@ $i: 1;
 
   .panel-collapse{ //second level menu
     li a{
-      padding: 4px 10px;
+      padding: 4px 20px;
 
       padding-left: 50px;
 
@@ -169,20 +180,6 @@ $i: 1;
 
       > li a{
         padding-left: 60px;
-      }
-    }
-
-    a[data-toggle="collapse"]{
-      &:before{
-        display: inline-block;
-        font-family: FontAwesome;
-        content: "\f107";
-        float: right;
-        margin-right: 10px;
-        @include transition(transform .3s ease-in-out)
-      }
-      &.collapsed:before{
-        @include transform(rotate(-90deg));
       }
     }
   }
