@@ -13,7 +13,6 @@ $(function(){
 
         var graph = new Rickshaw.Graph( {
             element: document.getElementById("realtime-chart"),
-            //width: $("#chart-container").width(),
             height: 300,
             renderer: 'area',
             stroke: true,
@@ -61,11 +60,6 @@ $(function(){
         } );
 
         var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
-            graph: graph,
-            legend: legend
-        } );
-
-        var order = new Rickshaw.Graph.Behavior.Series.Order( {
             graph: graph,
             legend: legend
         } );
