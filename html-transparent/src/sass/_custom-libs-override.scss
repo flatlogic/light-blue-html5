@@ -38,8 +38,6 @@ svg .title {
 }
 
 .nv-controlsWrap{
-  @include translate(-40px, -50px);
-
   .nv-legend-symbol{
     fill: #666 !important;
     stroke: #666 !important;
@@ -49,6 +47,11 @@ svg .title {
 .nvd3 .nv-axis line{
   stroke: #000;
   stroke-opacity: .1;
+}
+
+.nvtooltip h3{
+  background-color: transparent;
+  border: none;
 }
 
 /*!
