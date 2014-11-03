@@ -899,21 +899,31 @@ a.thumbnail:focus {
 
 .panel{
   border: none;
-  background-color: $bg-addition;
+  background-color: $bg-transparent;
   @include box-shadow(none);
-
-  $i: 1;
-  @each $color in $colors{
-
-    &:nth-child(#{$i}n) .panel-heading{
-      border-left: 5px solid #{$color};
-    }
-    $i: $i + 1;
-  }
 
   .panel-heading a{
     color: $text-color;
     @include bold-font;
+    &.collapsed{
+      color: $text-muted;
+    }
+
+    &[data-toggle="collapse"]{
+      &:before{
+        display: inline-block;
+        font-family: FontAwesome;
+        content: "\f107";
+        float: right;
+        margin-right: -8px;
+        position: relative;
+        top: 1px;
+        @include transition(transform .3s ease-in-out)
+      }
+      &.collapsed:before{
+        @include transform(rotate(90deg));
+      }
+    }
   }
 }
 
