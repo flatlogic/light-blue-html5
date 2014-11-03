@@ -671,12 +671,6 @@ textarea,
 /*         Modals          */
 /***************************/
 
-.modal-backdrop,
-.modal-backdrop.fade.in {
-  //okendoken. 15% opacity is just enough
-  @include opacity(0.15);
-}
-
 .modal {
   color: $gray-dark;
   @include border-radius($border-radius-base);
