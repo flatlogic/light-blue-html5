@@ -307,7 +307,9 @@ $(function(){
     });
 
     $(window).resize(function(){
-        closeNavigation();
+        if ($(window).width() < 768){
+            closeNavigation();
+        }
     });
 
     //class-switch for button-groups

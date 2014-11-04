@@ -80,12 +80,13 @@ function mapsPageLoad(){
     });
     function vectorDetailed(map){
         //jqvmap has a problem with destroying itself
-        //so clear it hard way
+        //so clear it the hard way
         $('#vector-detailed').replaceWith("<div id='vector-detailed'></div>");
         var $map = $('#vector-detailed');
         $map.width("100%").height("100%").vectorMap({
             map: map,
             enableZoom: true,
+            zoom: 3,
             hoverColor: $orange,
             hoverOpacity: null,
             normalizeFunction: 'linear',
@@ -103,7 +104,9 @@ function mapsPageLoad(){
             }
         });
         if (map == 'europe_en'){
-            $map.data('mapObject').zoomIn();
+            $map.find('> .jqvmap-zoomin').trigger('click');
+            $map.find('> .jqvmap-zoomin').trigger('click');
+            $map.find('> .jqvmap-zoomin').trigger('click');
         }
     }
 
@@ -113,21 +116,9 @@ function mapsPageLoad(){
     $(".selectpicker").selectpicker().on("change", function(){
         vectorDetailed($(this).val());
     });
-    //selectpicker doesn't seem to be flexible enough (can't change template), so need to replace span.caret externally
-    $('.selectpicker + .bootstrap-select span.caret').replaceWith("<i class='fa fa-caret-down'></i>");
-    $('.selectpicker + .bootstrap-select span.pull-left').removeClass("pull-left");
 }
 
 $(function(){
-    function loadScript() {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'http://maps.google.com/maps/api/js?sensor=false&language=en&' +
-            'callback=mapsPageLoad';
-        document.body.appendChild(script);
-    }
-
-    loadScript();
-
+    mapsPageLoad();
     PjaxApp.onPageLoad(mapsPageLoad);
 });
