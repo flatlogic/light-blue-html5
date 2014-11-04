@@ -9,18 +9,9 @@
 .external-event {
   margin: 15px 0;
   padding: 5px 10px;
-  background-color: $red;
   color: #fff;
   cursor: pointer;
-  $i: 1;
-  @each $color in $colors{
-
-    &:nth-child(#{$i}n){
-      background-color: #{$color};
-    }
-    $i: $i + 1;
-  }
-
+  border-radius: $border-radius-base;
 }
 
 /***********************************/

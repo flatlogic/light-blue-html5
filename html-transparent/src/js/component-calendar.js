@@ -1,6 +1,6 @@
 $(function(){
-    function pageLoad(){
-        $('#external-events').find('div.external-event').each(function() {
+    function pageLoad() {
+        $('#external-events').find('div.external-event').each(function () {
 
             // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
             // it doesn't need to have a start or end
@@ -24,41 +24,43 @@ $(function(){
         var d = date.getDate();
         var m = date.getMonth();
         var y = date.getFullYear();
-        var calendar = $('#calendar').fullCalendar({
+        var $calendar = $('#calendar').fullCalendar({
             header: {
-                left: 'prev',
+                left: '',
                 center: 'title',
-                right: 'next'
+                right: ''
             },
 
             selectable: true,
             selectHelper: true,
-            select: function(start, end, allDay) {
+            select: function (start, end, allDay) {
                 var $modal = $("#edit-modal"),
                     $btn = $('#create-event');
                 $btn.off('click');
                 $btn.click(function () {
                     var title = $("#event-name").val();
                     if (title) {
-                        calendar.fullCalendar('renderEvent',
+                        $calendar.fullCalendar('renderEvent',
                             {
                                 title: title,
                                 start: start,
                                 end: end,
-                                allDay: allDay
+                                allDay: allDay,
+                                backgroundColor: '#64bd63',
+                                textColor: '#fff'
                             },
                             true
                         );
                     }
-                    calendar.fullCalendar('unselect');
+                    $calendar.fullCalendar('unselect');
                 });
                 $modal.modal('show');
-                calendar.fullCalendar('unselect');
+                $calendar.fullCalendar('unselect');
             },
             editable: true,
-            droppable:true,
+            droppable: true,
 
-            drop: function(date, allDay) { // this function is called when something is dropped
+            drop: function (date, allDay) { // this function is called when something is dropped
 
                 // retrieve the dropped element's stored Event Object
                 var originalEventObject = $(this).data('eventObject');
@@ -69,6 +71,10 @@ $(function(){
                 // assign it the date that was reported
                 copiedEventObject.start = date;
                 copiedEventObject.allDay = allDay;
+
+                var $categoryClass = $(this).data('event-class');
+                if ($categoryClass)
+                    copiedEventObject['className'] = [$categoryClass];
 
                 // render the event on the calendar
                 // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
@@ -82,51 +88,32 @@ $(function(){
             events: [
                 {
                     title: 'All Day Event',
-                    start: new Date(y, m, 1)
+                    start: new Date(y, m, 1),
+                    backgroundColor: '#79A5F0',
+                    textColor: '#fff'
                 },
                 {
                     title: 'Long Event',
-                    start: new Date(y, m, d+5),
-                    end: new Date(y, m, d+7)
+                    start: new Date(y, m, d + 5),
+                    end: new Date(y, m, d + 7)
                 },
                 {
                     id: 999,
                     title: 'Repeating Event',
-                    start: new Date(y, m, d-3, 16, 0),
+                    start: new Date(y, m, d - 3, 16, 0),
                     allDay: false
                 },
                 {
-                    id: 999,
-                    title: 'Repeating Event',
-                    start: new Date(y, m, d+4, 16, 0),
-                    allDay: false
-                },
-                {
-                    title: 'Meeting',
-                    start: new Date(y, m, d, 10, 30),
-                    allDay: false
-                },
-                {
-                    title: 'Lunch',
-                    start: new Date(y, m, d, 12, 0),
-                    end: new Date(y, m, d, 14, 0),
-                    allDay: false
-                },
-                {
-                    title: 'Birthday Party',
-                    start: new Date(y, m, d+1, 19, 0),
-                    end: new Date(y, m, d+1, 22, 30),
-                    allDay: false
-                },
-                {
-                    title: 'Click for Okendoken',
+                    title: 'Click for Flatlogic',
                     start: new Date(y, m, 28),
                     end: new Date(y, m, 29),
-                    url: 'http://okendoken.com/'
+                    url: 'http://flatlogic.com/',
+                    backgroundColor: '#e5603b',
+                    textColor: '#fff'
                 }
             ],
 
-            eventClick: function(event) {
+            eventClick: function (event) {
                 // opens events in a popup window
                 if (event.url){
                     window.open(event.url, 'gcalevent', 'width=700,height=600');
@@ -139,8 +126,8 @@ $(function(){
                         if (event.allDay){
                             return "All day event"
                         } else {
-                            return "Start At: <strong>" + event.start.getHours() + ":" + (event.start.getMinutes() == 0 ? "00" : event.start.getMinutes()) + "</strong></br>"
-                                + (event.end == null ? "" : "End At: <strong>" + event.end.getHours() + ":" + (event.end.getMinutes() == 0 ? "00" : event.end.getMinutes()) + "</strong>")
+                            return "Start At: <strong>" + event.start._d.getHours() + ":" + (event.start._d.getMinutes() == 0 ? "00" : event.start._d.getMinutes()) + "</strong></br>"
+                                + (event.end == null ? "" : "End At: <strong>" + event.end._d.getHours() + ":" + (event.end._d.getMinutes() == 0 ? "00" : event.end._d.getMinutes()) + "</strong>")
                         }
                     }());
                     $modal.modal('show');
@@ -149,12 +136,23 @@ $(function(){
 
         });
 
-        $("#calendar-switcher").find("label").click(function(){
-            calendar.fullCalendar( 'changeView', $(this).find('input').val() )
+        $("#calendar-switcher").find("label").click(function () {
+            $calendar.fullCalendar('changeView', $(this).find('input').val())
         });
-        $("#today").click(function(){
-            calendar.fullCalendar('today');
+
+
+        $('#calender-prev').click(function () {
+            $calendar.fullCalendar('prev');
         });
+
+        $('#calender-next').click(function () {
+            $calendar.fullCalendar('next');
+        });
+
+        $("#today").click(function () {
+            $calendar.fullCalendar('today');
+        });
+
     }
 
     pageLoad();

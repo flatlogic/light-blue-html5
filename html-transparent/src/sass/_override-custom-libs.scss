@@ -382,3 +382,42 @@ $slider-handle-size: 26px;
 .rickshaw_graph .detail .x_label {
   color: $gray;
 }
+
+/***********************/
+/*    Full Calendar    */
+/***********************/
+
+.fc-grid th{
+  text-transform: uppercase;
+}
+
+.fc-event {
+  padding: 2px 3px;
+  border: none;
+  font-weight: $font-weight-normal;
+  background-color: $gray-semi-lighter;
+  color: $text-color;
+}
+
+.fc-unthemed .fc-today{
+  background-color: rgba(#fff1b8, .35);
+}
+
+a.fc-event{
+  height: auto;
+  line-height: 20px;
+}
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event{
+  color: $gray;
+}
+
+.fc-unthemed th,
+.fc-unthemed td,
+.fc-unthemed hr,
+.fc-unthemed thead,
+.fc-unthemed tbody,
+.fc-unthemed .fc-row,
+.fc-unthemed .fc-popover{
+  border-color: rgba($white, .33);
+}
