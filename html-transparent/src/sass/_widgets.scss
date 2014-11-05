@@ -14,26 +14,6 @@
   border-radius: $border-radius-base;
 }
 
-/***********************************/
-/**          FILES                **/
-/**********************************/
-
-.dropzone{
-  border: 3px dashed #eee;
-  margin-top: 10px;
-  font-size: 40px;
-  color: #eee;
-  line-height: 100px;
-  padding-left: 5%;
-  vertical-align: middle;
-
-  @include clearfix;
-
-  i{
-    margin-top: 20px;
-    padding-right: 10%;
-  }
-}
 
 /***********************************/
 /**          FEED                 **/
@@ -139,12 +119,40 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .fileupload-progress.fade{
 
-  &.in .progress{
-    margin-top: 20px;
+  &.in{
+    .progress{
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    .progress-extended{
+      margin-bottom: 10px;
+    }
   }
 
   .progress{
     margin: 0;
+  }
+}
+
+.template-upload video{
+  max-width: 200px;
+}
+
+.dropzone{
+  border: 2px dashed #eee;
+  margin-top: 10px;
+  font-size: 40px;
+  color: #eee;
+  line-height: 120px;
+  padding-left: 7%;
+  vertical-align: middle;
+
+  @include clearfix;
+
+  i{
+    margin-top: 20px;
+    padding-right: 10%;
   }
 }
 
