@@ -441,10 +441,14 @@ $i: 1;
       text-decoration: none;
     }
   }
+
+  .widget-table-overflow{
+    margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+  }
 }
 
 .widget-controls{
-  position: absolute;
+position: absolute;
   z-index: 1;
   top: 0;
   right: 0;

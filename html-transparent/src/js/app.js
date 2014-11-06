@@ -282,6 +282,37 @@ function initDemoFunctions(){
     });
 }
 
+function initAppPlugins(){
+    /* ========================================================================
+     * Table head check all checkboxes
+     * ========================================================================
+     */
+    !function($){
+        $(document).on('click', 'table th [data-check-all]', function () {
+            $(this).closest('table').find('input[type=checkbox]')
+                .not(this).prop('checked', $(this).prop('checked'));
+        });
+    }(jQuery);
+
+    /* ========================================================================
+     * Animate Progress Bars
+     * ========================================================================
+     */
+    !function($){
+
+        $.fn.animateProgressBar = function () {
+            return this.each(function () {
+                var $bar = $(this).find('.progress-bar');
+                setTimeout(function(){
+                    $bar.css('width', $bar.data('width'));
+                }, 0)
+            })
+        };
+
+        $('.js-progress-animate').animateProgressBar();
+    }(jQuery);
+}
+
 $(function(){
 
     var $sidebar = $('#sidebar');
@@ -409,6 +440,7 @@ $(function(){
 
     initPjax();
     initDemoFunctions();
+    initAppPlugins();
 
 });
 

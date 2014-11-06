@@ -194,13 +194,63 @@ textarea,
   }
 }
 
-.table:not(.table-bordered) td{
-  border-top: none;
-}
-
 .table thead > tr > th{
   border-bottom: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom-width: 1px;
 }
+
+.table td > .checkbox,
+.table th > .checkbox{
+  position: relative;
+  top: -14px;
+  left: 7px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  > label:before,
+  > label:after{
+    margin-left: 0;
+  }
+}
+
+.table > thead > tr > th{
+  font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
+  border-bottom-width: 1px;
+}
+
+.table-bordered th{
+  background-color: $bg-addition;
+}
+
+.table-lg {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.table-sm {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 6px;
+      }
+    }
+  }
+}
+
 
 /***************************/
 /*        Dropdowns        */
