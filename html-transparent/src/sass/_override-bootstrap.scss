@@ -730,6 +730,7 @@ textarea,
 
 .tooltip-inner {
   padding: 4px;
+  white-space: nowrap;
 }
 
 /***************************/
@@ -885,6 +886,16 @@ a.thumbnail:focus {
     margin-top: 3px;
     margin-left: 6px;
     color: darken($text-color, 5%);
+  }
+}
+.list-group-item{
+
+  .list-group-lg & {
+    padding: 15px 15px;
+  }
+
+  .list-group:last-of-type &:last-child{
+    border-bottom: 0;
   }
 }
 
