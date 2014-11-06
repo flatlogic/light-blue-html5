@@ -1,13 +1,13 @@
 $(function(){
 
-    function pageLoad(){
-        //Backgrid part
+    function initBackgrid(){
+        Backgrid.InputCellEditor.prototype.attributes.class = 'form-control input-sm';
 
         var Territory = Backbone.Model.extend({});
 
         var PageableTerritories = Backbone.PageableCollection.extend({
             model: Territory,
-            url: "lib/examples/pageable-territories.json",
+            url: "js/json/pageable-territories.json",
             state: {
                 pageSize: 9
             },
@@ -17,7 +17,6 @@ $(function(){
 
         var pageableTerritories = new PageableTerritories(),
             initialTerritories = pageableTerritories;
-
         function createBackgrid(collection){
             var columns = [{
                 name: "id", // The key of the model attribute
@@ -41,21 +40,45 @@ $(function(){
                 label: "URL",
                 cell: "uri" // Renders the value in an HTML <a> element
             }];
-            if ($(window).width() < 768){
-                //okendoken. removing URL-column for screens smaller than 768px
+            if (LightBlue.isScreen('xs')){
                 columns.splice(3,1)
             }
             var pageableGrid = new Backgrid.Grid({
                 columns: columns,
                 collection: collection,
-                footer: Backgrid.Extension.Paginator.extend({
-                    //okendoken. rewrite template to add pagination class to container
-                    template: _.template('<tr><td colspan="<%= colspan %>"><ul class="pagination"><% _.each(handles, function (handle) { %><li <% if (handle.className) { %>class="<%= handle.className %>"<% } %>><a href="#" <% if (handle.title) {%> title="<%= handle.title %>"<% } %>><%= handle.label %></a></li><% }); %></ul></td></tr>')
-                }),
-                className: 'table table-striped table-editable no-margin'
+                className: 'table table-striped table-editable no-margin mb-sm'
             });
 
-            $("#table-dynamic").html(pageableGrid.render().$el);
+            var paginator = new Backgrid.Extension.Paginator({
+
+                slideScale: 0.25, // Default is 0.5
+
+                // Whether sorting should go back to the first page
+                goBackFirstOnSort: false, // Default is true
+
+                collection: collection,
+
+                controls: {
+                    rewind: {
+                        label: '<i class="fa fa-angle-double-left fa-lg"></i>',
+                        title: "First"
+                    },
+                    back: {
+                        label: '<i class="fa fa-angle-left fa-lg"></i>',
+                        title: "Previous"
+                    },
+                    forward: {
+                        label: '<i class="fa fa-angle-right fa-lg"></i>',
+                        title: "Next"
+                    },
+                    fastForward: {
+                        label: '<i class="fa fa-angle-double-right fa-lg"></i>',
+                        title: "Last"
+                    }
+                }
+            });
+
+            $("#table-dynamic").html('').append(pageableGrid.render().$el).append(paginator.render().$el);
         }
 
         PjaxApp.onResize(function(){
@@ -64,7 +87,7 @@ $(function(){
 
         createBackgrid(pageableTerritories);
 
-        $("#search").change(function(){
+        $("#search-countries").keyup(function(){
 
             var $that = $(this),
                 filteredCollection = initialTerritories.fullCollection.filter(function(el){
@@ -81,8 +104,8 @@ $(function(){
 
         pageableTerritories.fetch();
 
-        //jQuery DataTables part
-
+    }
+    function initDataTables(){
         /* Set the defaults for DataTables initialisation */
         $.extend( true, $.fn.dataTable.defaults, {
             "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
@@ -129,10 +152,10 @@ $(function(){
                     };
 
                     $(nPaging).append(
-                        '<ul class="pagination">'+
-                            '<li class="prev disabled"><a href="#">'+oLang.sPrevious+'</a></li>'+
-                            '<li class="next disabled"><a href="#">'+oLang.sNext+'</a></li>'+
-                            '</ul>'
+                        '<ul class="pagination no-margin">'+
+                        '<li class="prev disabled"><a href="#">'+oLang.sPrevious+'</a></li>'+
+                        '<li class="next disabled"><a href="#">'+oLang.sNext+'</a></li>'+
+                        '</ul>'
                     );
                     var els = $('a', nPaging);
                     $(els[0]).bind( 'click.DT', { action: "previous" }, fnClickHandler );
@@ -203,20 +226,30 @@ $(function(){
         });
 
         $("#datatable-table").dataTable({
-            "sDom": "<'row table-top-control'<'col-md-6 hidden-xs per-page-selector'l><'col-md-6'f>r>t<'row table-bottom-control'<'col-md-6'i><'col-md-6'p>>",
+            "sDom": "<'row'<'col-md-6 hidden-xs'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
             "oLanguage": {
-                "sLengthMenu": "_MENU_ &nbsp; records per page"
+                "sLengthMenu": "_MENU_",
+                "sInfo": "Showing <strong>_START_ to _END_</strong> of _TOTAL_ entries"
+            },
+            "oClasses": {
+                "sFilter": "pull-right",
+                "sFilterInput": "form-control input-transparent ml-sm"
             },
             "aoColumns": unsortableColumns
         });
 
-        $(".chzn-select, .dataTables_length select").select2({
-            minimumResultsForSearch: 10
+        $(".dataTables_length select").selectpicker({
+            width: 'auto'
         });
     }
 
-    pageLoad();
+    function pageLoad(){
+        $('.widget').widgster();
+        initBackgrid();
+        initDataTables();
+    }
 
+    pageLoad();
     PjaxApp.onPageLoad(pageLoad);
 
 });

@@ -690,33 +690,16 @@ textarea,
 /***************************/
 /*        Pagination       */
 /***************************/
+.pagination{
+  font-weight: $font-weight-normal;
 
-.pagination {
-  > .active > a,
-  > .active > span {
-    &,
-    &:hover,
-    &:focus {
-      border-color: transparent;
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span{
+      border-radius: $border-radius-base;
+      margin: 0 2px;
     }
-  }
-
-  > .disabled > a{
-    &,
-    &:hover,
-    &:focus {
-      background-color: $pagination-active-bg;
-      border-color: transparent;
-    }
-  }
-}
-
-.pagination > li > a,
-.pagination > li > span{
-  margin-left: 0;
-
-  &:hover{
-    border-color: transparent;
   }
 }
 

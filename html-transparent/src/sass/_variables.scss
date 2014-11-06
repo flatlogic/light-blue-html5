@@ -208,13 +208,21 @@ $popover-arrow-color:                 $popover-bg !default;
 // Pagination
 // -------------------------
 
+$pagination-color:                     $text-color !default;
 $pagination-bg:                        transparent !default;
 $pagination-border:                    transparent !default;
 
-$pagination-hover-bg: $bg-addition !default;
+$pagination-hover-color:               $white !default;
+$pagination-hover-bg:                  $bg-addition !default;
+$pagination-hover-border:              transparent !default;
 
-$pagination-active-bg: $bg-addition !default;
-$pagination-active-color:              $gray-light !default;
+$pagination-active-color:              $white !default;
+$pagination-active-bg:                 $bg-addition !default;
+$pagination-active-border:             transparent !default;
+
+$pagination-disabled-color:            $gray-lighter !default;
+$pagination-disabled-bg:               transparent !default;
+$pagination-disabled-border:           transparent !default;
 
 // Breadcrumbs
 // -------------------------
