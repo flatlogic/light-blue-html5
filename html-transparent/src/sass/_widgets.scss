@@ -157,40 +157,88 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 /***********************************/
-/**          SEARCH              **/
-/**********************************/
+/**         Search Result         **/
+/***********************************/
 
-.search-result{
-  padding: 5px 15px 5px 10px;
-  margin-bottom: 10px;
-
-  h4{
-    margin: 0;
-  }
-
-  &:nth-child(even){
-    background: $bg-addition;
-  }
-
-  $i: 1;
-  @each $color in $colors{
-
-    &:nth-child(#{$i}n){
-      border-left: 5px solid #{$color};
+.search-result-categories{
+  > li > a {
+    color: $text-color;
+    background-color: transparent;
+    font-weight: $font-weight-normal;
+    &:hover{
+      color: $white;
     }
-    $i: $i + 1;
+
+    > .glyphicon{
+      margin-right: 5px;
+    }
+
+    > .badge{
+      float: right;
+    }
+  }
+}
+
+.search-results-count{
+  margin-top: 10px;
+}
+
+.search-result-item{
+  padding: 20px;
+  background-color: $bg-transparent;
+  border-radius: $border-radius-base;
+  @include clearfix();
+
+  .image-link{
+    display: block;
+    overflow: hidden;
+    border-top-left-radius: $border-radius-base;
+    border-bottom-left-radius: $border-radius-base;
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
+      margin: -20px 0 -20px -20px;
+      float: left;
+      width: 200px;
+    }
+    @media (max-width: $screen-xs-max) {
+      max-height: 200px;
+    }
   }
 
-  &:hover{
-    cursor: pointer;
-    padding-left: 10px;
-
-    border-left-color: $white-dark;
-    @include transition(border-left-color .2s);
+  .image{
+    max-width: 100%;
   }
 
-  & > p{
-    margin-bottom: 0px;
+  .info{
+    margin-top: 2px;
+    font-size: $font-size-small;
+    color: $text-muted;
+  }
+
+  .description{
+    color: $text-muted;
+  }
+
+  + .search-result-item{
+    margin-top: 20px;
+  }
+}
+
+.search-result-item-body{
+  @media (min-width: $screen-sm-min) {
+    margin-left: 200px;
+  }
+}
+
+.search-result-item-heading{
+  font-weight: $font-weight-normal;
+
+  > a {
+    color: $text-color;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    margin: 0;
   }
 }
 
