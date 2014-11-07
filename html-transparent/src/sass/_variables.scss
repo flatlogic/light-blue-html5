@@ -116,9 +116,6 @@ $link-color:            saturate(lighten($blue, 25%), 50%);
 $padding-base-vertical:          5px !default;
 $padding-base-horizontal:        12px !default;
 
-$padding-large-vertical:         10px !default;
-$padding-large-horizontal:       18px !default;
-
 $padding-small-vertical:         4px !default;
 $padding-small-horizontal:       10px !default;
 
@@ -147,7 +144,6 @@ $input-border: #888;
 
 // recalculate input heights
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
 

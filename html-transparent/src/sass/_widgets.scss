@@ -1023,12 +1023,8 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   }
 
   .form-actions {
-    margin: 0 -12px;
+    margin: 0 (-$widget-padding-horizontal);
     padding: 20px 15px 0 15px;
-
-    .btn-lg{
-      padding: 10px 18px;
-    }
 
     .small-circle {
       display: inline-block;
@@ -1037,7 +1033,6 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       line-height: 20px;
       border-radius: 50%;
       background: rgba(0,0,0,.2);
-      vertical-align: middle;
 
       i{
         position: relative;
@@ -1045,15 +1040,18 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
       }
     }
     .forgot {
-      color: $white;
+      display: block;
       text-align: center;
-      text-decoration: underline;
-      padding: 15px 0 15px 0;
+      color: $white;
+      padding: 15px 0;
     }
   }
 
   footer{
-    margin: 0 -12px;
+    margin: 0 (-$widget-padding-horizontal);
+    border-bottom-left-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+    overflow: hidden;
     position: static;
   }
 
