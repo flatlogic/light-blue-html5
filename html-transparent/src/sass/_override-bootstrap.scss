@@ -835,13 +835,23 @@ a.thumbnail:focus {
 
 .alert {
   text-shadow: none;
-  border: none;
+  font-weight: normal;
 }
 
 .close{
   @include transition(opacity .2s ease-out);
   text-shadow: none;
 }
+
+.alert-sm{
+  padding: 10px 12px;
+  font-size: $font-size-small;
+
+  .close{
+    font-size: 18px;
+  }
+}
+
 
 /***************************/
 /*        List Groups      */

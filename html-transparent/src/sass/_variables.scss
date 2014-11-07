@@ -77,7 +77,7 @@ $sidebar-mt: 80px;
 // -------------------------
 
 $widget-shadow:    0 -1px 1px $shadow-color, 0 1px 1px $shadow-color;
-$widget-bg:        #333 !default;
+$widget-bg:        #333 !default; //#ddd
 $widget-mb:        30px;
 
 $text-transparent: rgba($widget-bg, .5);
@@ -170,17 +170,22 @@ $dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
 // Form states and alerts
 // -------------------------
 
-$state-warning-text:             $text-color !default;
-$state-warning-bg:               $orange !default;
+$state-success-text:             $white !default;
+$state-success-border:           #D6E9C6 !default;
+$state-success-bg:               rgba($state-success-border, 0.28) !default;
 
-$state-danger-text:              $text-color !default;
-$state-danger-bg:                $red !default;
+$state-info-text:                $white !default;
+$state-info-border:              #4ab0ce !default;
+$state-info-bg:                  rgba($state-info-border, 0.29) !default;
 
-$state-success-text:             $text-color !default;
-$state-success-bg:               $green !default;
+$state-warning-text:             $white !default;
+$state-warning-border:           #E5BE56 !default;
+$state-warning-bg:               rgba($state-warning-border, 0.28) !default;
 
-$state-info-text:                $text-color !default;
-$state-info-bg:                  $blue !default;
+$state-danger-text:              $white !default;
+$state-danger-border:            rgba(#F26349, .7) !default;
+$state-danger-bg:                rgba($state-danger-border, 0.29) !default;
+
 
 // List group
 // -------------------------

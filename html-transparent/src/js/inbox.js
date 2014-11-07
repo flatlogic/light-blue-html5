@@ -1,23 +1,92 @@
 $(function(){
-    function pageLoad(){
-        $("input").iCheck({
-            checkboxClass: 'icheckbox_square-grey',
-            radioClass: 'iradio_square-grey'
-        });
-    }
+    var bs3Wysihtml5Templates = {
+        "emphasis": function(argument) {
+            var locale = argument.locale,
+                options = argument.options,
+                size = (options.toolbar && options.toolbar.size) ? ' btn-'+options.toolbar.size : '';
+            return "<li>" +
+                "<div class='btn-group'>" +
+                "<a class='btn btn-transparent btn-" + size + "' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'><i class='glyphicon glyphicon-bold'></i></a>" +
+                "<a class='btn btn-transparent btn-" + size + "' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'><i class='glyphicon glyphicon-italic'></i></a>" +
+                "</div>" +
+                "</li>";
+        },
+        "link": function(argument) {
+            var locale = argument.locale,
+                options = argument.options,
+                size = (options.toolbar && options.toolbar.size) ? ' btn-'+options.toolbar.size : '';
+            return "<li>" +
+                "<a class=\"btn btn-sm btn-transparent\" data-wysihtml5-command=\"createLink\" title=\"Insert link\" tabindex=\"-1\" href=\"javascript:;\" unselectable=\"on\">\
+            <span class=\"glyphicon glyphicon-share\"></span>\
+            </a>\
+            <div class=\"bootstrap-wysihtml5-insert-link-modal modal fade\" data-wysihtml5-dialog=\"createLink\">\
+            <div class=\"modal-dialog \">\
+                <div class=\"modal-content\">\
+                    <div class=\"modal-header\">\
+                        <a class=\"close\" data-dismiss=\"modal\">×</a>\
+                        <h3>Insert link</h3>\
+                    </div>\
+                    <div class=\"modal-body\">\
+                        <div class=\"form-group no-margin\">\
+                            <input value=\"http://\" class=\"bootstrap-wysihtml5-insert-link-url form-control bg-gray-lighter\" data-wysihtml5-dialog-field=\"href\" data-parsley-id=\"7677\"><ul class=\"parsley-errors-list\" id=\"parsley-id-7677\"></ul>\
+                            </div>\
+                            <br>\
+                            <div class=\"checkbox mt-sm checkbox-dark\">\
+                                <input type=\"checkbox\" id=\"in-a-new-window\" class=\"bootstrap-wysihtml5-insert-link-target\" checked=\"\">\
+                                <label for=\"in-a-new-window\">\
+                                Open link in new window\
+                                    </label>\
+                                </div>\
+                            </div>\
+                            <div class=\"modal-footer\">\
+                                <a class=\"btn btn-default\" data-dismiss=\"modal\" data-wysihtml5-dialog-action=\"cancel\" href=\"#\">Cancel</a>\
+                                <a href=\"#\" class=\"btn btn-primary\" data-dismiss=\"modal\" data-wysihtml5-dialog-action=\"save\">Insert link</a>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </div>" +
+                "</li>";
+        },
+        "image": function(argument){
+            return "<li><div class=\"bootstrap-wysihtml5-insert-image-modal modal fade\" data-wysihtml5-dialog=\"insertImage\" aria-hidden=\"true\" style=\"display: none;\">\
+            <div class=\"modal-dialog \">\
+                <div class=\"modal-content\">\
+                    <div class=\"modal-header\">\
+                        <a class=\"close\" data-dismiss=\"modal\">×</a>\
+                        <h3>Insert image</h3>\
+                    </div>\
+                    <div class=\"modal-body\">\
+                        <div class=\"form-group no-margin\">\
+                            <input value=\"http://\" class=\"bootstrap-wysihtml5-insert-image-url form-control bg-gray-lighter\" data-parsley-id=\"7359\"><ul class=\"parsley-errors-list\" id=\"parsley-id-7359\"></ul>\
+                            </div>\
+                        </div>\
+                        <div class=\"modal-footer\">\
+                            <a class=\"btn btn-default\" data-dismiss=\"modal\" data-wysihtml5-dialog-action=\"cancel\" href=\"#\">Cancel</a>\
+                            <a class=\"btn btn-primary\" data-dismiss=\"modal\" data-wysihtml5-dialog-action=\"save\" href=\"#\">Insert image</a>\
+                        </div>\
+                    </div>\
+                </div>\
+                </div>\
+                <a class=\"btn btn-sm btn-transparent\" data-wysihtml5-command=\"insertImage\" title=\"Insert image\" tabindex=\"-1\" href=\"javascript:;\" unselectable=\"on\"><span class=\"glyphicon glyphicon-picture\"></span></a>\
+                </li>"
+        },
+        "html": function(argument) {
+            var locale = argument.locale,
+                options = argument.options,
+                size = (options.toolbar && options.toolbar.size) ? ' btn-'+options.toolbar.size : '';
+            return "<li>" +
+                "<div class='btn-group'>" +
+                "<a class='btn btn-transparent btn-" + size + "' data-wysihtml5-action='change_view' title='" + locale.html.edit + "' tabindex='-1'><i class='fa fa-pencil'></i></a>" +
+                "</div>" +
+                "</li>";
+        }
+    };
 
-    pageLoad();
+    var dummyBodies = ["<p>Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>",
+        "somm text bodt. Reall small. ust few lines", "<p>Lose john poor same it case do year we. Full how way even the sigh. Extremely nor furniture fat questions now provision incommode preserved. Our side fail find like now. Discovered travelling for insensible partiality unpleasing impossible she. Sudden up my excuse to suffer ladies though or. Bachelor possible marianne directly confined relation as on he.</p>",
+        "empty"];
 
-    PjaxApp.onPageLoad(pageLoad);
-});
-
-var dummyBodies = ["<p>Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>",
-"somm text bodt. Reall small. ust few lines", "<p>Lose john poor same it case do year we. Full how way even the sigh. Extremely nor furniture fat questions now provision incommode preserved. Our side fail find like now. Discovered travelling for insensible partiality unpleasing impossible she. Sudden up my excuse to suffer ladies though or. Bachelor possible marianne directly confined relation as on he.</p>",
-"empty"];
-
-$(function(){
-
-    function pageLoad(){
+    function initMailboxApp(){
         "use strict";
 
         var STARRED_FOLDER_ID = 33;
@@ -59,7 +128,8 @@ $(function(){
             defaults: {
                 name: '',
                 current: false,
-                order: 100
+                order: 3,
+                unread: 0
             },
 
             sync: function(){
@@ -71,7 +141,7 @@ $(function(){
 
             model: Folder,
 
-            url: 'js/folders.json',
+            url: 'js/json/folders.json',
 
 
             comparator: 'order',
@@ -117,11 +187,11 @@ $(function(){
 
         });
 
-        var EmailList = Backbone.Collection.extend({
+        var EmailList = window.EmailList = Backbone.Collection.extend({
 
             model: Email,
 
-            url: 'js/emails.json',
+            url: 'js/json/emails.json',
 
 
             comparator: function(mail){
@@ -150,8 +220,7 @@ $(function(){
 
 
             events: {
-                "click .selected-checkbox": 'toggleSelected',
-                "ifToggled .selected-checkbox": 'toggleSelected',
+                "change .selected-checkbox": 'toggleSelected',
                 "click .starred": 'toggleStarred',
                 "click .name,.subject": 'openEmail'
             },
@@ -164,10 +233,6 @@ $(function(){
             render: function() {
                 this.$el.attr('class', this.model.get("read") ? '' : 'unread');
                 this.$el.html(this.template(this.model.toJSON()));
-                this.$el.find("input[type='checkbox']").iCheck({
-                    checkboxClass: 'icheckbox_square-grey',
-                    radioClass: 'iradio_square-grey'
-                });
                 return this;
             },
 
@@ -180,8 +245,8 @@ $(function(){
                     return date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());
                 }
                 return ['Jan', 'Feb', 'Mar', 'Apr',
-                    'May', 'Jun', 'Jul', 'Aug',
-                    'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate();
+                        'May', 'Jun', 'Jul', 'Aug',
+                        'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate();
             },
 
             toggleSelected: function(){
@@ -219,6 +284,12 @@ $(function(){
             },
 
             render: function() {
+                $('#widget-email-header').html(
+                    "<h4>" + this.model.get('subject') + "</h4>" +
+                    '<div class="widget-controls"><a href="#"><i class="fa fa-print"></i></a></div>'
+                );
+                $('#folder-stats').addClass('hide');
+                $('#back-btn').removeClass('hide');
                 this.$el.html(this.template(this.model.toJSON()));
                 return this;
             },
@@ -233,13 +304,13 @@ $(function(){
                 }
                 var daysAgo = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24));
                 return ['Jan', 'Feb', 'Mar', 'Apr',
-                    'May', 'Jun', 'Jul', 'Aug',
-                    'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate() + ' (' + daysAgo + ' days ago)';
+                        'May', 'Jun', 'Jul', 'Aug',
+                        'Sep', 'Oct', 'Nov', 'Dec'][date.getMonth()] + ' ' + date.getDate() + ' (' + daysAgo + ' days ago)';
             },
 
 
             replyEmail: function(){
-                var body = "<br/><br/><br/>" +
+                var body = "<br/><br/>" +
                         "<blockquote class='blockquote-sm'>" +
                         this.model.get("body") +
                         "</blockquote> <br/>",
@@ -268,6 +339,11 @@ $(function(){
             },
 
             render: function() {
+                $('#widget-email-header').html(
+                    '<h4>Compose <span class="fw-semi-bold">New</span></h4>'
+                );
+                $('#folder-stats').addClass('hide');
+                $('#back-btn').removeClass('hide');
                 this.$el.html(this.template(this.model.toJSON()));
                 this._initViewComponents();
                 return this;
@@ -278,109 +354,13 @@ $(function(){
             },
 
             _initViewComponents: function(){
-                var customWysihtml5Templates = {
-                    "font-styles": function(locale) {
-                        return "<li class='dropdown'>" +
-                            "<a class='btn btn-sm btn-transparent dropdown-toggle' data-toggle='dropdown' href='#'>" +
-                            "<i class='fa fa-font'></i>&nbsp;<span class='current-font'>" + locale.font_styles.normal + "</span>&nbsp;&nbsp;<i class='fa fa-caret-down'></i>" +
-                            "</a>" +
-                            "<ul class='dropdown-menu'>" +
-                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='div'>" + locale.font_styles.normal + "</a></li>" +
-                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='p'>" + locale.font_styles.normal + "</a></li>" +
-                            "<li><a data-wysihtml5-command='formatInline' data-wysihtml5-command-value='span'>" + locale.font_styles.normal + "</a></li>" +
-                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h1'>" + locale.font_styles.h1 + "</a></li>" +
-                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h2'>" + locale.font_styles.h2 + "</a></li>" +
-                            "<li><a data-wysihtml5-command='formatBlock' data-wysihtml5-command-value='h3'>" + locale.font_styles.h3 + "</a></li>" +
-                            "</ul>" +
-                            "</li>"
-                    },
-                    "emphasis":  function(locale) {
-                        return "<li>" +
-                            "<div class='btn-group'>"
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='bold' title='CTRL+B'><i class='fa fa-bold'></i></a>"
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='italic' title='CTRL+I'><i class='fa fa-italic'></i></a>"
-                            //,+ "<a class='btn' data-wysihtml5-command='underline' title='CTRL+U'>Underline</a>"
-                            + "</div>"
-                            + "</li>"
-                    },
-                    "lists": function(locale) {
-                        return "<li>"
-                            + "<div class='btn-group'>"
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='insertUnorderedList' title='" + locale.lists.unordered + "'><i class='fa fa-list'></i></a>"
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='insertOrderedList' title='" + locale.lists.ordered + "'><i class='fa fa-th-list'></i></a>"
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='Outdent' title='" + locale.lists.outdent + "'><i class='fa fa-outdent'></i></a>"
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='Indent' title='" + locale.lists.indent + "'><i class='fa fa-indent'></i></a>"
-                            + "</div>"
-                            + "</li>"
-                    },
-
-                    "link": function(locale) {
-                        return "<li>"
-
-                            + "<div class='bootstrap-wysihtml5-insert-link-modal modal hide fade'>"
-                            + "<div class='modal-header'>"
-                            + "<a class='close' data-dismiss='modal'>×</a>"
-                            + "<h3>" + locale.link.insert + "</h3>"
-                            + "</div>"
-                            + "<div class='modal-body'>"
-                            + "<input value='http://' class='bootstrap-wysihtml5-insert-link-url input-xlarge'>"
-                            + "</div>"
-                            + "<div class='modal-footer'>"
-                            + "<a href='#' class='btn' data-dismiss='modal'>" + locale.link.cancel + "</a>"
-                            + "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</a>"
-                            + "</div>"
-                            + "</div>"
-
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='createLink' title='" + locale.link.insert + "'><i class='fa fa-share'></i></a>"
-
-                            + "</li>"
-                    },
-
-                    "image": function(locale) {
-                        return "<li>"
-
-                            + "<div class='bootstrap-wysihtml5-insert-image-modal modal hide fade'>"
-                            + "<div class='modal-header'>"
-                            + "<a class='close' data-dismiss='modal'>×</a>"
-                            + "<h3>" + locale.image.insert + "</h3>"
-                            + "</div>"
-                            + "<div class='modal-body'>"
-                            + "<input value='http://' class='bootstrap-wysihtml5-insert-image-url input-xlarge'>"
-                            + "</div>"
-                            + "<div class='modal-footer'>"
-                            + "<a href='#' class='btn' data-dismiss='modal'>" + locale.image.cancel + "</a>"
-                            + "<a href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.image.insert + "</a>"
-                            + "</div>"
-                            + "</div>"
-
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-command='insertImage' title='" + locale.image.insert + "'><i class='fa fa-picture-o'></i></a>"
-
-                            + "</li>"
-                    },
-
-                    "html": function(locale) {
-                        return "<li>"
-                            + "<div class='btn-group'>"
-                            + "<a class='btn btn-sm btn-transparent ' data-wysihtml5-action='change_view' title='" + locale.html.edit + "'><i class='fa fa-pencil'></i></a>"
-                            + "</div>"
-                            + "</li>"
-                    }
-                };
-                this.$("#email-body").wysihtml5({
+                this.$("textarea").wysihtml5({
                     html: true,
-                    customTemplates: customWysihtml5Templates,
-                    stylesheets: ['css/application.min.css'],
-                    parserRules: wysihtml5ParserRules,
-                    events: {
-                        load: function(){
-                            $(this.composer.doc.head).prepend("<style>body{background: none !important;}</style>");
-                        }
+                    customTemplates: bs3Wysihtml5Templates,
+                    stylesheets: ['data:text/css,body{ background-color: transparent !important; }'],
+                    toolbar: {
+                        size: 'sm btn-transparent'
                     }
-                });
-
-                this.$('#email-compose').fileupload({
-                    url: 'server/php/',
-                    autoUpload: true
                 });
             }
 
@@ -392,24 +372,14 @@ $(function(){
 
             attributes: {
                 id: 'folder-view',
-                class: 'folder-view table table-striped'
+                class: 'table table-striped table-emails table-hover table-lg mb-sm'
             },
 
 
             template: _.template($('#folders-view-template').html()),
 
-            folderActionsTemplate: _.template($('#folder-actions-template').html()),
-
             events: {
-                "click #toggle-all":  "toggleAll",
-                "ifToggled #toggle-all": "toggleAll", //handle iCheck events
-                "click #select-all": 'selectAll',
-                "click #select-none": 'selectNone',
-                "click #select-read": 'selectRead',
-                "click #select-unread": 'selectUnread',
-                "click #mark-as-read": 'markSelectedAsRead',
-                "click #mark-as-unread": 'markSelectedAsUnread',
-                "click #delete": 'deleteEmails'
+                "change #toggle-all":  "toggleAll"
             },
 
 
@@ -424,6 +394,18 @@ $(function(){
             },
 
             render: function() {
+                $('#widget-email-header').html($('#email-list-view-header-template').html());
+                $('#folder-stats').removeClass('hide');
+                $('#back-btn').addClass('hide');
+                /* manually attach events as we have few elements outside of main $el */
+                $('#select-all').on('click', $.proxy(this.selectAll, this));
+                $('#select-none').on('click', $.proxy(this.selectNone, this));
+                $('#select-read').on('click', $.proxy(this.selectRead, this));
+                $('#select-unread').on('click', $.proxy(this.selectUnread, this));
+                $('#mark-as-read').on('click', $.proxy(this.markSelectedAsRead, this));
+                $('#mark-as-unread').on('click', $.proxy(this.markSelectedAsUnread, this));
+                $('#delete').on('click', $.proxy(this.deleteEmails, this));
+
                 this.resetEmails();
                 this.delegateEvents(this.events);
                 return this;
@@ -433,12 +415,8 @@ $(function(){
                 var selectedCount = this.currentFolderEmails.where({selected: true}).length,
                     allSelected = selectedCount == this.currentFolderEmails.length,
                     anySelected = selectedCount > 0;
-                this.$('#folder-actions').html(this.folderActionsTemplate({allSelected: allSelected, anySelected: anySelected}));
                 this.$toggleAllCheckbox = this.$('#toggle-all');
-                this.$el.find("#toggle-all").iCheck({
-                    checkboxClass: 'icheckbox_square-grey',
-                    radioClass: 'iradio_square-grey'
-                });
+                this.$toggleAllCheckbox.prop('checked', allSelected);
             },
 
 
@@ -449,14 +427,17 @@ $(function(){
 
             renderEmails: function() {
                 this.reset();
-                this.currentFolderEmails.each(this.addOne, this);
+                if (this.currentFolderEmails.length){
+                    this.currentFolderEmails.each(this.addOne, this);
+                } else {
+                    this.$el.find("tbody").append('<tr><td colspan="100">Nothing here yet</td></tr>')
+                }
                 var currentFolder = this.folders.where({current: true})[0],
                     unreadCount = this.currentFolderEmails.where({read: false}).length,
                     currentFolderTitle = 'Inbox';
                 if (currentFolder){
                     currentFolderTitle = currentFolder.get("name");
                 }
-                $('#folder-title').html(currentFolderTitle + ' <small>(' + unreadCount + ' unread messages)</small>')
             },
 
             reset: function(){
@@ -537,12 +518,13 @@ $(function(){
         var AppView = Backbone.View.extend({
 
 
-            el: $("#mailbox-app"),
+            el: $(".content"),
             $content: $("#mailbox-content"),
 
             events: {
                 "keyup #mailbox-search": 'search',
-                "click #compose-btn": 'handleComposeBtnClick'
+                "click #compose-btn": 'handleComposeBtnClick',
+                "click #back-btn": 'handleBackBtnClick'
             },
 
             initialize: function() {
@@ -564,6 +546,9 @@ $(function(){
             },
 
             setCurrentView: function(view){
+                if (this.currentView !== EmailsView){
+                    this.currentView.remove();
+                }
                 this.currentView = view;
                 this.render();
             },
@@ -596,6 +581,12 @@ $(function(){
 
             handleComposeBtnClick: function(){
                 this.showComposeView();
+                return false;
+            },
+
+            handleBackBtnClick: function(){
+                this.showEmailsView();
+                return false;
             },
 
             showComposeView: function(model){
@@ -608,7 +599,30 @@ $(function(){
         var App = new AppView;
     }
 
-    pageLoad();
+    /* this is only for demo. can be removed */
+    function initMailboxAppDemo(){
+        setTimeout(function(){
+            $('#app-alert').removeClass('hide')
+                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+                    $(this).removeClass('animated bounceInLeft');
+                });
+        }, 3000)
+    }
 
+    function pageLoad(){
+        $('#wysiwyg').wysihtml5({
+            html: true,
+            customTemplates: bs3Wysihtml5Templates,
+            stylesheets: ['data:text/css,body{ background-color: transparent !important; }'],
+            toolbar: {
+                size: 'sm btn-transparent'
+            }
+        });
+
+        initMailboxApp();
+
+        initMailboxAppDemo()
+    }
+    pageLoad();
     PjaxApp.onPageLoad(pageLoad);
 });

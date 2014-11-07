@@ -327,170 +327,171 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 /**             Inbox             **/
 /***********************************/
 
-.mailbox-folders{
-  margin-top: $line-height-computed;
 
-  li a{
-    display: block;
-    padding: 6px 15px;
+.nav-email-folders{
+  > li > a {
+    color: $gray-lighter;
+    font-weight: $font-weight-normal;
+    background-color: transparent;
+    &:hover{
+      background-color: $bg-addition;
+      color: $text-color;
+    }
+
+    > .glyphicon{
+      margin-right: 5px;
+    }
+
+    > .fa-circle{
+      margin-top: 3px;
+    }
+
+    > .badge{
+      background-color: $brand-danger;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+
+  > li.active > a{
+    &,
+    &:hover,
+    &:focus {
+      background-color: $bg-addition;
+      color: $text-color;
+      font-weight: $font-weight-semi-bold;
+
+      > .badge{
+        color: $gray-dark
+      }
+    }
+  }
+}
+
+.widget-email-count{
+  display: inline-block;
+  margin: 0;
+  font-size: $font-size-small;
+  color: $text-muted;
+  line-height: 29px;
+
+  + .widget-email-pagination{
+    margin-left: 10px;
+    border-left: 1px solid $gray-semi-lighter;
+    padding-left: 15px;
+    border-radius: 0;
+    vertical-align: -9px;
+  }
+}
+
+.widget-email-pagination{
+  margin: 0;
+}
+
+.table-emails{
+  margin-bottom: 0;
+
+  td > .checkbox,
+  th > .checkbox{
+    top: -13px;
+  }
+
+  .name,
+  .subject,
+  .date{
+    cursor: pointer;
+  }
+
+  .date{
+    text-align: right;
+    min-width: 65px;
+  }
+
+  .unread{
+    font-weight: $font-weight-semi-bold;
+    color: $text-color;
+  }
+
+  .favorite{
+    text-align: center;
+  }
+
+  .starred{
     color: $text-muted;
-    text-decoration: none;
+    cursor: pointer;
     @include transition(color .2s);
     &:hover{
       color: $text-color;
     }
+
+    .fa-star{
+      color: $brand-warning;
+    }
   }
 
-  .active a{
-    border-left: 5px solid $red;
-    padding-left: 10px;
-    color: $text-color;
-  }
-}
+  .widget-table-overflow & td,th{
+    &:first-child{
+      padding-left: $widget-padding-horizontal;
+    }
 
-.mailbox{
-  .folder-title{
-    margin: 0;
-    line-height: 30px;
-    float: left;
-  }
-
-  .input-search{
-    width: 140px;
-    @include transition(width .2s);
-    &:focus{
-      width: 200px;
+    &:last-child{
+      padding-right: $widget-padding-horizontal;
     }
   }
 }
 
-.mailbox-content{
-  margin-top: $line-height-computed;
+.compose-view{
+  margin: $widget-padding-vertical $widget-padding-horizontal;
+}
 
-  .folder-view{
-
-    tbody{
-      color: $text-muted;
-    }
-    .icheckbox_square-grey{
-      @include transform(scale(0.72));
-    }
-
-    .total-pages{
-      text-align: right;
-    }
-
-    .tiny-column{
-      width: 18px;
-    }
-
-    .name{
-      width: 140px;
-    }
-
-    .name, .subject{
-      cursor: pointer;
-    }
-
-    .date{
-      text-align: right;
-      width: 60px;
-    }
-
-    .unread{
-      font-weight: 600;
-      color: $text-color;
-    }
-
-    .starred{
-      color: $text-muted;
-      cursor: pointer;
-      @include transition(color .2s);
-      &:hover{
-        color: $text-color;
-      }
-    }
+.email-view{
+  margin: $widget-padding-vertical $widget-padding-horizontal;
+  hr{
+    margin: 5px 0;
   }
 
+  .email-body{
+    margin-top: $line-height-computed;
+  }
+}
 
-  .email-view{
-    hr{
-      margin: 5px 0;
-    }
+.email-details img{
+  width: 30px;
+  height: 30px;
+  float: left;
+}
 
-    .print{
-      margin-right: 6px;
-      color: $text-muted;
-      text-decoration: none;
-      @include transition(color .2s);
-      &:hover{
-        color: $text-color;
-      }
-    }
+.email-details-content{
+  @include clearfix();
 
-    .email-body{
-      margin-top: $line-height-computed;
-    }
+  .email{
+    color: $text-muted;
+    font-size: $font-size-mini;
   }
 
-  .email-details img{
-    width: 30px;
-    height: 30px;
-    float: left;
+  .receiver{
+    display: block;
+    color: $text-muted;
+    margin-top: -6px;
   }
 
-  .email-details-content{
-    margin-left: 30px;
-    padding: 0 5px;
+  .email-date{
+    margin-right: 10px;
+    line-height: 24px;
+    vertical-align: middle;
+  }
+}
 
-    .email{
-      color: $text-muted;
-      font-size: $font-size-small;
-    }
-
-    .receiver{
+.email-attachments{
+  .attachment{
+    img{
       display: block;
-      color: $text-muted;
-      margin-top: -6px;
     }
 
-    .email-date{
-      margin-right: 10px;
-      line-height: 24px;
-      vertical-align: middle;
-    }
-  }
-
-  .email-attachments{
-    .attachment{
-      img{
-        display: block;
-      }
-
-      .title{
-        margin: 0;
-        font-weight: bold;
-      }
-
-    }
-  }
-
-  .form-email-compose{
-    .control-label{
-      width: 46px;
+    .title{
+      margin: 0;
+      font-weight: bold;
     }
 
-    .controls{
-      margin-left: 51px;
-    }
-
-    .wysihtml5-sandbox{
-      width: 100% !important;
-    }
-
-    .control-group{
-      margin-bottom: $line-height-computed / 2;
-    }
   }
 }
 
