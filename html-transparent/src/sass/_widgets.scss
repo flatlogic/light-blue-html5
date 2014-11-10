@@ -243,50 +243,50 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 /***********************************/
-/**          404                  **/
-/**********************************/
+/**          ERROR PAGE           **/
+/***********************************/
 
-.widget-404{
+//.error-page{
+//  background-color: $gray-semi-lighter;
+//}
 
-  h1{
-    font-size: 140px;
-    font-weight: 300;
-    line-height: 140px;
-    margin: 0;
-    text-rendering: optimizeLegibility;
-    color: $white;
-  }
+.error-container{
+  padding-top: 5%;
+  text-align: center;
 
-  h3{
-    font-weight: normal;
-    color: $gray-dark;
-  }
-
-  p{
-    color: $gray-dark;
-  }
-
-  .description{
-    vertical-align: middle;
-    padding-top: 5px;
+  > .btn{
+    padding-left: 35px;
+    padding-right: 35px;
   }
 }
 
-.widget-404-search, .widget-404{
-  width: 600px;
-}
-
-.widget-404-search{
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.single-widget-container .widget-404-search{
-  margin-top: 40px;
-
-  .search-field{
-    width: 456px;
+.error-code{
+  font-size: 80px;
+  font-weight: $font-weight-thin;
+  color: $white;
+  @media (min-width: $screen-sm-min) {
+    font-size: 180px;
   }
+}
+
+.error-info{
+  font-size: 20px;
+  color: $gray-dark;
+}
+
+.error-help{
+  font-size: 14px;
+}
+
+.error-page .page-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: $font-size-small;
+  color: $text-muted;
+  text-align: center;
 }
 
 /***********************************/
