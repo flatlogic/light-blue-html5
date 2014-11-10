@@ -1,30 +1,29 @@
-Light Blue v2.1 (April 29)
+Light Blue v3.0 (November 11)
 =========
 
-Now with lightening fast **ajax + pushState** page loading!
+Now with **handlebars** and **bower** under the hood!
 
-Available in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!
-
-Light Blue is a **next generation** dashboard template based on the latest **Flat** design. There are few reasons why we created it:.
+Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
   - We didn't like the darkness of most of admin templates, so we created this **light** one.
   - We didn't like the slowness of most of admin templates, so we created this **fast** one.
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
+![Light Blue Preview](http://demo.okendoken.com/3.0/light-blue-screenshot.png)
 
-New Version 2.1 Released!
+New Version 3.0 Released!
 -
 
-- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
-- Messenger notifications
-- Input Sliders
-- Parsley 2.0.0
-- White version bug fixes
+- Entire codebase rewrite & improvement
+- Grunt tasks to build an application
+- Bower package management
+- General layout redesign
+- Handlebars templates
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
-**Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
+**Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.
+It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
 
 We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
 
@@ -35,6 +34,14 @@ Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [o
 
 Changelog
 -
+
+Version 2.1
+
+- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
+- Messenger notifications
+- Input Sliders
+- Parsley 2.0.0
+- White version bug fixes
 
 Version 2.0
 
@@ -107,6 +114,8 @@ Full feature list
     *   Option to select between two perfectly chosen background gradients
   - White & Transparent Versions
   - Fully Responsive Layout: from small mobile to large desktop devices.
+  - Bower package manager
+  - Grunt tasks
   - Print Optimized
   - 3 Sidebar Options
     *   Sidebar can be shown or hidden

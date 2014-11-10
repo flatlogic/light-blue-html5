@@ -18,7 +18,7 @@ javascripts_dir = "src/js"
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true
-environment = :development #:production #setting this variable via grunt config
+# environment = :development #:production #setting this variable via grunt config
 
 #set to false if there is not need to display comments in applications.css
 #line_comments = false

@@ -1,3 +1,28 @@
+V3.0
+- Entire codebase rewrite & improvement
+- Grunt tasks to build an application
+- Bower package management
+- General layout redesign
+- Handlebars templates
+
+Files changed:
+ html:
+  * *.html -> *.hbs (compiling html from handlebars templates)
+  * tables_static.hbs
+  * special_search.hbs
+  * special_404.hbs -> error.hbs
+  * login.hbs
+  * --new-- partials/layout.hbs
+  * --new-- partials/sidebar.hbs
+ js:
+  * app.js
+
+ styles:
+  * sass/_base
+  * sass/application
+  * --new-- sass/_widgets
+  * --new-- sass/_utils
+
 V2.1
 - Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
 - Messenger notifications
