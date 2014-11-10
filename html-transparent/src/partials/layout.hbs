@@ -82,7 +82,7 @@
     <div class="setting clearfix">
         <div>White Version</div>
         <div>
-            <a href="white/" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
+            <a data-toggle="modal" data-target="#white-temp" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
         </div>
     </div>
 </script>
@@ -102,6 +102,27 @@
             class="btn btn-transparent btn-sm">Auto</button>
     <% } %>
 </script>
+
+<!-- Modal -->
+<div class="modal fade" id="white-temp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-wrench"></i> Under cunstruction</h4>
+            </div>
+            <div class="modal-body">
+                <p>Currently we're working hard implementing an update for a White Version of Light Blue template.
+                    Approximate release date is <strong>November 20, 2014</strong>.</p>
+                <p>Meanwhile, you may want to review <a href="../2.1/white">White Version 2.1</a>, but keep in mind - it will be heavily modified in 3.0 update.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-inverse" data-dismiss="modal">Back to Light Blue 3.0</button>
+                <a href="../2.1/white" type="button" class="btn btn-danger">Review White Version 2.1</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {{#block "scripts"}}
     <!-- page specific scripts -->
