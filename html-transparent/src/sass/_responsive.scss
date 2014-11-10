@@ -4,106 +4,23 @@
   }
 }
 
-@media (min-width: 768px) {
-  .nav-collapse.collapse {
-    height: auto !important;
-    overflow: visible !important;
-    display: block;
-  }
-
+@media (min-width: $screen-sm-min) {
   .sidebar-hidden .sidebar{
     display: none;
   }
 }
 
-@media (min-width: 768px) and (max-width: 979px){
+@media (max-width: $screen-xs-max){
 
-  .page-header{
-    margin: 22px 2.3% 0;
-  }
-}
-
-@media (max-width: 1048px) {
-
-  @include sidebar-icons("");
-
-  .sidebar{
-    @include sidebar-settings;
-
-    .settings{
-      display: none;
-    }
-  }
-
-  .sidebar-on-right{
-    .sidebar{
-      right: 0;
-      margin: $sidebar-mt 1.6% 0 0;
-    }
-
-    .wrap{
-      margin-left: 0;
-      margin-right: 62px;
-    }
-
-    .logo{
-      left: auto;
-      right: 1.6%;
-      padding-right: 2px;
-      width: 40px;
-      top: 13px;
-    }
-  }
-  .sidebar-hidden{
-    .sidebar{
-      display: none;
-    }
-
-    .wrap{
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-
-  .wrap{
+  .sidebar.nav-collapse,
+  .sidebar.nav-collapse.collapse {
     overflow: hidden;
+    height: 0;
   }
 
-  .landing{
-    .slide-one-header,
-    .slide-two-header,
-    .slide-three-header{
-      margin: 10px 0;
-    }
-
-    .logo{
-      width: auto;
-    }
-
-    .widget-about{
-      margin-top: 0;
-    }
+  .sidebar.nav-collapse.collapse.in{
+    height: auto;
   }
-
-  .carousel-landing{
-    height: 370px;
-    h1{
-      font-size: 30px;
-    }
-
-    .btn{
-      margin-bottom: 10px;
-    }
-
-    .btn-version-preview{
-      margin-top: 0;
-    }
-  }
-}
-
-//this media quiery is out of order because Chrome thinks
-//max-width: 1048px is more important than max-width: 767px
-@media (max-width: 767px){
 
   body{
     padding-left: 20px;
@@ -115,9 +32,7 @@
   }
 
   .sidebar,
-  .sidebar-on-right .sidebar,
-  .sidebar-on-right .sidebar.sidebar-icons,
-  .sidebar.sidebar-icons{
+  .sidebar-on-right .sidebar{
     display: block;
     position: absolute;
     top: 0;
@@ -130,33 +45,6 @@
       margin: 10px 0;
     }
 
-    .side-nav li{
-      a{
-        padding: 8px 25px;
-        text-align: left;
-        width: auto;
-        @include transition(width 0);
-
-        i[class*=fa]{
-          padding-top: 1px;
-        }
-      }
-
-      .name{
-        margin-left: 10px;
-        display: inline-block;
-      }
-
-    }
-
-    .side-nav > li.active > a{
-      border-right: 5px solid $white;
-      padding-right: 20px;
-    }
-
-    .panel-collapse.in li a{
-      width: auto;
-    }
   }
 
   .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap{
@@ -170,10 +58,7 @@
 
   .logo,
   .sidebar-on-right .logo,
-  .sidebar-hidden .logo,
-  .logo.sidebar-icons,
-  .sidebar-on-right .logo.sidebar-icons,
-  .sidebar-hidden .logo.sidebar-icons,{
+  .sidebar-hidden .logo{
     display: block;
     left: 1.6%;
     right: auto;
@@ -225,12 +110,6 @@
     margin: 0;
 
     @include transition(top .3s ease);
-  }
-
-  .nav-collapse,
-  .nav-collapse.collapse {
-    overflow: hidden;
-    height: 0;
   }
 
   .mailbox{
@@ -291,12 +170,10 @@
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: $screen-xs-min){
 
   .sidebar,
-  .sidebar-on-right .sidebar,
-  .sidebar-on-right .sidebar.sidebar-icons,
-  .sidebar.sidebar-icons{
+  .sidebar-on-right .sidebar{
     margin: 90px 2.5641%;
     width: 94.8718%;
   }

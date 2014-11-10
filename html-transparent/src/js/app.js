@@ -338,10 +338,16 @@ $(function(){
     });
 
     $(window).resize(function(){
+        //if ($(window).width() < 768){
+            closeNavigation();
+        //}
+    });
+
+    $(document).on('pjax-app:loaded', function(){
         if ($(window).width() < 768){
             closeNavigation();
         }
-    });
+    })
 
     //class-switch for button-groups
     $(".btn-group > .btn[data-toggle-class]").click(function(){

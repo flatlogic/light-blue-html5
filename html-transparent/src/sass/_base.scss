@@ -1,5 +1,3 @@
-@include sidebar-icons(".sidebar-icons");
-
 $i: 1;
 @each $color in $colors{
 
@@ -50,7 +48,7 @@ $i: 1;
     position: fixed;
   }
   left: 65px;
-  top: 13px;
+  top: 17px;
   z-index: 1;
   a{
     color: $white;
@@ -91,6 +89,10 @@ $i: 1;
 
   .panel{
     background: none;
+  }
+
+  &.collapse{
+    display: block;
   }
 }
 
@@ -242,6 +244,10 @@ $i: 1;
       margin-top: $line-height-computed/2;
     }
   }
+
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
 }
 
 .sidebar-alerts{
@@ -255,6 +261,10 @@ $i: 1;
       opacity: 1;
       color: rgba($white, .9);
     }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    display: none;
   }
 }
 
@@ -271,46 +281,26 @@ $i: 1;
       font-size: 9px;
     }
   }
+
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
 }
 
 .sidebar-on-right{
   .sidebar{
     right: 0;
     margin: $sidebar-mt 25px 0 0;
-
-    &.sidebar-icons{
-      margin-right: 1.6%;
-    }
-  }
-
-  .side-nav > li.active > a{
-    border-left: none;
-    border-right: 4px solid $white;
-    padding-left: 20px;
-    padding-right: 16px;
-    background: $sidebar-item-active-bg;
   }
 
   .wrap{
     margin-left: 0;
     margin-right: $wrap-margin;
-
-    &.sidebar-icons{
-      margin-right: 62px;
-    }
   }
 
   .logo{
     right: 67px;
     left: auto;
-
-    &.sidebar-icons{
-      left: auto;
-      right: 1.6%;
-      padding-right: 2px;
-      width: 40px;
-      top: 13px;
-    }
   }
 }
 
@@ -322,9 +312,6 @@ $i: 1;
   .wrap{
     margin-left: 0;
     margin-right: 0;
-    &.sidebar-icons{
-      margin-right: 0;
-    }
   }
 }
 
@@ -568,19 +555,16 @@ position: absolute;
   }
 
   .search-query{
-    @include box-sizing(content-box);
-    min-height: 0;
-    padding: 4px 14px;
     color: $text-color;
     border: none;
     background:url(../img/search-white.png) 5px 5px no-repeat $bg-transparent;
     padding-left: 26px;
     @include placeholder(rgba(#eee, .76));
     @include transition(width .2s);
-    width: 100px;
+    width: 200px;
 
     &:focus{
-      width: 120px;
+      width: 240px;
     }
   }
 
@@ -676,7 +660,7 @@ position: absolute;
 .messages{
   background: $popover-bg;
   @include box-shadow(none);
-  @include border-radius(0);
+  border-radius: $border-radius-base;
   border: none;
   color: $white;
 }
@@ -726,7 +710,7 @@ position: absolute;
 .support{
   background: $popover-bg;
   @include box-shadow(none);
-  @include border-radius(0);
+  border-radius: $border-radius-base;
   border: none;
   color: $white;
 
@@ -771,10 +755,10 @@ position: absolute;
 .settings-popover{
   background: $popover-bg;
   @include box-shadow(none);
-  @include border-radius(0);
+  border-radius: $border-radius-base;
   border: none;
   color: $white;
-  width: 114px;
+  width: 117px;
   font-size: $font-size-small;
 
   //override js-set variables
@@ -819,7 +803,7 @@ position: absolute;
   width: 180px;
   background: $popover-bg;
   @include box-shadow(none);
-  @include border-radius(0);
+  border-radius: $border-radius-base;
   border: none;
   color: $white;
 }
@@ -1445,14 +1429,6 @@ legend + .control-group {
     .sidebar-on-right &{
       margin-right: $wrap-margin;
       margin-left: 0;
-    }
-
-    .sidebar-icons &{
-      margin-left: 62px;
-      .sidebar-on-right &{
-        margin-right: 62px;
-        margin-left: 0;
-      }
     }
   }
 
