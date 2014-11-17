@@ -10,7 +10,7 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-![Light Blue Preview](http://demo.okendoken.com/3.0/light-blue-screenshot.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.0/light-blue-preview.png)
 
 New Version 3.0 Released!
 -
@@ -102,7 +102,8 @@ Version 1.1
 Next Release Plan
 -
 
-  - UI improvements
+  - White Version 3.0
+  - Design Improvements
   - Your suggestions!
 
 Full feature list
