@@ -14,7 +14,7 @@
   }
   // AMD
   else if (typeof define == "function" && define.amd) {
-    define(["underscore", "backbone"], factory);
+    define(["../../../../bower_components/underscore/underscore", "backbone"], factory);
   }
   // Browser
   else if (typeof _ !== "undefined" && typeof Backbone !== "undefined") {
