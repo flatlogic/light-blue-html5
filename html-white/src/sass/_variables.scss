@@ -1,0 +1,250 @@
+// Light Blue variables
+// -------------------------
+// -------------------------
+
+$libs-folder: '../../../bower_components' !default;
+$libs-compiled-folder: '../lib' !default;
+
+// Colors
+// ------------------------
+
+$lime:                  #8CBF26 !default;
+$red:                   #e5603b !default;
+$red-dark:              #d04f4f !default;
+$blue:                  #618fb0 !default;
+$green:                 #56bc76 !default;
+$orange:                #eac85e !default;
+$pink:                  #E671B8 !default;
+$purple:                #A700AE !default;
+$brown:                 #A05000 !default;
+$teal:                  #4ab0ce !default;
+$white:                 #ffffff !default;
+$black:                 #000000 !default;
+
+$colors: $red, $orange, $lime, $green, $teal, $blue, $brown, $red-dark;
+$color-names: red, orange, lime, green, teal, blue, brown, red-dark;
+
+$white-dark:            #f8f8f8 !default;
+$shadow-color:            rgba(#676767, .4) !default;
+
+//copy from BS
+$gray-darker:           lighten(#000, 13.5%) !default; // #222
+$gray-dark:             #555 !default;
+$gray:                  #666;
+$gray-light:            lighten(#000, 60%) !default;   // #999
+$gray-lighter:          lighten(#000, 93.5%) !default; // #eee
+$gray-semi-light:       #777;
+$gray-semi-lighter:     #ddd;
+
+$brand-primary:         $blue !default;
+$brand-success:         $green !default;
+$brand-warning:         $orange !default;
+$brand-danger:          $red !default;
+$brand-info:            $teal !default;
+
+// Typography
+// -------------------------
+$text-color: $white-dark !default;
+$text-bold: lighten($text-color, 3%);
+$text-muted: darken($text-color, 15%) !default;
+
+$font-family-sans-serif:  "Open Sans", sans-serif !default;
+
+$font-size-base:          13px !default;
+$font-size-large:         $font-size-base * 1.25 !default;
+$font-size-larger:        $font-size-base + 1;
+$font-size-small:         12px !default;
+$font-size-mini:          $font-size-base * 0.75 !default;
+$font-size-index:         $font-size-base * 0.7 !default;
+
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-thin: 300 !default;
+$font-weight-base: $font-weight-thin !default;
+
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+// Layout
+// -------------------------
+
+$wrap-margin: 185px;
+$sidebar-mt: 80px;
+
+
+// Scaffolding
+// -------------------------
+
+$widget-bg:        #333 !default; //#ddd
+$widget-mb:        30px;
+
+$text-transparent: rgba($widget-bg, .5);
+$bg-addition: rgba($widget-bg, .25);
+$bg-transparent: rgba($widget-bg, .4);
+
+$widget-padding-vertical: 12px;
+$widget-padding-horizontal: 17px;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
+
+
+$sidebar-item-active-bg: rgba($black,.07);
+$sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
+
+/////////////////////////////////////////////////
+//              Font Awesome vars              //
+/////////////////////////////////////////////////
+
+$fa-font-path: "./fonts/font-awesome";
+
+/////////////////////////////////////////////////
+//           Override bootstrap vars           //
+/////////////////////////////////////////////////
+
+$bootstrap-sass-asset-helper: false;
+
+$icon-font-path: "fonts/bootstrap/" !default;
+
+// Links
+// -------------------------
+
+$link-color:            saturate(lighten($blue, 25%), 50%);
+
+// Components
+// -------------------------
+
+$padding-base-vertical:          5px !default;
+$padding-base-horizontal:        12px !default;
+
+$padding-small-vertical:         4px !default;
+$padding-small-horizontal:       10px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.5 !default;
+
+$border-radius-base:        3px !default;
+
+// Buttons
+// -------------------------
+
+$btn-font-weight:                $font-weight-base !default;
+
+$btn-default-color:              $white !default;
+$btn-default-bg:                 $gray !default;
+$btn-default-border:             rgba(0, 0, 0, 0.15) !default;
+
+$btn-inverse-color:              $gray-dark !default;
+$btn-inverse-bg: $white-dark !default;
+
+// Forms
+// -------------------------
+
+$input-color: $gray-dark;
+$input-border: #888;
+
+// recalculate input heights
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+
+$legend-color:                   $white !default;
+
+// Dropdowns
+// -------------------------
+
+$dropdown-bg:                    $white !default;
+$dropdown-border:                rgba(0,0,0,.2) !default;
+
+$dropdown-link-active-color:     #fff !default;
+$dropdown-link-active-bg:        $blue !default;
+
+$dropdown-link-color:            $gray !default;
+$dropdown-link-hover-color:      $white !default;
+$dropdown-link-hover-bg:         $dropdown-link-active-bg !default;
+
+// Form states and alerts
+// -------------------------
+
+$state-success-text:             $white !default;
+$state-success-border:           #D6E9C6 !default;
+$state-success-bg:               rgba($state-success-border, 0.28) !default;
+
+$state-info-text:                $white !default;
+$state-info-border:              #4ab0ce !default;
+$state-info-bg:                  rgba($state-info-border, 0.29) !default;
+
+$state-warning-text:             $white !default;
+$state-warning-border:           #E5BE56 !default;
+$state-warning-bg:               rgba($state-warning-border, 0.28) !default;
+
+$state-danger-text:              $white !default;
+$state-danger-border:            rgba(#F26349, .7) !default;
+$state-danger-bg:                rgba($state-danger-border, 0.29) !default;
+
+
+// List group
+// -------------------------
+$list-group-bg: $bg-transparent !default;
+$list-group-border:           transparent !default;
+$list-group-link-color:       $text-color;
+$list-group-hover-bg: $bg-addition;
+// Jumbotron
+// -------------------------
+
+$jumbotron-color:                inherit !default;
+$jumbotron-bg:                   transparent !default;
+
+$jumbotron-heading-color:        inherit !default;
+
+//table colors
+
+$table-border-color:                       rgba($widget-bg, .35) !default; // table and cell border
+
+// Popovers
+// -------------------------
+$popover-bg:                          rgba($widget-bg, .85) !default;
+$popover-arrow-color:                 $popover-bg !default;
+
+// Pagination
+// -------------------------
+
+$pagination-color:                     $text-color !default;
+$pagination-bg:                        transparent !default;
+$pagination-border:                    transparent !default;
+
+$pagination-hover-color:               $white !default;
+$pagination-hover-bg:                  $bg-addition !default;
+$pagination-hover-border:              transparent !default;
+
+$pagination-active-color:              $white !default;
+$pagination-active-bg:                 $bg-addition !default;
+$pagination-active-border:             transparent !default;
+
+$pagination-disabled-color:            $gray-lighter !default;
+$pagination-disabled-bg:               transparent !default;
+$pagination-disabled-border:           transparent !default;
+
+// Breadcrumbs
+// -------------------------
+$breadcrumb-bg:               transparent !default;
+$breadcrumb-color:            $text-color !default;
+$breadcrumb-active-color:     darken($breadcrumb-color, 25%) !default;
+$breadcrumb-separator:        ">" !default;
+
+// Carousel
+// ------------------------
+
+$carousel-text-shadow:                        none !default;
+
+$carousel-control-width:                      6% !default;
+$carousel-control-opacity:                    1 !default;
+
+$carousel-indicator-active-bg:                $red !default;
+$carousel-indicator-border-color:             transparent !default;
+
+// Code (inline and block)
+// --------------------------------------------------
+
+$pre-bg: $bg-addition !default;
+$pre-color:                   $text-color !default;
+$pre-border-color: $bg-transparent !default;
