@@ -123,6 +123,14 @@ module.exports = function(grunt) {
                 cwd: 'bower_components/font-awesome/fonts',
                 src: '**/*.*',
                 dest: '<%= config.distFolder %>/css/fonts/font-awesome'
+            },
+            syncVersionsStyles: {
+                expand: true,
+                cwd: 'html-transparent/src/sass',
+                src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
+                    '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
+                    '_responsive.scss', '_svg.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
+                dest: 'html-white/src/sass'
             }
         },
 
@@ -145,6 +153,10 @@ module.exports = function(grunt) {
             templates: {
                 files: ['<%= config.srcFolder %>/*.hbs', '<%= config.srcFolder %>/partials/*.hbs'],
                 tasks: ['handlebarslayouts']
+            },
+            syncSass: {
+                files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
+                tasks: ['copy:syncVersionsStyles']
             },
             sass: {
                 files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],

@@ -270,6 +270,7 @@ $i: 1;
 
 .sidebar-nav-title{
   margin: 35px 0 5px 20px;
+  font-weight: $font-weight-thin;
 
   .action-link{
     color: $white;
@@ -348,10 +349,9 @@ $i: 1;
 .widget{
   @include border-radius($border-radius-base);
   @include box-sizing(content-box);
-  //@include box-shadow($widget-shadow);
   padding: $widget-padding;
-  color: $text-color;
-  background: $bg-transparent;
+  color: $widget-color;
+  background: $widget-bg;
   margin-bottom: $widget-mb;
   position: relative;
 
@@ -393,13 +393,17 @@ $i: 1;
   & > header{
     position: relative;
     background: none;
+    color: $widget-header-color;
 
     #{headings(1,5)}{
       margin: 0;
       line-height: 20px;
       font-weight: 600;
+      color: inherit;
+
       small{
         text-transform: lowercase;
+        color: $widget-header-smalls-color;
       }
     }
 
@@ -435,7 +439,7 @@ $i: 1;
 }
 
 .widget-controls{
-position: absolute;
+  position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
@@ -450,7 +454,7 @@ position: absolute;
   > a, > span{
     padding: 1px 4px;
     border-radius: 4px;
-    color: rgba(white, .45);
+    color: $widget-controls-color;
     @include transition(color .15s ease-in-out);
 
     > .fa{
@@ -463,7 +467,7 @@ position: absolute;
   }
 
   > a:hover{
-    color: rgba(white, .6);
+    color: $widget-controls-hover-color;
   }
 
   .fa-refresh{
@@ -536,7 +540,7 @@ position: absolute;
       right: 2px;
       font-size: $font-size-index;
       font-weight: normal;
-      background:  rgba($widget-bg, .55);
+      background:  rgba($widget-bg-common, .55);
       color: rgba(white, 0.9);
       line-height: 1em;
       padding: 2px 4px;
@@ -557,7 +561,7 @@ position: absolute;
   .search-query{
     color: $text-color;
     border: none;
-    background:url(../img/search-white.png) 5px 5px no-repeat $bg-transparent;
+    background:url(../img/search-white.png) 5px 5px no-repeat $widget-bg;
     padding-left: 26px;
     @include placeholder(rgba(#eee, .76));
     @include transition(width .2s);
@@ -617,13 +621,13 @@ position: absolute;
 }
 
 .page-title{
-  color: $white;
+  color: $page-title-color;
   font-weight: 300;
   line-height: 1;
   margin: 11px 0 $line-height-computed;
 
   small{
-    color: $text-muted;
+    color: darken($page-title-color, 15%);
   }
 }
 
@@ -632,24 +636,20 @@ position: absolute;
   @include transition(margin-top .2s ease);
 
   .alert{
-    background: $bg-transparent;
+    background: $widget-bg;
     border: none;
     font-size: $font-size-small;
+    line-height: $line-height-computed + 1;
     margin-bottom: 0;
-    padding: 2px 9px;
-    color: $white;
+    padding: 3px 9px;
+    color: $widget-color;
     text-shadow: none;
     @include border-radius(10px);
 
     a{
-      color: $white;
+      color: $widget-color;
       font-weight: bold;
     }
-  }
-
-  .close{
-    position: static;
-    margin: 1px 0 1px 2px;
   }
 }
 
@@ -841,7 +841,7 @@ position: absolute;
 /* Custom behavior. For overridden bootstrap btns see bootstrap-override */
 
 .btn-transparent{
-  background: $bg-transparent;
+  background: $widget-bg;
   color: $white;
   text-shadow: none;
   @include box-shadow(none);
@@ -853,9 +853,9 @@ position: absolute;
 
   &.active{
     color: $white;
-    background: rgba($widget-bg, .55);
+    background: rgba($widget-bg-common, .55);
     &:hover{
-      background: rgba($widget-bg, .55);
+      background: rgba($widget-bg-common, .55);
     }
   }
 
@@ -919,22 +919,22 @@ legend + .control-group {
 
 
 .form-control{
- &.input-transparent{
-   border: none;
-   color: $text-color;
-   background-color: $bg-transparent;
-   @include placeholder(rgba(#eee, .76));
+  &.input-transparent{
+    border: none;
+    color: $text-color;
+    background-color: $widget-bg;
+    @include placeholder(rgba(#eee, .76));
 
-   &:focus{
-     color: $text-color;
-   }
+    &:focus{
+      color: $text-color;
+    }
 
-   &[disabled],
-   &[readonly],
-   fieldset[disabled] & {
-     background-color: lighten($bg-transparent, 10%);
-   }
- }
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+      background-color: lighten($widget-bg, 10%);
+    }
+  }
 }
 
 .select-block-level{
@@ -1023,7 +1023,7 @@ legend + .control-group {
   padding: 0;
 
   .body{
-    background: $bg-transparent;
+    background: $widget-bg;
     margin-top: 0;
     padding: $widget-padding;
     @include border-radius(0 0 $border-radius-base $border-radius-base);
@@ -1044,7 +1044,7 @@ legend + .control-group {
     margin-bottom: 0;
     & > a{
       border-color: transparent;
-      background: $bg-transparent;
+      background: $widget-bg;
       &:hover{
         color: $text-color;
       }
@@ -1052,10 +1052,10 @@ legend + .control-group {
   }
 
   .nav > li:not(.active) > a{
-    background: $bg-transparent;
+    background: $widget-bg;
     border-bottom: none;
     &:hover{
-      background: rgba(darken($widget-bg, 10%), .4);
+      background: rgba(darken($widget-bg-common, 10%), .4);
       border-color: transparent;
     }
   }
@@ -1304,13 +1304,13 @@ legend + .control-group {
 }
 
 .widget-placeholder{
-  background:  rgba($widget-bg, .2);
+  background:  rgba($widget-bg-common, .2);
   border: 1px dashed rgba(white, .6);
   margin: -1px -1px ($widget-mb - 1px) -1px;
 }
 
 .list-group-item-placeholder{
-  background:  rgba($widget-bg, .2);
+  background:  rgba($widget-bg-common, .2);
   border: 1px dashed rgba(white, .6);
   margin: -1px;
 }

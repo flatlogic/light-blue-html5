@@ -19,7 +19,7 @@ hr {
 }
 
 blockquote{
-  border-left-color: $bg-transparent;
+  border-left-color: $widget-bg;
 
   &.blockquote-sm{
     padding: 0 0 0 15px;
@@ -952,7 +952,7 @@ a.thumbnail:focus {
 
 .panel{
   border: none;
-  background-color: $bg-transparent;
+  background-color: $widget-bg;
   @include box-shadow(none);
 
   .panel-heading a{
@@ -1016,6 +1016,6 @@ a.thumbnail:focus {
     bottom: -10px;
   }
   li{
-    background-color: $bg-transparent;
+    background-color: $widget-bg;
   }
 }

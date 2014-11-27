@@ -36,7 +36,7 @@ html{
 }
 
 body{
-  font-weight: 300;
+  font-weight: $font-weight-base;
   padding-bottom: 100px;
   @include background-radial-gradient(ellipse, farthest-side, 10%, 0,
     rgba(74, 121, 147, 0.89),
@@ -71,7 +71,7 @@ input[type=search], input.search {
   &.input-transparent{
     border: none;
     color: $text-color;
-    background: url(../img/search-white.png) 5px 5px no-repeat $bg-transparent;
+    background: url(../img/search-white.png) 5px 5px no-repeat $widget-bg;
     @include placeholder(rgba(#eee, .76));
   }
 }

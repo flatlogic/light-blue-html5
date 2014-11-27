@@ -43,7 +43,7 @@
   .icon{
     position: relative;
     z-index: 1;
-    background: $bg-transparent;
+    background: $widget-bg;
     text-align: center;
     color: $white;
     width: 28px;
@@ -185,7 +185,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
 .search-result-item{
   padding: 20px;
-  background-color: $bg-transparent;
+  background-color: $widget-bg;
   border-radius: $border-radius-base;
   @include clearfix();
 
@@ -709,12 +709,12 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   background-color: $bg-addition;
   position: relative; }
 .location-selector .bit {
-  background-color: rgba($widget-bg, .4);
+  background-color: rgba($widget-bg-common, .4);
   @include transition(background-color .15s ease-in-out);
   cursor: pointer;
   position: absolute; }
 .location-selector .bit:hover {
-  background-color: rgba($widget-bg, .6); }
+  background-color: rgba($widget-bg-common, .6); }
 .location-selector .bit.top, .location-selector .bit.bottom {
   height: 25%;
   width: 40%;
@@ -746,7 +746,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   padding: 5px;
   text-align: center;
   margin-bottom: $widget-mb;
-  background: $bg-transparent;
+  background: $widget-bg;
 
   .description{
     font-weight: normal;
@@ -1317,7 +1317,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   padding: 5px 10px;
   color: $text-color;
   text-decoration: none;
-  background: $bg-transparent;
+  background: $widget-bg;
   border-radius: $border-radius-base;
 
   @include box-sizing(border-box);
@@ -1362,7 +1362,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   margin: 5px 0;
   padding: 0;
   min-height: 30px;
-  background: rgba($widget-bg, .2);
+  background: rgba($widget-bg-common, .2);
   border: 1px dashed rgba(white, .6);
   box-sizing: border-box;
   -moz-box-sizing: border-box;

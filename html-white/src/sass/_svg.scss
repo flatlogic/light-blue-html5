@@ -10,11 +10,6 @@
   fill-opacity: .95;
 }
 
-svg text {
-  fill: $text-color;
-  font-family: inherit;
-}
-
 .nvd3 .nv-axis path.domain{
   display: none;
 }
@@ -22,7 +17,7 @@ svg text {
 .nvtooltip{
   padding: 5px;
   position: absolute;
-  background-color: rgba($widget-bg, .6);
+  background-color: rgba($widget-bg-common, .6);
   border: none;
   z-index: 10000;
 

@@ -28,11 +28,11 @@ $white-dark:            #f8f8f8 !default;
 $shadow-color:            rgba(#676767, .4) !default;
 
 //copy from BS
-$gray-darker:           lighten(#000, 13.5%) !default; // #222
+$gray-darker:           lighten(#000, 13.5%) !default;
 $gray-dark:             #555 !default;
 $gray:                  #666;
-$gray-light:            lighten(#000, 60%) !default;   // #999
-$gray-lighter:          lighten(#000, 93.5%) !default; // #eee
+$gray-light:            lighten(#000, 60%) !default;
+$gray-lighter:          lighten(#000, 93.5%) !default;
 $gray-semi-light:       #777;
 $gray-semi-lighter:     #ddd;
 
@@ -61,7 +61,7 @@ $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
 $font-weight-normal: 400 !default;
 $font-weight-thin: 300 !default;
-$font-weight-base: $font-weight-thin !default;
+$font-weight-base: $font-weight-normal !default;
 
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
@@ -76,12 +76,17 @@ $sidebar-mt: 80px;
 // Scaffolding
 // -------------------------
 
-$widget-bg:        #333 !default; //#ddd
+$widget-bg-common:        $white !default; //#ddd
 $widget-mb:        30px;
+$widget-color:     $gray;
+$widget-header-color: $widget-color;
+$widget-header-smalls-color: $gray-light;
+$widget-controls-color: lighten($widget-color, 25%);
+$widget-controls-hover-color: lighten($widget-color, 5%);
 
-$text-transparent: rgba($widget-bg, .5);
-$bg-addition: rgba($widget-bg, .25);
-$bg-transparent: rgba($widget-bg, .4);
+$text-transparent: rgba($widget-bg-common, .5);
+$bg-addition: rgba($widget-bg-common, .25);
+$widget-bg: $widget-bg-common;
 
 $widget-padding-vertical: 12px;
 $widget-padding-horizontal: 17px;
@@ -90,6 +95,8 @@ $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 $sidebar-item-active-bg: rgba($black,.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
+
+$page-title-color: $white;
 
 /////////////////////////////////////////////////
 //              Font Awesome vars              //
@@ -184,7 +191,7 @@ $state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 
 // List group
 // -------------------------
-$list-group-bg: $bg-transparent !default;
+$list-group-bg: $widget-bg !default;
 $list-group-border:           transparent !default;
 $list-group-link-color:       $text-color;
 $list-group-hover-bg: $bg-addition;
@@ -198,11 +205,11 @@ $jumbotron-heading-color:        inherit !default;
 
 //table colors
 
-$table-border-color:                       rgba($widget-bg, .35) !default; // table and cell border
+$table-border-color:                       rgba($widget-bg-common, .35) !default; // table and cell border
 
 // Popovers
 // -------------------------
-$popover-bg:                          rgba($widget-bg, .85) !default;
+$popover-bg:                          rgba($widget-bg-common, .85) !default;
 $popover-arrow-color:                 $popover-bg !default;
 
 // Pagination
@@ -247,4 +254,4 @@ $carousel-indicator-border-color:             transparent !default;
 
 $pre-bg: $bg-addition !default;
 $pre-color:                   $text-color !default;
-$pre-border-color: $bg-transparent !default;
+$pre-border-color: $widget-bg !default;
