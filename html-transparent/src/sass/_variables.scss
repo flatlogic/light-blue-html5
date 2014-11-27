@@ -146,8 +146,12 @@ $btn-inverse-bg: $white-dark !default;
 // Forms
 // -------------------------
 
-$input-color: $gray-dark;
-$input-border: #888;
+$input-color:                    $gray-dark;
+$input-border:                   #ccc !default;
+$input-border-focus:             #66afe9 !default;
+
+$input-group-addon-bg:           $bg-addition;
+$input-group-addon-border-color: transparent;
 
 // recalculate input heights
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
@@ -255,3 +259,11 @@ $carousel-indicator-border-color:             transparent !default;
 $pre-bg: $bg-addition !default;
 $pre-color:                   $text-color !default;
 $pre-border-color: $widget-bg !default;
+
+// Custom libs variables
+// ------------------------
+
+// Awesome Checkbox
+// ------------------------
+
+$awesome-checkbox-default-color:       #eee;

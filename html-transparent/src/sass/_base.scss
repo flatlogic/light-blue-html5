@@ -878,23 +878,6 @@ $i: 1;
 /**          FORMS                **/
 /**********************************/
 
-
-// Legend collapses margin, so next element is responsible for spacing
-legend + .control-group {
-  margin-top: $line-height-base;
-  -webkit-margin-top-collapse: separate;
-}
-
-.form-condensed{
-  .control-label{
-    width: 100px;
-  }
-
-  .controls{
-    margin-left: 120px;
-  }
-}
-
 .section{
   font-size: $font-size-larger;
   color: $text-muted;
@@ -909,14 +892,6 @@ legend + .control-group {
   }
 }
 
-.controls + .controls{
-  margin-top: 10px;
-}
-
-.help-block{
-  font-size: $font-size-small;
-}
-
 
 .form-control{
   &.input-transparent{
@@ -927,6 +902,7 @@ legend + .control-group {
 
     &:focus{
       color: $text-color;
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
     }
 
     &[disabled],

@@ -46,7 +46,7 @@ $brand-info:            $teal !default;
 // -------------------------
 $text-color: $white-dark !default;
 $text-bold: lighten($text-color, 3%);
-$text-muted: darken($text-color, 15%) !default;
+$text-muted: #808080 !default;
 
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
@@ -85,7 +85,7 @@ $widget-controls-color: lighten($widget-color, 25%);
 $widget-controls-hover-color: lighten($widget-color, 5%);
 
 $text-transparent: rgba($widget-bg-common, .5);
-$bg-addition: rgba($widget-bg-common, .25);
+$bg-addition: $gray-lighter;
 $widget-bg: $widget-bg-common;
 
 $widget-padding-vertical: 12px;
@@ -146,8 +146,12 @@ $btn-inverse-bg: $white-dark !default;
 // Forms
 // -------------------------
 
-$input-color: $gray-dark;
-$input-border: #888;
+$input-color:                    $gray-dark;
+$input-border:                   #ccc !default;
+$input-border-focus:             #66afe9 !default;
+
+$input-group-addon-bg:           $gray-lighter;
+$input-group-addon-border-color: $input-border;
 
 // recalculate input heights
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
@@ -255,3 +259,11 @@ $carousel-indicator-border-color:             transparent !default;
 $pre-bg: $bg-addition !default;
 $pre-color:                   $text-color !default;
 $pre-border-color: $widget-bg !default;
+
+// Custom libs variables
+// ------------------------
+
+// Awesome Checkbox
+// ------------------------
+
+$awesome-checkbox-default-color:       $gray;

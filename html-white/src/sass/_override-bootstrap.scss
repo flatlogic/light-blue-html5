@@ -82,12 +82,7 @@ legend small{
 }
 
 .form-control{
-  border: none;
   @include transition(border linear .2s, box-shadow linear .2s);
-  &:focus {
-    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
-    outline: 0;
-  }
 
   &[type=search], &.search{
     padding-left: 26px;
@@ -103,11 +98,6 @@ input[type="checkbox"]:focus {
 
 .input-group-btn > .btn{
   z-index: 2;
-}
-
-.input-group-addon {
-    background-color: $bg-addition;
-    border: 1px solid transparent;
 }
 
 /*adding .btn-group here because selectpicker's select become .btn-group
@@ -126,6 +116,8 @@ textarea,
 
 .help-block {
   margin-top: 0;
+  font-size: $font-size-small - 1;
+  color: $text-muted;
 }
 
 .search-query, .navbar-form .search-query{
