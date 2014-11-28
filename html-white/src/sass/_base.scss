@@ -428,7 +428,7 @@ $i: 1;
   .actions{
     position: absolute;
     right: 0;
-    top: -2px;
+    top: 0;
     a{
       text-decoration: none;
     }
@@ -1141,6 +1141,10 @@ $i: 1;
 
 .table th {
   @include bold-font;
+
+  .widget &{
+    color: $widget-header-color;
+  }
 }
 
 .table-images{

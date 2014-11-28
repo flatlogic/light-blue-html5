@@ -177,15 +177,6 @@ textarea,
   }
 }
 
-.table-striped {
-  tbody {
-    > tr:nth-child(odd) > td,
-    > tr:nth-child(odd) > th {
-      background-color: $bg-addition;
-    }
-  }
-}
-
 .table thead > tr > th{
   border-bottom: none;
   font-weight: 600;
@@ -250,15 +241,6 @@ textarea,
 
 .dropdown-menu > li > a {
   font-weight: $font-weight-base;
-}
-
-/***************************/
-/*          Wells          */
-/***************************/
-
-.well{
-  background-color: $bg-addition;
-  border: none;
 }
 
 /***************************/
@@ -763,12 +745,11 @@ a.thumbnail:focus {
 .label,
 .badge {
   display: inline-block;
-  @include box-sizing(content-box);
   padding: 2px 4px;
   line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
-  font-weight: $font-weight-base;
-  font-size: $font-size-small;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-small - 1;
 }
 
 .badge{
@@ -1010,4 +991,13 @@ a.thumbnail:focus {
   li{
     background-color: $widget-bg;
   }
+}
+
+
+/***************************/
+/*          Wells          */
+/***************************/
+
+.well{
+  @include box-shadow(none);
 }

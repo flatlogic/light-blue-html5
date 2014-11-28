@@ -192,6 +192,11 @@ $state-danger-text:              $white !default;
 $state-danger-border:            rgba(#F26349, .7) !default;
 $state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 
+//== Tables
+//
+$table-bg-accent:               $bg-addition !default;
+$table-border-color:            rgba($widget-bg-common, .35) !default; // table and cell border
+
 
 // List group
 // -------------------------
@@ -206,10 +211,6 @@ $jumbotron-color:                inherit !default;
 $jumbotron-bg:                   transparent !default;
 
 $jumbotron-heading-color:        inherit !default;
-
-//table colors
-
-$table-border-color:                       rgba($widget-bg-common, .35) !default; // table and cell border
 
 // Popovers
 // -------------------------
@@ -252,6 +253,12 @@ $carousel-control-opacity:                    1 !default;
 
 $carousel-indicator-active-bg:                $red !default;
 $carousel-indicator-border-color:             transparent !default;
+
+// Wells
+// -------------------------
+
+$well-bg:         $bg-addition !default;
+$well-border:     transparent !default;
 
 // Code (inline and block)
 // --------------------------------------------------

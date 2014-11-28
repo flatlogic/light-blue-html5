@@ -67,8 +67,8 @@ $(function(){
             options.lineColor = $red;
             options.fillColor = 'rgba(229, 96, 59, 0.1)';
             $('#search-trend').sparkline(values[3], options );
-            options.lineColor = $white;
-            options.fillColor = 'rgba(255, 255, 255, 0.1)';
+            options.lineColor = $gray;
+            options.fillColor = 'rgba(128, 128, 128, 0.1)';
             $('#internal-trend').sparkline(values[4], options );
         }
 
