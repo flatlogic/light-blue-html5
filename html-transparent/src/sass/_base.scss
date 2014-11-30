@@ -541,7 +541,7 @@ $i: 1;
       right: 2px;
       font-size: $font-size-index;
       font-weight: normal;
-      background:  rgba($widget-bg-common, .55);
+      background:  $header-notification-count;
       color: rgba(white, 0.9);
       line-height: 1em;
       padding: 2px 4px;
@@ -553,23 +553,22 @@ $i: 1;
       height: 38px;
       width: 1px;
       margin: 0 20px;
-      $experimental-support-for-svg: true;
       @include background(linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0)));
-      $experimental-support-for-svg: false;
     }
   }
 
   .search-query{
-    color: $text-color;
+    color: $widget-color;
     border: none;
-    background:url(../img/search-white.png) 5px 5px no-repeat $widget-bg;
+    background: $header-search-query-bg-image 5px 5px no-repeat transparentize($text-transparent, .1);
     padding-left: 26px;
-    @include placeholder(rgba(#eee, .76));
+    @include placeholder($header-search-query-placeholder-color);
     @include transition(width .2s);
     width: 200px;
 
     &:focus{
       width: 240px;
+      @include box-shadow(none);
     }
   }
 
@@ -637,7 +636,7 @@ $i: 1;
   @include transition(margin-top .2s ease);
 
   .alert{
-    background: $widget-bg;
+    background: transparentize($text-transparent, .1);
     border: none;
     font-size: $font-size-small;
     line-height: $line-height-computed + 1;
@@ -1014,7 +1013,7 @@ $i: 1;
   .nav > li > a{
     padding-top: 10px;
     padding-bottom: 10px;
-    color: $text-color;
+    color: $widget-header-color;
   }
 
   .nav > li.active{
@@ -1023,7 +1022,7 @@ $i: 1;
       border-color: transparent;
       background: $widget-bg;
       &:hover{
-        color: $text-color;
+        color: $widget-color;
       }
     }
   }
@@ -1032,7 +1031,7 @@ $i: 1;
     background: $widget-bg;
     border-bottom: none;
     &:hover{
-      background: rgba(darken($widget-bg-common, 10%), .4);
+      background: $tabs-widget-active-item-hover-bg;
       border-color: transparent;
     }
   }
@@ -1045,10 +1044,8 @@ $i: 1;
 //base look for inner tabs
 .widget:not(.widget-tabs){
   .tab-content{
-    background: $bg-addition;
+    background: $nav-tabs-tab-content-bg;
     padding: 10px;
-    border: none;
-    border-top: none;
     @include border-radius(0 0 $border-radius-base $border-radius-base);
     overflow: hidden;
   }
@@ -1082,6 +1079,7 @@ $i: 1;
   margin-top: 0;
   margin-bottom: 1em;
   font-size: $font-size-larger;
+  color: $widget-header-color;
 }
 
 /***********************************/

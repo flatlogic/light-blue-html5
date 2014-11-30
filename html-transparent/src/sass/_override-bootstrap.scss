@@ -347,9 +347,6 @@ textarea,
 // BOTTOM
 // ------
 
-.tabs-below > .nav-tabs {
-  border-top: 1px solid #ddd;
-}
 .tabs-below > .nav-tabs > li {
   margin-top: -1px;
   margin-bottom: 0;
@@ -365,7 +362,8 @@ textarea,
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: $nav-tabs-active-item-border;
+  border-top-color: $nav-tabs-active-item-border-bottom;
 }
 
 // LEFT & RIGHT
@@ -454,7 +452,7 @@ textarea,
 
 .nav-tabs > li > a {
   @include border-radius($border-radius-base $border-radius-base 0 0);
-  color: $text-color;
+  color: $nav-tabs-link-color;
   padding-top: 8px;
   padding-bottom: 8px;
   &:hover,
@@ -463,40 +461,21 @@ textarea,
   }
 }
 
-.nav-tabs {
-  > li {
-    &.active > a {
-      &.dropdown-toggle{
-        &,
-        &:hover,
-        &:focus {
-          cursor: pointer;
-        }
-      }
-      &,
-      &:hover,
-      &:focus {
-        color: $text-color;
-        cursor: default;
-      }
-    }
-  }
-}
-
 .nav-tabs > .active{
-  margin-bottom: 0;
+  margin-bottom: $nav-tabs-active-item-margin;
 }
 
 .nav-tabs{
-  border-bottom: none;
+  border-bottom: $nav-tabs-border;
 }
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: $text-color;
-  background-color: $bg-addition;
-  border-color: transparent;
+  color: $widget-color;
+  background-color: $nav-tabs-tab-content-bg;
+  border-color: $nav-tabs-active-item-border;
+  border-bottom-color: $nav-tabs-active-item-border-bottom;
 }
 
 .nav-tabs .dropdown-menu {
@@ -506,7 +485,7 @@ textarea,
   @include border-radius($border-radius-base); // make rounded corners match the pills
 }
 .tabs-below > .nav-tabs {
-  border-top: none;
+  border-top: $nav-tabs-border;
 }
 
 .tabs-below > .nav-tabs > li > a {
@@ -514,9 +493,8 @@ textarea,
 }
 
 .tabs-left > .nav-tabs {
-  //okendoken. removing margin and border-right
   margin-right: 0;
-  border-right: none;
+  border-right: $nav-tabs-border;
 }
 
 .tabs-left > .nav-tabs > li > a {
@@ -524,16 +502,15 @@ textarea,
 }
 
 .tabs-right > .nav-tabs {
-  //okendoken. removing margin and border-left
   margin-left: 0;
-  border-left: none;
+  border-left: $nav-tabs-border;
 }
 .tabs-right > .nav-tabs > li > a {
   @include border-radius(0 $border-radius-base $border-radius-base 0);
 }
 
 .tabs-below > .nav-tabs > li {
-  margin-top: 0;
+  margin-top: $nav-tabs-active-item-margin;
 }
 
 .tabs-below > .nav-tabs > li > a {
@@ -545,7 +522,7 @@ textarea,
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent;
+//  border-color: transparent;
 }
 
 .tabs-left > .nav-tabs > li > a {
@@ -558,7 +535,16 @@ textarea,
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-  border-color: transparent;
+  border-color: $nav-tabs-active-item-border;
+  border-right-color: $nav-tabs-active-item-border-bottom;
+}
+
+.tabs-left > .nav-tabs .active{
+  margin-right: $nav-tabs-active-item-margin;
+}
+
+.tabs-right > .nav-tabs .active{
+  margin-left: $nav-tabs-active-item-margin;
 }
 
 .tabs-right > .nav-tabs > li > a {
@@ -571,7 +557,8 @@ textarea,
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
-  border-color: transparent;
+  border-color: $nav-tabs-active-item-border;
+  border-left-color: $nav-tabs-active-item-border-bottom;
 }
 
 .nav-pills > li > a {

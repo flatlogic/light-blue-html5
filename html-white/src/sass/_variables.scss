@@ -66,6 +66,11 @@ $font-weight-base: $font-weight-normal !default;
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
+// Links
+// -------------------------
+
+$link-color:            #4D9DD7;
+
 // Layout
 // -------------------------
 
@@ -84,7 +89,7 @@ $widget-header-smalls-color: $gray-light;
 $widget-controls-color: lighten($widget-color, 25%);
 $widget-controls-hover-color: lighten($widget-color, 5%);
 
-$text-transparent: rgba($widget-bg-common, .5);
+$text-transparent: rgba($widget-bg-common, .6);
 $bg-addition: $gray-lighter;
 $widget-bg: $widget-bg-common;
 
@@ -97,6 +102,26 @@ $sidebar-item-active-bg: rgba($black,.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
+
+$header-notification-count: rgba(51,51,51, .55);
+
+$header-search-query-bg-image: url(../img/search.png);
+$header-search-query-placeholder-color: rgba(#555, .76);
+
+// Widgets
+// -------------------------
+
+$feed-item-bg: $bg-addition;
+$feed-item-line-color: $feed-item-bg;
+
+$nav-tabs-link-color: $link-color;
+$nav-tabs-active-item-margin: -1px;
+$nav-tabs-active-item-border: #ddd;
+$nav-tabs-active-item-border-bottom: $widget-bg;
+$nav-tabs-border: 1px solid $nav-tabs-active-item-border;
+$nav-tabs-tab-content-bg: $widget-bg;
+
+$tabs-widget-active-item-hover-bg: $bg-addition;
 
 /////////////////////////////////////////////////
 //              Font Awesome vars              //
@@ -111,11 +136,6 @@ $fa-font-path: "./fonts/font-awesome";
 $bootstrap-sass-asset-helper: false;
 
 $icon-font-path: "fonts/bootstrap/" !default;
-
-// Links
-// -------------------------
-
-$link-color:            saturate(lighten($blue, 25%), 50%);
 
 // Components
 // -------------------------

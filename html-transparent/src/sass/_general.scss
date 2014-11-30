@@ -55,7 +55,7 @@ body{
 }
 
 #{headings()} {
-  @include bold-font;
+  font-weight: $font-weight-base;
 
   small{
     color: $text-muted;
@@ -70,7 +70,7 @@ input[type=search], input.search {
 
   &.input-transparent{
     border: none;
-    color: $text-color;
+    color: $widget-color;
     background: url(../img/search-white.png) 5px 5px no-repeat $widget-bg;
     @include placeholder(rgba(#eee, .76));
   }

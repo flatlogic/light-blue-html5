@@ -66,6 +66,11 @@ $font-weight-base: $font-weight-thin !default;
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
+// Links
+// -------------------------
+
+$link-color:            saturate(lighten($blue, 25%), 50%);
+
 // Layout
 // -------------------------
 
@@ -98,6 +103,28 @@ $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
 
+$header-notification-count: rgba($widget-bg-common, .55);
+
+$header-search-query-bg-image: url(../img/search-white.png);
+$header-search-query-placeholder-color: rgba(#eee, .76);
+
+$nav-tabs-link-color: $widget-color;
+
+// Widgets
+// -------------------------
+
+$feed-item-bg: $widget-bg;
+$feed-item-line-color: transparent;
+
+$nav-tabs-link-color: $widget-color;
+$nav-tabs-active-item-margin: 0;
+$nav-tabs-active-item-border: transparent;
+$nav-tabs-active-item-border-bottom: transparent;
+$nav-tabs-border: none;
+$nav-tabs-tab-content-bg: $bg-addition;
+
+$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), .4);
+
 /////////////////////////////////////////////////
 //              Font Awesome vars              //
 /////////////////////////////////////////////////
@@ -111,11 +138,6 @@ $fa-font-path: "./fonts/font-awesome";
 $bootstrap-sass-asset-helper: false;
 
 $icon-font-path: "fonts/bootstrap/" !default;
-
-// Links
-// -------------------------
-
-$link-color:            saturate(lighten($blue, 25%), 50%);
 
 // Components
 // -------------------------
