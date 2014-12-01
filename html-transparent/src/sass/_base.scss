@@ -841,18 +841,18 @@ $i: 1;
 /* Custom behavior. For overridden bootstrap btns see bootstrap-override */
 
 .btn-transparent{
-  background: $widget-bg;
-  color: $white;
+  background: transparentize($text-transparent, .2);
+  color: $widget-header-color;
   text-shadow: none;
   @include box-shadow(none);
 
   &:hover{
     background: $text-transparent;
-    color: $white;
+    color: $widget-header-color;
   }
 
   &.active{
-    color: $white;
+    color: $widget-header-color;
     background: rgba($widget-bg-common, .55);
     &:hover{
       background: rgba($widget-bg-common, .55);
@@ -860,7 +860,7 @@ $i: 1;
   }
 
   .caret{
-    border-top-color: $text-color;
+    border-top-color: $widget-header-color;
   }
 }
 
@@ -953,7 +953,7 @@ $i: 1;
   margin-bottom: 5px;
 
   a{
-    color: $text-color;
+    color: $widget-color;
   }
 }
 
