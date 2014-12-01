@@ -1092,12 +1092,12 @@ $i: 1;
 
 // Inverse
 .progress-inverse .bar, .progress .progress-bar-inverse {
-  color: $gray-dark;
-  background-color: $white-dark;
-  @include gradient-vertical($white-dark, $white-dark);
+  color: $widget-bg-common;
+  background-color: $widget-color;
+  @include gradient-vertical($widget-color, $widget-color);
 }
 .progress-inverse.progress-striped .bar, .progress-striped .progress-bar-inverse {
-  @include gradient-striped($white-dark);
+  @include gradient-striped($widget-color);
 }
 
 /***********************************/

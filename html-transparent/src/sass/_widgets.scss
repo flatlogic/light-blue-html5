@@ -747,15 +747,12 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   text-align: center;
   margin-bottom: $widget-mb;
   background: $widget-bg;
+  color: $widget-color;
 
   .description{
     font-weight: normal;
     text-align: center;
     margin: 10px -5px;
-  }
-
-  strong{
-    color: $white;
   }
 
   .icon, .big-text{
@@ -964,7 +961,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   .comment{
     font-size: $font-size-small;
-    color: $text-color;
+    color: $widget-color;
     line-height: 1.3em;
   }
 }
