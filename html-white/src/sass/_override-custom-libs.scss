@@ -58,6 +58,57 @@ svg .title {
   border: none;
 }
 
+.stat-widget header .nvd3.nv-multibar .nv-group{
+  fill-opacity: 1 !important;
+}
+
+.nvd3.nv-stackedarea path.nv-area {
+  fill-opacity: .8;
+}
+
+.nvd3.nv-stackedarea path.nv-area.hover {
+  fill-opacity: .95;
+}
+
+.nvd3 .nv-axis path.domain{
+  display: none;
+}
+
+.nvtooltip{
+  padding: 5px;
+  position: absolute;
+  background-color: rgba($widget-bg-common, .6);
+  color: $widget-color;
+  border: none;
+  z-index: 10000;
+
+  font-family: inherit;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+  transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+
+.nvtooltip {
+  h3, h4{
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-base;
+    text-align: center;
+  }
+}
+
+.nvd3 .nv-axis line.zero{
+  display: none;
+}
+
 /*!
  * Bootstrap-select
  */
@@ -556,4 +607,14 @@ table.dataTable thead .sorting_desc_disabled {
 
 .dataTables_wrapper .dataTables_paginate{
   text-align: right;
+}
+
+
+/***********************************/
+/**           Rickshaw            **/
+/***********************************/
+
+.rickshaw_legend{
+  background-color: $widget-bg;
+  color: $widget-header-color;
 }

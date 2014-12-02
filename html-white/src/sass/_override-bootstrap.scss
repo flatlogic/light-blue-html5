@@ -915,9 +915,18 @@ a.thumbnail:focus {
   background-color: $widget-bg;
   @include box-shadow(none);
 
+  .content &{
+    color: $widget-color;
+  }
+
   .panel-heading a{
-    color: $text-color;
-    @include bold-font;
+    color: $widget-header-color;
+    font-weight: $font-weight-base;
+
+    &:focus{
+      text-decoration: none;
+      
+    }
     &.collapsed{
       color: $text-muted;
     }

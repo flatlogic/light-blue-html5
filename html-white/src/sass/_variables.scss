@@ -81,6 +81,8 @@ $sidebar-mt: 80px;
 // Scaffolding
 // -------------------------
 
+$basic-border-color: #ddd;
+
 $widget-bg-common:        $white !default; //#ddd
 $widget-mb:        30px;
 $widget-color:     $gray;
@@ -116,12 +118,16 @@ $feed-item-line-color: $feed-item-bg;
 
 $nav-tabs-link-color: $link-color;
 $nav-tabs-active-item-margin: -1px;
-$nav-tabs-active-item-border: #ddd;
+$nav-tabs-active-item-border: $basic-border-color;
 $nav-tabs-active-item-border-bottom: $widget-bg;
 $nav-tabs-border: 1px solid $nav-tabs-active-item-border;
 $nav-tabs-tab-content-bg: $widget-bg;
 
 $tabs-widget-active-item-hover-bg: $bg-addition;
+
+$location-selector-bg: darken($widget-bg, 2%);
+$location-selector-border-color: $basic-border-color;
+$messenger-spinner-bg: #dd8f6a;
 
 /////////////////////////////////////////////////
 //              Font Awesome vars              //
@@ -284,7 +290,7 @@ $well-border:                 darken($well-bg, 7%) !default;
 // --------------------------------------------------
 
 $pre-bg: $bg-addition !default;
-$pre-color:                   $text-color !default;
+$pre-color:                   $widget-color !default;
 $pre-border-color: $widget-bg !default;
 
 // Custom libs variables

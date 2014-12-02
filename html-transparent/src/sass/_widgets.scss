@@ -705,16 +705,16 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 .location-selector {
   width: 100%;
   height: 220px;
-  border: 1px dashed #eee;
-  background-color: $bg-addition;
+  border: 1px dashed $location-selector-border-color;
+  background-color: $location-selector-bg;
   position: relative; }
 .location-selector .bit {
-  background-color: rgba($widget-bg-common, .4);
+  background-color: darken($location-selector-bg, 10%);
   @include transition(background-color .15s ease-in-out);
   cursor: pointer;
   position: absolute; }
 .location-selector .bit:hover {
-  background-color: rgba($widget-bg-common, .6); }
+  background-color: darken($location-selector-bg, 15%);; }
 .location-selector .bit.top, .location-selector .bit.bottom {
   height: 25%;
   width: 40%;
@@ -788,7 +788,8 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   }
 
   .visits{
-    @include bold-font;
+    font-weight: $font-weight-base;
+    color: $widget-header-color;
     font-size: $font-size-large;
   }
 }
@@ -806,7 +807,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     text-align: center;
     font-weight: normal;
     padding: 3px 2%;
-    color: $text-bold;
+    color: $widget-header-color;
     width: 20.625%;
     cursor: pointer;
     @include user-select(none);
@@ -1213,7 +1214,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   font-size: 14px;
   line-height: 32px;
   > a{
-    color: $text-color;
+    color: $widget-color;
     text-decoration: none;
   }
 

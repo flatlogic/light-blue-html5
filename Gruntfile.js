@@ -129,7 +129,7 @@ module.exports = function(grunt) {
                 cwd: 'html-transparent/src/sass',
                 src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
                     '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
-                    '_responsive.scss', '_svg.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
+                    '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
                 dest: 'html-white/src/sass'
             }
         },

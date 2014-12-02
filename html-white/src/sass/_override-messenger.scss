@@ -174,11 +174,11 @@ ul.messenger-theme-air {
   .messenger-message {
     @include transition(background-color 0.4s);
     @include border-radius(5px);
-    border: 0px;
+    border-color: $basic-border-color;
     background-color: lighten($widget-bg, .2);
     position: relative;
     margin-bottom: 1em;
-    color: $text-color;
+    color: $widget-color;
     font-weight: 500;
     padding: 10px 30px 11px 46px;
     &:hover {
@@ -214,17 +214,17 @@ ul.messenger-theme-air {
         @include border-radius(4px);
         text-decoration: none;
         display: inline-block;
-        color: $text-color;
+        color: $widget-color;
         margin-right: 10px;
         padding: 3px 10px 5px;
         text-transform: capitalize;
         background-color: $bg-addition;
         &:hover {
-          color: $white;
-          background-color: $widget-bg;
+          color: $widget-color;
+          background-color: darken($bg-addition, 10%);
         }
         &:active {
-          color: $white;
+          color: $widget-color;
         }
       }
       .messenger-phrase {
@@ -250,10 +250,10 @@ ul.messenger-theme-air {
     }
     &.alert-error {
       &.messenger-retry-soon {
-        @include ui-spinner(transparent, $spinnerSize, transparent, #fff, 1, 10s);
+        @include ui-spinner(transparent, $spinnerSize, transparent, $messenger-spinner-bg, 1, 10s);
       }
       &.messenger-retry-later {
-        @include ui-spinner(transparent, $spinnerSize, transparent, #fff, 1, 300s);
+        @include ui-spinner(transparent, $spinnerSize, transparent, $messenger-spinner-bg, 1, 300s);
       }
       .messenger-message-inner:before {
         background-color: rgb(221, 106, 69);

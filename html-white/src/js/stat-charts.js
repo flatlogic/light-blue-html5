@@ -117,7 +117,7 @@ $(function(){
             var chart = nv.models.multiBarChart()
                 .margin({left: 30, bottom: 20, right: 0})
                 .color(keyColor)
-                .controlsColor([$white, $white, $white])
+                .controlsColor([$gray, $gray, $gray])
                 .showLegend(false);
 
             chart.yAxis
