@@ -129,6 +129,8 @@ $location-selector-bg: darken($widget-bg, 2%);
 $location-selector-border-color: $basic-border-color;
 $messenger-spinner-bg: #dd8f6a;
 
+$calendar-border: $basic-border-color;
+
 /////////////////////////////////////////////////
 //              Font Awesome vars              //
 /////////////////////////////////////////////////
@@ -242,6 +244,11 @@ $jumbotron-heading-color:        inherit !default;
 // -------------------------
 $popover-bg:                          rgba($widget-bg-common, .85) !default;
 $popover-arrow-color:                 $popover-bg !default;
+
+// Thumbnails
+// -------------------------
+$thumbnail-bg:                        $widget-bg;
+$thumbnail-border:                    1px solid #ddd;
 
 // Pagination
 // -------------------------

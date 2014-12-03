@@ -713,16 +713,14 @@ textarea,
 .thumbnail {
   border: none;
   @include box-shadow(none);
-  background: $bg-addition;
-}
 
-a.thumbnail:hover,
-a.thumbnail:focus {
-  border: none;
+  .widget &{
+    border: $thumbnail-border;
+  }
 }
 
 .thumbnail .caption {
-  color: $text-color;
+  color: $widget-color;
 }
 
 /***************************/
@@ -925,7 +923,6 @@ a.thumbnail:focus {
 
     &:focus{
       text-decoration: none;
-      
     }
     &.collapsed{
       color: $text-muted;
