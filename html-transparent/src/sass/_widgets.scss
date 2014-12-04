@@ -140,13 +140,14 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 }
 
 .dropzone{
-  border: 2px dashed #eee;
+  border: 2px dashed $dropzone-color;
   margin-top: 10px;
   font-size: 40px;
-  color: #eee;
+  color: $dropzone-color;
   line-height: 120px;
   padding-left: 7%;
   vertical-align: middle;
+  border-radius: $border-radius-base;
 
   @include clearfix;
 
@@ -1005,8 +1006,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     margin: 15px 0 25px 0;
   }
 
-  input[type="email"],
-  input[type="password"]{
+  .form-control{
     font-size: $font-size-base;
   }
 
@@ -1040,7 +1040,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     .forgot {
       display: block;
       text-align: center;
-      color: $white;
+      color: $widget-header-color;
       padding: 15px 0;
     }
   }
