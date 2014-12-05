@@ -228,13 +228,14 @@ $state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 //
 $table-bg-accent:               $bg-addition !default;
 $table-border-color:            rgba($widget-bg-common, .35) !default; // table and cell border
+$table-bg-hover:                darken($bg-addition, 5%);
 
 
 // List group
 // -------------------------
 $list-group-bg: $widget-bg !default;
 $list-group-border:           transparent !default;
-$list-group-link-color:       $text-color;
+$list-group-link-color:       $widget-color;
 $list-group-hover-bg: $bg-addition;
 // Jumbotron
 // -------------------------
@@ -283,6 +284,7 @@ $breadcrumb-separator:        ">" !default;
 // Carousel
 // ------------------------
 
+$carousel-control-color:      $widget-color;
 $carousel-text-shadow:                        none !default;
 
 $carousel-control-width:                      6% !default;
@@ -303,6 +305,11 @@ $well-border:     transparent !default;
 $pre-bg: $bg-addition !default;
 $pre-color:                   $text-color !default;
 $pre-border-color: $widget-bg !default;
+
+// Type
+// --------------------------------------------------
+
+$blockquote-border-color:             $widget-bg;
 
 // Custom libs variables
 // ------------------------

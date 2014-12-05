@@ -19,7 +19,6 @@ hr {
 }
 
 blockquote{
-  border-left-color: $widget-bg;
 
   &.blockquote-sm{
     padding: 0 0 0 15px;
@@ -170,10 +169,6 @@ textarea,
     td, th{
       @include transition(background-color .2s);
     }
-    tr:hover > td,
-    tr:hover > th {
-      background-color: $bg-addition;
-    }
   }
 }
 
@@ -187,7 +182,7 @@ textarea,
 .table td > .checkbox,
 .table th > .checkbox{
   position: relative;
-  top: -14px;
+  top: 3px;
   left: 7px;
   margin-top: 0;
   margin-bottom: 0;
@@ -447,7 +442,7 @@ textarea,
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus{
-  background-color: $bg-addition;
+  background-color: rgba($widget-bg-common, .25);
 }
 
 .nav-tabs > li > a {
@@ -832,6 +827,7 @@ textarea,
 .list-group-item{
   border: none;
   @include transition(background-color .2s ease-out);
+  color: $widget-color;
 
   .widget &{
     background: none;
@@ -982,7 +978,7 @@ textarea,
     bottom: -10px;
   }
   li{
-    background-color: $widget-bg;
+    background-color: $bg-addition;
   }
 }
 

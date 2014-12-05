@@ -233,7 +233,7 @@ $(function(){
             },
             "oClasses": {
                 "sFilter": "pull-right",
-                "sFilterInput": "form-control input-transparent ml-sm"
+                "sFilterInput": "form-control ml-sm"
             },
             "aoColumns": unsortableColumns
         });

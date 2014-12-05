@@ -226,13 +226,14 @@ $state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 //
 $table-bg-accent:               #f9f9f9 !default;
 $table-border-color:            #ddd !default;
+$table-bg-hover:                #f5f5f5;
 
 
 // List group
 // -------------------------
 $list-group-bg: $widget-bg !default;
 $list-group-border:           transparent !default;
-$list-group-link-color:       $text-color;
+$list-group-link-color:       $widget-color;
 $list-group-hover-bg: $bg-addition;
 // Jumbotron
 // -------------------------
@@ -255,19 +256,19 @@ $thumbnail-border:                    1px solid #ddd;
 // Pagination
 // -------------------------
 
-$pagination-color:                     $text-color !default;
+$pagination-color:                     $widget-color !default;
 $pagination-bg:                        transparent !default;
 $pagination-border:                    transparent !default;
 
-$pagination-hover-color:               $white !default;
+$pagination-hover-color:               $widget-header-color !default;
 $pagination-hover-bg:                  $bg-addition !default;
 $pagination-hover-border:              transparent !default;
 
-$pagination-active-color:              $white !default;
+$pagination-active-color:              $widget-header-color !default;
 $pagination-active-bg:                 $bg-addition !default;
 $pagination-active-border:             transparent !default;
 
-$pagination-disabled-color:            $gray-lighter !default;
+$pagination-disabled-color:            $text-muted !default;
 $pagination-disabled-bg:               transparent !default;
 $pagination-disabled-border:           transparent !default;
 
@@ -281,6 +282,7 @@ $breadcrumb-separator:        ">" !default;
 // Carousel
 // ------------------------
 
+$carousel-control-color:      $widget-color;
 $carousel-text-shadow:                        none !default;
 
 $carousel-control-width:                      6% !default;
@@ -301,6 +303,11 @@ $well-border:                 darken($well-bg, 7%) !default;
 $pre-bg: $bg-addition !default;
 $pre-color:                   $widget-color !default;
 $pre-border-color: $widget-bg !default;
+
+// Type
+// --------------------------------------------------
+
+$blockquote-border-color:             #ddd;
 
 // Custom libs variables
 // ------------------------

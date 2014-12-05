@@ -436,6 +436,8 @@ $i: 1;
 
   .widget-table-overflow{
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+    border-bottom-left-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
   }
 }
 
@@ -1169,7 +1171,7 @@ $i: 1;
 .table-editable th a{
   display: block;
   cursor: pointer;
-  color: $text-color;
+  color: $widget-color;
   text-decoration: underline;
 }
 
@@ -1196,7 +1198,7 @@ $i: 1;
 }
 
 .table-editable td.editor input[type=text] {
-  color: $text-color;
+  color: $widget-header-color;
   display: block;
   width: 100%;
   height: 100%;

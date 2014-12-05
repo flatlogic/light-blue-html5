@@ -168,6 +168,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     font-weight: $font-weight-normal;
     &:hover{
       color: $white;
+
     }
 
     > .glyphicon{
@@ -235,11 +236,43 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   font-weight: $font-weight-normal;
 
   > a {
-    color: $text-color;
+    color: $widget-header-color;
   }
 
   @media (min-width: $screen-sm-min) {
     margin: 0;
+  }
+}
+
+.pagination-search-result{
+  > li > a,
+  > li > span{
+    color: $text-color;
+
+    &:hover,
+    &:focus{
+      background-color: rgba($widget-bg, .25);
+      color: $white;
+    }
+  }
+
+  > .disabled > span,
+  > .disabled > span:hover,
+  > .disabled > span:focus,
+  > .disabled > a,
+  > .disabled > a:hover,
+  > .disabled > a:focus{
+    color: #ddd;
+  }
+
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus,
+  > .active > span,
+  > .active > span:hover,
+  > .active > span:focus{
+    background-color: rgba($widget-bg, .25);
+    color: $white;
   }
 }
 
@@ -357,7 +390,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     &,
     &:hover,
     &:focus {
-      background-color: $bg-addition;
+      background-color: rgba($widget-bg-common, .25);
       color: $text-color;
       font-weight: $font-weight-semi-bold;
 
@@ -391,11 +424,6 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 .table-emails{
   margin-bottom: 0;
 
-  td > .checkbox,
-  th > .checkbox{
-    top: -13px;
-  }
-
   .name,
   .subject,
   .date{
@@ -409,7 +437,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   .unread{
     font-weight: $font-weight-semi-bold;
-    color: $text-color;
+    color: $widget-color;
   }
 
   .favorite{
@@ -1313,7 +1341,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   height: 30px;
   margin: 5px 0;
   padding: 5px 10px;
-  color: $text-color;
+  color: $widget-color;
   text-decoration: none;
   background: $widget-bg;
   border-radius: $border-radius-base;
@@ -1339,7 +1367,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
   line-height: 1;
   text-align: center;
   font-weight: bold;
-  color: $text-color;
+  color: $widget-color;
 }
 
 .dd-item > button:before {
