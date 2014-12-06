@@ -1,7 +1,7 @@
-Light Blue v3.0 (November 11)
+Light Blue v3.0 (November 15)
 =========
 
-Now with **handlebars** and **bower** under the hood!
+Now available in two [transparent (basic)](http://demo.flatlogic.com/3.1/transparent) and [white](http://demo.flatlogic.com/3.1/white) version both with **handlebars** and **bower** under the hood!
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -12,14 +12,12 @@ Light Blue is a **next generation** dashboard template based on the unique trans
 
 ![Light Blue Preview](http://demo.flatlogic.com/3.0/light-blue-preview.png)
 
-New Version 3.0 Released!
+New Version 3.1 Released!
 -
 
-- Entire codebase rewrite & improvement
-- Grunt tasks to build an application
-- Bower package management
-- General layout redesign
-- Handlebars templates
+- White Version codebase rewrite & improvement
+- Tiny UI issues fix
+- Bootstrap 3.3.1 update
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.
@@ -31,73 +29,6 @@ Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
 Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
-
-Changelog
--
-
-Version 2.1
-
-- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
-- Messenger notifications
-- Input Sliders
-- Parsley 2.0.0
-- White version bug fixes
-
-Version 2.0
-
-- Super fast Ajax + pushState page loading
-- Lib updates
-- Few bug fixes
-
-Version 1.8
-
-  - Bootstrap v3.1 update
-  - Few bug fixes
-
-Version 1.7
-
-  - 4+ level menu.
-  - Libs updates & fixes
-  - Documentation update
-
-Version 1.6
-
-  - Bootstrap components page
-  - Draggable Grid
-  - List Groups
-  - Jquery 2.0, lib updates
-  - Font Awesome 4.0.3
-
-Version 1.5
-
-  - White version. *Thanks to Quang Pham for convincing me :)*
-  - Landing page
-  - Css & Structure refactoring
-  - Drop Bootstrap 2 version from package
-
-Version 1.4
-
-  - Bootstrap 3 support
-  - Ready-to-use Inbox App
-
-Version 1.3
-
-  - Overall UI improvements
-  - Print Optimized
-  - New iCheck library instead of out-of-date uniform
-  - Invoice Page
-
-Version 1.2
-
-  - Generic UI improvements
-  - Few bug fixes
-
-Version 1.1
-
-  - Generic Search Field
-  - Form Wizard
-  - jQuery Datatables
-  - UI improvements
 
 Next Release Plan
 -

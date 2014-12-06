@@ -368,7 +368,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
     font-weight: $font-weight-normal;
     background-color: transparent;
     &:hover{
-      background-color: $bg-addition;
+      background-color: rgba($widget-bg-common, .25);
       color: $text-color;
     }
 
@@ -1285,7 +1285,7 @@ table.table thead .sorting_desc_disabled { background: url('../img/datatables/so
 
   > .list-group-item-placeholder{
     border: 1px dashed $gray-light;
-    background-color: $bg-addition;
+    background-color: rgba($widget-bg-common, .25);
   }
 
   &:last-of-type > .list-group-item:last-child{
