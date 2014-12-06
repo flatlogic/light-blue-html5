@@ -86,7 +86,7 @@ module.exports = function(grunt) {
             json: {
                 expand: true,
                 cwd: '<%= config.srcFolder %>/',
-                src: 'js/*.json',
+                src: 'js/**/*.json',
                 dest: '<%= config.distFolder %>/'
             },
             server: {
