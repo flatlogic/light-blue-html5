@@ -660,11 +660,10 @@ $i: 1;
 /**********************************/
 
 .messages{
-  background: $popover-bg;
-  @include box-shadow(none);
-  border-radius: $border-radius-base;
-  border: none;
-  color: $white;
+  background: $header-dropdown-bg;
+  @include box-shadow($header-dropdown-shadow);
+  border-radius: $border-radius-base !important;
+  color: $header-dropdown-primary-color;
 }
 
 .navbar .nav > li > .messages{
@@ -676,8 +675,14 @@ $i: 1;
   }
 
   > li > a{
-    color: $white;
+    color: $header-dropdown-primary-color;
     padding: 8px 10px;
+    @include clearfix();
+
+    &:hover,
+    &:focus{
+      background-color: $header-dropdown-item-hover;
+    }
   }
 
   .see-all{
@@ -701,7 +706,7 @@ $i: 1;
 
   .text{
     font-size: $font-size-small;
-    color: #ddd;
+    color: $header-dropdown-secondary-color;
   }
 }
 
@@ -710,13 +715,10 @@ $i: 1;
 /**********************************/
 
 .support{
-  background: $popover-bg;
-  @include box-shadow(none);
-  border-radius: $border-radius-base;
-  border: none;
-  color: $white;
-
-
+  background: $header-dropdown-bg;
+  @include box-shadow($header-dropdown-shadow);
+  border-radius: $border-radius-base !important;
+  color: $header-dropdown-primary-color;
 }
 
 .navbar .nav > li > .support{
@@ -728,8 +730,13 @@ $i: 1;
   }
 
   > li > a{
-    color: $white;
+    color: $header-dropdown-primary-color;
     padding: 5px 10px;
+
+    &:hover,
+    &:focus{
+      background-color: $header-dropdown-item-hover;
+    }
   }
 
   .see-all{
@@ -755,13 +762,13 @@ $i: 1;
 /**********************************/
 
 .settings-popover{
-  background: $popover-bg;
-  @include box-shadow(none);
-  border-radius: $border-radius-base;
-  border: none;
-  color: $white;
-  width: 117px;
+  background: $header-dropdown-bg;
+  @include box-shadow($header-dropdown-shadow);
+  border-radius: $border-radius-base !important;
+  color: $header-dropdown-primary-color;
+  width: 122px;
   font-size: $font-size-small;
+  text-align: center;
 
   //override js-set variables
   left: -76px !important;
@@ -803,11 +810,10 @@ $i: 1;
 
 .account{
   width: 180px;
-  background: $popover-bg;
-  @include box-shadow(none);
-  border-radius: $border-radius-base;
-  border: none;
-  color: $white;
+  background: $header-dropdown-bg;
+  @include box-shadow($header-dropdown-shadow);
+  border-radius: $border-radius-base !important;
+  color: $header-dropdown-primary-color;
 }
 
 .navbar .nav > li > .account{
@@ -820,7 +826,13 @@ $i: 1;
 }
 
 .account > li > a{
-  color: $white;
+  color: $header-dropdown-primary-color;
+
+  &:hover,
+  &:focus{
+    background-color: $header-dropdown-item-hover;
+    color: $header-dropdown-primary-color;
+  }
 }
 
 

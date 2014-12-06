@@ -110,6 +110,12 @@ $header-notification-count: rgba(51,51,51, .55);
 $header-search-query-bg-image: url(../img/search.png);
 $header-search-query-placeholder-color: rgba(#555, .76);
 
+$header-dropdown-primary-color:          $widget-color;
+$header-dropdown-secondary-color:        #888;
+$header-dropdown-bg:                     $widget-bg;
+$header-dropdown-shadow:                 0 6px 12px rgba(0, 0, 0, 0.175);
+$header-dropdown-item-hover:             #eee;
+
 // Widgets
 // -------------------------
 
@@ -245,8 +251,9 @@ $jumbotron-heading-color:        inherit !default;
 
 // Popovers
 // -------------------------
-$popover-bg:                          rgba($widget-bg-common, .85) !default;
+$popover-bg:                          $widget-bg-common !default;
 $popover-arrow-color:                 $popover-bg !default;
+$popover-border-color:                rgba(0,0,0,.2);
 
 // Thumbnails
 // -------------------------
