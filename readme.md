@@ -1,4 +1,4 @@
-Light Blue v3.0 (November 15)
+Light Blue v3.1
 =========
 
 Now available in two [transparent (basic)](http://demo.flatlogic.com/3.1/transparent) and [white](http://demo.flatlogic.com/3.1/white) version both with **handlebars** and **bower** under the hood!
@@ -28,12 +28,11 @@ We plan to release continuous long term updates and dozens of new features will 
 Feedback
 -
 Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
-Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
+Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [FlatlogicInc](https://twitter.com/FlatlogicInc). We will do our best to help you.
 
 Next Release Plan
 -
 
-  - White Version 3.0
   - Design Improvements
   - Your suggestions!
 
