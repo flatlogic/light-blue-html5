@@ -84,7 +84,7 @@ $(function(){
     function pageLoad(){
         $("#tooltip-enabled, #max-length").tooltip();
 
-        $(".autogrow").autosize({append: "\n"});
+        autosize($('.autogrow'));
 
         $('.selectpicker').selectpicker();
 
