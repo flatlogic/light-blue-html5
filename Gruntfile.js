@@ -98,7 +98,7 @@ module.exports = function(grunt) {
             libs: {
                 expand: true,
                 cwd: 'bower_components',
-                src: ['**/*.js', '**/*.png'],
+                src: ['**/*.js', '**/*.png', '**/*.gif'],
                 dest: '<%= config.distFolder %>/lib/',
 
                 //copy js files from bower_packages only if they are not sources
