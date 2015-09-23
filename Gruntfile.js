@@ -114,7 +114,7 @@ module.exports = function(grunt) {
             },
             fontBootstrap: {
                 expand: true,
-                cwd: 'bower_components/bootstrap-sass-official/assets',
+                cwd: 'bower_components/bootstrap-sass/assets',
                 src: 'fonts/**',
                 dest: '<%= config.distFolder %>/css/'
             },
