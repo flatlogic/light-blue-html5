@@ -84,7 +84,7 @@ $(function(){
         function close(e){
             var $settings = $("#settings"),
                 $popover = $settings.siblings(".popover");
-            if(!$.contains($popover[0], e.target)){
+            if($popover.length && !$.contains($popover[0], e.target)){
                 $settings.popover('hide');
                 $(document).off("click", close);
             }

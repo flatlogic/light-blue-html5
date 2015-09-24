@@ -27,7 +27,7 @@ $(function(){
         },
         popoverClose = function(e){
             var $popover = $settings.siblings(".popover");
-            if(!$.contains($popover[0], e.target)){
+            if($popover.length && !$.contains($popover[0], e.target)){
                 popoverReallyHide();
                 $(document).off("click", popoverClose);
             }
@@ -52,7 +52,7 @@ $(function(){
             if (!$template[0]){
                 return;
             }
-            $sidebarSettings.html(_.template($template.html(), {sidebarState: state}));
+            $sidebarSettings.html(_.template($template.html())({sidebarState: state}));
             if (state == "auto"){
                 $(".sidebar, .side-nav, .wrap, .logo").removeClass("sidebar-icons");
             } else {
@@ -95,7 +95,7 @@ $(function(){
         animation: false,
         placement: 'bottom',
         content: function(){
-            return _.template($('#settings-template').html(), settingsState);
+            return _.template($('#settings-template').html())(settingsState);
         }
     }).click(function(e){
             //close all open dropdowns
