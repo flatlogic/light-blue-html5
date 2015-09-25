@@ -48,6 +48,10 @@ svg .title {
   }
 }
 
+.nvd3 .nv-legend .disabled circle {
+  fill-opacity: 0;
+}
+
 .nvd3 .nv-axis line{
   stroke: #000;
   stroke-opacity: .1;
@@ -56,6 +60,7 @@ svg .title {
 .nvtooltip h3{
   background-color: transparent;
   border: none;
+  color: inherit;
 }
 
 .stat-widget header .nvd3.nv-multibar .nv-group{
