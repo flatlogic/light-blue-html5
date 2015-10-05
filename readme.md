@@ -1,4 +1,4 @@
-Light Blue v3.1
+Light Blue v3.2
 =========
 
 Now available in two [transparent (basic)](http://demo.flatlogic.com/3.1/transparent) and [white](http://demo.flatlogic.com/3.1/white) version both with **handlebars** and **bower** under the hood!
@@ -10,14 +10,12 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-![Light Blue Preview](http://demo.flatlogic.com/3.0/light-blue-preview.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.1/light-blue-preview.png)
 
-New Version 3.1 Released!
+New Version 3.2 Released!
 -
 
-- White Version codebase rewrite & improvement
-- Tiny UI issues fix
-- Bootstrap 3.3.1 update
+- Full library list update
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.

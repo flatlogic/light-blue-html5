@@ -2,6 +2,10 @@
 Changelog
 -
 
+Version 3.2
+
+- Full library list update
+
 Version 3.1
 
 - White Version codebase rewrite & improvement
