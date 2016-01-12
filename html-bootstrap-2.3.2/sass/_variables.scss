@@ -18,6 +18,7 @@ $lightGray:             #f8f8f8 !default;
 $shadowGray:            rgba(#676767, .4) !default;
 $linkRed:               #da3712 !default;
 $white:                 #ffffff !default;
+$white-dark:            #f8f8f8 !default;
 $lightBlue:             #eff5ef !default;
 $lightBrown:            #f5f2ee !default;
 $lightRed:              #f8f3f0 !default;
@@ -48,8 +49,10 @@ $box-margin-bottom: 30px;
 $wrapMargin: 185px;
 $sidebarTopMargin: 80px;
 $widget-padding: 10px 12px;
+$widget-bg-common:        #333 !default; //#ddd
 
 
+$widget-bg: rgba($widget-bg-common, .4);
 $textColor: $lightGray !default;
 $linkColor: saturate(lighten($blue, 25%), 50%);
 $boldTextColor: lighten($textColor, 3%);
@@ -73,6 +76,16 @@ $sansFontFamily: "Open Sans", sans-serif;
 
 $btnBorder: #bbb !default;
 $inputBorder: #888;
+
+// Layout
+// -------------------------
+
+$wrap-margin: 185px;
+$sidebar-mt: 80px;
+
+// Scaffolding
+// -------------------------
+$widget-mb:        30px;
 
 //bootstrap override
 //responsive
@@ -150,6 +163,14 @@ $paddingLarge:          8px 18px !default; // 44px
 // -------------------------
 $iconSpritePath:          "../img/glyphicons-halflings.png" !default;
 $iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
+
+@mixin background($background){
+  background: $background;
+}
+
+@mixin transform($transform){
+  transform: $transform;
+}
 
 @mixin bold-font{
   //not actually bold since 1.3

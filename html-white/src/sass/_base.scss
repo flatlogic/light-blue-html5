@@ -123,7 +123,7 @@ $i: 1;
       text-decoration: none;
       display: block;
       padding: 10px 20px;
-      @include border-radius($border-radius-large);
+      border-radius: $border-radius-large;
 
       .fa-angle-down{
         width: auto;
@@ -149,7 +149,7 @@ $i: 1;
           @include transition(transform .3s ease-in-out)
         }
         &.collapsed:before{
-          @include transform(rotate(90deg));
+          transform: rotate(90deg);
         }
       }
     }
@@ -190,7 +190,7 @@ $i: 1;
   .panel{
     margin: 0;
     border: none;
-    @include border-radius(0);
+    border-radius: 0;
   }
 
   .panel-collapse.collapse {
@@ -348,7 +348,7 @@ $i: 1;
 
 
 .widget{
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
   @include box-sizing(content-box);
   padding: $widget-padding;
   color: $widget-color;
@@ -396,7 +396,7 @@ $i: 1;
     background: none;
     color: $widget-header-color;
 
-    #{headings(1,5)}{
+    h1,h2,h3,h4,h5{
       margin: 0;
       line-height: 20px;
       font-weight: 600;
@@ -490,7 +490,7 @@ $i: 1;
   padding: 0;
   position: relative;
 
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
 
   .navbar{
     min-height: 40px;
@@ -547,7 +547,7 @@ $i: 1;
       color: rgba(white, 0.9);
       line-height: 1em;
       padding: 2px 4px;
-      @include border-radius(10px);
+      border-radius: 10px;
     }
 
     &.divider{
@@ -555,7 +555,7 @@ $i: 1;
       height: 38px;
       width: 1px;
       margin: 0 20px;
-      @include background(linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0)));
+      background: linear-gradient(rgba($text-transparent, 0), $text-transparent, rgba($gray, 0));
     }
   }
 
@@ -617,7 +617,7 @@ $i: 1;
       right: 100%;
       margin-left: 0;
       margin-right: -1px;
-      @include border-radius(6px 0 6px 6px);
+      border-radius: 6px 0 6px 6px;
     }
   }
 }
@@ -646,7 +646,7 @@ $i: 1;
     padding: 3px 9px;
     color: $widget-color;
     text-shadow: none;
-    @include border-radius(10px);
+    border-radius: 10px;
 
     a{
       color: $widget-color;
@@ -1016,7 +1016,7 @@ $i: 1;
     background: $widget-bg;
     margin-top: 0;
     padding: $widget-padding;
-    @include border-radius(0 0 $border-radius-base $border-radius-base);
+    border-radius:0 0 $border-radius-base $border-radius-base;
   }
 
 
@@ -1060,7 +1060,7 @@ $i: 1;
   .tab-content{
     background: $nav-tabs-tab-content-bg;
     padding: 10px;
-    @include border-radius(0 0 $border-radius-base $border-radius-base);
+    border-radius: 0 0 $border-radius-base $border-radius-base;
     overflow: hidden;
   }
 
@@ -1068,7 +1068,7 @@ $i: 1;
     .tab-content{
       //border-top: 1px solid #ddd;
       border-bottom: none;
-      @include border-radius($border-radius-base $border-radius-base 0 0);
+      border-radius: $border-radius-base $border-radius-base 0 0;
     }
   }
 
@@ -1076,7 +1076,7 @@ $i: 1;
     .tab-content{
       //border-top: 1px solid #ddd;
       //border-left: 1px solid #ddd;
-      @include border-radius(0 $border-radius-base $border-radius-base 0);
+      border-radius: 0 $border-radius-base $border-radius-base 0;
     }
   }
 
@@ -1084,7 +1084,7 @@ $i: 1;
     .tab-content{
       //border-top: 1px solid #ddd;
       //border-right: 1px solid #ddd;
-      @include border-radius($border-radius-base 0 0 $border-radius-base);
+      border-radius: $border-radius-base 0 0 $border-radius-base;
     }
   }
 }
@@ -1313,7 +1313,7 @@ $i: 1;
 /**********************************/
 
 .slimScrollBar{
-  @include border-radius($border-radius-base !important);
+  border-radius: $border-radius-base !important;
 }
 
 /***********************************/
@@ -1459,7 +1459,7 @@ $i: 1;
   width: 8px;
   height: 8px;
   margin: 0 5px;
-  @include border-radius(50%);
+  border-radius: 50%;
 }
 
 .bg-addition{

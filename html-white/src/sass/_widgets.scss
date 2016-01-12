@@ -50,7 +50,7 @@
     height: 28px;
     line-height: 28px;
     vertical-align: middle;
-    @include border-radius(20px);
+    border-radius: 20px;
     font-size: 16px;
 
     img{
@@ -770,7 +770,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
 
 /*boxes*/
 .box{
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
 
   padding: 5px;
   text-align: center;
@@ -1125,7 +1125,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
     height: 53px;
     line-height: 53px;
     vertical-align: middle;
-    @include border-radius(53px);
+    border-radius: 53px;
 
     img{
       position: relative;
@@ -1154,7 +1154,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   position: relative;
   border-left: 2px solid $text-muted;
 
-  @include border-radius($border-radius-base);
+  border-radius: $border-radius-base;
 
   &.on-left{
     margin-left: 0;
