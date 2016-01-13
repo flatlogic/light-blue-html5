@@ -3,7 +3,7 @@
 $i: 1;
 @each $color in $colors{
 
-  .#{""+nth($color-names, $i)}{
+  .#{nth($color-names, $i)}{
     background: #{$color} !important;
     color:  $white !important;
   }
@@ -22,7 +22,7 @@ $i: 1;
 $i: 1;
 @each $color in $colors{
 
-  .color-#{""+nth($color-names, $i)}{
+  .color-#{nth($color-names, $i)}{
     color: #{$color} !important;
   }
   $i: $i + 1;
@@ -319,7 +319,7 @@ input.parsley-error{
     position: relative;
     background: none;
 
-    h1,h2,h3,h4,h5{
+    #{headings(1,5)}{
       margin: 0;
       line-height: 20px;
       font-weight: 600;

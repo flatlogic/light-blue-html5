@@ -9,56 +9,56 @@
  */
 
 // Core variables and mixins
-@import "variables"; // Modify this for custom colors, font-sizes, etc
-@import "mixins";
+@import "bootstrap-original/variables"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap-original/mixins";
 
 // CSS Reset
-@import "reset";
+@import "bootstrap-original/reset";
 
 // Grid system and page structure
-@import "scaffolding";
-@import "grid";
-@import "layouts";
+@import "bootstrap-original/scaffolding";
+@import "bootstrap-original/grid";
+@import "bootstrap-original/layouts";
 
 // Base CSS
-@import "type";
-@import "code";
-@import "forms";
-@import "tables";
+@import "bootstrap-original/type";
+@import "bootstrap-original/code";
+@import "bootstrap-original/forms";
+@import "bootstrap-original/tables";
 
 // Components: common
 //okendoken. sprites are redefined in boostrap-override.scss
-//@import "sprites";
-@import "dropdowns";
-@import "wells";
-@import "component-animations";
-@import "close";
+//@import "bootstrap-original/sprites";
+@import "bootstrap-original/dropdowns";
+@import "bootstrap-original/wells";
+@import "bootstrap-original/component-animations";
+@import "bootstrap-original/close";
 
 // Components: Buttons & Alerts
-@import "buttons";
-@import "button-groups";
-@import "alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
+@import "bootstrap-original/buttons";
+@import "bootstrap-original/button-groups";
+@import "bootstrap-original/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
 
 // Components: Nav
-@import "navs";
-@import "navbar";
-@import "breadcrumbs";
-@import "pagination";
-@import "pager";
+@import "bootstrap-original/navs";
+@import "bootstrap-original/navbar";
+@import "bootstrap-original/breadcrumbs";
+@import "bootstrap-original/pagination";
+@import "bootstrap-original/pager";
 
 // Components: Popovers
-@import "modals";
-@import "tooltip";
-@import "popovers";
+@import "bootstrap-original/modals";
+@import "bootstrap-original/tooltip";
+@import "bootstrap-original/popovers";
 
 // Components: Misc
-@import "thumbnails";
-@import "media";
-@import "labels-badges";
-@import "progress-bars";
-@import "accordion";
-@import "carousel";
-@import "hero-unit";
+@import "bootstrap-original/thumbnails";
+@import "bootstrap-original/media";
+@import "bootstrap-original/labels-badges";
+@import "bootstrap-original/progress-bars";
+@import "bootstrap-original/accordion";
+@import "bootstrap-original/carousel";
+@import "bootstrap-original/hero-unit";
 
 // Utility classes
-@import "utilities"; // Has to be last to override when necessary
+@import "bootstrap-original/utilities"; // Has to be last to override when necessary

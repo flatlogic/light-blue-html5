@@ -391,7 +391,7 @@ textarea,
   color: $grayDark;
   @include border-radius($baseBorderRadius);
 
-  h1,h2,h3,h4,h5,h6{
+  #{headings()}{
     color: $grayDark;
   }
 }
@@ -415,7 +415,7 @@ textarea,
 .popover {
   color: $textColor;
   @include border-radius($baseBorderRadius);
-  h1,h2,h3,h4,h5,h6{
+  #{headings()}{
     color: $textColor;
   }
 }
