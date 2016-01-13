@@ -43,26 +43,36 @@ module.exports = function(grunt) {
 
         // compile sass to css
         sass: {
+            options: {
+                importer:  function(url, prev, done) {
+                    var urlPrefix = "projects/flaming-octo-nemesis";
+                    if ((/^CSS:/.test(url))) { // if indexOf == true then url.indexOf == 0 == false
+                        return {
+                            contents: fs.readFileSync(urlPrefix+url.replace('CSS:.', '') + '.css').toString()
+                        }
+                    } else {
+                        return {
+                            file: url
+                        }
+                    }
+                },
+                sourcemap: 'none'
+            },
             dist: {
                 options: {
-                    style: 'expanded',
-                    precision: 10,
-                    importer:  function(url, prev, done) {
-                        var urlPrefix = "projects/flaming-octo-nemesis";
-                        if ((/^CSS:/.test(url))) { // if indexOf == true then url.indexOf == 0 == false
-                            return {
-                                contents: fs.readFileSync(urlPrefix+url.replace('CSS:.', '') + '.css').toString()
-                            }
-                        } else {
-                            return {
-                                file: url
-                            }
-                        }
-                    },
-                    sourcemap: 'none'
+                    outputStyle: 'expanded',
+                    precision: 10
                 },
                 files: {
                     "<%= config.distFolder %>/css/application.css":"<%= config.srcFolder %>/sass/application.scss"
+                }
+            },
+            min: {
+                options: {
+                    outputStyle: 'compressed'
+                },
+                files: {
+                    "<%= config.distFolder %>/css/application.min.css":"<%= config.srcFolder %>/sass/application.scss"
                 }
             }
         },
@@ -207,7 +217,7 @@ module.exports = function(grunt) {
     grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
 
 
-    var distSass = ['sass:dist', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
+    var distSass = ['sass:dist', 'sass:min', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
     if (ENV == 'production') {
         distSass.push('rename:css');  //rename to application.min if env is production
     }
