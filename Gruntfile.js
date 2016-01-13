@@ -77,14 +77,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // rename minified scss files
-        rename: {
-            css: {
-                src: '<%= config.distFolder %>/css/application.css',
-                dest: '<%= config.distFolder %>/css/application.min.css'
-            }
-        },
-
         clean: {
             images: ['<%= config.distFolder %>/img'],
             scripts: ['<%= config.distFolder %>/js'],
@@ -208,7 +200,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-rename');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks("grunt-handlebars-layouts");
@@ -217,9 +208,9 @@ module.exports = function(grunt) {
     grunt.registerTask('dist-scripts', ['clean:scripts', 'copy:json', ENV == 'production' ? 'uglify' : 'copy:scripts']);
 
 
-    var distSass = ['sass:dist', 'sass:min', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
+    var distSass = ['sass:dist', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
     if (ENV == 'production') {
-        distSass.push('rename:css');  //rename to application.min if env is production
+        distSass = ['sass:min', 'copy:fontAwesome', 'copy:fontGoogle', 'copy:fontBootstrap'];
     }
     grunt.registerTask('dist-sass', distSass);
 
