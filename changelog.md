@@ -2,6 +2,11 @@
 Changelog
 -
 
+Version 3.2.1
+
+- Using node-sass instead of compass
+- Full library list update
+
 Version 3.2
 
 - Full library list update

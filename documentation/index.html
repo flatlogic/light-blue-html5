@@ -85,7 +85,7 @@
         <div class="row-fluid">
             <div class="span10 offset1">
                 <section class="widget">
-                    <h2>About Template (Light Blue 3.2)</h2>
+                    <h2>About Template (Light Blue 3.2.1)</h2>
                     <p><strong>Light Blue Admin Template</strong> is next-generation, well-designed and powerful front-end template. It's very useful for designing either your next
                         web application or admin entrance for it.</p>
                     <p>It's based on super powerful <a href="http://getbootstrap.com/">Bootstrap</a> front-end framework which
@@ -156,34 +156,13 @@
                         <li><p><a href="../html-transparent/src/sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes, etc.</p></li>
                         <li><p><a href="../html-transparent/src/sass/_widgets.scss">widgets.scss</a> - custom widgets classes (email widget, charts, etc). This file <strong class="text-success">can be removed</strong>.</p></li>
                     </ul>
-                    <h3>Sass 3.3</h3>
-                    <p>Sass 3.3 is used in Light Blue. In order to correctly use please update compass:</p>
-                    <ul style="list-style: disc; padding-left: 40px;">
-                        <li>update compass - run <code>gem install compass -v '1.0.0.alpha.19'</code> (or greater version
-                            if available)</li>
-                        <li>install wdm - as of <a href="https://github.com/chriseppstein/compass/issues/1470">compass
-                            issue discussion</a> run <code>gem install wdm</code></li>
-                    </ul>
-
-                    <h2 id="scss-import">Css files import</h2>
-                    <p>Unfortunately lots of libs used in Light Blue do not provide sass versions of stylesheets which creates
-                        few problems for us cause we want to serve just one application.<strong>css</strong> file and keep
-                        imports consistent. This is solved either by simply copy-pasting lib styles into
-                        <a href="../html-transparent/src/sass/application.scss">application.scss</a> (bad) or by finding a way to import .css
-                        files into .scss file (good).</p>
-                    <p>There is a ruby gem called <a href="https://github.com/chriseppstein/sass-css-importer">
-                        sass-css-importer</a> which allows us to do what's needed. To install it:</p>
-                    <ul style="list-style: disc; padding-left: 40px;">
-                        <li>install sass-css-importer - run <code>gem install --pre sass-css-importer</code></li>
-                    </ul>
-                    <p>There is a line in <a href="../html-transparent/src/config.rb">config.rb:9</a> <code>require 'sass-css-importer'</code>
-                        which tells compass to use sass-css-importer when processing <code>@import</code>'s.</p>
 
                     <h2>Building a package</h2>
                     <p>In order to build a package you need to be familiar with <a href="http://gruntjs.com/getting-started">Grunt Task runner</a> and have it installed. Before building a package we need to make sure that
                         all required <em>npm</em> libraries (and <a href="https://www.npmjs.org/">npm</a> itself) are installed:</p>
-                    <pre><code>$> npm install
-$> npm install -g grunt-cli</code></pre>
+                    <pre><code>$> npm install -g grunt-cli
+$> npm install
+$> bower install</code></pre>
                     <p>After that all you need to do is to run:</p>
                     <pre><code>$> grunt --env=development --target=html-transparent</code></pre>
                     <p>This will compile handlebars templates and sass files into html and css accordingly and put them
@@ -241,6 +220,11 @@ $> npm install -g grunt-cli</code></pre>
 
                     <h3>Change Log</h3>
                     <hr/>
+                    <h4><strong>Version 3.2.1</strong></h4>
+                    <ul>
+                        <li>- Using node-sass instead of compass</li>
+                        <li>- Full library list update</li>
+                    </ul>
                     <h4><strong>Version 3.2</strong></h4>
                     <ul>
                         <li>- Full library list update</li>
