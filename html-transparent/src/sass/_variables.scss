@@ -9,11 +9,11 @@ $libs-compiled-folder: '../lib' !default;
 // ------------------------
 
 $lime:                  #8CBF26 !default;
-$red:                   #e5603b !default;
+$red:                   #f25118 !default;
 $red-dark:              #d04f4f !default;
-$blue:                  #618fb0 !default;
-$green:                 #56bc76 !default;
-$orange:                #eac85e !default;
+$blue:                  #4e91ce !default;
+$green:                 #3ecd74 !default;
+$orange:                #f2c34d !default;
 $pink:                  #E671B8 !default;
 $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
@@ -41,6 +41,9 @@ $brand-success:         $green !default;
 $brand-warning:         $orange !default;
 $brand-danger:          $red !default;
 $brand-info:            $teal !default;
+
+$bg-gradient-color-1:   #154265;
+$bg-gradient-color-2:   #7392c2;
 
 // Typography
 // -------------------------
@@ -92,7 +95,7 @@ $widget-controls-color: rgba($white, .45);
 $widget-controls-hover-color: rgba($white, .6);
 
 $text-transparent: rgba($widget-bg-common, .5);
-$bg-addition: rgba($widget-bg-common, .25);
+$bg-addition: rgba($widget-bg-common, .3);
 $widget-bg: rgba($widget-bg-common, .4);
 
 $widget-padding-vertical: 12px;
@@ -123,6 +126,7 @@ $nav-tabs-link-color: $widget-color;
 // -------------------------
 
 $feed-item-bg: $widget-bg;
+$feed-item-color: $white;
 $feed-item-line-color: transparent;
 
 $nav-tabs-link-color: $widget-color;

@@ -6,7 +6,7 @@ $(function(){
                 .margin({top: 0, bottom: 25, left: 25, right: 0})
                 //.showLegend(false)
                 .color([
-                    $orange, '#cf6d51'
+                    '#6294c9', '#59bc79'
                     //'#618fb0', '#61b082'
                 ]);
 
@@ -84,7 +84,7 @@ $(function(){
         function close(e){
             var $settings = $("#settings"),
                 $popover = $settings.siblings(".popover");
-            if(!$.contains($popover[0], e.target)){
+            if($popover.length && !$.contains($popover[0], e.target)){
                 $settings.popover('hide');
                 $(document).off("click", close);
             }

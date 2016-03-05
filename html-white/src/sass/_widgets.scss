@@ -45,7 +45,7 @@
     z-index: 1;
     background: $feed-item-bg;
     text-align: center;
-    color: $white;
+    color: $feed-item-color;
     width: 28px;
     height: 28px;
     line-height: 28px;
@@ -305,7 +305,6 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
 
 .error-info{
   font-size: 20px;
-  color: $gray-dark;
 }
 
 .error-help{
@@ -319,7 +318,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   right: 0;
   width: 100%;
   font-size: $font-size-small;
-  color: $text-muted;
+  color: rgba($white, .8);
   text-align: center;
 }
 
@@ -877,9 +876,11 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
 }
 
 .visits-info{
-  margin: 12px 0 0;
+  margin: $widget-padding-vertical (-$widget-padding-horizontal) (-$widget-padding-vertical);
+  padding-top: 18px;
+  padding-bottom: 3px;
+  border: none;
   text-align: center;
-  padding-bottom: 0;
 
   .key{
     color: $widget-header-color
@@ -1152,7 +1153,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
   padding: 8px 10px;
   background: $bg-addition;
   position: relative;
-  border-left: 2px solid $text-muted;
+  border-left: 2px solid darken($widget-bg, 10%);
 
   border-radius: $border-radius-base;
 
@@ -1160,14 +1161,14 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
     margin-left: 0;
     margin-right: 63px;
     border-left: none;
-    border-right: 2px solid $text-bold;
+    border-right: 2px solid darken($widget-bg, 10%);
 
     .arrow{
       left: auto;
       right: -7px;
 
       border-right: none;
-      border-left: 5px solid $text-bold;
+      border-left: 5px solid darken($widget-bg, 10%);
     }
 
     .sender, .text{
@@ -1185,7 +1186,7 @@ table.table thead .sorting_desc_disabled { background: url('#{$libs-compiled-fol
 
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid $text-bold;
+    border-right: 5px solid darken($widget-bg, 10%);
   }
 }
 
