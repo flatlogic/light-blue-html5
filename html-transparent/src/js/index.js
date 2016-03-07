@@ -6,7 +6,7 @@ $(function(){
                 .margin({top: 0, bottom: 25, left: 25, right: 0})
                 //.showLegend(false)
                 .color([
-                    '#6294c9', '#59bc79'
+                    '#4a88d8', '#3ccd51'
                 ]);
 
             chart.legend.margin({top: 3});

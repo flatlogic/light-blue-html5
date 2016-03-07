@@ -103,11 +103,13 @@ $widget-padding-horizontal: 17px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 
+$sidebar-color:          $white;
 $sidebar-item-active-bg: rgba($black,.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
 
+$header-link-color: $text-transparent;
 $header-notification-count: rgba(51,51,51, .55);
 
 $header-search-query-bg-image: url(../img/search.png);
@@ -118,6 +120,9 @@ $header-dropdown-secondary-color:        #888;
 $header-dropdown-bg:                     $widget-bg;
 $header-dropdown-shadow:                 0 6px 12px rgba(0, 0, 0, 0.175);
 $header-dropdown-item-hover:             #eee;
+
+$input-transparent-color: $text-color;
+$input-transparent-placeholder-color: rgba(#eee, .76);
 
 // Widgets
 // -------------------------

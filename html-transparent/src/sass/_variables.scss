@@ -42,14 +42,14 @@ $brand-warning:         $orange !default;
 $brand-danger:          $red !default;
 $brand-info:            $teal !default;
 
-$bg-gradient-color-1:   #154265;
-$bg-gradient-color-2:   #7392c2;
+$bg-gradient-color-1: #98CFF2;
+$bg-gradient-color-2: #CDE3EA;
 
 // Typography
 // -------------------------
 $text-color: $white-dark !default;
 $text-bold: lighten($text-color, 3%);
-$text-muted: darken($text-color, 15%) !default;
+$text-muted: #666 !default;
 
 $font-family-sans-serif:  "Open Sans", sans-serif !default;
 
@@ -64,7 +64,7 @@ $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
 $font-weight-normal: 400 !default;
 $font-weight-thin: 300 !default;
-$font-weight-base: $font-weight-thin !default;
+$font-weight-base: $font-weight-normal !default;
 
 $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
@@ -72,7 +72,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 // Links
 // -------------------------
 
-$link-color:            saturate(lighten($blue, 25%), 50%);
+$link-color:              #4B88D4;
 
 // Layout
 // -------------------------
@@ -86,47 +86,52 @@ $sidebar-mt: 80px;
 
 $basic-border-color: transparent;
 
-$widget-bg-common:        #333 !default; //#ddd
+$widget-bg-common:        #fff !default; //#ddd
 $widget-mb:        30px;
-$widget-color:     $text-color;
+$widget-color:     #444;
 $widget-header-color: lighten($widget-color, 5%);
 $widget-header-smalls-color: $text-muted;
-$widget-controls-color: rgba($white, .45);
+$widget-controls-color: rgba($widget-color, .6);
 $widget-controls-hover-color: rgba($white, .6);
 
-$text-transparent: rgba($widget-bg-common, .5);
+$text-transparent: rgba($widget-bg-common, .7);
 $bg-addition: rgba($widget-bg-common, .3);
-$widget-bg: rgba($widget-bg-common, .4);
+$widget-bg: rgba($widget-bg-common, .3);
 
 $widget-padding-vertical: 12px;
 $widget-padding-horizontal: 17px;
 $widget-padding: $widget-padding-vertical $widget-padding-horizontal;
 
 
+$sidebar-color: #183960;
 $sidebar-item-active-bg: rgba($black,.07);
 $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 
 $page-title-color: $white;
 
-$header-notification-count: rgba($widget-bg-common, .55);
+$header-link-color: #7199BA;
+$header-notification-count: $brand-danger;
 
-$header-search-query-bg-image: url(../img/search-white.png);
-$header-search-query-placeholder-color: rgba(#eee, .76);
+$header-search-query-bg-image: url(../img/search.png);
+$header-search-query-placeholder-color: rgba(#444, .76);
 
 
 $header-dropdown-primary-color:          $widget-header-color;
-$header-dropdown-secondary-color:        #ddd;
+$header-dropdown-secondary-color:        #888;
 $header-dropdown-bg:                     rgba($widget-bg-common, .85);
 $header-dropdown-shadow:                 none;
 $header-dropdown-item-hover:             $brand-primary;
 
 $nav-tabs-link-color: $widget-color;
 
+$input-transparent-color: $widget-color;
+$input-transparent-placeholder-color: rgba(#444, .76);
+
 // Widgets
 // -------------------------
 
 $feed-item-bg: $widget-bg;
-$feed-item-color: $white;
+$feed-item-color: #4975a2;
 $feed-item-line-color: transparent;
 
 $nav-tabs-link-color: $widget-color;
@@ -138,7 +143,7 @@ $nav-tabs-tab-content-bg: $bg-addition;
 
 $tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), .4);
 
-$location-selector-bg: $bg-addition;
+$location-selector-bg: darken($bg-addition, 20%);
 $location-selector-border-color: #eee;
 $messenger-spinner-bg: $white;
 
@@ -315,7 +320,7 @@ $well-border:     transparent !default;
 // --------------------------------------------------
 
 $pre-bg: $bg-addition !default;
-$pre-color:                   $text-color !default;
+$pre-color:                   $widget-color !default;
 $pre-border-color: $widget-bg !default;
 
 // Type
@@ -329,4 +334,4 @@ $blockquote-border-color:             $widget-bg;
 // Awesome Checkbox
 // ------------------------
 
-$awesome-checkbox-default-color:       #eee;
+$awesome-checkbox-default-color:       #555;

@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         config: {
-            target: grunt.option('target') || 'html-transparent', // pass --target=html-transparent. possible targets: html-transparent, html-white
+            target: grunt.option('target') || 'html-transparent', // pass --target=html-transparent. possible targets: html-transparent, html-transparent-dark, html-white
             srcFolder: '<%= config.target %>/src',
             distFolder: '<%= config.target %>/dist'
         },
@@ -140,13 +140,21 @@ module.exports = function(grunt) {
                 src: '**/*.*',
                 dest: '<%= config.distFolder %>/css/fonts/font-awesome'
             },
-            syncVersionsStyles: {
+            syncTransparentDarkStyles: {
                 expand: true,
                 cwd: 'html-transparent/src/sass',
                 src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
                     '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
                     '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
                 dest: 'html-white/src/sass'
+            },
+            syncWhiteStyles: {
+                expand: true,
+                cwd: 'html-transparent/src/sass',
+                src: ['_base.scss', '_font.scss', '_general.scss', '_mixins.scss', '_override-bootstrap.scss',
+                    '_override-custom-libs.scss', '_override-libs.scss', '_override-messenger.scss', '_print.scss',
+                    '_responsive.scss', '_utils.scss', '_widgets.scss', 'application.scss' ],
+                dest: 'html-transparent-dark/src/sass'
             }
         },
 
@@ -172,7 +180,7 @@ module.exports = function(grunt) {
             },
             syncSass: {
                 files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
-                tasks: ['copy:syncVersionsStyles']
+                tasks: ['copy:syncTransparentDarkStyles', 'copy:syncWhiteStyles']
             },
             sass: {
                 files: ['<%= config.srcFolder %>/sass/**.scss', '<%= config.srcFolder %>/sass/**.sass'],
