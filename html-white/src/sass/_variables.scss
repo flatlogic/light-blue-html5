@@ -9,15 +9,15 @@ $libs-compiled-folder: '../lib' !default;
 // ------------------------
 
 $lime:                  #8CBF26 !default;
-$red:                   #f25118 !default;
+$red:                   #f53811 !default;
 $red-dark:              #d04f4f !default;
-$blue:                  #4e91ce !default;
-$green:                 #3ecd74 !default;
-$orange:                #f2c34d !default;
+$blue:                  #3a87c5 !default;
+$green:                 #17c457 !default;
+$orange:                #f0b829 !default;
 $pink:                  #E671B8 !default;
 $purple:                #A700AE !default;
 $brown:                 #A05000 !default;
-$teal:                  #4ab0ce !default;
+$teal:                  #25a1c5 !default;
 $white:                 #ffffff !default;
 $black:                 #000000 !default;
 
@@ -30,7 +30,7 @@ $shadow-color:            rgba(#676767, .4) !default;
 //copy from BS
 $gray-darker:           lighten(#000, 13.5%) !default;
 $gray-dark:             #555 !default;
-$gray:                  #666;
+$gray:                  #606060;
 $gray-light:            lighten(#000, 60%) !default;
 $gray-lighter:          lighten(#000, 93.5%) !default;
 $gray-semi-light:       #777;
@@ -42,8 +42,8 @@ $brand-warning:         $orange !default;
 $brand-danger:          $red !default;
 $brand-info:            $teal !default;
 
-$bg-gradient-color-1: #4c8594;
-$bg-gradient-color-2: #32526d;
+$bg-gradient-color-1: #2b6e80;
+$bg-gradient-color-2: #0c3252;
 
 // Typography
 // -------------------------
@@ -110,7 +110,7 @@ $sidebar-item-sub-active-bg: darken($sidebar-item-active-bg, 15%);
 $page-title-color: $white;
 
 $header-link-color: $text-transparent;
-$header-notification-count: rgba(51,51,51, .55);
+$header-notification-count: $brand-danger;
 
 $header-search-query-bg-image: url(../img/search.png);
 $header-search-query-placeholder-color: rgba(#555, .76);
@@ -128,7 +128,7 @@ $input-transparent-placeholder-color: rgba(#eee, .76);
 // -------------------------
 
 $feed-item-bg: $bg-addition;
-$feed-item-color: #888;
+$feed-item-color: #707070;
 $feed-item-line-color: $feed-item-bg;
 
 $nav-tabs-link-color: $link-color;
