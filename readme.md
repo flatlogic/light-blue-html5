@@ -1,8 +1,8 @@
 Light Blue v3.3.0
 =========
 
-Available in three versions [transparent white (basic)](http://demo.flatlogic.com/3.3.0/transparent-light),
- [transparent dark](http://demo.flatlogic.com/3.3.0/transparent-dark),
+Available in three versions [transparent white (basic)](http://demo.flatlogic.com/3.3.0/light),
+ [transparent dark](http://demo.flatlogic.com/3.3.0/dark),
  and [white opaque](http://demo.flatlogic.com/3.3.0/white) all with **handlebars** and **bower** under the hood!
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
