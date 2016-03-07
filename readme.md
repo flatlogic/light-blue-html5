@@ -1,6 +1,8 @@
 Light Blue v3.3.0
 =========
 
+**World First Transparent Dashboard**
+
 Available in three versions [transparent white (basic)](http://demo.flatlogic.com/3.3.0/light),
  [transparent dark](http://demo.flatlogic.com/3.3.0/dark),
  and [white opaque](http://demo.flatlogic.com/3.3.0/white) all with **handlebars** and **bower** under the hood!
@@ -17,15 +19,17 @@ Light Blue is a **next generation** dashboard template based on the unique trans
 New Version 3.3.0 Released!
 -
 
-- Full library list update
-- Using node-sass instead of compass
+- Completely new Transparent Light version!
+- Updated color scheme and design improvements
+- Bugfixes
 
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.
 It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
 
-We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
+We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases.
+Once you purchased Light Blue, you will be entitled to free download of all future updates.
 
 Feedback
 -
@@ -36,10 +40,9 @@ Next Release Plan
 -
 
   - Bootstrap 4.0 (is already [being developed](https://twitter.com/flatlogicinc/status/682193108549931010))
-  - ECMAScript 6
+  - Angular version
   - Rails seed project
   - .NET seed project
-  - Angular version
 
 Full feature list
 -

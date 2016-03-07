@@ -2,6 +2,12 @@
 Changelog
 -
 
+Version 3.3.0
+
+- Completely new Transparent Light version!
+- Updated color scheme and design improvements
+- Bugfixes
+
 Version 3.2.1
 
 - Using node-sass instead of compass
