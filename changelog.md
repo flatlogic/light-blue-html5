@@ -2,6 +2,10 @@
 Changelog
 -
 
+Version 3.3.1
+
+- Screenshot update
+
 Version 3.3.0
 
 - Completely new Transparent Light version!

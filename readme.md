@@ -1,13 +1,13 @@
-Light Blue v3.3.0
+Light Blue v3.3.1
 =========
 
 **World First Transparent Dashboard**
 
-Available in three versions [transparent white (basic)](http://demo.flatlogic.com/3.3.0/light),
- [transparent dark](http://demo.flatlogic.com/3.3.0/dark)
- and [white opaque](http://demo.flatlogic.com/3.3.0/white) all with **handlebars** and **bower** under the hood!
+Available in three versions [transparent dark (basic)](http://demo.flatlogic.com/3.3.1/dark),
+ [transparent light](http://demo.flatlogic.com/3.3.1/light)
+ and [white opaque](http://demo.flatlogic.com/3.3.1/white) all with **handlebars** and **bower** under the hood!
 
-![Light Blue Preview](http://demo.flatlogic.com/3.3.0/light-blue-preview.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.3.1/light-blue-preview.png)
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
