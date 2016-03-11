@@ -192,17 +192,6 @@ $i: 1;
     border: none;
     border-radius: 0;
   }
-
-  .panel-collapse.collapse {
-    display: block;
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    @include transition(height .35s ease);
-    &.in {
-      height: auto;
-    }
-  }
 }
 
 .sidebar-labels{
