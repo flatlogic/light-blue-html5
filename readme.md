@@ -1,4 +1,4 @@
-Light Blue v3.5.0 with Angular 2.0 Final Release support
+Light Blue v3.5.0 with Angular 2.4 Final Release support
 =========
 
 ![Light Blue Preview](http://demo.flatlogic.com/3.5.0/light-blue-preview-2017.png)
@@ -7,7 +7,7 @@ Light Blue v3.5.0 with Angular 2.0 Final Release support
 
 Available in five versions [transparent dark (basic)](http://demo.flatlogic.com/3.5.0/dark),
  [transparent light](http://demo.flatlogic.com/3.5.0/light),
- [white opaque](http://demo.flatlogic.com/3.5.0/white) all with **handlebars** and **bower** under the hood
+ [white opaque](http://demo.flatlogic.com/3.5.0/white) all with **handlebars** and **bower** under the hood;
  plus Angular 2.4 Seed version
  and completely new [Angular 2.4 Full version](http://demo.flatlogic.com/3.5.0/a2).
 
@@ -39,8 +39,6 @@ Email us at [support@flatlogic.com](mailto:support@flatlogic.com) or tweet to [F
 Next Release Plan
 -
 
-  - Bootstrap 4.0 (is already [being developed](https://twitter.com/flatlogicinc/status/682193108549931010))
-  - Angular 2.0 Full version
   - Rails seed project
   - .NET seed project
 
