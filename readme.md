@@ -1,7 +1,7 @@
 Light Blue v3.5.0 with Angular 2.0 Final Release support
 =========
 
-![Light Blue Preview](http://demo.flatlogic.com/3.5.0/light-blue-preview-2016.png)
+![Light Blue Preview](http://demo.flatlogic.com/3.5.0/light-blue-preview-2017.png)
 
 **World First Transparent Dashboard**
 
