@@ -40,7 +40,7 @@ Next Release Plan
 -
 
   - Rails seed project
-  - .NET seed project
+  - React seed project
 
 Full feature list
 -
