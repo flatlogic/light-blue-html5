@@ -127,3 +127,5 @@ Full feature list
 
 
 Please note that support is provided via email as mentioned in the documentation page.
+
+> Looking for Angular development or consulting services? Hire the best - [contact@flatlogic.com](mailto:contact@flatlogic.com)
