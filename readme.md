@@ -6,10 +6,10 @@ Light Blue v3.8.0 with Angular 4.0 Final Release support
 **World First Transparent Dashboard**
 
 Available in five versions [transparent dark (basic)](http://demo.flatlogic.com/3.8.0/dark),
- [transparent light](http://demo.flatlogic.com/3.6.0/light),
- [white opaque](http://demo.flatlogic.com/3.6.0/white) all with **handlebars** and **bower** under the hood;
+ [transparent light](http://demo.flatlogic.com/3.8.0/light),
+ [white opaque](http://demo.flatlogic.com/3.8.0/white) all with **handlebars** and **bower** under the hood;
  plus Angular 4.0 Seed version
- and completely new [Angular 4.0 Full version](http://demo.flatlogic.com/3.8.0/a2).
+ and completely new [Angular 4.0 Full version](http://demo.flatlogic.com/3.8.0/a4).
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
