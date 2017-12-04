@@ -45,10 +45,9 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 importer:  function(url, prev, done) {
-                    var urlPrefix = "projects/flaming-octo-nemesis";
                     if ((/^CSS:/.test(url))) { // if indexOf == true then url.indexOf == 0 == false
                         return {
-                            contents: fs.readFileSync(urlPrefix+url.replace('CSS:.', '') + '.css').toString()
+                            contents: fs.readFileSync(url.replace('CSS:../../.', '') + '.css').toString()
                         }
                     } else {
                         return {
