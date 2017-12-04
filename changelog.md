@@ -2,6 +2,13 @@
 Changelog
 -
 
+Version 4.0.0
+
+- React JS Full version with Server Side Rendering and Bootstrap 4 Beta support
+- Update Angular to 5.0.0
+- Retouch design
+- Fix various bugs
+
 Version 3.9.1
 
 - Bootstrap 4 Beta update for Angular 4.0 version

@@ -1,15 +1,21 @@
-Light Blue v3.9.1 with Angular 4.0 Final and React Versions!
+Light Blue v4.0.0 with Angular 5.0 and React Versions!
 =========
 
-![Light Blue Preview](http://demo.flatlogic.com/3.9.1/light-blue-preview-2017.png)
+![Light Blue Preview](http://demo.flatlogic.com/4.0.0/light-blue-preview-2018-1.png)
+![Light Blue Preview](http://demo.flatlogic.com/4.0.0/light-blue-preview-2018-2.png)
+![Light Blue Preview](http://demo.flatlogic.com/4.0.0/light-blue-preview-2018-3.png)
+**Our team of proven industry experts invested around 500 hours in every version of Light Blue Dashboard rigorously
+crafting it from head to toe. This evaluates to $20 000 considering current Javascript development rates.
+You could hire someone and have this amount in your bill, but you have the whole app for only $26!*
+
 
 **World First Transparent Dashboard**
 
-Available in six versions [transparent dark (basic)](http://demo.flatlogic.com/3.9.1/dark),
- [transparent light](http://demo.flatlogic.com/3.9.1/light),
- [white opaque](http://demo.flatlogic.com/3.9.1/white) all with handlebars and bower under the hood;
- plus **Angular 4.0** Full and Seed versions [Angular 4.0 Full version](http://demo.flatlogic.com/3.9.1/a4)
- and completely new **React JS** Seed version with **Server Side Rendering** and Bootstrap 4 Beta support!
+Available in seven versions [transparent dark (basic)](http://demo.flatlogic.com/4.0.0/dark),
+ [transparent light](http://demo.flatlogic.com/4.0.0/light),
+ [white opaque](http://demo.flatlogic.com/4.0.0/white) all with handlebars and bower under the hood;
+ plus **Angular 4.0** Full and Seed versions [Angular 4.0 Full version](http://demo.flatlogic.com/4.0.0/a4)
+ and completely new **React JS** Full and Seed versions with **Server Side Rendering**! [React JS Version](https://light-blue.herokuapp.com).
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
 
@@ -18,10 +24,12 @@ Light Blue is a **next generation** dashboard template based on the unique trans
   - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
   - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
 
-New Version 3.9.1 Released!
+New Version 4.0.0 Released!
 
-- Bootstrap 4 Beta update for Angular 4.0 version
-- Styles refactoring
+- React JS Full version with Server Side Rendering and Bootstrap 4 Beta support
+- Update Angular to 5.0
+- Retouch design
+- Fix various bugs
 
 **Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
 **Light Blue** will make the development of your next web application or admin entrance for it much easier and faster.
