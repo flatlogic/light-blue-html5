@@ -319,6 +319,7 @@ $i: 1;
 
 /*content except of header*/
 .content{
+  position: relative;
   padding: 25px 2.5641%;
   @include transition(margin-top .35s ease, opacity .2s);
   max-width: none;
@@ -327,6 +328,13 @@ $i: 1;
 
   &.hiding{
     opacity: 0;
+  }
+
+  .content-footer {
+    position: absolute;
+    bottom: -85px;
+    color: $text-muted;
+
   }
 }
 
