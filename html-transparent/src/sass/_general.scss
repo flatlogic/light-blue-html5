@@ -8,24 +8,25 @@
   //issue id - https://github.com/chriseppstein/compass/issues/1225
   background-color: $color_1;
   //final w3c
-  background-image: radial-gradient(
+  background-image: url(../img/bg-pattern.svg), radial-gradient(
                   $type $figure at $position_x $position_y,
                   $color_1,
                   $color_2
   );
   //webkit-specific
-  background-image: -webkit-radial-gradient(
+  background-image: url(../img/bg-pattern.svg), -webkit-radial-gradient(
                   $position_x $position_y, $type $figure,
                   $color_1,
                   $color_2
   );
 
   //moz-specific
-  background-image: -moz-radial-gradient(
+  background-image: url(../img/bg-pattern.svg), -moz-radial-gradient(
                   $position_x $position_y, $type $figure,
                   $color_1,
                   $color_2
   );
+  background-size: cover;
 }
 
 html{
