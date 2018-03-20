@@ -2,6 +2,11 @@
 Changelog
 -
 
+Version 4.0.1
+
+- Background styling
+
+
 Version 4.0.0
 
 - React JS Full version with Server Side Rendering and Bootstrap 4 Beta support

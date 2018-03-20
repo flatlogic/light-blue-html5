@@ -1,9 +1,9 @@
-Light Blue v4.0.0 with Angular 5.0 and React Versions!
+Light Blue v4.0.1 with Angular 5.0 and React Versions!
 =========
 
-![Light Blue Preview](http://demo.flatlogic.com/4.0.0/light-blue-preview-2018-1.png)
-![Light Blue Preview](http://demo.flatlogic.com/4.0.0/light-blue-preview-2018-2.png)
-![Light Blue Preview](http://demo.flatlogic.com/4.0.0/light-blue-preview-2018-3.png)
+![Light Blue Preview](http://demo.flatlogic.com/4.0.1/light-blue-preview-2018-1.png)
+![Light Blue Preview](http://demo.flatlogic.com/4.0.1/light-blue-preview-2018-2.png)
+![Light Blue Preview](http://demo.flatlogic.com/4.0.1/light-blue-preview-2018-3.png)
 **Our team of proven industry experts invested around 500 hours in every version of Light Blue Dashboard rigorously
 crafting it from head to toe. This evaluates to $20 000 considering current Javascript development rates.
 You could hire someone and have this amount in your bill, but you have the whole app for only $26!*
@@ -11,10 +11,10 @@ You could hire someone and have this amount in your bill, but you have the whole
 
 **World First Transparent Dashboard**
 
-Available in seven versions [transparent dark (basic)](http://demo.flatlogic.com/4.0.0/dark),
- [transparent light](http://demo.flatlogic.com/4.0.0/light),
- [white opaque](http://demo.flatlogic.com/4.0.0/white) all with handlebars and bower under the hood;
- plus **Angular 4.0** Full and Seed versions [Angular 4.0 Full version](http://demo.flatlogic.com/4.0.0/a4)
+Available in seven versions [transparent dark (basic)](http://demo.flatlogic.com/4.0.1/dark),
+ [transparent light](http://demo.flatlogic.com/4.0.1/light),
+ [white opaque](http://demo.flatlogic.com/4.0.1/white) all with handlebars and bower under the hood;
+ plus **Angular 4.0** Full and Seed versions [Angular 4.0 Full version](http://demo.flatlogic.com/4.0.1/a4)
  and completely new **React JS** Full and Seed versions with **Server Side Rendering**! [React JS Version](https://light-blue.herokuapp.com).
 
 Light Blue is a **next generation** dashboard template based on the unique transparent design. There are few reasons why we created it:.
