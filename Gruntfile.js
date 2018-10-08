@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         config: {
-            target: grunt.option('target') || 'html-transparent', // pass --target=html-transparent. possible targets: html-transparent, html-transparent-dark, html-white
+            target: grunt.option('target') || 'html-transparent-dark', // pass --target=html-transparent. possible targets: html-transparent, html-transparent-dark, html-white
             srcFolder: '<%= config.target %>/src',
             distFolder: '<%= config.target %>/dist'
         },
