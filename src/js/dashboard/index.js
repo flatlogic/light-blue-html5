@@ -15,18 +15,16 @@ $(function () {
             return $.plot(this.$chartContainer, data, {
                 series: {
                     pie: {
-                        innerRadius: 0.6,
+                        innerRadius: 0.8,
                         show: true,
                         fill: 1,
-                        stroke: {
-                            width: 0
-                        }
+                        stroke: "none"
                     }
                 },
                 colors: [
-                    Sing.colors['brand-warning'],
-                    Sing.colors['brand-danger'],
-                    Sing.colors['brand-info']
+                    Sing.colors['brand-success'],
+                    Sing.colors['brand-primary'],
+                    Sing.colors['brand-danger']
                 ],
                 legend: {
                     noColumns: 1,
@@ -123,13 +121,13 @@ $(function () {
                     lineWidth: 2.5
                 },
                 points: {
-                    fillColor: Sing.colors['brand-warning'],
+                    fillColor: Sing.colors['brand-success'],
 
                 },
                 shadowSize: 0
             }], {
                 xaxis: {
-                    tickColor: "#fafbfc",
+                    //tickColor: "#fafbfc",
                     tickSize: tickInterval,
                     tickFormatter: (i) => {
                         return ticks[i / tickInterval];
@@ -150,9 +148,10 @@ $(function () {
                     }
                 },
                 grid: {
-                    backgroundColor: {colors: [Sing.colors['white'], Sing.colors['white']]},
-                    borderWidth: 1,
-                    borderColor: Sing.colors['white'],
+                    color: "transparent",
+                    backgroundColor: "transparent",
+                    borderWidth: 0,
+                    borderColor: "transparent",
                     margin: 0,
                     minBorderMargin: 0,
                     labelMargin: 20,
@@ -165,9 +164,9 @@ $(function () {
                     container: this.$legend
                 },
                 colors: [
-                    "#1a88d0",
                     Sing.colors['brand-primary'],
-                    Sing.colors['brand-danger']
+                    Sing.colors['brand-danger'],
+                    Sing.colors['brand-success']
                 ],
                 hooks: {
                     draw: [this.onDrawHook.bind(this)]
@@ -185,7 +184,6 @@ $(function () {
                 })
                 .children('div')
                 .css({
-                    borderWidth: 1,
                     borderRadius: 0,
                     width: 75
                 });
@@ -225,8 +223,8 @@ $(function () {
     function createCharts() {
         new DonutChart(getPieChartData());
         new LineChart('brand-danger', '#sparkline');
-        new LineChart('brand-primary', '#sparkline-1');
-        new LineChart('brand-info', '#sparkline-2');
+        new LineChart('brand-success', '#sparkline-1');
+        new LineChart('brand-primary', '#sparkline-2');
         new MainChart(getMainChartData(), $("#main-chart"), $('#main-chart-tooltip'), $('#main-chart-legend'));
     }
 
@@ -426,26 +424,3 @@ function getMainChartData() {
 
     return [d1, d2, d3];
 }
-
-let myIntro = introJs();
-myIntro.setOptions({
-    skipLabel: "<button class='btn btn-outline-secondary btn-xs'>Stop</button>",
-    doneLabel: "<button class='btn btn-outline-secondary btn-xs'>Done</button>",
-    nextLabel: "<button class='btn btn-success btn-xs'>Next</button>",
-    prevLabel: "<button class='btn btn-outline-secondary btn-xs'>Back</button>",
-    tooltipPosition: "auto",
-    hidePrev: true,
-    hideNext: true,
-    overlayOpacity: 0,
-    showBullets: false
-});
-
-
-setTimeout(() => {
-
-    myIntro.start();
-
-}, 3000);
-
-
-

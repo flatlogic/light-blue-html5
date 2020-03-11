@@ -520,13 +520,13 @@ $slider-handle-size: 26px;
 
   &:hover {
     > a {
-      background-color: $gray-200;
+      //background-color: $gray-200;
     }
   }
 
   > a {
-    background-color: $white;
-    @include border-radius(50%);
+    //background-color: $white;
+    //@include border-radius(50%);
 
     > span {
       display: inline-block;
@@ -1861,11 +1861,10 @@ a.fc-event {
   bottom: 20px;
   top: auto;
 }
-
-.analytics .legendColorBox div {
-  border-radius: 50%;
+.legendLabel {
+  color: $body-main-color;
+  padding-left: 5px;
 }
-
 /**********************************/
 /*   Awesome Bootstrap Checkbox   */
 /**********************************/

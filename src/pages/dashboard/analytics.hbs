@@ -3,15 +3,8 @@
 {{> sidebar active="dashboard_analytics"}}
 {{/content}}
 {{#content "content" mode="replace"}}
-<ol class="breadcrumb">
-            <li class="breadcrumb-item">YOU ARE HERE</li>
-            <li class="breadcrumb-item active">Analytics</li>
-        </ol>
 <h1 class="page-title">
     Analytics
-    <small>
-        <small>Company Performance</small>
-    </small>
 </h1>
 <div class="analytics">
     <div class="analytics-side">
@@ -22,27 +15,24 @@
                         <header>
                             <h4>Visits Today</h4>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove text-white"></i></a>
                             </div>
                         </header>
                         <div class="widget-body">
                             <div class="d-flex justify-content-between align-items-center mb-lg">
-                                <h2 data-toggle="tooltip" data-placement="right" title="+20% vs Yesterday">4,332</h2>
-                                <i class="la la-lg la-arrow-right text-primary rotate-315"></i>
+                                <h2>4,332</h2>
+                                <i class="la la-2x la-arrow-right text-success rotate-315"></i>
                             </div>
                             <div class="d-flex flex-wrap justify-content-between">
-                                <div class="mt visit-element" data-toggle="tooltip" data-placement="top"
-                                    title="+17.3% vs Yesterday">
+                                <div class="mt visit-element">
                                     <h6>+830</h6>
                                     <p class="text-muted mb-0"><small>Logins</small></p>
                                 </div>
-                                <div class="mt visit-element" data-toggle="tooltip" data-placement="top"
-                                    title="10% per Month">
+                                <div class="mt visit-element">
                                     <h6>0.5%</h6>
                                     <p class="text-muted mb-0"><small>Sign Out</small></p>
                                 </div>
-                                <div class="mt visit-element" data-toggle="tooltip" data-placement="top"
-                                    title="86.4% per Month">
+                                <div class="mt visit-element">
                                     <h6>4.5%</h6>
                                     <p class="text-muted mb-0"><small>Rate</small></p>
                                 </div>
@@ -57,7 +47,7 @@
                         <header>
                             <h5>Revenue Breakdown</h5>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove text-white"></i></a>
                             </div>
                         </header>
                         <div class="widget-body">
@@ -77,14 +67,14 @@
                         <header>
                             <h5>App Performance</h5>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove text-white"></i></a>
                             </div>
                         </header>
                         <div class="widget-body">
-                            <p class="text-muted d-flex flex-wrap">
+                            <p class="d-flex flex-wrap">
                                 <small class="mr-lg d-flex align-items-center" data-toggle="tooltip"
                                     data-placement="top" title="Year 2019">
-                                    <span class="circle bg-danger text-danger mr-xs" style="font-size: 4px;">.</span>
+                                    <span class="circle bg-success text-danger mr-xs" style="font-size: 4px;">.</span>
                                     This Period
                                 </small>
                                 <small class="mr-lg d-flex align-items-center" data-toggle="tooltip"
@@ -93,21 +83,21 @@
                                     Last Period
                                 </small>
                             </p>
-                            <h6>SDK</h6>
-                            <div class="progress progress-xs mb-xs">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%;"
+                            <h6 class="fs-sm">SDK</h6>
+                            <div class="progress progress-xs mb-xs bg-black">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%;"
                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <div class="progress progress-xs">
+                            <div class="progress progress-xs bg-black">
                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 30%;"
                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <h6 class="mt-sm">Integration</h6>
-                            <div class="progress progress-xs mb-xs">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;"
+                            <h6 class="mt-sm fs-sm">Integration</h6>
+                            <div class="progress progress-xs mb-xs bg-black">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"
                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
-                            <div class="progress progress-xs">
+                            <div class="progress progress-xs bg-black">
                                 <div class="progress-bar bg-primary" role="progressbar" style="width: 55%;"
                                     aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
@@ -121,11 +111,11 @@
                         <header>
                             <h5>Server Overview</h5>
                             <div class="widget-controls">
-                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                                <a data-widgster="close" title="Close" href="#"><i class="la la-remove text-white"></i></a>
                             </div>
                         </header>
 
-                        <div class="widget-body">
+                        <div class="widget-body text-muted">
                             <div class="d-flex align-items-center mb-sm">
                                 <p class="width-150" data-toggle="tooltip" data-placement="top"
                                     title="+23% vs last period"><small>60% / 37°С / 3.3 Ghz</small></p>
@@ -161,7 +151,7 @@
                         <div class="widget-controls">
                             <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
                             <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-                            <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                            <a data-widgster="close" title="Close" href="#"><i class="la la-remove text-white"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -289,7 +279,7 @@
                         </h4>
                         <div class="widget-controls">
                             <a href="#"><i class="la la-cog"></i></a>
-                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove text-white"></i></a>
                         </div>
                     </header>
                     <div class="widget-body p-0 support table-wrapper">
@@ -371,7 +361,7 @@
                 <section class="widget pb-2 mb-xlg">
                     <header>
                         <h4>Today's Tasks <span
-                                class="badge badge-pill badge-primary fw-normal pull-right mt-xs">11</span></h4>
+                                class="badge badge-pill badge-success fw-normal pull-right mt-xs">11</span></h4>
                         <p class="text-primary mb-0"><small class="tasks-stat"></small></p>
                     </header>
                     <div class="widget-body task-container">
@@ -478,7 +468,6 @@
 <script src="../../node_modules/bootstrap_calendar/bootstrap_calendar/js/bootstrap_calendar.min.js"></script>
 
 <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-<script src="../../node_modules/intro.js/intro.js"></script>
 
 <!-- page specific js -->
 <script src="../js/dashboard/index.js"></script>

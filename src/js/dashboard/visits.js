@@ -168,7 +168,7 @@ $(function(){
         $calendar.calendar({
             months: monthNames,
             days: dayNames,
-            //events: events,
+            events: events,
             popover_options:{
                 placement: 'top',
                 html: true
