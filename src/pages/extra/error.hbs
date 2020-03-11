@@ -1,0 +1,31 @@
+{{#extend "layout" title="Sing App Dashboard - Error" extraBodyClass="error-page" contentClass="error-container" wrapperClass="error-wrapper"}}
+    {{#content "sidebar" mode="replace"}}{{/content}}
+    {{#content "navbar" mode="replace"}}{{/content}}
+    {{#content "chat" mode="replace"}}{{/content}}
+    {{#content "content" mode="replace"}}
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-10 offset-lg-4 offset-md-3 offset-1">
+            <div class="error-container">
+            <h1 class="error-code text-primary">404</h1>
+            <p class="error-info">
+                Opps, it seems that this page does not exist.
+            </p>
+            <p class="error-help mb">
+                If you are sure it should, search for it.
+            </p>
+            <div class="form-group">
+                <input class="form-control input-no-border" type="text" placeholder="Search Pages">
+            </div>
+            <a href="../extra/search.html" class="btn btn-success">
+                Search <i class="fa fa-search ml-xs"></i>
+            </a>
+            </div>
+        </div>
+        </div>
+    {{/content}}
+    {{#content "footer" mode="replace"}}
+        <footer class="page-footer">
+            2014 - 2019 &copy; Sing App - Bootstrap Admin Dashboard Template.
+        </footer>
+    {{/content}}
+{{/extend}}

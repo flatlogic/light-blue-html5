@@ -1,0 +1,24 @@
+{{#extend "layout" title="Sing App Dashboard - Maps Vector"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="maps_vector"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+        <div id="vmap" class="content-map">
+        </div>
+        <header class="page-title">
+            <h1 class="no-margin mb-sm">Vector <span class="fw-semi-bold">Maps</span></h1>
+            <p class="page-title fs-sm no-margin">
+            <span class="fw-semi-bold">1 656 843</span>
+            <span class="ml-xs circle bg-gray"><i class="text-gray-lighter fa fa-sm fa-circle"></i></span>
+            </p>
+        </header>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+        <script src="../../node_modules/jvectormap/jquery-jvectormap.min.js"></script>
+        <script src="../../node_modules/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
+
+        <!-- page specific js -->
+        <script src="../js/maps/maps-vector.js"></script>
+    {{/content}}
+{{/extend}}

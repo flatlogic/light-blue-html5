@@ -1,0 +1,160 @@
+{{#extend "layout" title="Sing App Dashboard - Colors"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="core_colors"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">Colors</li>
+        </ol>
+        <h1 class="page-title">Colors</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            States <span class="fw-semi-bold">Colors</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#" style="display: none;"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Sing comes with a number of state colors that can be applied to the most of elements 
+                            and components. It reuses Bootstrap's original 6 states:</p>
+                        <table class="table table-lg">
+                            <thead>
+                                <tr>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Preview</th>
+                                    <th scope="col">Class postfix</th>
+                                    <th scope="col">usage example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="fw-normal">Success</th>
+                                    <td><span class="circle bg-success">&nbsp;</span></td>
+                                    <td><code>*-success</code></td>
+                                    <td><code class="mr-xs">text-success</code><code>btn-success</code></td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-normal">Warning</th>
+                                    <td><span class="circle bg-warning">&nbsp;</span></td>
+                                    <td><code>*-warning</code></td>
+                                    <td><code class="mr-xs">badge-warning</code><code>bg-warning</code></td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-normal">Danger</th>
+                                    <td><span class="circle bg-danger">&nbsp;</span></td>
+                                    <td><code>*-danger</code></td>
+                                    <td><code class="mr-xs">btn-danger</code><code>text-danger</code></td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-normal">Info</th>
+                                    <td><span class="circle bg-info">&nbsp;</span></td>
+                                    <td><code>*-info</code></td>
+                                    <td><code class="mr-xs">alert-info</code><code>badge-info</code></td>
+                                    </tr>
+                                <tr>
+                                    <th class="fw-normal">Primary</th>
+                                    <td><span class="circle bg-primary">&nbsp;</span></td>
+                                    <td><code>*-primary</code></td>
+                                    <td><code class="mr-xs">bg-primary</code><code>text-primary</code></td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-normal">Secondary</th>
+                                    <td><span class="circle bg-secondary">&nbsp;</span></td>
+                                    <td><code>*-secondary</code></td>
+                                    <td><code class="mr-xs">bg-secondary</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md">
+                        <section class="widget">
+                            <header>
+                                <h5>
+                                    Text
+                                    <span class="fw-semi-bold">Colors</span>
+                                </h5>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#" style="display: none;"><i class="la la-angle-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                                    <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                                </div>
+                            </header>
+                            <div class="widget-body">
+                                <p>Convey meaning through color with a handful of color utility classes. Includes support for 
+                                    styling links with hover states, too. Use <code>text-*</code> class to fill text.</p>
+                                <div class="widget-padding-md border rounded">
+                                    <h1 class="text-danger">h1. Heading</h1>
+                                    <h2 class="text-warning">h2. Heading</h2>
+                                    <h3 class="text-success">h3. Heading</h3>
+                                    <h4 class="text-primary">h4. Heading</h4>
+                                    <h5 class="text-info">h5. Heading</h5>
+                                    <h6 class="text-inverse">h6. Heading</h6>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-md">
+                        <section class="widget">
+                            <header>
+                                <h5>
+                                    Example <span class="fw-semi-bold">Buttons</span>
+                                </h5>
+                                <div class="widget-controls">
+                                    <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                                    <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                                </div>
+                            </header>
+                            <div class="widget-body">
+                                <p class="fs-mini text-muted">
+                                    Use any of the available button classes to quickly create a styled button.
+                                    Semantically distinguishable beauty.
+                                </p>
+                                <p>
+                                    <button class="btn btn-default width-100 mb-xs" role="button">
+                                        Defaullt
+                                    </button>
+                                    <button class="btn btn-primary width-100 mb-xs" role="button">
+                                        Primary
+                                    </button>
+                                    <button class="btn btn-info width-100 mb-xs" role="button">
+                                        Info
+                                    </button>
+                                    <button class="btn btn-success width-100 mb-xs" role="button">
+                                        Success
+                                    </button>
+                                    <button class="btn btn-warning width-100 mb-xs" role="button">
+                                        Warning
+                                    </button>
+                                    <button class="btn btn-danger width-100 mb-xs" role="button">
+                                        Danger
+                                    </button>
+                                    <button class="btn btn-gray width-100 mb-xs" role="button">
+                                        Gray
+                                    </button>
+                                    <button class="btn btn-inverse width-100 mb-xs" role="button">
+                                        Inverse
+                                    </button>
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+      <script src="../js/core/core-colors.js"></script>
+    {{/content}}
+{{/extend}}

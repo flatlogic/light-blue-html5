@@ -1,0 +1,435 @@
+{{#extend "layout" title="Sing App Dashboard - Product Detail"}}
+{{#content "sidebar"}}
+{{> sidebar active="product_detail"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">E-commerce</li>
+</ol>
+<h1 class="page-title">E-commerce -
+    <span class="fw-semi-bold">Product Detail</span>
+</h1>
+<section class="row m-md-0 product-main">
+    <div class="col-md-8 col-12 p-0">
+        <div class="product-photo" style="background-image: url(../demo/img/products/product1.jpg)"></div>
+    </div>
+    <div class="col-md-4 col-12 p-0">
+        <div class="product-info">
+            <div class="rating rating-lg text-primary">
+                4.8
+                <i class="fa fa-star-o"></i>
+            </div>
+            <h4 class="info-title">Trainers</h4>
+            <h4 class="info-description">Trainers In White</h4>
+            <div class="price price-lg">$76</div>
+            <a href="#" class="info-size">Size Guide</a>
+            <div class="info-selects">
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span>&nbsp; Select size &nbsp;</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">2</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">3</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">4</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">5</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        1
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">2</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">3</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">4</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-toolbar info-bag">
+                <button class="btn btn-inverse btn-add">
+                    add to bag
+                    <img src="../demo/img/bag.svg" alt="bag">
+                </button>
+                <a role="button" class="btn btn-star ml-2">
+                    <i class="fa fa-2x fa-star-o"></i>
+                </a>
+            </div>
+            <ul class="info-payments">
+                <li class="payment" style="background-image: url(./../demo/img/payments/aexpress.svg)"></li>
+                <li class="payment" style="background-image: url(./../demo/img/payments/mastercard.svg)"></li>
+                <li class="payment" style="background-image: url(./../demo/img/payments/paypal.svg)"></li>
+                <li class="payment" style="background-image: url(./../demo/img/payments/visa.svg)"></li>
+            </ul>
+            <span class="info-delivery">
+                FREE Delivery & Returns
+            </span>
+        </div>
+    </div>
+</section>
+<h2 class="product-page-title">Product Description</h2>
+<section class="product-description widget">
+    <div class="widget-body">
+        <div class="product-description description-mobile">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="description">
+                        <div class="mb-0">
+                            <a class="accordion-toggle collapsed" role="button" data-toggle="collapse"
+                                data-target="#prod_desc" aria-expanded="true" aria-controls="prod_desc">
+                                PRODUCT DESCRIPTION
+                                <i class="fa fa-angle-down fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="prod_desc" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body description-info">
+                            <p class="info-article">Sneakers (also known as athletic shoes, tennis shoes,gym shoes,
+                                runners, takkies, or trainers) are shoes
+                                primarily designed for sports or other forms of physical exercise, but which are now
+                                also often used
+                                for everyday wear.</p>
+                            <p class="info-article mb-0">The term generally describes a type of footwear with a flexible
+                                sole made of rubber or synthetic material
+                                and an upper part made of leather or synthetic materials.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="code">
+                        <div class="mb-0">
+                            <a class="accordion-toggle collapsed" role="button" data-toggle="collapse"
+                                data-target="#prod_code" aria-expanded="true" aria-controls="prod_code">
+                                PRODUCT CODE
+                                <i class="fa fa-angle-down fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="prod_code" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            1325453
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="share">
+                        <div class="mb-0">
+                            <a class="accordion-toggle collapsed" role="button" data-toggle="collapse"
+                                data-target="#prod_share" aria-expanded="true" aria-controls="prod_share">
+                                SHARE
+                                <i class="fa fa-angle-down fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="prod_share" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <span>Share a photo with a tag <a href="#">#whitetrainers</a></span>
+                            <div class="product-description__social">
+                                <a href="#">
+                                    <i class="fa fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="technology">
+                        <div class="mb-0">
+                            <a class="accordion-toggle collapsed" role="button" data-toggle="collapse"
+                                data-target="#prod_tech" aria-expanded="true" aria-controls="prod_tech">
+                                TECHNOLOGY
+                                <i class="fa fa-angle-down fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="prod_tech" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            <ul class="description-list">
+                                <li>Ollie patch</li>
+                                <li>Cup soles</li>
+                                <li>Vulcanized rubber soles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="rating">
+                        <div class="mb-0">
+                            <a class="accordion-toggle collapsed" role="button" data-toggle="collapse"
+                                data-target="#prod_rating" aria-expanded="true" aria-controls="prod_rating">
+                                RATING & REVIEWS
+                                <i class="fa fa-angle-down fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="prod_rating" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="rating mb-xs">4.8
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span class="reviews">32 Reviews</span>
+                            <a class="display-block mt-xs" href="#">Read all</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-description description-desktop">
+            <div class="description-section description-info">
+                <h3>PRODUCT DESCRIPTION</h3>
+                <p class="info-article">Sneakers (also known as athletic shoes, tennis shoes,gym shoes, runners,
+                    takkies, or trainers) are shoes
+                    primarily designed for sports or other forms of physical exercise, but which are now also often used
+                    for everyday wear.</p>
+                <p class="info-article mb-0">The term generally describes a type of footwear with a flexible sole made
+                    of rubber or synthetic material
+                    and an upper part made of leather or synthetic materials.</p>
+            </div>
+            <div class="description-section">
+                <h3>PRODUCT CODE</h3>
+                1325453
+            </div>
+            <div class="description-section">
+                <h3>SHARE</h3>
+                <span>Share a photo with a tag
+                    <a href="#">#whitetrainers</a>
+                </span>
+                <ul class="description-social">
+                    <li>
+                        <a class="social-link" id="facebook" href="#">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" id="instagram" href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="social-link" id="twitter" href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="description-section">
+                <h3>TECHNOLOGY</h3>
+                <ul class="description-list">
+                    <li>Ollie patch</li>
+                    <li>Cup soles</li>
+                    <li>Vulcanized rubber soles</li>
+                </ul>
+            </div>
+            <div class="description-section">
+                <h3>RATING & REVIEWS</h3>
+                <div class="rating mb-2 text-primary">4.8
+                    <i class="fa fa-star"></i>
+                </div>
+                <span class="mb-2">32 Reviews</span></br>
+                <a href="#">Read all</a>
+            </div>
+        </div>
+    </div>
+</section>
+<h3 class="product-page-title">You may also like</h3>
+<section class="product-gallery">
+    <div class="d-md-none">
+        <h4 class="text-center mb-3">YOU MAY ALSO LIKE</h4>
+    </div>
+    <div class="carousel-wrapper">
+        <div class="carousel-btn carousel-left">
+            <i class="fa fa-angle-left fa-2x"></i>
+        </div>
+        <div class="carousel-btn carousel-right">
+            <i class="fa fa-angle-right fa-2x"></i>
+        </div>
+        <div class="product-carousel">
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product1.jpg)">
+                    <div class="star star--fill">
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price">
+                        $76
+                    </div>
+                    <div class="rating rating-reverse text-primary">
+                        4.7
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product5.jpeg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">BOOTS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price price-sale">
+                        <span class="old">$56</span>
+                        20% off
+                        <span class="new"> $45</span>
+                    </div>
+                    <div class="rating rating-reverse text-primary">
+                        4.3
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product4.jpeg)">
+                    <div class="badge bg-success">New</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">FLAT SANDALS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price">$55</div>
+                    <div class="rating rating-reverse text-primary">
+                        4.0
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product7.jpg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price price-sale">
+                        <span class="old">$101</span>
+                        30% off
+                        <span class="new"> $70</span>
+                    </div>
+                    <div class="rating rating-reverse text-primary">
+                        4.9
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product6.jpg)">
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price">$76</div>
+                    <div class="rating rating-reverse text-primary">
+                        3.9
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product3.jpg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">BOOTS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price price-sale">
+                        <span class="old">$56</span>
+                        20% off
+                        <span class="new"> $45</span>
+                    </div>
+                    <div class="rating rating-reverse text-primary">
+                        4.2
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product8.jpg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price price-sale">
+                        <span class="old">$101</span>
+                        30% off
+                        <span class="new"> $70</span>
+                    </div>
+                    <div class="rating rating-reverse text-primary">
+                        4.5
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-photo rounded-lg" style="background-image: url(../demo/img/products/product2.jpg)">
+                    <div class="badge bg-success">New</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="card-price-wrapper">
+                    <div class="price">$55</div>
+                    <div class="rating rating-reverse text-primary text-primary">
+                        5.0
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/content}}
+{{#content "scripts"}}
+
+<script src="../../node_modules/slick-carousel/slick/slick.min.js"></script>
+
+<!-- page specific js -->
+<script src="../js/e-commerce/product-detail.js"></script>
+{{/content}}
+{{/extend}}

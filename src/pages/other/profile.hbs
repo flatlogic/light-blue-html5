@@ -1,0 +1,167 @@
+{{#extend "layout" title="Sing App Dashboard - Profile"}}
+  {{#content "sidebar"}}
+    {{> sidebar active="profile"}}
+  {{/content}}
+  {{#content "content" mode="replace"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">YOU ARE HERE</li>
+        <li class="breadcrumb-item active">Profile</li>
+    </ol>
+    <h1 class="page-title">User - <span class="fw-semi-bold">Profile</span></h1>
+    <div class="row">
+        <div class="col-lg-6">
+            <section class="widget user-profile">
+                <div class="widget-body">
+                    <div class="widget-top-overlay text-white">
+                        <div class="height-250 overflow-hidden">
+                            <img class="img-fluid" src="../demo/img/pictures/19.jpg">
+                        </div>
+                        <div class="btn-toolbar">
+                            <a href="#" class="btn btn-outline btn-sm float-right">
+                                <i class="fa fa-twitter mr-xs"></i>
+                                Follow
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 text-center">
+                            <div class="post-user post-user-profile">
+                                <span class="thumb-xl">
+                                    <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
+                                </span>
+                                <h5 class="fw-normal">Adam <span class="fw-semi-bold">Johns</span></h5>
+                                <p>UI/UX designer</p>
+                                <a href="#" class="btn btn-success btn-sm mt">
+                                    &nbsp;Send
+                                    <i class="fa fa-envelope ml-xs"></i>&nbsp;
+                                </a>
+                                <ul class="contacts">
+                                    <li><i class="fa fa-phone fa-fw mr-xs"></i><a href="#"> +375 29 555-55-55</a></li>
+                                    <li><i class="fa fa-envelope fa-fw mr-xs"></i><a href="#"> psmith@example.com</a></li>
+                                    <li><i class="fa fa-map-marker fa-fw mr-xs"></i><a href="#"> Minsk, Belarus</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="stats-row stats-row-profile mt">
+                                <div class="stat-item">
+                                    <p class="value text-right">251</p>
+                                    <h6 class="name">Posts</h6>
+                                </div>
+                                <div class="stat-item">
+                                    <p class="value text-right">9.38%</p>
+                                    <h6 class="name">Conversion</h6>
+                                </div>
+                                <div class="stat-item">
+                                    <p class="value text-right">842</p>
+                                    <h6 class="name">Followers</h6>
+                                </div>
+                            </div>
+                            <p class="mt-lg">
+                                <a href="#" class="badge bg-info rounded-0"> UI/UX </a>
+                                <a href="#" class="badge bg-primary rounded-0 ml-xs"> Web Design </a>
+                                <a href="#" class="badge bg-default rounded-0 ml-xs"> Mobile Apps </a>
+                            </p>
+                            <p class="lead mt-lg">
+                                My name is Adam Johns and here is my new Sing user profile page.
+                            </p>
+                            <p>
+                                I love reading people's summaries page especially those who are in the same industry as me.
+                                Sometimes it's much easier to find your concentration during the night.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-6">
+            <section class="activities">
+                <h2 class="ml-3">Activities</h2>
+                <section class="event">
+                    <span class="thumb-sm avatar float-left mr-sm">
+                        <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
+                    </span>
+                    <h5 class="event-heading"><a href="#">Bob Nilson</a> <small><a href="#">@nils</a></small></h5>
+                    <p class="text-muted">February 22, 2014 at 01:59 PM</p>
+                    <p>
+                        There is no such thing as maturity. There is instead an ever-evolving process of maturing.
+                        Because when there is a maturity, there is ...
+                    </p>
+                    <footer>
+                        <ul class="post-links">
+                            <li><a href="#">1 hour</a></li>
+                            <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                            <li><a href="#">Comment</a></li>
+                        </ul>
+                    </footer>
+                </section>
+                <section class="event">
+                    <h5 class="event-heading"><a href="#">Jessica Smith</a> <small>@jess</small></h5>
+                    <p class="text-muted">February 22, 2014 at 01:59 PM</p>
+                    <p>
+                        Check out this awesome photo I made in Italy last summer. Seems it was lost somewhere deep inside
+                        my brand new HDD 40TB. Thanks god I found it!
+                    </p>
+                    <footer>
+                        <div class="clearfix">
+                            <ul class="post-links mt-sm float-left">
+                                <li><a href="#">1 hour</a></li>
+                                <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
+                                <li><a href="#">Comment</a></li>
+                            </ul>
+
+                            <span class="thumb thumb-sm float-right">
+                                <a href="#">
+                                    <img class="rounded-circle" src="../demo/img/people/a1.jpg">
+                                </a>
+                            </span>
+                            <span class="thumb thumb-sm float-right">
+                                <a href="#"><img class="rounded-circle" src="../demo/img/people/a5.jpg"></a>
+                            </span>
+                            <span class="thumb thumb-sm float-right">
+                                <a href="#"><img class="rounded-circle" src="../demo/img/people/a3.jpg"></a>
+                            </span>
+                        </div>
+                        <ul class="post-comments mt-sm">
+                            <li>
+                                <span class="thumb-xs avatar float-left mr-sm">
+                                    <img class="rounded-circle" src="../demo/img/people/a1.jpg" alt="...">
+                                </span>
+                                <div class="comment-body">
+                                    <h6 class="author fw-semi-bold fs-sm">Ignacio Abad <small>6 mins ago</small></h6>
+                                    <p>Hey, have you heard anything about that?</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="thumb-xs avatar float-left mr-sm">
+                                    <img class="rounded-circle" src="../img/avatar.png" alt="...">
+                                </span>
+                                <div class="comment-body">
+                                    <input class="form-control form-control-sm" type="text" placeholder="Write your comment...">
+                                </div>
+                            </li>
+                        </ul>
+                    </footer>
+                </section>
+                <form class="mt" action="#">
+                    <div class="form-group mb-0">
+                        <label class="sr-only" for="new-event">New event</label>
+                        <textarea class="form-control" id="new-event" placeholder="Post something..." rows="3"></textarea>
+                    </div>
+                    <div class="btn-toolbar justify-content-between">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-sm btn-default">
+                                <i class="fa fa-camera fa-lg"></i>
+                            </a>
+                            <a href="#" class="btn btn-sm btn-default">
+                                <i class="fa fa-map-marker fa-lg"></i>
+                            </a>
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-sm">Post</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+  {{/content}}
+{{/extend}}

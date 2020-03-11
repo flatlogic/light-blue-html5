@@ -1,0 +1,182 @@
+{{#extend "layout" title="Sing App Dashboard - UI Progress"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="ui_progress"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">UI Progress</li>
+        </ol>
+        <h1 class="page-title">Progress</span></h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Progress <span class="fw-semi-bold">Example</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Badges scale to match the size of the immediate parent element by using relative font sizing and em units.</p>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Backgrounds
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Use background utility classes to change the appearance of individual progress bars.</p>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                </section>
+            </div>
+            <div class="col-sm-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Labels
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Add labels to your progress bars by placing text within the <code>.progress-bar</code>.</p>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                        </div>
+                        <div class="progress mb-sm">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Something was wrong!</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Completed!</div>
+                        </div>
+                </section>
+            </div>
+            <div class="col-sm-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Size
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>We only set a height value on the <code>.progress</code>, so if you change that value the inner <code>.progress-bar</code> 
+                        will automatically resize accordingly. Also <code>.progess-sm</code> and <code>.progress-sm</code> are available.</p>
+                        <div class="progress mb-sm" style="height: 13px;">
+                            <div class="progress-bar bg-inverse" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                        </div>
+                        <div class="progress mb-sm" style="height: 20px;">
+                            <div class="progress-bar bg-inverse" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                        <div class="progress" style="height: 30px;">
+                            <div class="progress-bar bg-inverse" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            <span class="fw-semi-bold">Striped</span> Progress
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>Add <code>.progress-bar-striped</code> to any <code>.progress-bar</code> to apply a stripe via CSS gradient over the 
+                                    progress bar’s background color.</p>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>The striped gradient can also be animated. Add <code>.progress-bar-animated</code> to <code>.progress-bar</code> to animate the stripes 
+                                    right to left via CSS3 animations.</p>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress mb-sm">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+        <script src="../js/components/ui-progress.js"></script>
+    {{/content}}
+{{/extend}}

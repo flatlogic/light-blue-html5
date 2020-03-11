@@ -1,0 +1,347 @@
+{{#extend "layout" title="Sing App Dashboard - Grid"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="core_grid"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+      <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">Grid</li>
+        </ol>
+        <h1 class="page-title">Grid <span class="fw-semi-bold">System</span></h1>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            <span class="fw-semi-bold">How</span> it works
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p class="fs-mini text-muted">
+                            Bootstrap’s grid system uses a series of containers, rows, and columns to layout 
+                            and align content. It’s built with flexbox and is fully responsive. Below is an 
+                            example and an in-depth look at how the grid comes together.
+                        </p>
+                        <div class="bg-light p-3">
+                            <div class="row mb-lg">
+                                <div class="col-sm">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                        One of three columns
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                        One of three columns
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                        One of three columns
+                                    </div>
+                                </div>
+                            </div>
+                            <pre class="bg-light text-info">
+&lt;div <span class="text-primary">class=</span><span class="text-danger">"container"</span>&gt;
+    &lt;div <span class="text-primary">class=</span><span class="text-danger">"row"</span>&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-sm"</span>&gt;
+            <span class="text-dark">One of three columns</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-sm"</span>&gt;
+            <span class="text-dark">One of three columns</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-sm"</span>&gt;
+            <span class="text-dark">One of three columns</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            <span class="fw-semi-bold">Equal</span> width
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p class="fs-mini text-muted">
+                                For example, here are two grid layouts that apply to every device and viewport, 
+                                from xs to xl. Add any number of unit-less classes for each breakpoint you 
+                                need and every column will be the same width.
+                        </p>
+                        <div class="bg-light p-3">
+                            <div class="row mb-lg">
+                                <div class="col">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                       1 of 2
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                       2 of 2
+                                    </div>
+                                </div>
+                            </div>
+                            <pre class="bg-light text-info">
+&lt;div <span class="text-primary">class=</span><span class="text-danger">"container"</span>&gt;
+    &lt;div <span class="text-primary">class=</span><span class="text-danger">"row"</span>&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col"</span>&gt;
+            <span class="text-dark">1 of 2</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col"</span>&gt;
+            <span class="text-dark">2 of 2</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Grid <span class="fw-semi-bold">options</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p class="fs-mini text-muted">
+                            While Bootstrap uses <code>em</code>s or <code>rem</code>s for defining most sizes, pxs are used for 
+                            grid breakpoints and container widths. This is because the viewport width is 
+                            in pixels and does not change with the font size.
+                        </p>
+                        <p class="fs-mini text-muted">
+                            See how aspects of the Bootstrap grid system work across 
+                            multiple devices with a handy table.
+                        </p>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">
+                                        Extra small<br>
+                                        <small>&lt;576px</small>
+                                    </th>
+                                    <th class="text-center">
+                                        Small<br>
+                                        <small>≥576px</small>
+                                    </th>
+                                    <th class="text-center">
+                                        Medium<br>
+                                        <small>≥768px</small>
+                                    </th>
+                                    <th class="text-center">
+                                        Large<br>
+                                        <small>≥992px</small>
+                                    </th>
+                                    <th class="text-center">
+                                        Extra large<br>
+                                        <small>≥1200px</small>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Max container width</th>
+                                    <td>None (auto)</td>
+                                    <td>540px</td>
+                                    <td>720px</td>
+                                    <td>960px</td>
+                                    <td>1140px</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Class prefix</th>
+                                    <td><code>.col-</code></td>
+                                    <td><code>.col-sm-</code></td>
+                                    <td><code>.col-md-</code></td>
+                                    <td><code>.col-lg-</code></td>
+                                    <td><code>.col-xl-</code></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row"># of columns</th>
+                                    <td colspan="5">12</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Gutter width</th>
+                                    <td colspan="5">30px (15px on each side of a column)</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Nestable</th>
+                                    <td colspan="5">Yes</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-nowrap" scope="row">Column ordering</th>
+                                    <td colspan="5">Yes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Vertical <span class="fw-semi-bold">Alignment</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p class="fs-mini text-muted">
+                            Use flexbox alignment utilities to vertically and horizontally align columns.
+                        </p>
+                        <div class="bg-light p-3">
+                            <div class="row mb-lg" style="height: 150px">
+                                <div class="col align-self-start">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                        Start
+                                    </div>
+                                </div>
+                                <div class="col align-self-center">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                        Center
+                                    </div>
+                                </div>
+                                <div class="col align-self-end">
+                                    <div class="py-4 bg-primary text-center text-white">
+                                        End
+                                    </div>
+                                </div>
+                            </div>
+                            <pre class="bg-light text-info">
+&lt;div <span class="text-primary">class=</span><span class="text-danger">"container"</span>&gt;
+    &lt;div <span class="text-primary">class=</span><span class="text-danger">"row"</span>&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col align-self-start"</span>&gt;
+            <span class="text-dark">Start</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col align-self-center"</span>&gt;
+            <span class="text-dark">Center</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col align-self-end"</span>&gt;
+            <span class="text-dark">End</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                    <section class="widget">
+                        <header>
+                            <h5>
+                                Horizontal <span class="fw-semi-bold">Alignment</span>
+                            </h5>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                                <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                                <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                            </div>
+                        </header>
+                        <div class="widget-body">
+                            <p class="fs-mini text-muted">
+                                Use flexbox alignment utilities to vertically and horizontally align columns.
+                            </p>
+                            <div class="bg-light p-3">
+                                <div class="row mb-lg justify-content-end">
+                                    <div class="col-2 ">
+                                        <div class="py-4 bg-primary text-center text-white">
+                                            1
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="py-4 bg-primary text-center text-white">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-lg justify-content-around">
+                                    <div class="col-2">
+                                        <div class="py-4 bg-primary text-center text-white">
+                                            1
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="py-4 bg-primary text-center text-white">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-lg justify-content-between">
+                                    <div class="col-2">
+                                        <div class="py-4 bg-primary text-center text-white">
+                                            1
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="py-4 bg-primary text-center text-white">
+                                            2
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="py-4 bg-primary text-center text-white">
+                                            3
+                                        </div>
+                                    </div>
+                                </div>
+                                <pre class="bg-light text-info">
+&lt;div <span class="text-primary">class=</span><span class="text-danger">"container"</span>&gt;
+    &lt;div <span class="text-primary">class=</span><span class="text-danger">"row justify-content-end"</span>&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-2"</span>&gt;
+            <span class="text-dark">1</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-2"</span>&gt;
+            <span class="text-dark">2</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div <span class="text-primary">class=</span><span class="text-danger">"row justify-content-around"</span>&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-2"</span>&gt;
+            <span class="text-dark">1</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-2"</span>&gt;
+            <span class="text-dark">2</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div <span class="text-primary">class=</span><span class="text-danger">"row justify-content-between"</span>&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-2"</span>&gt;
+            <span class="text-dark">1</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-2"</span>&gt;
+            <span class="text-dark">2</span>
+        &lt;/div&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-danger">"col-2"</span>&gt;
+        <span class="text-dark">3</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+      <script src="../js/core/core-grid.js"></script>
+    {{/content}}
+{{/extend}}

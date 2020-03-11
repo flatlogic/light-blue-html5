@@ -1,0 +1,62 @@
+{{#extend "layout" title="Sing App Dashboard - Login" extraBodyClass="login-page" contentClass="widget-login-container" wrapperClass="container"}}
+    {{#content "sidebar" mode="replace"}}{{/content}}
+    {{#content "navbar" mode="replace"}}{{/content}}
+    {{#content "chat" mode="replace"}}{{/content}}
+    {{#content "content" mode="replace"}}
+        <div class="row justify-content-center">
+            <div class="col-xl-5 col-md-6 col-10">
+                <h5 class="widget-login-logo animated fadeInUp">
+                    <i class="fa fa-circle text-primary"></i>
+                    Sing App
+                    <i class="fa fa-circle text-danger"></i>
+                </h5>
+                <section class="widget widget-login animated fadeInUp">
+                    <header>
+                        <h3>Login to your Sing App</h3>
+                    </header>
+                    <div class="widget-body">
+                        <p class="widget-login-info">
+                            Use Facebook, Twitter or your email to sign in.
+                        </p>
+                        <p class="widget-login-info">
+                            Don't have an account? Sign up now!
+                        </p>
+                        <form class="login-form mt-lg">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="pswd" type="text" placeholder="Password">
+                            </div>
+                            <div class="clearfix">
+                                <div class="btn-toolbar float-right">
+                                    <button type="button" class="btn btn-default btn-sm">Create an Account</button>
+                                    <a class="btn btn-inverse btn-sm" href="../dashboard/index.html">Login</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-md-push-6">
+                                    <div class="clearfix">
+                                        <div class="abc-checkbox widget-login-info">
+                                            <input type="checkbox" id="checkbox1" value="1">
+                                            <label for="checkbox1">Keep me signed in </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-md-pull-6">
+                                    <a class="mr-n-lg" href="#">Trouble with account?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "footer"}}
+        <footer class="page-footer">
+            2014 - 2019 &copy; Sing App - Bootstrap Admin Dashboard Template.
+        </footer>
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,407 @@
+{{#extend "layout" title="Sing App Dashboard - Inbox"}}
+{{#content "sidebar"}}
+{{> sidebar active="email"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">Email</li>
+</ol>
+<div class="alert alert-success alert-sm float-right no-margin animated bounceInLeft hide" id="app-alert">
+    <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
+    Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
+</div>
+<h1 class="page-title">Email - <span class="fw-semi-bold">Inbox</span></h1>
+<div class="row">
+    <div class="col-lg-3 col-xl-2">
+        <a class="btn btn-info btn-block" id="compose-btn" href="../other/compose.html">Compose</a>
+
+        <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mt" id="folders-list">
+            <li class="nav-item active">
+                <a class="nav-link" href="../other/inbox.html">
+                    <span class="badge badge-pill badge-default text-inverse float-right">2</span>
+                    Inbox
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Starred</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sent Mail</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span class="badge badge-pill badge-danger float-right">3</span>
+                    Draft
+                </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Trash</a></li>
+        </ul>
+        <h6 class="mt">QUICK VIEW</h6>
+        <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mb-lg fs-mini">
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work
+                </a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-right"></i>
+                    Private </a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i>
+                    Saved </a></li>
+        </ul>
+    </div>
+    <div class="col-lg-9 col-xl-10">
+        <div class="clearfix mb-xs">
+            <a class="btn btn-default btn-sm width-50 float-left hide" id="back-btn" href="../other/inbox.html">
+                <i class="fa fa-angle-left fa-lg"></i>
+            </a>
+            <div class="d-flex justify-content-end" id="folder-stats">
+                <p class="widget-email-count">Showing 1 - 10 of 96 messages</p>
+                <ul class="pagination pagination-sm widget-email-pagination">
+                    <li class="prev disabled page-item"><a class="page-link" href="#"><i
+                                class="fa fa-chevron-left"></i></a></li>
+                    <li class="active page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="next page-item"><a class="page-link" href="#"><i class="fa fa-chevron-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <section class="widget widget-email">
+            <header id="widget-email-header">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="btn-group">
+                            <a class="btn btn-default btn-sm dropdown-toggle" href="#" data-toggle="dropdown">
+                                Select
+                                <i class="fa fa-angle-down "></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="select-all" href="#">All</a></li>
+                                <li><a class="dropdown-item" id="select-none" href="#">None</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" id="select-read" href="#">Read</a></li>
+                                <li><a class="dropdown-item" id="select-unread" href="#">Unread</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-sm btn-default dropdown-toggle" href="#" data-toggle="dropdown">
+                                Actions
+                                <i class="fa fa-angle-down "></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="reply" href="#">Reply</a></li>
+                                <li><a class="dropdown-item" id="forward" href="#">Forward</a></li>
+                                <li><a class="dropdown-item" id="archive" href="#">Archive</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" id="mark-as-read" href="#">Mark As Read</a></li>
+                                <li><a class="dropdown-item" id="mark-as-unread" href="#">Mark As Unread</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" id="delete" href="#">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <input class="form-control form-control-sm width-200 float-right" id="mailbox-search"
+                            type="text" placeholder="Search Messages">
+                    </div>
+                </div>
+            </header>
+            <div class="widget-body" id="mailbox-content">
+                <table class="table table-striped table-emails table-hover" id="folder-view">
+                    <thead>
+                        <tr>
+                            <th colspan="3" id="folder-actions">
+                                <div class="abc-checkbox">
+                                    <input id="toggle-all" type="checkbox">
+                                    <label for="toggle-all"></label>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="unread">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox1">
+                                    <label for="checkbox1"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star"></i></span></td>
+                            <td class="name d-none d-md-table-cell">Philip Horbacheuski</td>
+                            <td class="subject">Hi, Welcome to Google Mail</td>
+                            <td class="d-none d-md-table-cell"><i class="fa fa-paperclip"></i></td>
+                            <td class="date">May 19</td>
+                        </tr>
+                        <tr class="unread">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox2">
+                                    <label for="checkbox2"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
+                            <td class="name d-none d-md-table-cell">StackExchange</td>
+                            <td class="subject">New Python questions for this week!</td>
+                            <td class="d-none d-md-table-cell"><i class="fa fa-paperclip"></i></td>
+                            <td class="date">Aug 14</td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox3">
+                                    <label for="checkbox3"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
+                            <td class="name d-none d-md-table-cell">notifications@facebook.com</td>
+                            <td class="subject">Someone just commented on your photo!</td>
+                            <td class="d-none d-md-table-cell"></td>
+                            <td class="date">Aug 7</td>
+                        </tr>
+                        <tr class="unread">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox4">
+                                    <label for="checkbox4"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star"></i></span></td>
+                            <td class="name d-none d-md-table-cell">Twitter</td>
+                            <td class="subject">@hackernews is now following you on Twitter</td>
+                            <td class="d-none d-md-table-cell"></td>
+                            <td class="date">Jul 31</td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox5">
+                                    <label for="checkbox5"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
+                            <td class="name d-none d-md-table-cell">Nikola Foley</td>
+                            <td class="subject">Quiet led own cause three him</td>
+                            <td class="d-none d-md-table-cell"><i class="fa fa-paperclip"></i></td>
+                            <td class="date">Jul 22</td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox6">
+                                    <label for="checkbox6"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
+                            <td class="name d-none d-md-table-cell">Ernst Hardy</td>
+                            <td class="subject">Raising say express had chiefly detract demands she</td>
+                            <td class="d-none d-md-table-cell"></td>
+                            <td class="date">Jul 15</td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox7">
+                                    <label for="checkbox7"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
+                            <td class="name d-none d-md-table-cell">LinkedIn</td>
+                            <td class="subject">Jobs you may be interested in</td>
+                            <td class="d-none d-md-table-cell"></td>
+                            <td class="date">Jul 12</td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                <div class="abc-checkbox">
+                                    <input type="checkbox" id="checkbox8">
+                                    <label for="checkbox8"></label>
+                                </div>
+                            </td>
+                            <td><span class="starred"><i class="fa fa-star"></i></span></td>
+                            <td class="name d-none d-md-table-cell">Naevius Victorsson</td>
+                            <td class="subject">Front no party young abode state up</td>
+                            <td class="d-none d-md-table-cell"></td>
+                            <td class="date">Jul 11</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</div>
+{{/content}}
+{{#content "scripts"}}
+<!-- page specific libs -->
+<script src="../../node_modules/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script>
+<script src="../../node_modules/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+<script src="../../node_modules/underscore/underscore-min.js"></script>
+<script src="../../node_modules/backbone/backbone.js"></script>
+<!-- page specific js -->
+<script src="../js/other/inbox.js"></script>
+
+<script type="text/template" id="folders-view-template">
+          <table class="table table-striped table-emails table-hover">
+              <thead>
+              <tr>
+                  <th colspan="3">
+                      <div class="abc-checkbox">
+                          <input type="checkbox" id="toggle-all">
+                          <label for="toggle-all"></label>
+                      </div>
+                  </th>
+              </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+          </table>
+      </script>
+
+<script type="text/template" id="folder-template">
+              <a class="nav-link" href="#">
+                  <% if (unread) {%><span class="badge badge-pill bg-danger float-right"><%= unread %></span><% } %>
+                  <%= name %>
+              </a>
+      </script>
+
+<script type="text/template" id="mail-item-template">
+          <td>
+              <div class="abc-checkbox">
+                  <% checkboxId = Math.round(Math.random()*2344523) %>
+                  <input class="selected-checkbox" type="checkbox" id="checkbox<%= checkboxId %>" <%= selected ? 'checked="checked"' : ''%> />
+                  <label for="checkbox<%= checkboxId %>"></label>
+              </div>
+          </td>
+          <td><span class="starred"><i class="<%= starred ? 'fa fa-star' : 'fa fa-star-o'%>"></i></span></td>
+          <td class="name d-none d-md-table-cell"><%= sender ? sender : senderMail %></td>
+          <td class="subject"><%= subject %></td>
+          <td class="d-none d-md-table-cell"><% if (attachment) {%><i class="fa fa-paperclip"><% } %></i></td>
+          <td class="date"><%= this.formatDate(timestamp) %></td>
+      </script>
+
+<script type="text/template" id="email-view-template">
+          <div class="email-details clearfix">
+              <div class="email-details-content">
+                  <span class="thumb thumb-sm float-left">
+                      <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="<%= sender %>" title="<%= sender %>">
+                  </span>
+                  <div class="float-left">
+                      <strong><%= sender ? sender : senderMail %></strong>
+                      <% if (senderMail) { %>
+                      <span class="email">&lt;<%= senderMail %>&gt;</span>
+                      <% } %>
+                      <span class="receiver">to Wrapbootstrap</span>
+                  </div>
+                  <div class="email-actions float-right">
+                      <div class="btn-group">
+                          <button id="email-opened-reply" class="btn btn-sm btn-gray">
+                              <i class="fa fa-reply"></i> Reply
+                          </button>
+                          <button class="btn btn-sm btn-gray dropdown-toggle" data-toggle="dropdown">
+                              <i class="fa fa-angle-down"></i>
+                          </button>
+                          <ul class="dropdown-menu float-right">
+                              <li><a class="dropdown-item" href="#"><i class="fa fa-reply reply-btn"></i> Reply</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="fa fa-print"></i> Print</a></li>
+                              <li class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <time class="email-date float-right">
+                      <%= this.formatDate(timestamp) %>
+                  </time>
+              </div>
+          </div>
+          <div class="email-body">
+              <%= body %>
+          </div>
+          <% if (attachment) { %>
+          <%
+          attachments = attachments.split(",");
+          attachmentsCount = attachments.length
+          %>
+          <div class="email-attachments">
+              <div class="row">
+                  <div class="col-sm-6">
+                      <hr>
+                      <p class="details"><strong><%= attachmentsCount %> attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
+                          &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
+                      <% i = 1 %>
+                      <% _.each(attachments, function(attachment){ %>
+                      <% size = Math.round(Math.random()*1000) %>
+                      <section class="attachment">
+                          <img class="img-fluid" src="<%= attachment %>" alt=""/>
+                          <h6 class="title">some-cool-image<%= i++ %>.jpg</h6>
+                          <p class="details">
+                              <%= size %>K  &nbsp;&nbsp;
+                              <a href="#">View</a> &nbsp;&nbsp;
+                              <a href="#">Download</a>
+                          </p>
+                      </section>
+                      <% }); %>
+                  </div>
+              </div>
+          </div>
+          <% } %>
+      </script>
+
+<script type="text/template" id="compose-view-template">
+          <form id="email-compose" class="form-email-compose" method="get" action="../other/inbox.html">
+              <div class="form-group">
+                  <input type="email" id="input-to" placeholder="To" class="input-transparent form-control"
+                        value="<%= receiver %>">
+              </div>
+              <div class="form-group">
+                  <input type="text" id="input-subject" placeholder="Subject" class="input-transparent form-control"
+                        value="<%= subject %>">
+              </div>
+              <div class="form-group">
+                  <textarea rows="10" class="form-control" id="wysiwyg" placeholder="Message"><%- body %></textarea>
+              </div>
+              <div class="clearfix">
+                  <div class="btn-toolbar float-right">
+                      <button type="reset" id="compose-discard-button" class="btn btn-gray">Discard</button>
+                      <button type="button" id="compose-save-button" class="btn btn-gray">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+                      <button type="submit" id="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+                  </div>
+              </div>
+          </form>
+      </script>
+
+<script type="text/template" id="email-list-view-header-template">
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="btn-group">
+                      <a class="btn btn-default btn-sm dropdown-toggle" href="#" data-toggle="dropdown">
+                          Select
+                          <i class="fa fa-angle-down "></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" id="select-all" href="#">All</a></li>
+                          <li><a class="dropdown-item" id="select-none" href="#">None</a></li>
+                          <li class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" id="select-read" href="#">Read</a></li>
+                          <li><a class="dropdown-item" id="select-unread" href="#">Unread</a></li>
+                      </ul>
+                  </div>
+                  <div class="btn-group">
+                      <a class="btn btn-sm btn-default dropdown-toggle" href="#" data-toggle="dropdown">
+                          Actions
+                          <i class="fa fa-angle-down "></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" id="reply" href="#">Reply</a></li>
+                          <li><a class="dropdown-item" id="forward" href="#">Forward</a></li>
+                          <li><a class="dropdown-item" id="archive" href="#">Archive</a></li>
+                          <li class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" id="mark-as-read" href="#">Mark As Read</a></li>
+                          <li><a class="dropdown-item" id="mark-as-unread" href="#">Mark As Unread</a></li>
+                          <li class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" id="delete" href="#">Delete</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                  <input class="form-control form-control-sm width-200 float-right" id="mailbox-search" type="text" placeholder="Search Messages">
+              </div>
+          </div>
+      </script>
+{{/content}}
+{{/extend}}

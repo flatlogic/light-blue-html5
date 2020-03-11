@@ -1,0 +1,175 @@
+{{#extend "layout" title="Sing App Dashboard - Morris Charts"}}
+{{#content "sidebar"}}
+{{> sidebar active="charts_morris"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item">Charts</li>
+    <li class="breadcrumb-item active">Morris</li>
+</ol>
+<h1 class="page-title">Visual - <span class="fw-semi-bold">Chart</span></h1>
+<div class="row">
+    <div class="col-lg-6">
+        <section class="widget">
+            <header>
+                <h5>
+                    Morris <span class="fw-semi-bold">Line Chart</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <p class="fs-mini text-muted">
+                    Good-looking charts shouldn't be difficult.
+                    The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
+                    where options is an object containing some of the following configuration options.
+                </p>
+                <div id="morris1" style="height: 343px">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-6">
+        <section class="widget">
+            <header>
+                <h5>
+                    Morris <span class="fw-semi-bold">Area Chart</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <p class="fs-mini text-muted">
+                    Good-looking charts shouldn't be difficult.
+                    The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
+                    where options is an object containing some of the following configuration options.
+                </p>
+                <div id="morris2" style="height: 343px">
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-5 col-xl-5">
+        <section class="widget">
+            <header>
+                <h5>
+                    Morris <span class="fw-semi-bold">Bar Chart</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div id="morris4" style="height: 260px"></div>
+                <p class="fs-mini text-muted">
+                    Bar charts are also commonly referred to as a column charts. If you was trying to compare
+                    the
+                    height of something then intuitvely you would represent this by using columns.
+                    This really couldn't be easier. Create a Bar chart using <code>Morris.Bar(options)</code>,
+                    with only few options.
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-3 col-xl-3">
+        <section class="widget">
+            <header>
+                <h5>
+                    Morris <span class="fw-semi-bold">Donut Chart</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div id="morris3" style="height: 180px">
+                </div>
+                <p class="fs-mini text-muted">
+                    Donuts a great for representing some parted information like traffice sources,
+                    disk partitions, etc.
+                    This really couldn't be easier. Create a Donut chart using
+                    <code>Morris.Donut(options)</code>,
+                    with only few options.
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-4 col-xl-4">
+        <section class="widget">
+            <header>
+                <h5>
+                    Morris <span class="fw-semi-bold">Bar Chart 2</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div id="morris6" style="height: 180px"></div>
+                <p class="fs-mini text-muted">
+                    This is generally a good chart to choose for all comparison based analysis but if you were
+                    to display
+                    a data set with negative values a column would be the best to represent this.
+                    This really couldn't be easier. Create a Bar chart using <code>Morris.Bar(options)</code>,
+                    with only few options.
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-12">
+        <section class="widget">
+            <header>
+                <h5>
+                    Morris <span class="fw-semi-bold">Stacked Bar Chart</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div id="morris5" style="height: 200px">
+                </div>
+                <p class="fs-mini text-muted">
+                    Stacked charts are excellent to track some dynamics within declared categories.
+                    An example of this can be seen above.
+                    To create a Stacked Bar chart use <code>Morris.Bar(options)</code> and set
+                    <code>stacked</code>,
+                    option to <code>true</code>.
+                </p>
+            </div>
+        </section>
+    </div>
+
+</div>
+{{/content}}
+{{#content "scripts"}}
+<script src="../../node_modules/raphael/raphael.min.js"></script>
+<script src="../../node_modules/morris.js/morris.min.js"></script>
+
+<!-- page specific js -->
+<script src="../js/charts/morris.js"></script>
+{{/content}}
+{{/extend}}

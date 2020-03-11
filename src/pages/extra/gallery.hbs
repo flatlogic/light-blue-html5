@@ -1,0 +1,197 @@
+{{#extend "layout" title="Sing App Dashboard - Gallery"}}
+{{#content "sidebar"}}
+{{> sidebar active="gallery"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">Gallery</li>
+</ol>
+<div class="clearfix mb-lg">
+    <div class="btn-group mb-0 js-filter-options">
+        <span class="btn btn-default filter active" data-group="all">All</span>
+        <span class="btn btn-default filter" data-group="nature">Nature</span>
+        <span class="btn btn-default filter" data-group="people">People</span>
+        <span class="btn btn-default filter" data-group="space">Space</span>
+    </div>
+    <div class="float-right mb-0">
+        <div class="btn-group js-sort-options">
+            <span class="btn btn-default sort active" data-sort-order="asc"><i
+                    class="fa fa-sort-numeric-asc"></i></span>
+            <span class="btn btn-default sort" data-sort-order="desc"><i class="fa fa-sort-numeric-desc"></i></span>
+        </div>
+    </div>
+</div>
+<div class="row gallery" id="grid">
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["nature"]' data-title="Mountains">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/13.jpg"><img class="figure-img" src="../demo/img/pictures/1.jpg"
+                    alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Mountains</h6>
+                <ul class="post-links">
+                    <li><a href="#">10 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["people"]' data-title="Empire State Pigeon">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/2.jpg"><img class="figure-img" src="../demo/img/pictures/2.jpg" alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Empire State Pigeon</h6>
+                <ul class="post-links">
+                    <li><a href="#">1 hour</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["nature"]' data-title="Big Lake">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/3.jpg"><img class="figure-img" src="../demo/img/pictures/3.jpg" alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Big Lake</h6>
+                <ul class="post-links">
+                    <li><a href="#">2 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["nature"]' data-title="Forest">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/4.jpg"><img class="figure-img" src="../demo/img/pictures/4.jpg" alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Forest</h6>
+                <ul class="post-links">
+                    <li><a href="#">2 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["people"]' data-title="Smile">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/5.jpg"><img class="figure-img" src="../demo/img/pictures/5.jpg" alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Smile</h6>
+                <ul class="post-links">
+                    <li><a href="#">2 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["people"]' data-title="Smile">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/6.jpg"><img class="figure-img" src="../demo/img/pictures/6.jpg" alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Smile</h6>
+                <ul class="post-links">
+                    <li><a href="#">1 hour</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["nature"]' data-title="Fog">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/8.jpg"><img class="figure-img" src="../demo/img/pictures/8.jpg" alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Fog</h6>
+                <ul class="post-links">
+                    <li><a href="#">2 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["people"]' data-title="Beach">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/9.jpg"><img class="figure-img" src="../demo/img/pictures/9.jpg" alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Beach</h6>
+                <ul class="post-links">
+                    <li><a href="#">2 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item gallery-card" data-groups='["people"]' data-title="Pause">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/10.jpg"><img class="figure-img" src="../demo/img/pictures/10.jpg"
+                    alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Pause</h6>
+                <ul class="post-links">
+                    <li><a href="#">3 hour</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item" data-groups='["space"]' data-title="Space">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/11.jpg"><img class="figure-img" src="../demo/img/pictures/11.jpg"
+                    alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Space</h6>
+                <ul class="post-links">
+                    <li><a href="#">3 hour</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item" data-groups='["space"]' data-title="Shuttle">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/13.jpg"><img class="figure-img" src="../demo/img/pictures/13.jpg"
+                    alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Shuttle</h6>
+                <ul class="post-links">
+                    <li><a href="#">35 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 gallery-item" data-groups='["space"]' data-title="Sky">
+        <figure class="figure img-thumbnail">
+            <a href="../demo/img/pictures/14.jpg"><img class="figure-img" src="../demo/img/pictures/14.jpg"
+                    alt="..."></a>
+            <figcaption class="figure-caption">
+                <h6 class="mt-0 mb-xs">Sky</h6>
+                <ul class="post-links">
+                    <li><a href="#">2 mins</a></li>
+                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
+                    <li><a href="#">Details</a></li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-sm-6 col-md-3 js-shuffle-sizer"></div>
+</div>
+{{/content}}
+{{#content "scripts"}}
+
+<script src="../../node_modules/shufflejs/dist/shuffle.min.js"></script>
+<script src="../../node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+<!-- page specific js -->
+<script src="../js/extra/gallery.js"></script>
+{{/content}}
+{{/extend}}

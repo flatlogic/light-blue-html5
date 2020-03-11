@@ -1,0 +1,105 @@
+{{#extend "layout" title="Sing App Dashboard - Calendar"}}
+{{#content "sidebar"}}
+{{> sidebar active="calendar"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">Calendar</li>
+</ol>
+<div class="row">
+    <div class="col-xl-4">
+        <h1 class="page-title" id="calender-current-date">Calendar - <span class="fw-semi-bold">Events</span></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3 col-xl-4">
+        <h3>Draggable <span class="fw-semi-bold">Events</span></h3>
+        <p>Just drap and drop events from there directly into the calendar.</p>
+        <div class="calendar-external-events mb-lg" id='external-events'>
+            <div class='external-event bg-inverse text-white' data-event-class="bg-gray text-white">Buy this template</div>
+            <div class='external-event bg-primary text-white' data-event-class="bg-primary text-white">Study some Node
+            </div>
+            <div class='external-event bg-info text-white' data-event-class="bg-info text-white">Make a tea</div>
+            <div class='external-event bg-success text-white' data-event-class="bg-success text-white">Go to school
+            </div>
+            <div class='external-event bg-warning text-white' data-event-class="bg-warning text-white">Open windows
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-xl-8">
+        <section class="widget widget-calendar">
+            <div class="widget-body">
+                <div class="calendar-controls">
+                    <div class="btn-group">
+                        <button class="btn btn-default" id="calender-prev"><i class="fa fa-angle-left"></i></button>
+                        <button class="btn btn-default" id="calender-next"><i class="fa fa-angle-right"></i></button>
+                    </div>
+                    <div id="calendar-switcher" class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                        <label class="btn btn-default active">
+                            <input type="radio" name="view" value="month"> Month
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="view" value="agendaWeek"> Week
+                        </label>
+                        <label class="btn btn-default">
+                            <input type="radio" name="view" value="agendaDay"> Day
+                        </label>
+                    </div>
+                </div>
+                <div id="calendar" class="calendar"></div>
+            </div>
+        </section>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel17"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header no-border">
+                        <h6 class="modal-title fw-bold mt" id="myModalLabel17">Edit Event</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body…</p>
+                    </div>
+                    <div class="modal-footer no-border">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel18"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header flex-column no-border">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h6 class="modal-title fw-bold" id="myModalLabel18">New Event</h6>
+                        <p class="text-muted mt-sm">
+                            Just enter event name to create a new one
+                        </p>
+                    </div>
+                    <div class="modal-body bg-gray-lighter">
+                        <div class="form-group">
+                            <input type="text" id="event-name" class="form-control input-no-border" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="modal-footer no-border">
+                        <button data-dismiss="modal" class="btn btn-default">Cancel</button>
+                        <button data-dismiss="modal" id="create-event" class="btn btn-success">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/content}}
+{{#content "scripts"}}
+<script src="../../node_modules/moment/min/moment.min.js"></script>
+<script src="../../node_modules/components-jqueryui/jquery-ui.js"></script>
+<script src="../../node_modules/fullcalendar/dist/fullcalendar.min.js"></script>
+
+<!-- page specific js -->
+<script src="../js/extra/calendar.js"></script>
+{{/content}}
+{{/extend}}

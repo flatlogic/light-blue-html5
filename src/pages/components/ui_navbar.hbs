@@ -1,0 +1,157 @@
+{{#extend "layout" title="Sing App Dashboard - UI Navbar"}}
+    {{#content "sidebar"}}
+    {{> sidebar active="ui_navbar"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">UI Navbar</li>
+        </ol>
+        <div class="row"> 
+            <div class="col-md-10">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Navbar <span class="fw-semi-bold">Example</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Here’s what you need to know before getting started with the navbar:</p>
+                        <ui>
+                            <li>Navbars require a wrapping <code>.navbar</code> with <code>.navbar-expand{-sm|-md|-lg|-xl}</code> for 
+                                responsive collapsing and <a href="core_colors.html">color scheme</a> classes.</li>
+                            <li>Navbars and their contents are fluid by default. Use optional containers to limit their horizontal width.</li>
+                            <li>Use our spacing and flex utility classes for controlling spacing and alignment within navbars.</li>
+                            <li>Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.</li>
+                            <li>Navbars are hidden by default when printing. Force them to be printed by adding <code>.d-print</code> to the <code>.navbar</code>. See the display utility class.</li>
+                            <li>Ensure accessibility by using a <code>&lt;nav&gt;</code> element or, if using a more generic element such as a <code>&lt;div&gt;</code>, 
+                            add a <code>role="navigation"</code> to every navbar to explicitly identify it as a landmark region for users of assistive technologies.</li>
+                        </ui>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light mt">
+                            <a class="navbar-brand ml-sm" href="#">Navbar</a>
+                            <button style="outline: none;" class="navbar-toggler mr-sm" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Pricing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link disabled" href="#">Disabled</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-10">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Color <span class="fw-semi-bold">schemes</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Theming the navbar has never been easier thanks to the combination of theming classes and 
+                            background-color utilities. Choose from <code>.navbar-light</code> for use with light background 
+                            colors, or <code>.navbar-dark</code> for dark background colors. Then, customize with <code>.bg-*</code> utilities.</p>
+                        <nav class="navbar navbar-dark bg-inverse navbar-expand-lg mt">
+                            <a class="navbar-brand ml-sm" href="#">Navbar</a>
+                            <button style="outline: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav1">
+                                <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt">
+                            <a class="navbar-brand ml-sm" href="#">Navbar</a>
+                            <button style="outline: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Features</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Pricing</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Dropdown link
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light p1 mt" style="background-color: #e3f2fd;">
+                            <a class="navbar-brand ml-sm" href="#">Navbar</a>
+                            <button style="outline: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav2">
+                                <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Pricing</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </section>
+            </div> 
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+        <script src="../js/components/ui-navbar.js"></script>
+    {{/content}}
+{{/extend}}

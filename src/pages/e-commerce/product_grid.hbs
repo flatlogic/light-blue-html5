@@ -1,0 +1,309 @@
+{{#extend "layout" title="Sing App Dashboard - Product Grid"}}
+{{#content "sidebar"}}
+{{> sidebar active="product_grid"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<div class="product-grid">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">YOU ARE HERE</li>
+        <li class="breadcrumb-item active">E-commerce</li>
+    </ol>
+    <h1 class="page-title">E-commerce - <span class="fw-semi-bold">Product Grid</span></h1>
+    <div class="product-filters">
+        <div class="product-filter ml-0">
+            <label>Type</label>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    &nbsp; Shoes &nbsp;
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#">Sandals</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Boots</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Trainers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-filter">
+            <label>Brands</label>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    &nbsp; All &nbsp;
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#">Nike</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Adidas</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Gucci</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-filter">
+            <label>Size</label>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    &nbsp; 7 &nbsp;
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#">5</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">6</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">8</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">9</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">10</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-filter">
+            <label>Colour</label>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    &nbsp; All &nbsp;
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#">Black</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">White</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Blue</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-filter">
+            <label>Range</label>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    &nbsp; All &nbsp;
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#">0 - 49</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">50 - 149</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">150 - 499</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">500+</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-filter">
+            <label>Sort</label>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    &nbsp; Favourites &nbsp;
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#">Popular</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Price</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Date</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="product-filters-mobile">
+        <button id="sort-filters" class="btn btn-transparent btn-lg">
+            Sort <i class="fa fa-2x fa-angle-down"></i>
+        </button>
+        <button id="other-filters" class="btn btn-transparent btn-lg">
+            Filter <i class="fa fa-2x fa-angle-down"></i>
+        </button>
+    </div>
+    <div class="product-elements row" id="product-grid">
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product1.jpg)">
+                    <div class="star star-o">
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="price">
+                    $76
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product5.jpeg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">BOOTS</h5>
+                <div class="price price-sale">
+                    <span class="old">$56</span>
+                    20% off
+                    <span class="new"> $45</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product4.jpeg)">
+                    <div class="badge bg-success">New</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">FLAT SANDALS</h5>
+                <div class="price">$55</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product7.jpg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="price price-sale">
+                    <span class="old">$101</span>
+                    30% off
+                    <span class="new"> $70</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product6.jpg)">
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="price">$76</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product3.jpg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">BOOTS</h5>
+                <div class="price price-sale">
+                    <span class="old">$56</span>
+                    20% off
+                    <span class="new"> $45</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product8.jpg)">
+                    <div class="badge bg-danger">Sale</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="price price-sale">
+                    <span class="old">$101</span>
+                    30% off
+                    <span class="new"> $70</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="product-element product-card">
+                <div class="card-photo" style="background-image: url(../demo/img/products/product2.jpg)">
+                    <div class="badge bg-success">New</div>
+                    <a role="button" class="star">
+                        <i class="fa fa-star-o"></i>
+                    </a>
+                </div>
+                <h5 class="card-title">TRAINERS</h5>
+                <div class="price">$55</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-filter-modal">
+    <div class="filter-modal-title">
+        <button class="close">
+            <img id="close_modal" class="hide" src="./../demo/img/cancel.svg" alt="close" />
+            <img id="back_modal" class="hide" src="./../demo/img/back.svg" alt="back" />
+        </button>
+        <h5 class="mb-0"></h5>
+    </div>
+    <ul id="sort-filters-list" class="filter-modal-body">
+        <li class="option">
+            <span class="filter-check">
+                <img src='./../demo/img/check.svg' alt="check" />
+            </span>
+            <span class="name">Favourite</span>
+        </li>
+        <li class="option">
+            <span class="filter-check">
+                <img src='./../demo/img/check.svg' alt="check" />
+            </span>
+            <span class="name">Price</span>
+        </li>
+        <li class="option">
+            <span class="filter-check">
+                <img src='./../demo/img/check.svg' alt="check" />
+            </span>
+            <span class="name">Popular</span>
+        </li>
+    </ul>
+    <ul id="type-filters-list" class="filter-modal-body">
+        <li>Type</li>
+        <li>Brands</li>
+        <li>Size</li>
+        <li>Color</li>
+        <li>Range</li>
+    </ul>
+    <ul id="type-subfilters-list" class="filter-modal-body">
+    </ul>
+</div>
+{{/content}}
+{{#content "scripts"}}
+<!-- page specific js -->
+<script src="../js/e-commerce/product-grid.js"></script>
+{{/content}}
+{{/extend}}
