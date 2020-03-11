@@ -216,6 +216,7 @@
     top: 0;
     left: 0;
     margin: 5% 10%;
+    color: #f4f4f599;
   }
 }
 
@@ -1887,72 +1888,82 @@ a.fc-event {
   }
 }
 
-/**********************************/
-/*           IntroJS             */
-/**********************************/
-
-.introjs-overlay{
-  display: none;
+.abc-checkbox {
+  label {
+    &::before {
+      background-color: transparent;
+    }
+    &::after {
+      color: $gray-300;
+    }
 }
+    /**********************************/
+    /*           IntroJS             */
+    /**********************************/
 
-@media (max-width: 768px){
-  .introjs-helperLayer, .introjs-tooltipReferenceLayer{
-  display: none;
+  .introjs-overlay{
+    display: none;
   }
-}
 
-.introjs-button{
- // @extend .btn;
-}
-
-.introjs-tooltiptext{
-  text-align: center;
-}
-.introjs-helperNumberLayer{
-  display: none;
-}
-.introjs-fixParent{
-  z-index: 1!important;
-}
-.introjs-helperLayer{
-  display: none;
-}
-
-.introjs-skipbutton,
-.introjs-donebutton,
-.introjs-prevbutton,
-.introjs-donebutton{
-  background-image: none!important;
-  background-color: transparent;
-  padding: 0;
-  margin: 14px 0 0 0;
-  border: 0!important;
-  font-size: 12px;
-  float: left;
-
-  &:hover{
+  @media (max-width: 768px){
+    .introjs-helperLayer, .introjs-tooltipReferenceLayer{
+      display: none;
+    }
   }
-}
 
-.introjs-hidden{
-  display: none!important;
-}
-
-.introjs-nextbutton{
-  padding: 0;
-  margin: 14px 0 0 0;
-  border: none;
-  font-size: 12px;
-
-  &:hover{
-    color: #fff!important;
-    background-color: #1b8e72!important;
-    border-color: #19836a;
+  .introjs-button{
+    // @extend .btn;
   }
-}
 
-.introjs-prevbutton{
-  float: none;
-  margin-right: 7px;
+  .introjs-tooltiptext{
+    text-align: center;
+  }
+  .introjs-helperNumberLayer{
+    display: none;
+  }
+  .introjs-fixParent{
+    z-index: 1!important;
+  }
+  .introjs-helperLayer{
+    display: none;
+  }
+
+  .introjs-skipbutton,
+  .introjs-donebutton,
+  .introjs-prevbutton,
+  .introjs-donebutton{
+    background-image: none!important;
+    background-color: transparent;
+    padding: 0;
+    margin: 14px 0 0 0;
+    border: 0!important;
+    font-size: 12px;
+    float: left;
+
+    &:hover{
+    }
+  }
+
+  .introjs-hidden{
+    display: none!important;
+  }
+
+  .introjs-nextbutton{
+    padding: 0;
+    margin: 14px 0 0 0;
+    border: none;
+    font-size: 12px;
+
+    &:hover{
+      color: #fff!important;
+      background-color: #1b8e72!important;
+      border-color: #19836a;
+    }
+  }
+
+  .introjs-prevbutton{
+    float: none;
+    margin-right: 7px;
+  }
 }
 

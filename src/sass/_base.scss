@@ -130,9 +130,9 @@
   position: absolute;
   z-index: 1;
   //background: $navbar-bg;
-  box-shadow: $navbar-shadow;
   height: $navbar-height;
-  box-shadow: 4px 4px 30px 0px rgba(75,102,171,0.2);
+  background-color: transparent;
+  border-color: transparent;
 
 
   @include media-breakpoint-down(sm) {
@@ -200,6 +200,13 @@
   }
 }
 
+body {
+  background: radial-gradient(farthest-side ellipse at 10% 0, #333867 20%, #17193b);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .content-wrap{
   position: relative;
   z-index: 0;
@@ -210,7 +217,6 @@
   position: relative;
   min-height: 100%;
   padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
-  background-color: $body-bg;
 
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
@@ -961,6 +967,11 @@
 
 .page-title{
   margin: 0 0 2*$spacer;
+  color: $body-main-color;
+
+  small {
+    color: $body-main-color-small;
+  }
 }
 
 .notifications{
@@ -1088,6 +1099,7 @@
   margin-bottom: $grid-gutter-width;
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
+  color: $widget-color;
   border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
 
@@ -1096,15 +1108,38 @@
     padding: $widget-padding-vertical $widget-padding-horizontal;
     h1,h2,h3,h4,h5,h6{
       margin: 0;
+      color: $body-main-color;
 
       .badge {
         vertical-align: 2px;
       }
     }
+    h6 {
+      font-weight: 300;
+    }
 
     + .widget-body,
     + .widget-body.p-0{
       margin-top: $widget-padding-vertical;
+      color: $body-main-color;
+      h6 {
+        color: $body-main-color-small;
+      }
+      .description {
+        color: $body-main-color;
+        font-size: $font-size-mini;
+      }
+      .statistics {
+        color: $body-main-color-small;
+      }
+      .stats-row {
+        color: $body-main-color-small;
+      }
+      p{
+        &:last-child {
+          color: $body-main-color-small;
+        }
+      }
     }
   }
 
@@ -1118,6 +1153,7 @@
 
     + footer{
       margin-top: $widget-padding-vertical;
+      background-color: $widget-bg-color;
     }
   }
 
@@ -1178,11 +1214,13 @@
     padding: 1px 4px;
     border-radius: 4px;
     color: rgba($black, .4);
+    opacity: 1;
     @include transition(color .15s ease-in-out);
 
     &:hover{
       color: rgba($black, .1);
       text-decoration: none;
+      opacity: .7;
     }
 
     > .glyphicon{

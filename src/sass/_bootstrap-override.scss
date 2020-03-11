@@ -132,6 +132,10 @@ legend {
 // Tables
 // --------------------------------------------------
 
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: $widget-bg-color;
+}
+
 .table td > .abc-checkbox,
 .table th > .abc-checkbox{
   padding-left: 0;
@@ -785,13 +789,15 @@ legend {
 }
 
 .list-group-item{
+  background-color: transparent;
   &,
   &:hover {
     color: $body-color;
   }
 
   &:hover {
-    background: $gray-100;
+    background: $widget-bg-color;
+    text-decoration: none;
   }
 
   .list-group-lg & {
@@ -1414,4 +1420,16 @@ a.badge {
 .toast-icon {
   font-size: 20px;
   margin-right: $toast-padding-x;
+}
+
+//
+// Widgets
+// --------------------------------------------------
+
+.widget {
+ .widget-body {
+   .bg-default {
+     background-color: $default;
+   }
+ }
 }

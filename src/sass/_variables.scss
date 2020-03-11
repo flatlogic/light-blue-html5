@@ -31,16 +31,18 @@ $gray-900: #29323a !default;
 $black: #000 !default;
 $gray-light: $gray-100 !default;
 
-$blue: #005792 !default;
+
+$default: #474d84;
+$blue: #1870dc !default;
 $skyblue: #1A86D0 !default;
 $indigo: #7f3ddb !default;
 $purple: #9964e3 !default;
 $pink: #e54e9a !default;
-$red: #fd5f00 !default;
+$red: #f45722 !default;
 $orange: #ff7d47 !default;
 $yellow: #fda700 !default;
 $green: #68ca66 !default;
-$teal: #21AE8C !default;
+$teal: #58d777 !default;
 $cyan: #17a2b8 !default;
 
 $theme-colors: (
@@ -58,7 +60,6 @@ $theme-colors: (
   dark: $gray-800,
   inverse: #002B49,
   gray: #d7dfe6,
-  default: #e9ecef
 );
 
 //== Scaffolding
@@ -74,6 +75,8 @@ $logo-color: $gray-750;
 // -------------------------
 
 $body-color: $gray-700 !default;
+$body-main-color: #f4f4f5e6 !default;
+$body-main-color-small: #f4f4f5b3 !default;
 //$body-color: #57534A; //a bit brown?
 
 $font-size-initial: 14px; // reset default browser value from 16px to 13px
@@ -164,9 +167,10 @@ $screen-lg-height: 670px !default;
 
 $widget-padding-vertical: 20px !default;
 $widget-padding-horizontal: 20px !default;
-$widget-bg-color: $white;
+$widget-bg-color: rgba(0,0,0, 0.24);
+$widget-color: rgba(244,244,245,.6);
 $widget-shadow-color: 75,102,171;
-$widget-shadow: 4px 4px 30px 0px rgba(75,102,171,0.2);
+$widget-shadow: 0 25px 20px -20px rgba(0,0,0,.1), 0 0 15px rgba(0,0,0,.06);
 $widget-card-shadow: 4px 4px 10px 0px rgba(75,102,171,0.2);
 
 $widget-shadow-designated: -1px 0 8px rgba(0, 0, 0, 0.2);

@@ -8,11 +8,11 @@ $(function(){
                 name : "usa_states",
                 defaultArea : {
                     attrs: {
-                        fill: '#d1e7f6',
-                        stroke: '#ffffff',
+                        fill: '#474d84',
+                        stroke: '#6979c9',
                     },
                     attrsHover: {
-                        fill: '#8dc3e8',
+                        fill: '#354d84',
                         animDuration : 100
                     },
                     tooltip: {
@@ -29,7 +29,7 @@ $(function(){
                 defaultPlot:{
                     size: 17,
                     attrs : {
-                        fill : Sing.colors['brand-warning'],
+                        fill : "#c7d0ff",
                         stroke : Sing.colors['white'],
                         "stroke-width" : 0,
                         "stroke-linejoin" : "round"
@@ -45,7 +45,7 @@ $(function(){
                 }
             },
             plots:{
-                'ny' : {
+                'New York' : {
                     latitude: 40.717079,
                     longitude: -74.00116,
                     tooltip: {content : "New York"}
