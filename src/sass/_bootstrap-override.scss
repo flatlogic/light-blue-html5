@@ -151,13 +151,12 @@ legend {
 }
 
 .table > thead > tr > th {
-  border-top: none;
+  border: none;
 }
 
 .table > thead > tr > th{
   font-weight: $font-weight-semi-bold;
   text-transform: uppercase;
-  border-bottom-width: 1px;
 }
 
 .table-bordered th{
@@ -186,6 +185,7 @@ legend {
     > tr {
       > th,
       > td {
+        color: $body-main-color-small;
         padding: 6px;
       }
     }
@@ -198,6 +198,7 @@ legend {
 
 .table th, .table td {
   padding: 0.55rem;
+  border-top: none;
 }
 
 //
@@ -784,6 +785,7 @@ legend {
 
     .list-group-item{
       border-width: 1px 0;
+      color: #f4f4f599;
     }
   }
 }

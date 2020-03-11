@@ -473,12 +473,11 @@ $slider-handle-size: 26px;
  */
 
 #events-calendar {
-  a{
+  a {
     border-radius: 50%;
-    &:hover{
-      background-color: $gray-200;
-    }
+    color: $widget-color;
   }
+
   font-size: $font-size-mini;
   padding: $spacer/2 0;
 }
@@ -512,7 +511,7 @@ $slider-handle-size: 26px;
   font-weight: 500;
 }
 .calendar .week_days {
-  color: $gray-600;
+  color: $widget-color;
 }
 .calendar .event {
   //color: white;

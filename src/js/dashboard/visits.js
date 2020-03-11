@@ -168,7 +168,7 @@ $(function(){
         $calendar.calendar({
             months: monthNames,
             days: dayNames,
-            events: events,
+            //events: events,
             popover_options:{
                 placement: 'top',
                 html: true
@@ -204,11 +204,11 @@ $(function(){
             renderer: 'area',
             series: [
                 {
-                    color: Sing.colors['brand-warning'],
+                    color: Sing.colors['brand-primary'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.colors['brand-info'],
+                    color: Sing.colors['brand-success'],
                     data: seriesData[1],
                     name: 'Downloads'
                 }
