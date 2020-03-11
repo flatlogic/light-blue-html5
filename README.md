@@ -8,7 +8,7 @@ You can start by cloning the latest version of Sing App Lite on your local machi
 
 ```shell
 $ git clone -o sing-app-lite -b master --single-branch \
-      https://github.com/flatlogic/sing-app-html5.git MyApp
+      https://github.com/flatlogic/light-blue-html5.git MyApp
 $ cd MyApp
 ```
 
