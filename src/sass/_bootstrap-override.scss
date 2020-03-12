@@ -42,6 +42,9 @@ small, .small {
 
 .form-control {
   font-weight: $font-weight-normal;
+  &::placeholder {
+    color: $body-main-color;
+  }
   @include box-shadow(none);
   &:focus{
     @include box-shadow(none);
@@ -413,7 +416,7 @@ legend {
 
 .navbar-form {
   .input-group {
-    width: 300px;
+    width: auto;
     display: flex;
     .form-control{
       &:focus {
@@ -434,7 +437,7 @@ legend {
 
     .input-group-text {
       order: 1;
-      color: $navbar-dashboard-link-color;
+      color: $body-main-color;
       padding: 0.6rem 0.85rem;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -1155,7 +1158,7 @@ legend {
       display: flex;
       flex-grow: 1;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
     }
 
     @include media-breakpoint-down(sm) {
@@ -1188,7 +1191,7 @@ legend {
 
     > li > a {
       position: relative;
-      color: $navbar-dashboard-link-color;
+      color: $body-main-color;
 
       &:hover,
       &:focus {

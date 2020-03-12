@@ -3,14 +3,10 @@
 /***********************/
 
 .sidebar{
-  position: fixed;
-  z-index: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  position: absolute;
   width: $sidebar-width;
-  border-right: 1px solid $sidebar-border-color;
-  background-color: $sidebar-bg-color;
+  border-right: none;
+  background-color: transparent;
   color: $sidebar-color;
 
   .slimScrollBar{
@@ -58,7 +54,6 @@
 
 .page-controls, .content-wrap, .loader-wrap{
   left: $sidebar-width;
-  @include transition(left $sidebar-transition-time ease-in-out);
 
   @include media-breakpoint-up(md) {
     margin-left: $sidebar-icon-state-width;
@@ -72,7 +67,6 @@
 
   .nav-static & {
     @include media-breakpoint-up(lg) {
-      transition: margin $sidebar-transition-time ease-in-out;
       left: 0;
       margin-left: $sidebar-width;
     }
@@ -293,6 +287,7 @@ body {
     display: block;
     color: $sidebar-color;
     text-decoration: none;
+    font-size: $font-size-base;
 
     .toggle{
       float: right;
@@ -324,6 +319,7 @@ body {
     border-top: 1px solid $sidebar-item-border-color;
     padding-left: 50px;
     line-height: 35px;
+    font-size: $font-size-base;
 
     &:hover{
       color: $sidebar-item-hover-color;
@@ -347,8 +343,9 @@ body {
       height: 28px;
       line-height: 28px;
       text-align: center;
-      font-size: 16px;
+      font-size: $font-size-base;
       opacity: .6;
+      padding-left: 16px;
 
     }
 
@@ -371,7 +368,6 @@ body {
   }
 
   > .active > a{
-    background-color: $sidebar-bg-color;
     font-weight: $font-weight-normal;
 
     &, &:hover {
@@ -379,12 +375,13 @@ body {
     }
 
     .icon{
+      padding-left: 16px;
       border-radius: 50%;
-      background-color: $sidebar-item-active-color;
       opacity: 1;
 
       .fa, .glyphicon, .fi, .la {
-        color: $sidebar-bg-color;
+        color: $widget-color;
+        font-size: $font-size-base;
       }
     }
   }
@@ -396,7 +393,6 @@ body {
   > li ul{
     padding: 0;
     font-size: 13px;
-    background-color: $sidebar-ul-background;
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
@@ -442,7 +438,7 @@ body {
 }
 
 .sidebar-nav-title {
-  margin: 35px 0 5px $sidebar-padding-horizontal;
+  margin: 35px 0 5px 28px;
   font-size: 14px;
   text-transform: uppercase;
   color: darken(color-yiq($sidebar-bg-color), 13%);
@@ -1252,6 +1248,7 @@ body {
   .fi {
     position: relative;
     top: -7px;
+    opacity: .5;
   }
 }
 

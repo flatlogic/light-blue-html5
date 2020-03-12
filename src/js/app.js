@@ -677,21 +677,21 @@ function initAppFunctions(){
          */
         $('[data-toggle="tooltip"]').tooltip();
 
-        function initSidebarScroll(){
-            var $sidebarContent = $('.js-sidebar-content');
-            if ($('#sidebar').find('.slimScrollDiv').length != 0){
-                $sidebarContent.slimscroll({
-                    destroy: true
-                })
-            }
-            $sidebarContent.slimscroll({
-                height: '100vh',
-                size: '4px'
-            });
-        }
+        // function initSidebarScroll(){
+        //     var $sidebarContent = $('.js-sidebar-content');
+        //     if ($('#sidebar').find('.slimScrollDiv').length != 0){
+        //         $sidebarContent.slimscroll({
+        //             destroy: true
+        //         })
+        //     }
+        //     $sidebarContent.slimscroll({
+        //         height: '100vh',
+        //         size: '4px'
+        //     });
+        // }
 
         // SingApp.onResize(initSidebarScroll, true);
-        initSidebarScroll();
+        //initSidebarScroll();
 
         /*
          When widget is closed remove its parent if it is .col-*
