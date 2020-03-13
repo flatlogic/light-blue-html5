@@ -60,7 +60,7 @@ $(function(){
         /**
          * open navigation in case collapsed sidebar clicked
          */
-        $(document).on('click', '.nav-collapsed #sidebar', $.proxy(this.expandNavigation, this));
+        //$(document).on('click', '.nav-collapsed #sidebar', $.proxy(this.expandNavigation, this));
         //we don't need this cool feature for big boys
         if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
             ('ontouchstart' in window) && this.$content
@@ -199,21 +199,21 @@ $(function(){
     /**
      * Expands or collapses navigation. Valid only for collapsing navigation state
      */
-    SingAppView.prototype.toggleNavigationCollapseState = function(){
-        if ($('body').is('.nav-collapsed')){
-            this.expandNavigation();
-        } else {
-            this.collapseNavigation();
-        }
-    };
+    // SingAppView.prototype.toggleNavigationCollapseState = function(){
+    //     if ($('body').is('.nav-collapsed')){
+    //         this.expandNavigation();
+    //     } else {
+    //         this.collapseNavigation();
+    //     }
+    // };
 
     SingAppView.prototype.collapseNavigation = function(){
         //this method only makes sense for non-static navigation state
         if (this.isNavigationStatic() && (Sing.isScreen('lg') || Sing.isScreen('xl'))) return;
 
-        $('body').addClass('nav-collapsed');
-        this.$sidebar.find('.collapse.show').collapse('hide')
-            .siblings('[data-toggle=collapse]').addClass('collapsed');
+        // $('body').addClass('nav-collapsed');
+        // this.$sidebar.find('.collapse.show').collapse('hide')
+        //     .siblings('[data-toggle=collapse]').addClass('collapsed');
 
     };
 
@@ -221,9 +221,9 @@ $(function(){
         //this method only makes sense for non-static navigation state
         if (this.isNavigationStatic() && (Sing.isScreen('lg') || Sing.isScreen('xl'))) return;
 
-        $('body').removeClass('nav-collapsed');
-        this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
-            .siblings('[data-toggle=collapse]').removeClass('collapsed');
+        // $('body').removeClass('nav-collapsed');
+        // this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
+        //     .siblings('[data-toggle=collapse]').removeClass('collapsed');
     };
 
     SingAppView.prototype._sidebarMouseEnter = function(){
@@ -316,9 +316,9 @@ $(function(){
         setTimeout(function () {
             if (Sing.isScreen('xl')) return;
 
-            if (!$('body').is('.nav-collapsed')){
-                self.collapseNavigation();
-            }
+            // if (!$('body').is('.nav-collapsed')){
+            //     self.collapseNavigation();
+            // }
         })
     };
 
@@ -335,9 +335,9 @@ $(function(){
         // check line 726 for more info
         if ($('body').is('.chat-sidebar-opened')) return;
 
-        if ($('body').is('.nav-collapsed')){
-            this.expandNavigation();
-        }
+        // if ($('body').is('.nav-collapsed')){
+        //     this.expandNavigation();
+        // }
     };
 
     SingAppView.prototype.showLoader = function(){
@@ -727,9 +727,9 @@ function initAppFunctions(){
             ('ontouchstart' in window) && this.$content
                 .hammer()
                 .bind('swipeleft', function(e){
-                if ($('body').is('.nav-collapsed')){
-                    $chatContainer.addClass('chat-sidebar-opened');
-                }
+                // if ($('body').is('.nav-collapsed')){
+                //     $chatContainer.addClass('chat-sidebar-opened');
+                // }
             })
 
             /*
@@ -737,16 +737,16 @@ function initAppFunctions(){
              * otherwise do nothing
              */
                 .bind('swiperight', function(e){
-                    if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
-                        $chatContainer.removeClass('chat-sidebar-opened')
-                        // as there is no way to cancel swipeLeft handlers attached to
-                        // .content making this hack with temporary class which will be
-                        // used by SingApp to check whether it is permitted to open navigation
-                        // on swipeRight
-                            .addClass('chat-sidebar-closing').one(Util.TRANSITION_END, function () {
-                            $('body').removeClass('chat-sidebar-closing');
-                        }).emulateTransitionEnd(300);
-                    }
+                    // if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
+                    //     $chatContainer.removeClass('chat-sidebar-opened')
+                    //     // as there is no way to cancel swipeLeft handlers attached to
+                    //     // .content making this hack with temporary class which will be
+                    //     // used by SingApp to check whether it is permitted to open navigation
+                    //     // on swipeRight
+                    //         .addClass('chat-sidebar-closing').one(Util.TRANSITION_END, function () {
+                    //         $('body').removeClass('chat-sidebar-closing');
+                    //     }).emulateTransitionEnd(300);
+                    // }
                 });
         }
 
@@ -806,22 +806,6 @@ function initAppFunctions(){
             }
         });
 
-        function initChatSidebarScroll(){
-            var $sidebarContent = $('.chat-sidebar-contacts');
-            if ($('#chat').find('.slimScrollDiv').length != 0){
-                $sidebarContent.slimscroll({
-                    destroy: true
-                })
-            }
-            $sidebarContent.slimscroll({
-                height: window.innerHeight,
-                width: '',
-                size: '4px'
-            });
-        }
-
-        SingApp.onResize(initChatSidebarScroll, true);
-        initChatSidebarScroll();
     }(jQuery);
 }
 

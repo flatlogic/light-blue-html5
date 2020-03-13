@@ -41,7 +41,7 @@ small, .small {
 
 
 .form-control {
-  font-weight: $font-weight-normal;
+  background-color: $widget-bg-color;
   &::placeholder {
     color: $body-main-color;
   }
@@ -1192,6 +1192,9 @@ legend {
     > li > a {
       position: relative;
       color: $body-main-color;
+       i {
+         font-size: $font-size-xlg;
+       }
 
       &:hover,
       &:focus {
