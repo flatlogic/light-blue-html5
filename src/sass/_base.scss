@@ -52,8 +52,9 @@
   @include sidebar-style($sidebar-white-color, transparent, $white, transparent, transparent, transparent);
 }
 
-.page-controls, .content-wrap, .loader-wrap{
+.content-wrap, .loader-wrap{
   left: $sidebar-width;
+  //margin-right: 174px;
 
   @include media-breakpoint-up(md) {
     margin-left: $sidebar-icon-state-width;
@@ -80,6 +81,7 @@
     }
 
     .circle {
+      margin: 0 4px 0 4px;
       width: #{$line-height-base}rem;
       height: #{$line-height-base}rem;
       line-height: #{$line-height-base}rem;
@@ -153,11 +155,11 @@
   }
 
   .avatar{
-    width: 30px;
-    margin-top: -12px;
+    width: 40px;
+    margin-top: -6px;
     &.float-left,
     &.pull-left{
-      margin-right: 5px;
+
     }
     &.float-right,
     &.pull-right{

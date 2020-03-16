@@ -405,14 +405,23 @@ legend {
   margin-bottom: 0;
   padding: 0;
 
-  h5{
+  h5 {
     font-size: $navbar-font-size;
   }
 
-  .deemphasize{
+  .deemphasize {
     font-size: $font-size-sm;
   }
+
+  .nav-item.divider {
+    display: block;
+    height: 22px;
+    width: 1px;
+    margin: 10px 20px;
+    background: $body-main-color;
+  }
 }
+
 
 .navbar-form {
   .input-group {
@@ -420,19 +429,21 @@ legend {
     display: flex;
     .form-control{
       &:focus {
-        background-color: rgba(0, 0, 0, .1);
+        background-color: rgb(4, 6, 32) !important;
       }
     }
 
 
     .form-control {
       order: 2;
+      background: $widget-bg-color;
       font-size: $font-size-base;
-      padding: 0.6rem 0.85rem 0.6rem 0;
+      padding: 0.6rem 0.85rem 0.6rem 0.6rem;
       border-top-right-radius: $border-radius !important;
       border-bottom-right-radius: $border-radius !important;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
+      color: $body-main-color;
     }
 
     .input-group-text {
@@ -443,7 +454,7 @@ legend {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: $border-radius;
       border-top-left-radius: $border-radius;
-      background-color: rgba(0, 0, 0, .1)!important;
+      background: $widget-bg-color!important;
     }
   }
 }
@@ -561,6 +572,8 @@ legend {
 
 .navbar-nav .nav-item {
   .nav-link {
+    display: flex;
+    align-items: center;
     padding: 0 $spacer/2;
   }
 
@@ -1083,7 +1096,6 @@ legend {
 // our navbars.
 
 .navbar-form {
-  padding: 7px 0 6.5px $spacer;
 
   .form-group {
     margin-bottom: 0;
@@ -1168,6 +1180,20 @@ legend {
         display: none;
       }
     }
+    .alert {
+      height: 20px;
+      line-height: 20px;
+      font-size: 0.8rem;
+      padding: 0 $spacer/2;
+      margin: 0;
+      background: $widget-bg-color;
+
+      .close {
+        opacity: 1;
+        padding-left: 5px;
+        line-height: 20px;
+      }
+    }
   }
 
   .navbar-brand {
@@ -1188,6 +1214,7 @@ legend {
 
   .navbar-nav {
     flex-direction: row;
+    align-items: center;
 
     > li > a {
       position: relative;

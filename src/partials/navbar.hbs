@@ -25,10 +25,14 @@
         <!-- this part is hidden for xs screens -->
         <div class="navbar-header mobile-hidden">
             <!-- search form! link it to your search server -->
+            <div class="alert alert-sm mr-3 text-white small">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-info-circle mr-2"></i>Check out Light Blue <a href="#">settings</a> on the right!
+            </div>
             <form class="navbar-form" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border mr-3">
-                        <input class="form-control" id="main-search" type="text" placeholder="Search Dashboard">
+                        <input class="form-control" id="main-search" type="text" placeholder="Search">
                         <span class="input-group-append">
                             <span class="input-group-text">
                                 <i class="la la-search fw-bold"></i>
@@ -42,7 +46,7 @@
                     <a
                             href="#"
                             role="button"
-                            class="dropdown-toggle dropdown-toggle-notifications nav-link"
+                            class="dropdown-toggle dropdown-toggle-notifications nav-link small"
                             id="notifications-dropdown-toggle"
                             data-toggle="dropdown"
                             aria-haspopup="true"
@@ -192,6 +196,12 @@
                         </section>
                     </div>
                 </li>
+                <li class="dropdown nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="glyphicon glyphicon-comments"></i>
+                    </a>
+                </li>
+                <li class="nav-item divider"></li>
                 <li class="dropdown nav-item" >
                     <a href="#" class="dropdown-toggle no-caret nav-link" data-toggle="dropdown">
                         <i class="glyphicon glyphicon-cog"></i>
@@ -210,6 +220,22 @@
                         <i class="glyphicon glyphicon-globe"></i>
                     </a>
                     <div id="chat-notification" class="chat-notification hide">
+                        <div class="chat-notification-inner">
+                            <h6 class="title">
+                                <span class="thumb-xs">
+                                    <img src="../demo/img/people/a6.jpg" class="rounded-circle mr-xs float-left">
+                                </span>
+                                Jess Smith
+                            </h6>
+                            <p class="text">Hey! What's up?</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-toggle="chat-sidebar">
+                        <i class="glyphicon glyphicon-off"></i>
+                    </a>
+                    <div class="chat-notification hide">
                         <div class="chat-notification-inner">
                             <h6 class="title">
                                 <span class="thumb-xs">
