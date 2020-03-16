@@ -1101,9 +1101,28 @@ body {
   border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
 
-  > header{
+  > header {
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     padding: $widget-padding-vertical $widget-padding-horizontal;
+
+    .dropdown-toggle {
+      background: $default;
+      color: $widget-color;
+    }
+    .dropdown-menu {
+      background: $widget-dropdown-color;
+      border: 1px solid rgba(0,0,0,.15);
+
+      .dropdown-item {
+        color: $body-main-color;
+
+        &:hover {
+          background-color: $blue;
+          color: $body-main-color;
+        }
+      }
+    }
+
     h1,h2,h3,h4,h5,h6{
       margin: 0;
       color: $body-main-color;
@@ -1143,7 +1162,15 @@ body {
           color: $body-main-color-small;
         }
       }
+      .border-top {
+        border-top: 1px solid $widget-border-color!important;
+      }
+
+      .border-right {
+        border-right: 1px solid $widget-border-color!important;
+      }
     }
+
   }
 
   > .widget-body > hr {
