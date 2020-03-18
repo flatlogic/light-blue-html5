@@ -1101,9 +1101,15 @@ body {
   border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
 
+
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+  }
+
   > header {
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     padding: $widget-padding-vertical $widget-padding-horizontal;
+    color: $widget-color-header;
 
     .dropdown-toggle {
       background: $default;
@@ -1140,11 +1146,9 @@ body {
     + .widget-body.p-0{
       margin-top: $widget-padding-vertical;
       color: $body-main-color;
-      h3, h2 {
+
+      h2, h3, h6 {
         font-weight: 300;
-        color: $body-main-color-small;
-      }
-      h6 {
         color: $body-main-color-small;
       }
       .description {
@@ -1190,13 +1194,20 @@ body {
   > footer{
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
     padding: $widget-padding-vertical $widget-padding-horizontal;
+    background: $widget-bg-color;
+
+    .author {
+      color: $widget-author-color;
+      font-weight: 600;
+
+    }
   }
 
-  &:hover .widget-controls-hover{
+  &:hover .widget-controls-hover {
     opacity: 1;
   }
 
-  .loader{
+  .loader {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1213,7 +1224,7 @@ body {
     }
   }
 
-  .widget-table-overlay{
+  .widget-table-overlay {
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
   }
 
@@ -1222,7 +1233,7 @@ body {
   }
 }
 
-.widget-controls{
+.widget-controls {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -1263,14 +1274,14 @@ body {
     }
   }
 
-  > .btn-group{
+  > .btn-group {
     vertical-align: baseline;
   }
 }
 
 .widget-card { min-height: 135px;}
 
-.widget-icon{
+.widget-icon {
   font-size: 42px;
   height: 70px;
 
@@ -1281,7 +1292,7 @@ body {
   }
 }
 
-.widget-image{
+.widget-image {
   position: relative;
   overflow: hidden;
   margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
@@ -1312,13 +1323,13 @@ body {
   }
 }
 
-.widget-footer-bottom{
+.widget-footer-bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.widget-sm{
+.widget-sm {
   height: 230px;
 }
 

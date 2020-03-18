@@ -42,12 +42,15 @@ small, .small {
 
 .form-control {
   background-color: $widget-bg-color;
+
   &::placeholder {
     color: $body-main-color;
   }
   @include box-shadow(none);
   &:focus{
     @include box-shadow(none);
+    background-color: $widget-border-color;
+    color: $body-main-color;
   }
 }
 
@@ -660,7 +663,7 @@ legend {
   margin-bottom: $spacer*1.5;
 
   > .active {
-    color: $body-color;
+    color: $body-main-color;
     font-weight: $font-weight-semi-bold;
   }
 }
@@ -669,9 +672,13 @@ legend {
 // Buttons
 // --------------------------------------------------
 
-.btn {
-  // add tiny gradient to background
-  //background-image: linear-gradient(to right, #ffffff26, #fff0);
+.btn-default {
+  color: $body-main-color;
+  background-color: #3a3e6b;
+  border-color: #353a63;
+  &:hover {
+    color: $body-main-color;
+  }
 }
 
 .btn .glyphicon {
@@ -1366,6 +1373,54 @@ a.badge {
   &:active {
     text-decoration: none;
     color: white;
+  }
+}
+
+.badge-danger, .badge-secondary, .badge-success, .badge-warning, .badge-info {
+  color: $gray-900;
+}
+
+a.badge.badge-secondary {
+  background-color: $widget-color-header;
+  &:hover, &:active {
+    background-color: $navbar-dashboard-link-hover-color;
+    color: $gray-900;
+  }
+}
+
+span.badge.badge-secondary {
+  background-color: $widget-color-header;
+}
+
+a.badge.badge-success {
+  &:hover, &:active {
+    background-color: #31cb56;
+    color: $gray-900;
+  }
+}
+
+a.badge.badge-warning {
+  &:hover, &:active {
+    background-color: #ca8500;
+    color: $gray-900;
+  }
+}
+
+a.badge.badge-info {
+  background-color: #4ebfbb;
+  &:hover, &:active {
+    background-color: #3aa09c;
+    color: $gray-900;
+  }
+}
+span.badge.badge-info {
+  background-color: #4ebfbb;
+}
+
+a.badge.badge-light {
+  color: $gray-900;
+  &:hover, &:active {
+    color: $gray-900;
   }
 }
 

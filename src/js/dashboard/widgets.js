@@ -4,17 +4,17 @@ $(function() {
       type: "line",
       width: "100%",
       height: "60",
-      lineColor: Sing.colors["gray-600"],
+      lineColor: Sing.colors["brand-primary"],
       fillColor: "transparent",
       spotRadius: 5,
-      spotColor: Sing.colors["gray-600"],
-      valueSpots: { "0:": Sing.colors["gray-600"] },
-      highlightSpotColor: Sing.colors["white"],
-      highlightLineColor: Sing.colors["gray-600"],
-      minSpotColor: Sing.colors["gray-600"],
+      spotColor: Sing.colors["brand-success"],
+      valueSpots: { "0:": Sing.colors["brand-success"] },
+      highlightSpotColor: Sing.colors["brand-success"],
+      highlightLineColor: Sing.colors["brand-success"],
+      minSpotColor: Sing.colors["brand-success"],
       maxSpotColor: Sing.colors["brand-danger"],
       tooltipFormat: new $.SPFormatClass(
-        '<span style="color: white">&#9679;</span> {{prefix}}{{y}}{{suffix}}'
+        '<span style="color: #58d777">&#9679;</span> {{prefix}}{{y}}{{suffix}}'
       ),
       chartRangeMin: _(data).min() - 1
     });
@@ -105,7 +105,7 @@ $(function() {
     $el.sparkline(backgroundData, {
       type: "bar",
       height: 26,
-      barColor: Sing.colors["gray-200"],
+      barColor: 'transparent',
       barWidth: 7,
       barSpacing: 5,
       chartRangeMin: _(data).min(),
@@ -183,8 +183,8 @@ $(function() {
             borderWidth: 0
           },
           colors: [
-            Sing.darken(Sing.colors["brand-warning"], 0.05),
-            Sing.colors["brand-danger"]
+            Sing.darken(Sing.colors["brand-success"], 0.05),
+            Sing.colors["brand-primary"]
           ]
         }
       );
@@ -255,7 +255,7 @@ $(function() {
             tickColor: "rgba(255,255,255,1)",
             borderWidth: 0
           },
-          colors: [Sing.colors["brand-info"], Sing.colors["brand-warning"]]
+          colors: [Sing.colors["brand-success"], Sing.colors["brand-danger"]]
         }
       );
     }
@@ -281,12 +281,12 @@ $(function() {
       renderer: "area",
       series: [
         {
-          color: Sing.colors["brand-info"],
+          color: Sing.colors["brand-success"],
           data: seriesData[0],
           name: "Uploads"
         },
         {
-          color: Sing.colors["brand-warning"],
+          color: Sing.colors["brand-primary"],
           data: seriesData[1],
           name: "Downloads"
         }
@@ -334,12 +334,12 @@ $(function() {
         name: "world_countries",
         defaultArea: {
           attrs: {
-            fill: "#d1e7f6",
-            stroke: "#7cb2d7",
+            fill: "#354d84",
+            stroke: "#6979c9",
             "stroke-width": 0.25
           },
           attrsHover: {
-            fill: "#8dc3e8",
+            fill: "#6473bf",
             animDuration: 100
           }
         },
@@ -369,7 +369,7 @@ $(function() {
             {
               max: 5000000,
               attrs: {
-                fill: "#bedcf0"
+                fill: "#4a518b"
               },
               label: "Less than 5M"
             },
@@ -377,7 +377,7 @@ $(function() {
               min: 5000000,
               max: 10000000,
               attrs: {
-                fill: "#95c7e9"
+                fill: "#4265a9"
               },
               label: "Between 5M and 10M"
             },
@@ -385,14 +385,14 @@ $(function() {
               min: 10000000,
               max: 50000000,
               attrs: {
-                fill: "#d1e7f6"
+                fill: "#41548f"
               },
               label: "Between 10M and 50M"
             },
             {
               min: 50000000,
               attrs: {
-                fill: "#8dc3e8"
+                fill: "#354d84"
               },
               label: "More than 50M"
             }

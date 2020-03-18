@@ -167,7 +167,7 @@
  */
 
 .mapTooltip {
-  position: absolute;
+  position: fixed;
   padding: 2px;
   z-index: 1000;
   max-width: 200px;
@@ -188,9 +188,9 @@
   height: 20px;
 
   box-sizing: content-box;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: $body-color;
+  border: 1px solid #6979c9;
+  background-color: #000;
+  color: $widget-color;
   line-height: 20px;
   text-align: center;
   border-radius: $border-radius;
@@ -203,6 +203,32 @@
 .zoomOut {
   left: 36px;
 }
+#map-years-mapael {
+  .map-controls {
+    border-top: 1px solid $default;
+    .nav-item {
+
+      .nav-link {
+        background-color: $widget-border-color;
+        color: $widget-color-header;
+
+        &:hover {
+          background: $default;
+          color: $widget-color-header;
+        }
+      }
+    }
+    .active {
+      font-weight: 700;
+      background: $default;
+
+      .nav-link{
+        background: $default;
+      }
+    }
+  }
+}
+
 
 .mapael {
   position: relative;
