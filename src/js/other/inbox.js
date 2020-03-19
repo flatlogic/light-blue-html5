@@ -331,7 +331,7 @@ $(function(){
 
             attributes: {
                 id: 'folder-view',
-                class: 'table table-striped table-emails table-hover'
+                class: 'table table-emails table-hover'
             },
 
 

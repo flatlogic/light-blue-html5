@@ -1044,14 +1044,17 @@
 /**             EMAIL             **/
 /***********************************/
 
+.email-folders h6 {
+  color: $body-main-color;
+}
 
 .nav-email-folders{
   > li > .nav-link {
-    color: $gray-600;
+    color: $body-main-color;
     font-weight: $font-weight-normal;
     &:hover{
-      background-color: $gray-100;
-      color: $body-color;
+      background-color: $widget-bg-color;
+      color: $body-main-color;
     }
 
     > .fa-circle{
@@ -1108,13 +1111,24 @@
 .widget-email-pagination{
   margin: 0;
 
+  #widget-email-header .row .btn-group a i{
+    &::before, &::after {
+      content: '';
+    }
+ }
   .page-link {
     color: #888;
   }
 }
 
+#folder-view tr:hover {
+  background-color: #00000013;
+  color: $widget-color;
+}
+
 .table-emails{
   margin-bottom: 0;
+  color: $widget-color;
 
   tbody > tr > td:first-child {
     width: 45px;
@@ -1123,6 +1137,7 @@
   td,
   th {
     padding: 7px 5px 7px 5px;
+    border-top: 1px solid #33333359;
   }
 
   .name,
@@ -1138,7 +1153,7 @@
 
   .unread{
     font-weight: $font-weight-semi-bold;
-    color: $body-color;
+    color: $widget-color;
   }
 
   .starred{

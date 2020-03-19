@@ -7,13 +7,13 @@
     <li class="breadcrumb-item">YOU ARE HERE</li>
     <li class="breadcrumb-item active">Email</li>
 </ol>
-<div class="alert alert-success alert-sm float-right no-margin animated bounceInLeft hide" id="app-alert">
+<div class="alert alert-warning alert-sm float-right no-margin animated bounceInLeft hide" id="app-alert">
     <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
     Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
 </div>
 <h1 class="page-title">Email - <span class="fw-semi-bold">Inbox</span></h1>
 <div class="row">
-    <div class="col-lg-3 col-xl-2">
+    <div class="email-folders col-lg-3 col-xl-2">
         <a class="btn btn-danger btn-block" id="compose-btn" href="../other/compose.html">Compose</a>
 
         <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mt" id="folders-list">
@@ -27,7 +27,7 @@
             <li class="nav-item"><a class="nav-link" href="#">Sent Mail</a></li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <span class="badge badge-pill badge-danger float-right">3</span>
+                    <span class="badge badge-pill float-right">3</span>
                     Draft
                 </a>
             </li>
@@ -37,9 +37,9 @@
         <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mb-lg fs-mini">
             <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work
                 </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-right"></i>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-success float-right"></i>
                     Private </a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-primary float-right"></i>
                     Saved </a></li>
         </ul>
     </div>
@@ -67,7 +67,6 @@
                         <div class="btn-group">
                             <a class="btn btn-default btn-sm dropdown-toggle" href="#" data-toggle="dropdown">
                                 Select
-                                <i class="fa fa-angle-down "></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" id="select-all" href="#">All</a></li>
@@ -80,7 +79,7 @@
                         <div class="btn-group">
                             <a class="btn btn-sm btn-default dropdown-toggle" href="#" data-toggle="dropdown">
                                 Actions
-                                <i class="fa fa-angle-down "></i>
+                                <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" id="reply" href="#">Reply</a></li>
@@ -101,7 +100,7 @@
                 </div>
             </header>
             <div class="widget-body" id="mailbox-content">
-                <table class="table table-striped table-emails table-hover" id="folder-view">
+                <table class="table table-emails table-hover" id="folder-view">
                     <thead>
                         <tr>
                             <th colspan="3" id="folder-actions">
@@ -253,7 +252,7 @@
 
 <script type="text/template" id="folder-template">
               <a class="nav-link" href="#">
-                  <% if (unread) {%><span class="badge badge-pill bg-danger float-right"><%= unread %></span><% } %>
+                  <% if (unread) {%><span class="badge badge-pill badge-danger float-right"><%= unread %></span><% } %>
                   <%= name %>
               </a>
       </script>
