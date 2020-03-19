@@ -1521,5 +1521,44 @@ a.badge.badge-light {
    .bg-default {
      background-color: $default;
    }
+   .contacts {
+     li {
+       a {
+         color: $blue;
+         &:hover {
+           color: #104d97;
+           text-decoration: underline;
+         }
+
+       }
+     }
+   }
+   .lead {
+     color: $gray-400;
+   }
  }
+}
+
+
+///// Events ///
+.activities {
+  .event {
+    border-radius: 10px;
+    background-color: $widget-bg-color;
+
+    .event-heading {
+
+        a {
+          color: $primary;
+        }
+    }
+
+    p {
+      color: $gray-400;
+    }
+
+    footer{
+      background: $widget-bg-color;
+    }
+  }
 }
