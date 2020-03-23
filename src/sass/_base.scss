@@ -1102,6 +1102,9 @@ body {
   border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
 
+  .widget-body.typography {
+    color: $body-main-color;
+  }
 
   h1,h2,h3,h4,h5,h6 {
     font-weight: 300;
@@ -1148,7 +1151,7 @@ body {
       margin-top: $widget-padding-vertical;
       color: $body-main-color;
 
-      h2, h3, h6 {
+      h1,h2,h3,h4,h5,h6 {
         font-weight: 300;
         color: $body-main-color-small;
       }
@@ -1530,6 +1533,7 @@ input[type=search], input.search {
       margin-left: $spacer * 2;
 
       label {
+        color: $body-main-color;
         margin-right: $spacer / 2;
       }
     }
@@ -1664,6 +1668,7 @@ input[type=search], input.search {
     background-size: cover;
     background-position: center;
     position: relative;
+    border-radius: 10px;
     box-shadow: $widget-card-shadow;
 
     @include media-breakpoint-down(sm) {
@@ -1707,12 +1712,13 @@ input[type=search], input.search {
   .card-title {
     margin: $spacer 0 $spacer / 2;
     font-weight: $font-weight-normal;
+    color: $body-main-color;
   }
 
   .card-description {
     margin-bottom: $spacer / 2;
     font-weight: $font-weight-normal;
-    color: $text-muted;
+    color: $body-main-color;
   }
 
   .card-price-wrapper {
@@ -1737,6 +1743,7 @@ input[type=search], input.search {
 .price {
   font-size: $font-size-larger;
   font-weight: $font-weight-semi-bold;
+  color: $body-main-color;
 
   &.price-sale {
     font-weight: $font-weight-normal;
