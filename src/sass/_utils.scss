@@ -413,6 +413,7 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 @include bg-variant('.bg-danger', theme-color('danger'));
 
 @include bg-variant('.bg-primary-light', theme-color('primary-light'));
+@include bg-variant('.bg-secondary', theme-color('secondary'));
 @include bg-variant('.bg-success-light', theme-color('success-light'));
 @include bg-variant('.bg-info-light', theme-color('info-light'));
 @include bg-variant('.bg-warning-light', theme-color('warning-light'));

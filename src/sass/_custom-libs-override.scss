@@ -1,28 +1,54 @@
 /**
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
+
+.btn-default {
+  color: $body-main-color;
+  background-color: #3a3e6b;
+  border-color: #353a63;
+  &:hover {
+    color: $body-main-color;
+    background-color: #353a63;
+    border-color: #31355b;
+  }
+}
 .btn-inverse {
-  color: #fff;
+  color: $body-main-color;
   background-color: #002b49;
   border-color: #002b49;
 }
-.btn-warning{
-  color: #fff!important;
+.btn-warning {
+  color: #1b1e3c!important;
+  &:hover {
+    color: $body-main-color!important;
+  }
 }
 
-.btn-outline-warning{
-  &:hover{
+.btn-outline-warning {
+  &:hover {
   color: #fff!important;
   }
 }
 
-.btn-gray{
-  color: #29323a;
-  background-color: #b8c6d2;
-  border-color: #b0c0cd;
+.btn-inverse {
+  color: $body-main-color;
+  background-color: #30314e;
+  border-color: #30314e;
   &:hover{
-    background-color: #bfccd7;
-    border-color: #b8c6d2;
+    background-color: #1d1d2e;
+    color: $body-main-color;
+    border-color: #181827;
+  }
+}
+
+.btn-gray{
+  color: $body-main-color;
+  background-color: #595d78;
+  border-color: #595d78;
+  &:hover{
+    background-color: #43465b;
+    color: $body-main-color;
+    border-color: #43465b;
   }
 }
 
@@ -1990,4 +2016,3 @@ a.fc-event {
     margin-right: 7px;
   }
 }
-
