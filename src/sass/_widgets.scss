@@ -1052,6 +1052,7 @@
   > li > .nav-link {
     color: $body-main-color;
     font-weight: $font-weight-normal;
+    padding: 10px 14px;
     &:hover{
       background-color: $widget-bg-color;
       color: $body-main-color;
@@ -1165,7 +1166,7 @@
     }
 
     .fa-star{
-      color: theme-color('primary');
+      color: theme-color('success');
     }
   }
 }
