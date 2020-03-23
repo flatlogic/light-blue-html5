@@ -204,7 +204,8 @@ body {
 }
 
 .content-wrap{
-  position: relative;
+  position: absolute;
+  right: 0;
   z-index: 0;
   height: 100%;
 }
@@ -1829,7 +1830,8 @@ input[type=search], input.search {
 }
 
 .product-info {
-  background-color: $white;
+  color: #fff;
+  background-color: $widget-bg-color;
   padding: 15px 20px;
 
   .info-title {
@@ -1840,7 +1842,7 @@ input[type=search], input.search {
   }
 
   .info-description {
-    color: $text-muted;
+    color: $gray-500;
     font-weight: $font-weight-normal;
     font-size: $font-size-lg;
     text-transform: capitalize;
@@ -1852,7 +1854,7 @@ input[type=search], input.search {
   }
 
   .info-size {
-    color: $text-muted;
+    color: $gray-500;
     text-decoration: underline;
 
     &:hover {
@@ -1934,7 +1936,7 @@ input[type=search], input.search {
   }
 
   .info-delivery {
-    color: $text-muted
+    color: $gray-500;
   }
 }
 
@@ -1943,7 +1945,7 @@ input[type=search], input.search {
   text-align: center;
   font-weight: $font-weight-normal;
   margin: 75px 0 35px;
-  color: $gray-800;
+  color: $body-main-color;
 
   @include media-breakpoint-down(sm) {
     display: none;
@@ -1959,6 +1961,7 @@ input[type=search], input.search {
 
     .product-carousel {
       width: 100%;
+      color: $body-main-color;
     }
 
     .carousel-disable {
@@ -2016,7 +2019,6 @@ input[type=search], input.search {
 .product-description {
 
   &.description-desktop {
-    background-color: $white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -2032,7 +2034,7 @@ input[type=search], input.search {
     h3{
       font-size: 1.4rem;
       font-weight: $font-weight-normal;
-      color: #3c484f;
+      color: $body-main-color;
     }
     h5 {
       font-weight: $font-weight-semi-bold;

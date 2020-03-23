@@ -1412,6 +1412,15 @@ a.badge.badge-warning {
   }
 }
 
+span.badge.badge-default {
+  background-color: $default;
+  color: $widget-color-header;
+  &:hover, &:active {
+    background-color: $default;
+    color: $widget-color-header;
+  }
+}
+
 a.badge.badge-info {
   background-color: #4ebfbb;
   &:hover, &:active {
@@ -1433,6 +1442,7 @@ a.badge.badge-light {
 .badge-pill {
   padding: 2px 6px;
 }
+
 
 //
 // Accordion
