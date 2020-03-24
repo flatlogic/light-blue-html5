@@ -832,11 +832,15 @@ legend {
   }
 }
 
+.ui-sortable-placeholder {
+  background: red;
+}
+
 .list-group-item{
-  background-color: transparent;
+  background-color: $widget-bg-color;
   &,
   &:hover {
-    color: $body-color;
+    //color: $body-color;
   }
 
   &:hover {
