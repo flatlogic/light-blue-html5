@@ -240,8 +240,21 @@ legend {
 
 .dropdown-menu{
   font-size: $font-size-mini;
-  border-radius: 0;
-
+  z-index: 1000;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  color: $body-main-color;
+  text-align: left;
+  list-style: none;
+  background-color: rgba(0,0,0,.8);
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .3rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.175);
+    a {
+      color: $body-main-color;
+    }
   & > li > a{
     padding-top: 5px;
     padding-bottom: 5px;

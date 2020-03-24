@@ -26,11 +26,6 @@
 .btn-dark {
 
 }
-.btn-outline-warning {
-  &:hover {
-  color: #fff!important;
-  }
-}
 
 .btn-inverse {
   color: $body-main-color;
@@ -47,10 +42,10 @@
   color: $body-main-color;
   background-color: #595d78;
   border-color: #595d78;
-  &:hover{
-    background-color: #43465b;
-    color: $body-main-color;
-    border-color: #43465b;
+  &:hover, &:active, &:focus {
+    background-color: #43465b!important;
+    color: $body-main-color!important;
+    border-color: #43465b!important;
   }
 }
 

@@ -201,6 +201,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  font-family: Open Sans,sans-serif;
 }
 
 .content-wrap{
@@ -967,6 +968,7 @@ body {
 .page-title{
   margin: 0 0 2*$spacer;
   color: $body-main-color;
+  font-weight: 300;
 
   small {
     color: $body-main-color-small;
@@ -1443,7 +1445,13 @@ input[type=search], input.search {
 
 .btn-outline {
   &-default {
-    color: $btn-default-bg;
+    color: $default;
+    border-color: $default;
+    &:hover {
+      color: $body-main-color;
+      background-color: $default;
+      border-color: $default;
+    }
   }
 
   &-primary {
@@ -1460,6 +1468,7 @@ input[type=search], input.search {
 
   &-warning {
     color: theme-color('warning');
+
   }
 
   &-danger {
@@ -1467,11 +1476,21 @@ input[type=search], input.search {
   }
 
   &-gray {
-    color: #ddd;
+    color: #595d78;
+    border-color: #595d78;
+    &:hover {
+      color: $body-main-color;
+      background-color: #595d78;
+      border-color: #595d78;
+    }
   }
 
   &-inverse {
     color: theme-color('inverse');
+    &:hover {
+      background-color: #30314e;
+      border-color: #30314e;
+    }
   }
 }
 
