@@ -280,7 +280,6 @@ legend {
 .nav-tabs {
   & .nav-item+.nav-item { margin-left: 0}
   border-bottom: none;
-  background-color: $gray-200;
 
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
@@ -289,16 +288,14 @@ legend {
     > .nav-link {
       padding: 12px 18px;
       border: none;
-      color: $text-muted;
-
+      color: $body-main-color;
       .badge {
         margin-bottom: -2px;
       }
 
       @include transition(color .15s ease-in-out);
       &:hover {
-        background-color: transparent;
-        color: $body-color;
+        background-color: $gray-700;
       }
     }
 
@@ -315,10 +312,9 @@ legend {
       &,
       &:hover,
       &:focus {
-        background-color: $nav-tabs-active-link-hover-bg;
-        color: $nav-tabs-active-link-hover-color;
         border: none;
-        @include box-shadow(1px 1px 2px #ccc);
+        background: rgba(0,0,0,.24);
+        color: $body-main-color;
       }
     }
   }
@@ -327,7 +323,7 @@ legend {
 .tab-content {
   position: relative;
   z-index: 1;
-  background-color: $white;
+  background-color: $widget-bg-color;
   > .tab-pane {
     padding: $spacer*2 $spacer*2;
   }
