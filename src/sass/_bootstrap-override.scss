@@ -457,6 +457,46 @@ legend {
   }
 }
 
+.widget-body {
+  .navbar-brand {
+    color: white;
+  }
+
+  .navbar-nav {
+    justify-content: flex-end;
+
+    .nav-link {
+      color: rgba(0, 0, 0, .9);
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.navbar.navbar-dark {
+  .navbar-brand {
+    color: white;
+  }
+  .navbar-nav {
+    a {
+      color: rgba(255,255,255,0.5);
+    }
+  }
+}
+.navbar.navbar-light {
+  .navbar-brand {
+    color: black;
+  }
+  .navbar-nav {
+    a {
+      color: rgba(0,0,0,0.5);
+      &:hover{
+        color: rgba(0,0,0,0.9);
+      }
+    }
+  }
+}
 
 .navbar-form {
   .input-group {
