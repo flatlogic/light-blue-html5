@@ -320,6 +320,25 @@ legend {
   }
 }
 
+.nav-tabs {
+  .nav-link {
+    color: rgba(244,244,245,.7);
+    transition: color .15s ease-in-out;
+
+    &:hover {
+      border-color: transparent;
+      color: $widget-color;
+    }
+  }
+  .nav-link.active {
+    background-color: $widget-bg-color;
+    color: $widget-color;
+    border: none;
+    font-weight: $font-weight-semi-bold;
+    box-shadow: none;
+  }
+}
+
 .tab-content {
   position: relative;
   z-index: 1;
