@@ -1257,15 +1257,15 @@ body {
     @include transition(opacity .15s);
   }
 
-  > a{
+  > a {
     padding: 1px 4px;
     border-radius: 4px;
-    color: rgba($black, .4);
+    color: rgba(white, 1);
     opacity: 1;
     @include transition(color .15s ease-in-out);
 
-    &:hover{
-      color: rgba($black, .1);
+    &:hover {
+      color: rgba(white, .5);
       text-decoration: none;
       opacity: .7;
     }
