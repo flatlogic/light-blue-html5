@@ -294,8 +294,8 @@ legend {
       }
 
       @include transition(color .15s ease-in-out);
-      &:hover {
-        background-color: $gray-700;
+      &:hover, &:active {
+        background-color: transparent;
       }
     }
 
@@ -829,7 +829,7 @@ legend {
   transition: width 0.6s ease;
   height: 1.3rem;
   border-radius: $border-radius;
-  background-color: #040620;
+  background-color: $widget-border-color;
 }
 
 .progress-bar{
@@ -1546,15 +1546,16 @@ a.badge.badge-light {
   }
 
   .card-header {
-    background: $gray-light;
+    background: $widget-bg-color;
     border-bottom: none;
     border-radius: $border-radius;
+
 
     a {
       &,
       &:hover,
       &:active {
-        color: $body-color;
+        color: $body-main-color-small;
         text-decoration: none;
       }
 
@@ -1566,6 +1567,10 @@ a.badge.badge-light {
         transform: rotate(-180deg);
       }
     }
+  }
+
+  .card-body {
+    background: $widget-bg-color;
   }
 }
 
