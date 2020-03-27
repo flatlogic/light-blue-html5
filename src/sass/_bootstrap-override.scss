@@ -42,9 +42,11 @@ small, .small {
 
 .form-control {
   background-color: $widget-bg-color;
+  border: none;
+  color: $body-main-color-small;
 
   &::placeholder {
-    color: $body-main-color;
+    color: $body-main-color-small;
   }
   @include box-shadow(none);
   &:focus{
@@ -52,10 +54,22 @@ small, .small {
     background-color: $widget-border-color;
     color: $body-main-color;
   }
+  &:disabled {
+    background: $widget-bg-color;
+  }
+}
+
+.form-group {
+  .input-group-text {
+    background: $widget-bg-color;
+    color: $body-main-color-small;
+    border: none;
+  }
 }
 
 label {
   font-weight: $font-weight-normal;
+  color: $body-main-color-small;
 }
 
 .help-block{
@@ -71,9 +85,9 @@ legend {
   padding: 0;
   margin-bottom: $spacer;
   line-height: inherit;
-  color: $legend-color;
+  color: $body-main-color;
   border: 0;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid $widget-border-color;
   font-size: 15px;
   font-weight: $font-weight-normal;
 }

@@ -1430,15 +1430,15 @@ code {
 .form-actions{
   margin: $spacer 0 0;
   padding: $spacer;
-  background-color: $gray-100;
+  background-color: transparent;
 }
 
 input[type=search], input.search {
   &, .input-group-lg > &, .input-group-sm > &{
     padding-left: 26px;
   }
-  background-color: $input-bg;
-  background:url(../img/search.png) 5px 60% no-repeat $input-bg;
+  background-color: $widget-bg-color;
+  background:url(../img/search.png) 5px 60% no-repeat $widget-bg-color;
 }
 
 /***********************/

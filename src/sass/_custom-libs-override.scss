@@ -182,8 +182,8 @@
  */
 
 .dropzone {
-  border: 2px dashed #ccc;
-  @include border-radius($border-radius);
+  border: 2px dashed $widget-border-color;
+  background: $default;
 }
 /**
  * Mapael
@@ -322,8 +322,9 @@ svg .title {
 
 .md-editor {
   display: block;
-  border: 1px solid $table-border-color;
-
+  border: none;
+  border: 1px $default solid;
+  border-radius: 5px;
   > .md-header,
   .md-footer {
     display: block;
@@ -333,6 +334,7 @@ svg .title {
 
   > .md-header {
     margin: 0;
+    background: $default;
 
     .glyphicon {
       top: 3px;
@@ -342,7 +344,6 @@ svg .title {
   > .md-preview {
     padding: $input-padding-y $input-padding-x;
     background: $input-bg;
-    border-top: 1px dashed $table-border-color;
     min-height: 10px;
   }
 
@@ -359,10 +360,10 @@ svg .title {
     border-top: 1px dashed $table-border-color;
     border-radius: 0;
     box-shadow: none;
-    background: $input-bg;
+    background: transparent;
     &:focus {
       box-shadow: none;
-      background: $input-bg;
+      background: transparent;
     }
   }
 
@@ -404,6 +405,7 @@ $slider-handle-size: 26px;
     .slider-handle {
       margin-left: -$slider-handle-size/2;
       margin-top: -$slider-handle-size * 3/8;
+      background: $default;
       &.triangle {
         border-width: 0 $slider-line-height/2 $slider-line-height/2
           $slider-line-height/2;
@@ -429,10 +431,15 @@ $slider-handle-size: 26px;
       left: 0;
       top: 0;
       bottom: 0;
+
+      &:nth-child(even) {
+        background: $default;
+      }
     }
     .slider-handle {
       margin-left: -$slider-handle-size * 3/8;
       margin-top: -$slider-handle-size/2;
+      background: $default;
       &.triangle {
         border-width: $slider-line-height/2 0 $slider-line-height/2
           $slider-line-height/2;
@@ -466,8 +473,7 @@ $slider-handle-size: 26px;
 .slider-track {
   position: absolute;
   cursor: pointer;
-  @include gradient-y(#eee, #f8f8f8);
-
+  background: $widget-border-color;
   @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1));
   border-radius: $border-radius;
 }
@@ -1940,9 +1946,14 @@ a.fc-event {
 // Fix input height
 .abc-radio {
   label {
-    &::before,
-    &::after {
+    &::before
+     {
       margin-top: -2px;
+      background-color: $widget-border-color;
+      border: none;
+    }
+    &::after {
+      background-color: #636c72;
     }
   }
 }
@@ -1950,7 +1961,8 @@ a.fc-event {
 .abc-checkbox {
   label {
     &::before {
-      background-color: transparent;
+      background-color: $widget-border-color;
+      border: none;
     }
     &::after {
       color: $gray-300;
@@ -2025,3 +2037,39 @@ a.fc-event {
     margin-right: 7px;
   }
 }
+
+.select2.select2-container.select2-container--default {
+  background: transparent;
+
+  .select2-selection.select2-selection--single, .select2-selection.select2-selection--multiple{
+    background: $widget-bg-color;
+    border: none;
+
+    .select2-selection__choice {
+      background: transparent;
+    }
+    .select2-selection__rendered {
+      color: $body-main-color;
+    }
+
+    .select2-selection__placeholder {
+      background: $widget-bg-color;
+    }
+  }
+}
+
+.select2-dropdown {
+  background: #000000cc;
+  .select2-results {
+    color: $body-main-color;
+
+    .select2-results__options {
+      background: transparent;
+
+      .select2-results__option {
+        background: transparent;
+      }
+    }
+  }
+}
+
