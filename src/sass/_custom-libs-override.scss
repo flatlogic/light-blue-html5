@@ -782,6 +782,7 @@ input.parsley-error {
   }
 
   th > button {
+    color: $widget-color;
     background: none;
     border: none;
     text-transform: uppercase;
@@ -825,8 +826,8 @@ input.parsley-error {
         float: left; // Collapse white-space
         line-height: $line-height-base;
         text-decoration: none;
-        color: $pagination-color;
-        background-color: $pagination-bg;
+        color: $body-main-color-small;
+        background-color: #ffffff1a;
         border: 1px solid $pagination-border;
         border-radius: $border-radius;
         margin: 0 2px;
@@ -848,8 +849,8 @@ input.parsley-error {
     > li > span {
       &:hover,
       &:focus {
-        color: $pagination-hover-color;
-        background-color: $pagination-hover-bg;
+        color: $body-main-color-small;
+        background-color: transparent;
         border-color: $pagination-hover-border;
       }
     }
@@ -860,8 +861,8 @@ input.parsley-error {
       &:hover,
       &:focus {
         z-index: 2;
-        color: $pagination-active-color;
-        background-color: $pagination-active-bg;
+        color: $body-main-color-small;
+        background-color: transparent;
         border-color: $pagination-active-border;
         cursor: default;
       }
@@ -874,8 +875,8 @@ input.parsley-error {
       > a,
       > a:hover,
       > a:focus {
-        color: $pagination-disabled-color;
-        background-color: $pagination-disabled-bg;
+        color: $body-main-color-small;
+        background-color: transparent;
         border-color: $pagination-disabled-border;
         cursor: not-allowed;
       }
@@ -927,11 +928,25 @@ table.dataTable thead .sorting_desc_disabled {
     no-repeat center right;
 }
 
+table.dataTable tbody tr {
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+    color: $body-main-color-small;
+  }
+}
+
+table.dataTable tbody tr.odd {
+  &:hover {
+    background: $widget-bg-color;
+  }
+}
 
 .table.dataTable thead{
-  background: #005792;
+  background: transparent;
   border: none;
-  color: white;
+  color: $body-main-color-small
 }
 
 table.dataTable thead th,
@@ -951,7 +966,7 @@ table.dataTable tfoot th {
 .dataTables_wrapper .dataTables_info,
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate {
-  color: $body-color;
+  color: $body-main-color-small;
 }
 
 .dataTables_wrapper .dataTables_length,
@@ -963,9 +978,6 @@ table.dataTable tfoot th {
   color: $gray-600;
 }
 
-.dataTables_wrapper .dataTables_paginate .pagination {
-  justify-content: center;
-}
 
 .dataTables_wrapper .hidden-sm-down {
   @include media-breakpoint-down(sm) {

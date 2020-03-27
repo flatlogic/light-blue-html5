@@ -1088,14 +1088,19 @@ legend {
     }
 
     .page-link {
-      color: $body-color;
+      background: #ffffff1a;
+      color: $body-main-color-small;
       border: none;
+      &:hover {
+        background: transparent;
+      }
     }
 
     &.active {
       .page-link {
-        background: $gray-300;
-        color: $gray-800;
+        background: transparent;
+        color: $body-main-color-small;
+        border: none;
       }
     }
 
