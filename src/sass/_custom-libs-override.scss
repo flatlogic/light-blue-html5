@@ -648,8 +648,8 @@ input.parsley-error {
       padding-top: 15px;
       padding-bottom: 15px;
       margin-bottom: $spacer * 0.5;
-      background-color: $gray-200;
-      color: $gray-600;
+      background-color: #ffffff1a;
+      color: $body-main-color;
       @include border-radius(3px);
       cursor: default;
     }
@@ -685,6 +685,7 @@ input.parsley-error {
   .tab-pane {
     padding: $spacer 20px;
     @include border-radius(5px);
+    background: #ffffff1a;
   }
 
   .pager > li.disabled > .btn {
