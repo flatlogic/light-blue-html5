@@ -206,13 +206,13 @@
   li{
     list-style: none;
     box-sizing: content-box;
-    border-top: 1px solid $gray-200;
+    border-top: 1px solid $widget-border-color;
     padding: 12px;
     cursor: pointer;
     @include transition(background-color .2s ease-out);
 
     &:hover{
-      background: $body-bg-light;
+      background: $widget-bg-color;
     }
 
     &:last-child{
@@ -573,7 +573,7 @@
 
 .gallery{
   .img-thumbnail{
-    border-color: $gray-200;
+    border: none;
 
     figcaption {
       margin: 0.8571rem 0.5714rem 0.8571rem 0.5714rem;
@@ -606,7 +606,14 @@
   }
 
   .figure {
-    background-color: $white;
+    background-color: $widget-bg-color;
+
+    .figure-caption, .post-links {
+      color: $white;
+     li a {
+       color: $white;
+     }
+    }
   }
 }
 

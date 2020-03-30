@@ -24,7 +24,7 @@ $(function(){
                         lat: e.latLng.lat(),
                         lng: e.latLng.lng(),
                         animation: google.maps.Animation.DROP,
-                        draggable:true,
+                        draggable: true,
                         title: 'New Marker'
                     });
                     this.hideContextMenu();
