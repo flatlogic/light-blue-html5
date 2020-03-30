@@ -516,7 +516,7 @@
 
   > li {
     padding: 10px;
-    border-top: 1px solid $gray-200;
+    border-top: 1px solid $widget-border-color;
     list-style: none;
     @include clearfix();
 
@@ -638,7 +638,7 @@
 
 .search-result-item{
   padding: 20px;
-  background-color: $white;
+  background-color: $widget-bg-color;
   box-shadow: $widget-shadow;
   border-radius: $border-radius;
   @include clearfix();
@@ -692,7 +692,7 @@
   font-weight: $font-weight-normal;
 
   > a {
-    color: $body-color;
+    color: $body-main-color;
   }
 
   @include media-breakpoint-up(md){
@@ -822,7 +822,7 @@
     width: 8px;
     content: " ";
     margin-left: -4px;
-    background-color: $gray-200;
+    background-color: $widget-bg-color;
 
     @include media-breakpoint-up(lg){
       left: 50%;
@@ -833,7 +833,7 @@
 }
 
 .event{
-  background: $white;
+  background: $widget-bg-color;
   border-radius: $border-radius;
   padding: 20px 20px 0;
   position: relative;
@@ -865,7 +865,7 @@
     padding: 10px 20px;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
-    background-color: $gray-100;
+    background-color: #ffffff1a;
 
     @include clearfix();
 
@@ -885,7 +885,7 @@
         right: auto;
         left: 100%;
         border-right-color: rgba(0,0,0,0);
-        border-left-color: $white;
+        border-left-color: $widget-bg-color;
       }
     }
   }
@@ -972,7 +972,7 @@
   font-weight: $font-weight-semi-bold;
   > a {
     text-decoration: none;
-    color: $skyblue;
+    color: $widget-author-color;
   }
   > small{
     font-weight: $font-weight-semi-bold;
