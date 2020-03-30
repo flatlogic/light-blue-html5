@@ -64,6 +64,7 @@ $(function() {
         createDonutChart() {
             new Morris.Donut({
                 element: 'morris3',
+                backgroundColor: 'none',
                 resize: true,
                 data: [
                     {label: "Download Sales", value: 12},
