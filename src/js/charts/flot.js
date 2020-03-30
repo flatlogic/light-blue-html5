@@ -56,17 +56,16 @@ $(function () {
                 },
                 yaxis: {
                     tickDecimals: 0,
-                    tickColor: Sing.colors['gray-100'],
                     font: {
                         lineHeight: 13,
                         weight: "bold",
-                        color: COLORS.fontcolor
+                        color: COLORS.fontColor
                     }
                 },
                 grid: {
-                    backgroundColor: {colors: [Sing.colors['white'], Sing.colors['white']]},
+                    backgroundColor: 'transparent',
                     borderWidth: 1,
-                    borderColor: COLORS.gridBorder,
+                    borderColor: 'transparent',
                     margin: 0,
                     minBorderMargin: 0,
                     labelMargin: 20,
@@ -216,9 +215,9 @@ $(function () {
                 grid: {
                     hoverable: true,
                     autoHighlight: false,
-                    backgroundColor: {colors: [Sing.colors['white'], Sing.colors['white']]},
+                    backgroundColor: 'transparent',
                     borderWidth: 1,
-                    borderColor: COLORS.gridBorder,
+                    borderColor: 'transparent',
                     margin: 0,
                     minBorderMargin: 0,
                     labelMargin: 40,
@@ -381,9 +380,9 @@ $(function () {
                     }
                 },
                 grid: {
-                    backgroundColor: {colors: [Sing.colors['white'], Sing.colors['white']]},
+                    backgroundColor: 'transparent',
                     borderWidth: 1,
-                    borderColor: COLORS.gridBorder,
+                    borderColor: 'transparents',
                     margin: 0,
                     minBorderMargin: 0,
                     labelMargin: 20,
@@ -398,7 +397,7 @@ $(function () {
                     axisLabelFontSizePixels: 13,
                     axisLabelPadding: 15
                 },
-                colors: Object.values(Sing.colors).slice(14)
+                colors: Object.values(Sing.colors).slice(13)
             });
         }
     }
@@ -447,9 +446,9 @@ $(function () {
                 },
                 grid: {
                     hoverable: true,
-                    backgroundColor: {colors: [Sing.colors['white'], Sing.colors['white']]},
+                    backgroundColor: 'transparent',
                     borderWidth: 1,
-                    borderColor: COLORS.gridBorder
+                    borderColor: 'transparent'
                 },
                 colors: COLORS.markers
             });
