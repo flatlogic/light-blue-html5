@@ -69,16 +69,15 @@ $(function() {
                 },
                 yaxis: {
                     tickDecimals: 0,
-                    tickColor: Sing.colors['gray-200'],
                     font :{
                         lineHeight: 13,
                         color: Sing.colors['gray-500']
                     }
                 },
                 grid: {
-                    backgroundColor: { colors: [ Sing.colors['white'], Sing.colors['white'] ] },
+                    backgroundColor: "transparent",
                     borderWidth:1,
-                    borderColor: Sing.colors['white'],
+                    borderColor: "transparent",
                     margin:0,
                     minBorderMargin:0,
                     labelMargin:20,
@@ -114,7 +113,7 @@ $(function() {
     function initEasyPie() {
         $('#easy-pie1').easyPieChart({
             barColor: Sing.colors['brand-info'],
-            trackColor: Sing.colors['gray-200'],
+            trackColor: Sing.colors['gray-900'],
             scaleColor: false,
             lineWidth: 8,
             size: 140
@@ -153,7 +152,7 @@ $(function() {
     function initNvd31() {
         nv.addGraph(function() {
             var chart = nv.models.lineChart()
-                .useInteractiveGuideline(true)
+                .useInteractiveGuideline(false)
                 .margin({left: 28, bottom: 30, right: 0})
                 .color([Sing.colors['brand-danger'], Sing.colors['brand-info']]);
 
@@ -456,6 +455,7 @@ $(function() {
         $('#morris3').css({height: 180});
         Morris.Donut({
             element: 'morris3',
+            backgroundColor: 'none',
             resize: true,
             data: [
                 {label: "In-Store Sales", value: 30},

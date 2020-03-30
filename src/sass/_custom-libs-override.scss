@@ -2074,3 +2074,12 @@ a.fc-event {
   }
 }
 
+
+/// d3 ///
+#nvd31 .nv-x .nv-axis line, #nvd32 .nv-x .nv-axis line {
+  stroke: none;
+}
+#nvd31 .nv-y .nv-axis line, #nvd32 .nv-y .nv-axis line {
+  stroke: $widget-border-color;
+}
+
