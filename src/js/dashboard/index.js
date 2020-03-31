@@ -29,7 +29,7 @@ $(function () {
                 legend: {
                     noColumns: 1,
                     container: $('#flot-donut-legend'),
-                    labelBoxBorderColor: Sing.colors['white']
+                    labelBoxBorderColor: 'none'
                 }
             });
         }

@@ -997,11 +997,11 @@ body {
     overflow-y: scroll;
   }
   .list-group-item{
-    color: $body-color;
+    color: $body-main-color;
 
     @include transition(background-color .15s ease-in-out);
     &:hover{
-      background-color: $list-group-hover-bg;
+      background-color: $widget-bg-color;
       .progress {
         background-color: $white !important;
       }

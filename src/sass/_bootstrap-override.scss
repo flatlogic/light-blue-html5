@@ -1599,8 +1599,9 @@ a.badge.badge-light {
 }
 
 .card {
-  box-shadow: $widget-shadow;
-  background: $widget-bg-color;
+  box-shadow: 0 0 40px 2px rgba(2,2,2,.5);
+  background: radial-gradient(farthest-side ellipse at 10% 0, #333867 20%, #17193b);
+  border-radius: .3rem;
 }
 
 //
