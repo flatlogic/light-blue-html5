@@ -189,48 +189,48 @@
   color: $mainColor;
   border-right: none;
   background-color: $mainBGColor;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: $mainColor;
-    }
-    .logo > a{
-      color: $mainColor;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $activeColor;
-    }
-    .sidebar-nav{
-      li{
-        a{
-          color: $mainColor!important;
-          &:hover{
-            background-color: $hoverColor;
-          }
+  .sidebar-nav-title{
+    color: $mainColor!important;
+  }
+  .logo > a{
+    color: $mainColor!important;
+  }
+  .sidebar-nav>.open>a{
+    background-color: $activeColor!important;
+  }
+  .sidebar-nav{
+    li{
+      a{
+        color: $mainColor!important;
+        &:hover{
+          background-color: $hoverColor!important;
         }
       }
-      .active a{
-        background-color: $activeColor;
-        color: $mainColor;
-        span{
-          background-color: $mainColor;
-          i{
-            color: $iconColor;
-          }
+    }
+    .active a{
+      background-color: $activeColor!important;
+      color: $mainColor!important;
+      span{
+        background-color: $mainColor!important;
+        padding-left: 0px;
+        i{
+          color: $iconColor!important;
         }
       }
-      ul{
-        background-color: $activeColor;
-      }
     }
-    .sidebar-labels>li>a{
-      color: $mainColor;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: $pbColor;
-      }
+    ul{
+      background-color: $activeColor!important;
     }
   }
+  .sidebar-labels>li>a{
+    color: $mainColor!important;
+  }
+  .sidebar-alerts{
+    .progress{
+      background-color: $pbColor!important;
+    }
+  }
+
 }
 
 @mixin chat-avatar($value){

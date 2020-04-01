@@ -16,11 +16,11 @@
   }
 }
 
-.sidebar-second {
+#sidebar.sidebar-second {
   @include sidebar-style($sidebar-white-color, $white, $white, transparent, $white, $white);
 }
 
-.sidebar-third {
+#sidebar.sidebar-third {
   @include sidebar-style($white, $sidebar-first-color, $sidebar-first-color, $sidebar-first-color-bg, $sidebar-first-color-bg, $sidebar-first-color-bg!important);
 }
 
