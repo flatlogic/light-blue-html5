@@ -46,7 +46,7 @@ $(function() {
           data: seriesData.shift().map(function(d) {
             return { x: d.x, y: d.y };
           }),
-          color: Sing.lighten(Sing.colors["brand-info"], 0.09),
+          color: Sing.colors["brand-primary"],
           renderer: "bar"
         },
         {

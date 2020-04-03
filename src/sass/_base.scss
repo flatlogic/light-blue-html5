@@ -637,10 +637,6 @@ body {
       color: $sidebar-color;
     }
   }
-
-  .progress {
-    background-color: $sidebar-action-bg;
-  }
 }
 
 .chat-sidebar {
@@ -1295,7 +1291,6 @@ body {
   .fi {
     position: relative;
     top: -7px;
-    opacity: .5;
   }
 }
 
@@ -1437,7 +1432,7 @@ input[type=search], input.search {
   &, .input-group-lg > &, .input-group-sm > &{
     padding-left: 26px;
   }
-  background-color: $widget-bg-color;
+  background-color: $widget-border-color;
   background:url(../img/search.png) 5px 60% no-repeat $widget-bg-color;
 }
 
@@ -1727,6 +1722,7 @@ input[type=search], input.search {
       position: absolute;
       right: 14px;
       top: 14px;
+      color: $gray-800;
     }
   }
 
@@ -2849,6 +2845,13 @@ input[type=search], input.search {
   .visit-element {
     width: 33%;
     text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
   }
 
   .big-stat-title {

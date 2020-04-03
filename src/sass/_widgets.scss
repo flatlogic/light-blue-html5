@@ -412,10 +412,6 @@
   .form-control{
     font-size: $font-size-mini;
     border: none;
-    background-color: $gray-200;
-    &:focus{
-      background-color: $gray-light;
-    }
   }
 
   .abc-checkbox {
@@ -1029,7 +1025,7 @@
 
 .error-info{
   font-size: 20px;
-  color: $gray-800;
+  color: $body-main-color;
 }
 
 .error-help{

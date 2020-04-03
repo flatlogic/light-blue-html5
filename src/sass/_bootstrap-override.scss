@@ -41,7 +41,7 @@ small, .small {
 
 
 .form-control {
-  background-color: $widget-bg-color;
+  background-color: $widget-border-color;
   border: none;
   color: $body-main-color-small;
 
@@ -49,16 +49,29 @@ small, .small {
     color: $body-main-color-small;
   }
   @include box-shadow(none);
-  &:focus{
+  &:focus, &:active {
     @include box-shadow(none);
     background-color: $widget-border-color;
     color: $body-main-color;
   }
+  &:active {
+    @include box-shadow(none);
+    background-color: $widget-border-color;
+    color: $body-main-color;
+  }
+
   &:disabled {
     background: $widget-bg-color;
   }
 }
 
+.form-control.input-no-border {
+  &:focus {
+    @include box-shadow(none);
+    background-color: $widget-border-color;
+    color: $body-main-color;
+  }
+}
 .form-group {
   .input-group-text {
     background: $widget-bg-color;
@@ -216,10 +229,6 @@ legend {
   }
 }
 
-.table-hover > tbody > tr:hover .progress{
-  background-color: $white;
-}
-
 .table th, .table td {
   padding: 0.55rem;
   border-top: none;
@@ -272,6 +281,11 @@ legend {
   & > li > a{
     padding-top: 5px;
     padding-bottom: 5px;
+
+    &:hover, &:active {
+      background: $blue;
+      color: $body-main-color;
+    }
   }
 }
 
@@ -768,9 +782,30 @@ legend {
   }
 }
 .btn-danger {
-  color: #1b1e3c;
+  color: $btn-default-color;
   &:hover {
-    color: #1b1e3c;
+    color: $btn-default-color;
+  }
+}
+
+.btn-info {
+  color: $btn-default-color;
+  &:hover {
+    color: $btn-default-color;
+  }
+}
+
+.btn-success {
+  color: $btn-default-color;
+  &:hover {
+    color: $btn-default-color;
+  }
+}
+
+.btn-warning {
+  color: $btn-default-color;
+  &:hover {
+    color: $btn-default-color;
   }
 }
 
@@ -783,6 +818,7 @@ legend {
     box-shadow: none !important;
   }
 }
+
 
 .btn-sm {
   padding-top: .35rem;
@@ -963,7 +999,7 @@ legend {
     font-weight: $font-weight-thin;
     line-height: 0.75;
     text-shadow: none;
-    color: #fff;
+    opacity: 1;
   }
 }
 
@@ -989,7 +1025,7 @@ legend {
 
 .alert-success {
   background: theme-color('success');
-  color: $white;
+  color: $btn-default-color;
 
   &.alert-transparent {
     color: theme-color('success');
@@ -1004,7 +1040,7 @@ legend {
 
 .alert-info {
   background: theme-color('info');
-  color: $white;
+  color: $btn-default-color;
 
   &.alert-transparent {
     color: theme-color('info');
@@ -1019,7 +1055,7 @@ legend {
 
 .alert-warning {
   background: theme-color('warning');
-  color: $white;
+  color: $btn-default-color;
 
   &.alert-transparent {
     color: theme-color('warning');
@@ -1034,7 +1070,7 @@ legend {
 
 .alert-danger {
   background: theme-color('danger');
-  color: $white;
+  color: $btn-default-color;
 
   &.alert-transparent {
     color: theme-color('danger');
@@ -1076,11 +1112,29 @@ legend {
 
     .sidebar{
       z-index: -1;
+      display: none;
     }
   }
 }
 
 .modal {
+  .modal-content {
+    .modal-header {
+      .modal-title{
+        color: $black!important;
+        p {
+          color: $black!important;
+        }
+      }
+    }
+    .modal-body {
+        color: $black!important;
+        p {
+          color: $black!important;
+        }
+    }
+  }
+
   .close {
     opacity: 0.2;
 
@@ -1645,6 +1699,10 @@ a.badge.badge-light {
  .widget-body {
    .bg-default {
      background-color: $default;
+   }
+
+   .bg-inverse {
+     background-color: #040620!important;
    }
    .contacts {
      li {
