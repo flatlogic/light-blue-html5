@@ -2,8 +2,8 @@ $(function(){
 
     function initEasyPieCharts(){
         $('#easy-pie1').easyPieChart({
-            barColor: Sing.colors['brand-info'],
-            trackColor: Sing.colors['gray-900'],
+            barColor: Sing.colors['brand-primary'],
+            trackColor: '#040620',
             scaleColor: false,
             lineWidth: 10,
             size: 120
@@ -11,7 +11,7 @@ $(function(){
 
         $('#easy-pie2').easyPieChart({
             barColor: Sing.colors['brand-danger'],
-            trackColor: Sing.colors['gray-900'],
+            trackColor: '#040620',
             scaleColor: Sing.colors['brand-danger'],
             lineCap: 'butt',
             lineWidth: 22,
@@ -21,7 +21,7 @@ $(function(){
 
         $('#easy-pie3').easyPieChart({
             barColor: Sing.colors['brand-warning'],
-            trackColor: Sing.colors['gray-900'],
+            trackColor: '#040620',
             scaleColor: Sing.colors['brand-warning'],
             lineCap: 'butt',
             lineWidth: 22,
@@ -30,8 +30,8 @@ $(function(){
         });
 
         $('#easy-pie4').easyPieChart({
-            barColor:  Sing.palette['brand-info-light'],
-            trackColor: false,
+            barColor:  Sing.colors['brand-info'],
+            trackColor: '#040620',
             scaleColor: Sing.colors['gray-900'],
             lineCap: 'square',
             lineWidth: 10,

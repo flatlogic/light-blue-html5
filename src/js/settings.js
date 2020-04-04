@@ -19,9 +19,9 @@ $(function(){
             'gray-900': '#212529',
             'brand-primary': '#1870dc',
             'brand-success': '#58d777',
-            'brand-warning': '#1a86d0',
+            'brand-warning': '#ca8500',
             'brand-danger': '#fd5f00',
-            'brand-info': '#005792',
+            'brand-info': '#3aa09c',
             'body-bg': '#fafbff'
         },
 
@@ -41,12 +41,11 @@ $(function(){
         },
 
         newPalette: {
-            'brand-primary': '#005792',
-            'brand-success': '#21ae8c',
-            'brand-warning': '#Fda700',
+            'brand-primary': '#1870dc',
+            'brand-success': '#58d777',
+            'brand-warning': '#ca8500',
             'brand-danger': '#fd5f00',
-            'brand-info': '#1a86d0',
-            'brand-inverse': '#002B49'
+            'brand-info': '#3aa09c'
         },
 
         screens: {

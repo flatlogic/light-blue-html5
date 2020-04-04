@@ -203,23 +203,23 @@ $(function () {
 
         let scatterplotChart = new RickshawScatterplotChart(2, 200, [
             Sing.colors['brand-danger'],
-            Sing.colors['brand-info']
+            Sing.colors['brand-primary']
         ]);
         let areaChart = new RickshawAreaChart(2, 30, [
-            Sing.colors['brand-info'],
-            Sing.colors['brand-warning'],
+            Sing.colors['brand-primary'],
+            Sing.colors['brand-danger'],
         ]);
         let stackedBarChart = new BarChart(3, 10, [
-            Sing.colors['brand-info'],
+            Sing.colors['brand-primary'],
             Sing.colors['brand-success'],
-            Sing.colors['brand-warning']
+            Sing.colors['brand-danger']
         ], {stacked: true, padding: {left: 0.03}});
         let barChart = new BarChart(2, 15, [
             Sing.colors['brand-success'],
-            Sing.colors['brand-warning']
+            Sing.colors['brand-danger']
         ], {padding: {left: 0.02}});
         let lineChart = new LineChart(2, 50, [
-            Sing.colors['brand-info'],
+            Sing.colors['brand-primary'],
             Sing.colors['brand-primary']
         ]);
 

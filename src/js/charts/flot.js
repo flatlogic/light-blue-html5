@@ -2,7 +2,7 @@ $(function () {
     'use strict';
 
     const COLORS = {
-        lineChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-primary']],
+        lineChart: [Sing.colors['brand-danger'], Sing.colors['brand-success'], Sing.colors['brand-primary']],
         barChart: Object.values(Sing.colors).slice(13),
         trackingChart: [Sing.colors['brand-danger'], Sing.colors['brand-info']],
         pieChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-success'], Sing.colors['brand-danger']],

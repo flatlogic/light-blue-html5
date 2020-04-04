@@ -3,7 +3,7 @@ $(function () {
     function initSparkline1() {
         $('#sparkline1').sparkline(generateRandomArr(5), {
             width: '100%',
-            fillColor: Sing.colors['brand-warning'],
+            fillColor: Sing.colors['brand-success'],
             height: '100px',
             lineColor: 'transparent',
             spotColor: '#c0d0f0',
@@ -15,7 +15,7 @@ $(function () {
             composite: true,
             lineColor: 'transparent',
             spotColor: '#c0d0f0',
-            fillColor: Sing.colors['brand-info'],
+            fillColor: Sing.colors['brand-primary'],
             minSpotColor: null,
             maxSpotColor: null,
             highlightSpotColor: '#ddd',
@@ -39,12 +39,12 @@ $(function () {
             type: 'line',
             width: '100%',
             height: '200px',
-            lineColor: Sing.colors['brand-primary'],
-            fillColor: Sing.colors['brand-info'],
+            lineColor: Sing.colors['brand-danger'],
+            fillColor: Sing.colors['brand-primary'],
             lineWidth: 2,
             spotColor: Sing.colors['brand-primary'],
-            minSpotColor: Sing.palette['brand-warning-light'],
-            maxSpotColor: Sing.colors['brand-warning'],
+            minSpotColor: Sing.palette['brand-success-light'],
+            maxSpotColor: Sing.colors['brand-success'],
             highlightSpotColor: Sing.palette['brand-primary-pale'],
             highlightLineColor: Sing.colors['white'],
             spotRadius: 1,
@@ -64,7 +64,7 @@ $(function () {
             width: '100%',
             barWidth: 6,
             barSpacing: 3,
-            barColor: Sing.colors['brand-warning'],
+            barColor: Sing.colors['brand-success'],
             negBarColor: Sing.colors['brand-danger']
         });
 
@@ -79,8 +79,8 @@ $(function () {
             type: 'tristate',
             height: '100px',
             width: '100%',
-            posBarColor: Sing.colors['brand-warning'],
-            negBarColor: Sing.colors['brand-info'],
+            posBarColor: Sing.colors['brand-success'],
+            negBarColor: Sing.colors['brand-primary'],
             zeroBarColor: Sing.colors['gray-300'],
             barWidth: 5,
             barSpacing: 7,
@@ -106,7 +106,7 @@ $(function () {
             type: 'pie',
             width: '100px',
             height: '100px',
-            sliceColors: [Sing.colors['brand-danger'], Sing.colors['brand-warning']],
+            sliceColors: [Sing.colors['brand-danger'], Sing.colors['brand-success']],
             highlightLighten: 1.1
         });
     }
