@@ -329,7 +329,8 @@ body {
 
     &:hover{
       color: $sidebar-item-hover-color;
-      background-color: $sidebar-item-hover-bg-color;
+      background-color: #ffffff1a;
+      border-radius: .3rem;
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
@@ -366,7 +367,8 @@ body {
   }
 
   > .open > a{
-    background-color: lighten($sidebar-item-hover-bg-color, 2%);
+    background-color: #ffffff1a;
+    border-radius: .3rem;
   }
 
   > li:last-child > a{
@@ -409,11 +411,15 @@ body {
       > a{
         padding: 10px 0 10px 40px;
         font-size: $font-size-mini;
+        &:hover {
+          background-color: #ffffff1a;
+          border-radius: .3rem;
+        }
       }
 
       &.active{
         > a{
-          font-weight: $font-weight-semi-bold;
+          font-weight: $font-weight-bold;
         }
       }
 
@@ -702,7 +708,7 @@ body {
 
 .chat-sidebar-contacts{
   padding: 20px 0;
-  left: -100%;
+  left: +100%;
   @include transition(left .4s ease-in-out);
   &.open{
     left: 0;

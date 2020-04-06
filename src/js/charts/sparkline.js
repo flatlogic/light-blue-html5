@@ -29,7 +29,7 @@ $(function () {
             type: 'pie',
             width: '200px',
             height: '200px',
-            sliceColors: Object.values(Sing.colors).slice(12),
+            sliceColors: Object.values(Sing.colors).slice(11),
             highlightLighten: 1.05
         });
     }

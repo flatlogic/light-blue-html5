@@ -613,6 +613,9 @@ $slider-handle-size: 26px;
 .fc-event .fc-content{
   text-overflow: ellipsis;
 }
+.fc .fc-row .fc-content-skeleton td {
+  border-color: #ddd;
+}
 /***********************************/
 /**            PARSLEY            **/
 /***********************************/
@@ -2088,4 +2091,8 @@ a.fc-event {
 
 #flot-tracking .legend > div{
   background: transparent!important;
+}
+
+.flot-tick-label {
+  color: $body-main-color;
 }

@@ -283,11 +283,11 @@ $(function () {
 
         bar.filter((d) => d.class === "positive")
             .selectAll("rect")
-            .attr("fill", () => Sing.colors['brand-info']);
+            .attr("fill", () => Sing.colors['brand-primary']);
 
         bar.filter((d) => d.class === "negative")
             .selectAll("rect")
-            .attr("fill", () => Sing.colors['brand-warning']);
+            .attr("fill", () => Sing.colors['brand-success']);
 
         bar.filter((d) => d.class === "total")
             .selectAll("rect")

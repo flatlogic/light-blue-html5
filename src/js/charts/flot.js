@@ -3,11 +3,11 @@ $(function () {
 
     const COLORS = {
         lineChart: [Sing.colors['brand-danger'], Sing.colors['brand-success'], Sing.colors['brand-primary']],
-        barChart: Object.values(Sing.colors).slice(13),
+        barChart: Object.values(Sing.colors).slice(11),
         trackingChart: [Sing.colors['brand-danger'], Sing.colors['brand-info']],
-        pieChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-success'], Sing.colors['brand-danger']],
+        pieChart: [Sing.colors['brand-primary'], Sing.colors['brand-danger'], Sing.colors['brand-success'], Sing.colors['brand-info']],
         markers: Object.values(Sing.colors).slice(11),
-        donutChart: Object.values(Sing.colors).slice(12),
+        donutChart: Object.values(Sing.colors).slice(11),
         fontColor: Sing.colors['gray-400'],
         gridBorder: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-primary']]
     };
@@ -397,7 +397,7 @@ $(function () {
                     axisLabelFontSizePixels: 13,
                     axisLabelPadding: 15
                 },
-                colors: Object.values(Sing.colors).slice(13)
+                colors: Object.values(Sing.colors).slice(11)
             });
         }
     }
