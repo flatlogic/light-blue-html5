@@ -8,11 +8,11 @@
   border-right: none;
   background-color: transparent;
   color: $sidebar-color;
+  left: 0px;
+  transition: left .2s linear;
 
-  .slimScrollBar{
-    @include border-radius(0 !important);
-    background-color: lighten($sidebar-color, 30%) !important;
-    right: 0 !important;
+  @include media-breakpoint-down(sm) {
+    left: -224px;
   }
 }
 
@@ -54,11 +54,16 @@
 
 .content-wrap, .loader-wrap{
   left: $sidebar-width;
+  transition: left .2s linear;
   //margin-right: 174px;
 
-  @include media-breakpoint-up(md) {
-    margin-left: $sidebar-icon-state-width;
-    left: $sidebar-width - $sidebar-icon-state-width;
+  //@include media-breakpoint-up(md) {
+  //  margin-left: $sidebar-icon-state-width;
+  //  left: $sidebar-width - $sidebar-icon-state-width;
+  //}
+
+  @include media-breakpoint-down(sm) {
+    left: 0;
   }
 
   .nav-collapsed &{
