@@ -231,7 +231,7 @@ legend {
 
 .table th, .table td {
   padding: 0.55rem;
-  border-top: none;
+  border-top: 1px solid $widget-border-color;
 }
 
 //
@@ -478,10 +478,10 @@ legend {
 
   .nav-item.divider {
     display: block;
-    height: 22px;
+    height: 40px;
     width: 1px;
     margin: 10px 20px;
-    background: $body-main-color;
+    background: linear-gradient(rgba(4,6,32,0),rgba(244,244,245,.5),rgba(4,6,32,0));
   }
 }
 
@@ -537,7 +537,6 @@ legend {
       }
     }
 
-
     .form-control {
       order: 2;
       background: $widget-bg-color;
@@ -548,6 +547,7 @@ legend {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
       color: $body-main-color;
+      width: 240px;
     }
 
     .input-group-text {
@@ -1323,8 +1323,6 @@ legend {
 }
 
 .navbar-dashboard {
-  background-color: $navbar-dashboard-bg;
-  border-color: $navbar-dashboard-border;
 
   .container-fluid {
     flex-wrap: unset;
@@ -1349,17 +1347,21 @@ legend {
       }
     }
     .alert {
-      height: 20px;
-      line-height: 20px;
-      font-size: 0.8rem;
+      height: 26px;
+      line-height: 26px;
+      font-size: $font-size-sm;
       padding: 0 $spacer/2;
       margin: 0;
+      color: $body-main-color-small;
       background: $widget-bg-color;
 
       .close {
-        opacity: 1;
-        padding-left: 5px;
-        line-height: 20px;
+        opacity: .75;
+        font-size: 18px;
+        font-weight: 300;
+        color: $body-main-color-small;
+        margin-left: 1rem;
+        line-height: 24px;
       }
     }
   }
@@ -1386,7 +1388,7 @@ legend {
 
     > li > a {
       position: relative;
-      color: $body-main-color;
+      color: $body-main-color-small;
        i {
          font-size: $font-size-xlg;
        }

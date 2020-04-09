@@ -403,7 +403,7 @@
 
 .widget-login-info{
   font-size: $font-size-mini;
-  color: #888;
+  color: $body-main-color;
   margin-top: 1px;
   margin-bottom: 0;
 }
@@ -1365,6 +1365,8 @@
   z-index: 100;
   @include transition(right $sidebar-transition-time ease-in-out);
 
+
+
   &.theme-helper-opened {
     right: 0;
   }
@@ -1437,6 +1439,15 @@
   .theme-sharing {
     font-size: $font-size-lg;
     cursor: pointer;
+
+    .fa {
+      font-size: 2rem;
+      color: $blue;
+
+      &:hover {
+        color: #104d97;
+      }
+    }
   }
 
   .abc-radio-warning input[type="radio"]:not(:checked) + label::before {

@@ -1,4 +1,4 @@
-# Sing App - HTML5 Version
+# Light Blue - HTML5 Version
 
 ## Quick Start
 

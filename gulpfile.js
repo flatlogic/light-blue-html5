@@ -66,6 +66,7 @@ function hbs() {
 }
 
 // Handle sass
+
 function styles() {
   return gulp
     .src(srcPaths.styles)

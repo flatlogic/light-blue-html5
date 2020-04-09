@@ -5,7 +5,7 @@
         <!-- .navbar-header contains links seen on xs & sm screens -->
         <div class="navbar-header mr-md-3">
             <ul class="nav navbar-nav navbar-right d-md-none">
-                <li class="nav-item">
+                <li class="nav-item ">
                     <!-- toggles chat -->
                     <a class="nav-link" href="#" data-toggle="chat-sidebar">
                         <span class="square square-lg"><i class="la la-globe"></i></span>
@@ -22,7 +22,7 @@
             <a class="navbar-brand d-md-none" href="../dashboard/index.html">
                 <i class="fa fa-circle text-primary"></i>
                 &nbsp;
-                sing
+                Light Blue
                 &nbsp;
                 <i class="fa fa-circle text-danger"></i>
             </a>
@@ -30,11 +30,15 @@
 
         <!-- this part is hidden for xs screens -->
         <div class="navbar-header mobile-hidden">
+            <div class="alert alert-info alert-rounded animated bounceIn delay-2s mx-3">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-info-circle mr-1"></i> Check out Light Blue Settings on the right!
+            </div>
             <!-- search form! link it to your search server -->
             <form class="navbar-form" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border mr-3">
-                        <input class="form-control" id="main-search" type="text" placeholder="Search">
+                        <input class="form-control" id="main-search" type="text" placeholder="Search Dashboard">
                         <span class="input-group-append">
                             <span class="input-group-text">
                                 <i class="la la-search fw-bold"></i>
@@ -60,8 +64,8 @@
                             <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="..." >
                         </span>
                         &nbsp;
-                        Philip <strong>Smith</strong>&nbsp;
-                        <span class="circle bg-primary fw-bold text-white">
+                        admin@flatlogic.com
+                        <span class="circle bg-primary text-white fs-sm fw-bold">
                             15
                         </span>
                     </a>
@@ -200,13 +204,13 @@
                 </li>
                 <li class="dropdown nav-item">
                     <a href="#" class="nav-link">
-                        <i class="glyphicon glyphicon-comments"></i>
+                        <i class="la la-comment px-2"></i>
                     </a>
                 </li>
                 <li class="nav-item divider"></li>
                 <li class="dropdown nav-item" >
                     <a href="#" class="dropdown-toggle no-caret nav-link" data-toggle="dropdown">
-                        <i class="glyphicon glyphicon-cog"></i>
+                        <i class="la la-cog px-2"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <li><a class="dropdown-item" href="../other/profile.html"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
@@ -218,20 +222,14 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link" data-toggle="chat-sidebar">
-                        <i class="glyphicon glyphicon-globe"></i>
+                    <a href="#" class="nav-link">
+                        <i class="la la-globe px-2"></i>
                     </a>
-                    <div id="chat-notification" class="chat-notification hide">
-                        <div class="chat-notification-inner">
-                            <h6 class="title">
-                                <span class="thumb-xs">
-                                    <img src="../demo/img/people/a6.jpg" class="rounded-circle mr-xs float-left">
-                                </span>
-                                Jess Smith
-                            </h6>
-                            <p class="text">Hey! What's up?</p>
-                        </div>
-                    </div>
+                </li>
+                <li class="nav-item">
+                    <a target="_self" href="../extra/login.html" class="nav-link">
+                        <i class="la la-power-off px-2"></i>
+                    </a>
                 </li>
             </ul>
         </div>

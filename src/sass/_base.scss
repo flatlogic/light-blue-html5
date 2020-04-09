@@ -148,34 +148,34 @@
       font-weight: $font-weight-bold;
       text-align: center;
 
-      > .fa-circle{
+      > .fa-circle {
         font-size: 10px;
         vertical-align: 2px;
       }
     }
 
-    .navbar-nav{
+    .navbar-nav {
       position: relative;
       z-index: 1;
     }
   }
 
-  .avatar{
-    width: 40px;
+  .avatar {
     margin-top: -6px;
     &.float-left,
-    &.pull-left{
+    &.pull-left {
 
     }
+
     &.float-right,
-    &.pull-right{
+    &.pull-right {
       margin-left: 5px;
     }
   }
 
   .navbar-nav > li > a {
     .square.square-lg,
-    .circle.circle.lg{
+    .circle.circle.lg {
       margin: -7px -7px -8px;
     }
   }
@@ -1453,7 +1453,7 @@ input[type=search], input.search {
 
 .btn-outline {
   &-default {
-    color: $default;
+    color: $body-main-color-small;
     border-color: $default;
     &:hover {
       color: $body-main-color;
