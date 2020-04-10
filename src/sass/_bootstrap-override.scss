@@ -263,7 +263,7 @@ legend {
   z-index: 1000;
   min-width: 10rem;
   padding: .5rem 0;
-  margin: .125rem 0 0;
+  margin-top: $spacer;
   color: $body-main-color;
   text-align: left;
   list-style: none;
@@ -276,8 +276,8 @@ legend {
       color: $body-main-color;
     }
   & > li > a{
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     &:hover, &:active {
       background: $blue;
@@ -293,7 +293,33 @@ legend {
     right: 0;
     left: auto;
   }
+  &.dropdown-menu-right.comments {
+    background: radial-gradient(farthest-side ellipse at 10% 0,#333867,#17193b);
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 10px;
+
+    li a h6 {
+      color: $body-main-color;
+    }
+    li a span {
+      color: $body-main-color-small;
+    }
+
+    li>a:hover {
+      background-color: $widget-bg-color;
+    }
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      color: $body-main-color-small;
+      font-size: $font-size-base;
+      &:hover {
+        background-color: $widget-bg-color;
+      }
+    }
+  }
 }
+
 //
 // Navs
 // --------------------------------------------------

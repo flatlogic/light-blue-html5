@@ -203,9 +203,65 @@
                     </div>
                 </li>
                 <li class="dropdown nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#"
+                       class="nav-link"
+                       id="notifications-dropdown-toggle"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       data-position="bottom-middle-aligned"
+                       data-disable-interaction="false"
+                    >
                         <i class="la la-comment px-2"></i>
                     </a>
+                    <ul tabindex="-1" class="dropdown-menu dropdown-menu-messages dropdown-menu-right comments">
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="avatar thumb-sm mr-3">
+                                    <img src="../img/chat/avatars/1.png" alt="..." class="rounded-circle">
+                                </span>
+                                <div>
+                                    <h6>Jane
+                                        <span class="fw-semi-bold">Hew</span>
+                                    </h6>
+                                    <span class="fs-sm  fw-thin">Hey, John! How is it going? ...</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="avatar thumb-sm mr-3">
+                                    <img src="../img/chat/avatars/2.png" alt="..." class="rounded-circle">
+                                </span>
+                                <div>
+                                    <h6>Alies
+                                        <span class="fw-semi-bold">Rumiancaŭ</span>
+                                    </h6>
+                                    <span class="fs-sm  fw-thin">I will definitely buy this template</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="avatar thumb-sm mr-3">
+                                    <img src="../img/chat/avatars/3.png" alt="..." class="rounded-circle">
+                                </span>
+                                <div>
+                                    <h6>Alexey
+                                        <span class="fw-semi-bold">Kamandzirau</span>
+                                    </h6>
+                                    <span class="fs-sm  fw-thin">I will definitely buy this template</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li role="presentation" class="text-center">
+                            <button role="menuitem" type="button" class="dropdown-item">
+                                <span class="mx-auto">See all messages
+                                    <i class="fa fa-arrow-right ml-1"></i>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item divider"></li>
                 <li class="dropdown nav-item" >
