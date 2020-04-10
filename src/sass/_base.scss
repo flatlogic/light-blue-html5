@@ -8,7 +8,7 @@
   border-right: none;
   background-color: transparent;
   color: $sidebar-color;
-  left: 0px;
+  left: 15px;
   transition: left .2s linear;
 
   @include media-breakpoint-down(sm) {
@@ -286,6 +286,7 @@ body {
   padding: 10px 0;
   font-size: 1rem;
   font-weight: $sidebar-font-weight;
+  list-style: none;
 
   .hover-white{
     background-color: white!important;
