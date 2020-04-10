@@ -1104,6 +1104,10 @@ body {
 /*       Widget        */
 /***********************/
 
+#default-widget.fullscreened {
+  background: radial-gradient(farthest-side ellipse at 10% 0,#333867,#17193b);
+}
+
 .widget {
   position: relative;
   margin-bottom: $grid-gutter-width;
@@ -1113,8 +1117,12 @@ body {
   border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
 
-  .widget-body.typography {
+  .widget-body {
     color: $body-main-color;
+
+    .widget-padding-md {
+      border: 1px solid #040620!important;
+    }
   }
 
   h1,h2,h3,h4,h5,h6 {
@@ -1164,7 +1172,7 @@ body {
 
       h1,h2,h3,h4,h5,h6 {
         font-weight: 300;
-        color: $body-main-color-small;
+        color: $body-main-color;
       }
       .description {
         color: $body-main-color;
@@ -1187,6 +1195,12 @@ body {
 
       .border-right {
         border-right: 1px solid $widget-border-color!important;
+      }
+      .fs-mini {
+        color: $body-main-color-small;
+      }
+      .grid-system {
+        background: $widget-border-color;
       }
     }
 
@@ -1411,12 +1425,21 @@ code {
 /***********************************/
 
 
+body
+
 .widget-container{
   min-height: 30px;
 
   .fullscreened .jumbotron{
     height: 100vh;
     border-radius: 0;
+    background: radial-gradient(farthest-side ellipse at 10% 0,#333867,#17193b);
+  }
+
+  .fullscreened .jumbotron{
+    height: 100vh;
+    border-radius: 0;
+    background: radial-gradient(farthest-side ellipse at 10% 0,#333867,#17193b);
   }
   .widget:not(.fullscreened) > header{
     cursor: move;
@@ -1427,6 +1450,13 @@ code {
   background:  rgba($white, .4);
   border: 1px dashed $gray-600;
   margin: -1px -1px calc(#{$grid-gutter-width} - 1px) -1px;
+}
+
+#autoload-widget .ui-sortable-handle .widget-controls .dropdown-toggle {
+  background: transparent;
+  &::after {
+      display: none;
+  }
 }
 
 /***********************/

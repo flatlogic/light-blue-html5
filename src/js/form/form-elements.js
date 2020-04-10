@@ -58,8 +58,8 @@ $(function(){
             $(this).select2($(this).data());
         });
 
-        new Switchery(document.getElementById('checkbox-ios1'));
-        new Switchery(document.getElementById('checkbox-ios2'),{color: Sing.colors['brand-primary']});
+        new Switchery(document.getElementById('checkbox-ios1'), {secondaryColor: '#040620'});
+        new Switchery(document.getElementById('checkbox-ios2'),{color: Sing.colors['brand-primary'], secondaryColor: '#040620'});
 
         $('#datetimepicker4').datetimepicker({
             format: 'L'

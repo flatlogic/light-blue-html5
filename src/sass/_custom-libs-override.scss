@@ -384,6 +384,9 @@ $slider-handle-size: 26px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  .tooltip.in {
+    opacity: .8;
+  }
   &.slider-horizontal {
     width: 210px;
     height: $slider-line-height;
@@ -459,12 +462,16 @@ $slider-handle-size: 26px;
   input {
     display: none;
   }
+
   .tooltip-inner {
     white-space: nowrap;
   }
 
   .tooltip.top {
     top: -30px;
+  }
+  .tooltip.top.in {
+    opacity: .8;
   }
 }
 .slider-track {
