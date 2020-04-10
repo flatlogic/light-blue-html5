@@ -331,7 +331,7 @@ body {
     border-top: 1px solid $sidebar-item-border-color;
     padding-left: 50px;
     line-height: 35px;
-    font-size: $font-size-base;
+    font-size: 13px;
 
     &:hover{
       color: $sidebar-item-hover-color;
@@ -351,10 +351,10 @@ body {
       display: block;
       position: absolute;
       top: 3px;
-      left: $sidebar-padding-horizontal;
+      left: 0;
       width: 28px;
       height: 28px;
-      line-height: 28px;
+      line-height: 26px;
       text-align: center;
       font-size: $font-size-base;
       opacity: .6;
@@ -382,7 +382,8 @@ body {
   }
 
   > .active > a{
-    font-weight: $font-weight-normal;
+    font-weight: 700;
+    color: rgba(244,244,245,.9);
 
     &, &:hover {
       color: $sidebar-item-active-color;
@@ -415,8 +416,8 @@ body {
 
     > li{
       > a{
-        padding: 10px 0 10px 40px;
-        font-size: $font-size-mini;
+        padding: 10px 0 10px 48px;
+        font-size: 13px;
         &:hover {
           background-color: #ffffff1a;
           border-radius: .3rem;
@@ -426,6 +427,7 @@ body {
       &.active{
         > a{
           font-weight: $font-weight-bold;
+          color: rgba(244,244,245,.9);
         }
       }
 
