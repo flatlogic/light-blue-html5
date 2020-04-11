@@ -293,6 +293,7 @@ legend {
     right: 0;
     left: auto;
   }
+
   &.dropdown-menu-right.comments {
     background: radial-gradient(farthest-side ellipse at 10% 0,#333867,#17193b);
     border: 1px solid rgba(0,0,0,.15);
@@ -702,6 +703,18 @@ legend {
     display: flex;
     align-items: center;
     padding: 0 $spacer/2;
+  }
+  .nav-link.cog~ul {
+    background: radial-gradient(farthest-side ellipse at 10% 0, #333867, #17193b);
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    color: $body-main-color-small;
+    .dropdown-item:hover {
+        background-color: $widget-bg-color;
+    }
+    .dropdown-divider {
+      border-top: 1px solid $widget-border-color;
+    }
   }
 
   &:first-child {

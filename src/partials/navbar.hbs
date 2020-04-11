@@ -30,7 +30,7 @@
 
         <!-- this part is hidden for xs screens -->
         <div class="navbar-header mobile-hidden">
-            <div class="alert alert-info alert-rounded animated bounceIn delay-2s mx-3">
+            <div class="alert alert-info alert-rounded animated bounceIn delay-2s mx-3 d-none d-xl-block">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <i class="fa fa-info-circle mr-1"></i> Check out Light Blue Settings on the right!
             </div>
@@ -265,7 +265,7 @@
                 </li>
                 <li class="nav-item divider"></li>
                 <li class="dropdown nav-item" >
-                    <a href="#" class="dropdown-toggle no-caret nav-link" data-toggle="dropdown">
+                    <a href="#" class="dropdown-toggle no-caret nav-link cog" data-toggle="dropdown">
                         <i class="la la-cog px-2"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
@@ -277,10 +277,67 @@
                         <li><a class="dropdown-item" href="../extra/login.html"><i class="la la-sign-out"></i> &nbsp; Log Out</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="dropdown nav-item">
+                    <a href="#"
+                       class="nav-link"
+                       id="notifications-dropdown-toggle"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false"
+                       data-position="bottom-middle-aligned"
+                       data-disable-interaction="false"
+                    >
                         <i class="la la-globe px-2"></i>
                     </a>
+                    <ul tabindex="-1" class="dropdown-menu dropdown-menu-messages dropdown-menu-right comments">
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="badge badge-danger mr-2">
+                                    <i class="fa fa-bell-o"></i>
+                                </span>
+                                <span class="fs-sm">Check out this awesome ticket</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="badge bg-primary mr-2">
+                                    <i class="fa fa-question-circle"></i>
+                                </span>
+                                <span class="fs-sm">Finish 2019 annual report</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="badge badge-success mr-2">
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
+                                <span class="fs-sm">Update Vue.js to the newest version</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="badge badge-info mr-2">
+                                    <i class="fa fa-plus"></i>
+                                </span>
+                                <span class="fs-sm">Establish OKR system</span>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                <span class="badge badge-danger mr-2">
+                                    <i class="fa fa-tag"></i>
+                                </span>
+                                <span class="fs-sm">Fill in time tracking</span>
+                            </a>
+                        </li>
+                        <li role="presentation" class="text-center">
+                            <button role="menuitem" type="button" class="dropdown-item">
+                                <span class="mx-auto">See all tickets
+                                    <i class="fa fa-arrow-right ml-1"></i>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a target="_self" href="../extra/login.html" class="nav-link">
