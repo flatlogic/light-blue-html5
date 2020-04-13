@@ -1155,19 +1155,19 @@ legend {
 
 .modal {
   .modal-content {
+    background: #232642;
+    color: $body-main-color;
+
     .modal-header {
-      .modal-title{
-        color: $black!important;
-        p {
-          color: $black!important;
-        }
-      }
+      border-bottom: 1px solid $widget-border-color;
     }
     .modal-body {
-        color: $black!important;
         p {
-          color: $black!important;
+          color: $body-main-color-small;
         }
+    }
+    .modal-footer {
+      border-top: 1px solid $widget-border-color;
     }
   }
 
@@ -1228,7 +1228,7 @@ legend {
 // --------------------------------------------------
 
 .jumbotron {
-  background: transparent;
+  background: rgba(0,0,0,.24);
   @include media-breakpoint-up(md){
     padding-left: $jumbotron-padding;
     padding-right: $jumbotron-padding;

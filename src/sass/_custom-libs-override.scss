@@ -1496,8 +1496,8 @@ ul.messenger-theme-air {
 ul.messenger-theme-air .messenger-message {
   transition: background-color 0.4s;
   border-radius: 5px;
-  box-shadow: inset 0 0 0 1px white, inset 0 2px white,
-    0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
+  //box-shadow: inset 0 0 0 1px white, inset 0 2px white,
+  //  0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
   border: 0px;
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
@@ -1530,11 +1530,11 @@ ul.messenger-theme-air .messenger-message .messenger-close {
 }
 /* line 52, ../../src/sass/messenger-theme-air.sass */
 ul.messenger-theme-air .messenger-message .messenger-close:hover {
-  color: $gray-600;
+  color: $body-main-color;
 }
 /* line 55, ../../src/sass/messenger-theme-air.sass */
 ul.messenger-theme-air .messenger-message .messenger-close:active {
-  color: $gray-800;
+  color: $body-main-color;
 }
 /* line 58, ../../src/sass/messenger-theme-air.sass */
 ul.messenger-theme-air .messenger-message .messenger-actions {
@@ -1548,7 +1548,7 @@ ul.messenger-theme-air .messenger-message .messenger-actions a {
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
-  color: $gray-800;
+  color: $body-main-color;
   margin-right: 10px;
   padding: 3px 10px 5px;
   text-transform: capitalize;
@@ -1557,14 +1557,14 @@ ul.messenger-theme-air .messenger-message .messenger-actions a {
 ul.messenger-theme-air .messenger-message .messenger-actions a:hover {
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
     inset 0px 1px rgba(255, 255, 255, 0.15);
-  color: $gray-600;
+  color: $body-main-color-small;
 }
 /* line 77, ../../src/sass/messenger-theme-air.sass */
 ul.messenger-theme-air .messenger-message .messenger-actions a:active {
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18),
     inset 0px 1px rgba(0, 0, 0, 0.05);
   background: rgba(0, 0, 0, 0.04);
-  color: $gray-600;
+  color: $body-main-color;
 }
 /* line 82, ../../src/sass/messenger-theme-air.sass */
 ul.messenger-theme-air .messenger-message .messenger-actions .messenger-phrase {
@@ -1679,7 +1679,13 @@ ul.messenger-theme-air .messenger-spinner {
 }
 
 ul.messenger-theme-air .messenger-message {
-  background-color: $white;
+  background: #232642;
+  color: $body-main-color;
+  border: none;
+  &:hover {
+    background: #232642;
+  }
+
 }
 
 .location-selector {
