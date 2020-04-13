@@ -1087,10 +1087,10 @@ body {
   top: 0;
   bottom: 0;
   text-align: center;
-  background-color: $body-bg;
+  background: radial-gradient(farthest-side ellipse at 10% 0, #333867 20%, #17193b);
 
   opacity: 1;
-  transition: transform $sidebar-transition-time ease-in-out, left $sidebar-transition-time ease-in-out, opacity .2s ease-out, background-color .2s ease-out;
+  //transition: transform $sidebar-transition-time ease-in-out, left $sidebar-transition-time ease-in-out, opacity .2s ease-out, background-color .2s ease-out;
   &.hiding{
     opacity: 0;
     background-color: rgba(0,0,0,0);
