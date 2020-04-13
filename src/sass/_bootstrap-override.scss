@@ -1318,42 +1318,6 @@ legend {
 // Navbar Dasboard
 // --------------------------------------------------
 
-.navbar-first {
-  @include nav-style($sidebar-bg-color!important, $white, $white, rgba(0,0,0,.1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-secont {
-  @include nav-style($white!important, $navbar-dashboard-link-color, $white, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-third {
-  @include nav-style($sidebar-first-color !important, $white, $white, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-fourth {
-  @include nav-style($sidebar-second-color-bg!important, $navbar-dashboard-link-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-fifth {
-  @include nav-style($sidebar-third-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-sixth {
-  @include nav-style($sidebar-fourth-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-seventh {
-  @include nav-style($sidebar-fifth-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-eighth {
-  @include nav-style($sidebar-sixth-color-bg!important, $white, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-ninth {
-  @include nav-style($sidebar-seventh-color-bg!important, $white, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
 .header-dark{
   color: #fff!important;
 }
@@ -1403,13 +1367,13 @@ legend {
   }
 
   .navbar-brand {
-    color: $navbar-dashboard-brand-color;
+    color: $body-main-color;
     margin-right: 0;
     padding-top: 10px;
     font-size: $font-size-lg;
     &:hover,
     &:focus {
-      color: $navbar-dashboard-brand-hover-color;
+      color: $body-main-color-small;
       background-color: $navbar-dashboard-brand-hover-bg;
     }
   }
@@ -1439,7 +1403,7 @@ legend {
       &,
       &:hover,
       &:focus {
-        color: $navbar-dashboard-link-active-color;
+        color: $body-main-color;
         background-color: $navbar-dashboard-link-active-bg;
       }
     }

@@ -5,13 +5,12 @@
         <!-- .navbar-header contains links seen on xs & sm screens -->
         <div class="navbar-header mr-md-3">
             <ul class="nav navbar-nav navbar-right d-md-none">
-                <li class="nav-item ">
+                <li class="nav-item d-none d-xl-block">
                     <!-- toggles chat -->
                     <a class="nav-link" href="#" data-toggle="chat-sidebar">
                         <span class="square square-lg"><i class="la la-globe"></i></span>
                     </a>
                 </li>
-
                 <li class="nav-item d-md-none">
                     <a target="_self" href="#" class="nav-link">
                         <i class="la la-navicon px-2"></i>
@@ -35,7 +34,7 @@
                 <i class="fa fa-info-circle mr-1"></i> Check out Light Blue Settings on the right!
             </div>
             <!-- search form! link it to your search server -->
-            <form class="navbar-form" role="search">
+            <form class="navbar-form d-none d-xl-block" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border mr-3">
                         <input class="form-control" id="main-search" type="text" placeholder="Search Dashboard">
@@ -277,7 +276,7 @@
                         <li><a class="dropdown-item" href="../extra/login.html"><i class="la la-sign-out"></i> &nbsp; Log Out</a></li>
                     </ul>
                 </li>
-                <li class="dropdown nav-item">
+                <li class="dropdown nav-item d-none d-xl-block">
                     <a href="#"
                        class="nav-link"
                        id="notifications-dropdown-toggle"

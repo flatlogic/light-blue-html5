@@ -2,7 +2,7 @@
 /*        Layout       */
 /***********************/
 
-.sidebar{
+.sidebar {
   position: absolute;
   width: $sidebar-width;
   border-right: none;
@@ -14,6 +14,11 @@
   @include media-breakpoint-down(sm) {
     left: -224px;
   }
+}
+
+.sidebar.mobile {
+   position: static;
+  width: 95%;
 }
 
 #sidebar.sidebar-second {
@@ -496,7 +501,14 @@ body {
 .sidebar-status{
   position: relative;
   margin: 10px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding: 0 ($sidebar-padding-horizontal + $sidebar-slim-scroll-width) 0 $sidebar-padding-horizontal;
+
+  .la.la-navicon {
+    font-size: 28px;
+  }
 
   > a{
     display: block;

@@ -874,5 +874,11 @@ function initDemoFunctions(){
                 });
         }, 4000)
 
+        const mainSidebar = $('#sidebar');
+        const navicon = $('.la.la-navicon');
+        navicon.on('click', () => {
+            mainSidebar.toggleClass('mobile');
+        })
+
     }(jQuery);
 }
