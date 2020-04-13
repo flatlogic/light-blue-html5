@@ -362,7 +362,7 @@
 .login-page .page-footer {
   margin-bottom: 30px;
   font-size: $font-size-mini;
-  color: $text-muted;
+  color: $body-main-color-small;
   text-align: center;
   @media (min-height: 600px) {
     position: absolute;
@@ -395,20 +395,49 @@
   padding: 30px;
 
   > header{
+    padding-bottom: 5px;
     h1,h2,h3,h4,h5,h6{
       font-weight: $font-weight-normal;
+      text-align: center;
     }
   }
 }
 
 .widget-login-info{
   font-size: $font-size-mini;
-  color: $body-main-color;
+  color: $body-main-color-small;
   margin-top: 1px;
   margin-bottom: 0;
+  text-align: center;
+
 }
 
 .login-form{
+  .group {
+    .widget-login-info {
+      margin-top: $spacer;
+    }
+  }
+  .clearfix {
+    .btn-toolbar {
+      margin-top: $spacer * 2;
+      .auth-btn-circle {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        background: rgba(0,0,0,.2);
+      }
+    }
+  }
+  .form-group {
+    .input-group-prepend {
+      .input-group-text {
+        background: $default;
+      }
+    }
+  }
   .form-control{
     font-size: $font-size-mini;
     border: none;

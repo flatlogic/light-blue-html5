@@ -486,15 +486,6 @@ $(function() {
     icons.play();
   }
 
-  function initChat() {
-    $(".widget-chat-list-group").slimscroll({
-      height: "287px",
-      size: "4px",
-      borderRadius: "1px",
-      opacity: 0.3
-    });
-  }
-
   function pageLoad() {
     $(".widget").widgster();
     initSimpleChart();
@@ -506,7 +497,6 @@ $(function() {
     initYearsMap();
     initTiles();
     initWeather();
-    initChat();
   }
 
   pageLoad();

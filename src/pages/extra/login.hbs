@@ -4,7 +4,7 @@
     {{#content "chat" mode="replace"}}{{/content}}
     {{#content "content" mode="replace"}}
         <div class="row justify-content-center">
-            <div class="col-xl-5 col-md-6 col-10">
+            <div class="col-xl-5 col-md-7 col-10">
                 <h5 class="widget-login-logo animated fadeInUp">
                     <i class="fa fa-circle text-primary"></i>
                     Light Blue
@@ -16,36 +16,48 @@
                     </header>
                     <div class="widget-body">
                         <p class="widget-login-info">
-                            Use Facebook, Twitter or your email to sign in.
-                        </p>
-                        <p class="widget-login-info">
-                            Don't have an account? Sign up now!
+                            Use your email to sign in.
                         </p>
                         <form class="login-form mt-lg">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="pswd" type="text" placeholder="Password">
-                            </div>
-                            <div class="clearfix">
-                                <div class="btn-toolbar float-right">
-                                    <button type="button" class="btn btn-default btn-sm">Create an Account</button>
-                                    <a class="btn btn-inverse btn-sm" href="../dashboard/index.html">Login</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-md-push-6">
-                                    <div class="clearfix">
-                                        <div class="abc-checkbox widget-login-info">
-                                            <input type="checkbox" id="checkbox1" value="1">
-                                            <label for="checkbox1">Keep me signed in </label>
+                            <div role="group" class="form-group">
+                                <label for="email" class="d-block">Email</label>
+                                <div>
+                                    <div role="group" class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="la la-user text-white"></i>
+                                            </div>
                                         </div>
+                                        <input id="email" type="email" required="required" placeholder="Email" class="form-control input-transparent pl-3">
                                     </div>
                                 </div>
-
-                                <div class="col-md-6 col-md-pull-6">
-                                    <a class="mr-n-lg" href="#">Trouble with account?</a>
+                            </div>
+                            <div role="group" class="form-group">
+                                <label for="password" class="d-block">Password</label>
+                                <div>
+                                    <div role="group" class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="la la-lock text-white"></i>
+                                            </div>
+                                        </div>
+                                        <input id="password" type="password" required="required" placeholder="Password" class="form-control input-transparent pl-3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="btn-toolbar">
+                                    <a class="btn btn-danger btn-block" href="../dashboard/index.html">
+                                        <span class="auth-btn-circle">
+                                            <i class="la la-caret-right"></i>
+                                        </span>
+                                        Login</a>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="widget-login-info">
+                                    Don't have an account? Sign up now!<br>
+                                    <a class="mr-n-lg" href="#">Create an Account</a>
                                 </div>
                             </div>
                         </form>
