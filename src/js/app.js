@@ -196,17 +196,6 @@ $(function(){
         }
     };
 
-    /**
-     * Expands or collapses navigation. Valid only for collapsing navigation state
-     */
-    // SingAppView.prototype.toggleNavigationCollapseState = function(){
-    //     if ($('body').is('.nav-collapsed')){
-    //         this.expandNavigation();
-    //     } else {
-    //         this.collapseNavigation();
-    //     }
-    // };
-
     SingAppView.prototype.collapseNavigation = function(){
         //this method only makes sense for non-static navigation state
         if (this.isNavigationStatic() && (Sing.isScreen('lg') || Sing.isScreen('xl'))) return;
@@ -249,6 +238,7 @@ $(function(){
      * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
      * Static - stays always open.
      */
+
     SingAppView.prototype.toggleNavigationState = function(){
         if (this.isNavigationStatic()){
             this.collapsingNavigationState();
@@ -367,6 +357,7 @@ $(function(){
      * Specify a function to execute when a page was reloaded with pjax.
      * @param fn A function to execute
      */
+
     SingAppView.prototype.onPageLoad = function(fn){
         this._addPageCallback(this.pageLoadCallbacks, fn);
     };
