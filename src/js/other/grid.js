@@ -57,6 +57,7 @@ $(function(){
         /**
          * Custom close prompt for news widget
          */
+
         $newsWidget.widgster({
             showLoader: false,
             closePrompt: function(callback){
@@ -70,6 +71,7 @@ $(function(){
         /**
          * Use custom loader template
          */
+
         $sharesWidget.widgster({
             loaderTemplate: '<div class="loader animated fadeIn">' +
                 '   <span class="spinner"><i class="fa fa-spinner fa-spin"></i></span>' +
@@ -79,6 +81,7 @@ $(function(){
         /**
          * Make hidden spinner appear & spin when loading
          */
+
         $autoloadWidget.on("load.widgster", function(){
             $(this).find('.fa-spinner').addClass('fa-spin in');
         }).on("loaded.widgster", function(){
@@ -90,12 +93,14 @@ $(function(){
         /**
          * Init all other widgets with default settings & settings retrieved from data-* attributes
          */
+
         $widgets.widgster();
 
         /**
          * Init tooltips for all widget controls on page
          */
-        $('.widget-controls > a').tooltip({placement: 'bottom'});
+
+        $('.widget-controls > a').tooltip({placement: 'auto'});
     }
     pageLoad();
     SingApp.onPageLoad(pageLoad);
