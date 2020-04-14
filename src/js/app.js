@@ -700,6 +700,7 @@ function initAppFixes(){
  * Demo-only functions. Does not affect the core Sing functionality.
  * Should be removed when used in real app.
  */
+
 function initDemoFunctions(){
     !function($){
         $('.theme-helper-toggler').click(() => {
