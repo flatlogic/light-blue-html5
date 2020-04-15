@@ -1,59 +1,11 @@
 $(function(){
 
     $('.widget').widgster();
-    var bs3Wysihtml5Templates = {
-        "emphasis": function(locale, options) {
-            var size = (options && options.size) ? 'btn-'+options.size : '';
-            return "<li>" +
-                "<div class='btn-group'>" +
-                "<a class='btn " + size + " btn-default' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'><i class='fa fa-bold'></i></a>" +
-                "<a class='btn " + size + " btn-default' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'><i class='fa fa-italic'></i></a>" +
-                "</div>" +
-                "</li>";
-        },
-        "link": function(locale, options) {
-            var size = (options && options.size) ? ' btn-'+options.size : '';
-            return "<li>" +
-                ""+
-                "<div class='bootstrap-wysihtml5-insert-link-modal modal fade'>" +
-                "<div class='modal-dialog'>"+
-                "<div class='modal-content'>"+
-                "<div class='modal-header'>" +
-                "<a class='close' data-dismiss='modal'>&times;</a>" +
-                "<h4>" + locale.link.insert + "</h4>" +
-                "</div>" +
-                "<div class='modal-body'>" +
-                "<input value='http://' class='bootstrap-wysihtml5-insert-link-url form-control'>" +
-                "<label class='checkbox'> <input type='checkbox' class='bootstrap-wysihtml5-insert-link-target' checked>" + locale.link.target + "</label>" +
-                "</div>" +
-                "<div class='modal-footer'>" +
-                "<button class='btn btn-default' data-dismiss='modal'>" + locale.link.cancel + "</button>" +
-                "<button href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</button>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "<a class='btn " + size + " btn-default' data-wysihtml5-command='createLink' title='" + locale.link.insert + "' tabindex='-1'><i class='fa fa-share'></i></a>" +
-                "</li>";
-        },
-        "html": function(locale, options) {
-            var size = (options && options.size) ? ' btn-'+options.size : '';
-            return "<li>" +
-                "<div class='btn-group'>" +
-                "<a class='btn " + size + " btn-default' data-wysihtml5-action='change_view' title='" + locale.html.edit + "' tabindex='-1'><i class='fa fa-pencil'></i></a>" +
-                "</div>" +
-                "</li>";
-        }
-    };
     function pageLoad(){
         $('#tooltip-enabled, #max-length').tooltip();
         $('.selectpicker').selectpicker();
         $(".autogrow").autosize({append: "\n"});
-        $('#wysiwyg').wysihtml5({
-            html: true,
-            customTemplates: bs3Wysihtml5Templates,
-            stylesheets: []
-        });
+
         $(".select2").each(function(){
             $(this).select2($(this).data());
         });
@@ -89,6 +41,18 @@ $(function(){
          */
         $('img[data-src]').each(function(){
             delete this.holder_data;
+        });
+        $('#summernote').summernote({
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ],
+            height: 150
         });
     }
     pageLoad();

@@ -337,7 +337,8 @@ legend {
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   > .nav-item {
-    margin-bottom: -2px;
+    margin: 0 1px;
+
     > .nav-link {
       padding: 12px 18px;
       border: none;
@@ -399,6 +400,7 @@ legend {
   > .tab-pane {
     padding: $spacer*2 $spacer*2;
   }
+
 }
 
 // LEFT & RIGHT
@@ -416,6 +418,7 @@ legend {
 }
 .tab-content {
   overflow: auto; // prevent content from running below tabs
+
 }
 
 // Remove border on bottom, left, right
@@ -834,8 +837,12 @@ legend {
 }
 
 .btn-success {
+  background-color: #58d777;
+  border-color: #58d777;
   color: $btn-default-color;
   &:hover {
+    background-color: #39d05e;
+    border-color: #31cb56;
     color: $btn-default-color;
   }
 }
@@ -1139,21 +1146,21 @@ legend {
 
 // z-index fix. modal doesn't show up properly when .content-wrap is relative
 
-.modal-open{
-  &, &.nav-collapsed, &.nav-static{
-    .content-wrap{
-           -webkit-transform: none;
-           -ms-transform: none;
-           transform: none;
-           position: static;
-         }
-
-    .sidebar{
-      z-index: -1;
-      display: none;
-    }
-  }
-}
+//.modal-open {
+//  &, &.nav-collapsed, &.nav-static {
+//    .content-wrap {
+//           -webkit-transform: none;
+//           -ms-transform: none;
+//           transform: none;
+//           position: static;
+//         }
+//
+//    .sidebar {
+//      z-index: -1;
+//      display: none;
+//    }
+//  }
+//}
 
 .modal {
   .modal-content {
@@ -1167,6 +1174,9 @@ legend {
         p {
           color: $body-main-color-small;
         }
+      .form-group {
+        margin-bottom: 0;
+      }
     }
     .modal-footer {
       border-top: 1px solid $widget-border-color;
@@ -1611,6 +1621,7 @@ a.badge.badge-light {
 .accordion {
   .card {
     background: transparent;
+    box-shadow: none;
   }
 
   .card + .card {
@@ -1748,5 +1759,8 @@ a.badge.badge-light {
       background: $widget-bg-color;
     }
   }
+}
+.text-muted {
+  color: $body-main-color-small!important;
 }
 

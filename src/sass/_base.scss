@@ -21,42 +21,6 @@
   width: 95%;
 }
 
-#sidebar.sidebar-second {
-  @include sidebar-style($sidebar-white-color, $white, $white, transparent, $white, $white);
-}
-
-#sidebar.sidebar-third {
-  @include sidebar-style($white, $sidebar-first-color, $sidebar-first-color, $sidebar-first-color-bg, $sidebar-first-color-bg, $sidebar-first-color-bg!important);
-}
-
-.sidebar-fourth {
-  @include sidebar-style($sidebar-second-color, $sidebar-second-color-bg, $white, $sidebar-second-color-bg-active, $sidebar-second-color-bg-active, $sidebar-second-color-bg-active);
-}
-
-.sidebar-fifth {
-  @include sidebar-style($sidebar-third-color, $sidebar-third-color-bg, $sidebar-third-color-bg, $sidebar-third-color-bg-active, $sidebar-third-color-bg-active, $sidebar-third-color-bg-active);
-}
-
-.sidebar-sixth {
-  @include sidebar-style($sidebar-third-color, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg-active, $sidebar-fourth-color-bg-active, $sidebar-fourth-color-bg-active);
-}
-
-.sidebar-seventh {
-  @include sidebar-style($sidebar-third-color, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg-active, $sidebar-fifth-color-bg-active, $sidebar-fifth-color-bg-active);
-}
-
-.sidebar-eighth {
-  @include sidebar-style($white, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg-active, $sidebar-sixth-color-bg-active, $sidebar-sixth-color-bg-active);
-}
-
-.sidebar-ninth {
-  @include sidebar-style($sidebar-seventh-color, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg-active, $sidebar-seventh-color-bg-active, $sidebar-seventh-color-bg-active);
-}
-
-.sidebar-transparent {
-  @include sidebar-style($sidebar-white-color, transparent, $white, transparent, transparent, transparent);
-}
-
 .content-wrap, .loader-wrap{
   left: $sidebar-width;
   transition: left .2s linear;
@@ -1133,6 +1097,9 @@ body {
   border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
 
+  .widget-body.maps {
+    height: 60vh;
+  }
   .widget-body {
     color: $body-main-color;
 
@@ -1440,6 +1407,14 @@ code {
   border-radius: .3rem;
 }
 
+#widget-email-header {
+  .btn-group {
+    .dropdown-toggle:after {
+      content: none;
+    }
+  }
+}
+
 /***********************************/
 /**         Widgets Grid          **/
 /***********************************/
@@ -1575,10 +1550,10 @@ input[type=search], input.search {
 
 .content-map{
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 8%;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
   + .page-title{
     position: relative;
     z-index: 2;

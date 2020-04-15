@@ -1,48 +1,4 @@
 $(function(){
-    var bs3Wysihtml5Templates = {
-        "emphasis": function(locale, options) {
-            var size = (options && options.size) ? ' btn-'+options.size : '';
-            return "<li>" +
-                "<div class='btn-group'>" +
-                "<a class='btn " + size + " btn-default' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'><i class='fa fa-bold'></i></a>" +
-                "<a class='btn " + size + " btn-default' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'><i class='fa fa-italic'></i></a>" +
-                "</div>" +
-                "</li>";
-        },
-        "link": function(locale, options) {
-            var size = (options && options.size) ? ' btn-'+options.size : '';
-            return "<li>" +
-                ""+
-                "<div class='bootstrap-wysihtml5-insert-link-modal modal fade'>" +
-                "<div class='modal-dialog'>"+
-                "<div class='modal-content'>"+
-                "<div class='modal-header'>" +
-                "<a class='close' data-dismiss='modal'>&times;</a>" +
-                "<h5>" + locale.link.insert + "</h5>" +
-                "</div>" +
-                "<div class='modal-body'>" +
-                "<input value='http://' class='bootstrap-wysihtml5-insert-link-url form-control'>" +
-                "<label class='checkbox'> <input type='checkbox' class='bootstrap-wysihtml5-insert-link-target' checked>" + locale.link.target + "</label>" +
-                "</div>" +
-                "<div class='modal-footer'>" +
-                "<button class='btn btn-secondary' data-dismiss='modal'>" + locale.link.cancel + "</button>" +
-                "<button href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</button>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "</div>" +
-                "<a class='btn btn-" + size + " btn-default' data-wysihtml5-command='createLink' title='" + locale.link.insert + "' tabindex='-1'><i class='fa fa-share'></i></a>" +
-                "</li>";
-        },
-        "html": function(locale, options) {
-            var size = (options && options.size) ? ' btn-'+options.size : '';
-            return "<li>" +
-                "<div class='btn-group'>" +
-                "<a class='btn btn-" + size + " btn-default' data-wysihtml5-action='change_view' title='" + locale.html.edit + "' tabindex='-1'><i class='fa fa-pencil'></i></a>" +
-                "</div>" +
-                "</li>";
-        }
-    };
 
     var dummyBodies = ["<p>Why painful the sixteen how minuter looking nor. Subject but why ten earnest husband imagine sixteen brandon. Are unpleasing occasional celebrated motionless unaffected conviction out. Evil make to no five they. Stuff at avoid of sense small fully it whose an. Ten scarcely distance moreover handsome age although. As when have find fine or said no mile. He in dispatched in imprudence dissimilar be possession unreserved insensible. She evil face fine calm have now. Separate screened he outweigh of distance landlord.</p>",
         "somm text bodt. Reall small. ust few lines", "<p>Lose john poor same it case do year we. Full how way even the sigh. Extremely nor furniture fat questions now provision incommode preserved. Our side fail find like now. Discovered travelling for insensible partiality unpleasing impossible she. Sudden up my excuse to suffer ladies though or. Bachelor possible marianne directly confined relation as on he.</p>",
@@ -569,16 +525,22 @@ $(function(){
     }
 
     function pageLoad(){
-        $('#wysiwyg').wysihtml5({
-            html: true,
-            customTemplates: bs3Wysihtml5Templates,
-            stylesheets: []
+        $('#summernote').summernote({
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']]
+            ],
+            height: 200
         });
-
         initMailboxApp();
-
         initMailboxAppDemo()
     }
+
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 });

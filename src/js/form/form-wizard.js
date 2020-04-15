@@ -194,7 +194,7 @@ $(function(){
         });
 
         wizard.el.find('.wizard-progress-container').empty()
-            .append('<div class="bg-gray-lighter"><progress class="progress progress-primary progress-xs" style="width: 0%" value="100" max="100"></progress></div>');
+            .append('<div class="progress progress-xs"><progress class="progress progress-xs" style="width: 0%" value="100" max="100"></progress></div>');
 
         wizard.progress = wizard.modal.find('progress');
 

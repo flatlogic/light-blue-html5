@@ -147,7 +147,7 @@ $(function(){
         var currentDate = $calendar.fullCalendar('getDate');
 
         $('#calender-current-date').html(
-                $.fullCalendar.formatDate(currentDate, "MMM yyyy") +
+                $.fullCalendar.formatDate(currentDate, "MMM YYYY") +
                 " - <span class='fw-semi-bold'>" +
                 $.fullCalendar.formatDate(currentDate, "dddd") +
                 "</span>"
@@ -158,7 +158,7 @@ $(function(){
             $calendar.fullCalendar( 'prev' );
             currentDate = $calendar.fullCalendar('getDate');
             $('#calender-current-date').html(
-                    $.fullCalendar.formatDate(currentDate, "MMM yyyy") +
+                    $.fullCalendar.formatDate(currentDate, "MMM YYYY") +
                     " - <span class='fw-semi-bold'>" +
                     $.fullCalendar.formatDate(currentDate, "dddd") +
                     "</span>"
@@ -168,7 +168,7 @@ $(function(){
             $calendar.fullCalendar( 'next' );
             currentDate = $calendar.fullCalendar('getDate');
             $('#calender-current-date').html(
-                    $.fullCalendar.formatDate(currentDate, "MMM yyyy") +
+                    $.fullCalendar.formatDate(currentDate, "MMM YYYY") +
                     " - <span class='fw-semi-bold'>" +
                     $.fullCalendar.formatDate(currentDate, "dddd") +
                     "</span>"

@@ -648,7 +648,7 @@
 
 .search-result-categories{
   > li > a {
-    color: $gray-600;
+    color: $body-main-color-small;
     font-weight: $font-weight-normal;
     &:hover{
       background-color: $gray-light;
@@ -657,11 +657,12 @@
   }
 }
 
-.search-results-count{
+.search-results-count {
   margin-top: 10px;
 }
 
-.search-result-item{
+.search-result-item {
+  overflow: hidden;
   padding: 20px;
   background-color: $widget-bg-color;
   box-shadow: $widget-shadow;
@@ -677,7 +678,7 @@
       display: inline-block;
       margin: -20px 0 -20px -20px;
       float: left;
-      width: 200px;
+      width: 230px;
     }
     @include media-breakpoint-down(sm) {
       max-height: 200px;
@@ -691,7 +692,7 @@
   .info{
     margin-top: 2px;
     font-size: $font-size-sm;
-    color: $text-muted;
+    color: $body-main-color-small;
   }
 
   .description{
@@ -1120,7 +1121,7 @@
   display: inline-block;
   margin: 0;
   font-size: $font-size-mini;
-  color: $text-muted;
+  color: $body-main-color-small;
   line-height: 29px;
 
   + .widget-email-pagination{

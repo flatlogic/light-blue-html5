@@ -10,7 +10,7 @@
         <h1 class="page-title">Email - <span class="fw-semi-bold">Inbox</span></h1>
         <div class="row">
             <div class="col-lg-3 col-xl-2">
-                <a class="btn btn-danger btn-block" href="../other/inbox.html">
+                <a class="btn btn-primary btn-block" href="../other/inbox.html">
                     Compose
                 </a>
                 <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mt">
@@ -65,7 +65,7 @@
                                 <input type="text" id="input-subject" placeholder="Subject" class="input-transparent form-control" value="">
                             </div>
                             <div class="form-group">
-                                <textarea rows="10" class="form-control" id="wysiwyg" placeholder="Message"></textarea>
+                                <div id="summernote"></div>
                             </div>
                             <div class="clearfix">
                                 <div class="btn-toolbar float-right">
@@ -81,8 +81,8 @@
         </div>
     {{/content}}
     {{#content "scripts"}}
-      <script src="../../node_modules/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script>
-      <script src="../../node_modules/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+
+      <script src="../../node_modules/summernote/dist/summernote.js"></script>
       <!-- page specific js -->
       <script src="../js/other/compose.js"></script>
     {{/content}}

@@ -175,7 +175,12 @@
 .dropzone {
   border: 2px dashed $widget-border-color;
   background: $default;
+  .dz-preview.dz-image-preview {
+    background: transparent;
+  }
 }
+
+
 /**
  * Mapael
  */
@@ -731,23 +736,45 @@ input.parsley-error {
   h3 {
     font-family: $font-family-base;
     font-weight: $headings-font-weight;
-    color: $body-color;
+    color: $body-main-color;
   }
 
   .close {
     order: 1;
+    color: $body-main-color-small;
+    opacity: 1;
   }
 }
 
+.wizard-body {
+  .wizard-card {
+    border: none;
+  }
+  .wizard-cards .wizard-card-container {
+    .wizard-card {
+      border-top-color: $widget-border-color;
+    }
+  }
+  .wizard-steps {
+      background: transparent;
+  }
+}
+
+.wizard-footer {
+  .wizard-back {
+    color: $body-main-color;
+    background-color: #353a63;
+    border-color: #31355b;
+  }
+}
 .wizard-nav-list > li.already-visited > a.wizard-nav-link,
 .wizard-nav-list > li.already-visited.active > a.wizard-nav-link {
-  color: $body-color;
+  color: $body-main-color-small;
 }
 
 .wizard-nav-list li.active > a,
 .wizard-nav-item .already-visited .active {
-  background-color: theme-color("info");
-  color: $white;
+  color: $body-main-color;
 }
 
 .wizard-dialog {
@@ -766,6 +793,7 @@ input.parsley-error {
     text-decoration: none;
     width: 100%;
     padding: 10px 15px;
+    background: transparent;
   }
 }
 
@@ -1949,11 +1977,24 @@ a.fc-event {
 .jvectormap-zoomin {
   top: auto;
   bottom: 40px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: $default;
+  transition: all .2s linear;
+  &:hover {
+    background: #353a63;
+  }
 }
 
 .jvectormap-zoomout {
   bottom: 20px;
   top: auto;
+  padding: 10px;
+  background: $default;
+  transition: all .2s linear;
+  &:hover {
+    background: #353a63;
+  }
 }
 .legendLabel {
   color: $body-main-color;
@@ -2127,6 +2168,39 @@ a.fc-event {
   color: white;
 }
 
-//.rickshaw_graph .detail .item.active {
-//  color: black;
-//}
+
+// summernote //
+
+.note-editor.note-frame {
+  border: none;
+
+  .note-toolbar {
+    .note-btn-group {
+      .dropdown-toggle {
+        .note-icon-magic {
+          padding-right: 10px;
+        }
+
+        &:after {
+          content: none;
+        }
+      }
+
+      .note-dropdown-menu {
+        li > a {
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+  .note-statusbar {
+    background-color: $default;
+    border-top-color: $default;
+  }
+
+  .note-editing-area .note-editable {
+    background-color: $widget-border-color;
+  }
+}
