@@ -13,14 +13,14 @@
 
   @include media-breakpoint-down(sm) {
     left: -224px;
-    top: $spacer * 3;
+    top: $spacer * 4;
   }
 }
 
 .sidebar.mobile {
   position: relative;
   width: 95%;
-  top: $spacer * 3;
+  top: $spacer * 4;
   left: $spacer;
 }
 
@@ -1097,7 +1097,9 @@ body {
   color: $widget-color;
   border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
-
+  .widget-body.grid {
+    overflow-x: auto;
+  }
   .widget-body.maps {
     height: 60vh;
   }
@@ -2070,7 +2072,7 @@ input[type=search], input.search {
   }
 
   @include media-breakpoint-down(sm) {
-    background: white;
+
 
     margin: 0 (-$content-padding-horizontal / 2) -42px;
     padding-bottom: 42px;
