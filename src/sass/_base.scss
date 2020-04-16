@@ -13,12 +13,15 @@
 
   @include media-breakpoint-down(sm) {
     left: -224px;
+    top: $spacer * 3;
   }
 }
 
 .sidebar.mobile {
-   position: static;
+  position: relative;
   width: 95%;
+  top: $spacer * 3;
+  left: $spacer;
 }
 
 .content-wrap, .loader-wrap{
@@ -163,10 +166,8 @@
   .navbar-nav .nav-link {
     .fa, .la {
       font-size: 20px;
-
-      @include media-breakpoint-down(md) {
-        font-size: 28px;
-      }
+      padding-right: 4px;
+      color: $body-main-color;
     }
   }
 }
@@ -464,21 +465,21 @@ body {
 
 .sidebar-status{
   position: relative;
-  margin: 10px 0 20px;
+  margin: 16px 0 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 ($sidebar-padding-horizontal + $sidebar-slim-scroll-width) 0 $sidebar-padding-horizontal;
+  justify-content: flex-end;
+  padding: 0 0 0 $sidebar-padding-horizontal;
 
-  .la.la-navicon {
-    font-size: 28px;
+  .la.la-navicon, .la.la-cog {
+    font-size: 20px;
   }
 
   > a{
     display: block;
-    line-height: 40px;
-    color: $gray-200;
+    font-weight: 400;
+    color: $body-main-color;
     text-decoration: none;
   }
 

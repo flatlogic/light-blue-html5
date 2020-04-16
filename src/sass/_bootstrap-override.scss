@@ -1351,13 +1351,14 @@ legend {
       justify-content: flex-end;
     }
 
-    @include media-breakpoint-down(sm) {
-      width: 100%;
+    //@include media-breakpoint-down(sm) {
+    //  width: 100%;
+    //
+    //  &.mobile-hidden {
+    //    display: none;
+    //  }
+    //}
 
-      &.mobile-hidden {
-        display: none;
-      }
-    }
     .alert {
       height: 26px;
       line-height: 26px;
@@ -1400,7 +1401,7 @@ legend {
 
     > li > a {
       position: relative;
-      color: $body-main-color-small;
+      color: $body-main-color;
        i {
          font-size: $font-size-xlg;
        }

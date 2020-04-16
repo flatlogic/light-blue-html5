@@ -39,12 +39,13 @@
 </head>
 
 <body class="{{extraBodyClass}}">
+{{#block "navbar"}}
+    {{> navbar }}
+{{/block}}
     {{#block "sidebar"}}
     {{> sidebar }}
     {{/block}}
-    {{#block "navbar"}}
-    {{> navbar }}
-    {{/block}}
+
     {{#block "theme-helper"}}
     {{> theme-helper }}
     {{/block}}
