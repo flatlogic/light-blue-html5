@@ -708,6 +708,10 @@ legend {
     display: flex;
     align-items: center;
     padding: 0 $spacer/2;
+    @media (max-width: 575.98px) {
+      padding: 0 $spacer/4;
+    }
+
   }
   .nav-link.cog~ul {
     background: radial-gradient(farthest-side ellipse at 10% 0, #333867, #17193b);
@@ -1184,7 +1188,7 @@ legend {
   }
 
   .close {
-    opacity: 0.2;
+    color: $body-main-color;
 
     &:hover {
       opacity: 1;
@@ -1633,7 +1637,7 @@ a.badge.badge-light {
     background: $widget-bg-color;
     border-bottom: none;
     border-radius: $border-radius;
-
+    margin-bottom: 0!important;
 
     a {
       &,

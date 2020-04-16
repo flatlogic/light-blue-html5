@@ -46,7 +46,7 @@
   .nav-static & {
     @include media-breakpoint-up(lg) {
       left: 0;
-      margin-left: $sidebar-width;
+      margin-left: $sidebar-width + 15px;
     }
   }
 }
