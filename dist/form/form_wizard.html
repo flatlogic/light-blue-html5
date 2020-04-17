@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sing App Dashboard - Form Wizard</title>
+    <link href="../css/application.min.css" rel="stylesheet">
+    <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
+    <!--[if IE 9]>
+        <link href="css/application-ie9-part2.css" rel="stylesheet">
+        <![endif]-->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Sing App - Bootstrap 4 Admin Dashboard Template">
+    <meta name="keywords"
+        content="bootstrap admin template,admin template,admin dashboard,admin dashboard template,admin,dashboard,bootstrap,template">
+    <meta name="author" content="Flatlogic LLC">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script>
+        /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
+        chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+        https://code.google.com/p/chromium/issues/detail?id=332189
+        */
+    </script>
+    <script src="../js/charts/d3-version-wrapper.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36759672-9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-36759672-9');
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script
+        type="text/javascript"> (function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(48020168, "init", { id: 48020168, clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, trackHash: true, ecommerce: "dataLayer" }); </script>
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body class="">
+    <!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
+    <nav class="page-controls navbar navbar-dashboard">
+       
+        <div class="container-fluid">
+            <!-- .navbar-header contains links seen on xs & sm screens -->
+            <div class="navbar-header mr-md-3">
+                <ul class="nav navbar-nav navbar-right d-md-none">
+                    <li class="nav-item d-none d-xl-block">
+                        <!-- toggles chat -->
+                        <a class="nav-link" href="#" data-toggle="chat-sidebar">
+                            <span class="square square-lg"><i class="la la-globe"></i></span>
+                        </a>
+                    </li>
+    
+                </ul>
+            </div>
+    
+            <!-- this part is hidden for xs screens -->
+            <div class="navbar-header mobile-hidden">
+                <div class="alert alert-info alert-rounded animated bounceIn delay-2s mx-3 d-none d-xl-block">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <i class="fa fa-info-circle mr-1"></i> Check out Light Blue Settings on the right!
+                </div>
+                <!-- search form! link it to your search server -->
+                <form class="navbar-form d-none d-xl-block" role="search">
+                    <div class="form-group">
+                        <div class="input-group input-group-no-border mr-3">
+                            <input class="form-control" id="main-search" type="text" placeholder="Search Dashboard">
+                            <span class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="la la-search fw-bold"></i>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav float-right">
+                    <li class="dropdown nav-item">
+                        <a
+                                href="#"
+                                role="button"
+                                class="dropdown-toggle dropdown-toggle-notifications nav-link small"
+                                id="notifications-dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                data-position="bottom-middle-aligned"
+                                data-disable-interaction="false"
+                        >
+                            <span class="thumb-sm avatar float-left">
+                                <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="..." >
+                            </span>
+                            &nbsp;
+                            admin@flatlogic.com
+                            <span class="circle bg-primary text-white fs-sm fw-bold">
+                                15
+                            </span>
+                        </a>
+                        <div
+                                class="dropdown-menu dropdown-menu-right animated fadeInUp py-0"
+                                aria-labelledby="notifications-dropdown-toggle"
+                                id="notifications-dropdown-menu"
+                        >
+                            <section class="card notifications">
+                                <header class="card-header">
+                                    <div class="text-center mb-sm">
+                                        <strong>You have 13 notifications</strong>
+                                    </div>
+                                    <div class="btn-group btn-group-sm btn-group-toggle" id="notifications-toggle" data-toggle="buttons">
+                                        <label class="btn btn-default active">
+                                            <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
+                                                 only requirement for async reloading -->
+                                            <input type="radio" checked
+                                                   data-ajax-trigger="change"
+                                                   data-ajax-load="../demo/ajax/notifications.html"
+                                                   data-ajax-target="#notifications-list"> Notifications
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio"
+                                                   data-ajax-trigger="change"
+                                                   data-ajax-load="../demo/ajax/messages.html"
+                                                   data-ajax-target="#notifications-list"> Messages
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio"
+                                                   data-ajax-trigger="change"
+                                                   data-ajax-load="../demo/ajax/progress.html"
+                                                   data-ajax-target="#notifications-list"> Progress
+                                        </label>
+                                    </div>
+                                </header>
+                                <!-- notification list with .thin-scroll which styles scrollbar for webkit -->
+                                <div id="notifications-list" class="list-group thin-scroll">
+                                    <div class="list-group-item">
+                                    <span class="thumb-sm float-left mr clearfix">
+                                        <img class="rounded-circle" src="../demo/img/people/a3.jpg" alt="...">
+                                    </span>
+                                        <p class="no-margin overflow-hidden">
+                                            1 new user just signed up! Check out
+                                            <a href="#">Monica Smith</a>'s account.
+                                            <time class="help-block no-margin">
+                                                2 mins ago
+                                            </time>
+                                        </p>
+                                    </div>
+                                    <a class="list-group-item" href="#">
+                                    <span class="thumb-sm float-left mr">
+                                        <i class="fa fa-angle-double-up fa-2x"></i>
+                                    </span>
+                                        <p class="text-ellipsis no-margin">
+                                            2.1.0-pre-alpha just released. </p>
+                                        <time class="help-block no-margin">
+                                            5h ago
+                                        </time>
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                    <span class="thumb-sm float-left mr">
+                                        <i class="fa fa-bolt fa-lg"></i>
+                                    </span>
+                                        <p class="text-ellipsis no-margin">
+                                            Server load limited. </p>
+                                        <time class="help-block no-margin">
+                                            7h ago
+                                        </time>
+                                    </a>
+                                    <div class="list-group-item">
+                                    <span class="thumb-sm float-left mr clearfix">
+                                        <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
+                                    </span>
+                                        <p class="no-margin overflow-hidden">
+                                            User <a href="#">Jeff</a> registered
+                                            &nbsp;&nbsp;
+                                            <button class="btn btn-xs btn-success">Allow</button>
+                                            <button class="btn btn-xs btn-danger">Deny</button>
+                                            <time class="help-block no-margin">
+                                                12:18 AM
+                                            </time>
+                                        </p>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <span class="thumb-sm float-left mr">
+                                            <i class="fa fa-shield fa-lg"></i>
+                                        </span>
+                                        <p class="no-margin overflow-hidden">
+                                            Instructions for changing your Envato Account password. Please
+                                            check your account <a href="#">security page</a>.
+                                            <time class="help-block no-margin">
+                                                12:18 AM
+                                            </time>
+                                        </p>
+                                    </div>
+                                    <a class="list-group-item" href="#">
+                                    <span class="thumb-sm float-left mr">
+                                        <span class="square bg-primary square-lg">
+                                            <i class="fa fa-facebook text-white"></i>
+                                        </span>
+                                    </span>
+                                        <p class="text-ellipsis no-margin">
+                                            New <strong>76</strong> facebook likes received.</p>
+                                        <time class="help-block no-margin">
+                                            15 Apr 2014
+                                        </time>
+                                    </a>
+                                    <a class="list-group-item" href="#">
+                                    <span class="thumb-sm float-left mr">
+                                        <span class="circle circle-lg bg-gray-dark">
+                                            <i class="fa fa-circle-o text-white"></i>
+                                        </span>
+                                    </span>
+                                        <p class="text-ellipsis no-margin">
+                                            Dark matter detected.</p>
+                                        <time class="help-block no-margin">
+                                            15 Apr 2014
+                                        </time>
+                                    </a>
+                                </div>
+                                <footer class="card-footer text-sm">
+                                    <!-- ajax-load button. loads demo/ajax/notifications.php to #notifications-list
+                                         when clicked -->
+                                    <button class="btn-label btn-link float-right"
+                                            id="load-notifications-btn"
+                                            data-ajax-load="../demo/ajax/notifications.php"
+                                            data-ajax-target="#notifications-list"
+                                            data-loading-text="<i class='la la-refresh fa-spin mr-xs'></i> Loading...">
+                                        <i class="la la-refresh"></i>
+                                    </button>
+                                    <span class="card-footer-text">Synced at: 21 Apr 2014 18:36</span>
+                                </footer>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="dropdown nav-item d-none d-xl-block">
+                        <a href="#"
+                           class="nav-link"
+                           id="notifications-dropdown-toggle"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                           data-position="bottom-middle-aligned"
+                           data-disable-interaction="false"
+                        >
+                            <i class="la la-comment px-2"></i>
+                        </a>
+                        <ul tabindex="-1" class="dropdown-menu dropdown-menu-messages dropdown-menu-right comments">
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="avatar thumb-sm mr-3">
+                                        <img src="../img/chat/avatars/1.png" alt="..." class="rounded-circle">
+                                    </span>
+                                    <div>
+                                        <h6>Jane
+                                            <span class="fw-semi-bold">Hew</span>
+                                        </h6>
+                                        <span class="fs-sm  fw-thin">Hey, John! How is it going? ...</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="avatar thumb-sm mr-3">
+                                        <img src="../img/chat/avatars/2.png" alt="..." class="rounded-circle">
+                                    </span>
+                                    <div>
+                                        <h6>Alies
+                                            <span class="fw-semi-bold">Rumiancaŭ</span>
+                                        </h6>
+                                        <span class="fs-sm  fw-thin">I will definitely buy this template</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="avatar thumb-sm mr-3">
+                                        <img src="../img/chat/avatars/3.png" alt="..." class="rounded-circle">
+                                    </span>
+                                    <div>
+                                        <h6>Alexey
+                                            <span class="fw-semi-bold">Kamandzirau</span>
+                                        </h6>
+                                        <span class="fs-sm  fw-thin">I will definitely buy this template</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation" class="text-center">
+                                <button role="menuitem" type="button" class="dropdown-item">
+                                    <span class="mx-auto">See all messages
+                                        <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item divider d-none d-xl-block"></li>
+                    <li class="dropdown nav-item" >
+                        <a href="#" class="dropdown-toggle no-caret nav-link cog" data-toggle="dropdown">
+                            <i class="la la-cog px-2"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a class="dropdown-item" href="../other/profile.html"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../extra/calendar.html">Calendar</a></li>
+                            <li><a class="dropdown-item" href="../other/inbox.html">Inbox &nbsp;&nbsp;<span class="badge badge-pill bg-danger animated bounceIn">9</span></a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../extra/login.html"><i class="la la-sign-out"></i> &nbsp; Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-item d-none d-xl-block">
+                        <a href="#"
+                           class="nav-link"
+                           id="notifications-dropdown-toggle"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"
+                           data-position="bottom-middle-aligned"
+                           data-disable-interaction="false"
+                        >
+                            <i class="la la-globe px-2"></i>
+                        </a>
+                        <ul tabindex="-1" class="dropdown-menu dropdown-menu-messages dropdown-menu-right comments">
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="badge badge-danger mr-2">
+                                        <i class="fa fa-bell-o"></i>
+                                    </span>
+                                    <span class="fs-sm">Check out this awesome ticket</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="badge bg-primary mr-2">
+                                        <i class="fa fa-question-circle"></i>
+                                    </span>
+                                    <span class="fs-sm">Finish 2019 annual report</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="badge badge-success mr-2">
+                                        <i class="fa fa-info-circle"></i>
+                                    </span>
+                                    <span class="fs-sm">Update Vue.js to the newest version</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="badge badge-info mr-2">
+                                        <i class="fa fa-plus"></i>
+                                    </span>
+                                    <span class="fs-sm">Establish OKR system</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" target="_self" href="#" class="dropdown-item">
+                                    <span class="badge badge-danger mr-2">
+                                        <i class="fa fa-tag"></i>
+                                    </span>
+                                    <span class="fs-sm">Fill in time tracking</span>
+                                </a>
+                            </li>
+                            <li role="presentation" class="text-center">
+                                <button role="menuitem" type="button" class="dropdown-item">
+                                    <span class="mx-auto">See all tickets
+                                        <i class="fa fa-arrow-right ml-1"></i>
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item d-none d-xl-block">
+                        <a target="_self" href="../extra/login.html" class="nav-link">
+                            <i class="la la-power-off px-2"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item d-md-none">
+                        <a target="_self" class="nav-link" data-toggle="collapse" href="#sidebar" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="la la-navicon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><!--
+  Main sidebar seen on the left. may be static or collapsing depending on selected state.
+
+    * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+    * Static - stays always open.
+-->
+<nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
+    <div class="js-sidebar-content">
+        <header class="logo d-none d-md-block">
+            <a href="https://demo.flatlogic.com/sing-app/"><span class="fw-thin">Light</span> <b>Blue</b></a>
+        </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
+
+        <!-- main notification links are placed inside of .sidebar-nav -->
+        <ul class="sidebar-nav">
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-home"></i>
+                    </span>
+                    Dashboard
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-dashboard" class="collapse ">
+                    <li class=""><a href="../dashboard/index.html">Visits</a></li>
+                    <li class=""><a href="../dashboard/analytics.html">Analytics</a></li>
+                    <li class=""><a href="../dashboard/widgets.html">Widgets</a></li>
+                </ul>
+            </li>
+<!--            <li class="">-->
+<!--                <a href="../other/chat.html">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="fi flaticon-users"></i>-->
+<!--                    </span>-->
+<!--                    Chat-->
+<!--                    <sup class="headerLabel text-info">awesome</sup>-->
+<!--                </a>-->
+<!--            </li>-->
+            <li class="">
+                <a href="../other/package.html">
+                    <span class="icon">
+                      <i class="fi flaticon-database-1"></i>
+                    </span>
+                    LB Package
+                </a>
+            </li>
+            <li class="">
+                <a href="../other/profile.html">
+                    <span class="icon">
+                        <i class="fi flaticon-user"></i>
+                    </span>
+                    Profile
+                </a>
+            </li>
+            <li class="">
+                <a href="../other/inbox.html">
+                    <span class="icon">
+                        <i class="fi flaticon-paper-plane"></i>
+                    </span>
+                    Email
+                    <span class="badge badge-primary">
+                        9
+                    </span>
+                </a>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-diamond"></i>
+                    </span>
+                    E-commerce
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-pages" class="collapse ">
+                    <li class=""><a href="../e-commerce/product_detail.html">Product Detail</a></li>
+                    <li class=""><a href="../e-commerce/product_grid.html">Product Grid</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- every .sidebar-nav may have a title -->
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <ul class="sidebar-nav">
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-network"></i>
+                    </span>
+                    Core
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-core" class="collapse ">
+                    <li class=""><a href="../core/core_typography.html">Typography</a></li>
+                    <li class=""><a href="../core/core_colors.html">Colors</a></li>
+                    <li class=""><a href="../core/core_grid.html">Grid</a></li>
+                </ul> 
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-layers"></i>
+                    </span>
+                    UI Elements
+                    <sup class="text-success fw-semi-bold">
+                        new
+                    </sup>
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-ui" class="collapse ">
+                    <li class=""><a href="../components/ui_alerts.html">Alerts</a></li>
+                    <li class=""><a href="../components/ui_badge.html">Badge</a></li>
+                    <li class=""><a href="../components/ui_buttons.html">Buttons</a></li>
+                    <li class=""><a href="../components/ui_card.html">Card</a></li>
+                    <li class=""><a href="../components/ui_carousel.html">Carousel</a></li>
+                    <li class=""><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
+                    <li class=""><a href="../components/ui_icons.html">Icons</a></li>
+                    <li class=""><a href="../components/ui_list_groups.html">List Groups</a></li>
+                    <li class=""><a href="../components/ui_modal.html">Modal</a></li>
+                    <li class=""><a href="../components/ui_nav.html">Nav</a></li>
+                    <li class=""><a href="../components/ui_navbar.html">Navbar</a></li>
+                    <li class=""><a href="../components/ui_notifications.html">Notifications</a></li>
+                    <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
+                    <li class=""><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
+                    <li class=""><a href="../components/ui_progress.html">Progress</a></li>
+                    <li class=""><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
+
+                </ul>
+            </li>
+            <li class=" active ">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-list"></i>
+                    </span>
+                    Forms
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-forms" class="collapse  show ">
+                    <li class=""><a href="../form/form_elements.html">Form Elements</a></li>
+                    <li class=""><a href="../form/form_validation.html">Form Validation</a></li>
+                    <li class=" active "><a href="../form/form_wizard.html">Form Wizard</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-controls"></i>
+                    </span>
+                    Charts
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-charts"
+                    class="collapse ">
+                    <li class="">
+                        <a href="../charts/charts.html">Charts Overview</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/flot.html">Flot Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/morris.html">Morris Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/rickshaw.html">Rickshaw Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/sparkline.html">Sparkline Charts</a>
+                    </li>
+                    <li class="">
+                        <a class="no-pjax" href="../charts/d3_plain.html">D3 version 5 Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/easy_pie.html">Easy Pie Charts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="../other/grid.html">
+                    <span class="icon">
+                        <i class="fi flaticon-menu-4"></i>
+                    </span>
+                    Grid
+                </a>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-map-location"></i>
+                    </span>
+                    Maps
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-maps" class="collapse ">
+                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
+                         target page -->
+                    <li class=""><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class=""><a href="../maps/maps_vector.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-equal-1"></i>
+                    </span>
+                    Tables
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-tables" class="collapse ">
+                    <li class=""><a href="../tables/tables_basic.html">Tables Basic</a></li>
+                    <li class=""><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-star"></i>
+                    </span>
+                    Extra
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-extra" class="collapse ">
+                    <li class=""><a href="../extra/calendar.html">Calendar</a></li>
+                    <li class=""><a href="../extra/invoice.html">Invoice</a></li>
+                    <li class=""><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
+                    <li class=""><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
+                    <li class=""><a href="../extra/gallery.html">Gallery</a></li>
+                    <li class=""><a href="../extra/search.html">Search Results</a></li>
+                    <li class=""><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-folder-10"></i>
+                    </span>
+                    Menu Levels
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-levels" class="collapse">
+                    <li><a href="#">Level 1</a></li>
+                    <li>
+                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
+                            Level 2
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-sub-levels" class="collapse">
+                            <li><a href="#">Level 3</a></li>
+                            <li><a href="#">Level 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+        <ul class="sidebar-labels">
+            <li>
+                <a href="#">
+                    <!-- yep, .circle again -->
+                    <i class="fa fa-circle text-danger mr-xs"></i>
+                    <span class="label-name">My Recent</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle text-primary mr-xs"></i>
+                    <span class="label-name">Starred</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle mr-xs"></i>
+                    <span class="label-name">Background</span>
+                </a>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Projects</h5>
+        <!-- A place for sidebar notifications & alerts -->
+        <div class="sidebar-alerts">
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Sales Report</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Calculating x-axis bias... 65%</small>
+            </div>
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Personal Responsibility</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Provide required notes</small>
+            </div>
+        </div>
+    </div>
+</nav>    <div class="theme-helper">
+        <section class="widget theme-helper-content">
+            <header class="theme-helper-header d-flex p-0">
+                <div class="theme-helper-toggler hidden-print" data-step='4' data-position="left" data-intro="It's a theme customizer sidebar, go inside it! 😃️">
+                    <div class="theme-helper-spinner text-white">
+                        <i class="la la-cog"></i>
+                        <i class="la la-cog fs-smaller"></i>
+                    </div>
+                </div>
+                <h6>Links</h6>
+            </header>
+            <div class="widget-body mt-3">
+    
+                <div class="mt-4">
+                    <a href="https://flatlogic.com/templates/light-blue-html5"
+                       target="_blank"
+                       role="button"
+                       class="btn btn-warning btn-rounded-f btn-block fs-mini">
+                        Purchase
+                    </a>
+                    <a href="http://demo.flatlogic.com/sing-app/documentation/"
+                       target="_blank"
+                       role="button"
+                       class="btn btn-default btn-rounded-f btn-block fs-mini">
+                        Documentation
+                    </a>
+                </div>
+                <div class="d-flex justify-content-between mt-lg">
+                    <a role="button"
+                       target="_blank"
+                       href="https://flatlogic.com/contact"
+                       class="btn btn-outline-default btn-rounded-f fs-mini">
+                        <i class="glyphicon glyphicon-headphones mr-xs"></i>
+                        Support
+                    </a>
+                    <a role="button"
+                       target="_blank"
+                       href="https://github.com/flatlogic/light-blue-dashboard"
+                       class="btn btn-outline-default btn-rounded-f fs-mini">
+                        <i class="fa fa-github mr-xs"></i>
+                        Github
+                    </a>
+                </div>
+                <div class="mt-lg d-flex flex-column align-items-center theme-sharing">
+                    <span class="fs-sm">
+                        Thank you for sharing!
+                    </span>
+                    <div class="d-flex justify-content-center text-light mt-2">
+                        <a target="_blank"
+                           href="https://twitter.com/intent/tweet?text=Admin%20dashboard%20template%20built%20with%20NodeJS,%20React%20and%20Bootstrap%204!&url=https://demo.flatlogic.com/sing-app/html-bs4/&via=flatlogic">
+                            <i class="fa fa-twitter pr-1 mr-3"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://demo.flatlogic.com/sing-app/html-bs4/"
+                           target="_blank">
+                            <i class="fa fa-facebook pl-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="content-wrap">
+        <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
+        <main id="content" class="content" role="main">
+            <!-- Page content -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">Form Wizard</li>
+</ol>
+<h1 class="page-title">Form - <span class="fw-semi-bold">Wizards</span></h1>
+<div class="row">
+    <div class="col-lg-10">
+        <section class="widget">
+            <header>
+                <h5>
+                    Wizard
+                    <small>Tunable widget</small>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                    <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div class="row">
+                    <div class="col-lg-8 mb-3">
+                        <h5>Inpage <strong>Wizard</strong></h5>
+                        <p>An example of complete wizard form in widget.</p>
+
+                        <div id="wizard" class="form-wizard">
+                            <ul class="nav-justified nav nav-pills">
+                                <li class="nav-item"><a class="nav-link" href="#tab1" data-toggle="tab">
+                                        <small>1.</small>
+                                        Your Details</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tab2" data-toggle="tab">
+                                        <small>2.</small>
+                                        Shipping</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tab3" data-toggle="tab">
+                                        <small>3.</small>
+                                        Pay</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#tab4" data-toggle="tab">
+                                        <small>4.</small>
+                                        Thank you!</a></li>
+                            </ul>
+                            <div class="progress progress-xs">
+                                <div id="bar"
+                                    class="progress-bar progress-xs bg-success progress-bar-animated"
+                                    style="width: 25%;"></div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane" id="tab1">
+                                    <form action='' method="POST" data-parsley-priority-enabled="false"
+                                        novalidate="novalidate">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <!-- Username -->
+                                                <label for="username">Username</label>
+                                                <input type="text" id="username" name="username" placeholder=""
+                                                    class="form-control" required="required">
+                                                <span class="help-block">Username can contain any letters or numbers,
+                                                    without spaces</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <!-- Email -->
+                                                <label for="email">Email</label>
+                                                <input type="email" id="email" name="email" placeholder=""
+                                                    class="form-control" data-parsley-trigger="change"
+                                                    required="required">
+                                                <span class="help-block">Please provide your E-mail</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <!-- Password -->
+                                                <label for="address">Address</label>
+                                                <input type="text" id="address" name="address" placeholder=""
+                                                    class="form-control">
+                                                <span class="help-block">Please provide your address</span>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="tab-pane" id="tab2">
+                                    <form action='' method="POST" data-parsley-priority-enabled="false"
+                                        novalidate="novalidate">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <label for="country-select">Destination Country</label>
+                                                <select id="country-select" data-placeholder="Choose a Country..."
+                                                    class="form-control chzn-select">
+                                                    <option value=""></option>
+                                                    <option value="United States">United States</option>
+                                                    <option value="United Kingdom">United Kingdom</option>
+                                                    <option value="Afghanistan">Afghanistan</option>
+                                                    <option value="Albania">Albania</option>
+                                                    <option value="Algeria">Algeria</option>
+                                                    <option value="American Samoa">American Samoa</option>
+                                                    <option value="Andorra">Andorra</option>
+                                                    <option value="Angola">Angola</option>
+                                                    <option value="Anguilla">Anguilla</option>
+                                                    <option value="Antarctica">Antarctica</option>
+                                                    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                                    <option value="Argentina">Argentina</option>
+                                                    <option value="Armenia">Armenia</option>
+                                                    <option value="Aruba">Aruba</option>
+                                                    <option value="Australia">Australia</option>
+                                                    <option value="Austria">Austria</option>
+                                                    <option value="Azerbaijan">Azerbaijan</option>
+                                                    <option value="Bahamas">Bahamas</option>
+                                                    <option value="Bahrain">Bahrain</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="Barbados">Barbados</option>
+                                                    <option value="Belarus">Belarus</option>
+                                                    <option value="Belgium">Belgium</option>
+                                                    <option value="Belize">Belize</option>
+                                                    <option value="Benin">Benin</option>
+                                                    <option value="Bermuda">Bermuda</option>
+                                                    <option value="Bhutan">Bhutan</option>
+                                                    <option value="Bolivia">Bolivia</option>
+                                                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina
+                                                    </option>
+                                                    <option value="Botswana">Botswana</option>
+                                                    <option value="Bouvet Island">Bouvet Island</option>
+                                                    <option value="Brazil">Brazil</option>
+                                                    <option value="British Indian Ocean Territory">British Indian Ocean
+                                                        Territory</option>
+                                                    <option value="Brunei Darussalam">Brunei Darussalam</option>
+                                                    <option value="Bulgaria">Bulgaria</option>
+                                                    <option value="Burkina Faso">Burkina Faso</option>
+                                                    <option value="Burundi">Burundi</option>
+                                                    <option value="Cambodia">Cambodia</option>
+                                                    <option value="Cameroon">Cameroon</option>
+                                                    <option value="Canada">Canada</option>
+                                                    <option value="Cape Verde">Cape Verde</option>
+                                                    <option value="Cayman Islands">Cayman Islands</option>
+                                                    <option value="Central African Republic">Central African Republic
+                                                    </option>
+                                                    <option value="Chad">Chad</option>
+                                                    <option value="Chile">Chile</option>
+                                                    <option value="China">China</option>
+                                                    <option value="Christmas Island">Christmas Island</option>
+                                                    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands
+                                                    </option>
+                                                    <option value="Colombia">Colombia</option>
+                                                    <option value="Comoros">Comoros</option>
+                                                    <option value="Congo">Congo</option>
+                                                    <option value="Congo, The Democratic Republic of The">Congo, The
+                                                        Democratic Republic of The</option>
+                                                    <option value="Cook Islands">Cook Islands</option>
+                                                    <option value="Costa Rica">Costa Rica</option>
+                                                    <option value="Cote D'ivoire">Cote D'ivoire</option>
+                                                    <option value="Croatia">Croatia</option>
+                                                    <option value="Cuba">Cuba</option>
+                                                    <option value="Cyprus">Cyprus</option>
+                                                    <option value="Czech Republic">Czech Republic</option>
+                                                    <option value="Denmark">Denmark</option>
+                                                    <option value="Djibouti">Djibouti</option>
+                                                    <option value="Dominica">Dominica</option>
+                                                    <option value="Dominican Republic">Dominican Republic</option>
+                                                    <option value="Ecuador">Ecuador</option>
+                                                    <option value="Egypt">Egypt</option>
+                                                    <option value="El Salvador">El Salvador</option>
+                                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                                    <option value="Eritrea">Eritrea</option>
+                                                    <option value="Estonia">Estonia</option>
+                                                    <option value="Ethiopia">Ethiopia</option>
+                                                    <option value="Falkland Islands (Malvinas)">Falkland Islands
+                                                        (Malvinas)</option>
+                                                    <option value="Faroe Islands">Faroe Islands</option>
+                                                    <option value="Fiji">Fiji</option>
+                                                    <option value="Finland">Finland</option>
+                                                    <option value="France">France</option>
+                                                    <option value="French Guiana">French Guiana</option>
+                                                    <option value="French Polynesia">French Polynesia</option>
+                                                    <option value="French Southern Territories">French Southern
+                                                        Territories</option>
+                                                    <option value="Gabon">Gabon</option>
+                                                    <option value="Gambia">Gambia</option>
+                                                    <option value="Georgia">Georgia</option>
+                                                    <option value="Germany">Germany</option>
+                                                    <option value="Ghana">Ghana</option>
+                                                    <option value="Gibraltar">Gibraltar</option>
+                                                    <option value="Greece">Greece</option>
+                                                    <option value="Greenland">Greenland</option>
+                                                    <option value="Grenada">Grenada</option>
+                                                    <option value="Guadeloupe">Guadeloupe</option>
+                                                    <option value="Guam">Guam</option>
+                                                    <option value="Guatemala">Guatemala</option>
+                                                    <option value="Guinea">Guinea</option>
+                                                    <option value="Guinea-bissau">Guinea-bissau</option>
+                                                    <option value="Guyana">Guyana</option>
+                                                    <option value="Haiti">Haiti</option>
+                                                    <option value="Heard Island and Mcdonald Islands">Heard Island and
+                                                        Mcdonald Islands</option>
+                                                    <option value="Holy See (Vatican City State)">Holy See (Vatican City
+                                                        State)</option>
+                                                    <option value="Honduras">Honduras</option>
+                                                    <option value="Hong Kong">Hong Kong</option>
+                                                    <option value="Hungary">Hungary</option>
+                                                    <option value="Iceland">Iceland</option>
+                                                    <option value="India">India</option>
+                                                    <option value="Indonesia">Indonesia</option>
+                                                    <option value="Iran, Islamic Republic of">Iran, Islamic Republic of
+                                                    </option>
+                                                    <option value="Iraq">Iraq</option>
+                                                    <option value="Ireland">Ireland</option>
+                                                    <option value="Israel">Israel</option>
+                                                    <option value="Italy">Italy</option>
+                                                    <option value="Jamaica">Jamaica</option>
+                                                    <option value="Japan">Japan</option>
+                                                    <option value="Jordan">Jordan</option>
+                                                    <option value="Kazakhstan">Kazakhstan</option>
+                                                    <option value="Kenya">Kenya</option>
+                                                    <option value="Kiribati">Kiribati</option>
+                                                    <option value="Korea, Democratic People's Republic of">Korea,
+                                                        Democratic People's Republic of
+                                                    </option>
+                                                    <option value="Korea, Republic of">Korea, Republic of</option>
+                                                    <option value="Kuwait">Kuwait</option>
+                                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                                    <option value="Lao People's Democratic Republic">Lao People's
+                                                        Democratic Republic</option>
+                                                    <option value="Latvia">Latvia</option>
+                                                    <option value="Lebanon">Lebanon</option>
+                                                    <option value="Lesotho">Lesotho</option>
+                                                    <option value="Liberia">Liberia</option>
+                                                    <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya
+                                                    </option>
+                                                    <option value="Liechtenstein">Liechtenstein</option>
+                                                    <option value="Lithuania">Lithuania</option>
+                                                    <option value="Luxembourg">Luxembourg</option>
+                                                    <option value="Macao">Macao</option>
+                                                    <option value="Macedonia, The Former Yugoslav Republic of">
+                                                        Macedonia, The Former Yugoslav Republic
+                                                        of
+                                                    </option>
+                                                    <option value="Madagascar">Madagascar</option>
+                                                    <option value="Malawi">Malawi</option>
+                                                    <option value="Malaysia">Malaysia</option>
+                                                    <option value="Maldives">Maldives</option>
+                                                    <option value="Mali">Mali</option>
+                                                    <option value="Malta">Malta</option>
+                                                    <option value="Marshall Islands">Marshall Islands</option>
+                                                    <option value="Martinique">Martinique</option>
+                                                    <option value="Mauritania">Mauritania</option>
+                                                    <option value="Mauritius">Mauritius</option>
+                                                    <option value="Mayotte">Mayotte</option>
+                                                    <option value="Mexico">Mexico</option>
+                                                    <option value="Micronesia, Federated States of">Micronesia,
+                                                        Federated States of</option>
+                                                    <option value="Moldova, Republic of">Moldova, Republic of</option>
+                                                    <option value="Monaco">Monaco</option>
+                                                    <option value="Mongolia">Mongolia</option>
+                                                    <option value="Montenegro">Montenegro</option>
+                                                    <option value="Montserrat">Montserrat</option>
+                                                    <option value="Morocco">Morocco</option>
+                                                    <option value="Mozambique">Mozambique</option>
+                                                    <option value="Myanmar">Myanmar</option>
+                                                    <option value="Namibia">Namibia</option>
+                                                    <option value="Nauru">Nauru</option>
+                                                    <option value="Nepal">Nepal</option>
+                                                    <option value="Netherlands">Netherlands</option>
+                                                    <option value="Netherlands Antilles">Netherlands Antilles</option>
+                                                    <option value="New Caledonia">New Caledonia</option>
+                                                    <option value="New Zealand">New Zealand</option>
+                                                    <option value="Nicaragua">Nicaragua</option>
+                                                    <option value="Niger">Niger</option>
+                                                    <option value="Nigeria">Nigeria</option>
+                                                    <option value="Niue">Niue</option>
+                                                    <option value="Norfolk Island">Norfolk Island</option>
+                                                    <option value="Northern Mariana Islands">Northern Mariana Islands
+                                                    </option>
+                                                    <option value="Norway">Norway</option>
+                                                    <option value="Oman">Oman</option>
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Palau">Palau</option>
+                                                    <option value="Palestinian Territory, Occupied">Palestinian
+                                                        Territory, Occupied</option>
+                                                    <option value="Panama">Panama</option>
+                                                    <option value="Papua New Guinea">Papua New Guinea</option>
+                                                    <option value="Paraguay">Paraguay</option>
+                                                    <option value="Peru">Peru</option>
+                                                    <option value="Philippines">Philippines</option>
+                                                    <option value="Pitcairn">Pitcairn</option>
+                                                    <option value="Poland">Poland</option>
+                                                    <option value="Portugal">Portugal</option>
+                                                    <option value="Puerto Rico">Puerto Rico</option>
+                                                    <option value="Qatar">Qatar</option>
+                                                    <option value="Reunion">Reunion</option>
+                                                    <option value="Romania">Romania</option>
+                                                    <option value="Russian Federation">Russian Federation</option>
+                                                    <option value="Rwanda">Rwanda</option>
+                                                    <option value="Saint Helena">Saint Helena</option>
+                                                    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                                    <option value="Saint Lucia">Saint Lucia</option>
+                                                    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+                                                    </option>
+                                                    <option value="Saint Vincent and The Grenadines">Saint Vincent and
+                                                        The Grenadines</option>
+                                                    <option value="Samoa">Samoa</option>
+                                                    <option value="San Marino">San Marino</option>
+                                                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                                    <option value="Saudi Arabia">Saudi Arabia</option>
+                                                    <option value="Senegal">Senegal</option>
+                                                    <option value="Serbia">Serbia</option>
+                                                    <option value="Seychelles">Seychelles</option>
+                                                    <option value="Sierra Leone">Sierra Leone</option>
+                                                    <option value="Singapore">Singapore</option>
+                                                    <option value="Slovakia">Slovakia</option>
+                                                    <option value="Slovenia">Slovenia</option>
+                                                    <option value="Solomon Islands">Solomon Islands</option>
+                                                    <option value="Somalia">Somalia</option>
+                                                    <option value="South Africa">South Africa</option>
+                                                    <option value="South Georgia and The South Sandwich Islands">South
+                                                        Georgia and The South Sandwich
+                                                        Islands
+                                                    </option>
+                                                    <option value="South Sudan">South Sudan</option>
+                                                    <option value="Spain">Spain</option>
+                                                    <option value="Sri Lanka">Sri Lanka</option>
+                                                    <option value="Sudan">Sudan</option>
+                                                    <option value="Suriname">Suriname</option>
+                                                    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen
+                                                    </option>
+                                                    <option value="Swaziland">Swaziland</option>
+                                                    <option value="Sweden">Sweden</option>
+                                                    <option value="Switzerland">Switzerland</option>
+                                                    <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                                    <option value="Taiwan, Republic of China">Taiwan, Republic of China
+                                                    </option>
+                                                    <option value="Tajikistan">Tajikistan</option>
+                                                    <option value="Tanzania, United Republic of">Tanzania, United
+                                                        Republic of</option>
+                                                    <option value="Thailand">Thailand</option>
+                                                    <option value="Timor-leste">Timor-leste</option>
+                                                    <option value="Togo">Togo</option>
+                                                    <option value="Tokelau">Tokelau</option>
+                                                    <option value="Tonga">Tonga</option>
+                                                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                                    <option value="Tunisia">Tunisia</option>
+                                                    <option value="Turkey">Turkey</option>
+                                                    <option value="Turkmenistan">Turkmenistan</option>
+                                                    <option value="Turks and Caicos Islands">Turks and Caicos Islands
+                                                    </option>
+                                                    <option value="Tuvalu">Tuvalu</option>
+                                                    <option value="Uganda">Uganda</option>
+                                                    <option value="Ukraine">Ukraine</option>
+                                                    <option value="United Arab Emirates">United Arab Emirates</option>
+                                                    <option value="United Kingdom">United Kingdom</option>
+                                                    <option value="United States">United States</option>
+                                                    <option value="United States Minor Outlying Islands">United States
+                                                        Minor Outlying Islands</option>
+                                                    <option value="Uruguay">Uruguay</option>
+                                                    <option value="Uzbekistan">Uzbekistan</option>
+                                                    <option value="Vanuatu">Vanuatu</option>
+                                                    <option value="Venezuela">Venezuela</option>
+                                                    <option value="Viet Nam">Viet Nam</option>
+                                                    <option value="Virgin Islands, British">Virgin Islands, British
+                                                    </option>
+                                                    <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                                                    <option value="Wallis and Futuna">Wallis and Futuna</option>
+                                                    <option value="Western Sahara">Western Sahara</option>
+                                                    <option value="Yemen">Yemen</option>
+                                                    <option value="Zambia">Zambia</option>
+                                                    <option value="Zimbabwe">Zimbabwe</option>
+                                                </select>
+                                                <span class="help-block">Please choose your country destination</span>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="courier">Choose shipping option</label>
+
+
+                                                <select id="courier" data-placeholder="Choose an option.."
+                                                    class="form-control chzn-select">
+                                                    <option value=""></option>
+                                                    <option value="Australia Post">Australia Post</option>
+                                                    <option value="DHL US">DHL US</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <span class="help-block">Please choose your shipping option</span>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="destination">Destination Zip Code</label>
+
+
+                                                <input type="text" id="destination" name="destination" placeholder=""
+                                                    class="form-control" required="required">
+                                                <span class="help-block">Please provide your Destination Zip Code</span>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dest-address">Destination Address</label>
+
+
+                                                <input type="text" id="dest-address" name="address" placeholder=""
+                                                    class="form-control">
+                                                <span class="help-block">Please provide the destination address</span>
+
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="tab-pane" id="tab3">
+                                    <form action='' method="POST">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <label for="name">Name on the Card</label>
+
+
+                                                <input type="text" id="name" name="name" placeholder=""
+                                                    class="form-control" required="required">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="credit-card-type">Credit Card Type</label>
+
+
+                                                <select id="credit-card-type" data-placeholder="Please select.."
+                                                    class="form-control chzn-select" required="required">
+                                                    <option value=""></option>
+                                                    <option value="Visa">Visa</option>
+                                                    <option value="Mastercard">Mastercard</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+
+                                            </div>
+                                            <div class="form-group ">
+                                                <label for="credit">Credit Card Number </label>
+
+
+                                                <input id="credit" type="text" tabindex="3" class="form-control"
+                                                    required="required">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="expiration-date">Expiration Date</label>
+
+
+                                                <input type="text" id="expiration-date" class="form-control"
+                                                    required="required">
+
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="tab-pane" id="tab4">
+                                    <h2>Thank you!</h2>
+
+                                    <p>Your submission has been received.</p>
+                                </div>
+                                <ul class="pager wizard">
+                                    <li class="previous">
+                                        <button class="btn btn-default btn-square float-left mb-3 ml-3">
+                                            <i class="fa fa-caret-left"></i> &nbsp; Previous
+                                        </button>
+                                    </li>
+                                    <li class="next">
+                                        <button class="btn btn-primary btn-square float-right mb-3 mr-3">
+                                            Next &nbsp; <i class="fa fa-caret-right"></i></button>
+                                    </li>
+                                    <li class="finish" style="display: none">
+                                        <button class="btn btn-success btn-square float-right mb-3 mr-3">
+                                            Finish &nbsp; <i class="glyphicon glyphicon-ok"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Modal <strong>Application Wizard</strong></h5>
+                        <p>An example of complete wizard form in a modal.</p>
+                        <button class="btn btn-info btn-rounded" id="open-wizard" type="button">
+                            Launch Wizard
+                        </button>
+                        <div class="wizard" id="satellite-wizard" data-title="Create Server">
+
+                            <!-- Step 1 Name & FQDN -->
+                            <div class="wizard-card" data-cardname="name">
+                                <h3>Name & FQDN</h3>
+
+                                <div class="wizard-input-section">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="label" name="label"
+                                                placeholder="Server label" data-validate="validateServerLabel">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wizard-input-section">
+                                    <p>
+                                        Full Qualified Domain Name
+                                    </p>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="fqdn" name="fqdn"
+                                                    placeholder="FQDN" data-validate="validateFQDN" data-is-valid="0"
+                                                    data-lookup="0" />
+                                                <span class="input-group-append" id="btn-fqdn">
+                                                    <button class="btn btn-default" type="button" onclick='lookup();'>
+                                                        Lookup
+                                                    </button> </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wizard-input-section">
+                                    <p>
+                                        Server ip.
+                                    </p>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="ip" name="ip" placeholder="IP"
+                                                data-serialize="1" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wizard-card" data-cardname="group">
+                                <h3>Server Group</h3>
+
+                                <div class="wizard-input-section">
+                                    <p>
+                                        Where would you like server <strong class="create-server-name"></strong>
+                                        to go?
+                                    </p>
+
+                                    <img class="wizard-group-list"
+                                        src="../../node_modules/bootstrap-application-wizard/demo/img/groups.png" />
+                                </div>
+                            </div>
+
+                            <div class="wizard-card wizard-card-overlay" data-cardname="services">
+                                <h3>Service Selection</h3>
+
+                                <div class="alert hide">
+                                    It's recommended that you select at least one
+                                    service, like ping.
+                                </div>
+
+                                <div class="wizard-input-section">
+                                    <p>
+                                        Please choose the services you'd like Panopta to
+                                        monitor. Any service you select will be given a default
+                                        check frequency of 1 minute.
+                                    </p>
+
+                                    <select name="services" data-placeholder="Service List" style="width:350px;"
+                                        class="chzn-select create-server-service-list" multiple>
+
+                                        <option value=""></option>
+                                        <optgroup label="Basic">
+                                            <option selected value="icmp.ping">Ping</option>
+                                            <option selected value="tcp.ssh">SSH</option>
+                                            <option value="tcp.ftp">FTP</option>
+                                        </optgroup>
+                                        <optgroup label="Web">
+                                            <option selected value="tcp.http">HTTP</option>
+                                            <option value="tcp.https">HTTP (Secure)</option>
+                                            <option value="tcp.dns">DNS</option>
+                                        </optgroup>
+                                        <optgroup label="Email">
+                                            <option value="tcp.pop">POP</option>
+                                            <option value="tcp.imap">IMAP</option>
+                                            <option value="tcp.smtp">SMTP</option>
+                                            <option value="tcp.pops">POP (Secure)</option>
+                                            <option value="tcp.imaps">IMAP (Secure)</option>
+                                            <option value="tcp.smtps">SMTP (Secure)</option>
+                                            <option value="tcp.http.exchange">Microsoft Exchange</option>
+                                        </optgroup>
+                                        <optgroup label="Databases">
+                                            <option value="tcp.mysql">MySQL</option>
+                                            <option value="tcp.postgres">PostgreSQL</option>
+                                            <option value="tcp.mssql">Microsoft SQL Server</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="wizard-card wizard-card-overlay" data-cardname="location">
+                                <h3>Monitoring Location</h3>
+
+                                <div class="wizard-input-section">
+                                    <p>
+                                        We determined <strong>Chicago</strong> to be
+                                        the closest location to monitor
+                                        <strong class="create-server-name"></strong>
+                                        If you would like to change this, or you think this is
+                                        incorrect, please select a different
+                                        monitoring location.
+                                    </p>
+
+                                    <select name="location" data-placeholder="Monitor nodes" style="width:350px;"
+                                        class="chzn-select form-control">
+                                        <option value=""></option>
+                                        <optgroup label="North America">
+                                            <option>Atlanta</option>
+                                            <option selected>Chicago</option>
+                                            <option>Dallas</option>
+                                            <option>Denver</option>
+                                            <option>Fremont, CA</option>
+                                            <option>Los Angeles</option>
+                                            <option>Miami</option>
+                                            <option>Newark, NJ</option>
+                                            <option>Phoenix</option>
+                                            <option>Seattle</option>
+                                            <option>Washington, DC</option>
+                                        </optgroup>
+
+                                        <optgroup label="Europe">
+                                            <option>Amsterdam, NL</option>
+                                            <option>Berlin</option>
+                                            <option>London</option>
+                                            <option>Milan, Italy</option>
+                                            <option>Nurnberg, Germany</option>
+                                            <option>Paris</option>
+                                            <option>Stockholm</option>
+                                            <option>Vienna</option>
+                                        </optgroup>
+
+                                        <optgroup label="Asia/Africa">
+                                            <option>Cairo</option>
+                                            <option>Jakarta</option>
+                                            <option>Johannesburg</option>
+                                            <option>Hong Kong</option>
+                                            <option>Singapore</option>
+                                            <option>Sydney</option>
+                                            <option>Tokyo</option>
+                                        </optgroup>
+
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="wizard-card wizard-card-overlay">
+                                <h3>Notification Schedule</h3>
+
+                                <div class="wizard-input-section">
+                                    <p>
+                                        Select the notification schedule to be used for outages.
+                                    </p>
+
+                                    <select name="notification" class="wizard-ns-select chzn-select form-control"
+                                        data-placeholder="Notification schedule" style="width:350px;">
+                                        <option value=""></option>
+                                        <option>ALIS Production</option>
+                                        <option>ALIS Development &amp; Staging</option>
+                                        <option>Panopta Development &amp; Staging</option>
+                                        <option>Jira</option>
+                                        <option>QSC Enterprise Production</option>
+                                        <option>QSC Enterprise Development &amp; Staging</option>
+                                        <option>Panopta Production</option>
+                                        <option>Panopta Monitoring Nodes</option>
+                                        <option>Common</option>
+                                    </select>
+                                </div>
+
+                                <div class="wizard-ns-detail hide">
+                                    Also using <strong>ALIS Production</strong>:
+
+                                    <ul id="wizard-ns-detail-servers">
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/folder.png" />Corporate
+                                            sites</li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/folder.png" />dt01.sat.medtelligent.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />alisonline.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />circa-db04.sat.medtelligent.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />circa-services01.sat.medtelligent.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />circa-web01.sat.medtelligent.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />heartbeat.alisonline.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />medtelligent.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />dt02.fre.medtelligent.com
+                                        </li>
+                                        <li><img
+                                                src="../../node_modules/bootstrap-application-wizard/demo/img/server_new.png" />dev03.lin.medtelligent.com
+                                        </li>
+                                    </ul>img </div>
+                            </div>
+
+                            <div class="wizard-card">
+                                <h3>Agent Setup</h3>
+
+                                <div class="wizard-input-section">
+                                    <p>The <a target="_blank"
+                                            href="http://www.panopta.com/support/knowledgebase/support-questions/how-do-i-install-the-panopta-monitoring-agent/">Panopta
+                                            Agent</a> allows
+                                        you to monitor local resources (disk usage, cpu usage, etc).
+                                        If you would like to set that up now, please download
+                                        and follow the <a target="_blank"
+                                            href="http://www.panopta.com/support/knowledgebase/support-questions/how-do-i-install-the-panopta-monitoring-agent/">install
+                                            instructions.</a>
+                                    </p>
+
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle"
+                                            data-toggle="dropdown">Download &nbsp;</button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">.rpm</a></li>
+                                            <li><a href="#">.deb</a></li>
+                                            <li><a href="#">.tar.gz</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="wizard-input-section">
+                                    <p>You will be given a server key after you install the Agent
+                                        on <strong class="create-server-name"></strong>.
+                                        If you know your server key now, please enter it
+                                        below.</p>
+
+                                    <div class="form-group">
+                                        <input type="text" class="create-server-agent-key form-control"
+                                            placeholder="Server key (optional)" data-validate="">
+                                    </div>
+                                </div>
+
+
+                                <div class="wizard-error">
+                                    <div class="alert alert-error">
+                                        <strong>There was a problem</strong> with your submission.
+                                        Please correct the errors and re-submit.
+                                    </div>
+                                </div>
+
+                                <div class="wizard-failure">
+                                    <div class="alert alert-error">
+                                        <strong>There was a problem</strong> submitting the form.
+                                        Please try again in a minute.
+                                    </div>
+                                </div>
+
+                                <div class="wizard-success">
+                                    <div class="alert alert-success">
+                                        <span class="create-server-name"></span>Server Created
+                                        <strong>Successfully.</strong>
+                                    </div>
+
+                                    <a class="btn btn-default create-another-server">Create another server</a>
+                                    <span style="padding:0 10px">or</span>
+                                    <a class="btn btn-success im-done">Done</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+            <footer class="content-footer hidden-print">
+                Light Blue React Dashboard - React admin template made by <a href="https://flatlogic.com"
+                    rel="nofollow" target="_blank">Flatlogic</a>
+            </footer>
+        </main>
+    </div>
+    <!-- The Loader. Is shown when pjax happens -->
+    <div class="loader-wrap hiding hide">
+        <i class="fa fa-circle-o-notch fa-spin-fast"></i>
+    </div>
+
+    <!-- common libraries. required for every page-->
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/jquery-pjax/jquery.pjax.js"></script>
+    <script src='../../node_modules/popper.js/dist/umd/popper.js'></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../node_modules/bootstrap/js/dist/util.js"></script>
+    <script src="../../node_modules/widgster/widgster.js"></script>
+    <script src="../../node_modules/hammerjs/hammer.js"></script>
+    <script src="../../node_modules/jquery-hammerjs/jquery.hammer.js"></script>
+
+    <!-- common app js -->
+    <script src="../js/settings.js"></script>
+    <script src="../js/app.js"></script>
+
+    <!-- Page scripts -->
+<script src="../../node_modules/parsleyjs/dist/parsley.min.js"></script>
+<script src="../../node_modules/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="../../node_modules/select2/dist/js/select2.js"></script>
+<script src="../../node_modules/moment/min/moment.min.js"></script>
+<script src="../../node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../node_modules/jasny-bootstrap/js/inputmask.js"></script>
+<script src="../../node_modules/bootstrap-application-wizard/src/bootstrap-wizard.js"></script>
+
+<!-- page specific js -->
+<script src="../js/form/form-wizard.js"></script>
+</body>
+
+</html>
