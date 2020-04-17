@@ -708,7 +708,7 @@ legend {
     display: flex;
     align-items: center;
     padding: 0 $spacer/2;
-    @media (max-width: 575.98px) {
+    @include media-breakpoint-down(xs) {
       padding: 0 $spacer/4;
     }
 

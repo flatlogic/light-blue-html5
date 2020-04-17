@@ -12,18 +12,25 @@
   transition: left .2s linear;
 
   @include media-breakpoint-down(sm) {
-    left: -224px;
+    position: relative;
+    width: 95%;
     top: $spacer * 4;
+    left: $spacer;
   }
 }
 
 .sidebar.mobile {
-  position: relative;
-  width: 95%;
-  top: $spacer * 4;
-  left: $spacer;
+
 }
 
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .7s ease;
+  -o-transition: height .7s ease;
+  transition: height .7s ease;
+}
 .content-wrap, .loader-wrap{
   left: $sidebar-width;
   transition: left .2s linear;
