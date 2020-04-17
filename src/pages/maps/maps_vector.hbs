@@ -1,0 +1,38 @@
+{{#extend "layout" title="Sing App Dashboard - Maps Vector"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="maps_vector"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">Vector Maps</li>
+        </ol>
+        <h2 class="page-title">Vector <span class="fw-semi-bold">Maps</span></h2>
+        <div class="row">
+            <div class="col-md-10">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Vector Maps <small>Default and customized</small>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#" style="display: none;"><i class="la la-angle-up text-white"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down text-white"></i></a>
+                            <a data-widgster="close" title="Close" href="#"><i class="la la-remove text-white"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body maps">
+                        <div id="vmap" class="content-map"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+        <script src="../../node_modules/jvectormap/jquery-jvectormap.min.js"></script>
+        <script src="../../node_modules/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
+
+        <!-- page specific js -->
+        <script src="../js/maps/maps-vector.js"></script>
+    {{/content}}
+{{/extend}}

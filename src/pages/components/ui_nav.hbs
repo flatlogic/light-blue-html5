@@ -1,0 +1,186 @@
+{{#extend "layout" title="Sing App Dashboard - UI Nav"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="ui_nav"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">UI Nav</li>
+        </ol>
+        <div class="row"> 
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Base <span class="fw-semi-bold">nav</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Navigation available in Bootstrap share general markup and styles, 
+                            from the base <code>.nav</code> class to the active and disabled states. Swap modifier classes to switch between each style.</p>
+                        <div class=" p-3">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                            </ul>
+                            <pre class=" text-info">
+&lt;ul <span class="text-primary">class=</span><span class="text-success">"nav"</span>&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link active"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Active</span>&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link disables"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Disabled</span>&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        </div>
+                        <p class="mt-md">Classes are used throughout, so your markup can be super flexible. Use <code>&lt;ul&gt;</code>s like 
+                            above, or roll your own with say a <code>&lt;nav&gt;</code> element. Because the .nav uses display: flex, 
+                            the nav links behave the same as nav items would, but without the extra markup.</p>
+                        <pre class=" text-info">
+&lt;nav <span class="text-primary">class=</span><span class="text-success">"nav"</span>&gt;
+    &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link active"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Active</span>&lt;/a&gt;
+    &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+    &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+    &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link disables"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Disabled</span>&lt;/a&gt;
+&lt;/nav&gt;</pre>
+                    </div>
+                </section>
+            </div> 
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Tabs & Pills
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Takes the basic nav from above and adds the <code>.nav-tabs</code> class to generate a tabbed interface. Use 
+                            them to create tabbable regions with our tab JavaScript plugin.</p>
+                        <div class=" p-3">
+                            <nav class="nav nav-tabs">
+                                <a class="nav-link active" href="#">Active</a>
+                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </nav>
+                        <pre class=" text-info">
+&lt;nav <span class="text-primary">class=</span><span class="text-success">"nav"</span>&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link active"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Active</span>&lt;/a&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link disables"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Disabled</span>&lt;/a&gt;
+&lt;/nav&gt;</pre>
+                        </div>
+                        <p class="mt-md">Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+                        <div class=" p-3">
+                            <nav class="nav nav-pills">
+                                    <a class="nav-link active" href="#">Active</a>
+                                    <a class="nav-link" href="#">Link</a>
+                                    <a class="nav-link" href="#">Link</a>
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                            </nav>
+                            <pre class=" text-info">
+&lt;nav <span class="text-primary">class=</span><span class="text-success">"nav nav-pills"</span>&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link active"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Active</span>&lt;/a&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Link</span>&lt;/a&gt;
+  &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link disables"</span> <span class="text-primary">href=</span><span class="text-success">"#"</span>&gt;<span class="text-muted">Disabled</span>&lt;/a&gt;
+&lt;/nav&gt;</pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-12">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Nav with dropdowns
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>Takes the basic nav from above and adds the <code>.nav-tabs</code> class to generate a tabbed interface. Use 
+                            them to create tabbable regions with our tab JavaScript plugin.</p>
+                        <div class=" p-3">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                            </ul>
+                        <pre class=" text-info">&lt;ul <span class="text-primary">class=</span><span class="text-success">"nav nav-pills"</span>&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link active"</span> href="#"><span class="text-muted">Active</span>&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item dropdown"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link dropdown-toggle"</span> data-toggle=<span class="text-success">"dropdown"</span> href=<span class="text-success">"#"</span> role=<span class="text-success">"button"</span> aria-haspopup=<span class="text-success">"true"</span> aria-expanded=<span class="text-success">"false"</span>&gt;<span class="text-muted">Dropdown</span>&lt;/a&gt;
+        &lt;div <span class="text-primary">class=</span><span class="text-success">"dropdown-menu"</span>&gt;
+            &lt;a <span class="text-primary">class=</span><span class="text-success">"dropdown-item"</span> href=<span class="text-success">"#"</span>&gt;<span class="text-muted">Action</span>&lt;/a&gt;
+            &lt;a <span class="text-primary">class=</span><span class="text-success">"dropdown-item"</span> href=<span class="text-success">"#"</span>&gt;<span class="text-muted">Another action</span>&lt;/a&gt;
+            &lt;a <span class="text-primary">class=</span><span class="text-success">"dropdown-item"</span> href=<span class="text-success">"#"</span>&gt;<span class="text-muted">Something else here</span>&lt;/a&gt;
+            &lt;div <span class="text-primary">class=</span><span class="text-success">"dropdown-item"</span>&gt;&lt;/div&gt;
+            &lt;a <span class="text-primary">class=</span><span class="text-success">"dropdown-item"</span> href=<span class="text-success">"#"</span>&gt;<span class="text-muted">Separated link</span>&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link"</span> href=<span class="text-success">"#"</span>><span class="text-muted">Link</span>&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li <span class="text-primary">class=</span><span class="text-success">"nav-item"</span>&gt;
+        &lt;a <span class="text-primary">class=</span><span class="text-success">"nav-link disabled"</span> href=<span class="text-success">"#"</span>&gt;<span class="text-muted">Disabled</span>&lt;/a&gt;
+    &lt;li&gt;
+&lt;/ul&gt;</pre>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+        <script src="../js/components/ui-nav.js"></script>
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,89 @@
+{{#extend "layout" title="Sing App Dashboard - Compose"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="email"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+      <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">Email</li>
+        </ol>
+        <h1 class="page-title">Email - <span class="fw-semi-bold">Inbox</span></h1>
+        <div class="row">
+            <div class="col-lg-3 col-xl-2">
+                <a class="btn btn-primary btn-block" href="../other/inbox.html">
+                    Compose
+                </a>
+                <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mt">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../other/inbox.html">
+                            <span class="badge badge-pill bg-default float-right">2</span>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Starred</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sent Mail</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="badge badge-pill bg-danger float-right">3</span>
+                            Draft
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Trash</a></li>
+                </ul>
+                <h5 class="mt">QUICK VIEW</h5>
+                <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mb-lg">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-right"></i> Private </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i> Saved </a></li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-xl-10">
+                <div class="clearfix mb-xs">
+                    <a class="btn btn-default btn-sm width-50 float-left" id="back-btn" href="../other/inbox.html">
+                        <i class="fa fa-angle-left fa-lg"></i>
+                    </a>
+                    <div class="float-right hide" id="folder-stats">
+                        <p class="widget-email-count">Showing 1 - 10 of 96 messages</p>
+                        <ul class="pagination pagination-sm widget-email-pagination">
+                            <li class="prev disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="widget widget-email">
+                    <header>
+                        <h4>Compose <span class="fw-semi-bold">New</span></h4>
+                    </header>
+                    <div class="widget-body">
+                        <form id="email-compose" class="form-email-compose" method="get" action="../other/inbox.html">
+                            <div class="form-group">
+                                <input type="email" id="input-to" placeholder="To" class="input-transparent form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="input-subject" placeholder="Subject" class="input-transparent form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <div id="summernote"></div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="btn-toolbar float-right">
+                                    <button type="reset" id="compose-discard-button" class="btn btn-gray">Discard</button>
+                                    <button type="button" id="compose-save-button" class="btn btn-gray">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
+                                    <button type="submit" id="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+
+      <script src="../../node_modules/summernote/dist/summernote.js"></script>
+      <!-- page specific js -->
+      <script src="../js/other/compose.js"></script>
+    {{/content}}
+{{/extend}}

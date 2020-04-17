@@ -1,0 +1,303 @@
+<!--
+  Main sidebar seen on the left. may be static or collapsing depending on selected state.
+
+    * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+    * Static - stays always open.
+-->
+<nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
+    <div class="js-sidebar-content">
+        <header class="logo d-none d-md-block">
+            <a href="https://demo.flatlogic.com/sing-app/"><span class="fw-thin">Light</span> <b>Blue</b></a>
+        </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
+
+        <!-- main notification links are placed inside of .sidebar-nav -->
+        <ul class="sidebar-nav">
+            <li class="{{#activeClass active "dashboard_analytics dashboard_visits dashboard_widgets"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-home"></i>
+                    </span>
+                    Dashboard
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-dashboard" class="collapse {{#activeClass active "dashboard_analytics dashboard_visits dashboard_widgets"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "dashboard_visits"}} active {{/activeClass}}"><a href="../dashboard/index.html">Visits</a></li>
+                    <li class="{{#activeClass active "dashboard_analytics"}} active {{/activeClass}}"><a href="../dashboard/analytics.html">Analytics</a></li>
+                    <li class="{{#activeClass active "dashboard_widgets"}} active {{/activeClass}}"><a href="../dashboard/widgets.html">Widgets</a></li>
+                </ul>
+            </li>
+<!--            <li class="{{#activeClass active "chat"}} active {{/activeClass}}">-->
+<!--                <a href="../other/chat.html">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="fi flaticon-users"></i>-->
+<!--                    </span>-->
+<!--                    Chat-->
+<!--                    <sup class="headerLabel text-info">awesome</sup>-->
+<!--                </a>-->
+<!--            </li>-->
+            <li class="{{#activeClass active "package"}} active {{/activeClass}}">
+                <a href="../other/package.html">
+                    <span class="icon">
+                      <i class="fi flaticon-database-1"></i>
+                    </span>
+                    LB Package
+                </a>
+            </li>
+            <li class="{{#activeClass active "profile"}} active {{/activeClass}}">
+                <a href="../other/profile.html">
+                    <span class="icon">
+                        <i class="fi flaticon-user"></i>
+                    </span>
+                    Profile
+                </a>
+            </li>
+            <li class="{{#activeClass active "email"}} active {{/activeClass}}">
+                <a href="../other/inbox.html">
+                    <span class="icon">
+                        <i class="fi flaticon-paper-plane"></i>
+                    </span>
+                    Email
+                    <span class="badge badge-primary">
+                        9
+                    </span>
+                </a>
+            </li>
+            <li class="{{#activeClass active "product_detail product_grid"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-diamond"></i>
+                    </span>
+                    E-commerce
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-pages" class="collapse {{#activeClass active "product_detail product_grid"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "product_detail"}} active {{/activeClass}}"><a href="../e-commerce/product_detail.html">Product Detail</a></li>
+                    <li class="{{#activeClass active "product_grid"}} active {{/activeClass}}"><a href="../e-commerce/product_grid.html">Product Grid</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- every .sidebar-nav may have a title -->
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <ul class="sidebar-nav">
+            <li class="{{#activeClass active "core_typography core_colors core_grid"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-network"></i>
+                    </span>
+                    Core
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-core" class="collapse {{#activeClass active "core_typography core_colors core_grid"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "core_typography"}} active {{/activeClass}}"><a href="../core/core_typography.html">Typography</a></li>
+                    <li class="{{#activeClass active "core_colors"}} active {{/activeClass}}"><a href="../core/core_colors.html">Colors</a></li>
+                    <li class="{{#activeClass active "core_grid"}} active {{/activeClass}}"><a href="../core/core_grid.html">Grid</a></li>
+                </ul> 
+            </li>
+            <li class="{{#activeClass active "ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-layers"></i>
+                    </span>
+                    UI Elements
+                    <sup class="text-success fw-semi-bold">
+                        new
+                    </sup>
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-ui" class="collapse {{#activeClass active "ui_modal ui_navbar ui_jumbotron ui_nav ui_carousel ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups ui_card ui_alerts ui_badge ui_progress ui_popovers_tooltips ui_toasts"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "ui_alerts"}} active {{/activeClass}}"><a href="../components/ui_alerts.html">Alerts</a></li>
+                    <li class="{{#activeClass active "ui_badge"}} active {{/activeClass}}"><a href="../components/ui_badge.html">Badge</a></li>
+                    <li class="{{#activeClass active "ui_buttons"}} active {{/activeClass}}"><a href="../components/ui_buttons.html">Buttons</a></li>
+                    <li class="{{#activeClass active "ui_card"}} active {{/activeClass}}"><a href="../components/ui_card.html">Card</a></li>
+                    <li class="{{#activeClass active "ui_carousel"}} active {{/activeClass}}"><a href="../components/ui_carousel.html">Carousel</a></li>
+                    <li class="{{#activeClass active "ui_jumbotron"}} active {{/activeClass}}"><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
+                    <li class="{{#activeClass active "ui_icons"}} active {{/activeClass}}"><a href="../components/ui_icons.html">Icons</a></li>
+                    <li class="{{#activeClass active "ui_list_groups"}} active {{/activeClass}}"><a href="../components/ui_list_groups.html">List Groups</a></li>
+                    <li class="{{#activeClass active "ui_modal"}} active {{/activeClass}}"><a href="../components/ui_modal.html">Modal</a></li>
+                    <li class="{{#activeClass active "ui_nav"}} active {{/activeClass}}"><a href="../components/ui_nav.html">Nav</a></li>
+                    <li class="{{#activeClass active "ui_navbar"}} active {{/activeClass}}"><a href="../components/ui_navbar.html">Navbar</a></li>
+                    <li class="{{#activeClass active "ui_notifications"}} active {{/activeClass}}"><a href="../components/ui_notifications.html">Notifications</a></li>
+                    <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
+                    <li class="{{#activeClass active "ui_popovers_tooltips"}} active {{/activeClass}}"><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
+                    <li class="{{#activeClass active "ui_progress"}} active {{/activeClass}}"><a href="../components/ui_progress.html">Progress</a></li>
+                    <li class="{{#activeClass active "ui_tabs_accordion"}} active {{/activeClass}}"><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
+
+                </ul>
+            </li>
+            <li class="{{#activeClass active "form_elements form_validation form_wizard"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-list"></i>
+                    </span>
+                    Forms
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-forms" class="collapse {{#activeClass active "form_elements form_validation form_wizard"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "form_elements"}} active {{/activeClass}}"><a href="../form/form_elements.html">Form Elements</a></li>
+                    <li class="{{#activeClass active "form_validation"}} active {{/activeClass}}"><a href="../form/form_validation.html">Form Validation</a></li>
+                    <li class="{{#activeClass active "form_wizard"}} active {{/activeClass}}"><a href="../form/form_wizard.html">Form Wizard</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "charts_flot charts_morris charts_rickshaw charts_sparkline charts_d3 charts_easy_pie charts_overview"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-controls"></i>
+                    </span>
+                    Charts
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-charts"
+                    class="collapse {{#activeClass active "charts_flot charts_morris charts_rickshaw charts_sparkline charts_d3 charts_easy_pie charts_overview"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "charts_overview"}} active {{/activeClass}}">
+                        <a href="../charts/charts.html">Charts Overview</a>
+                    </li>
+                    <li class="{{#activeClass active "charts_flot"}} active {{/activeClass}}">
+                        <a href="../charts/flot.html">Flot Charts</a>
+                    </li>
+                    <li class="{{#activeClass active "charts_morris"}} active {{/activeClass}}">
+                        <a href="../charts/morris.html">Morris Charts</a>
+                    </li>
+                    <li class="{{#activeClass active "charts_rickshaw"}} active {{/activeClass}}">
+                        <a href="../charts/rickshaw.html">Rickshaw Charts</a>
+                    </li>
+                    <li class="{{#activeClass active "charts_sparkline"}} active {{/activeClass}}">
+                        <a href="../charts/sparkline.html">Sparkline Charts</a>
+                    </li>
+                    <li class="{{#activeClass active "charts_d3"}} active {{/activeClass}}">
+                        <a class="no-pjax" href="../charts/d3_plain.html">D3 version 5 Charts</a>
+                    </li>
+                    <li class="{{#activeClass active "charts_easy_pie"}} active {{/activeClass}}">
+                        <a href="../charts/easy_pie.html">Easy Pie Charts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "grid"}} active {{/activeClass}}">
+                <a href="../other/grid.html">
+                    <span class="icon">
+                        <i class="fi flaticon-menu-4"></i>
+                    </span>
+                    Grid
+                </a>
+            </li>
+            <li class="{{#activeClass active "maps_google maps_vector"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-map-location"></i>
+                    </span>
+                    Maps
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-maps" class="collapse {{#activeClass active "maps_google maps_vector"}} show {{/activeClass}}">
+                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
+                         target page -->
+                    <li class="{{#activeClass active "maps_google"}} active {{/activeClass}}"><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class="{{#activeClass active "maps_vector"}} active {{/activeClass}}"><a href="../maps/maps_vector.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "tables_basic tables_dynamic"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-equal-1"></i>
+                    </span>
+                    Tables
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-tables" class="collapse {{#activeClass active "tables_basic tables_dynamic"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "tables_basic"}} active {{/activeClass}}"><a href="../tables/tables_basic.html">Tables Basic</a></li>
+                    <li class="{{#activeClass active "tables_dynamic"}} active {{/activeClass}}"><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "calendar invoice login error gallery search time_line"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-star"></i>
+                    </span>
+                    Extra
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-extra" class="collapse {{#activeClass active "calendar invoice login error gallery search time_line"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "calendar"}} active {{/activeClass}}"><a href="../extra/calendar.html">Calendar</a></li>
+                    <li class="{{#activeClass active "invoice"}} active {{/activeClass}}"><a href="../extra/invoice.html">Invoice</a></li>
+                    <li class="{{#activeClass active "login"}} active {{/activeClass}}"><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
+                    <li class="{{#activeClass active "error"}} active {{/activeClass}}"><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
+                    <li class="{{#activeClass active "gallery"}} active {{/activeClass}}"><a href="../extra/gallery.html">Gallery</a></li>
+                    <li class="{{#activeClass active "search"}} active {{/activeClass}}"><a href="../extra/search.html">Search Results</a></li>
+                    <li class="{{#activeClass active "time_line"}} active {{/activeClass}}"><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-folder-10"></i>
+                    </span>
+                    Menu Levels
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-levels" class="collapse">
+                    <li><a href="#">Level 1</a></li>
+                    <li>
+                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
+                            Level 2
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-sub-levels" class="collapse">
+                            <li><a href="#">Level 3</a></li>
+                            <li><a href="#">Level 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+        <ul class="sidebar-labels">
+            <li>
+                <a href="#">
+                    <!-- yep, .circle again -->
+                    <i class="fa fa-circle text-danger mr-xs"></i>
+                    <span class="label-name">My Recent</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle text-primary mr-xs"></i>
+                    <span class="label-name">Starred</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle mr-xs"></i>
+                    <span class="label-name">Background</span>
+                </a>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Projects</h5>
+        <!-- A place for sidebar notifications & alerts -->
+        <div class="sidebar-alerts">
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Sales Report</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Calculating x-axis bias... 65%</small>
+            </div>
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Personal Responsibility</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Provide required notes</small>
+            </div>
+        </div>
+    </div>
+</nav>

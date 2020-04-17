@@ -1,0 +1,165 @@
+{{#extend "layout" title="Sing App Dashboard - Charts"}}
+{{#content "sidebar"}}
+{{> sidebar active="charts_d3"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">Charts</li>
+    <li class="breadcrumb-item active">D3</li>
+</ol>
+<h1 class="page-title">Visual - <span class="fw-semi-bold">Charts</span></h1>
+<div class="row">
+    <div class="col-lg-4">
+        <section class="widget">
+            <header>
+                <h5>
+                    <span class="fw-semi-bold">D3</span> Charts - Donut
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <p class="fs-mini text-muted">
+                    Donuts a great for representing some parted information like traffice sources, disk partitions, etc.
+                    Create a Donut chart using D3 and customize it the way you wish.
+                </p>
+                <div id="d3-2" class="chart-container" style="height: 250px;">
+                </div>
+            </div>
+        </section>
+        <section class="widget">
+            <header>
+                <h5>
+                    <span class="fw-semi-bold">D3</span> Charts - Pie
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body text-muted">
+                <div id="d3-6" class="mb-2 chart-container" style="height: 250px;">
+                </div>
+                <p>
+                    <span class="badge badge-warning">Profit</span> Profit decrease was noticed
+                </p>
+                <p>
+                    <span class="badge badge-danger">Loss</span> Losses can be decreased
+                </p>
+                <p>
+                    <span class="badge badge-success">Revenue</span> Revenue is still growing
+                </p>
+                <p>
+                    <span class="badge badge-primary">Notes</span> Services revenue is extremely high
+                </p>
+                <p>
+                    <span class="badge badge-secondary">Notes</span> Other non-significant notes
+                </p>
+            </div>
+        </section>
+
+    </div>
+    <div class="col-lg-8">
+        <section class="widget">
+            <header>
+                <h5>
+                    <span class="fw-semi-bold">D3</span> Charts - Waterfall
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div id="d3-4">
+                    <svg height="400" class="chart-container"></svg>
+                </div>
+            </div>
+        </section>
+        <section class="widget">
+            <header>
+                <h5>
+                    <span class="fw-semi-bold">D3</span> Charts - Streamgraph
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <p class="fs-mini text-muted">
+                    For continuous data such as time series, a streamgraph can be used in place of stacked bars.
+                    Inspiired by Mike Bostock.
+                </p>
+                <div id="d3-3">
+                    <svg height="300" class="chart-container"></svg>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <section class="widget">
+            <header>
+                <h5>
+                    <span class="fw-semi-bold">D3</span> Charts - Line
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div id="d3-5">
+                    <svg class="chart-container"></svg>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <section class="widget">
+            <header>
+                <h5>
+                    <span class="fw-semi-bold">D3</span> Charts - Stacked Bar
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i
+                            class="glyphicon glyphicon-chevron-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <div id="d3-1">
+                    <svg height="400" class="chart-container"></svg>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{{/content}}
+{{#content "scripts"}}
+
+<script src="../../node_modules/d3v5/dist/d3.min.js"></script>
+
+<!-- page specific js -->
+<script src="../js/charts/d3-plain.js"></script>
+{{/content}}
+{{/extend}}

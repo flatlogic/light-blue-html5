@@ -1,0 +1,90 @@
+{{#extend "layout" title="Sing App Dashboard - UI Toasts"}}
+    {{#content "sidebar"}}
+        {{> sidebar active="ui_toasts"}}
+    {{/content}}
+    {{#content "content" mode="replace"}}
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">UI Badge</li>
+        </ol>
+        <h1 class="page-title">Toasts - <span class="fw-semi-bold">Push Notifications</span></h1>
+        <div class="row">
+            <div class="col-md-8">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Toasts <span class="fw-semi-bold">Examples</span> <span class="badge badge-primary">Bootstrap 4.2.1</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p>
+                            Toasts are Bootstrap notifications component designed to simulate push notifications that have
+                            obtained popularity recently.
+                            They are built using flexbox model, so alignment and positioning will be easy.</p>
+                        <div class="btn-toolbar mb-0">
+                            <button class="btn btn-primary" data-toggle-toast="toast-basic">
+                                Basic Toast
+                            </button>
+                            <button type="button" class="btn btn-info" data-toggle-toast="toast-delay">
+                                Toast with delay
+                            </button>
+                            <button type="button" class="btn btn-success" data-toggle-toast="toast-left">
+                                Toast on left
+                            </button>
+                        </div>
+                        <div id="toast-basic" class="toast toast-flatlogic" role="alert"
+                             aria-live="assertive" aria-atomic="true"
+                             data-autohide="false">
+                            <div class="toast-header">
+                                <i class="toast-icon fa fa-square text-primary"></i>
+                                <strong class="mr-auto">New customer joined</strong>
+                                <time datetime="2019-01-22">just now</time>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-remove"></i></span>
+                                </button>
+                            </div>
+                            <div class="toast-body">
+                                Will Smith <span class="fw-semi-bold">@wsmith</span> has just joined
+                            </div>
+                        </div>
+                        <div id="toast-delay" class="toast toast-flatlogic" role="alert"
+                             aria-live="assertive" aria-atomic="true"
+                             data-delay="4000">
+                            <div class="toast-header">
+                                <i class="toast-icon fa fa-square text-primary"></i>
+                                <strong class="mr-auto">Annual sales report</strong>
+                                <time datetime="2019-01-22">11 min ago</time>
+                            </div>
+                            <div class="toast-body">
+                                <a href="#">Annual sales report</a> is ready for a review
+                            </div>
+                        </div>
+                        <div id="toast-left" class="toast toast-flatlogic toast-flatlogic-left" role="alert"
+                             aria-live="assertive" aria-atomic="true"
+                             data-delay="4000">
+                            <div class="toast-header">
+                                <i class="toast-icon fa fa-square text-success"></i>
+                                <strong class="mr-auto">New customer joined</strong>
+                                <time datetime="2019-01-22">3 hours ago</time>
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true"><i class="la la-remove"></i></span>
+                                </button>
+                            </div>
+                            <div class="toast-body">
+                                Flatlogic LLC <span class="fw-semi-bold">@flatlogic</span> has just joined
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "scripts"}}
+        <script src="../js/components/ui-toasts.js"></script>
+    {{/content}}
+{{/extend}}

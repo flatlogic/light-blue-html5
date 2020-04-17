@@ -1,0 +1,69 @@
+{{#extend "layout" title="Sing App Dashboard - Login" extraBodyClass="login-page" contentClass="widget-login-container" wrapperClass="container"}}
+    {{#content "sidebar" mode="replace"}}{{/content}}
+    {{#content "navbar" mode="replace"}}{{/content}}
+    {{#content "chat" mode="replace"}}{{/content}}
+    {{#content "content" mode="replace"}}
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-md-7 col-10">
+                <section class="widget widget-login animated fadeInUp">
+                    <header>
+                        <h3>Login to your Web App</h3>
+                    </header>
+                    <div class="widget-body">
+                        <p class="widget-login-info">
+                            Use your email to sign in.
+                        </p>
+                        <form class="login-form mt-lg">
+                            <div role="group" class="form-group">
+                                <label for="email" class="d-block">Email</label>
+                                <div>
+                                    <div role="group" class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="la la-user text-white"></i>
+                                            </div>
+                                        </div>
+                                        <input id="email" type="email" required="required" placeholder="Email" class="form-control input-transparent pl-3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="group" class="form-group">
+                                <label for="password" class="d-block">Password</label>
+                                <div>
+                                    <div role="group" class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                <i class="la la-lock text-white"></i>
+                                            </div>
+                                        </div>
+                                        <input id="password" type="password" required="required" placeholder="Password" class="form-control input-transparent pl-3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                                <div class="btn-toolbar">
+                                    <a class="btn btn-danger btn-block" href="../dashboard/index.html">
+                                        <span class="auth-btn-circle">
+                                            <i class="la la-caret-right"></i>
+                                        </span>
+                                        Login</a>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="widget-login-info">
+                                    Don't have an account? Sign up now!<br>
+                                    <a class="mr-n-lg" href="#">Create an Account</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    {{/content}}
+    {{#content "footer"}}
+        <footer class="page-footer">
+            2014 - 2020 &copy; Light Blue App - Bootstrap Admin Dashboard Template.
+        </footer>
+    {{/content}}
+{{/extend}}

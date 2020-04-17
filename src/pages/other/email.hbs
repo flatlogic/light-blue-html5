@@ -1,0 +1,133 @@
+{{#extend "layout" title="Sing App Dashboard - Email"}}
+  {{#content "sidebar"}}
+    {{> sidebar active="email"}}
+  {{/content}}
+  {{#content "content" mode="replace"}}
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">YOU ARE HERE</li>
+        <li class="breadcrumb-item active">Email</li>
+    </ol>
+    <h1 class="page-title">Email - <span class="fw-semi-bold">Inbox</span></h1>
+    <div class="row">
+        <div class="col-lg-3 col-xl-2">
+            <a class="btn btn-info btn-block" href="../other/inbox.html">
+                Compose
+            </a>
+            <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mt">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../other/inbox.html">
+                        <span class="badge badge-pill bg-info float-right">2</span>
+                        Inbox
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Starred</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sent Mail</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <span class="badge badge-pill bg-info float-right">3</span>
+                        Draft
+                    </a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Trash</a></li>
+            </ul>
+            <h5 class="mt">QUICK VIEW</h5>
+            <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mb-lg fs-mini">
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-right"></i> Private </a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i> Saved </a></li>
+            </ul>
+        </div>
+        <div class="col-lg-9 col-xl-10">
+            <div class="clearfix mb-xs">
+                <a class="btn btn-default btn-sm width-50 float-left" id="back-btn" href="../other/inbox.html">
+                    <i class="fa fa-angle-left fa-lg"></i>
+                </a>
+                <div class="float-right hide" id="folder-stats">
+                    <p class="widget-email-count">Showing 1 - 10 of 96 messages</p>
+                    <ul class="pagination pagination-sm widget-email-pagination">
+                        <li class="prev disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <section class="widget widget-email">
+                <header>
+                    <h4>Hi, Welcome to Google Mail</h4>
+                    <div class="widget-controls">
+                        <a href="#"><i class="fa fa-print"></i></a>
+                    </div>
+                </header>
+                <div class="widget-body">
+                    <div id="email-view" class="email-view">
+                        <div class="email-details clearfix">
+                            <div class="email-details-content">
+                                <span class="thumb thumb-sm float-left">
+                                    <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="Philip Horbacheuski">
+                                </span>
+                                <div class="float-left">
+                                    <strong>Philip Horbacheuski</strong>
+                                    <span class="email">&lt;philip.horbacheuski@example.com&gt;</span>
+                                    <span class="receiver">to Wrapbootstrap</span>
+                                </div>
+                                <div class="email-actions float-right">
+                                    <div class="btn-group">
+                                        <button id="email-opened-reply" class="btn btn-sm btn-gray">
+                                            <i class="fa fa-reply"></i> Reply
+                                        </button>
+                                        <button class="btn btn-sm btn-gray dropdown-toggle" data-toggle="dropdown">
+                                            <i class="fa fa-angle-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu float-right">
+                                            <li><a href="#"><i class="fa fa-reply reply-btn"></i> Reply</a></li>
+                                            <li><a href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
+                                            <li><a href="#"><i class="fa fa-print"></i> Print</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                                            <li><a href="#"><i class="glyphicon glyphicon-trash"></i> Delete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <time class="email-date float-right">
+                                    0:30
+                                </time>
+                            </div>
+                        </div>
+                        <div class="email-body">
+                            <p>Projecting surrounded literature yet delightful alteration but bed men. Open are from long why cold. If must snug by upon sang loud left. As me do preference entreaties compliment motionless ye literature. Day behaviour explained law remainder.</p>    <p><strong>On then sake home</strong> is am leaf. Of suspicion do departure at extremely he believing. Do know said mind do rent they oh hope of. General enquire picture letters garrets on offices of no on.</p> <p>All the best,</p> <p>Vitaut the Great, CEO, <br>Fooby Inc.</p>
+                        </div>
+                        <div class="email-attachments">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <hr>
+                                    <p class="details"><strong>2 attachments</strong> &nbsp;-&nbsp; <a href="#">Download all attachments</a>
+                                        &nbsp;&nbsp;&nbsp;<a href="#">View all Images</a></p>
+                                    <section class="attachment">
+                                        <img class="img-fluid" src="../demo/img/pictures/1.jpg" alt="">
+                                        <h5 class="title">some-cool-image1.jpg</h5>
+                                        <p class="details">
+                                            568K  &nbsp;&nbsp;
+                                            <a href="#">View</a> &nbsp;&nbsp;
+                                            <a href="#">Download</a>
+                                        </p>
+                                    </section>
+                                    <section class="attachment">
+                                        <img class="img-fluid" src="../demo/img/pictures/2.jpg" alt="">
+                                        <h5 class="title">some-cool-image2.jpg</h5>
+                                        <p class="details">
+                                            229K  &nbsp;&nbsp;
+                                            <a href="#">View</a> &nbsp;&nbsp;
+                                            <a href="#">Download</a>
+                                        </p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+  {{/content}}
+{{/extend}}
