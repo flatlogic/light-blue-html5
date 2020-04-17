@@ -7,7 +7,7 @@
 You can start by cloning the latest version of Sing App Lite on your local machine by running:
 
 ```shell
-$ git clone -o sing-app-lite -b master --single-branch \
+$ git clone -o light-blue-html5 -b master --single-branch \
       https://github.com/flatlogic/light-blue-html5.git MyApp
 $ cd MyApp
 ```
