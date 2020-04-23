@@ -976,7 +976,6 @@ body {
   @include media-breakpoint-up(lg){
     width: 333px;
   }
-
   height: 100%;
 
   .btn-group-toggle {
@@ -993,16 +992,9 @@ body {
   }
   .list-group-item{
     color: $body-main-color;
-
     @include transition(background-color .15s ease-in-out);
     &:hover{
       background-color: $widget-bg-color;
-      .progress {
-        background-color: $white !important;
-      }
-    }
-    .progress{
-      @include transition(background-color .15s ease-in-out);
     }
   }
 

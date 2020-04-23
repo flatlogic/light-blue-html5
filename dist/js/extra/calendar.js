@@ -89,15 +89,15 @@ $(function(){
                 {
                     title: 'All Day Event',
                     start: new Date(y, m, 1),
-                    backgroundColor: Sing.colors['brand-warning'],
-                    textColor: '#fff'
+                    backgroundColor: Sing.newPalette['brand-warning'],
+                    textColor: '#1b1e3c'
                 },
                 {
                     title: 'Long Event',
                     start: new Date(y, m, d+5),
                     end: new Date(y, m, d+7),
                     backgroundColor: Sing.colors['brand-info'],
-                    textColor: '#fff'
+                    textColor: '#1b1e3c'
                 },
                 {
                     id: 999,
@@ -105,7 +105,7 @@ $(function(){
                     start: new Date(y, m, d-3, 16, 0),
                     allDay: false,
                     backgroundColor: Sing.colors['brand-success'],
-                    textColor: '#fff'
+                    textColor: '#1b1e3c'
                 },
                 {
                     title: 'Click for Flatlogic',
@@ -113,7 +113,7 @@ $(function(){
                     end: new Date(y, m, 29),
                     url: 'http://flatlogic.com/',
                     backgroundColor: Sing.colors['brand-danger'],
-                    textColor: '#fff'
+                    textColor: '#1b1e3c'
                 }
             ],
 

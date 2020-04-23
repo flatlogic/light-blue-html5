@@ -1,4 +1,11 @@
 # Changelog
+## [4.5.1]
+
+### Updated
+
+- Colors fix
+- Fix errors
+
 ## [4.5.0]
 
 ### Updated

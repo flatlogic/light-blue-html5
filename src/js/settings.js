@@ -43,7 +43,7 @@ $(function(){
         newPalette: {
             'brand-primary': '#1870dc',
             'brand-success': '#58d777',
-            'brand-warning': '#ca8500',
+            'brand-warning': '#fda700',
             'brand-danger': '#fd5f00',
             'brand-info': '#3aa09c'
         },

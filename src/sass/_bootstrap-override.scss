@@ -258,6 +258,14 @@ legend {
   }
 }
 
+.email-actions {
+  .btn-group {
+    .dropdown-toggle:after {
+      content: none;
+    }
+  }
+}
+
 .dropdown-menu{
   font-size: $font-size-mini;
   z-index: 1000;
@@ -822,21 +830,21 @@ legend {
   color: $body-main-color;
   background-color: #3a3e6b;
   border-color: #353a63;
-  &:hover {
-    color: $body-main-color;
+  &:hover, &:active, &:focus {
+    color: $body-main-color!important;
   }
 }
 .btn-danger {
   color: $btn-default-color;
-  &:hover {
-    color: $btn-default-color;
+  &:hover, &:active, &:focus {
+    color: $btn-default-color!important;
   }
 }
 
 .btn-info {
   color: $btn-default-color;
-  &:hover {
-    color: $btn-default-color;
+  &:hover, &:active, &:focus {
+    color: $btn-default-color!important;
   }
 }
 
@@ -844,17 +852,17 @@ legend {
   background-color: #58d777;
   border-color: #58d777;
   color: $btn-default-color;
-  &:hover {
+  &:hover, &:active, &:focus {
     background-color: #39d05e;
     border-color: #31cb56;
-    color: $btn-default-color;
+    color: $btn-default-color!important;
   }
 }
 
 .btn-warning {
   color: $btn-default-color;
-  &:hover {
-    color: $btn-default-color;
+  &:hover, &:active, &:focus {
+    color: $btn-default-color!important;
   }
 }
 
@@ -1059,7 +1067,15 @@ legend {
 
 .alert {
   border: none;
-
+  hr {
+    border-top: 1px solid $btn-default-color;
+  }
+  p {
+    color: $btn-default-color!important;
+  }
+  .alert-heading {
+    color: $btn-default-color!important;
+  }
   .btn {
     border: none;
   }
@@ -1075,6 +1091,8 @@ legend {
 .alert-success {
   background: theme-color('success');
   color: $btn-default-color;
+
+
 
   &.alert-transparent {
     color: theme-color('success');
