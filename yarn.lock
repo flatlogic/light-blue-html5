@@ -186,11 +186,6 @@ ajv@^5.3.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-almond@~0.3.1:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/almond/-/almond-0.3.3.tgz#a0e7c95ac7624d6417b4494b1e68bff693168a20"
-  integrity sha1-oOfJWsdiTWQXtElLHmi/9pMWiiA=
-
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
@@ -607,7 +602,7 @@ block-stream@*:
   version "0.0.0"
   resolved "https://github.com/amoffat/bootstrap-application-wizard.git#91c9ba33efa3929be46b68616a128da4470f552e"
 
-bootstrap-colorpicker@^2.3.0:
+bootstrap-colorpicker@^2.3.6:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/bootstrap-colorpicker/-/bootstrap-colorpicker-2.5.3.tgz#b50aff8590fbaa6b5aa63a5624e4213f1659a49d"
   integrity sha512-xdllX8LSMvKULs3b8JrgRXTvyvjkSMHHHVuHjjN5FNMqr6kRe5NPiMHFmeAFjlgDF73MspikudLuEwR28LbzLw==
@@ -619,22 +614,22 @@ bootstrap-markdown@^2.10.0:
   resolved "https://registry.yarnpkg.com/bootstrap-markdown/-/bootstrap-markdown-2.10.0.tgz#65234277840454ee1adc7482b2f4a5e3975dace5"
   integrity sha1-ZSNCd4QEVO4a3HSCsvSl45ddrOU=
 
-bootstrap-select@^1.13.12:
-  version "1.13.12"
-  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.12.tgz#81b9f1394cb8d7151aea16fb9030c112330dbf98"
-  integrity sha512-epsPt6WpgmL9Q9Y22JFntajdhhqvCwV/JKiBZF3YFvMHK9YzzDPQft/Cjqvsgq0bhF32BlvG03Qs3qA/pVRAqQ==
+bootstrap-select@^1.13.18:
+  version "1.13.18"
+  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.18.tgz#4557119d58dc1159189977161c803962220e4dda"
+  integrity sha512-V1IzK4rxBq5FrJtkzSH6RmFLFBsjx50byFbfAf8jYyXROWs7ZpprGjdHeoyq2HSsHyjJhMMwjsQhRoYAfxCGow==
 
-bootstrap-slider@10.2.1:
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/bootstrap-slider/-/bootstrap-slider-10.2.1.tgz#c07d7a7d817ba794ac69b56ae1280974e39b63ff"
-  integrity sha512-sajEjunOzQyUqzFPTfXIiCMWaNzktFPze0DdHHYE07aXzNFHNjp+iB5r1DmK6PaRuSEUXnmr2siS9x1Fx8R+Tg==
+bootstrap-slider@10.2.4:
+  version "10.2.4"
+  resolved "https://registry.yarnpkg.com/bootstrap-slider/-/bootstrap-slider-10.2.4.tgz#0e4772eee9586cbe3d1da1b3d4efbf1e4369cf0e"
+  integrity sha512-PQWmOb97Km0yO3nra8l3sbJTwEim5BDGI6flHWCsGvuBcP9U5m5IuyyD/7bEHe2me8YiVXig1SLMD9fGQNd2yQ==
 
 bootstrap-wizard@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/bootstrap-wizard/-/bootstrap-wizard-1.4.2.tgz#89611d6dd13aebd92f7424684d120f23c7a56d17"
   integrity sha512-1W05bYvDOuD3xyliFZaLRasu2mIB+AekDDfbzu4hCNb24vWQZ8g/1rjbEypzsgI7eml/yjIZah3uEjg5opI6Jw==
 
-bootstrap@>=4.1.2, bootstrap@^4.3.1:
+bootstrap@>=4.1.2:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.4.1.tgz#8582960eea0c5cd2bede84d8b0baf3789c3e8b01"
   integrity sha512-tbx5cHubwE6e2ZG7nqM3g/FZ5PQEDMWmMGNrCUBVRPHXTJaH7CBDdsLeu3eCh3B1tzAxTnAbtmrzvWEvT2NNEA==
@@ -643,6 +638,11 @@ bootstrap@^3.3:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
   integrity sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==
+
+bootstrap@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.5.2.tgz#a85c4eda59155f0d71186b6e6ad9b875813779ab"
+  integrity sha512-vlGn0bcySYl/iV+BGA544JkkZP5LB3jsmkeKLFQakCOwCM3AOk7VkldBz4jrzSe+Z0Ezn99NVXa1o45cQY4R6A==
 
 "bootstrap_calendar@git://github.com/xero/bootstrap_calendar#v1.0.1":
   version "0.0.0"
@@ -1349,12 +1349,7 @@ d3-zoom@1:
     d3-selection "1"
     d3-transition "1"
 
-d3@3.5.4:
-  version "3.5.4"
-  resolved "https://registry.yarnpkg.com/d3/-/d3-3.5.4.tgz#3ae8ec0c2c02b6cb84b2d1441bb732e5830b66ed"
-  integrity sha1-OujsDCwCtsuEstFEG7cy5YMLZu0=
-
-d3@^3.5.16:
+d3@3.5.17, d3@^3.5.16:
   version "3.5.17"
   resolved "https://registry.yarnpkg.com/d3/-/d3-3.5.17.tgz#bc46748004378b21a360c9fc7cf5231790762fb8"
   integrity sha1-vEZ0gAQ3iyGjYMn8fPUjF5B2L7g=
@@ -2125,10 +2120,10 @@ fstream@^1.0.0, fstream@^1.0.12:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-fullcalendar@^3.10.1:
-  version "3.10.1"
-  resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-3.10.1.tgz#cca3f9a2656a7e978a3f3facb7f35934a91185db"
-  integrity sha512-E0ioaHVmwdS4es8pNTUNva7505wPkUMFdn9JGFLYo+J12ARhN3zDBwoPj2DfB8rL7Yc1sSve+FqDHC3s2SZ7Fw==
+fullcalendar@^3.10.2:
+  version "3.10.2"
+  resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-3.10.2.tgz#9b1ba84bb02803621b761d1bba91a4f18affafb7"
+  integrity sha512-YWZaHdp8ZLBqhPz615PoXdA49ymsBTUF+MGDM6H3vyz71Pv/ZW9Pm9/Mj3x6n822k6bs2txFO7muRTSvBhsqKg==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -2357,10 +2352,10 @@ glyphicons-halflings@^1.9.1:
   resolved "https://registry.yarnpkg.com/glyphicons-halflings/-/glyphicons-halflings-1.9.1.tgz#18e72f20034240038a5e884383bb7945e2dd262a"
   integrity sha1-GOcvIANCQAOKXohDg7t5ReLdJio=
 
-gmaps@^0.4.24:
-  version "0.4.24"
-  resolved "https://registry.yarnpkg.com/gmaps/-/gmaps-0.4.24.tgz#07f22f0cfc3e4e32498950ffafd7ca635ffc100c"
-  integrity sha1-B/IvDPw+TjJJiVD/r9fKY1/8EAw=
+gmaps@^0.4.25:
+  version "0.4.25"
+  resolved "https://registry.yarnpkg.com/gmaps/-/gmaps-0.4.25.tgz#ea98fa83668fb07b879b47d989b5ee1504d33455"
+  integrity sha512-a2qZl3SMbfGow02WUWWH9+Cc0kVrUCnhSh+b13P7XTi8pauLHpa0A/8rYK9x4C/iPdkfAY0FAOyuwqHnLPHi4w==
 
 got@^9.6.0:
   version "9.6.0"
@@ -2562,7 +2557,7 @@ handlebars-wax@^6.1.0:
     object-assign "^4.1.1"
     require-glob "^3.2.0"
 
-handlebars@^4.1.0, handlebars@^4.7.2:
+handlebars@^4.1.0:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.2.tgz#01127b3840156a0927058779482031afe0e730d7"
   integrity sha512-4PwqDL2laXtTWZghzzCtunQUTLbo31pcCJrd/B/9JP8XbhVzpS5ZXuKqlOzsd1rtcaLo4KqAn8nl8mkknS4MHw==
@@ -2570,6 +2565,18 @@ handlebars@^4.1.0, handlebars@^4.7.2:
     neo-async "^2.6.0"
     optimist "^0.6.1"
     source-map "^0.6.1"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
+handlebars@^4.7.6:
+  version "4.7.6"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.6.tgz#d4c05c1baf90e9945f77aa68a7a219aa4a7df74e"
+  integrity sha512-1f2BACcBfiwAfStCKZNrUCgqNZkGsAT7UM3kkYtXuLo0KnaVfjKOyf7PRzB6++aK9STyT1Pd2ZCPe3EGOXleXA==
+  dependencies:
+    minimist "^1.2.5"
+    neo-async "^2.6.0"
+    source-map "^0.6.1"
+    wordwrap "^1.0.0"
   optionalDependencies:
     uglify-js "^3.1.4"
 
@@ -3096,7 +3103,7 @@ jquery-mapael@2.2.0:
   optionalDependencies:
     jquery-mousewheel "^3.1"
 
-jquery-mousewheel@^3.1, jquery-mousewheel@~3.1.13:
+jquery-mousewheel@^3.1:
   version "3.1.13"
   resolved "https://registry.yarnpkg.com/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
   integrity sha1-BvAzXxbjU6aV5yBr9QUDy1I6buU=
@@ -4262,7 +4269,7 @@ parse5@4.0.0:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
 
-parsleyjs@^2.8.1:
+parsleyjs@^2.8.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/parsleyjs/-/parsleyjs-2.9.2.tgz#67c96961d371821f2623965fa2cc81a4522874cb"
   integrity sha512-DKS2XXTjEUZ1BJWUzgXAr+550kFBZrom2WYweubqdV7WzdNC1hjOajZDfeBPoAZMkXumJPlB3v37IKatbiW8zQ==
@@ -4372,7 +4379,7 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-popper.js@^1.14.3:
+popper.js@^1.14.3, popper.js@^1.14.7:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
@@ -4920,13 +4927,10 @@ select2-bootstrap-css@^1.4.6:
   resolved "https://registry.yarnpkg.com/select2-bootstrap-css/-/select2-bootstrap-css-1.4.6.tgz#5cfb68246f5299ca1858e01efd788804c734997e"
   integrity sha1-XPtoJG9SmcoYWOAe/XiIBMc0mX4=
 
-select2@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.5.tgz#7aac50692561985b34d3b82ec55e226f8960d40a"
-  integrity sha1-eqxQaSVhmFs007guxV4ib4lg1Ao=
-  dependencies:
-    almond "~0.3.1"
-    jquery-mousewheel "~3.1.13"
+select2@4.0.13:
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.13.tgz#0dbe377df3f96167c4c1626033e924372d8ef44d"
+  integrity sha512-1JeB87s6oN/TDxQQYCvS5EFoQyvV6eYMZZ0AeA4tdFDYWN3BAGZ8npr17UBFddU0lgAt3H0yjX3X6/ekOj1yjw==
 
 semver-diff@^3.1.1:
   version "3.1.1"
@@ -5886,6 +5890,11 @@ word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
   integrity sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==
+
+wordwrap@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
+  integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
 
 wordwrap@~0.0.2:
   version "0.0.3"

@@ -1,4 +1,10 @@
 # Changelog
+## [4.5.2]
+
+### Updated
+
+- Update dependencies
+
 ## [4.5.1]
 
 ### Updated
