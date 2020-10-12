@@ -12,7 +12,7 @@ $ git clone -o light-blue-html5 -b master --single-branch \
 $ cd MyApp
 ```
 
-#### 2. Run `yarn install`
+#### 2. Run `yarn`
 
 This will install run-time project dependencies and developer tools listed in [package.json](../package.json) file.
 
