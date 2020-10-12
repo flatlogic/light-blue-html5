@@ -193,11 +193,17 @@ legend {
   text-transform: uppercase;
 }
 
-.table-bordered th{
-  border: none;
-  background-color: #005792;
-  color: #f6f6e9;
+.table-bordered {
+  th {
+    border: 1px solid $widget-border-color!important;
+    background-color: rgba(255,255,255,0.1);
+    color: #f6f6e9;
+  }
+  td {
+    border: 1px solid $widget-border-color!important;
+  }
 }
+
 
 .table-lg {
   > thead,
