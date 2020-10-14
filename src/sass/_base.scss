@@ -1896,6 +1896,9 @@ input[type=search], input.search {
   background-color: $widget-bg-color;
   padding: 15px 20px;
 
+  .btn-toolbar {
+    flex-wrap: nowrap;
+  }
   .info-title {
     margin-top: $spacer;
     font-weight: $font-weight-normal;
