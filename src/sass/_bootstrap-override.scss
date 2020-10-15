@@ -1058,6 +1058,7 @@ legend {
   font-size: $font-size-mini;
 
   .close{
+    color: white;
     font-size: 26px;
     font-weight: $font-weight-thin;
     line-height: 0.75;
@@ -1068,19 +1069,20 @@ legend {
 
 .alert-dismissable .close{
   position: static;
-  color: $close-color;
+  color: white;
 }
 
 .alert {
+  color: white;
   border: none;
   hr {
-    border-top: 1px solid $btn-default-color;
+    border-top: 1px solid white;
   }
   p {
-    color: $btn-default-color!important;
+    color: white;
   }
   .alert-heading {
-    color: $btn-default-color!important;
+    color: white;
   }
   .btn {
     border: none;
@@ -1096,63 +1098,49 @@ legend {
 
 .alert-success {
   background: theme-color('success');
-  color: $btn-default-color;
-
-
 
   &.alert-transparent {
-    color: theme-color('success');
     background: rgba(theme-color('success'), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('success');
   }
 }
 
 .alert-info {
   background: theme-color('info');
-  color: $btn-default-color;
 
   &.alert-transparent {
-    color: theme-color('info');
     background: rgba(theme-color('info'), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('info');
   }
 }
 
 .alert-warning {
   background: theme-color('warning');
-  color: $btn-default-color;
 
   &.alert-transparent {
-    color: theme-color('warning');
     background: rgba(theme-color('warning'), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('warning');
   }
 }
 
 .alert-danger {
   background: theme-color('danger');
-  color: $btn-default-color;
 
   &.alert-transparent {
-    color: theme-color('danger');
     background: rgba(theme-color('danger'), $alert-transparent);
   }
 
   .btn:not(.btn-default) {
     background: rgba($white, 0.8);
-    color: theme-color('danger');
   }
 }
 
@@ -1561,11 +1549,11 @@ code {
 // --------------------------------------------------
 .badge {
   display: inline-block;
-  padding: 2px 4px;
-  line-height: 14px; // ensure proper line-height if floated
+  padding: 4px 8px;
+  line-height: 19px; // ensure proper line-height if floated
   text-shadow: none;
-  font-weight: $font-weight-bold;
-  font-size: 11px;
+  font-weight: 600;
+  font-size: 14px;
   color: white;
 
   &.bg-default {
@@ -1581,7 +1569,7 @@ a.badge {
   }
 }
 
-.badge-danger, .badge-secondary, .badge-success, .badge-warning, .badge-info {
+.badge-secondary, .badge-info {
   color: $gray-900;
 }
 
@@ -1597,18 +1585,16 @@ span.badge.badge-secondary {
   background-color: $widget-color-header;
 }
 
-a.badge.badge-success {
-  &:hover, &:active {
-    background-color: #31cb56;
-    color: $gray-900;
-  }
+span.badge.badge-danger, a.badge.badge-danger {
+  background-color: $red;
 }
 
-a.badge.badge-warning {
-  &:hover, &:active {
-    background-color: #ca8500;
-    color: $gray-900;
-  }
+span.badge.badge-success, a.badge.badge-success {
+  background-color: $teal;
+}
+
+span.badge.badge-warning, a.badge.badge-warning {
+  background-color: $yellow;
 }
 
 span.badge.badge-default {
@@ -1620,15 +1606,16 @@ span.badge.badge-default {
   }
 }
 
-a.badge.badge-info {
-  background-color: #4ebfbb;
-  &:hover, &:active {
-    background-color: #3aa09c;
-    color: $gray-900;
-  }
+a.badge.badge-primary, span.badge.badge-primary {
+  background-color: $blue;
 }
-span.badge.badge-info {
-  background-color: #4ebfbb;
+
+a.badge.badge-info, span.badge.badge-info {
+  background-color: $skyblue;
+  color: white;
+  &:hover, &:active {
+    color: white;
+  }
 }
 
 a.badge.badge-light {
@@ -1639,7 +1626,7 @@ a.badge.badge-light {
 }
 
 .badge-pill {
-  padding: 2px 6px;
+  padding: 4px 8px;
 }
 
 
