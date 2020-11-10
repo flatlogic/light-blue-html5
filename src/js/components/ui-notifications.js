@@ -1,8 +1,8 @@
 //copy spinner from flat theme
 (function() {
-    var $, FlatMessage, spinner_template,
+    let $, FlatMessage, spinner_template,
         __hasProp = {}.hasOwnProperty,
-        __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+        __extends = function(child, parent) { for (let key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
     $ = jQuery;
 
@@ -17,7 +17,7 @@
         }
 
         FlatMessage.prototype.template = function(opts) {
-            var $message;
+            let $message;
             $message = FlatMessage.__super__.template.apply(this, arguments);
             $message.append($(spinner_template));
             return $message;
@@ -37,22 +37,21 @@ $(function(){
     function pageLoad(){
         $('.widget').widgster();
 
-        var theme = 'air';
+        let theme = 'air';
 
         $.globalMessenger({ theme: theme });
         Messenger.options = { theme: theme  };
 
         Messenger().post("Thanks for checking out Messenger!");
 
+        let loc = ['bottom', 'right'];
 
-        var loc = ['bottom', 'right'];
+        let $lsel = $('.location-selector');
 
-        var $lsel = $('.location-selector');
+        let update = function(){
+            let classes = 'messenger-fixed';
 
-        var update = function(){
-            var classes = 'messenger-fixed';
-
-            for (var i=0; i < loc.length; i++)
+            for (let i=0; i < loc.length; i++)
                 classes += ' messenger-on-' + loc[i];
 
             $.globalMessenger({ extraClasses: classes, theme: theme  });
@@ -69,31 +68,20 @@ $(function(){
             });
 
         $('#show-error-message').on('click', function(){
-            var i;
-
-            i = 0;
-
             Messenger().run({
                 errorMessage: 'Error destroying alien planet',
                 successMessage: 'Alien planet destroyed!',
                 action: function(opts) {
-                    if (++i < 3) {
-                        return opts.error({
-                            status: 500,
-                            readyState: 0,
-                            responseText: 0
-                        });
-                    } else {
-                        return opts.success();
-                    }
-                }
-            });
 
+                        return opts.error();
+                    }
+
+            });
             return false;
         });
 
         $('#show-info-message').on('click', function(){
-            var msg = Messenger().post({
+            let msg = Messenger().post({
                 message: 'Launching thermonuclear war...',
                 actions: {
                     cancel: {
@@ -108,7 +96,6 @@ $(function(){
                     }
                 }
             });
-
             return false;
         });
 
@@ -118,7 +105,6 @@ $(function(){
                 type: 'success',
                 showCloseButton: true
             });
-
             return false;
         });
     }

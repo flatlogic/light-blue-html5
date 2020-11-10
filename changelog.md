@@ -1,6 +1,18 @@
 # Changelog
-## [4.5.3]
+## [4.5.4]
 
+Alerts: fix content justify;
+Badge: add more space between elements;
+Modal: fix errors;
+Notifications: fix info notification;
+
+### Fixed
+
+Fix adaptive problems;
+Fix design problems;
+And a lot of small and not significant mistakes :)
+
+## [4.5.3]
 ### Updated
 
 Fix adaptive problems;
@@ -8,20 +20,17 @@ Fix design problems;
 And a lot of small and not significant mistakes :)
 
 ## [4.5.2]
-
 ### Updated
 
 - Update dependencies
 
 ## [4.5.1]
-
 ### Updated
 
 - Colors fix
 - Fix errors
 
 ## [4.5.0]
-
 ### Updated
 
 - Migrated from bower to npm
