@@ -1,23 +1,27 @@
 # Changelog
-## [4.5.4]
+## [4.5.5]
+### Updated
+- Update footer on login page
 
-Alerts: fix content justify;
-Badge: add more space between elements;
-Modal: fix errors;
-Notifications: fix info notification;
+## [4.5.4]
+### Updated
+- Alerts: fix content justify;
+- Badge: add more space between elements;
+- Modal: fix errors;
+- Notifications: fix info notification;
 
 ### Fixed
 
-Fix adaptive problems;
-Fix design problems;
-And a lot of small and not significant mistakes :)
+- Fix adaptive problems;
+- Fix design problems;
+- And a lot of small and not significant mistakes :)
 
 ## [4.5.3]
 ### Updated
 
-Fix adaptive problems;
-Fix design problems;
-And a lot of small and not significant mistakes :)
+- Fix adaptive problems;
+- Fix design problems;
+- And a lot of small and not significant mistakes :)
 
 ## [4.5.2]
 ### Updated
