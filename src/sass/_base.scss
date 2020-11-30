@@ -19,10 +19,6 @@
   }
 }
 
-.sidebar.mobile {
-
-}
-
 .collapsing {
   position: relative;
   height: 0;
@@ -141,11 +137,6 @@
 
   .avatar {
     margin-top: -6px;
-    &.float-left,
-    &.pull-left {
-
-    }
-
     &.float-right,
     &.pull-right {
       margin-left: 5px;
@@ -660,10 +651,6 @@ body {
 /* body tag is given this class */
 .chat-sidebar-container {
   position: relative;
-  &, .sidebar{
-    //left: 0;
-    //@include transition(left $sidebar-transition-time ease-in-out);
-  }
   &.chat-sidebar-opened{
     &, .sidebar{
       left: -$chat-sidebar-width;
@@ -1118,6 +1105,10 @@ body {
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     padding: $widget-padding-vertical $widget-padding-horizontal;
     color: $widget-color-header;
+
+    .bootstrap-select {
+      width: 120px!important;
+    }
 
     .dropdown-toggle {
       background: $default;

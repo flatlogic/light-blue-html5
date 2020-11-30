@@ -380,309 +380,309 @@
             </div>
         </div>
     </nav>
-        <!--
-          Main sidebar seen on the left. may be static or collapsing depending on selected state.
-        
-            * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
-            * Static - stays always open.
-        -->
-        <nav id="sidebar" class="sidebar" role="navigation">
-            <!-- need this .js class to initiate slimscroll -->
-            <div class="js-sidebar-content">
-                <header class="logo d-none d-md-block">
-                    <a href="../dashboard/index.html"><span class="fw-thin">Light</span> <b>Blue</b></a>
-                </header>
-                <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
-                     looks good, so adding it and enhancing with notifications -->
-        
-                <!-- main notification links are placed inside of .sidebar-nav -->
-                <ul class="sidebar-nav">
+<!--
+  Main sidebar seen on the left. may be static or collapsing depending on selected state.
+
+    * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+    * Static - stays always open.
+-->
+<nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
+    <div class="js-sidebar-content">
+        <header class="logo d-none d-md-block">
+            <a href="../dashboard/index.html"><span class="fw-thin">Light</span> <b>Blue</b></a>
+        </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
+
+        <!-- main notification links are placed inside of .sidebar-nav -->
+        <ul class="sidebar-nav">
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-home"></i>
+                    </span>
+                    Dashboard
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-dashboard" class="collapse ">
+                    <li class=""><a href="../dashboard/index.html">Visits</a></li>
+                    <li class=""><a href="../dashboard/analytics.html">Analytics</a></li>
+                    <li class=""><a href="../dashboard/widgets.html">Widgets</a></li>
+                </ul>
+            </li>
+<!--            <li class="">-->
+<!--                <a href="../other/chat.html">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="fi flaticon-users"></i>-->
+<!--                    </span>-->
+<!--                    Chat-->
+<!--                    <sup class="headerLabel text-info">awesome</sup>-->
+<!--                </a>-->
+<!--            </li>-->
+            <li class="">
+                <a href="../other/package.html">
+                    <span class="icon">
+                      <i class="fi flaticon-database-1"></i>
+                    </span>
+                    LB Package
+                </a>
+            </li>
+            <li class="">
+                <a href="../other/profile.html">
+                    <span class="icon">
+                        <i class="fi flaticon-user"></i>
+                    </span>
+                    Profile
+                </a>
+            </li>
+            <li class="">
+                <a href="../other/inbox.html">
+                    <span class="icon">
+                        <i class="fi flaticon-paper-plane"></i>
+                    </span>
+                    Email
+                    <span class="badge badge-primary">
+                        9
+                    </span>
+                </a>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-diamond"></i>
+                    </span>
+                    E-commerce
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-pages" class="collapse ">
+                    <li class=""><a href="../e-commerce/product_detail.html">Product Detail</a></li>
+                    <li class=""><a href="../e-commerce/product_grid.html">Product Grid</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- every .sidebar-nav may have a title -->
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <ul class="sidebar-nav">
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-network"></i>
+                    </span>
+                    Core
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-core" class="collapse ">
+                    <li class=""><a href="../core/core_typography.html">Typography</a></li>
+                    <li class=""><a href="../core/core_colors.html">Colors</a></li>
+                    <li class=""><a href="../core/core_grid.html">Grid</a></li>
+                </ul>
+            </li>
+            <li class=" active ">
+                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-layers"></i>
+                    </span>
+                    UI Elements
+                    <sup class="text-success fw-semi-bold">
+                        new
+                    </sup>
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-ui" class="collapse  show ">
+                    <li class=""><a href="../components/ui_alerts.html">Alerts</a></li>
+                    <li class=""><a href="../components/ui_badge.html">Badge</a></li>
+                    <li class=""><a href="../components/ui_buttons.html">Buttons</a></li>
+                    <li class=""><a href="../components/ui_card.html">Card</a></li>
+                    <li class=""><a href="../components/ui_carousel.html">Carousel</a></li>
+                    <li class=""><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
+                    <li class=""><a href="../components/ui_icons.html">Icons</a></li>
+                    <li class=""><a href="../components/ui_list_groups.html">List Groups</a></li>
+                    <li class=""><a href="../components/ui_modal.html" data-no-pjax>Modal</a></li>
+                    <li class=""><a href="../components/ui_nav.html">Nav</a></li>
+                    <li class=""><a href="../components/ui_navbar.html">Navbar</a></li>
+                    <li class=""><a href="../components/ui_notifications.html">Notifications</a></li>
+                    <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
+                    <li class=""><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
+                    <li class=""><a href="../components/ui_progress.html">Progress</a></li>
+                    <li class=" active "><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
+
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-list"></i>
+                    </span>
+                    Forms
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-forms" class="collapse ">
+                    <li class=""><a href="../form/form_elements.html">Form Elements</a></li>
+                    <li class=""><a href="../form/form_validation.html">Form Validation</a></li>
+                    <li class=""><a href="../form/form_wizard.html">Form Wizard</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-controls"></i>
+                    </span>
+                    Charts
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-charts"
+                    class="collapse ">
                     <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-home"></i>
-                            </span>
-                            Dashboard
+                        <a href="../charts/charts.html" data-no-pjax>Charts Overview</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/flot.html" data-no-pjax>Flot Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/morris.html" data-no-pjax>Morris Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/rickshaw.html" data-no-pjax>Rickshaw Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/sparkline.html" data-no-pjax>Sparkline Charts</a>
+                    </li>
+                    <li class="">
+                        <a class="no-pjax" href="../charts/d3_plain.html" data-no-pjax>D3 version 5 Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/easy_pie.html" data-no-pjax>Easy Pie Charts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="../other/grid.html">
+                    <span class="icon">
+                        <i class="fi flaticon-menu-4"></i>
+                    </span>
+                    Grid
+                </a>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-map-location"></i>
+                    </span>
+                    Maps
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-maps" class="collapse ">
+                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
+                         target page -->
+                    <li class=""><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class=""><a href="../maps/maps_vector.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-equal-1"></i>
+                    </span>
+                    Tables
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-tables" class="collapse ">
+                    <li class=""><a href="../tables/tables_basic.html">Tables Basic</a></li>
+                    <li class=""><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-star"></i>
+                    </span>
+                    Extra
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-extra" class="collapse ">
+                    <li class=""><a href="../extra/calendar.html">Calendar</a></li>
+                    <li class=""><a href="../extra/invoice.html">Invoice</a></li>
+                    <li class=""><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
+                    <li class=""><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
+                    <li class=""><a href="../extra/gallery.html">Gallery</a></li>
+                    <li class=""><a href="../extra/search.html">Search Results</a></li>
+                    <li class=""><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-folder-10"></i>
+                    </span>
+                    Menu Levels
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-levels" class="collapse">
+                    <li><a href="#">Level 1</a></li>
+                    <li>
+                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
+                            Level 2
                             <i class="toggle fa fa-angle-down"></i>
                         </a>
-                        <ul id="sidebar-dashboard" class="collapse ">
-                            <li class=""><a href="../dashboard/index.html">Visits</a></li>
-                            <li class=""><a href="../dashboard/analytics.html">Analytics</a></li>
-                            <li class=""><a href="../dashboard/widgets.html">Widgets</a></li>
-                        </ul>
-                    </li>
-        <!--            <li class="">-->
-        <!--                <a href="../other/chat.html">-->
-        <!--                    <span class="icon">-->
-        <!--                      <i class="fi flaticon-users"></i>-->
-        <!--                    </span>-->
-        <!--                    Chat-->
-        <!--                    <sup class="headerLabel text-info">awesome</sup>-->
-        <!--                </a>-->
-        <!--            </li>-->
-                    <li class="">
-                        <a href="../other/package.html">
-                            <span class="icon">
-                              <i class="fi flaticon-database-1"></i>
-                            </span>
-                            LB Package
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="../other/profile.html">
-                            <span class="icon">
-                                <i class="fi flaticon-user"></i>
-                            </span>
-                            Profile
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="../other/inbox.html">
-                            <span class="icon">
-                                <i class="fi flaticon-paper-plane"></i>
-                            </span>
-                            Email
-                            <span class="badge badge-primary">
-                                9
-                            </span>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-diamond"></i>
-                            </span>
-                            E-commerce
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-pages" class="collapse ">
-                            <li class=""><a href="../e-commerce/product_detail.html">Product Detail</a></li>
-                            <li class=""><a href="../e-commerce/product_grid.html">Product Grid</a></li>
+                        <ul id="sidebar-sub-levels" class="collapse">
+                            <li><a href="#">Level 3</a></li>
+                            <li><a href="#">Level 3</a></li>
                         </ul>
                     </li>
                 </ul>
-                <!-- every .sidebar-nav may have a title -->
-                <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
-                <ul class="sidebar-nav">
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-network"></i>
-                            </span>
-                            Core
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-core" class="collapse ">
-                            <li class=""><a href="../core/core_typography.html">Typography</a></li>
-                            <li class=""><a href="../core/core_colors.html">Colors</a></li>
-                            <li class=""><a href="../core/core_grid.html">Grid</a></li>
-                        </ul>
-                    </li>
-                    <li class=" active ">
-                        <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-layers"></i>
-                            </span>
-                            UI Elements
-                            <sup class="text-success fw-semi-bold">
-                                new
-                            </sup>
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-ui" class="collapse  show ">
-                            <li class=""><a href="../components/ui_alerts.html">Alerts</a></li>
-                            <li class=""><a href="../components/ui_badge.html">Badge</a></li>
-                            <li class=""><a href="../components/ui_buttons.html">Buttons</a></li>
-                            <li class=""><a href="../components/ui_card.html">Card</a></li>
-                            <li class=""><a href="../components/ui_carousel.html">Carousel</a></li>
-                            <li class=""><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
-                            <li class=""><a href="../components/ui_icons.html">Icons</a></li>
-                            <li class=""><a href="../components/ui_list_groups.html">List Groups</a></li>
-                            <li class=""><a href="../components/ui_modal.html" data-no-pjax>Modal</a></li>
-                            <li class=""><a href="../components/ui_nav.html">Nav</a></li>
-                            <li class=""><a href="../components/ui_navbar.html">Navbar</a></li>
-                            <li class=""><a href="../components/ui_notifications.html">Notifications</a></li>
-                            <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
-                            <li class=""><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
-                            <li class=""><a href="../components/ui_progress.html">Progress</a></li>
-                            <li class=" active "><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
-        
-                        </ul>
-                    </li>
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-list"></i>
-                            </span>
-                            Forms
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-forms" class="collapse ">
-                            <li class=""><a href="../form/form_elements.html">Form Elements</a></li>
-                            <li class=""><a href="../form/form_validation.html">Form Validation</a></li>
-                            <li class=""><a href="../form/form_wizard.html">Form Wizard</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-controls"></i>
-                            </span>
-                            Charts
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-charts"
-                            class="collapse ">
-                            <li class="">
-                                <a href="../charts/charts.html" data-no-pjax>Charts Overview</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/flot.html" data-no-pjax>Flot Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/morris.html" data-no-pjax>Morris Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/rickshaw.html" data-no-pjax>Rickshaw Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/sparkline.html" data-no-pjax>Sparkline Charts</a>
-                            </li>
-                            <li class="">
-                                <a class="no-pjax" href="../charts/d3_plain.html" data-no-pjax>D3 version 5 Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/easy_pie.html" data-no-pjax>Easy Pie Charts</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="../other/grid.html">
-                            <span class="icon">
-                                <i class="fi flaticon-menu-4"></i>
-                            </span>
-                            Grid
-                        </a>
-                    </li>
-                    <li class="">
-                        <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-map-location"></i>
-                            </span>
-                            Maps
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-maps" class="collapse ">
-                            <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
-                                 target page -->
-                            <li class=""><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
-                            <li class=""><a href="../maps/maps_vector.html">Vector Maps</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-equal-1"></i>
-                            </span>
-                            Tables
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-tables" class="collapse ">
-                            <li class=""><a href="../tables/tables_basic.html">Tables Basic</a></li>
-                            <li class=""><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-star"></i>
-                            </span>
-                            Extra
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-extra" class="collapse ">
-                            <li class=""><a href="../extra/calendar.html">Calendar</a></li>
-                            <li class=""><a href="../extra/invoice.html">Invoice</a></li>
-                            <li class=""><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
-                            <li class=""><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
-                            <li class=""><a href="../extra/gallery.html">Gallery</a></li>
-                            <li class=""><a href="../extra/search.html">Search Results</a></li>
-                            <li class=""><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-folder-10"></i>
-                            </span>
-                            Menu Levels
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-levels" class="collapse">
-                            <li><a href="#">Level 1</a></li>
-                            <li>
-                                <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
-                                    Level 2
-                                    <i class="toggle fa fa-angle-down"></i>
-                                </a>
-                                <ul id="sidebar-sub-levels" class="collapse">
-                                    <li><a href="#">Level 3</a></li>
-                                    <li><a href="#">Level 3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
-                <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
-                <ul class="sidebar-labels">
-                    <li>
-                        <a href="#">
-                            <!-- yep, .circle again -->
-                            <i class="fa fa-circle text-danger mr-xs"></i>
-                            <span class="label-name">My Recent</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-circle text-primary mr-xs"></i>
-                            <span class="label-name">Starred</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-circle mr-xs"></i>
-                            <span class="label-name">Background</span>
-                        </a>
-                    </li>
-                </ul>
-                <h5 class="sidebar-nav-title">Projects</h5>
-                <!-- A place for sidebar notifications & alerts -->
-                <div class="sidebar-alerts">
-                    <div class="alert">
-                        <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                        <span class="fw-normal">Sales Report</span> <br>
-                        <div class="progress progress-xs mt-2">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <small>Calculating x-axis bias... 65%</small>
-                    </div>
-                    <div class="alert">
-                        <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                        <span class="fw-normal">Personal Responsibility</span> <br>
-                        <div class="progress progress-xs mt-2">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <small>Provide required notes</small>
-                    </div>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+        <ul class="sidebar-labels">
+            <li>
+                <a href="#">
+                    <!-- yep, .circle again -->
+                    <i class="fa fa-circle text-danger mr-xs"></i>
+                    <span class="label-name">My Recent</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle text-primary mr-xs"></i>
+                    <span class="label-name">Starred</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle mr-xs"></i>
+                    <span class="label-name">Background</span>
+                </a>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Projects</h5>
+        <!-- A place for sidebar notifications & alerts -->
+        <div class="sidebar-alerts">
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Sales Report</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                <small>Calculating x-axis bias... 65%</small>
             </div>
-        </nav>
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Personal Responsibility</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Provide required notes</small>
+            </div>
+        </div>
+    </div>
+</nav>
     <div class="theme-helper">
         <section class="widget theme-helper-content">
             <header class="theme-helper-header d-flex p-0">
@@ -749,250 +749,270 @@
         <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
         <main id="content" class="content" role="main">
             <!-- Page content -->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">YOU ARE HERE</li>
-            <li class="breadcrumb-item active">UI Tabs & Accordion</li>
-        </ol>
-        <h1 class="page-title">Tabs & Accordion - <span class="fw-semi-bold">Components</span></h1>
-        <div class="row mb-lg">
-            <div class="col-lg-6">
-                <div class="clearfix">
-                    <ul class="nav nav-tabs float-left" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-expanded="true">Basic</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#assumtion" role="tab" aria-controls="assumtion" aria-expanded="false">Assumtion</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">UI Tabs & Accordion</li>
+</ol>
+<h1 class="page-title">Tabs & Accordion - <span class="fw-semi-bold">Components</span></h1>
+<div class="row mb-lg">
+    <div class="col-lg-6">
+        <div class="clearfix">
+            <ul class="nav nav-tabs float-left" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#basic" role="tab"
+                        aria-controls="basic" aria-expanded="true">Basic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#assumtion" role="tab"
+                        aria-controls="assumtion" aria-expanded="false">Assumtion</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="dropdown1-tab" href="#dropdown1" role="tab" data-toggle="tab"
+                            aria-controls="dropdown1" aria-expanded="false">@fat</a>
+                        <a class="dropdown-item" id="dropdown2-tab" href="#dropdown2" role="tab" data-toggle="tab"
+                            aria-controls="dropdown2" aria-expanded="false">@mdo</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content mb-lg" id="myTabContent">
+            <div role="tabpanel" class="tab-pane active in clearfix" id="basic" aria-labelledby="basic-tab"
+                aria-expanded="true">
+                <h3>Tabs-enabled widget</h3>
+                <p>You will never know exactly how something will go until you try it.</p>
+                <p>You can think three hundred times and still have no precise result. If you see
+                    attractive girl all you need to do is to go and ask her to give you her phone. You don’t
+                    need to think about HOW it can turn out. All you have to do is to GO and DO IT. It
+                    should be super-fast and easy. No hesitation. You ask me: “What to do with these
+                    fearful thoughts preventing me from doing that?” The answer is to ignore them, because
+                    they can’t disappear immediately.</p>
+                <p>The same thing is for startups and ideas. If you have an idea right away after it appears in your
+                    mind you should go and make a first step to implement it. </p>
+                <div class="float-right">
+                    <button class="btn btn-inverse mr-3">Cancel</button>
+                    <button class="btn btn-primary">Some button</button>
+                </div>
+            </div>
+            <div class="tab-pane" id="assumtion" role="tabpanel" aria-labelledby="assumtion-tab" aria-expanded="false">
+                <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                    point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand
+                    if text is lore ipsum.</p>
+                <div class="d-flex align-items-end flex-wrap">
+                    <a class="btn btn-default mr-3" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
+                    <a class="btn btn-primary mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
+                </div>
+            </div>
+            <div class="tab-pane" id="dropdown1" role="tabpanel" aria-labelledby="dropdown1-tab" aria-expanded="false">
+                <p> If you will think too much it will sink in the swamp of never implemented plans and
+                    ideas or will just go away or will be implemented by someone else.</p>
+                <p><strong>5 months of doing everything to achieve nothing.</strong></p>
+                <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some
+                    text like this one?</p>
+            </div>
+            <div class="tab-pane" id="dropdown2" role="tabpanel" aria-labelledby="dropdown2-tab" aria-expanded="false">
+                <blockquote class="blockquote-sm blockquote mb-xs">
+                    Plan it? Make it!
+                </blockquote>
+                <p>The same thing is for startups and ideas. If you have an idea right away after it appears
+                    in your mind you should go and make a first step to implement it.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="tabbable tabs-left mb-lg">
+            <ul id="tabs2" class="nav nav-tabs flex-column">
+                <li class="nav-item"><a class="nav-link" href="#tab12" data-toggle="tab">Basic</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#tab22" data-toggle="tab">Assumtion</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab32" data-toggle="tab">Works</a></li>
+            </ul>
+            <div id="tabs2c" class="tab-content">
+                <div class="tab-pane" id="tab12">
+                    <p>
+                        I had an idea named Great Work. It was a service aimed to help people find their passion.
+                        Yes I know it sound crazy and super naïve but I worked on that. I started to work on
+                        planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
+                        I worked on everything but not the project itself.
+                    </p>
+                </div>
+                <div class="tab-pane active" id="tab22">
+                    <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to
+                        understand if text is lore ipsum.</p>
+                    <div class="d-flex align-items-end flex-wrap">
+                        <a class="btn btn-default mr-3" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
+                        <a class="btn btn-danger mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab32">
+                    <p> If you will think too much it will sink in the swamp of never implemented plans and
+                        ideas or will just go away or will be implemented by someone else.</p>
+                    <p><strong>5 months of doing everything to achieve nothing.</strong></p>
+                    <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there
+                        some text like this one?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="tabbable tabs-right">
+            <ul id="tabs3" class="nav nav-tabs flex-column">
+                <li class="nav-item"><a class="nav-link active" href="#tab13" data-toggle="tab">Basic</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab23" data-toggle="tab">Assumtion</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab33" data-toggle="tab">Works</a></li>
+            </ul>
+            <div id="tabs3c" class="tab-content">
+                <div class="tab-pane" id="tab13">
+                    <p>
+                        I had an idea named Great Work. It was a service aimed to help people find their passion.
+                        Yes I know it sound crazy and super naïve but I worked on that. I started to work on
+                        planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
+                        I worked on everything but not the project itself.
+                    </p>
+                </div>
+                <div class="tab-pane" id="tab23">
+                    <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to
+                        understand if text is lore ipsum.</p>
+                    <div class="d-flex align-items-end flex-wrap">
+                        <a class="btn btn-primary mr-3" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
+                        <a class="btn btn-default mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+                <div class="tab-pane active" id="tab33">
+                    <p> If you will think too much it will sink in the swamp of never implemented plans and
+                        ideas or will just go away or will be implemented by someone else.</p>
+                    <p><strong>5 months of doing everything to achieve nothing.</strong></p>
+                    <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there
+                        some text like this one?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 mb-3">
+        <div id="accordion" class="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h6 class="mb-0">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Collapsible Group Item
+                            <i class="fa fa-angle-up float-right"></i>
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" id="dropdown1-tab" href="#dropdown1" role="tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="false">@fat</a>
-                            <a class="dropdown-item" id="dropdown2-tab" href="#dropdown2" role="tab" data-toggle="tab" aria-controls="dropdown2" aria-expanded="false">@mdo</a>
-                        </div>
-                    </li>
-                </ul>
+                    </h6>
                 </div>
-                <div class="tab-content mb-lg" id="myTabContent">
-                    <div role="tabpanel" class="tab-pane active in clearfix" id="basic" aria-labelledby="basic-tab" aria-expanded="true">
-                        <h3>Tabs-enabled widget</h3>
-                        <p>You will never know exactly how something will go until you try it.</p>
-                        <p>You can think three hundred times and still have no precise result. If you see
-                            attractive girl all you need to do is to go and ask her to give you her phone. You don’t
-                            need to think about HOW it can turn out. All you have to do is to GO and DO IT. It
-                            should be super-fast and easy. No hesitation. You ask me: “What to do with these
-                            fearful thoughts preventing me from doing that?” The answer is to ignore them, because
-                            they can’t disappear immediately.</p>
-                        <p>The same thing is for startups and ideas. If you have an idea right away after it appears in your mind you should go and make a first step to implement it. </p>
-                        <div class="float-right">
-                            <button class="btn btn-inverse">Cancel</button>
-                            <button class="btn btn-primary">Some button</button>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="assumtion" role="tabpanel" aria-labelledby="assumtion-tab" aria-expanded="false">
-                        <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
-                            point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand if text is lore ipsum.</p>
-                        <div class="d-flex align-items-end flex-wrap">
-                            <a class="btn btn-default mr-sm" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
-                            <a class="btn btn-primary mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="dropdown1" role="tabpanel" aria-labelledby="dropdown1-tab" aria-expanded="false">
-                        <p> If you will think too much it will sink in the swamp of never implemented plans and
-                            ideas or will just go away or will be implemented by someone else.</p>
-                        <p><strong>5 months of doing everything to achieve nothing.</strong></p>
-                        <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one?</p>
-                    </div>
-                    <div class="tab-pane" id="dropdown2" role="tabpanel" aria-labelledby="dropdown2-tab" aria-expanded="false">
-                        <blockquote class="blockquote-sm blockquote mb-xs">
-                            Plan it? Make it!
-                        </blockquote>
-                        <p>The same thing is for startups and ideas. If you have an idea right away after it appears
-                            in your mind you should go and make a first step to implement it.</p>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Get base styles and flexible support for collapsible components like accordions and navigation.
+                        Using the collapse plugin, we built a simple accordion by extending the panel component.
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="tabbable tabs-left mb-lg">
-                    <ul id="tabs2" class="nav nav-tabs flex-column">
-                        <li class="nav-item"><a class="nav-link" href="#tab12" data-toggle="tab">Basic</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#tab22" data-toggle="tab">Assumtion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tab32"  data-toggle="tab">Works</a></li>
-                    </ul>
-                    <div id="tabs2c" class="tab-content">
-                        <div class="tab-pane" id="tab12">
-                            <p>
-                                I had an idea named Great Work. It was a service aimed to help people find their passion.
-                                Yes I know it sound crazy and super naïve but I worked on that. I started to work on
-                                planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
-                                I worked on everything but not the project itself.
-                            </p>
-                        </div>
-                        <div class="tab-pane active" id="tab22">
-                            <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
-                                point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand if text is lore ipsum.</p>
-                           <div class="d-flex align-items-end flex-wrap">
-                                <a class="btn btn-default mr-sm" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
-                                <a class="btn btn-danger mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
-                           </div>
-                        </div>
-                        <div class="tab-pane" id="tab32">
-                            <p> If you will think too much it will sink in the swamp of never implemented plans and
-                                ideas or will just go away or will be implemented by someone else.</p>
-                            <p><strong>5 months of doing everything to achieve nothing.</strong></p>
-                            <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one?</p>
-                        </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Random from the Web
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><span class="fw-semi-bold">Light Blue</span> - is a next generation admin template based on
+                            the latest Metro design. There are few reasons we want to tell you, why we have created it:
+                            We didn't like the darkness of most of admin templates, so we created this light one. We
+                            didn't like the high contrast of most of admin templates, so we created this unobtrusive
+                            one. We searched for a
+                            solution of how to make widgets look like real widgets, so we decided that deep background -
+                            is what makes widgets look real.
+                        </p>
+                        <p class="no-margin text-muted"><em>- Some One</em></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="tabbable tabs-right">
-                    <ul id="tabs3" class="nav nav-tabs flex-column">
-                        <li class="nav-item"><a class="nav-link active" href="#tab13" data-toggle="tab">Basic</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tab23" data-toggle="tab">Assumtion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tab33"  data-toggle="tab">Works</a></li>
-                    </ul>
-                    <div id="tabs3c" class="tab-content">
-                        <div class="tab-pane" id="tab13">
-                            <p>
-                                I had an idea named Great Work. It was a service aimed to help people find their passion.
-                                Yes I know it sound crazy and super naïve but I worked on that. I started to work on
-                                planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
-                                I worked on everything but not the project itself.
-                            </p>
-                        </div>
-                        <div class="tab-pane" id="tab23">
-                            <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
-                                point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand if text is lore ipsum.</p>
-                            <div class="d-flex align-items-end flex-wrap">
-                                <a class="btn btn-primary mr-sm" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
-                                <a class="btn btn-default mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
-                           </div>
-                        </div>
-                        <div class="tab-pane active" id="tab33">
-                            <p> If you will think too much it will sink in the swamp of never implemented plans and
-                                ideas or will just go away or will be implemented by someone else.</p>
-                            <p><strong>5 months of doing everything to achieve nothing.</strong></p>
-                            <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one?</p>
-                        </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Check It
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually.
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 mb-3">
-                <div id="accordion" class="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h6 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                    Collapsible Group Item
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
+    </div>
+    <div class="col-lg-6">
+        <div id="accordion2" class="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne2">
+                    <h6 class="mb-0">
+                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                            Collapsible Group Item
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body">
-                                Get base styles and flexible support for collapsible components like accordions and navigation.
-                                Using the collapse plugin, we built a simple accordion by extending the panel component.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                    Random from the Web
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                <p><span class="fw-semi-bold">Light Blue</span> - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it: We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one. We searched for a
-                                    solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
-                                </p>
-                                <p class="no-margin text-muted"><em>- Some One</em></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                    Check It
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                                Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually.
-                            </div>
-                        </div>
+                <div id="collapseOne2" class="collapse show" aria-labelledby="headingOne2" data-parent="#accordion2">
+                    <div class="card-body">
+                        Get base styles and flexible support for collapsible components like accordions and navigation.
+                        Using the collapse plugin, we built a simple accordion by extending the panel component.
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div id="accordion2" class="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne2">
-                            <h6 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
-                                    Collapsible Group Item
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-
-                        <div id="collapseOne2" class="collapse show" aria-labelledby="headingOne2" data-parent="#accordion2">
-                            <div class="card-body">
-                                Get base styles and flexible support for collapsible components like accordions and navigation.
-                                Using the collapse plugin, we built a simple accordion by extending the panel component.
-                            </div>
-                        </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo2">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
+                            Normal Text Insertion
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion2">
+                    <div class="card-body">
+                        <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very
+                            controversial point. I think the opposite actually. Everyone knows what is lore ipsum
+                            - it is easy to understand if text is lore ipsum. You'll automatically skip -
+                            because you know - it's just non-informative stub. But what if there some text like
+                            this one? You start to read it! But the goal of this text is different. The goal is
+                            the example. So a bit of Lore Ipsum is always very good practice. Keep it in mind!</p>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo2">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
-                                    Normal Text Insertion
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion2">
-                            <div class="card-body">
-                                <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very
-                                    controversial point. I think the opposite actually. Everyone knows what is lore ipsum
-                                    - it is easy to understand if text is lore ipsum. You'll automatically skip -
-                                    because you know - it's just non-informative stub. But what if there some text like
-                                    this one? You start to read it! But the goal of this text is different. The goal is
-                                    the example. So a bit of Lore Ipsum is always very good practice. Keep it in mind!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree2">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
-                                    Check It
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordion2">
-                            <div class="card-body">
-                                Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually.
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree2">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
+                            Check It
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordion2">
+                    <div class="card-body">
+                        Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually.
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
             <footer class="content-footer hidden-print">
                 HTML5 Light Blue - Bootstrap Admin Dashboard Template Made by <a href="https://flatlogic.com"
@@ -1021,7 +1041,7 @@
     <script src="../js/app.js"></script>
 
     <!-- Page scripts -->
-        <script src="../js/components/ui-tabs-accordion.js"></script>
+<script src="../js/components/ui-tabs-accordion.js"></script>
 </body>
 
 </html>

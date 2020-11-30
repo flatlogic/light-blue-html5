@@ -1,254 +1,274 @@
 {{#extend "layout" title="Light Blue HTML5 Dashboard - UI Tabs & Accordion"}}
-    {{#content "sidebar"}}
-        {{> sidebar active="ui_tabs_accordion"}}
-    {{/content}}
-    {{#content "content" mode="replace"}}
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">YOU ARE HERE</li>
-            <li class="breadcrumb-item active">UI Tabs & Accordion</li>
-        </ol>
-        <h1 class="page-title">Tabs & Accordion - <span class="fw-semi-bold">Components</span></h1>
-        <div class="row mb-lg">
-            <div class="col-lg-6">
-                <div class="clearfix">
-                    <ul class="nav nav-tabs float-left" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-expanded="true">Basic</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#assumtion" role="tab" aria-controls="assumtion" aria-expanded="false">Assumtion</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+{{#content "sidebar"}}
+{{> sidebar active="ui_tabs_accordion"}}
+{{/content}}
+{{#content "content" mode="replace"}}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">UI Tabs & Accordion</li>
+</ol>
+<h1 class="page-title">Tabs & Accordion - <span class="fw-semi-bold">Components</span></h1>
+<div class="row mb-lg">
+    <div class="col-lg-6">
+        <div class="clearfix">
+            <ul class="nav nav-tabs float-left" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#basic" role="tab"
+                        aria-controls="basic" aria-expanded="true">Basic</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#assumtion" role="tab"
+                        aria-controls="assumtion" aria-expanded="false">Assumtion</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="dropdown1-tab" href="#dropdown1" role="tab" data-toggle="tab"
+                            aria-controls="dropdown1" aria-expanded="false">@fat</a>
+                        <a class="dropdown-item" id="dropdown2-tab" href="#dropdown2" role="tab" data-toggle="tab"
+                            aria-controls="dropdown2" aria-expanded="false">@mdo</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content mb-lg" id="myTabContent">
+            <div role="tabpanel" class="tab-pane active in clearfix" id="basic" aria-labelledby="basic-tab"
+                aria-expanded="true">
+                <h3>Tabs-enabled widget</h3>
+                <p>You will never know exactly how something will go until you try it.</p>
+                <p>You can think three hundred times and still have no precise result. If you see
+                    attractive girl all you need to do is to go and ask her to give you her phone. You don’t
+                    need to think about HOW it can turn out. All you have to do is to GO and DO IT. It
+                    should be super-fast and easy. No hesitation. You ask me: “What to do with these
+                    fearful thoughts preventing me from doing that?” The answer is to ignore them, because
+                    they can’t disappear immediately.</p>
+                <p>The same thing is for startups and ideas. If you have an idea right away after it appears in your
+                    mind you should go and make a first step to implement it. </p>
+                <div class="float-right">
+                    <button class="btn btn-inverse mr-3">Cancel</button>
+                    <button class="btn btn-primary">Some button</button>
+                </div>
+            </div>
+            <div class="tab-pane" id="assumtion" role="tabpanel" aria-labelledby="assumtion-tab" aria-expanded="false">
+                <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                    point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand
+                    if text is lore ipsum.</p>
+                <div class="d-flex align-items-end flex-wrap">
+                    <a class="btn btn-default mr-3" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
+                    <a class="btn btn-primary mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
+                </div>
+            </div>
+            <div class="tab-pane" id="dropdown1" role="tabpanel" aria-labelledby="dropdown1-tab" aria-expanded="false">
+                <p> If you will think too much it will sink in the swamp of never implemented plans and
+                    ideas or will just go away or will be implemented by someone else.</p>
+                <p><strong>5 months of doing everything to achieve nothing.</strong></p>
+                <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some
+                    text like this one?</p>
+            </div>
+            <div class="tab-pane" id="dropdown2" role="tabpanel" aria-labelledby="dropdown2-tab" aria-expanded="false">
+                <blockquote class="blockquote-sm blockquote mb-xs">
+                    Plan it? Make it!
+                </blockquote>
+                <p>The same thing is for startups and ideas. If you have an idea right away after it appears
+                    in your mind you should go and make a first step to implement it.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="tabbable tabs-left mb-lg">
+            <ul id="tabs2" class="nav nav-tabs flex-column">
+                <li class="nav-item"><a class="nav-link" href="#tab12" data-toggle="tab">Basic</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#tab22" data-toggle="tab">Assumtion</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab32" data-toggle="tab">Works</a></li>
+            </ul>
+            <div id="tabs2c" class="tab-content">
+                <div class="tab-pane" id="tab12">
+                    <p>
+                        I had an idea named Great Work. It was a service aimed to help people find their passion.
+                        Yes I know it sound crazy and super naïve but I worked on that. I started to work on
+                        planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
+                        I worked on everything but not the project itself.
+                    </p>
+                </div>
+                <div class="tab-pane active" id="tab22">
+                    <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to
+                        understand if text is lore ipsum.</p>
+                    <div class="d-flex align-items-end flex-wrap">
+                        <a class="btn btn-default mr-3" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
+                        <a class="btn btn-danger mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab32">
+                    <p> If you will think too much it will sink in the swamp of never implemented plans and
+                        ideas or will just go away or will be implemented by someone else.</p>
+                    <p><strong>5 months of doing everything to achieve nothing.</strong></p>
+                    <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there
+                        some text like this one?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="tabbable tabs-right">
+            <ul id="tabs3" class="nav nav-tabs flex-column">
+                <li class="nav-item"><a class="nav-link active" href="#tab13" data-toggle="tab">Basic</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab23" data-toggle="tab">Assumtion</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tab33" data-toggle="tab">Works</a></li>
+            </ul>
+            <div id="tabs3c" class="tab-content">
+                <div class="tab-pane" id="tab13">
+                    <p>
+                        I had an idea named Great Work. It was a service aimed to help people find their passion.
+                        Yes I know it sound crazy and super naïve but I worked on that. I started to work on
+                        planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
+                        I worked on everything but not the project itself.
+                    </p>
+                </div>
+                <div class="tab-pane" id="tab23">
+                    <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to
+                        understand if text is lore ipsum.</p>
+                    <div class="d-flex align-items-end flex-wrap">
+                        <a class="btn btn-primary mr-3" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
+                        <a class="btn btn-default mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
+                    </div>
+                </div>
+                <div class="tab-pane active" id="tab33">
+                    <p> If you will think too much it will sink in the swamp of never implemented plans and
+                        ideas or will just go away or will be implemented by someone else.</p>
+                    <p><strong>5 months of doing everything to achieve nothing.</strong></p>
+                    <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there
+                        some text like this one?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 mb-3">
+        <div id="accordion" class="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h6 class="mb-0">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            Collapsible Group Item
+                            <i class="fa fa-angle-up float-right"></i>
                         </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" id="dropdown1-tab" href="#dropdown1" role="tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="false">@fat</a>
-                            <a class="dropdown-item" id="dropdown2-tab" href="#dropdown2" role="tab" data-toggle="tab" aria-controls="dropdown2" aria-expanded="false">@mdo</a>
-                        </div>
-                    </li>
-                </ul>
+                    </h6>
                 </div>
-                <div class="tab-content mb-lg" id="myTabContent">
-                    <div role="tabpanel" class="tab-pane active in clearfix" id="basic" aria-labelledby="basic-tab" aria-expanded="true">
-                        <h3>Tabs-enabled widget</h3>
-                        <p>You will never know exactly how something will go until you try it.</p>
-                        <p>You can think three hundred times and still have no precise result. If you see
-                            attractive girl all you need to do is to go and ask her to give you her phone. You don’t
-                            need to think about HOW it can turn out. All you have to do is to GO and DO IT. It
-                            should be super-fast and easy. No hesitation. You ask me: “What to do with these
-                            fearful thoughts preventing me from doing that?” The answer is to ignore them, because
-                            they can’t disappear immediately.</p>
-                        <p>The same thing is for startups and ideas. If you have an idea right away after it appears in your mind you should go and make a first step to implement it. </p>
-                        <div class="float-right">
-                            <button class="btn btn-inverse">Cancel</button>
-                            <button class="btn btn-primary">Some button</button>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="assumtion" role="tabpanel" aria-labelledby="assumtion-tab" aria-expanded="false">
-                        <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
-                            point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand if text is lore ipsum.</p>
-                        <div class="d-flex align-items-end flex-wrap">
-                            <a class="btn btn-default mr-sm" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
-                            <a class="btn btn-primary mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="dropdown1" role="tabpanel" aria-labelledby="dropdown1-tab" aria-expanded="false">
-                        <p> If you will think too much it will sink in the swamp of never implemented plans and
-                            ideas or will just go away or will be implemented by someone else.</p>
-                        <p><strong>5 months of doing everything to achieve nothing.</strong></p>
-                        <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one?</p>
-                    </div>
-                    <div class="tab-pane" id="dropdown2" role="tabpanel" aria-labelledby="dropdown2-tab" aria-expanded="false">
-                        <blockquote class="blockquote-sm blockquote mb-xs">
-                            Plan it? Make it!
-                        </blockquote>
-                        <p>The same thing is for startups and ideas. If you have an idea right away after it appears
-                            in your mind you should go and make a first step to implement it.</p>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Get base styles and flexible support for collapsible components like accordions and navigation.
+                        Using the collapse plugin, we built a simple accordion by extending the panel component.
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="tabbable tabs-left mb-lg">
-                    <ul id="tabs2" class="nav nav-tabs flex-column">
-                        <li class="nav-item"><a class="nav-link" href="#tab12" data-toggle="tab">Basic</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#tab22" data-toggle="tab">Assumtion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tab32"  data-toggle="tab">Works</a></li>
-                    </ul>
-                    <div id="tabs2c" class="tab-content">
-                        <div class="tab-pane" id="tab12">
-                            <p>
-                                I had an idea named Great Work. It was a service aimed to help people find their passion.
-                                Yes I know it sound crazy and super naïve but I worked on that. I started to work on
-                                planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
-                                I worked on everything but not the project itself.
-                            </p>
-                        </div>
-                        <div class="tab-pane active" id="tab22">
-                            <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
-                                point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand if text is lore ipsum.</p>
-                           <div class="d-flex align-items-end flex-wrap">
-                                <a class="btn btn-default mr-sm" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
-                                <a class="btn btn-danger mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
-                           </div>
-                        </div>
-                        <div class="tab-pane" id="tab32">
-                            <p> If you will think too much it will sink in the swamp of never implemented plans and
-                                ideas or will just go away or will be implemented by someone else.</p>
-                            <p><strong>5 months of doing everything to achieve nothing.</strong></p>
-                            <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one?</p>
-                        </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            Random from the Web
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <p><span class="fw-semi-bold">Light Blue</span> - is a next generation admin template based on
+                            the latest Metro design. There are few reasons we want to tell you, why we have created it:
+                            We didn't like the darkness of most of admin templates, so we created this light one. We
+                            didn't like the high contrast of most of admin templates, so we created this unobtrusive
+                            one. We searched for a
+                            solution of how to make widgets look like real widgets, so we decided that deep background -
+                            is what makes widgets look real.
+                        </p>
+                        <p class="no-margin text-muted"><em>- Some One</em></p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="tabbable tabs-right">
-                    <ul id="tabs3" class="nav nav-tabs flex-column">
-                        <li class="nav-item"><a class="nav-link active" href="#tab13" data-toggle="tab">Basic</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tab23" data-toggle="tab">Assumtion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tab33"  data-toggle="tab">Works</a></li>
-                    </ul>
-                    <div id="tabs3c" class="tab-content">
-                        <div class="tab-pane" id="tab13">
-                            <p>
-                                I had an idea named Great Work. It was a service aimed to help people find their passion.
-                                Yes I know it sound crazy and super naïve but I worked on that. I started to work on
-                                planning, graphics, presentations, pictures, descriptions, articles, investments and so on.
-                                I worked on everything but not the project itself.
-                            </p>
-                        </div>
-                        <div class="tab-pane" id="tab23">
-                            <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
-                                point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand if text is lore ipsum.</p>
-                            <div class="d-flex align-items-end flex-wrap">
-                                <a class="btn btn-primary mr-sm" href="#">&nbsp;&nbsp;Check&nbsp;&nbsp;</a>
-                                <a class="btn btn-default mt-sm" href="#">&nbsp;&nbsp;Dance?&nbsp;&nbsp;</a>
-                           </div>
-                        </div>
-                        <div class="tab-pane active" id="tab33">
-                            <p> If you will think too much it will sink in the swamp of never implemented plans and
-                                ideas or will just go away or will be implemented by someone else.</p>
-                            <p><strong>5 months of doing everything to achieve nothing.</strong></p>
-                            <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one?</p>
-                        </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Check It
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually.
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-6 mb-3">
-                <div id="accordion" class="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h6 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                    Collapsible Group Item
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
+    </div>
+    <div class="col-lg-6">
+        <div id="accordion2" class="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne2">
+                    <h6 class="mb-0">
+                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                            Collapsible Group Item
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body">
-                                Get base styles and flexible support for collapsible components like accordions and navigation.
-                                Using the collapse plugin, we built a simple accordion by extending the panel component.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                    Random from the Web
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                <p><span class="fw-semi-bold">Light Blue</span> - is a next generation admin template based on the latest Metro design. There are few reasons we want to tell you, why we have created it: We didn't like the darkness of most of admin templates, so we created this light one. We didn't like the high contrast of most of admin templates, so we created this unobtrusive one. We searched for a
-                                    solution of how to make widgets look like real widgets, so we decided that deep background - is what makes widgets look real.
-                                </p>
-                                <p class="no-margin text-muted"><em>- Some One</em></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                    Check It
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                                Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually.
-                            </div>
-                        </div>
+                <div id="collapseOne2" class="collapse show" aria-labelledby="headingOne2" data-parent="#accordion2">
+                    <div class="card-body">
+                        Get base styles and flexible support for collapsible components like accordions and navigation.
+                        Using the collapse plugin, we built a simple accordion by extending the panel component.
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div id="accordion2" class="accordion">
-                    <div class="card">
-                        <div class="card-header" id="headingOne2">
-                            <h6 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
-                                    Collapsible Group Item
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-
-                        <div id="collapseOne2" class="collapse show" aria-labelledby="headingOne2" data-parent="#accordion2">
-                            <div class="card-body">
-                                Get base styles and flexible support for collapsible components like accordions and navigation.
-                                Using the collapse plugin, we built a simple accordion by extending the panel component.
-                            </div>
-                        </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo2">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
+                            Normal Text Insertion
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion2">
+                    <div class="card-body">
+                        <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very
+                            controversial point. I think the opposite actually. Everyone knows what is lore ipsum
+                            - it is easy to understand if text is lore ipsum. You'll automatically skip -
+                            because you know - it's just non-informative stub. But what if there some text like
+                            this one? You start to read it! But the goal of this text is different. The goal is
+                            the example. So a bit of Lore Ipsum is always very good practice. Keep it in mind!</p>
                     </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo2">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
-                                    Normal Text Insertion
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2" data-parent="#accordion2">
-                            <div class="card-body">
-                                <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very
-                                    controversial point. I think the opposite actually. Everyone knows what is lore ipsum
-                                    - it is easy to understand if text is lore ipsum. You'll automatically skip -
-                                    because you know - it's just non-informative stub. But what if there some text like
-                                    this one? You start to read it! But the goal of this text is different. The goal is
-                                    the example. So a bit of Lore Ipsum is always very good practice. Keep it in mind!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree2">
-                            <h6 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
-                                    Check It
-                                    <i class="fa fa-angle-up float-right"></i>
-                                </a>
-                            </h6>
-                        </div>
-                        <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordion2">
-                            <div class="card-body">
-                                Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial point. I think the opposite actually.
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree2">
+                    <h6 class="mb-0">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
+                            Check It
+                            <i class="fa fa-angle-up float-right"></i>
+                        </a>
+                    </h6>
+                </div>
+                <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2" data-parent="#accordion2">
+                    <div class="card-body">
+                        Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
+                        point. I think the opposite actually.
                     </div>
                 </div>
             </div>
         </div>
-    {{/content}}
-    {{#content "scripts"}}
-        <script src="../js/components/ui-tabs-accordion.js"></script>
-    {{/content}}
+    </div>
+</div>
+{{/content}}
+{{#content "scripts"}}
+<script src="../js/components/ui-tabs-accordion.js"></script>
+{{/content}}
 {{/extend}}

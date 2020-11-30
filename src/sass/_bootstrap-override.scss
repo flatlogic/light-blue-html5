@@ -237,6 +237,10 @@ legend {
   border-top: 1px solid $widget-border-color;
 }
 
+.table-hover tbody tr:hover {
+  background-color: $widget-bg-color;
+}
+
 //
 // Dropdown menus
 // --------------------------------------------------
@@ -1012,11 +1016,6 @@ legend {
 
 .list-group-item{
   background-color: transparent;
-  &,
-  &:hover {
-    //color: $body-color;
-  }
-
   &:hover {
     background: $widget-bg-color;
     text-decoration: none;

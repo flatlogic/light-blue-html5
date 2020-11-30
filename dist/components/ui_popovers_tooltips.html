@@ -380,309 +380,309 @@
             </div>
         </div>
     </nav>
-        <!--
-          Main sidebar seen on the left. may be static or collapsing depending on selected state.
-        
-            * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
-            * Static - stays always open.
-        -->
-        <nav id="sidebar" class="sidebar" role="navigation">
-            <!-- need this .js class to initiate slimscroll -->
-            <div class="js-sidebar-content">
-                <header class="logo d-none d-md-block">
-                    <a href="../dashboard/index.html"><span class="fw-thin">Light</span> <b>Blue</b></a>
-                </header>
-                <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
-                     looks good, so adding it and enhancing with notifications -->
-        
-                <!-- main notification links are placed inside of .sidebar-nav -->
-                <ul class="sidebar-nav">
+<!--
+  Main sidebar seen on the left. may be static or collapsing depending on selected state.
+
+    * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+    * Static - stays always open.
+-->
+<nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
+    <div class="js-sidebar-content">
+        <header class="logo d-none d-md-block">
+            <a href="../dashboard/index.html"><span class="fw-thin">Light</span> <b>Blue</b></a>
+        </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
+
+        <!-- main notification links are placed inside of .sidebar-nav -->
+        <ul class="sidebar-nav">
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-home"></i>
+                    </span>
+                    Dashboard
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-dashboard" class="collapse ">
+                    <li class=""><a href="../dashboard/index.html">Visits</a></li>
+                    <li class=""><a href="../dashboard/analytics.html">Analytics</a></li>
+                    <li class=""><a href="../dashboard/widgets.html">Widgets</a></li>
+                </ul>
+            </li>
+<!--            <li class="">-->
+<!--                <a href="../other/chat.html">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="fi flaticon-users"></i>-->
+<!--                    </span>-->
+<!--                    Chat-->
+<!--                    <sup class="headerLabel text-info">awesome</sup>-->
+<!--                </a>-->
+<!--            </li>-->
+            <li class="">
+                <a href="../other/package.html">
+                    <span class="icon">
+                      <i class="fi flaticon-database-1"></i>
+                    </span>
+                    LB Package
+                </a>
+            </li>
+            <li class="">
+                <a href="../other/profile.html">
+                    <span class="icon">
+                        <i class="fi flaticon-user"></i>
+                    </span>
+                    Profile
+                </a>
+            </li>
+            <li class="">
+                <a href="../other/inbox.html">
+                    <span class="icon">
+                        <i class="fi flaticon-paper-plane"></i>
+                    </span>
+                    Email
+                    <span class="badge badge-primary">
+                        9
+                    </span>
+                </a>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-diamond"></i>
+                    </span>
+                    E-commerce
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-pages" class="collapse ">
+                    <li class=""><a href="../e-commerce/product_detail.html">Product Detail</a></li>
+                    <li class=""><a href="../e-commerce/product_grid.html">Product Grid</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- every .sidebar-nav may have a title -->
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <ul class="sidebar-nav">
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-network"></i>
+                    </span>
+                    Core
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-core" class="collapse ">
+                    <li class=""><a href="../core/core_typography.html">Typography</a></li>
+                    <li class=""><a href="../core/core_colors.html">Colors</a></li>
+                    <li class=""><a href="../core/core_grid.html">Grid</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-layers"></i>
+                    </span>
+                    UI Elements
+                    <sup class="text-success fw-semi-bold">
+                        new
+                    </sup>
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-ui" class="collapse  show ">
+                    <li class=""><a href="../components/ui_alerts.html">Alerts</a></li>
+                    <li class=""><a href="../components/ui_badge.html">Badge</a></li>
+                    <li class=""><a href="../components/ui_buttons.html">Buttons</a></li>
+                    <li class=""><a href="../components/ui_card.html">Card</a></li>
+                    <li class=""><a href="../components/ui_carousel.html">Carousel</a></li>
+                    <li class=""><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
+                    <li class=""><a href="../components/ui_icons.html">Icons</a></li>
+                    <li class=""><a href="../components/ui_list_groups.html">List Groups</a></li>
+                    <li class=""><a href="../components/ui_modal.html" data-no-pjax>Modal</a></li>
+                    <li class=""><a href="../components/ui_nav.html">Nav</a></li>
+                    <li class=""><a href="../components/ui_navbar.html">Navbar</a></li>
+                    <li class=""><a href="../components/ui_notifications.html">Notifications</a></li>
+                    <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
+                    <li class=" active "><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
+                    <li class=""><a href="../components/ui_progress.html">Progress</a></li>
+                    <li class=""><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
+
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-list"></i>
+                    </span>
+                    Forms
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-forms" class="collapse ">
+                    <li class=""><a href="../form/form_elements.html">Form Elements</a></li>
+                    <li class=""><a href="../form/form_validation.html">Form Validation</a></li>
+                    <li class=""><a href="../form/form_wizard.html">Form Wizard</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-controls"></i>
+                    </span>
+                    Charts
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-charts"
+                    class="collapse ">
                     <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-home"></i>
-                            </span>
-                            Dashboard
+                        <a href="../charts/charts.html" data-no-pjax>Charts Overview</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/flot.html" data-no-pjax>Flot Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/morris.html" data-no-pjax>Morris Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/rickshaw.html" data-no-pjax>Rickshaw Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/sparkline.html" data-no-pjax>Sparkline Charts</a>
+                    </li>
+                    <li class="">
+                        <a class="no-pjax" href="../charts/d3_plain.html" data-no-pjax>D3 version 5 Charts</a>
+                    </li>
+                    <li class="">
+                        <a href="../charts/easy_pie.html" data-no-pjax>Easy Pie Charts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="../other/grid.html">
+                    <span class="icon">
+                        <i class="fi flaticon-menu-4"></i>
+                    </span>
+                    Grid
+                </a>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-map-location"></i>
+                    </span>
+                    Maps
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-maps" class="collapse ">
+                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
+                         target page -->
+                    <li class=""><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class=""><a href="../maps/maps_vector.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-equal-1"></i>
+                    </span>
+                    Tables
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-tables" class="collapse ">
+                    <li class=""><a href="../tables/tables_basic.html">Tables Basic</a></li>
+                    <li class=""><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-star"></i>
+                    </span>
+                    Extra
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-extra" class="collapse ">
+                    <li class=""><a href="../extra/calendar.html">Calendar</a></li>
+                    <li class=""><a href="../extra/invoice.html">Invoice</a></li>
+                    <li class=""><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
+                    <li class=""><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
+                    <li class=""><a href="../extra/gallery.html">Gallery</a></li>
+                    <li class=""><a href="../extra/search.html">Search Results</a></li>
+                    <li class=""><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-folder-10"></i>
+                    </span>
+                    Menu Levels
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-levels" class="collapse">
+                    <li><a href="#">Level 1</a></li>
+                    <li>
+                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
+                            Level 2
                             <i class="toggle fa fa-angle-down"></i>
                         </a>
-                        <ul id="sidebar-dashboard" class="collapse ">
-                            <li class=""><a href="../dashboard/index.html">Visits</a></li>
-                            <li class=""><a href="../dashboard/analytics.html">Analytics</a></li>
-                            <li class=""><a href="../dashboard/widgets.html">Widgets</a></li>
-                        </ul>
-                    </li>
-        <!--            <li class="">-->
-        <!--                <a href="../other/chat.html">-->
-        <!--                    <span class="icon">-->
-        <!--                      <i class="fi flaticon-users"></i>-->
-        <!--                    </span>-->
-        <!--                    Chat-->
-        <!--                    <sup class="headerLabel text-info">awesome</sup>-->
-        <!--                </a>-->
-        <!--            </li>-->
-                    <li class="">
-                        <a href="../other/package.html">
-                            <span class="icon">
-                              <i class="fi flaticon-database-1"></i>
-                            </span>
-                            LB Package
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="../other/profile.html">
-                            <span class="icon">
-                                <i class="fi flaticon-user"></i>
-                            </span>
-                            Profile
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="../other/inbox.html">
-                            <span class="icon">
-                                <i class="fi flaticon-paper-plane"></i>
-                            </span>
-                            Email
-                            <span class="badge badge-primary">
-                                9
-                            </span>
-                        </a>
-                    </li>
-                    <li class="">
-                        <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-diamond"></i>
-                            </span>
-                            E-commerce
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-pages" class="collapse ">
-                            <li class=""><a href="../e-commerce/product_detail.html">Product Detail</a></li>
-                            <li class=""><a href="../e-commerce/product_grid.html">Product Grid</a></li>
+                        <ul id="sidebar-sub-levels" class="collapse">
+                            <li><a href="#">Level 3</a></li>
+                            <li><a href="#">Level 3</a></li>
                         </ul>
                     </li>
                 </ul>
-                <!-- every .sidebar-nav may have a title -->
-                <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
-                <ul class="sidebar-nav">
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-network"></i>
-                            </span>
-                            Core
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-core" class="collapse ">
-                            <li class=""><a href="../core/core_typography.html">Typography</a></li>
-                            <li class=""><a href="../core/core_colors.html">Colors</a></li>
-                            <li class=""><a href="../core/core_grid.html">Grid</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-layers"></i>
-                            </span>
-                            UI Elements
-                            <sup class="text-success fw-semi-bold">
-                                new
-                            </sup>
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-ui" class="collapse  show ">
-                            <li class=""><a href="../components/ui_alerts.html">Alerts</a></li>
-                            <li class=""><a href="../components/ui_badge.html">Badge</a></li>
-                            <li class=""><a href="../components/ui_buttons.html">Buttons</a></li>
-                            <li class=""><a href="../components/ui_card.html">Card</a></li>
-                            <li class=""><a href="../components/ui_carousel.html">Carousel</a></li>
-                            <li class=""><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
-                            <li class=""><a href="../components/ui_icons.html">Icons</a></li>
-                            <li class=""><a href="../components/ui_list_groups.html">List Groups</a></li>
-                            <li class=""><a href="../components/ui_modal.html" data-no-pjax>Modal</a></li>
-                            <li class=""><a href="../components/ui_nav.html">Nav</a></li>
-                            <li class=""><a href="../components/ui_navbar.html">Navbar</a></li>
-                            <li class=""><a href="../components/ui_notifications.html">Notifications</a></li>
-                            <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
-                            <li class=" active "><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
-                            <li class=""><a href="../components/ui_progress.html">Progress</a></li>
-                            <li class=""><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
-        
-                        </ul>
-                    </li>
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-list"></i>
-                            </span>
-                            Forms
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-forms" class="collapse ">
-                            <li class=""><a href="../form/form_elements.html">Form Elements</a></li>
-                            <li class=""><a href="../form/form_validation.html">Form Validation</a></li>
-                            <li class=""><a href="../form/form_wizard.html">Form Wizard</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-controls"></i>
-                            </span>
-                            Charts
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-charts"
-                            class="collapse ">
-                            <li class="">
-                                <a href="../charts/charts.html" data-no-pjax>Charts Overview</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/flot.html" data-no-pjax>Flot Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/morris.html" data-no-pjax>Morris Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/rickshaw.html" data-no-pjax>Rickshaw Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/sparkline.html" data-no-pjax>Sparkline Charts</a>
-                            </li>
-                            <li class="">
-                                <a class="no-pjax" href="../charts/d3_plain.html" data-no-pjax>D3 version 5 Charts</a>
-                            </li>
-                            <li class="">
-                                <a href="../charts/easy_pie.html" data-no-pjax>Easy Pie Charts</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="../other/grid.html">
-                            <span class="icon">
-                                <i class="fi flaticon-menu-4"></i>
-                            </span>
-                            Grid
-                        </a>
-                    </li>
-                    <li class="">
-                        <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-map-location"></i>
-                            </span>
-                            Maps
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-maps" class="collapse ">
-                            <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
-                                 target page -->
-                            <li class=""><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
-                            <li class=""><a href="../maps/maps_vector.html">Vector Maps</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-equal-1"></i>
-                            </span>
-                            Tables
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-tables" class="collapse ">
-                            <li class=""><a href="../tables/tables_basic.html">Tables Basic</a></li>
-                            <li class=""><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-star"></i>
-                            </span>
-                            Extra
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-extra" class="collapse ">
-                            <li class=""><a href="../extra/calendar.html">Calendar</a></li>
-                            <li class=""><a href="../extra/invoice.html">Invoice</a></li>
-                            <li class=""><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
-                            <li class=""><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
-                            <li class=""><a href="../extra/gallery.html">Gallery</a></li>
-                            <li class=""><a href="../extra/search.html">Search Results</a></li>
-                            <li class=""><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
-                            <span class="icon">
-                                <i class="fi flaticon-folder-10"></i>
-                            </span>
-                            Menu Levels
-                            <i class="toggle fa fa-angle-down"></i>
-                        </a>
-                        <ul id="sidebar-levels" class="collapse">
-                            <li><a href="#">Level 1</a></li>
-                            <li>
-                                <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
-                                    Level 2
-                                    <i class="toggle fa fa-angle-down"></i>
-                                </a>
-                                <ul id="sidebar-sub-levels" class="collapse">
-                                    <li><a href="#">Level 3</a></li>
-                                    <li><a href="#">Level 3</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
-                <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
-                <ul class="sidebar-labels">
-                    <li>
-                        <a href="#">
-                            <!-- yep, .circle again -->
-                            <i class="fa fa-circle text-danger mr-xs"></i>
-                            <span class="label-name">My Recent</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-circle text-primary mr-xs"></i>
-                            <span class="label-name">Starred</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-circle mr-xs"></i>
-                            <span class="label-name">Background</span>
-                        </a>
-                    </li>
-                </ul>
-                <h5 class="sidebar-nav-title">Projects</h5>
-                <!-- A place for sidebar notifications & alerts -->
-                <div class="sidebar-alerts">
-                    <div class="alert">
-                        <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                        <span class="fw-normal">Sales Report</span> <br>
-                        <div class="progress progress-xs mt-2">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <small>Calculating x-axis bias... 65%</small>
-                    </div>
-                    <div class="alert">
-                        <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                        <span class="fw-normal">Personal Responsibility</span> <br>
-                        <div class="progress progress-xs mt-2">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <small>Provide required notes</small>
-                    </div>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+        <ul class="sidebar-labels">
+            <li>
+                <a href="#">
+                    <!-- yep, .circle again -->
+                    <i class="fa fa-circle text-danger mr-xs"></i>
+                    <span class="label-name">My Recent</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle text-primary mr-xs"></i>
+                    <span class="label-name">Starred</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle mr-xs"></i>
+                    <span class="label-name">Background</span>
+                </a>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Projects</h5>
+        <!-- A place for sidebar notifications & alerts -->
+        <div class="sidebar-alerts">
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Sales Report</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                <small>Calculating x-axis bias... 65%</small>
             </div>
-        </nav>
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="fw-normal">Personal Responsibility</span> <br>
+                <div class="progress progress-xs mt-2">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Provide required notes</small>
+            </div>
+        </div>
+    </div>
+</nav>
     <div class="theme-helper">
         <section class="widget theme-helper-content">
             <header class="theme-helper-header d-flex p-0">
@@ -749,111 +749,124 @@
         <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
         <main id="content" class="content" role="main">
             <!-- Page content -->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">YOU ARE HERE</li>
-            <li class="breadcrumb-item active">UI Popovers & Tooltips</li>
-        </ol>
-        <h1 class="page-title">Popovers & Tooltips</h1>
-        <div class="row">
-            <div class="col-sm-6">
-                <section class="widget">
-                    <header>
-                        <h5>
-                            Popover <span class="fw-semi-bold">Example</span>
-                        </h5>
-                        <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                        </div>
-                    </header>
-                    <div class="widget-body">
-                        <button type="button" class="btn btn-lg btn-danger mr-2" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-                        <span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
-                            <button class="btn btn-danger" style="pointer-events: none;" type="button" disabled>Disabled button</button>
-                        </span>
-                    </div>
-                </section>
-                <section class="widget">
-                    <header>
-                        <h5>
-                            Popover <span class="fw-semi-bold">Directions</span>
-                        </h5>
-                        <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                        </div>
-                    </header>
-                    <div class="widget-body">
-                        <button type="button" class="btn btn-info mb-sm mr-2" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                            Popover on top
-                        </button>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">YOU ARE HERE</li>
+    <li class="breadcrumb-item active">UI Popovers & Tooltips</li>
+</ol>
+<h1 class="page-title">Popovers & Tooltips</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <section class="widget">
+            <header>
+                <h5>
+                    Popover <span class="fw-semi-bold">Example</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <button type="button" class="btn btn-lg btn-danger mr-3" data-toggle="popover" title="Popover title"
+                    data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle
+                    popover</button>
+                <span class="d-inline-block" data-toggle="popover" data-content="Disabled popover">
+                    <button class="btn btn-danger" style="pointer-events: none;" type="button" disabled>Disabled
+                        button</button>
+                </span>
+            </div>
+        </section>
+        <section class="widget">
+            <header>
+                <h5>
+                    Popover <span class="fw-semi-bold">Directions</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <button type="button" class="btn btn-info mb-sm mr-3" data-container="body" data-toggle="popover"
+                    data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on top
+                </button>
 
-                        <button type="button" class="btn btn-warning mb-sm mr-2" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                            Popover on right
-                        </button>
+                <button type="button" class="btn btn-warning mb-sm mr-3" data-container="body" data-toggle="popover"
+                    data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on right
+                </button>
 
-                        <button type="button" class="btn btn-inverse mb-sm mr-2" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                <button type="button" class="btn btn-inverse mb-sm mr-3" data-container="body" data-toggle="popover"
+                    data-placement="bottom" data-content="Vivamus
                         sagittis lacus vel augue laoreet rutrum faucibus.">
-                            Popover on bottom
-                        </button>
+                    Popover on bottom
+                </button>
 
-                        <button type="button" class="btn btn-gray mb-sm mr-2" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                            Popover on left
-                        </button>
-                    </div>
-                </section>
+                <button type="button" class="btn btn-gray mb-sm mr-3" data-container="body" data-toggle="popover"
+                    data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    Popover on left
+                </button>
             </div>
-            <div class="col-sm-6">
-                <section class="widget">
-                    <header>
-                        <h5>
-                            Tooltip <span class="fw-semi-bold">Example</span>
-                        </h5>
-                        <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                        </div>
-                    </header>
-                    <div class="widget-body">
-                        <button type="button" class="btn btn-lg btn-success mr-2" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                            Tooltip
-                        </button>
-                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
-                            <button class="btn btn-success" style="pointer-events: none;" type="button" disabled>Disabled button</button>
-                        </span>
-                    </div>
-                </section>
-                <section class="widget">
-                    <header>
-                        <h5>
-                            Tooltip <span class="fw-semi-bold">Directions</span>
-                        </h5>
-                        <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                        </div>
-                    </header>
-                    <div class="widget-body">
-                        <button type="button" class="btn btn-gray mb-sm mr-2" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                            Tooltip on top
-                        </button>
-                        <button type="button" class="btn btn-inverse mb-sm mr-2" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-                            Tooltip on right
-                        </button>
-                        <button type="button" class="btn btn-warning mb-sm mr-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
-                            Tooltip on bottom
-                        </button>
-                        <button type="button" class="btn btn-info mb-sm" data-toggle="tooltip" data-placement="left" title="Tooltip on left">
-                            Tooltip on left
-                        </button>
-                    </div>
-                </section>
+        </section>
+    </div>
+    <div class="col-sm-6">
+        <section class="widget">
+            <header>
+                <h5>
+                    Tooltip <span class="fw-semi-bold">Example</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <button type="button" class="btn btn-lg btn-success mr-3" data-toggle="tooltip" data-placement="top"
+                    title="Tooltip on top">
+                    Tooltip
+                </button>
+                <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
+                    <button class="btn btn-success" style="pointer-events: none;" type="button" disabled>Disabled
+                        button</button>
+                </span>
             </div>
-        </div>
+        </section>
+        <section class="widget">
+            <header>
+                <h5>
+                    Tooltip <span class="fw-semi-bold">Directions</span>
+                </h5>
+                <div class="widget-controls">
+                    <a data-widgster="expand" title="Expand" href="#"><i class="la la-angle-up"></i></a>
+                    <a data-widgster="collapse" title="Collapse" href="#"><i class="la la-angle-down"></i></a>
+                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                </div>
+            </header>
+            <div class="widget-body">
+                <button type="button" class="btn btn-gray mb-sm mr-3" data-toggle="tooltip" data-placement="top"
+                    title="Tooltip on top">
+                    Tooltip on top
+                </button>
+                <button type="button" class="btn btn-inverse mb-sm mr-3" data-toggle="tooltip" data-placement="right"
+                    title="Tooltip on right">
+                    Tooltip on right
+                </button>
+                <button type="button" class="btn btn-warning mb-sm mr-3" data-toggle="tooltip" data-placement="bottom"
+                    title="Tooltip on bottom">
+                    Tooltip on bottom
+                </button>
+                <button type="button" class="btn btn-info mb-sm" data-toggle="tooltip" data-placement="left"
+                    title="Tooltip on left">
+                    Tooltip on left
+                </button>
+            </div>
+        </section>
+    </div>
+</div>
 
             <footer class="content-footer hidden-print">
                 HTML5 Light Blue - Bootstrap Admin Dashboard Template Made by <a href="https://flatlogic.com"
@@ -882,7 +895,7 @@
     <script src="../js/app.js"></script>
 
     <!-- Page scripts -->
-        <script src="../js/components/ui-popovers-tooltips.js"></script>
+<script src="../js/components/ui-popovers-tooltips.js"></script>
 </body>
 
 </html>
