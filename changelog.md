@@ -1,4 +1,7 @@
 # Changelog
+## [4.5.6]
+### Updated
+- Update burttons colors
 ## [4.5.5]
 ### Updated
 - Update footer on login page

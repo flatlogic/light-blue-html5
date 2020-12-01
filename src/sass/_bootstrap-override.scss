@@ -837,43 +837,30 @@ legend {
 // --------------------------------------------------
 
 .btn-default {
-  color: $body-main-color;
+  color: $white;
   background-color: #3a3e6b;
   border-color: #353a63;
-  &:hover, &:active, &:focus {
-    color: $body-main-color!important;
-  }
 }
 .btn-danger {
-  color: $btn-default-color;
-  &:hover, &:active, &:focus {
-    color: $btn-default-color!important;
-  }
+  color: $white;
 }
 
 .btn-info {
-  color: $btn-default-color;
-  &:hover, &:active, &:focus {
-    color: $btn-default-color!important;
-  }
+  color: $white;
 }
 
 .btn-success {
-  background-color: #58d777;
-  border-color: #58d777;
-  color: $btn-default-color;
+  background-color: #2D8515;
+  border-color:#2D8515;
+  color: $white;
   &:hover, &:active, &:focus {
-    background-color: #39d05e;
-    border-color: #31cb56;
-    color: $btn-default-color!important;
+    background-color: lighten( #2D8515, 5%);
+    border-color: #2D8515;
   }
 }
 
 .btn-warning {
-  color: $btn-default-color;
-  &:hover, &:active, &:focus {
-    color: $btn-default-color!important;
-  }
+  color: $white;
 }
 
 .btn .glyphicon {
