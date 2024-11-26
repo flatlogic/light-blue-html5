@@ -1,4 +1,9 @@
 # Changelog
+
+## [4.5.7]
+### Updated
+- Update dependencies
+
 ## [4.5.6]
 ### Updated
 - Update burttons colors
