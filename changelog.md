@@ -3,7 +3,7 @@
 ## [4.7.0]
 ### Updated
 - Updated the standalone charts to D3 7. Preserved the D3 3 API for Rickshaw and NVD3.
-- Updated the Markdown preview, chart tooltips, date controls and locked dependencies. The build now uses Gulp’s built-in source maps.
+- Updated the Markdown preview, chart tooltips, date controls and locked dependencies. Gulp now generates source maps directly.
 
 ### Fixed
 - Render Markdown with raw HTML disabled and use the upstream Morris build that escapes chart labels.
