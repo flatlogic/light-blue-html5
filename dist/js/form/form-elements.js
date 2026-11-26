@@ -26,7 +26,10 @@ $(function(){
         $("#mask-int-phone").inputmask({mask: "+999 999 999 999"});
         $("#mask-time").inputmask({mask: "99:99"});
 
-        $('#markdown').markdown();
+        const markdown = window.markdownit({html: false});
+        $('#markdown').markdown({
+            onPreview: function(editor) { return markdown.render(editor.getContent()); }
+        });
 
         $('.js-slider').slider();
 

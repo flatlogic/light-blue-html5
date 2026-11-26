@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.7.0]
+### Updated
+- Updated the standalone charts to D3 7. Preserved the D3 3 API for Rickshaw and NVD3.
+- Updated the Markdown preview, chart tooltips, date controls and locked dependencies. The build now uses Gulp’s built-in source maps.
+
+### Fixed
+- Render Markdown with raw HTML disabled and use the upstream Morris build that escapes chart labels.
+- Removed the obsolete Bootstrap 3 date picker and unused packages that pulled in the deprecated request client.
+
 ## [4.6.0]
 ### Updated
 - Updated Handlebars to 4.7.10 for all page templates and jQuery to 3.8.0 for the dashboard and its plugins. Mobile navigation now uses Hammer directly.

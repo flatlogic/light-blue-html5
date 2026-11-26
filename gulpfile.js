@@ -6,7 +6,7 @@ const sass = require("gulp-sass")(require("sass"));
 const rename = require("gulp-rename");
 const hb = require("gulp-hb");
 const layouts = require("handlebars-layouts");
-const sourcemaps = require("gulp-sourcemaps");
+const esbuild = require("esbuild");
 
 const srcPaths = {
   scripts: ["./src/js/**/*"],
@@ -64,8 +64,7 @@ function hbs() {
 
 function styles() {
   return gulp
-    .src(srcPaths.cssEntries)
-    .pipe(sourcemaps.init())
+    .src(srcPaths.cssEntries, { sourcemaps: true })
     .pipe(
       sass({
         precision: 10,
@@ -73,8 +72,7 @@ function styles() {
       })
     )
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write("./maps"))
-    .pipe(gulp.dest("./dist/css"));
+    .pipe(gulp.dest("./dist/css", { sourcemaps: "./maps" }));
 }
 
 // Development
@@ -88,6 +86,18 @@ exports.watch = function watch() {
   );
 };
 
-const build = gulp.parallel(hbs, styles, copy, copyJS);
+// The standalone charts use current D3 alongside the legacy D3 API used by Rickshaw and NVD3.
+function bundleD3() {
+  return esbuild.build({
+    entryPoints: [require.resolve("d3v7")],
+    bundle: true,
+    minify: true,
+    format: "iife",
+    globalName: "lightBlueD3",
+    outfile: "dist/js/charts/d3-modern.js"
+  });
+}
+
+const build = gulp.parallel(hbs, styles, copy, copyJS, bundleD3);
 exports.build = build;
 exports.default = gulp.series(clean, build);

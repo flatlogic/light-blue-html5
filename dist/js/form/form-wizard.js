@@ -50,9 +50,6 @@ $(function(){
         $('.widget').widgster();
         $("#destination").inputmask({mask: "99999"});
         $("#credit").inputmask({mask: "9999-9999-9999-9999"});
-        $("#expiration-date").datetimepicker({
-            format: false
-        });
         $('#wizard').bootstrapWizard({
             onTabShow: function($activeTab, $navigation, index) {
                 var $total = $navigation.find('li').length;
