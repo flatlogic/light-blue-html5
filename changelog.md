@@ -1,5 +1,14 @@
 # Changelog
 
+## [4.6.0]
+### Updated
+- Updated Handlebars to 4.7.10 for all page templates and jQuery to 3.8.0 for the dashboard and its plugins. Mobile navigation now uses Hammer directly.
+- Refreshed the setup guide with the dashboard entry point and instructions for rebuilding the distribution.
+
+### Fixed
+- Preserve images and fonts during a clean Gulp build and include the sources for previously prebuilt files.
+- Fixed sidebar navigation, form initialization and calendar event details when navigating between pages. Restored the icon guide links and corrected stylesheet and image paths.
+
 ## [4.5.7]
 ### Updated
 - Update dependencies

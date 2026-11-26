@@ -30,9 +30,12 @@ $(function(){
 
         $('.js-slider').slider();
 
-        // Prevent Dropzone from auto discovering this element:
+        // A full page load may already have initialized the form through auto-discovery.
+        var uploadForm = document.getElementById('my-awesome-dropzone');
         Dropzone.options.myAwesomeDropzone = false;
-        $('#my-awesome-dropzone').dropzone();
+        if (!uploadForm.dropzone) {
+            new Dropzone(uploadForm);
+        }
         Holder.run();
         /**
          * Holder js hack. removing holder's data to prevent onresize callbacks execution

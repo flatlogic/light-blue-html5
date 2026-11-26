@@ -1,112 +1,41 @@
-# 🚀 Light Blue HTML5 - A Free Transparent Bootstrap Dashboard!
+# Light Blue HTML5
 
-[View Demo](https://flatlogic.com/templates/light-blue-html5/demo) | [Download](https://github.com/flatlogic/light-blue-html5/archive/refs/heads/master.zip) | [More Templates](https://flatlogic.com/templates) | [Discord Community](https://discord.gg/flatlogic-community) | [Support Forum](https://flatlogic.com/forum)
+A free Bootstrap 4 dashboard with transparent widgets, two color themes and 53 HTML pages. The dashboards, forms, tables, charts and calendar run in the browser with sample data. Gulp compiles the pages from Handlebars templates and Sass.
 
-**Originally a premium product priced at $69+, made available for free in January 2025!** 🎉
+[Live demo](https://flatlogic.com/templates/light-blue-html5/demo) · [Download the latest release](https://github.com/flatlogic/light-blue-html5/releases/latest) · [Changelog](changelog.md)
 
-Looking for a perfect codebase generator for your Startup? Try [Flatlogic AI Web App Generator](https://flatlogic.com/generator) - our new tool, sort of a template++.
+![Light Blue dashboard with its sidebar, activity map and traffic widgets](docs/dashboard.jpg)
 
----
+## Run locally
 
-## 🎯 Why Light Blue HTML5?
-- **Ex-Premium**: This template was previously paid. Enjoy it for free now. 😉
-- **No Framework Dependency**: Built with Bootstrap and pure JavaScript, no clutter.
-- **Join the Community**: [Flatlogic Discord](https://discord.gg/flatlogic-community) is where the action happens.
-- **Free Node.js Backend**: Pair it up with [this backend](https://github.com/flatlogic/nodejs-backend) to go full-stack.
+The release was tested with Node.js 22 and Yarn Classic 1.22.22. From a terminal, clone the project, install the locked dependencies and build the dashboard.
 
----
+```sh
+git clone https://github.com/flatlogic/light-blue-html5.git
+cd light-blue-html5
+npx --yes yarn@1.22.22 install --frozen-lockfile
+npm run build
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
-## 🚀 Quick Start
+Open [the dashboard](http://127.0.0.1:8000/dist/dashboard/index.html). Start the HTTP server from the repository root so pages under `dist/` can load their browser libraries from `node_modules/`. For static hosting, preserve the same relative paths for the pages and the browser assets they reference.
 
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/flatlogic/light-blue-html5.git
-   cd light-blue-html5
-   ```
-2. **Install dependencies**  
-   ```bash
-   yarn install  # Or npm install
-   ```
-3. **Build the app**  
-   ```bash
-   yarn build
-   ```
-   Then open `dist/index.html` in your browser.
+## Work on the template
 
-4. **Watch for changes**  
-   ```bash
-   yarn watch
-   ```
-   This will watch for changes and recompile SCSS styles and Handlebars templates.
+| To change | Edit | See it in the browser |
+| --- | --- | --- |
+| Dashboard widgets | `src/pages/dashboard/` and `src/js/dashboard/` | [Visits dashboard](http://127.0.0.1:8000/dist/dashboard/index.html) |
+| Shared navigation | `src/partials/sidebar.hbs` and `src/partials/layout.hbs` | Sidebar on every dashboard page |
+| Form validation and editors | `src/pages/form/` and `src/js/form/` | [Validation](http://127.0.0.1:8000/dist/form/form_validation.html) |
+| Tables, charts and calendar | `src/pages/` and `src/js/` | [Tables](http://127.0.0.1:8000/dist/tables/tables_dynamic.html) · [Charts](http://127.0.0.1:8000/dist/charts/charts.html) · [Calendar](http://127.0.0.1:8000/dist/extra/calendar.html) |
+| Colors and typography | `src/sass/` | Default and dark stylesheets in `dist/css/` |
 
----
+Use `npm run watch` in a second terminal to rebuild as you edit. Use `npm run build` for a regular build. To regenerate the entire distribution, run `npx --yes yarn@1.22.22 gulp` from the repository root. This clears `dist/` first, so keep your edits under `src/`.
 
-## 🧩 Features
+## Upgrading from 4.5.x
 
-- Over 30 Unique Pages
-- Fully Responsive
-- Three Color Schemes
-- Deep Background
-- 8 Chart Libraries
-- Developer-Oriented Dashboard
-- Easily Customizable Widgets
-- Fully Documented Codebase
+Version 4.6 uses jQuery 3.8.0 in the browser and Handlebars 4.7.10 for the build. Update the sources and lockfile together, reinstall with the command above and rebuild. The template now handles mobile swipes with Hammer directly. If you have custom scripts that call `$.fn.hammer`, update those calls before publishing your copy.
 
----
+## License and community
 
-## 🛠 Built With
-- Bootstrap 3
-- HTML5
-- JavaScript (ES6)
-- SASS
-
----
-
-## 📦 Components
-- Dashboards (Analytics, Traffic Sources)
-- UI Elements (Dialogs, Notifications, Tabs, Accordion)
-- Forms (Validation, Wizard, Elements)
-- Charts (Flot, Morris, Sparkline, Easy Pie Charts)
-- Tables (Static, Dynamic)
-- Pages (Profile, Calendar, E-commerce, Chat, Error)
-- Maps (Google, Vector)
-
----
-
-## 🌍 Available Variants
-
-|               | **Material**                                              | **Transparent**                                         | **Classic**                                          | **Sofia**                                          | **Flatlogic**                                      |
-|---------------|-----------------------------------------------------------|---------------------------------------------------------|-------------------------------------------------------|-----------------------------------------------------|----------------------------------------------------|
-| **React**     | [React Material Admin](https://github.com/flatlogic/react-material-admin-full) | [Light Blue React](https://github.com/flatlogic/light-blue-react) | [Sing App React](https://github.com/flatlogic/sing-app-react) | [Sofia React](https://github.com/flatlogic/sofia-react) | [One React](https://github.com/flatlogic/one-react) |
-| **Angular**   | [Angular Material Admin](https://github.com/flatlogic/angular-material-admin-full) | [Light Blue Angular](https://github.com/flatlogic/light-blue-angular) | [Sing App Angular](https://github.com/flatlogic/sing-app-angular) | - | - |
-| **Vue**       | [Material Vue](https://github.com/flatlogic/material-vue-full) | [Light Blue Vue](https://github.com/flatlogic/light-blue-vue) | [Sing App Vue](https://github.com/flatlogic/sing-app-vue) | - | - |
-| **Bootstrap** | - | [Light Blue HTML5](https://github.com/flatlogic/light-blue-html5) | [Sing App HTML5](https://github.com/flatlogic/sing-app-html5) | - | [One Bootstrap](https://github.com/flatlogic/one-bootstrap-template-full) |
-
-
-Additionally, these templates are tailored for specific business needs:
-- [E-Commerce Frontend (React)](https://github.com/flatlogic/ecommerce-frontend) - A complete e-commerce solution.
-- [Bookkeeper UI (React)](https://github.com/flatlogic/bookkeeper-ui) - Accounting dashboard for finance management.
-- [User Management Template (React)](https://github.com/flatlogic/user-management-template) - User authentication and management.
-
----
-
-## 👨‍💻 How to Contribute
-- **Star this repo ⭐** - show some love.
-- **Report bugs** - but be nice.
-- **Join the [Discord](<insert-discord-invite-link>)** - meet fellow devs.
-
----
-
-## 🔥 About Flatlogic
-[Flatlogic AI Software Engineer](https://flatlogic.com/ai-software-development-agent) builds modern business software so you don't have to. Our AI Software Development Agent helps you generate, deploy, and maintain enterprise applications with minimal effort.
-
----
-
-## 📜 License
-This template is free to use. Modify it, break it, make it your own. Just don’t try to sell it back to us. 😎
-
----
-
-> **Questions or feedback?**  
-> Join our [Flatlogic Community Discord](https://discord.gg/flatlogic-community) or visit our [support forum](https://flatlogic.com/forum). We might even reply!
-
+Light Blue HTML5 is available under the [MIT license](LICENSE). For related dashboards, see [Light Blue Angular](https://github.com/flatlogic/light-blue-angular), [Light Blue Vue](https://github.com/flatlogic/light-blue-vue) and [Flatlogic templates](https://flatlogic.com/templates). Join the [Flatlogic community](https://discord.gg/flatlogic-community) or [report an issue](https://github.com/flatlogic/light-blue-html5/issues).

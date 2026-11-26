@@ -1842,7 +1842,7 @@ gulplog@^2.2.0:
   dependencies:
     glogg "^2.2.0"
 
-hammerjs@2.0.x, hammerjs@^2.0.8:
+hammerjs@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
   integrity sha512-tSQXBXS/MWQOn/RKckawJ61vvsDpCom87JgxiYdGwHdOa0ht0vzUWDlfioofFCRU0L+6NGDt6XzbgoJvZkMeRQ==
@@ -1860,12 +1860,12 @@ handlebars-wax@^6.1.0:
     object-assign "^4.1.1"
     require-glob "^3.2.0"
 
-handlebars@^4.1.0, handlebars@^4.7.6:
-  version "4.7.8"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.8.tgz#41c42c18b1be2365439188c77c6afae71c0cd9e9"
-  integrity sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==
+handlebars@4.7.10, handlebars@^4.1.0:
+  version "4.7.10"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.10.tgz#12419ea1b41391b3ffcf003f2164dcbce090c417"
+  integrity sha512-P5VJMVM7qgBn6vjXMw8WG9uVI+ncf2pi72j4de4yz5ZULLj2RGqLYaKOYGsgyrViQ0tePOVlN1tDCCXXtFqXKg==
   dependencies:
-    minimist "^1.2.5"
+    minimist "^1.2.8"
     neo-async "^2.6.2"
     source-map "^0.6.1"
     wordwrap "^1.0.0"
@@ -2163,14 +2163,6 @@ jquery-bootstrap-wizard@^1.4.2:
   resolved "https://registry.yarnpkg.com/jquery-bootstrap-wizard/-/jquery-bootstrap-wizard-1.4.2.tgz#97ebe75b8c642fb969e2e639d1f8af7ec14ec371"
   integrity sha512-LgcibYMDGsgupa/Ze6X/M/GeZbOv/vAp+tCAvga7Vs6Ifw7yl8esIgHtCEA4qOSxq2HvH7/Q6pf9Sws3dsIZ8A==
 
-jquery-hammerjs@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/jquery-hammerjs/-/jquery-hammerjs-2.0.0.tgz#08b518fa25fb1e8ce8fe3212c387da53bbe14048"
-  integrity sha512-0HglbxbKOkyBp/CBo2qgXRgaExlDkmV285w+dF3n3VXITxxjNTrl75kqjSSwIXGqC/68mB99GMzecA3XEQbGfA==
-  dependencies:
-    hammerjs "2.0.x"
-    jquery "2.1.x"
-
 "jquery-mapael-0.7.1@https://github.com/neveldo/jQuery-Mapael.git#v0.7.1":
   version "0.0.0"
   resolved "https://github.com/neveldo/jQuery-Mapael.git#556cd9d3ca8944f263c8efe02fd9f700c53563be"
@@ -2231,15 +2223,10 @@ jquery.animate-number@0.0.14:
   dependencies:
     jquery ">= 1.7.0"
 
-jquery@2.1.4, jquery@2.1.x:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
-  integrity sha512-wWR+eCq/T/Qt0NcFyM+QVho0ZVzWxFYANijmSMImXiM5mjr1aOaf4SF0eOEPc92bbK2L2vDpxw3lIszus7eO8Q==
-
-"jquery@>= 1.7", "jquery@>= 1.7.0", jquery@>=1.10, "jquery@>=1.12.0 <5.0.0", jquery@>=1.3.2, jquery@>=1.5, jquery@>=1.7, jquery@>=1.8.0, jquery@>=1.8.3, "jquery@^3.0 || ^2.0 || ^1.0", jquery@^3.5.1, jquery@^3.6.0:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
-  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
+jquery@3.8.0, "jquery@>= 1.7", "jquery@>= 1.7.0", jquery@>=1.10, "jquery@>=1.12.0 <5.0.0", jquery@>=1.3.2, jquery@>=1.5, jquery@>=1.7, jquery@>=1.8.0, jquery@>=1.8.3, "jquery@^3.0 || ^2.0 || ^1.0", jquery@^3.5.1, jquery@^3.6.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.8.0.tgz#3bf83324052cc9e7148718e9d6ea3cde1b2b9f5a"
+  integrity sha512-AOYt0viqPysMUTq45O8gF9DuOnBT3Il/8WtM/TT8z/2QeGsZ70ImwSJtNFxznn2R71v8yIgaEunOGo82OY/f0g==
 
 js-yaml@~3.14.0:
   version "3.14.1"
@@ -2497,7 +2484,7 @@ minimatch@~3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimist@^1.2.5:
+minimist@^1.2.5, minimist@^1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==

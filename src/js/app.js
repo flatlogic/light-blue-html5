@@ -57,16 +57,16 @@ $(function(){
 
         this.$sidebar.on('mouseenter', $.proxy(this._sidebarMouseEnter, this));
         this.$sidebar.on('mouseleave', $.proxy(this._sidebarMouseLeave, this));
-        /**
-         * open navigation in case collapsed sidebar clicked
-         */
-        //$(document).on('click', '.nav-collapsed #sidebar', $.proxy(this.expandNavigation, this));
-        //we don't need this cool feature for big boys
-        if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
-            ('ontouchstart' in window) && this.$content
-                .hammer()
-                .bind('swipeleft', $.proxy(this._contentSwipeLeft, this))
-                .bind('swiperight', $.proxy(this._contentSwipeRight, this));
+        if ('ontouchstart' in window && (Sing.isScreen('xs') || Sing.isScreen('sm'))) {
+            var sidebar = this.$sidebar;
+            var gestures = new Hammer.Manager(document.body, {
+                recognizers: [[Hammer.Swipe, {direction: Hammer.DIRECTION_HORIZONTAL}]]
+            });
+            gestures.on('swipeleft swiperight', function(event) {
+                if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
+                    sidebar.collapse(event.type === 'swiperight' ? 'show' : 'hide');
+                }
+            });
         }
 
         this.checkNavigationState();
@@ -75,8 +75,8 @@ $(function(){
             /**
              * Initialize pjax & attaching all related events
              */
-            this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#], .no-pjax)', '#content', {
+            this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href="#"])').on('click', $.proxy(this._checkLoading, this));
+            $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href="#"], .no-pjax)', '#content', {
                 fragment: '#content',
                 type: 'GET', //this.debug ? 'POST' : 'GET' //GET - for production, POST - for debug.
                 timeout: 4000
@@ -228,8 +228,8 @@ $(function(){
     };
 
     SingAppView.prototype._collapseNavIfSmallScreen = function(){
-        if (Sing.isScreen('xs') || Sing.isScreen('sm') || Sing.isScreen('md')){
-            this.collapseNavigation();
+        if (Sing.isScreen('xs') || Sing.isScreen('sm')){
+            this.$sidebar.collapse('hide');
         }
     };
 
@@ -295,27 +295,6 @@ $(function(){
         $newActiveLink.closest('li').addClass('active')
             .parents('li').addClass('active');
     };
-
-    /**
-     * Checks whether screen is md or lg and closes navigation if opened
-     * @private
-     */
-    SingAppView.prototype._contentSwipeLeft = function(){
-        var self = this;
-        //this method only makes sense for small screens + ipad
-        setTimeout(function () {
-            if (Sing.isScreen('xl')) return;
-
-            // if (!$('body').is('.nav-collapsed')){
-            //     self.collapseNavigation();
-            // }
-        })
-    };
-
-    /**
-     * Checks whether screen is md or lg and opens navigation if closed
-     * @private
-     */
 
     SingAppView.prototype.showLoader = function(){
         var view = this;
@@ -432,7 +411,7 @@ $(function(){
         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
             $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
             $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
-            $existingScripts = $('script[src]'),
+            existingUrls = new Set(Array.from(document.querySelectorAll('script[src]'), function(script) { return script.src; })),
             $existingTemplates = $('script[type="text/template"]');
 
         //append templates first as they are used by scripts
@@ -451,35 +430,28 @@ $(function(){
             document.body.appendChild(script);
         });
 
-        //ensure synchronous loading
-        var $previous = {
-            load: function(fn){
-                fn();
-            }
-        };
-
-        $scripts.each(function() {
-            var src = this.src;
-            var matchedScripts = $existingScripts.filter(function() {
-                //noinspection JSPotentiallyInvalidUsageOfThis
-                return this.src === src;
-            });
-            if (matchedScripts.length) return;
-
-            var script = document.createElement('script');
-            script.src = $(this).attr('src');
-            $previous.load(function(){
-                document.body.appendChild(script);
-            });
-
-            $previous = $(script);
+        var pendingScripts = $scripts.toArray().filter(function(element) {
+            return !existingUrls.has(element.src);
         });
 
-        var view = this;
-        $previous.load(function(){
-            $(document).trigger('sing-app:loaded');
-            view.log('scripts loaded.');
-        })
+        function loadNext() {
+            var next = pendingScripts.shift();
+            if (!next) {
+                $(document).trigger('sing-app:loaded');
+                return;
+            }
+
+            var script = document.createElement('script');
+            script.onload = loadNext;
+            script.onerror = function() {
+                // Restore navigation through a full page load if a dependency failed.
+                window.location.assign(options.url);
+            };
+            script.src = next.src;
+            document.body.appendChild(script);
+        }
+
+        loadNext();
     };
 
     SingAppView.prototype.extractPageName = function(url){
@@ -865,12 +837,6 @@ function initDemoFunctions(){
                     }, 4000);
                 });
         }, 4000)
-
-        const mainSidebar = $('#sidebar');
-        const navicon = $('.la.la-navicon');
-        navicon.on('click', () => {
-            mainSidebar.toggleClass('mobile');
-        })
 
     }(jQuery);
 }

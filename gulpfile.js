@@ -6,14 +6,13 @@ const sass = require("gulp-sass")(require("sass"));
 const rename = require("gulp-rename");
 const hb = require("gulp-hb");
 const layouts = require("handlebars-layouts");
-const runSequence = require("run-sequence");
 const sourcemaps = require("gulp-sourcemaps");
 
 const srcPaths = {
   scripts: ["./src/js/**/*"],
   fonts: ["./src/fonts/**/*"],
   images: ["./src/img/**/*"],
-  styles: ["./src/sass/*.scss"],
+  styles: ["./src/sass/**/*.scss"],
   cssEntries: [
     "./src/sass/application.scss",
     "./src/sass/application-dark.scss"
@@ -29,30 +28,26 @@ const srcPaths = {
 
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
-async function clean(cb) {
+function clean() {
   return del(["dist/*"]);
-  cb();
 }
 
 // Copy demo, img, js, fonts folders from src to dist
-async function copy(cb) {
+function copy() {
   return gulp
     .src([...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts], {
-      base: "./src"
+      base: "./src",
+      encoding: false
     })
     .pipe(gulp.dest("dist"));
-
-  cb();
 }
 
-async function copyJS(cb) {
+function copyJS() {
   return gulp.src(srcPaths.scripts).pipe(gulp.dest("dist/js"));
-  cb();
 }
 
 // Handle handlebars
 function hbs() {
-  // gulp.task("hbs", function() {
   return gulp
     .src(srcPaths.templates)
     .pipe(
@@ -69,13 +64,13 @@ function hbs() {
 
 function styles() {
   return gulp
-    .src(srcPaths.styles)
+    .src(srcPaths.cssEntries)
     .pipe(sourcemaps.init())
     .pipe(
       sass({
         precision: 10,
         outputStyle: "compressed"
-      }).on("error", sass.logError)
+      })
     )
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("./maps"))
@@ -93,14 +88,6 @@ exports.watch = function watch() {
   );
 };
 
-gulp.task("build", gulp.parallel(hbs, styles, copy, copyJS));
-
-// Build Task
-function build(cb) {
-  return gulp.parallel(clean, "build");
-  cb();
-}
-
-
-// Default Task
-gulp.task("default", gulp.parallel(clean, "build"));
+const build = gulp.parallel(hbs, styles, copy, copyJS);
+exports.build = build;
+exports.default = gulp.series(clean, build);
